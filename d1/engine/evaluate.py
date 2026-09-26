@@ -60,8 +60,12 @@ def check_splits(df):
     missing = set(SPLIT_COLUMNS) - set(df.columns)
     if missing:
         raise ValueError(f"split table is missing columns {missing} (contract C4)")
-    if not set(pd.unique(df.y)) <= {0, 1}:
-        raise ValueError("y must be 0 or 1")
+    y_vals = set(pd.unique(df.y))
+    # y is contractually int (0/1) but pandas may infer str when the CSV is
+    # read with dtype={'gene': str}; accept both spellings.
+    y_ok = y_vals <= {0, 1} or y_vals <= {"0", "1"}
+    if not y_ok:
+        raise ValueError(f"y must be 0 or 1, got {sorted(y_vals)[:10]}")
     gene_sets = set()
     for r, d in df.groupby("repeat"):
         if d.gene.duplicated().any():
