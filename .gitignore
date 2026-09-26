@@ -24,3 +24,8 @@ Thumbs.db
 
 # ---- local debug / reproducer logs (not part of the project) ----
 scratch/
+
+# ---- local Python environments (kept out of git; A uses conda, B uses uv) ----
+.venv*/
+venv/
+.env
