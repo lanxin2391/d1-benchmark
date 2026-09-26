@@ -1,0 +1,16 @@
+{
+  "source_file": "9606.protein.links.detailed.v12.0.txt.gz",
+  "threshold": 400,
+  "score_column": "combined_score",
+  "net_id": "string_full400",
+  "n_input_edges": 1858944,
+  "n_mapped_edges": 1858944,
+  "n_self_loops_removed": 0,
+  "n_edges_dedup": 929472,
+  "n_nodes_before_lcc": 19488,
+  "n_components": 2,
+  "n_nodes_lcc": 19486,
+  "n_edges_lcc": 929471,
+  "date": "2026-09-26",
+  "script": "build_string.py"
+}

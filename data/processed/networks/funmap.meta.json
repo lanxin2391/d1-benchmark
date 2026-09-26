@@ -1,0 +1,16 @@
+{
+  "source_file": "funmap.tsv",
+  "threshold": null,
+  "description": "FunMap protein-derived network (linkedomics.org)",
+  "net_id": "funmap",
+  "n_input_edges": 196800,
+  "n_mapped_edges": 196800,
+  "n_self_loops_removed": 0,
+  "n_edges_dedup": 196800,
+  "n_nodes_before_lcc": 10525,
+  "n_components": 148,
+  "n_nodes_lcc": 10189,
+  "n_edges_lcc": 196605,
+  "date": "2026-09-26",
+  "script": "build_funmap.py"
+}
