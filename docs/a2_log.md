@@ -148,6 +148,8 @@ A2: build FunMap + STRING networks (5 of 6)
   - data/processed/networks/string_{phys700,full400,full700,full900}.tsv + meta.json
 ```
 
-(The processed networks are NOT committed: `data/processed/` is in
-`.gitignore` because anyone can regenerate them in 1-3 minutes by
-running the build scripts.)
+(The processed networks ARE committed: 25 MB total, fits GitHub
+without LFS. This means anyone who clones the repo can run real-data
+analyses without re-running the build scripts. To skip the heavy
+build step, edit `.gitignore` to add `data/processed/networks/` and
+delete the tracked files with `git rm -r --cached data/processed/networks/`.)
