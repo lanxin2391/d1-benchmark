@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d1"
+version = "0.1.0"
+description = "D1: leakage-controlled benchmark of network priors for cancer-driver prioritisation"
+requires-python = ">=3.9"
+# Dependencies are managed by conda (environment.yml), not pip.
+
+[tool.setuptools.packages.find]
+include = ["d1*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,21 @@
+# ---- data: never commit raw downloads or caches ----
+data/raw/
+data/cache/
+data/processed/rewired/
+*.part
+
+# ---- results that are regenerated or large ----
+results/toy/
+results/scores/
+results/**/*.gz
+
+# ---- python / tools ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

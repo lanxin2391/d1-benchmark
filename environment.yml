@@ -1,0 +1,20 @@
+name: d1
+channels:
+  - conda-forge
+  - nodefaults        # avoids the Anaconda "Terms of Service" prompt for the defaults channel
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pandas
+  - pyarrow           # reads Open Targets parquet files
+  - networkx
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - tqdm
+  - requests
+  - pytest
+  - jupyterlab
+  - pip
