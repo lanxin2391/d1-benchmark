@@ -168,6 +168,15 @@ def _harmonic_sum(scores: np.ndarray) -> float:
 
 def build_ot_nolit(target_ids: pd.Series, cancer_ids: set[str],
                    top_n: int = TOP_N) -> Path | None:
+    """Build ``ot_nolit``: per-target harmonic sum across non-literature datasources.
+
+    The ``association_by_datasource_direct`` table actually has its real
+    datasource id in the ``aggregationValue`` column (the constant literal
+    ``datasourceId`` sits in ``aggregationType`` for every row). The
+    literature datasource is named ``europepmc`` in Open Targets 26.06; we
+    drop those rows and then per (target, disease) compute a normalised
+    harmonic sum across the remaining datasource scores.
+    """
     folder = RAW / "association_by_datasource_direct"
     if not folder.exists() or not list(folder.glob("part-*.snappy.parquet")):
         print(f"[ot_nolit] SKIP: {folder} has no parquet parts (run download_D1_data.py)")
@@ -177,7 +186,10 @@ def build_ot_nolit(target_ids: pd.Series, cancer_ids: set[str],
     rows = []
     for p in parts:
         d = pq.read_table(str(p),
-                          columns=["targetId", "diseaseId", "datasourceId", "score"]).to_pandas()
+                          columns=["targetId", "diseaseId", "aggregationValue",
+                                   "associationScore"]).to_pandas()
+        d = d.rename(columns={"aggregationValue": "datasourceId",
+                              "associationScore": "score"})
         d = d[d.diseaseId.isin(cancer_ids) & (d.datasourceId != LITERATURE_DATASOURCE)]
         if not d.empty:
             rows.append(d)
