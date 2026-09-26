@@ -19,10 +19,18 @@ Format: `ID | date | who | decision | reason`
 || D-BASE | 2026-09-26 | B | ``base_seed = 20260926`` for ``StratifiedKFold(random_state=base_seed + r)`` in ``d1.splits``. Freeze with this value; any change breaks split-file reproducibility. | Today's date in yyyymmdd form; it is a stable but unambiguous choice for Phase 1. |
 || D-RANK | 2026-09-26 | B | Driver-gene label file ``rank`` = descending count of distinct CANCER_TYPEs in which the gene is a driver; ties broken by ascending SYMBOL. | Simplest publication-friendly proxy for "how widely supported as a driver"; aligns with how the catalogue's own tier column is constructed. |
 || D-ENV | 2026-09-26 | B | Use ``uv`` + ``.venv-d1/`` on Lenovo's Windows PC; ``environment.yml`` keeps a conda-compatible recipe (with the TUNA conda-forge mirror added) for any teammate who can reach ``conda.anaconda.org``. | ``conda.anaconda.org`` returns ``HTTP 000 CONNECTION FAILED`` from this network; ``uv pip install`` against ``https://pypi.tuna.tsinghua.edu.cn/simple/`` finishes in under a minute with all 27 protocol-required packages. |
+|| D-LOG10 | 2026-09-26 | B | Control-7 publication-count regressor uses ``log10(n_pubmed + 1)`` (not ``log10(n_pubmed)``) so genes with no publications stay at 0 instead of getting a negative value. | Matches the protocol's intuition of "genes that have never been written about" being a meaningful stratum, not a shifted-out outlier. |
+|| D-OT-AREA | 2026-09-26 | B | Open Targets cancer ontology root = ``MONDO_0045024`` ("cancer or benign tumor"); a disease is considered "cancer" if ``MONDO_0045024`` appears in its ``therapeuticAreas`` list OR in its ``ancestors`` list. | Matches the protocol's §1.1 ontology choice; 3,661 diseases pass this filter in 26.06. |
+|| D-OT-NOLIT-SCORE | 2026-09-26 | B | ot_nolit per-(target, disease) score = normalised harmonic sum ``H(s) = sum_i s_i / i^2 / (pi^2/6)`` over the per-datasource scores with ``europepmc`` dropped. | Single datasource collapse: the sum is the standard Open Targets-style combiner; the ``pi^2/6`` denominator (Basel) keeps the score in roughly [0, 1]. |
+|| D-OT-CAP | 2026-09-26 | B | ot_all and ot_nolit are each capped at the top N = 600 genes by score. Recompute N at S2 once the shared-universe size (D-11) is known. | Matches the protocol's §1.1 "~600 genes" figure for the Open Targets label panel. |
 
 Reserved IDs (planned in the Phase 1 work protocol, to be filled when decided):
 D-08 RNA network tumour-only vs pooled samples · D-09 temporal split definition ·
 D-10 Open Targets no-literature scoring · D-11 common label size N ·
 D-BASE stratified-KFold base seed (filled: 20260926) ·
 D-RANK driver-gene rank definition (filled: distinct cancer-type count desc, symbol asc) ·
-D-ENV environment provisioning (filled: uv + .venv-d1; conda mirror = TUNA)
+D-ENV environment provisioning (filled: uv + .venv-d1; conda mirror = TUNA) ·
+D-LOG10 publication-count regression (filled: log10(n+1)) ·
+D-OT-AREA cancer disease ontology (filled: MONDO_0045024 + ancestors) ·
+D-OT-NOLIT-SCORE no-literature score combiner (filled: harmonic sum / pi^2/6) ·
+D-OT-CAP Open Targets label cap (filled: 600)
