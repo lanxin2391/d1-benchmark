@@ -1,0 +1,17 @@
+{
+  "source_file": "intact.txt (in intact.zip)",
+  "threshold": 0.45,
+  "taxid_filter": "9606 (human-human only)",
+  "score_column": "intact-miscore",
+  "net_id": "intact_miscore045",
+  "n_input_edges": 462395,
+  "n_mapped_edges": 462395,
+  "n_self_loops_removed": 6806,
+  "n_edges_dedup": 127018,
+  "n_nodes_before_lcc": 14902,
+  "n_components": 26,
+  "n_nodes_lcc": 14851,
+  "n_edges_lcc": 126992,
+  "date": "2026-09-27",
+  "script": "build_intact.py"
+}

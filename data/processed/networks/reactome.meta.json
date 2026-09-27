@@ -1,0 +1,16 @@
+{
+  "source_file": "reactome.homo_sapiens.interactions.tab-delimited.txt",
+  "threshold": null,
+  "description": "Reactome curated pathway interactions (human only)",
+  "net_id": "reactome",
+  "n_input_edges": 74895,
+  "n_mapped_edges": 74895,
+  "n_self_loops_removed": 7304,
+  "n_edges_dedup": 21415,
+  "n_nodes_before_lcc": 4993,
+  "n_components": 303,
+  "n_nodes_lcc": 3953,
+  "n_edges_lcc": 20143,
+  "date": "2026-09-27",
+  "script": "build_reactome.py"
+}
