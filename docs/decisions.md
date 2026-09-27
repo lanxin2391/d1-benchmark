@@ -28,19 +28,21 @@ Format: `ID | date | who | decision | reason`
 
 | ID | Date | Author | Decision | Rationale |
 |---|---|---|---|---|
-| D-09 (proposal) | 2026-09-26 | B (draft) | **Temporal split label** = `intogen_temporal_new` (152 genes): IntOGen drivers added in the 2020→2024 window (i.e. present in 2024 release but absent from 2020 release). Use this set as the *training-set temporal holdout* — train ranking on `intogen2024` minus `intogen_temporal_new`, evaluate AUROC uplift on `intogen_temporal_new` alone. | One single canonical "control 6" matched to the protocol's "newly-discovered drivers" intuition; alternative (date-of-publication on every driver) is not provided by IntOGen. |
-| D-11 (proposal A) | 2026-09-26 | B (draft) | **Common size N = per-network min** — for each (label × network) arm separately, N = min(positives_in_LCC) across the four labels for that network. Result: funmap N=374, string_full400 N=595, string_full700 N=587, string_full900 N=519, string_phys700 N=519. | Keeps each label's network-specific coverage intact while still equalising positive prevalence per-arm; matches protocol §4.2's "common-size cap" intuition. |
-| D-11 (proposal B) | 2026-09-26 | B (draft) | **Common size N = global min** — N = 104 (= min across all 4×5 = 20 cells, set by `intogen_temporal_new ∩ funmap.LCC`). Cap every label to top-104 positives in every arm. | Single N across the whole pilot; easier to compare across arms; loses ~60 % of positives for the bigger labels. |
-| **D-11 (B's preferred)** | 2026-09-26 | B | **Per-network N (proposal A).** Trade-off: 5 different N values rather than 1, but no information loss; matches protocol §4.2 wording ("cap to common-size, network-aware"). | B-side default; A to confirm at S2. |
-| D-09-NUMPY (proposal) | 2026-09-26 | B | **Pin numpy to `>=1.26,<2.0` in both `environment.lock.yml` (conda) and `pyproject.toml` / `requirements.txt` (uv).** A's reproducer runs on 1.26.4 (works); B's venv runs on 2.4.6 (also works, bit-identical AUROC in 50-fold smoke test). Empirical evidence: 0.0998 ± 0.019 vs 0.0998 ± 0.019 — no detectable numerical drift. | A flags that `np.linalg.solve` crashed on Windows with numpy 2.x; B never hit it because the test path doesn't touch `linalg.solve`. Pin the floor at 1.26 to keep A safe; allow future 2.x bumps only after re-running all 61 tests + the 4-arm smoke. |
+| ~~D-09 (proposal)~~ → **D-09** | 2026-09-26 | B (draft) → A+B (locked at S2) | **Temporal split label** = `intogen_temporal_new` (152 genes): IntOGen drivers added in the 2020→2024 window (i.e. present in 2024 release but absent from 2020 release). Use this set as the *training-set temporal holdout* — train ranking on `intogen2024` minus `intogen_temporal_new`, evaluate AUROC uplift on `intogen_temporal_new` alone. | One single canonical "control 6" matched to the protocol's "newly-discovered drivers" intuition; alternative (date-of-publication on every driver) is not provided by IntOGen. |
+| ~~D-11 (proposal B)~~ → superseded | — | — | (Proposal B — global min — was discussed, not chosen.) | — |
+| ~~D-11 (B's preferred)~~ → **D-11** | 2026-09-26 | B (draft) → A+B (locked at S2) | **Common size N = per-network min** — for each (label × network) arm separately, N = min(positives_in_LCC) across the four labels for that network. Result: funmap N=374, string_full400 N=595, string_full700 N=587, string_full900 N=519, string_phys700 N=519. | Keeps each label's network-specific coverage intact while still equalising positive prevalence per-arm; matches protocol §4.2's "common-size cap" intuition. |
+| ~~D-09-NUMPY (proposal)~~ → **D-NUMPY** | 2026-09-26 | B (draft) → A+B (locked at S2) | **Pin numpy to `>=1.26,<2.0` in both `environment.lock.yml` (conda) and `pyproject.toml` / `requirements.txt` (uv).** A's reproducer runs on 1.26.4 (works); B's venv runs on 2.4.6 (also works, bit-identical AUROC in 50-fold smoke test). Empirical evidence: 0.0998 ± 0.019 vs 0.0998 ± 0.019 — no detectable numerical drift. | A flags that `np.linalg.solve` crashed on Windows with numpy 2.x; B never hit it because the test path doesn't touch `linalg.solve`. Pin the floor at 1.26 to keep A safe; allow future 2.x bumps only after re-running all 61 tests + the 4-arm smoke. |
 
 Reserved IDs (planned in the Phase 1 work protocol, to be filled when decided):
-D-08 RNA network tumour-only vs pooled samples · D-09 temporal split definition (proposal above) ·
-D-10 Open Targets no-literature scoring (filled: D-OT-NOLIT-SCORE) · D-11 common label size N (proposal above) ·
-D-BASE stratified-KFold base seed (filled: 20260926) ·
-D-RANK driver-gene rank definition (filled: distinct cancer-type count desc, symbol asc) ·
-D-ENV environment provisioning (filled: uv + .venv-d1; conda mirror = TUNA) ·
-D-LOG10 publication-count regression (filled: log10(n+1)) ·
-D-OT-AREA cancer disease ontology (filled: MONDO_0045024 + ancestors) ·
-D-OT-NOLIT-SCORE no-literature score combiner (filled: harmonic sum / pi^2/6) ·
-D-OT-CAP Open Targets label cap (filled: 600)
+D-08 RNA network tumour-only vs pooled samples
+D-09 temporal split definition (locked: intogen_temporal_new, see above)
+D-10 Open Targets no-literature scoring (filled: D-OT-NOLIT-SCORE)
+D-11 common label size N (locked: per-network min, see above)
+D-NUMPY numpy pin (locked: >=1.26,<2.0, see above)
+D-BASE stratified-KFold base seed (filled: 20260926)
+D-RANK driver-gene rank definition (filled: distinct cancer-type count desc, symbol asc)
+D-ENV environment provisioning (filled: uv + .venv-d1; conda mirror = TUNA)
+D-LOG10 publication-count regression (filled: log10(n+1))
+D-OT-AREA cancer disease ontology (filled: MONDO_0045024 + ancestors)
+D-OT-NOLIT-SCORE no-literature score combiner (filled: harmonic sum / pi^2/6)
+D-OT-CAP Open Targets label cap (filled: 600; re-cap at S2 to per-network min via D-11)

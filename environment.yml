@@ -4,7 +4,8 @@ channels:
   - nodefaults        # avoids the Anaconda "Terms of Service" prompt for the defaults channel
 dependencies:
   - python=3.11
-  - numpy
+  - numpy>=1.26,<1.27     # D-NUMPY: conda 1.26.4 build crashes on Windows linalg.solve (0xc06d007f);
+                        # pip-installed 1.26.4 wheel works. Use 1.26.x but verify the install source.
   - scipy
   - pandas
   - pyarrow           # reads Open Targets parquet files

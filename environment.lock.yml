@@ -181,6 +181,7 @@ dependencies:
   - networkx=3.6.1
   - nlohmann_json=3.12.0
   - notebook-shim=0.2.4
+  - numpy=1.26.4
   - openjpeg=2.5.4
   - openssl=3.6.4
   - orc=2.3.1
@@ -275,7 +276,6 @@ dependencies:
   - zstd=1.5.7
   - pip:
       - d1==0.1.0
-      - numpy==1.26.4
       - pyarrow==25.0.0
       - scipy==1.17.1
 prefix: E:\worksw\miniconda\envs\d1
