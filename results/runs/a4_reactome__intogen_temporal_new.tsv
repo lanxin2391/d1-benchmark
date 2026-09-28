@@ -1,0 +1,201 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+reactome	intogen_temporal_new	native_reactome		0	0	degree		0.5030650583349813	0.02179642713086101	0.02	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome		0	1	degree		0.6149396875617955	0.030815994522685363	0.04	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		0	2	degree		0.5399446312042714	0.035905217429356456	0.06	0.03	0.014	13	791
+reactome	intogen_temporal_new	native_reactome		0	3	degree		0.6875	0.035062107460166476	0.04	0.05	0.02	12	790
+reactome	intogen_temporal_new	native_reactome		0	4	degree		0.6577763496143959	0.025726635338230087	0.0	0.01	0.02	12	790
+reactome	intogen_temporal_new	native_reactome		1	0	degree		0.5892821831125173	0.030076008730862254	0.04	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		1	1	degree		0.5602630017797113	0.026828470119315072	0.04	0.04	0.018	13	791
+reactome	intogen_temporal_new	native_reactome		1	2	degree		0.6387186078702789	0.03992627523293716	0.06	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		1	3	degree		0.5323479005998286	0.019804215277712832	0.02	0.02	0.014	12	790
+reactome	intogen_temporal_new	native_reactome		1	4	degree		0.6714331619537276	0.026768191314299646	0.02	0.02	0.022	12	790
+reactome	intogen_temporal_new	native_reactome		2	0	degree		0.5089974293059125	0.027532806412841754	0.04	0.03	0.014	13	791
+reactome	intogen_temporal_new	native_reactome		2	1	degree		0.6647221672928614	0.029402125202771648	0.02	0.03	0.022	13	791
+reactome	intogen_temporal_new	native_reactome		2	2	degree		0.5699525410322326	0.03958270399253807	0.04	0.04	0.016	13	791
+reactome	intogen_temporal_new	native_reactome		2	3	degree		0.5009640102827764	0.016306594211245414	0.02	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome		2	4	degree		0.7578191945158526	0.035272620950316844	0.04	0.03	0.024	12	790
+reactome	intogen_temporal_new	native_reactome		3	0	degree		0.5485465691121219	0.020733407767371592	0.02	0.01	0.018	13	791
+reactome	intogen_temporal_new	native_reactome		3	1	degree		0.5223452639905082	0.021156141853863747	0.02	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome		3	2	degree		0.5868103618746292	0.03613609095034906	0.06	0.04	0.018	13	791
+reactome	intogen_temporal_new	native_reactome		3	3	degree		0.6901778063410455	0.04806356485158725	0.04	0.04	0.018	12	790
+reactome	intogen_temporal_new	native_reactome		3	4	degree		0.6546165381319623	0.029259073701342515	0.04	0.03	0.018	12	790
+reactome	intogen_temporal_new	native_reactome		4	0	degree		0.6375321336760925	0.02643798105614887	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		4	1	degree		0.6702096104409729	0.04049031068272954	0.04	0.04	0.022	13	791
+reactome	intogen_temporal_new	native_reactome		4	2	degree		0.5106288313229188	0.019002435350055785	0.02	0.02	0.014	13	791
+reactome	intogen_temporal_new	native_reactome		4	3	degree		0.557840616966581	0.04597556694829096	0.06	0.03	0.018	12	790
+reactome	intogen_temporal_new	native_reactome		4	4	degree		0.6118787489288775	0.024725134727788	0.02	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome		5	0	degree		0.5678267747676489	0.023844102491619133	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		5	1	degree		0.7575637729879374	0.058430898623159755	0.1	0.06	0.024	13	791
+reactome	intogen_temporal_new	native_reactome		5	2	degree		0.4921890448882737	0.01719262041311021	0.02	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome		5	3	degree		0.5586439588688945	0.01873161122165807	0.0	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome		5	4	degree		0.6110754070265639	0.03876269421990564	0.04	0.03	0.016	12	790
+reactome	intogen_temporal_new	native_reactome		6	0	degree		0.639114099268341	0.030872825409505814	0.04	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		6	1	degree		0.6100454815107772	0.03303222906229834	0.04	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		6	2	degree		0.6406960648605893	0.03105891209287024	0.04	0.03	0.022	13	791
+reactome	intogen_temporal_new	native_reactome		6	3	degree		0.43894601542416456	0.014046633335783647	0.0	0.01	0.014	12	790
+reactome	intogen_temporal_new	native_reactome		6	4	degree		0.6665595544130248	0.036193373457244264	0.06	0.03	0.018	12	790
+reactome	intogen_temporal_new	native_reactome		7	0	degree		0.6691220090963022	0.03612992755826551	0.06	0.04	0.022	13	791
+reactome	intogen_temporal_new	native_reactome		7	1	degree		0.5948190626853866	0.02272559902591542	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		7	2	degree		0.498764089381056	0.01695887865656335	0.0	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome		7	3	degree		0.6559018851756642	0.03896848565756962	0.04	0.04	0.018	12	790
+reactome	intogen_temporal_new	native_reactome		7	4	degree		0.5808697514995715	0.027374029710931655	0.04	0.02	0.016	12	790
+reactome	intogen_temporal_new	native_reactome		8	0	degree		0.5174510579394899	0.018092061343723813	0.0	0.0	0.016	13	791
+reactome	intogen_temporal_new	native_reactome		8	1	degree		0.6859303935139411	0.0488322617491499	0.08	0.06	0.022	13	791
+reactome	intogen_temporal_new	native_reactome		8	2	degree		0.5839924856634368	0.03653914525940541	0.04	0.04	0.018	13	791
+reactome	intogen_temporal_new	native_reactome		8	3	degree		0.6913560411311054	0.03270805422508433	0.02	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome		8	4	degree		0.518155526992288	0.01925419131566309	0.02	0.01	0.014	12	790
+reactome	intogen_temporal_new	native_reactome		9	0	degree		0.5213070990705951	0.017883291858961224	0.0	0.01	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		9	1	degree		0.6362467866323908	0.03143363652683149	0.04	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		9	2	degree		0.6707534111133083	0.04153763462054581	0.06	0.04	0.02	13	791
+reactome	intogen_temporal_new	native_reactome		9	3	degree		0.6007390745501284	0.021046954401939058	0.0	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome		9	4	degree		0.5509854327335046	0.032826183581698046	0.06	0.04	0.014	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	0	0	rwr	38.0	0.49970338145145343	0.018413662366365127	0.02	0.02	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	0	1	rwr	38.0	0.6234427526201305	0.02288690066613976	0.0	0.01	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	0	2	rwr	38.0	0.6192900929404785	0.028429469558274908	0.0	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	0	3	rwr	38.0	0.671218937446444	0.044502651166464915	0.06	0.03	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	0	4	rwr	38.0	0.5656598114824336	0.01974290863225862	0.02	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	1	0	rwr	38.0	0.6412398655329247	0.03330884531894044	0.02	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	1	1	rwr	38.0	0.5448388372552897	0.022542679207042976	0.02	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	1	2	rwr	38.0	0.6299189242633972	0.03431565925647388	0.04	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	1	3	rwr	38.0	0.5461653813196229	0.018978317575773396	0.0	0.02	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	1	4	rwr	38.0	0.5359361610968295	0.017285468914520784	0.0	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	2	0	rwr	38.0	0.5471129127941468	0.02673309768965994	0.04	0.02	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	2	1	rwr	38.0	0.6345659481906268	0.02313760940329678	0.0	0.01	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	2	2	rwr	38.0	0.5407356140003955	0.025172189722422116	0.04	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	2	3	rwr	38.0	0.5603577549271637	0.01948916504609938	0.0	0.02	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	2	4	rwr	38.0	0.7465188517566409	0.04654178139840524	0.04	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	3	0	rwr	38.0	0.4784951552303738	0.019037213925444593	0.02	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	3	1	rwr	38.0	0.5862665612022939	0.022179725680262143	0.0	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	3	2	rwr	38.0	0.5383132291872652	0.031219332758883132	0.04	0.04	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	3	3	rwr	38.0	0.6686482433590403	0.02732686477831454	0.02	0.02	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	3	4	rwr	38.0	0.6943016281062553	0.03664990400672983	0.02	0.02	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	4	0	rwr	38.0	0.6128139212972118	0.02975809277978728	0.02	0.01	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	4	1	rwr	38.0	0.6292268143167886	0.02531079125413089	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	4	2	rwr	38.0	0.4809175400435041	0.018183411398654786	0.0	0.02	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	4	3	rwr	38.0	0.6496358183376177	0.026251245395408605	0.02	0.04	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	4	4	rwr	38.0	0.6185197086546701	0.029642002247920317	0.04	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	5	0	rwr	38.0	0.5433557445125569	0.024624625805648795	0.02	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	5	1	rwr	38.0	0.7358611825192802	0.05228127742003217	0.04	0.05	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	5	2	rwr	38.0	0.4171939885307495	0.015492695278737366	0.0	0.01	0.012	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	5	3	rwr	38.0	0.5995608397600686	0.02213721662323179	0.02	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	5	4	rwr	38.0	0.6139674378748928	0.020622267145621376	0.0	0.01	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	6	0	rwr	38.0	0.5905180937314614	0.02687636815858217	0.02	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	6	1	rwr	38.0	0.6348131303144156	0.026754688538329376	0.02	0.03	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	6	2	rwr	38.0	0.5936325884912004	0.02079986144258436	0.0	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	6	3	rwr	38.0	0.4317159383033419	0.013485414508833702	0.0	0.0	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	6	4	rwr	38.0	0.6188946015424165	0.028439242350437016	0.02	0.03	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	7	0	rwr	38.0	0.6290290686177575	0.024452853002266378	0.02	0.01	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	7	1	rwr	38.0	0.6489519477951355	0.029918856481202512	0.02	0.03	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	7	2	rwr	38.0	0.4348922285940281	0.01813653469299815	0.02	0.01	0.01	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	7	3	rwr	38.0	0.6570265638389032	0.032143338881880375	0.02	0.02	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	7	4	rwr	38.0	0.6053984575835476	0.022117233390091386	0.0	0.01	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	8	0	rwr	38.0	0.5361874629226815	0.02288549326946785	0.02	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	8	1	rwr	38.0	0.6923076923076923	0.042201012018660944	0.06	0.04	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	8	2	rwr	38.0	0.6247280996638324	0.028240922743060337	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	8	3	rwr	38.0	0.6625964010282777	0.024978178750126968	0.02	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	8	4	rwr	38.0	0.49057412167952014	0.015615103482906081	0.0	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	9	0	rwr	38.0	0.5560609056753016	0.023467018185158162	0.0	0.02	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	9	1	rwr	38.0	0.5589282183112516	0.024999214490099352	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	9	2	rwr	38.0	0.5949673719596599	0.031448897587134234	0.04	0.03	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.3	9	3	rwr	38.0	0.6001499571550986	0.021772949938819206	0.02	0.01	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.3	9	4	rwr	38.0	0.6040059982862039	0.023500353182270346	0.02	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	0	0	rwr	22.0	0.4999011271504845	0.01735148025989114	0.0	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	0	1	rwr	22.0	0.6323413090765276	0.023019952884988103	0.0	0.02	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	0	2	rwr	22.0	0.6166205260035594	0.0273883453750058	0.0	0.03	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	0	3	rwr	22.0	0.6643637532133676	0.04710930480110014	0.06	0.04	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	0	4	rwr	22.0	0.5550021422450728	0.01955624922682157	0.02	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	1	0	rwr	22.0	0.6484575835475579	0.03569280358257282	0.02	0.06	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	1	1	rwr	22.0	0.5357425350998616	0.02216644954642779	0.02	0.02	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	1	2	rwr	22.0	0.6246786632390746	0.03757779480905879	0.04	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	1	3	rwr	22.0	0.5449871465295629	0.017800832136999043	0.0	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	1	4	rwr	22.0	0.5222257926306769	0.016653217660059484	0.0	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	2	0	rwr	22.0	0.550771208226221	0.02711216092405401	0.04	0.03	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	2	1	rwr	22.0	0.6257168281589875	0.022485577974283633	0.0	0.01	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	2	2	rwr	22.0	0.5375716828158987	0.024707260372486287	0.02	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	2	3	rwr	22.0	0.5697836332476436	0.02047766703371808	0.0	0.02	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	2	4	rwr	22.0	0.7291666666666666	0.04312683276942139	0.04	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	3	0	rwr	22.0	0.4669270318370575	0.018879951832406962	0.02	0.01	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	3	1	rwr	22.0	0.5942752620130511	0.02203695457877212	0.0	0.02	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	3	2	rwr	22.0	0.5322819853668183	0.030599892661814867	0.04	0.03	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	3	3	rwr	22.0	0.6623286203941731	0.02693530303509107	0.02	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	3	4	rwr	22.0	0.6969794344473008	0.03568378472645911	0.02	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	4	0	rwr	22.0	0.6033221277437215	0.029051877313291976	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	4	1	rwr	22.0	0.615681233933162	0.02404840510147135	0.02	0.01	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	4	2	rwr	22.0	0.4839825983784853	0.01849892753991672	0.0	0.02	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	4	3	rwr	22.0	0.6562767780634104	0.023890806649020435	0.0	0.02	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	4	4	rwr	22.0	0.6211975149957155	0.03300124594710238	0.04	0.03	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	5	0	rwr	22.0	0.544344473007712	0.026058408858558577	0.02	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	5	1	rwr	22.0	0.7383330037571683	0.05661604385273624	0.06	0.05	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	5	2	rwr	22.0	0.41927031837057543	0.015618459738459104	0.0	0.01	0.012	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	5	3	rwr	22.0	0.6085582690659812	0.02381419130298882	0.02	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	5	4	rwr	22.0	0.605719794344473	0.019924042454567532	0.0	0.01	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	6	0	rwr	22.0	0.5820150286731263	0.027377908447797375	0.02	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	6	1	rwr	22.0	0.6279414672730868	0.02549021664462956	0.02	0.02	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	6	2	rwr	22.0	0.5862171247775362	0.02015889049695092	0.0	0.01	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	6	3	rwr	22.0	0.4317159383033419	0.013476961285593218	0.0	0.0	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	6	4	rwr	22.0	0.6108611825192802	0.027262068301226502	0.02	0.04	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	7	0	rwr	22.0	0.6141487047656713	0.023873098020055664	0.02	0.01	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	7	1	rwr	22.0	0.6494463120427131	0.029377265409730464	0.02	0.03	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	7	2	rwr	22.0	0.43449673719596604	0.018511165247454407	0.02	0.02	0.012	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	7	3	rwr	22.0	0.642566409597258	0.03109221923201284	0.02	0.03	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	7	4	rwr	22.0	0.6128963153384747	0.022083677921347893	0.0	0.01	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	8	0	rwr	22.0	0.525904686573067	0.022104115892443557	0.02	0.02	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	8	1	rwr	22.0	0.6921099466086612	0.041988437507753905	0.06	0.04	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	8	2	rwr	22.0	0.6176092544987147	0.02730805957665551	0.02	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	8	3	rwr	22.0	0.6608826049700085	0.024516616738726668	0.0	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	8	4	rwr	22.0	0.4944301628106256	0.01594359658995707	0.0	0.02	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	9	0	rwr	22.0	0.5549733043306309	0.023382839782176583	0.0	0.03	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	9	1	rwr	22.0	0.5545778129325687	0.024014450107550944	0.02	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	9	2	rwr	22.0	0.5902214751829148	0.03268800218128335	0.04	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.5	9	3	rwr	22.0	0.6005784061696658	0.021651980757540264	0.02	0.01	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.5	9	4	rwr	22.0	0.5976863753213367	0.022547622135100674	0.02	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	0	0	rwr	13.0	0.49891239865532927	0.017004977089119064	0.0	0.01	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	0	1	rwr	13.0	0.6397567727901918	0.023483044810011393	0.0	0.02	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	0	2	rwr	13.0	0.6146430690132489	0.027575640326334177	0.0	0.04	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	0	3	rwr	13.0	0.6540809768637532	0.04595281805381663	0.06	0.04	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	0	4	rwr	13.0	0.5472900599828621	0.01946959186025008	0.02	0.01	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	1	0	rwr	13.0	0.646974490804825	0.03545928314344223	0.02	0.05	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	1	1	rwr	13.0	0.5295135455803837	0.021768128936555345	0.02	0.02	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	1	2	rwr	13.0	0.6161755981807396	0.03920181293613	0.04	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	1	3	rwr	13.0	0.5448800342759212	0.01734982638005194	0.0	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	1	4	rwr	13.0	0.5150492716366752	0.016354831821587014	0.0	0.01	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	2	0	rwr	13.0	0.5521554281194384	0.027389241694644576	0.04	0.04	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	2	1	rwr	13.0	0.6188451651176586	0.022098860185428018	0.0	0.0	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	2	2	rwr	13.0	0.5326280403401227	0.027302463220742125	0.02	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	2	3	rwr	13.0	0.5798521850899743	0.021574377023811125	0.0	0.03	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	2	4	rwr	13.0	0.715563410454156	0.04115619956104632	0.04	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	3	0	rwr	13.0	0.462280007909828	0.01765938198067467	0.02	0.01	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	3	1	rwr	13.0	0.597636938896579	0.022167913470516262	0.0	0.02	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	3	2	rwr	13.0	0.5236800474589678	0.029319922099854297	0.04	0.03	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	3	3	rwr	13.0	0.6545094258783206	0.02690154480629952	0.02	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	3	4	rwr	13.0	0.6970865467009425	0.03840011017231689	0.02	0.03	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	4	0	rwr	13.0	0.5921494957484675	0.02714471260797178	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	4	1	rwr	13.0	0.606782677476765	0.023774954565613647	0.02	0.02	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	4	2	rwr	13.0	0.4854656911212182	0.01873654429979601	0.0	0.03	0.014	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	4	3	rwr	13.0	0.6633461868037703	0.02362160537182021	0.0	0.02	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	4	4	rwr	13.0	0.621518851756641	0.03198432191957796	0.04	0.03	0.018	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	5	0	rwr	13.0	0.5479038955902709	0.02628937786597584	0.02	0.03	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	5	1	rwr	13.0	0.7354656911212181	0.051482486000859785	0.06	0.04	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	5	2	rwr	13.0	0.4201601740162151	0.015555075124047678	0.0	0.01	0.012	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	5	3	rwr	13.0	0.6132712082262212	0.024856681397446276	0.02	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	5	4	rwr	13.0	0.6025064267352185	0.019898410670837405	0.0	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	6	0	rwr	13.0	0.5784556060905675	0.027454621299195844	0.02	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	6	1	rwr	13.0	0.622503460549733	0.025599461855881953	0.02	0.02	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	6	2	rwr	13.0	0.578999406762903	0.019717440724764675	0.0	0.0	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	6	3	rwr	13.0	0.434607969151671	0.013647518459781148	0.0	0.01	0.014	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	6	4	rwr	13.0	0.6006855184233076	0.02685418959107587	0.02	0.04	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	7	0	rwr	13.0	0.5979829938698833	0.023345514772243704	0.02	0.01	0.02	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	7	1	rwr	13.0	0.6482598378485268	0.029092648570144822	0.02	0.02	0.022	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	7	2	rwr	13.0	0.43568321139015226	0.019130241321610744	0.02	0.02	0.012	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	7	3	rwr	13.0	0.6246786632390746	0.030571302170125884	0.02	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	7	4	rwr	13.0	0.6171808054841474	0.022178200616365756	0.0	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	8	0	rwr	13.0	0.5201700613011667	0.022865687012553957	0.02	0.02	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	8	1	rwr	13.0	0.6888471425746491	0.04253568050305991	0.06	0.04	0.024	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	8	2	rwr	13.0	0.6082163337947399	0.026379490906840462	0.02	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	8	3	rwr	13.0	0.6578834618680376	0.024739553228038388	0.0	0.02	0.02	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	8	4	rwr	13.0	0.4997857754927164	0.01636731915740745	0.0	0.02	0.016	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	9	0	rwr	13.0	0.5536879572869291	0.02238924662180976	0.0	0.03	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	9	1	rwr	13.0	0.5550721771801463	0.022701127567797103	0.02	0.02	0.018	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	9	2	rwr	13.0	0.5891338738382441	0.032374385967597154	0.04	0.03	0.016	13	791
+reactome	intogen_temporal_new	native_reactome	0.7	9	3	rwr	13.0	0.6036846615252784	0.0218050934023033	0.02	0.01	0.022	12	790
+reactome	intogen_temporal_new	native_reactome	0.7	9	4	rwr	13.0	0.5834404455869752	0.021690603068015943	0.02	0.01	0.018	12	790
