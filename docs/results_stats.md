@@ -43,7 +43,7 @@ We ran two robustness checks before declaring significance:
 * We have not yet powered for the other 2 labels (ot_nolit, intogen_temporal_new) or the other 3 STRING cuts (full400/900, phys700); see `docs/results_stats_w3.md` (planned) for those.
 * A's `string_full700 × intogen2024` arm has the *smallest* within-arm SD (0.011), suggesting the per-fold AUROC is more stable on denser networks — consistent with the protocol's expectation.
 
-## 12. How to reproduce
+## 14. How to reproduce
 
 ```powershell
 cd D:\Bioinformatics\d1-benchmark
@@ -51,12 +51,14 @@ cd D:\Bioinformatics\d1-benchmark
 # writes results/tables/results_stats.tsv and this file
 ```
 
-## 13. Files
+## 15. Files
 
 * `results/tables/results_stats.tsv` — main 4-arm stats
 * `results/tables/results_stats_d09.tsv` — temporal-drift stats
 * `results/tables/results_stats_d11.tsv` — D-11-capped stats
+* `results/tables/results_stats_clingen.tsv` — clingen (5th label) stats
 * `results/runs/end_to_end_*.tsv` — uncapped input C5 result tables
 * `results/runs/d11/end_to_end_*.tsv` — D-11-capped input C5 result tables
+* `results/runs/clingen/end_to_end_*.tsv` — clingen 6-network input
 * `results/runs/d09_temporal.tsv` — temporal-drift bootstrap results
 * `scripts/results_stats.py` — generator

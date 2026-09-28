@@ -50,6 +50,15 @@ D11_ARMS = [
     ("string_full700", "intogen_temporal_new"),
 ]
 
+CLINGEN_ARMS = [
+    ("funmap", "clingen_label"),
+    ("intact", "clingen_label"),
+    ("reactome", "clingen_label"),
+    ("rna_coexp", "clingen_label"),
+    ("string_full700", "clingen_label"),
+    ("string_phys700", "clingen_label"),
+]
+
 
 def load_arm(network: str, label: str) -> tuple[np.ndarray, np.ndarray]:
     """Return (rwr_aurocs, degree_aurocs) of length 50 for one arm."""
@@ -77,6 +86,16 @@ def load_d09(network: str) -> tuple[np.ndarray, np.ndarray]:
     deg = df[df.method == "degree"].sort_values(by="repeat").auroc.to_numpy()
     assert rwr.size == deg.size
     return rwr, deg
+
+
+def load_clingen(network: str, label: str = "clingen_label"
+                 ) -> tuple[np.ndarray, np.ndarray]:
+    """Return (rwr, degree) for one clingen_label x network arm (n=50 folds)."""
+    path = RUNS_DIR / "clingen" / f"end_to_end_{label}_{network}.tsv"
+    df = pd.read_csv(path, sep="\t")
+    pivot = df.pivot_table(index=["repeat", "fold"], columns="method",
+                           values="auroc").reset_index()
+    return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
 
 
 def bh_fdr(pvals: list[float]) -> tuple[np.ndarray, np.ndarray]:
@@ -233,6 +252,39 @@ def main() -> int:
                       index=False, float_format="%.6f")
         print(f"Wrote {TABLES_DIR / 'results_stats_d11.tsv'}")
 
+    # -------- clingen_label arms (5th label, W3) --------
+    clingen_rows = []
+    for net, lbl in CLINGEN_ARMS:
+        try:
+            rwr, deg = load_clingen(net, lbl)
+        except FileNotFoundError:
+            print(f"  [clingen] skip {net} x {lbl}: file not found")
+            continue
+        delta = rwr - deg
+        n = delta.size
+        mean_d = float(delta.mean())
+        sd_d = float(delta.std(ddof=1))
+        se_d = sd_d / math.sqrt(n)
+        t_stat, p_two = stats.ttest_rel(rwr, deg)
+        p_one = p_two / 2.0 if t_stat > 0 else 1.0 - p_two / 2.0
+        ci_low = mean_d - 1.96 * se_d
+        ci_high = mean_d + 1.96 * se_d
+        clingen_rows.append({
+            "network": net, "label": lbl, "n_folds": n,
+            "mean_delta_AUROC": mean_d, "sd_delta_AUROC": sd_d,
+            "se_delta_AUROC": se_d, "ci95_low": ci_low, "ci95_high": ci_high,
+            "t_stat": float(t_stat), "p_one_sided": float(p_one),
+            "mean_rwr_AUROC": float(rwr.mean()),
+            "mean_degree_AUROC": float(deg.mean()),
+        })
+    df_clingen = pd.DataFrame(clingen_rows)
+    if len(df_clingen):
+        df_clingen["p_FDR_BH"], df_clingen["reject_H0_at_q_0.05"] = bh_fdr(
+            df_clingen["p_one_sided"].tolist())
+        df_clingen.to_csv(TABLES_DIR / "results_stats_clingen.tsv", sep="\t",
+                          index=False, float_format="%.6f")
+        print(f"Wrote {TABLES_DIR / 'results_stats_clingen.tsv'}")
+
     # -------- markdown report --------
     md_lines: list[str] = []
     md_lines.append("# Statistical Analysis of End-to-End Arms\n")
@@ -350,20 +402,22 @@ def main() -> int:
         "expectation.\n\n"
     )
 
-    md_lines.append("## 12. How to reproduce\n\n")
+    md_lines.append("## 14. How to reproduce\n\n")
     md_lines.append("```powershell\n")
     md_lines.append("cd D:\\Bioinformatics\\d1-benchmark\n")
     md_lines.append(".venv-d1\\Scripts\\python.exe scripts\\results_stats.py\n")
     md_lines.append("# writes results/tables/results_stats.tsv and this file\n")
     md_lines.append("```\n\n")
 
-    md_lines.append("## 13. Files\n\n")
+    md_lines.append("## 15. Files\n\n")
     md_lines.append(
         "* `results/tables/results_stats.tsv` — main 4-arm stats\n"
         "* `results/tables/results_stats_d09.tsv` — temporal-drift stats\n"
         "* `results/tables/results_stats_d11.tsv` — D-11-capped stats\n"
+        "* `results/tables/results_stats_clingen.tsv` — clingen (5th label) stats\n"
         "* `results/runs/end_to_end_*.tsv` — uncapped input C5 result tables\n"
         "* `results/runs/d11/end_to_end_*.tsv` — D-11-capped input C5 result tables\n"
+        "* `results/runs/clingen/end_to_end_*.tsv` — clingen 6-network input\n"
         "* `results/runs/d09_temporal.tsv` — temporal-drift bootstrap results\n"
         "* `scripts/results_stats.py` — generator\n"
     )
