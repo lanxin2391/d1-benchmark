@@ -113,16 +113,13 @@ If not ready, no problem — the 4-label factorial is already complete.
 
 ## What B does NOT need to do for W5
 
-W5 (the 100-rewirings-per-network null model) is **pure A-side work**:
+W5 (the 100-rewirings-per-network null model) is **pure A-side work** per
+the protocol:
 
 - It permutes edges within each network's degree sequence
   (degree-preserving rewiring).
 - It does NOT touch labels, splits, or any B-side artifact.
-- I will run it without any B input.
-
-If B wants to *also* run rewirings (to halve wall-clock), the script
-will accept `--offset` and `--total` so we can split the work.
-Otherwise I run all 600 alone (~10 hours wall clock on this machine).
+- A will run it without any B input.
 
 ---
 
@@ -134,7 +131,6 @@ Otherwise I run all 600 alone (~10 hours wall clock on this machine).
 | Pilot numbers verification (already match — please re-confirm) | text | before S3 |
 | ClinGen label status (ready / not ready / expected date) | text | before S3 |
 | Optional: B-side "results_stats.md" prose summary mirroring A's stats | markdown | before S3 |
-| (Optional) Decision on whether B wants to share W5 rewiring work | text | before W5 starts |
 
 ---
 
