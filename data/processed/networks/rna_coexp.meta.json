@@ -1,0 +1,18 @@
+{
+  "source_file": "funmap_input_expression_data.tgz",
+  "threshold": "top 196,800 by mean |Fisher z|",
+  "score_column": "mean Fisher z of Pearson correlation",
+  "n_cohorts_used": 10,
+  "n_cohorts_total": 10,
+  "net_id": "rna_coexp",
+  "n_input_edges": 196800,
+  "n_mapped_edges": 196800,
+  "n_self_loops_removed": 0,
+  "n_edges_dedup": 196800,
+  "n_nodes_before_lcc": 9928,
+  "n_components": 314,
+  "n_nodes_lcc": 9152,
+  "n_edges_lcc": 196172,
+  "date": "2026-09-28",
+  "script": "build_rna_coexp.py"
+}
