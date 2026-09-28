@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+reactome	ot_nolit_pubcount_adjusted	native_reactome		0	0	degree		0.7505244755244755	0.033191011278622395	0.02	0.04	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		0	1	degree		0.6624708624708625	0.026943607593057875	0.04	0.02	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		0	2	degree		0.7607226107226106	0.1571688084753106	0.08	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		0	3	degree		0.806628544754347	0.11159327203466418	0.1	0.05	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		0	4	degree		0.7555724121834521	0.0698770571534151	0.1	0.05	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		1	0	degree		0.8821095571095571	0.12859376930701327	0.1	0.07	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		1	1	degree		0.8265734265734266	0.1102510194090703	0.08	0.05	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		1	2	degree		0.697902097902098	0.048221802052616315	0.06	0.04	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		1	3	degree		0.5943517329910142	0.02366808910773048	0.04	0.02	0.016	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		1	4	degree		0.7385342513712218	0.053459103868177635	0.06	0.04	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		2	0	degree		0.7377039627039628	0.12804889369373032	0.06	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		2	1	degree		0.6858391608391607	0.03161496529466791	0.04	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		2	2	degree		0.6392191142191141	0.13159381322250008	0.06	0.04	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		2	3	degree		0.872213793908274	0.06665307952817952	0.08	0.06	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		2	4	degree		0.7943750729373322	0.06891704768552634	0.08	0.05	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		3	0	degree		0.7396270396270397	0.12582381236163587	0.1	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		3	1	degree		0.8407342657342657	0.053031830909994485	0.06	0.05	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		3	2	degree		0.6720862470862471	0.035384640330929605	0.06	0.04	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		3	3	degree		0.8466565526899288	0.14500141257052057	0.1	0.07	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		3	4	degree		0.6438324191854359	0.024672606205502885	0.02	0.02	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		4	0	degree		0.7714452214452214	0.15092331176020873	0.08	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		4	1	degree		0.76497668997669	0.04634089517026185	0.04	0.03	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		4	2	degree		0.7086247086247086	0.07489743159776936	0.08	0.04	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		4	3	degree		0.8094293383125218	0.07358016938849468	0.08	0.05	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		4	4	degree		0.6929046563192904	0.061897070450837505	0.04	0.05	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		5	0	degree		0.6023310023310023	0.03916337317738251	0.04	0.02	0.016	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		5	1	degree		0.8856643356643357	0.22169906508644738	0.1	0.08	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		5	2	degree		0.7036130536130535	0.03176186898060201	0.02	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		5	3	degree		0.7554557124518614	0.046219502254087254	0.08	0.04	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		5	4	degree		0.7829968491072471	0.05188661968882149	0.08	0.05	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		6	0	degree		0.8375291375291376	0.10603817767428542	0.1	0.07	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		6	1	degree		0.6817599067599068	0.03959186454112275	0.06	0.05	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		6	2	degree		0.6638694638694639	0.03574069422420265	0.04	0.02	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		6	3	degree		0.7666005368187654	0.10191690572790214	0.08	0.04	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		6	4	degree		0.7875481386392811	0.07397915021947782	0.06	0.04	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		7	0	degree		0.7593240093240093	0.1173077834225848	0.08	0.06	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		7	1	degree		0.6671911421911422	0.03514751140686043	0.04	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		7	2	degree		0.7602564102564102	0.08726826128978112	0.1	0.06	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		7	3	degree		0.8023106546854942	0.13526992220212977	0.06	0.05	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		7	4	degree		0.7503792741276696	0.043190469218359076	0.06	0.03	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		8	0	degree		0.6837995337995338	0.044153642058972375	0.06	0.03	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		8	1	degree		0.7360722610722611	0.05178057106444964	0.06	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		8	2	degree		0.7162004662004662	0.052751472963669915	0.02	0.02	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		8	3	degree		0.8229081573112382	0.1215438262668417	0.08	0.04	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		8	4	degree		0.7813630528649783	0.08162659941062118	0.1	0.07	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		9	0	degree		0.7200466200466201	0.039446055070267154	0.04	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		9	1	degree		0.7112470862470862	0.028006260555000412	0.04	0.02	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		9	2	degree		0.7858391608391608	0.11000666590390083	0.1	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome		9	3	degree		0.8290932430855409	0.13555445357497486	0.1	0.07	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome		9	4	degree		0.6949469016221264	0.05073277039105607	0.08	0.04	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	0	0	rwr	21.0	0.7710955710955711	0.03998257525903254	0.06	0.04	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	0	1	rwr	21.0	0.708974358974359	0.1189396611330243	0.04	0.03	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	0	2	rwr	21.0	0.8161421911421911	0.09326713250335755	0.04	0.07	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	0	3	rwr	21.0	0.8328859843622359	0.06710954070502737	0.08	0.06	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	0	4	rwr	21.0	0.7741860193721554	0.08536204284529007	0.08	0.06	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	1	0	rwr	21.0	0.8601398601398601	0.09848736710480321	0.08	0.06	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	1	1	rwr	21.0	0.8144522144522144	0.0829199993899592	0.08	0.06	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	1	2	rwr	21.0	0.7170163170163171	0.08185079015437732	0.06	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	1	3	rwr	21.0	0.6468666122067919	0.022838599896199185	0.0	0.03	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	1	4	rwr	21.0	0.7422686427821216	0.03120296137149569	0.04	0.03	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	2	0	rwr	21.0	0.7707459207459206	0.07834811801968397	0.02	0.05	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	2	1	rwr	21.0	0.7418997668997669	0.036903823865252525	0.04	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	2	2	rwr	21.0	0.734965034965035	0.0845184856499587	0.08	0.04	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	2	3	rwr	21.0	0.8822499708250672	0.12118996922142622	0.08	0.06	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	2	4	rwr	21.0	0.7623993464815032	0.04742111025780971	0.04	0.05	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	3	0	rwr	21.0	0.7425990675990676	0.05801015981435752	0.06	0.06	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	3	1	rwr	21.0	0.8406759906759906	0.057725864449041764	0.08	0.06	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	3	2	rwr	21.0	0.7861305361305362	0.07143996390729239	0.06	0.03	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	3	3	rwr	21.0	0.8681293033026024	0.13335886133565733	0.12	0.07	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	3	4	rwr	21.0	0.654452094760182	0.02994954823635306	0.02	0.02	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	4	0	rwr	21.0	0.76002331002331	0.07548461663207412	0.08	0.06	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	4	1	rwr	21.0	0.7385780885780886	0.03581902783714312	0.02	0.04	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	4	2	rwr	21.0	0.7702214452214452	0.043136216898237545	0.04	0.04	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	4	3	rwr	21.0	0.7061500758548255	0.06607150525707255	0.04	0.04	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	4	4	rwr	21.0	0.7448943867429105	0.03899938662229278	0.04	0.04	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	5	0	rwr	21.0	0.6545454545454545	0.03430982081763222	0.02	0.03	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	5	1	rwr	21.0	0.8662004662004662	0.14756076183179206	0.1	0.07	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	5	2	rwr	21.0	0.7199300699300699	0.038677796009921585	0.02	0.03	0.018	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	5	3	rwr	21.0	0.7614073987629828	0.07136446314576134	0.06	0.05	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	5	4	rwr	21.0	0.8106546854942233	0.05225255969570265	0.06	0.03	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	6	0	rwr	21.0	0.8303030303030303	0.07093665331363215	0.04	0.05	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	6	1	rwr	21.0	0.705011655011655	0.05821237339832744	0.06	0.04	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	6	2	rwr	21.0	0.778088578088578	0.04293188154235815	0.02	0.05	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	6	3	rwr	21.0	0.7423269926479169	0.10216793714356551	0.06	0.05	0.018	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	6	4	rwr	21.0	0.7611156494340063	0.05758486651873577	0.08	0.05	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	7	0	rwr	21.0	0.7680652680652681	0.06155240506933579	0.06	0.06	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	7	1	rwr	21.0	0.7625874125874126	0.05888113362016798	0.06	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	7	2	rwr	21.0	0.8349650349650349	0.0760106213455844	0.08	0.07	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	7	3	rwr	21.0	0.729490022172949	0.11883525353174798	0.02	0.03	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	7	4	rwr	21.0	0.7830551989730423	0.051823515020441364	0.04	0.03	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	8	0	rwr	21.0	0.7498251748251749	0.039710862002614346	0.06	0.05	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	8	1	rwr	21.0	0.6954545454545454	0.0394274615850852	0.02	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	8	2	rwr	21.0	0.7456876456876457	0.03536185849213448	0.02	0.03	0.02	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	8	3	rwr	21.0	0.8107130353600186	0.10183832012838569	0.08	0.05	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	8	4	rwr	21.0	0.8000933597852726	0.09869954737859167	0.1	0.07	0.022	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	9	0	rwr	21.0	0.7304195804195804	0.03285518650675009	0.0	0.05	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	9	1	rwr	21.0	0.7549533799533799	0.031091351371441124	0.0	0.04	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	9	2	rwr	21.0	0.7852564102564102	0.08323415298488798	0.06	0.06	0.022	11	791
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	9	3	rwr	21.0	0.8662621075971526	0.14059132695085824	0.12	0.08	0.02	11	790
+reactome	ot_nolit_pubcount_adjusted	native_reactome	0.5	9	4	rwr	21.0	0.7671256856109231	0.14396350506731778	0.06	0.05	0.02	11	790

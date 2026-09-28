@@ -31,6 +31,7 @@ def main() -> int:
     df = pd.read_csv(TABLES / "results_stats.tsv", sep="\t")
     df_d09 = pd.read_csv(TABLES / "results_stats_d09.tsv", sep="\t")
     df_d11 = pd.read_csv(TABLES / "results_stats_d11.tsv", sep="\t")
+    df_clingen = pd.read_csv(TABLES / "results_stats_clingen.tsv", sep="\t")
 
     # -------- left panel: forest plot of mean delta_AUROC with 95% CI --------
     fig, axes = plt.subplots(1, 2, figsize=(14, 8.5),
@@ -47,6 +48,9 @@ def main() -> int:
     for _, r in df_d11.iterrows():
         rows.append(("D-11 cap", r.network, r.label, r.mean_delta_AUROC,
                      r.ci95_low, r.ci95_high, r.p_one_sided))
+    for _, r in df_clingen.iterrows():
+        rows.append(("clingen (5th label)", r.network, r.label, r.mean_delta_AUROC,
+                     r.ci95_low, r.ci95_high, r.p_one_sided))
     forest = pd.DataFrame(rows, columns=["regime", "network", "label",
                                          "mean", "lo", "hi", "p"])
     # order: original (4), d09 (2), d11 (8) — but actually d11 already covers
@@ -58,12 +62,14 @@ def main() -> int:
                             (~forest.label.isin(["intogen2024", "ot_all"]))].copy()
     forest_d11_dup = forest[(forest.regime == "D-11 cap") &
                             (forest.label.isin(["intogen2024", "ot_all"]))].copy()
+    forest_clingen = forest[forest.regime == "clingen (5th label)"].copy()
     # combined forest plot (y axis = row index from bottom to top)
     blocks = [
         ("(a) Original 4-arm grid (uncapped)", forest_o),
         ("(b) D-09 temporal drift", forest_d09),
         ("(c) D-11 common-size cap (new arms)", forest_d11_new),
         ("(d) D-11 cap on original labels (vs uncap)", forest_d11_dup),
+        ("(e) clingen 5th label, 6 networks", forest_clingen),
     ]
     ax = axes[0]
     y = 0

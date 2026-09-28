@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+funmap	clingen_label_pubcount_adjusted	native_funmap		0	0	degree		0.5564190850959173	0.004094317966864244	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		0	1	degree		0.6145597638957205	0.011897400915217727	0.02	0.01	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		0	2	degree		0.5210034431874077	0.00498239336501107	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		0	3	degree		0.6558780127889817	0.004993674074395474	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		0	4	degree		0.5576733890801772	0.004293823182107463	0.0	0.0	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		1	0	degree		0.5119527791441221	0.0029364320323023363	0.0	0.0	0.0	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		1	1	degree		0.5678799803246435	0.016389742357996968	0.02	0.02	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		1	2	degree		0.5405312346286276	0.0032669090417178368	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		1	3	degree		0.5404820462370881	0.0044412554722538375	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		1	4	degree		0.8019552385636989	0.007774046358936975	0.0	0.0	0.006	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		2	0	degree		0.460846040334481	0.0038730939441743604	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		2	1	degree		0.6275946876537137	0.010646233509009126	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		2	2	degree		0.6057058534185932	0.004648470024565105	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		2	3	degree		0.6673389080177079	0.006732354575234089	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		2	4	degree		0.5426709296606	0.0032289855520800555	0.0	0.0	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		3	0	degree		0.5838662075750123	0.004253404556410208	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		3	1	degree		0.7212001967535662	0.006245627686011666	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		3	2	degree		0.6595179537629121	0.01302309245347931	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		3	3	degree		0.526955238563699	0.003981816412174626	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		3	4	degree		0.38938760452533205	0.004136830252670122	0.0	0.01	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		4	0	degree		0.6123954746679784	0.005561990688860348	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		4	1	degree		0.5060009837678308	0.0027412494845987724	0.0	0.0	0.0	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		4	2	degree		0.48042302016724053	0.002962580686406977	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		4	3	degree		0.6799311362518445	0.0065960512612938185	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		4	4	degree		0.6424618789965568	0.023764862854835936	0.02	0.01	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		5	0	degree		0.6156910969011314	0.0057249942945001	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		5	1	degree		0.41500245941957703	0.0027366751701509407	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		5	2	degree		0.5365961633054599	0.003189081210745413	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		5	3	degree		0.7555828824397443	0.015310275760471583	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		5	4	degree		0.6037260206591244	0.004092731829573934	0.0	0.0	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		6	0	degree		0.6376783079193311	0.005177468240267533	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		6	1	degree		0.5871618298081653	0.004547959652025999	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		6	2	degree		0.6477127397934087	0.005940077249394361	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		6	3	degree		0.3847515986227251	0.00219632831421203	0.0	0.0	0.0	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		6	4	degree		0.6825504181013281	0.02010985783936618	0.02	0.01	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		7	0	degree		0.5779636005902606	0.005382090589371953	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		7	1	degree		0.5402361042793902	0.015970672325288312	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		7	2	degree		0.5309394982784064	0.004300420602779825	0.0	0.01	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		7	3	degree		0.5907525823905558	0.006030241598865491	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		7	4	degree		0.6944786030496803	0.0038308985314648106	0.0	0.0	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		8	0	degree		0.5294146581406789	0.016727631240626175	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		8	1	degree		0.6508116084604034	0.008242975862502121	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		8	2	degree		0.6726512543039843	0.004604196220393295	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		8	3	degree		0.6136251844564683	0.004452080185892071	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		8	4	degree		0.4155804230201673	0.0021340019743237557	0.0	0.0	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap		9	0	degree		0.6894244958189867	0.008154732489657389	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		9	1	degree		0.6873585833743237	0.017533123505965392	0.02	0.02	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		9	2	degree		0.5123462862764387	0.0029822782551295964	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		9	3	degree		0.5134284308903099	0.002940238009820507	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap		9	4	degree		0.500368912936547	0.0027047034600367254	0.0	0.0	0.002	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	0	0	rwr	21.0	0.6174126906050172	0.005872344275186028	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	0	1	rwr	21.0	0.8211510083620266	0.20717284594986077	0.02	0.01	0.008	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	0	2	rwr	21.0	0.6114117068371865	0.006478971801787014	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	0	3	rwr	21.0	0.5976389572060994	0.0034590552900239744	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	0	4	rwr	21.0	0.8425971470732907	0.019938818042126383	0.02	0.01	0.006	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	1	0	rwr	21.0	0.6534185932120019	0.017707328242100136	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	1	1	rwr	21.0	0.6665027053615347	0.007009482115600695	0.0	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	1	2	rwr	21.0	0.754746679783571	0.20496876325535743	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	1	3	rwr	21.0	0.545499262174127	0.004930639598598058	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	1	4	rwr	21.0	0.7658632562715199	0.006203256808703272	0.0	0.0	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	2	0	rwr	21.0	0.7095917363502213	0.01481755673178854	0.02	0.01	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	2	1	rwr	21.0	0.565371372356124	0.00436677665761371	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	2	2	rwr	21.0	0.810723069355632	0.10865560158790571	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	2	3	rwr	21.0	0.8619773733398919	0.01434598404824647	0.0	0.01	0.008	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	2	4	rwr	21.0	0.6519921298573537	0.004894214770928614	0.0	0.0	0.006	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	3	0	rwr	21.0	0.7371372356123955	0.0063719475046956605	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	3	1	rwr	21.0	0.7347761928184949	0.0095643445906833	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	3	2	rwr	21.0	0.7803246433841613	0.00736637184309049	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	3	3	rwr	21.0	0.6293162813575996	0.20414775905691263	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	3	4	rwr	21.0	0.6333005410723069	0.016987970550312197	0.02	0.01	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	4	0	rwr	21.0	0.6883423512051156	0.011250965291969976	0.0	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	4	1	rwr	21.0	0.7535661583866208	0.005928514048170614	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	4	2	rwr	21.0	0.679881947860305	0.024532707816816615	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	4	3	rwr	21.0	0.7179537629119528	0.007997434904458202	0.0	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	4	4	rwr	21.0	0.8015248401377275	0.2552487321296541	0.02	0.01	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	5	0	rwr	21.0	0.7127397934087556	0.00549854202993253	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	5	1	rwr	21.0	0.6531234628627643	0.02096630315568334	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	5	2	rwr	21.0	0.6273487456960157	0.004924978352944945	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	5	3	rwr	21.0	0.9105755041810133	0.017602641676940315	0.0	0.01	0.01	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	5	4	rwr	21.0	0.6924495818986719	0.1304783881440873	0.02	0.01	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	6	0	rwr	21.0	0.7092966060009838	0.006900953004631934	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	6	1	rwr	21.0	0.7228726020659124	0.006748791281302602	0.0	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	6	2	rwr	21.0	0.789867191342843	0.009618225847195551	0.0	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	6	3	rwr	21.0	0.5846532218396459	0.004392423742072429	0.0	0.0	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	6	4	rwr	21.0	0.5975159862272503	0.004395062032229815	0.0	0.0	0.004	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	7	0	rwr	21.0	0.7342843089030989	0.012136447439949124	0.0	0.01	0.008	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	7	1	rwr	21.0	0.6321692080668962	0.0037766128880284988	0.0	0.0	0.0	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	7	2	rwr	21.0	0.5372356123954747	0.20238170910538766	0.02	0.01	0.002	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	7	3	rwr	21.0	0.8578455484505656	0.02562130705720652	0.02	0.01	0.008	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	7	4	rwr	21.0	0.7073290703394	0.004379561198807552	0.0	0.0	0.006	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	8	0	rwr	21.0	0.6746679783571077	0.015140572622288101	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	8	1	rwr	21.0	0.8010821446138711	0.00794541168942465	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	8	2	rwr	21.0	0.6873585833743237	0.005784998518882944	0.0	0.0	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	8	3	rwr	21.0	0.6807673389080178	0.20358985825802767	0.02	0.01	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	8	4	rwr	21.0	0.4920068863748156	0.002484779452737812	0.0	0.0	0.0	4	2037
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	9	0	rwr	21.0	0.6092474176094442	0.00658482877865914	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	9	1	rwr	21.0	0.7566158386620757	0.11217709553502749	0.02	0.02	0.008	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	9	2	rwr	21.0	0.7946876537137235	0.02042501166321043	0.02	0.01	0.006	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	9	3	rwr	21.0	0.7439252336448599	0.006586050760385972	0.0	0.0	0.004	5	2038
+funmap	clingen_label_pubcount_adjusted	native_funmap	0.5	9	4	rwr	21.0	0.7390555828824398	0.0048166729007264215	0.0	0.0	0.004	4	2037

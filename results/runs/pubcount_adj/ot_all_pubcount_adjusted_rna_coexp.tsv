@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		0	0	degree		0.5548997207413049	0.010200782565429025	0.0	0.01	0.01	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		0	1	degree		0.8156469493103158	0.026584474443848614	0.0	0.04	0.018	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		0	2	degree		0.4122433076640998	0.005833335343520259	0.0	0.0	0.002	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		0	3	degree		0.570276448922569	0.025328434584539684	0.04	0.02	0.008	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		0	4	degree		0.6266669489014013	0.012536759183695992	0.0	0.01	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		1	0	degree		0.5380384192265381	0.013180401161026967	0.02	0.02	0.006	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		1	1	degree		0.5392866209697893	0.016380130218193685	0.02	0.02	0.008	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		1	2	degree		0.6234185918591859	0.01239946515259106	0.0	0.02	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		1	3	degree		0.6638160958469159	0.014607254860105886	0.0	0.0	0.018	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		1	4	degree		0.6334617501375894	0.013253183984545183	0.0	0.02	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		2	0	degree		0.7089151222814589	0.01447504147942797	0.0	0.01	0.018	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		2	1	degree		0.6149191842261149	0.015525159797814641	0.02	0.03	0.01	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		2	2	degree		0.48838008800880095	0.00845469866157075	0.0	0.01	0.006	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		2	3	degree		0.4624275009525422	0.007153207821912849	0.0	0.0	0.004	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		2	4	degree		0.712057067863342	0.028035651922305838	0.02	0.03	0.016	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		3	0	degree		0.614030633832614	0.021362394711971128	0.02	0.02	0.01	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		3	1	degree		0.5334052636032834	0.011252713278405074	0.0	0.01	0.008	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		3	2	degree		0.5934635130179684	0.010428404623091476	0.0	0.0	0.012	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		3	3	degree		0.6691714999364973	0.013182659272554739	0.0	0.02	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		3	4	degree		0.5802252233182338	0.015377033862891434	0.02	0.03	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		4	0	degree		0.5781924346280782	0.013018675451347217	0.0	0.02	0.01	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		4	1	degree		0.7136117457899637	0.01671739480440019	0.02	0.02	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		4	2	degree		0.5210166850018335	0.016811619459768945	0.02	0.01	0.01	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		4	3	degree		0.6645992972355107	0.01298115304909123	0.0	0.02	0.01	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		4	4	degree		0.5100122772109563	0.00988356857227875	0.0	0.01	0.01	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		5	0	degree		0.6695015655411696	0.015139513635205389	0.02	0.01	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		5	1	degree		0.5376787678767877	0.010024392400952776	0.0	0.02	0.008	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		5	2	degree		0.4803126145947928	0.006661038427867911	0.0	0.0	0.006	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		5	3	degree		0.7943990516912917	0.03002751047204091	0.0	0.04	0.02	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		5	4	degree		0.5052707336691926	0.013359937468304894	0.02	0.01	0.006	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		6	0	degree		0.6388677329271388	0.02071903731254156	0.02	0.02	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		6	1	degree		0.5402174832867902	0.008472901884697551	0.0	0.01	0.006	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		6	2	degree		0.6228456178951228	0.01253441078446152	0.02	0.01	0.01	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		6	3	degree		0.5902798357393844	0.012093286584277144	0.0	0.02	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		6	4	degree		0.601668007281656	0.014211095888733656	0.0	0.02	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		7	0	degree		0.7151772869594651	0.022733113615250287	0.02	0.03	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		7	1	degree		0.6047431666243547	0.01883231473915406	0.02	0.01	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		7	2	degree		0.5443252658599194	0.009076613326580645	0.0	0.01	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		7	3	degree		0.5410651538884892	0.009847575173003015	0.0	0.02	0.006	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		7	4	degree		0.5821514753820752	0.010939843072055675	0.0	0.01	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		8	0	degree		0.6360963019378862	0.014474643193017977	0.0	0.02	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		8	1	degree		0.6286917153253787	0.011960771372845774	0.0	0.01	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		8	2	degree		0.6113173817381738	0.009826258103804077	0.0	0.01	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		8	3	degree		0.7009440751873333	0.01793419128676583	0.02	0.02	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		8	4	degree		0.41344566275771566	0.015166789142130738	0.02	0.02	0.006	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		9	0	degree		0.5885165439620885	0.011917086661689648	0.0	0.02	0.008	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		9	1	degree		0.616019294237116	0.024330801927778728	0.04	0.03	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		9	2	degree		0.5864961496149615	0.00912623540582888	0.0	0.01	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		9	3	degree		0.6406375682655264	0.013278646797530238	0.0	0.0	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp		9	4	degree		0.5614072223868593	0.01123091847080395	0.0	0.02	0.008	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	0	0	rwr	21.0	0.6448337141406448	0.05909987419853621	0.06	0.03	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	0	1	rwr	21.0	0.8625708724718626	0.026343370030524275	0.0	0.02	0.026	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	0	2	rwr	21.0	0.4832233223322332	0.006901139317775521	0.0	0.0	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	0	3	rwr	21.0	0.6073832606578892	0.020908923445999303	0.02	0.01	0.01	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	0	4	rwr	21.0	0.6534439693493078	0.025273186555503417	0.02	0.04	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	1	0	rwr	21.0	0.5952018278750952	0.04725918137836135	0.06	0.03	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	1	1	rwr	21.0	0.6454260810696454	0.014070676886380256	0.0	0.02	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	1	2	rwr	21.0	0.6107444077741107	0.010942630957012252	0.0	0.01	0.012	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	1	3	rwr	21.0	0.7426442572287372	0.02729319122705507	0.04	0.04	0.016	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	1	4	rwr	21.0	0.6356208458574997	0.014578787316644325	0.02	0.02	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	2	0	rwr	21.0	0.7034780401117036	0.015669982254712903	0.0	0.02	0.016	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	2	1	rwr	21.0	0.6064567995261064	0.02440952627541035	0.04	0.03	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	2	2	rwr	21.0	0.6264668133480015	0.015200567464074532	0.02	0.03	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	2	3	rwr	21.0	0.5380381863595953	0.016071852710416223	0.02	0.02	0.01	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	2	4	rwr	21.0	0.7332881757757927	0.01970016679213265	0.02	0.02	0.016	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	3	0	rwr	21.0	0.6854954726241854	0.017626615400502074	0.02	0.02	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	3	1	rwr	21.0	0.5953710755690953	0.02256452867202076	0.02	0.05	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	3	2	rwr	21.0	0.6472313898056473	0.03039037732945602	0.02	0.02	0.012	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	3	3	rwr	21.0	0.7336691926675417	0.039009862517207124	0.06	0.03	0.016	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	3	4	rwr	21.0	0.6479827272342407	0.023842627878225796	0.02	0.02	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	4	0	rwr	21.0	0.639079292544639	0.03181358068762294	0.02	0.04	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	4	1	rwr	21.0	0.7482017432512482	0.015777604258029432	0.0	0.0	0.016	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	4	2	rwr	21.0	0.5863127979464613	0.03201627974459497	0.04	0.03	0.012	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	4	3	rwr	21.0	0.7515769865797384	0.03612666076745269	0.06	0.04	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	4	4	rwr	21.0	0.5358790906396851	0.010881626090414855	0.02	0.01	0.006	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	5	0	rwr	21.0	0.6476686130151477	0.013258462182391292	0.0	0.01	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	5	1	rwr	21.0	0.611026487264111	0.03345697369285445	0.04	0.02	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	5	2	rwr	21.0	0.59002566923359	0.010169041084694196	0.0	0.02	0.008	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	5	3	rwr	21.0	0.7910757376910377	0.029090051833830493	0.06	0.04	0.018	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	5	4	rwr	21.0	0.6279158376021337	0.01700144057035258	0.02	0.02	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	6	0	rwr	21.0	0.6817720233561817	0.017658651890638425	0.02	0.02	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	6	1	rwr	21.0	0.5251755944825252	0.008882787821317817	0.0	0.01	0.008	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	6	2	rwr	21.0	0.6701961862852952	0.013169649046420642	0.02	0.01	0.014	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	6	3	rwr	21.0	0.5968417933195039	0.014084498478615887	0.02	0.03	0.01	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	6	4	rwr	21.0	0.6504381694255111	0.017306434361332862	0.02	0.02	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	7	0	rwr	21.0	0.7666497418972666	0.042425245128349574	0.04	0.04	0.018	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	7	1	rwr	21.0	0.6176694592536177	0.016328216735873004	0.02	0.02	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	7	2	rwr	21.0	0.6120737073707371	0.023544580713311173	0.02	0.02	0.01	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	7	3	rwr	21.0	0.6559840819609669	0.03501417453273353	0.06	0.04	0.014	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	7	4	rwr	21.0	0.5915075568350197	0.013651852657454847	0.04	0.02	0.012	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	8	0	rwr	21.0	0.6992468477616992	0.020726125469766255	0.02	0.01	0.016	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	8	1	rwr	21.0	0.6792756198696792	0.03571975969057426	0.04	0.05	0.014	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	8	2	rwr	21.0	0.6967821782178218	0.04110691801537353	0.08	0.04	0.012	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	8	3	rwr	21.0	0.7317217729986031	0.01963365585408907	0.02	0.02	0.016	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	8	4	rwr	21.0	0.4692858050040219	0.010791299107860653	0.0	0.02	0.01	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	9	0	rwr	21.0	0.6238470000846237	0.02215100715835925	0.06	0.03	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	9	1	rwr	21.0	0.6787678767876788	0.03338122367497299	0.04	0.04	0.012	13	1831
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	9	2	rwr	21.0	0.6865603226989366	0.025508015772867914	0.02	0.02	0.012	12	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	9	3	rwr	21.0	0.7578849328986919	0.03529103100951579	0.02	0.03	0.02	13	1830
+rna_coexp	ot_all_pubcount_adjusted	native_rna_coexp	0.5	9	4	rwr	21.0	0.5576817238897592	0.009692344428354243	0.0	0.0	0.01	13	1830
