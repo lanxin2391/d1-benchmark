@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+funmap	intogen_temporal_new_cap	native_funmap		0	0	degree		0.3845751231527093	0.004921754725085757	0.0	0.01	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		0	1	degree		0.4444992059580527	0.004079401239373654	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		0	2	degree		0.4559169815453699	0.008917254197035629	0.02	0.01	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		0	3	degree		0.5245331580964897	0.0073388782346654295	0.0	0.01	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		0	4	degree		0.7007454411039921	0.012873907297459932	0.0	0.02	0.012	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		1	0	degree		0.6211514778325122	0.01708090494755774	0.02	0.03	0.008	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		1	1	degree		0.49006078528010516	0.005198131578884785	0.0	0.0	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		1	2	degree		0.4076173265429056	0.003908486492834597	0.0	0.0	0.0	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		1	3	degree		0.6577131591917201	0.010266174249268402	0.0	0.02	0.01	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		1	4	degree		0.3184142434696895	0.0035832594293722236	0.0	0.0	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		2	0	degree		0.49836822660098523	0.011529816386853135	0.02	0.02	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		2	1	degree		0.485406056623405	0.005659788814666388	0.0	0.01	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		2	2	degree		0.4475658507201139	0.005573819383568639	0.0	0.01	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		2	3	degree		0.41837796396692406	0.004355740118062985	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		2	4	degree		0.6715130606209955	0.010680468073319118	0.0	0.01	0.01	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		3	0	degree		0.5623768472906404	0.008089685501005597	0.0	0.01	0.008	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		3	1	degree		0.5460270521877224	0.009688379933400694	0.02	0.01	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		3	2	degree		0.4796560976945403	0.00890162603473237	0.02	0.02	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		3	3	degree		0.4423635069273314	0.0041109754192801985	0.0	0.0	0.0	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		3	4	degree		0.4739403647116806	0.005940511253323791	0.0	0.01	0.006	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		4	0	degree		0.5728756157635468	0.010355460182117852	0.02	0.02	0.006	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		4	1	degree		0.3182739170910684	0.003403436674782947	0.0	0.0	0.0	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		4	2	degree		0.633371666392859	0.012522327967827289	0.02	0.02	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		4	3	degree		0.5924648157275068	0.00784589621305243	0.0	0.01	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		4	4	degree		0.382300394282898	0.00352768397639248	0.0	0.0	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		5	0	degree		0.5085591133004926	0.005194803591335606	0.0	0.0	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		5	1	degree		0.6144515634412135	0.011877941702353218	0.02	0.02	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		5	2	degree		0.43360166475001366	0.004116583447132388	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		5	3	degree		0.5267236186408192	0.009972187920698075	0.0	0.02	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		5	4	degree		0.4149827501232134	0.00776355220906243	0.02	0.01	0.004	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		6	0	degree		0.5161330049261084	0.005821546842891077	0.0	0.01	0.002	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		6	1	degree		0.5552269864739061	0.010766300253557251	0.02	0.01	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		6	2	degree		0.6547834182136795	0.009182131732147892	0.0	0.01	0.01	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		6	3	degree		0.45243962543124694	0.007721834741969934	0.0	0.02	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		6	4	degree		0.3072018235584032	0.003280578804139342	0.0	0.0	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		7	0	degree		0.5241995073891627	0.01012375251849714	0.0	0.02	0.006	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		7	1	degree		0.531296205027107	0.01484166058889831	0.04	0.02	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		7	2	degree		0.3846448715842506	0.0038603458938299157	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		7	3	degree		0.5808006133289525	0.008659166796006057	0.0	0.01	0.01	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		7	4	degree		0.47951577131591916	0.004588741751495358	0.0	0.0	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		8	0	degree		0.5324815270935961	0.008571257604351304	0.0	0.02	0.006	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		8	1	degree		0.48203822353649856	0.0050657781992713416	0.0	0.0	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		8	2	degree		0.5577733968566891	0.010146159985781819	0.02	0.01	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		8	3	degree		0.5618531296205027	0.006658176837873472	0.0	0.01	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		8	4	degree		0.3566412025628389	0.004654246971576105	0.0	0.01	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap		9	0	degree		0.42189039408866996	0.0035198530412926727	0.0	0.0	0.002	8	2038
+funmap	intogen_temporal_new_cap	native_funmap		9	1	degree		0.4799846667761897	0.005310037523026277	0.0	0.0	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		9	2	degree		0.5610590876731834	0.012353263635378857	0.02	0.02	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		9	3	degree		0.6594107661135754	0.010779224038632093	0.0	0.02	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap		9	4	degree		0.3601527846229669	0.004990663329650928	0.0	0.01	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	0	0	rwr	22.0	0.41650246305418714	0.006687930899201428	0.02	0.01	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	0	1	rwr	22.0	0.41339466622857457	0.004069526685317301	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	0	2	rwr	22.0	0.47341328514320136	0.006677519032283758	0.02	0.01	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	0	3	rwr	22.0	0.44920869612836095	0.004242113868095298	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	0	4	rwr	22.0	0.6796451453918186	0.007824562322050045	0.0	0.0	0.008	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	1	0	rwr	22.0	0.6173029556650246	0.016709780496973362	0.04	0.03	0.008	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	1	1	rwr	22.0	0.5420294616943213	0.006851814135307811	0.0	0.0	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	1	2	rwr	22.0	0.4413777996823832	0.0042765571955255665	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	1	3	rwr	22.0	0.7279995619078912	0.010955867026837372	0.0	0.01	0.01	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	1	4	rwr	22.0	0.36957861015278465	0.0033756789989320187	0.0	0.0	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	2	0	rwr	22.0	0.5437192118226601	0.01414190091621259	0.04	0.02	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	2	1	rwr	22.0	0.5967362137889491	0.0077445925001997365	0.0	0.0	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	2	2	rwr	22.0	0.4884727013854663	0.006060334601885587	0.0	0.01	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	2	3	rwr	22.0	0.4671704725918624	0.005021652522005712	0.0	0.0	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	2	4	rwr	22.0	0.613171513060621	0.006410561243071491	0.0	0.0	0.008	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	3	0	rwr	22.0	0.5768472906403941	0.008600497808642362	0.02	0.01	0.006	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	3	1	rwr	22.0	0.5955862220031761	0.00826563354618422	0.0	0.01	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	3	2	rwr	22.0	0.5484913203000931	0.00930688281939412	0.0	0.01	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	3	3	rwr	22.0	0.4738239964952631	0.004397917205787376	0.0	0.0	0.002	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	3	4	rwr	22.0	0.5123213405618531	0.006032503234568689	0.0	0.0	0.006	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	4	0	rwr	22.0	0.5706280788177339	0.007683121873343482	0.0	0.01	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	4	1	rwr	22.0	0.33152620338426153	0.0034184385169842256	0.0	0.0	0.0	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	4	2	rwr	22.0	0.638902579267291	0.0076694984913948435	0.0	0.0	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	4	3	rwr	22.0	0.5749411313728711	0.007022966790055252	0.0	0.01	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	4	4	rwr	22.0	0.47486446525381965	0.004908851034090856	0.0	0.0	0.006	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	5	0	rwr	22.0	0.5094211822660099	0.004648990108371663	0.0	0.0	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	5	1	rwr	22.0	0.6362740266140956	0.011294007249544505	0.0	0.02	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	5	2	rwr	22.0	0.5250260117189639	0.005186482078640508	0.0	0.0	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	5	3	rwr	22.0	0.5321176277312305	0.008692788761428035	0.02	0.01	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	5	4	rwr	22.0	0.5159561360275998	0.010519538885135078	0.02	0.01	0.006	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	6	0	rwr	22.0	0.5575738916256159	0.008076671562495032	0.0	0.01	0.006	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	6	1	rwr	22.0	0.5259295766934998	0.009151658366832486	0.02	0.01	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	6	2	rwr	22.0	0.7132687147472756	0.010305644717243717	0.0	0.0	0.012	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	6	3	rwr	22.0	0.48064180493948855	0.006279086099806218	0.0	0.0	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	6	4	rwr	22.0	0.30994332183341544	0.0029927612966619017	0.0	0.0	0.0	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	7	0	rwr	22.0	0.5681034482758621	0.007991793417450184	0.0	0.01	0.006	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	7	1	rwr	22.0	0.6188598652866764	0.015992265109296883	0.02	0.02	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	7	2	rwr	22.0	0.47861562893598375	0.00572813415090388	0.0	0.0	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	7	3	rwr	22.0	0.5903838782103937	0.006874114801531359	0.0	0.0	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	7	4	rwr	22.0	0.39650073928043367	0.0034456704922976008	0.0	0.0	0.002	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	8	0	rwr	22.0	0.5729679802955665	0.006423098002434626	0.0	0.0	0.008	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	8	1	rwr	22.0	0.5601555226986473	0.006120689361235257	0.0	0.0	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	8	2	rwr	22.0	0.5661792891955534	0.008584866555124337	0.02	0.01	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	8	3	rwr	22.0	0.5733530474782323	0.008095936332481977	0.02	0.01	0.006	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	8	4	rwr	22.0	0.4078979793001478	0.005017259393240926	0.0	0.0	0.004	8	2037
+funmap	intogen_temporal_new_cap	native_funmap	0.5	9	0	rwr	22.0	0.47730911330049264	0.004302187716699914	0.0	0.0	0.004	8	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	9	1	rwr	22.0	0.4553419856524834	0.004439441436080663	0.0	0.0	0.004	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	9	2	rwr	22.0	0.6283883686545095	0.01354640067211605	0.02	0.01	0.008	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	9	3	rwr	22.0	0.735830458353869	0.015665395870123357	0.02	0.03	0.01	9	2038
+funmap	intogen_temporal_new_cap	native_funmap	0.5	9	4	rwr	22.0	0.37185805815672746	0.004530485620631839	0.0	0.0	0.004	8	2037
