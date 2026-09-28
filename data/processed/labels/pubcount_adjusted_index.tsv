@@ -1,0 +1,5 @@
+label	n_positives_total	n_kept	kept_fraction	pos_mean_log_n	neg_mean_log_n	beta	threshold_quantile	out_path
+intogen2024	633	319	0.5039	2.5128	1.2306	1.2823	0.5000	data\processed\labels\intogen2024_pubcount_adjusted.tsv
+ot_all	600	300	0.5000	2.5636	1.2310	1.3326	0.5000	data\processed\labels\ot_all_pubcount_adjusted.tsv
+ot_nolit	600	300	0.5000	2.4647	1.2328	1.2319	0.5000	data\processed\labels\ot_nolit_pubcount_adjusted.tsv
+clingen_label	84	42	0.5000	2.8607	1.2510	1.6096	0.5000	data\processed\labels\clingen_label_pubcount_adjusted.tsv

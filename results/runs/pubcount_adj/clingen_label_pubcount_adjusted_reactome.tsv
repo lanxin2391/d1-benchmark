@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+reactome	clingen_label_pubcount_adjusted	native_reactome		0	0	degree		0.7034438775510204	0.037349463620918	0.04	0.02	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		0	1	degree		0.47006704980842917	0.009832559881416323	0.0	0.0	0.012	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		0	2	degree		0.8022030651340996	0.04220584141955881	0.04	0.05	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		0	3	degree		0.784072249589491	0.033836641103902845	0.02	0.04	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		0	4	degree		0.8548622514139755	0.11750281487736589	0.06	0.03	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		1	0	degree		0.6200801749271136	0.016022317173909686	0.02	0.01	0.01	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		1	1	degree		0.8620689655172414	0.059383602124714684	0.04	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		1	2	degree		0.6108716475095786	0.02611811986593158	0.02	0.04	0.012	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		1	3	degree		0.8217478562306149	0.06071859224450936	0.04	0.04	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		1	4	degree		0.6967706622879036	0.02519722859386336	0.04	0.02	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		2	0	degree		0.7694970845481051	0.04116784416852975	0.04	0.03	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		2	1	degree		0.6463122605363986	0.028047174940651974	0.04	0.03	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		2	2	degree		0.6915708812260537	0.041276544779923686	0.04	0.03	0.012	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		2	3	degree		0.6841817186644773	0.017944399609277715	0.0	0.02	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		2	4	degree		0.8359788359788359	0.06289241268388981	0.04	0.04	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		3	0	degree		0.7452623906705539	0.06188261741198596	0.06	0.04	0.01	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		3	1	degree		0.8532088122605364	0.07401168663935855	0.08	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		3	2	degree		0.7447318007662835	0.02198258647098421	0.0	0.02	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		3	3	degree		0.6255245393176427	0.018504122910049135	0.02	0.01	0.01	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		3	4	degree		0.6060025542784163	0.014280516109860208	0.0	0.02	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		4	0	degree		0.578990524781341	0.01562478508104062	0.02	0.01	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		4	1	degree		0.7392241379310345	0.030163894658568884	0.04	0.03	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		4	2	degree		0.877234993614304	0.043081311728593655	0.02	0.05	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		4	3	degree		0.5855683269476373	0.019210505876452434	0.02	0.01	0.01	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		4	4	degree		0.8190111293559568	0.11902895632806881	0.06	0.04	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		5	0	degree		0.5979409620991254	0.017039623394303198	0.02	0.02	0.008	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		5	1	degree		0.8353288633461048	0.04768721636126169	0.04	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		5	2	degree		0.6409642401021711	0.04114420797187769	0.04	0.03	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		5	3	degree		0.7800583835066593	0.028369420777384226	0.02	0.03	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		5	4	degree		0.7523262178434592	0.050306495910516	0.04	0.03	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		6	0	degree		0.7854409620991253	0.03282185711179472	0.02	0.04	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		6	1	degree		0.6895753512132823	0.021856029335697504	0.0	0.02	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		6	2	degree		0.8418742017879949	0.08977762117470725	0.08	0.06	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		6	3	degree		0.5362160189746397	0.015152881616772921	0.02	0.01	0.01	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		6	4	degree		0.7484035759897829	0.05080312540969065	0.04	0.02	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		7	0	degree		0.7795189504373178	0.025951484205043153	0.0	0.02	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		7	1	degree		0.6854246487867177	0.02242130332017156	0.02	0.03	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		7	2	degree		0.7373084291187739	0.07332775936021146	0.06	0.04	0.012	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		7	3	degree		0.6026272577996715	0.018161079508353356	0.02	0.02	0.01	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		7	4	degree		0.8222039773763912	0.057348108034384365	0.06	0.03	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		8	0	degree		0.5747995626822158	0.016985153438909814	0.02	0.02	0.01	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		8	1	degree		0.8295817369093231	0.06666692050177825	0.06	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		8	2	degree		0.7420977011494252	0.04492738330576214	0.04	0.03	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		8	3	degree		0.6318190111293559	0.017077120248954775	0.02	0.02	0.01	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		8	4	degree		0.822112753147236	0.03553738728676474	0.04	0.04	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		9	0	degree		0.6461370262390671	0.021804368817166284	0.0	0.02	0.01	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		9	1	degree		0.7606960408684547	0.05061501680398242	0.04	0.03	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		9	2	degree		0.846264367816092	0.08401988329453366	0.08	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome		9	3	degree		0.5297390987046159	0.010482755940969937	0.0	0.0	0.01	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome		9	4	degree		0.8139937967524175	0.04036644119503657	0.04	0.04	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	0	0	rwr	21.0	0.8505830903790087	0.06477780360208814	0.02	0.05	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	0	1	rwr	21.0	0.7418582375478927	0.0688050200352187	0.02	0.04	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	0	2	rwr	21.0	0.917544699872286	0.16369072268280532	0.1	0.05	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	0	3	rwr	21.0	0.8584199963510307	0.2556142964057273	0.08	0.04	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	0	4	rwr	21.0	0.9116949461777049	0.21886219888761102	0.08	0.06	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	1	0	rwr	21.0	0.8425655976676385	0.0429695887882625	0.04	0.05	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	1	1	rwr	21.0	0.9415708812260536	0.15115505376173166	0.08	0.07	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	1	2	rwr	21.0	0.8106641123882503	0.12338642973282236	0.06	0.05	0.014	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	1	3	rwr	21.0	0.9326765188834154	0.16525857263193675	0.1	0.06	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	1	4	rwr	21.0	0.7983944535668673	0.09991123110654555	0.06	0.03	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	2	0	rwr	21.0	0.7835276967930028	0.04198978749292749	0.04	0.03	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	2	1	rwr	21.0	0.8512931034482758	0.10128872524595087	0.04	0.05	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	2	2	rwr	21.0	0.9013409961685823	0.2567843630105621	0.08	0.06	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	2	3	rwr	21.0	0.8192848020434227	0.08470968282185723	0.06	0.03	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	2	4	rwr	21.0	0.9680715197956578	0.3189705438825777	0.12	0.06	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	3	0	rwr	21.0	0.8784620991253644	0.16252936658534378	0.06	0.06	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	3	1	rwr	21.0	0.8708492975734355	0.13081434860835553	0.06	0.06	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	3	2	rwr	21.0	0.9137931034482758	0.15715449548035232	0.08	0.05	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	3	3	rwr	21.0	0.8907133734719942	0.188735327979514	0.06	0.06	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	3	4	rwr	21.0	0.7752234993614303	0.09896232052674885	0.06	0.03	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	4	0	rwr	21.0	0.7806122448979591	0.10202635357660383	0.06	0.04	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	4	1	rwr	21.0	0.8719667943805874	0.05423544191601216	0.04	0.05	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	4	2	rwr	21.0	0.9457215836526182	0.2802289965281888	0.08	0.07	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	4	3	rwr	21.0	0.7874475460682356	0.0903418405168065	0.06	0.04	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	4	4	rwr	21.0	0.9286626528005838	0.1779473161884229	0.06	0.05	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	5	0	rwr	21.0	0.8234329446064139	0.07820085122430032	0.04	0.05	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	5	1	rwr	21.0	0.88713282247765	0.13111603207645295	0.08	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	5	2	rwr	21.0	0.658205619412516	0.07047136175645227	0.06	0.03	0.012	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	5	3	rwr	21.0	0.9244663382594416	0.39716042738148005	0.08	0.05	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	5	4	rwr	21.0	0.9005655902207625	0.24040966337956715	0.08	0.06	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	6	0	rwr	21.0	0.862609329446064	0.19259456165688643	0.06	0.04	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	6	1	rwr	21.0	0.8371647509578545	0.10663609496714214	0.08	0.04	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	6	2	rwr	21.0	0.9351851851851852	0.1713841119164013	0.1	0.06	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	6	3	rwr	21.0	0.7651888341543513	0.05973197121014457	0.02	0.02	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	6	4	rwr	21.0	0.8897099069512863	0.334423593246408	0.08	0.05	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	7	0	rwr	21.0	0.8631559766763849	0.14473017523615223	0.04	0.03	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	7	1	rwr	21.0	0.7881545338441891	0.029932570931014382	0.02	0.03	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	7	2	rwr	21.0	0.9090038314176245	0.20977736144144812	0.12	0.07	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	7	3	rwr	21.0	0.7867177522349935	0.11493550924676216	0.04	0.04	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	7	4	rwr	21.0	0.9733625250866631	0.24513819513819513	0.12	0.07	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	8	0	rwr	21.0	0.7142857142857142	0.021016720688230243	0.0	0.01	0.012	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	8	1	rwr	21.0	0.8852171136653895	0.1239643695374944	0.06	0.06	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	8	2	rwr	21.0	0.9291187739463601	0.30369540573673637	0.08	0.07	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	8	3	rwr	21.0	0.7806969531107462	0.05314755492808678	0.02	0.03	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	8	4	rwr	21.0	0.9498266739646051	0.18507767327114333	0.1	0.05	0.014	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	9	0	rwr	21.0	0.8278972303206996	0.0918214269102548	0.06	0.03	0.014	7	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	9	1	rwr	21.0	0.8809067688378034	0.20567081487421962	0.08	0.06	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	9	2	rwr	21.0	0.9522669220945084	0.2029426081256331	0.08	0.08	0.016	8	791
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	9	3	rwr	21.0	0.7064404305783616	0.02581266752301676	0.04	0.03	0.012	7	790
+reactome	clingen_label_pubcount_adjusted	native_reactome	0.5	9	4	rwr	21.0	0.9429848567779602	0.13496872162243972	0.08	0.06	0.014	7	790

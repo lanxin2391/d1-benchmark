@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+funmap	ot_nolit_pubcount_adjusted	native_funmap		0	0	degree		0.541538968528588	0.008803963555549165	0.0	0.0	0.01	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		0	1	degree		0.6213379469434832	0.015564865834010292	0.04	0.02	0.01	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		0	2	degree		0.5369219831849653	0.07182695016331628	0.02	0.01	0.008	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		0	3	degree		0.5164441147378833	0.008427921909501791	0.0	0.0	0.006	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		0	4	degree		0.5948236069897791	0.011384320872663119	0.0	0.01	0.01	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		1	0	degree		0.48526940187839845	0.029260459826920816	0.02	0.01	0.004	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		1	1	degree		0.6382270555280937	0.01633741797591289	0.02	0.02	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		1	2	degree		0.55849715628091	0.00889819095090201	0.0	0.0	0.006	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		1	3	degree		0.5878152818991099	0.012204188771069453	0.0	0.0	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		1	4	degree		0.5334652159577975	0.010856557174711583	0.02	0.01	0.006	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		2	0	degree		0.6052891744933266	0.010905932564307426	0.0	0.0	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		2	1	degree		0.4243532707200528	0.007697141427594581	0.02	0.01	0.002	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		2	2	degree		0.5245116221562809	0.008387562221292354	0.0	0.0	0.008	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		2	3	degree		0.5402448071216617	0.01099551389896795	0.0	0.01	0.01	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		2	4	degree		0.7115562149686778	0.05373389138380187	0.04	0.02	0.014	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		3	0	degree		0.5866040533860603	0.01060581571050673	0.02	0.01	0.006	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		3	1	degree		0.39304663041687266	0.019290083792581434	0.02	0.01	0.006	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		3	2	degree		0.7020586053412463	0.02115685284719396	0.02	0.01	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		3	3	degree		0.6231608555885262	0.011499771835982458	0.0	0.01	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		3	4	degree		0.48880646224859875	0.007327197047718862	0.0	0.0	0.006	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		4	0	degree		0.6339265117811831	0.014972580843142017	0.02	0.02	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		4	1	degree		0.5725325424287361	0.009259784029929522	0.0	0.0	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		4	2	degree		0.5322545746785361	0.008596914151115615	0.0	0.0	0.006	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		4	3	degree		0.5352219337289812	0.04026715452505765	0.02	0.01	0.008	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		4	4	degree		0.5324596109462578	0.011151948698311202	0.02	0.01	0.01	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		5	0	degree		0.7059647388367111	0.05010536353190591	0.02	0.01	0.02	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		5	1	degree		0.5986323941341242	0.01106316583052485	0.0	0.01	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		5	2	degree		0.45278499010880313	0.010168020104324285	0.02	0.01	0.002	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		5	3	degree		0.5535670128585558	0.010880210790222531	0.02	0.01	0.006	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		5	4	degree		0.5062314540059348	0.008120982372792764	0.0	0.0	0.008	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		6	0	degree		0.5632558905915307	0.011057428210026683	0.02	0.01	0.004	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		6	1	degree		0.6261328060636019	0.014965845944116988	0.0	0.01	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		6	2	degree		0.6184470820969338	0.04525949792483984	0.04	0.02	0.01	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		6	3	degree		0.5496723541048467	0.009035870663798493	0.0	0.0	0.008	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		6	4	degree		0.4449060336300693	0.007468642379983631	0.0	0.0	0.008	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		7	0	degree		0.5118470917778876	0.008491320461234927	0.0	0.0	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		7	1	degree		0.5705388037567968	0.011051984227446441	0.02	0.01	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		7	2	degree		0.6473170128585559	0.012231370852361952	0.0	0.0	0.014	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		7	3	degree		0.5546797725024728	0.01287782543327771	0.02	0.01	0.008	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		7	4	degree		0.518611935377514	0.03084738464187884	0.02	0.02	0.006	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		8	0	degree		0.5675893886966552	0.012195650523534395	0.02	0.01	0.01	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		8	1	degree		0.440995221618059	0.006674950652966228	0.0	0.0	0.006	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		8	2	degree		0.6127750989119684	0.04580096428683253	0.04	0.02	0.01	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		8	3	degree		0.6151242581602374	0.01224435863100615	0.0	0.01	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		8	4	degree		0.563369601055061	0.00891403545764732	0.0	0.0	0.008	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap		9	0	degree		0.6239413412423793	0.010995714422084852	0.0	0.01	0.01	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		9	1	degree		0.5820728291316527	0.014858674828739073	0.02	0.01	0.01	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		9	2	degree		0.6917964886251237	0.04542220470088808	0.02	0.01	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		9	3	degree		0.4985317754698318	0.00976713369464206	0.02	0.01	0.006	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap		9	4	degree		0.4038245961094626	0.006234652337358984	0.0	0.0	0.004	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	0	0	rwr	21.0	0.6281100675564343	0.019492235173804266	0.04	0.02	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	0	1	rwr	21.0	0.6768001318174328	0.015284851002711087	0.02	0.02	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	0	2	rwr	21.0	0.5979537586547973	0.02510378308935235	0.04	0.02	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	0	3	rwr	21.0	0.6076904055390703	0.017205112193239214	0.04	0.03	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	0	4	rwr	21.0	0.7077151335311573	0.014493228976870453	0.0	0.0	0.014	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	1	0	rwr	21.0	0.626099851705388	0.03009297876063723	0.06	0.04	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	1	1	rwr	21.0	0.7090130169714945	0.020340906309388194	0.02	0.03	0.016	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	1	2	rwr	21.0	0.6364057863501484	0.014153945000682195	0.02	0.01	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	1	3	rwr	21.0	0.6491252472799209	0.013009280777075574	0.0	0.01	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	1	4	rwr	21.0	0.6403231124299373	0.014592238140606019	0.0	0.02	0.012	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	2	0	rwr	21.0	0.5915636842972484	0.01049052934805502	0.0	0.0	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	2	1	rwr	21.0	0.5914318668643928	0.018890439610688328	0.04	0.03	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	2	2	rwr	21.0	0.6664812067260139	0.02113570073272147	0.04	0.02	0.014	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	2	3	rwr	21.0	0.5611399604352126	0.010857789685103755	0.0	0.01	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	2	4	rwr	21.0	0.7828552588196505	0.0249530995222963	0.04	0.02	0.018	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	3	0	rwr	21.0	0.6368759268413248	0.011627304148835223	0.0	0.01	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	3	1	rwr	21.0	0.49672104135771955	0.007933361472716878	0.0	0.01	0.008	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	3	2	rwr	21.0	0.7549146884272997	0.028800649567295427	0.04	0.03	0.02	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	3	3	rwr	21.0	0.7227064787339269	0.01959137289981993	0.02	0.02	0.022	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	3	4	rwr	21.0	0.5919881305637982	0.014538473298398294	0.02	0.02	0.012	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	4	0	rwr	21.0	0.6310430054374692	0.01368176784663824	0.02	0.02	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	4	1	rwr	21.0	0.6635689569945626	0.017005326695216653	0.02	0.02	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	4	2	rwr	21.0	0.6891073194856577	0.02914793990554969	0.04	0.03	0.018	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	4	3	rwr	21.0	0.5969337289812068	0.015151778823512568	0.02	0.01	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	4	4	rwr	21.0	0.6086383119024068	0.013085364594715146	0.04	0.02	0.01	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	5	0	rwr	21.0	0.6493985829625968	0.01292468039801436	0.0	0.0	0.016	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	5	1	rwr	21.0	0.7023232822540781	0.021366728300364447	0.02	0.03	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	5	2	rwr	21.0	0.548374134520277	0.018613931756715746	0.04	0.03	0.008	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	5	3	rwr	21.0	0.6577645895153313	0.021044092956007506	0.04	0.02	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	5	4	rwr	21.0	0.5294098252555226	0.007843575892391881	0.0	0.0	0.008	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	6	0	rwr	21.0	0.6388202339759435	0.01939044522441475	0.06	0.03	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	6	1	rwr	21.0	0.6914153896852858	0.02154612963998989	0.02	0.02	0.016	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	6	2	rwr	21.0	0.709477002967359	0.023767757860061516	0.04	0.02	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	6	3	rwr	21.0	0.6365294263105836	0.014293140244686376	0.02	0.01	0.012	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	6	4	rwr	21.0	0.5573359709858227	0.009543449382647892	0.0	0.01	0.01	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	7	0	rwr	21.0	0.5613774921733399	0.011921245149030067	0.02	0.02	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	7	1	rwr	21.0	0.6466304168726313	0.019818994499670096	0.02	0.02	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	7	2	rwr	21.0	0.6958456973293767	0.016300354509146863	0.02	0.01	0.016	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	7	3	rwr	21.0	0.6979166666666666	0.016209048982775497	0.02	0.02	0.014	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	7	4	rwr	21.0	0.613353115727003	0.02495031145038457	0.04	0.02	0.012	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	8	0	rwr	21.0	0.6132806063601911	0.011139069668149917	0.0	0.0	0.012	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	8	1	rwr	21.0	0.5412094249464491	0.01044851245546805	0.02	0.01	0.006	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	8	2	rwr	21.0	0.6579191394658754	0.02429285989963893	0.06	0.04	0.014	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	8	3	rwr	21.0	0.7323813056379822	0.02831393392852949	0.04	0.03	0.02	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	8	4	rwr	21.0	0.6575997362347511	0.01733682516861567	0.02	0.03	0.012	15	2037
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	9	0	rwr	21.0	0.7109902784643268	0.024261521792057216	0.04	0.02	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	9	1	rwr	21.0	0.6847915636842973	0.02173983494959741	0.04	0.03	0.014	15	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	9	2	rwr	21.0	0.7677114243323442	0.02667632814965762	0.04	0.02	0.022	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	9	3	rwr	21.0	0.5412339268051434	0.011221250092887025	0.02	0.01	0.01	16	2038
+funmap	ot_nolit_pubcount_adjusted	native_funmap	0.5	9	4	rwr	21.0	0.5106165512693703	0.008702513101006346	0.0	0.01	0.008	15	2037
