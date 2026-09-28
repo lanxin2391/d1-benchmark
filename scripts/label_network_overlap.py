@@ -39,6 +39,7 @@ LABEL_FILES = {
     "ot_all": "ot_all.tsv",
     "ot_nolit": "ot_nolit.tsv",
     "intogen_temporal_new": "intogen_temporal_new.tsv",
+    "clingen_label": "clingen_label.tsv",
 }
 
 
