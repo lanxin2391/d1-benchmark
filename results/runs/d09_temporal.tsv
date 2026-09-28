@@ -1,0 +1,401 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	n_test_pos	n_test	n_train_pool	n_target
+funmap	intogen_temporal_new	native_temporal_eval	0.5	0	0	rwr	21.0	0.6054807692307692	0.42513912293863093	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	0	0	degree		0.5489663461538461	0.40929099639751537	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	1	0	rwr	21.0	0.5883894230769231	0.4400280536398703	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	1	0	degree		0.5380528846153846	0.38720298989394997	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	2	0	rwr	21.0	0.5494951923076923	0.36826975092540226	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	2	0	degree		0.5067067307692307	0.3551553193078344	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	3	0	rwr	21.0	0.5348557692307693	0.37801900689243983	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	3	0	degree		0.5132211538461537	0.3627987862294227	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	4	0	rwr	21.0	0.5375961538461538	0.3768578405501683	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	4	0	degree		0.5169230769230768	0.36009892743563776	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	5	0	rwr	21.0	0.5418028846153846	0.37063512284881245	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	5	0	degree		0.5156971153846154	0.3546196725992606	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	6	0	rwr	21.0	0.5790144230769231	0.395744555476258	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	6	0	degree		0.5290865384615384	0.3836705124233667	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	7	0	rwr	21.0	0.5617788461538462	0.3904092891623277	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	7	0	degree		0.5131490384615385	0.38795050676063886	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	8	0	rwr	21.0	0.5788221153846154	0.40582887171508997	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	8	0	degree		0.5305528846153845	0.36947971172776606	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	9	0	rwr	21.0	0.5700480769230769	0.3987275674176816	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	9	0	degree		0.5259375	0.37063760760088316	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	10	0	rwr	21.0	0.5509134615384615	0.3878069805662635	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	10	0	degree		0.5148798076923077	0.37219260238134777	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	11	0	rwr	21.0	0.5594951923076923	0.3985350194575786	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	11	0	degree		0.5349519230769232	0.38304632956593326	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	12	0	rwr	21.0	0.5812740384615385	0.4058648545572062	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	12	0	degree		0.5346875	0.3709588481194606	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	13	0	rwr	21.0	0.5345192307692308	0.36399953920670763	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	13	0	degree		0.5102403846153847	0.35918632443729437	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	14	0	rwr	21.0	0.5697836538461539	0.40385025960578147	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	14	0	degree		0.5546875	0.4064865283403577	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	15	0	rwr	21.0	0.5761538461538462	0.40995810215953743	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	15	0	degree		0.5415865384615384	0.4057480004788298	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	16	0	rwr	21.0	0.5500961538461538	0.37481136040897084	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	16	0	degree		0.48711538461538456	0.33388292366672595	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	17	0	rwr	21.0	0.6009615384615385	0.44527773811505356	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	17	0	degree		0.540360576923077	0.4048331571069719	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	18	0	rwr	21.0	0.5673076923076923	0.4036859019270959	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	18	0	degree		0.5265384615384615	0.38218316364519556	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	19	0	rwr	21.0	0.6052403846153847	0.4097793592468468	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	19	0	degree		0.5704326923076922	0.39597768980749887	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	20	0	rwr	21.0	0.5813461538461538	0.42491846433622726	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	20	0	degree		0.5302403846153846	0.38162738436631555	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	21	0	rwr	21.0	0.5825480769230769	0.41153934091658756	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	21	0	degree		0.5433894230769231	0.39641653126881465	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	22	0	rwr	21.0	0.5678365384615385	0.4030310632457672	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	22	0	degree		0.5222596153846154	0.3853584500842722	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	23	0	rwr	21.0	0.5928605769230769	0.42029962936347326	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	23	0	degree		0.5535096153846154	0.3917998661328959	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	24	0	rwr	21.0	0.5683894230769231	0.4078994820718849	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	24	0	degree		0.5279086538461538	0.37588689097977473	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	25	0	rwr	21.0	0.5569711538461539	0.3779250920559309	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	25	0	degree		0.4970192307692307	0.35483994809180963	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	26	0	rwr	21.0	0.5647596153846154	0.3680115614818886	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	26	0	degree		0.5352163461538462	0.3697600770486959	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	27	0	rwr	21.0	0.5874759615384615	0.42440923643700534	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	27	0	degree		0.5372596153846153	0.3818494879543192	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	28	0	rwr	21.0	0.5958173076923077	0.41015092049521806	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	28	0	degree		0.5695192307692307	0.3980927145356806	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	29	0	rwr	21.0	0.5159615384615385	0.35887496374543726	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	29	0	degree		0.5056971153846154	0.3594325341531193	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	30	0	rwr	21.0	0.5877884615384614	0.431158493318379	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	30	0	degree		0.5526442307692307	0.3949683286764604	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	31	0	rwr	21.0	0.5755769230769231	0.4115434044670021	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	31	0	degree		0.5209374999999999	0.37488499250314844	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	32	0	rwr	21.0	0.5720673076923077	0.4047960068955686	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	32	0	degree		0.5410336538461539	0.3999275758871481	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	33	0	rwr	21.0	0.5753365384615385	0.38730410439202057	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	33	0	degree		0.5374278846153846	0.36084408183607375	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	34	0	rwr	21.0	0.5670192307692308	0.38713010518357427	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	34	0	degree		0.5272596153846154	0.3647816630142833	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	35	0	rwr	21.0	0.5789423076923077	0.3948069272536355	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	35	0	degree		0.5525240384615384	0.3964236825147123	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	36	0	rwr	21.0	0.5738461538461539	0.40073472102575636	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	36	0	degree		0.5098076923076923	0.35446547718173926	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	37	0	rwr	21.0	0.5810576923076923	0.40721456814907203	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	37	0	degree		0.5329567307692308	0.38502752892732744	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	38	0	rwr	21.0	0.5514423076923076	0.3639444152218779	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	38	0	degree		0.5349519230769231	0.3695852631283094	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	39	0	rwr	21.0	0.5832211538461538	0.3952705416556579	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	39	0	degree		0.5118990384615385	0.35239448521465866	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	40	0	rwr	21.0	0.598798076923077	0.42354105106811013	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	40	0	degree		0.5479086538461538	0.39231310076545334	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	41	0	rwr	21.0	0.6149519230769231	0.4351795695248738	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	41	0	degree		0.5532451923076922	0.3949005155912503	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	42	0	rwr	21.0	0.5702884615384615	0.3994653339005481	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	42	0	degree		0.535625	0.39002269036695425	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	43	0	rwr	21.0	0.5723076923076923	0.403414553790031	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	43	0	degree		0.5451201923076923	0.3912493913296472	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	44	0	rwr	21.0	0.6065384615384616	0.42314880236896346	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	44	0	degree		0.567451923076923	0.4255595383029252	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	45	0	rwr	21.0	0.5774999999999999	0.39594153077688043	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	45	0	degree		0.53625	0.37428224310947833	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	46	0	rwr	21.0	0.5777884615384615	0.40620495872785434	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	46	0	degree		0.5448798076923076	0.3977473608085663	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	47	0	rwr	21.0	0.5606730769230769	0.39969507659826664	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	47	0	degree		0.5432451923076923	0.40386347017567403	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	48	0	rwr	21.0	0.5839903846153847	0.4099494796454488	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	48	0	degree		0.4929326923076923	0.3446228711252198	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	49	0	rwr	21.0	0.6124038461538461	0.4332929351447291	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	49	0	degree		0.5325	0.38866562657284537	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	50	0	rwr	21.0	0.6116826923076922	0.41982869706407605	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	50	0	degree		0.5652163461538461	0.4073434765506831	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	51	0	rwr	21.0	0.5413461538461538	0.36590738253222466	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	51	0	degree		0.5428124999999999	0.38450461695499694	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	52	0	rwr	21.0	0.5925	0.42406729492491113	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	52	0	degree		0.5554567307692307	0.3912112785169212	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	53	0	rwr	21.0	0.5927884615384615	0.41668934989219	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	53	0	degree		0.5528605769230769	0.40455384535980904	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	54	0	rwr	21.0	0.5716826923076924	0.41209195726128023	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	54	0	degree		0.5228846153846154	0.3860550002711552	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	55	0	rwr	21.0	0.616201923076923	0.4392609395842823	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	55	0	degree		0.5531971153846154	0.38984484875253933	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	56	0	rwr	21.0	0.5913942307692308	0.4426149224058697	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	56	0	degree		0.5337019230769231	0.3987825819251595	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	57	0	rwr	21.0	0.5590865384615384	0.4110995429812274	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	57	0	degree		0.5239423076923077	0.3770615478383615	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	58	0	rwr	21.0	0.5865865384615385	0.43729356491286286	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	58	0	degree		0.5321634615384616	0.4011260259414986	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	59	0	rwr	21.0	0.5639423076923078	0.4073200374773368	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	59	0	degree		0.5495913461538462	0.3901332820457161	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	60	0	rwr	21.0	0.5538461538461539	0.38941666072663994	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	60	0	degree		0.5191586538461538	0.3706726366973704	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	61	0	rwr	21.0	0.5467788461538461	0.394305818268053	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	61	0	degree		0.5382692307692307	0.40288824318450805	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	62	0	rwr	21.0	0.611514423076923	0.43524347750510584	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	62	0	degree		0.5642788461538462	0.4220984324975904	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	63	0	rwr	21.0	0.5815384615384616	0.4040561958334998	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	63	0	degree		0.5306490384615384	0.3617570179474696	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	64	0	rwr	21.0	0.5617788461538461	0.37643495146188455	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	64	0	degree		0.5354807692307693	0.37093361591501184	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	65	0	rwr	21.0	0.6304807692307692	0.4507680589000275	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	65	0	degree		0.5557932692307692	0.39924347941174937	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	66	0	rwr	21.0	0.5552403846153846	0.3884682722557219	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	66	0	degree		0.508173076923077	0.36999195656585454	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	67	0	rwr	21.0	0.601971153846154	0.42358481681986876	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	67	0	degree		0.54875	0.4111073120484511	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	68	0	rwr	21.0	0.5644230769230769	0.3837130198706922	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	68	0	degree		0.5279567307692308	0.3929287293261322	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	69	0	rwr	21.0	0.599326923076923	0.4486396990076017	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	69	0	degree		0.5524759615384616	0.422333650969669	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	70	0	rwr	21.0	0.5690865384615384	0.38023597227314854	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	70	0	degree		0.5227163461538461	0.36892204524587324	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	71	0	rwr	21.0	0.5844711538461538	0.4099137979271396	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	71	0	degree		0.5344471153846154	0.37676625117778817	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	72	0	rwr	21.0	0.5739182692307693	0.4056759759185209	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	72	0	degree		0.5379567307692308	0.38652847833491755	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	73	0	rwr	21.0	0.6259855769230769	0.42706732560890337	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	73	0	degree		0.5532692307692307	0.4018193708707954	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	74	0	rwr	21.0	0.6245673076923077	0.4465394123920121	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	74	0	degree		0.5750721153846154	0.4368548059256754	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	75	0	rwr	21.0	0.5993509615384616	0.44797367981850333	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	75	0	degree		0.5532451923076923	0.41670095867173623	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	76	0	rwr	21.0	0.5303365384615385	0.3760140349363079	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	76	0	degree		0.4969471153846154	0.3512251755003296	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	77	0	rwr	21.0	0.5756730769230769	0.4219054172645397	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	77	0	degree		0.5375721153846154	0.415339745319341	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	78	0	rwr	21.0	0.6125	0.4305944246622472	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	78	0	degree		0.5511298076923077	0.3913879082946276	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	79	0	rwr	21.0	0.5659134615384616	0.3749757245981231	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	79	0	degree		0.524375	0.35994609148224266	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	80	0	rwr	21.0	0.5459615384615384	0.37917967688357623	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	80	0	degree		0.496875	0.35836848311814623	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	81	0	rwr	21.0	0.6186778846153845	0.4323742079657009	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	81	0	degree		0.5399038461538461	0.41811547430265994	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	82	0	rwr	21.0	0.5472115384615385	0.36737720257210016	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	82	0	degree		0.507860576923077	0.3661286998969278	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	83	0	rwr	21.0	0.5540384615384616	0.3793832136691346	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	83	0	degree		0.5146394230769231	0.3645731159811645	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	84	0	rwr	21.0	0.5849519230769231	0.3970240314835433	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	84	0	degree		0.5403605769230768	0.37272390626463925	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	85	0	rwr	21.0	0.5475000000000001	0.38149846544210897	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	85	0	degree		0.5007692307692309	0.34584555701506625	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	86	0	rwr	21.0	0.5847596153846153	0.40986249825434645	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	86	0	degree		0.5452403846153846	0.4003777616448873	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	87	0	rwr	21.0	0.5631490384615385	0.40690284761698614	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	87	0	degree		0.5394471153846154	0.3825392385377726	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	88	0	rwr	21.0	0.5800000000000001	0.39898209004310115	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	88	0	degree		0.5262740384615384	0.38261074768756104	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	89	0	rwr	21.0	0.5675961538461538	0.40862906556345685	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	89	0	degree		0.5311057692307692	0.39446489207167457	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	90	0	rwr	21.0	0.6103846153846154	0.4315701628918919	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	90	0	degree		0.5331009615384614	0.3962027764821581	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	91	0	rwr	21.0	0.5984134615384615	0.43575148666248265	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	91	0	degree		0.5710817307692307	0.4230468707274111	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	92	0	rwr	21.0	0.560673076923077	0.3828346223793254	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	92	0	degree		0.5342548076923077	0.37805865410316664	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	93	0	rwr	21.0	0.5903365384615384	0.4122601040948457	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	93	0	degree		0.5740625	0.45311006801012976	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	94	0	rwr	21.0	0.5888461538461538	0.4346806630234932	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	94	0	degree		0.5337980769230769	0.3964985794570877	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	95	0	rwr	21.0	0.5491826923076922	0.40446176853874455	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	95	0	degree		0.5111298076923076	0.3785539088469116	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	96	0	rwr	21.0	0.5620673076923076	0.37878362051158154	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	96	0	degree		0.5275	0.3662941770939504	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	97	0	rwr	21.0	0.5623798076923077	0.3982690265351668	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	97	0	degree		0.5443028846153846	0.39260055839330493	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	98	0	rwr	21.0	0.5990865384615384	0.412985650032703	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	98	0	degree		0.5637259615384616	0.4076229338919258	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	99	0	rwr	21.0	0.5714663461538462	0.4049579629607854	104	304	357	104
+funmap	intogen_temporal_new	native_temporal_eval	0.5	99	0	degree		0.5299759615384616	0.36781194258255756	104	304	357	104
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	0	0	rwr	20.0	0.738896551724138	0.6627136787699188	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	0	0	degree		0.6424137931034484	0.5163281252813474	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	1	0	rwr	20.0	0.7321379310344827	0.6532961207281679	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	1	0	degree		0.6285172413793103	0.5298276754031486	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	2	0	rwr	20.0	0.7416896551724138	0.6926032680022101	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	2	0	degree		0.6346896551724138	0.557012914325347	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	3	0	rwr	20.0	0.7406206896551725	0.6635876785358514	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	3	0	degree		0.6326206896551724	0.5171857298218252	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	4	0	rwr	20.0	0.7423448275862069	0.6390651430777299	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	4	0	degree		0.6333275862068966	0.5272871202789362	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	5	0	rwr	20.0	0.7227241379310345	0.60627719270656	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	5	0	degree		0.6186724137931033	0.5032902393761928	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	6	0	rwr	20.0	0.7626896551724138	0.6820480317569952	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	6	0	degree		0.6587931034482759	0.5551937541645036	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	7	0	rwr	20.0	0.7451379310344828	0.6886144975800605	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	7	0	degree		0.6210862068965517	0.5204143723258859	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	8	0	rwr	20.0	0.7423793103448276	0.6682048071875611	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	8	0	degree		0.6331724137931035	0.5298489920799673	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	9	0	rwr	20.0	0.7065517241379311	0.6035619613160905	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	9	0	degree		0.6068965517241379	0.49419480656427217	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	10	0	rwr	20.0	0.7508620689655172	0.6729180169198757	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	10	0	degree		0.6315	0.5109543073472733	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	11	0	rwr	20.0	0.7504137931034482	0.6679279985553254	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	11	0	degree		0.640603448275862	0.5316481223685876	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	12	0	rwr	20.0	0.7697241379310346	0.7215244857765714	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	12	0	degree		0.6487068965517241	0.5388811905272832	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	13	0	rwr	20.0	0.7166896551724137	0.6391883890115883	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	13	0	degree		0.570396551724138	0.471281135224772	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	14	0	rwr	20.0	0.758551724137931	0.710118226282883	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	14	0	degree		0.6391724137931034	0.5548798835407754	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	15	0	rwr	20.0	0.7445517241379311	0.675614169660572	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	15	0	degree		0.6453103448275861	0.5428899455494428	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	16	0	rwr	20.0	0.7291724137931035	0.6698577586149	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	16	0	degree		0.6252931034482758	0.5204274218979966	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	17	0	rwr	20.0	0.7421379310344827	0.6684892148140378	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	17	0	degree		0.6278793103448276	0.5177777676967731	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	18	0	rwr	20.0	0.7240689655172414	0.631008258047275	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	18	0	degree		0.615155172413793	0.5030954121975498	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	19	0	rwr	20.0	0.7516551724137931	0.6796570845302471	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	19	0	degree		0.6399827586206897	0.5282284478064329	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	20	0	rwr	20.0	0.7447586206896551	0.654454039034784	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	20	0	degree		0.6307586206896552	0.5303410021270639	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	21	0	rwr	20.0	0.7761206896551723	0.7107651584175038	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	21	0	degree		0.6814827586206896	0.6016851216755915	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	22	0	rwr	20.0	0.7338620689655172	0.6405081514142723	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	22	0	degree		0.6337068965517241	0.5233388513645026	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	23	0	rwr	20.0	0.7502068965517241	0.667438157282258	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	23	0	degree		0.647103448275862	0.5432857344697555	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	24	0	rwr	20.0	0.7501034482758621	0.6563237967766284	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	24	0	degree		0.6653965517241379	0.5600092425126333	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	25	0	rwr	20.0	0.7463103448275862	0.6634093113408797	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	25	0	degree		0.6137758620689655	0.5032200612152421	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	26	0	rwr	20.0	0.7345862068965517	0.6440831931397251	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	26	0	degree		0.6070172413793102	0.4977490544506751	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	27	0	rwr	20.0	0.7804827586206896	0.7341792890046969	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	27	0	degree		0.6499137931034483	0.5359878108124214	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	28	0	rwr	20.0	0.7452931034482759	0.6744283884998254	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	28	0	degree		0.6348448275862069	0.5244550275302443	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	29	0	rwr	20.0	0.7086206896551724	0.581215805165996	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	29	0	degree		0.632551724137931	0.49663488014655066	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	30	0	rwr	20.0	0.7351379310344828	0.6823816848403783	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	30	0	degree		0.6238965517241378	0.5207497703189146	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	31	0	rwr	20.0	0.7236896551724139	0.6673926136345353	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	31	0	degree		0.5915344827586206	0.4745486547136093	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	32	0	rwr	20.0	0.7483103448275863	0.6849334870782404	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	32	0	degree		0.6430344827586207	0.5294834360870753	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	33	0	rwr	20.0	0.7343448275862069	0.6643381888024594	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	33	0	degree		0.6385172413793103	0.5142725286226169	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	34	0	rwr	20.0	0.7491724137931033	0.662120195442628	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	34	0	degree		0.639051724137931	0.5361974533455407	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	35	0	rwr	20.0	0.775	0.7194737040645872	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	35	0	degree		0.6528275862068965	0.5557088186068109	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	36	0	rwr	20.0	0.7368275862068966	0.64229762976514	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	36	0	degree		0.6471896551724139	0.5300032759836723	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	37	0	rwr	20.0	0.7596896551724137	0.6680529466751899	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	37	0	degree		0.6436034482758621	0.5470988427662312	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	38	0	rwr	20.0	0.7266896551724138	0.6096366023543263	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	38	0	degree		0.6299827586206896	0.5052602540179346	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	39	0	rwr	20.0	0.7561034482758621	0.6597579461075296	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	39	0	degree		0.6238793103448276	0.5161320838550708	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	40	0	rwr	20.0	0.7675000000000001	0.7000089427906248	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	40	0	degree		0.6609999999999999	0.5947776700198883	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	41	0	rwr	20.0	0.7479310344827585	0.6871854234996769	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	41	0	degree		0.6304827586206897	0.5329100380531206	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	42	0	rwr	20.0	0.7237241379310345	0.6555683245212159	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	42	0	degree		0.5914999999999999	0.4899400216687552	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	43	0	rwr	20.0	0.7370344827586206	0.6212032658770766	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	43	0	degree		0.6410172413793104	0.5351708834089531	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	44	0	rwr	20.0	0.7608275862068964	0.6881854464778578	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	44	0	degree		0.6390172413793104	0.5433374412322112	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	45	0	rwr	20.0	0.7414482758620689	0.6633490791611565	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	45	0	degree		0.6276896551724138	0.5310622963470398	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	46	0	rwr	20.0	0.7597931034482758	0.6994793680928918	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	46	0	degree		0.6662413793103448	0.5760267223900861	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	47	0	rwr	20.0	0.7276206896551725	0.6704981931830298	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	47	0	degree		0.6355689655172414	0.5464358534948852	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	48	0	rwr	20.0	0.7471724137931035	0.7101468313379219	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	48	0	degree		0.6307068965517242	0.5408555970849007	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	49	0	rwr	20.0	0.736103448275862	0.6683005265906807	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	49	0	degree		0.6387758620689655	0.5437059257269076	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	50	0	rwr	20.0	0.7435862068965517	0.6717789677397655	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	50	0	degree		0.6160689655172413	0.5098027990414129	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	51	0	rwr	20.0	0.741241379310345	0.6538319800476429	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	51	0	degree		0.637206896551724	0.5190703378019226	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	52	0	rwr	20.0	0.7601724137931034	0.6901218116527319	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	52	0	degree		0.6592241379310344	0.5638250635662918	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	53	0	rwr	20.0	0.7280689655172414	0.6307236399666449	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	53	0	degree		0.6097586206896551	0.5136622076898961	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	54	0	rwr	20.0	0.7416206896551725	0.689514625969839	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	54	0	degree		0.6163448275862069	0.5272890519177799	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	55	0	rwr	20.0	0.7473448275862069	0.6662928436070853	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	55	0	degree		0.6324137931034483	0.5101788765441189	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	56	0	rwr	20.0	0.763896551724138	0.6828054876615551	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	56	0	degree		0.6594482758620689	0.5415678232900144	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	57	0	rwr	20.0	0.7377931034482758	0.6393831535509504	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	57	0	degree		0.621051724137931	0.5042676016514706	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	58	0	rwr	20.0	0.7322068965517241	0.6276917989993716	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	58	0	degree		0.6071551724137931	0.4958768807095841	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	59	0	rwr	20.0	0.7528620689655172	0.6589015979848319	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	59	0	degree		0.6444482758620689	0.5149781546080733	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	60	0	rwr	20.0	0.7292758620689656	0.6598022564746973	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	60	0	degree		0.6025689655172415	0.4952750348315207	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	61	0	rwr	20.0	0.7498620689655172	0.6877382268080403	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	61	0	degree		0.6471724137931034	0.5678886193520258	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	62	0	rwr	20.0	0.7501379310344828	0.6827756359887298	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	62	0	degree		0.6486551724137931	0.5370297043276633	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	63	0	rwr	20.0	0.7417241379310345	0.6503913304068	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	63	0	degree		0.6352241379310344	0.5334910540260673	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	64	0	rwr	20.0	0.7586206896551724	0.6789250076265521	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	64	0	degree		0.6415862068965517	0.5412388428087579	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	65	0	rwr	20.0	0.7261034482758622	0.6327790686513217	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	65	0	degree		0.6044827586206897	0.4879474592270412	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	66	0	rwr	20.0	0.7443793103448275	0.6916700724498144	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	66	0	degree		0.6205689655172414	0.5052453571673209	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	67	0	rwr	20.0	0.7482413793103448	0.6923586830842323	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	67	0	degree		0.6126896551724138	0.5149621756542493	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	68	0	rwr	20.0	0.7414137931034483	0.6583137004422464	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	68	0	degree		0.6118620689655172	0.5126755333218855	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	69	0	rwr	20.0	0.7391724137931036	0.644666683453426	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	69	0	degree		0.6241724137931035	0.497317789370185	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	70	0	rwr	20.0	0.758344827586207	0.6775153644176466	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	70	0	degree		0.6538620689655172	0.5381208673553468	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	71	0	rwr	20.0	0.7760862068965518	0.6882615586829177	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	71	0	degree		0.6502586206896552	0.5417148059329789	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	72	0	rwr	20.0	0.7427758620689655	0.6796264317410465	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	72	0	degree		0.6507241379310345	0.5379223985199577	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	73	0	rwr	20.0	0.7493103448275862	0.6864037242181015	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	73	0	degree		0.6295689655172413	0.5518512819945528	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	74	0	rwr	20.0	0.7103103448275861	0.6533958999341043	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	74	0	degree		0.572	0.462731210097959	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	75	0	rwr	20.0	0.7446896551724138	0.6971320057516963	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	75	0	degree		0.6498793103448276	0.5521365414284356	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	76	0	rwr	20.0	0.7414137931034483	0.6701693271353022	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	76	0	degree		0.614	0.4983941249087433	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	77	0	rwr	20.0	0.759551724137931	0.7191782605495205	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	77	0	degree		0.645551724137931	0.538863861144307	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	78	0	rwr	20.0	0.7638275862068966	0.6815461349553883	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	78	0	degree		0.6514137931034483	0.5467311248371192	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	79	0	rwr	20.0	0.7372413793103448	0.6418850180026296	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	79	0	degree		0.6232586206896552	0.5016417732867937	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	80	0	rwr	20.0	0.7558275862068964	0.6754899244668081	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	80	0	degree		0.6661551724137931	0.5824973707534014	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	81	0	rwr	20.0	0.7447241379310345	0.6608534147887108	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	81	0	degree		0.6471206896551723	0.5534998337484458	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	82	0	rwr	20.0	0.7656896551724137	0.6839734593488684	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	82	0	degree		0.6273620689655173	0.5280962627133118	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	83	0	rwr	20.0	0.7386551724137932	0.6374762669164268	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	83	0	degree		0.6270689655172413	0.5159488429657638	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	84	0	rwr	20.0	0.7585172413793104	0.7051102366603004	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	84	0	degree		0.6490172413793103	0.5339618161647447	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	85	0	rwr	20.0	0.7514482758620689	0.669120298450004	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	85	0	degree		0.6528448275862069	0.5460495795433404	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	86	0	rwr	20.0	0.7338275862068966	0.6553591555897893	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	86	0	degree		0.6344137931034483	0.5399974193370245	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	87	0	rwr	20.0	0.7361379310344827	0.6571422675891285	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	87	0	degree		0.5996379310344828	0.4911483429038455	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	88	0	rwr	20.0	0.7720689655172415	0.7207322729248319	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	88	0	degree		0.6324310344827585	0.538232279245217	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	89	0	rwr	20.0	0.7104482758620689	0.6298205864916578	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	89	0	degree		0.6179827586206896	0.5032717213013282	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	90	0	rwr	20.0	0.740551724137931	0.6467446062786812	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	90	0	degree		0.62	0.5130538374743515	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	91	0	rwr	20.0	0.7420344827586207	0.6870545593810014	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	91	0	degree		0.6436896551724138	0.5279341180143475	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	92	0	rwr	20.0	0.7139655172413792	0.6147110895318829	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	92	0	degree		0.6254827586206897	0.5143208917847022	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	93	0	rwr	20.0	0.7088965517241379	0.6349380538722577	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	93	0	degree		0.5963793103448276	0.4942654240514752	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	94	0	rwr	20.0	0.7558275862068966	0.6699795793644094	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	94	0	degree		0.6457586206896552	0.5412720533489623	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	95	0	rwr	20.0	0.722551724137931	0.626004819561931	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	95	0	degree		0.6060344827586206	0.48207574939871584	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	96	0	rwr	20.0	0.7361034482758622	0.6599572516687315	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	96	0	degree		0.6147413793103449	0.5126439699261096	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	97	0	rwr	20.0	0.7314827586206898	0.6529715011575701	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	97	0	degree		0.6156896551724138	0.5175929745549128	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	98	0	rwr	20.0	0.7627241379310346	0.6836757151411178	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	98	0	degree		0.6176724137931034	0.5080995013150373	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	99	0	rwr	20.0	0.7898620689655172	0.7173947839552755	145	345	468	145
+string_full700	intogen_temporal_new	native_temporal_eval	0.5	99	0	degree		0.6711034482758621	0.5512054477158586	145	345	468	145

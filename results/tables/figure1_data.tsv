@@ -1,0 +1,15 @@
+regime	network	label	delta_AUROC_mean	ci95_low	ci95_high	p_one_sided
+original	funmap	intogen2024	0.09982	0.094554	0.105086	0.0
+original	string_full700	intogen2024	0.113328	0.1102	0.116456	0.0
+original	funmap	ot_all	0.084637	0.07915	0.090124	0.0
+original	string_full700	ot_all	0.119228	0.115521	0.122935	0.0
+D-09 temporal	funmap	intogen_temporal_new	0.041998	0.038768	0.045228	0.0
+D-09 temporal	string_full700	intogen_temporal_new	0.112206	0.109438	0.114974	0.0
+D-11 cap	funmap	intogen2024	0.11185	0.099052	0.124648	0.0
+D-11 cap	string_full700	intogen2024	0.101931	0.095132	0.10873	0.0
+D-11 cap	funmap	ot_all	0.01185	0.002298	0.021402	0.009371
+D-11 cap	string_full700	ot_all	0.078852	0.072774	0.084929	0.0
+D-11 cap	funmap	ot_nolit	0.088312	0.07784	0.098785	0.0
+D-11 cap	string_full700	ot_nolit	0.138409	0.128961	0.147857	0.0
+D-11 cap	funmap	intogen_temporal_new	0.028028	0.020283	0.035773	0.0
+D-11 cap	string_full700	intogen_temporal_new	0.062925	0.055583	0.070268	0.0
