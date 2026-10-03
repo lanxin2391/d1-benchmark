@@ -3,9 +3,9 @@
 **Title:** What a network prior contributes to cancer-driver
 prioritisation: a leakage-controlled benchmark.
 
-**Pre-registration ID:** `d1-benchmark-2026-09-27` (commit pin pending)
-**Pre-registration platform:** GitHub-tagged release (this commit, mirrored to a
-Zenodo archive at the time of submission).
+**Pre-registration ID:** `d1-benchmark-2026-09-27`
+**Pre-registration platform:** Zenodo (DOI: **10.5281/zenodo.23121762**),
+mirrored to this commit on GitHub.
 **Authors:** lanxin2391 (Networks & Engine), kakamiku (Labels & Data)
 **Date:** 2026-09-27
 **Frozen at commit:** see `git rev-parse HEAD` at registration time.
@@ -13,6 +13,9 @@ Zenodo archive at the time of submission).
 This pre-registration is locked **BEFORE** any confirmatory run was
 performed. Any change to the items below after this point must be
 recorded as an amendment in `## 14. Pre-registered amendments`.
+
+**DOI citation:** `lanxin2391, kakamiku (2026). *D1 benchmark
+pre-registration.* Zenodo. https://doi.org/10.5281/zenodo.23121762`
 
 ---
 
