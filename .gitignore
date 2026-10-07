@@ -9,6 +9,7 @@ data/processed/rewired/
 # ---- results that are regenerated or large ----
 results/toy/
 results/scores/
+results/runs/w5/                  # rewiring arm results (re-derived from rewired/ + splits + labels)
 results/**/*.gz
 
 # ---- python / tools ----
