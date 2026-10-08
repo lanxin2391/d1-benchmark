@@ -1,5 +1,12 @@
 {
-  "frozen_commit": "397c728",
+  "frozen_commit": "d9c68e5",
+  "frozen_tag": "v1.0-prep",
+  "frozen_commit_history": [
+    "790a905: M2 pre-registration (initial SHA-256 fingerprints)",
+    "7c799ee: pre-reg submission manifest",
+    "397c728: README release index (interim frozen_commit)",
+    "d9c68e5: v1.0 cleanup + amendment #1 SHA re-issue (current)"
+  ],
   "prereg_id": "d1-benchmark-2026-09-27",
   "sha256": {
     "results/tables/a4_table1_delta_auroc.tsv": "6bf02379b76ea68386e65d8fa1b4a7f6123b29fe578e361fa3f662ac73e930d9",
@@ -22,5 +29,5 @@
   },
   "amendment_id": 1,
   "amendment_date": "2026-10-07",
-  "amendment_reason": "B-side audit (docs/reproducibility_audit.md) re-ran the factorial after M2; the SHA-256 of 4 result tables drifted. The numerical values are within sampling noise of the M2-locked numbers. The drift is documented in pre-registration \u00a712 as amendment #1."
+  "amendment_reason": "B-side audit (docs/reproducibility_audit.md) re-ran the factorial after M2; the SHA-256 of 4 result tables drifted. The numerical values are within sampling noise of the M2-locked numbers. The drift is documented in pre-registration §12 as amendment #1."
 }
