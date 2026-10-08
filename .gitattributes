@@ -1,9 +1,11 @@
 # Normalise line endings so Windows and other machines produce identical files
 * text=auto
 *.tsv text eol=lf
+*.csv text eol=lf
 *.py  text eol=lf
 *.md  text eol=lf
 *.yml text eol=lf
+*.json text eol=lf
 *.png binary
 *.gz  binary
 *.zip binary

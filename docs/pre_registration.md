@@ -340,6 +340,16 @@ to 1e-4 (depends on BLAS thread count).
 
 ---
 
-## 16. Amendments (empty, will be filled post-analysis)
+## 16. Amendment history
 
-see §12 for the format. No amendments at registration time.
+The full amendment table is in §12 above. As of v1.0-prep
+(commit `d9c68e5`, tag `v1.0-prep` on `main`):
+
+* Amendment #1 (2026-10-07): SHA-256 fingerprints of 4 result
+  tables re-issued in `docs/pre_registration_manifest.json`.
+  Documented in §12 row 1 above.
+
+Future amendments (if any) follow the same §12 format: a row
+is added at the bottom of the §12 table; the
+`docs/pre_registration_manifest.json` is updated; the
+`amendment_id` field is incremented.

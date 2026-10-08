@@ -87,10 +87,14 @@ Zenodo is preferred over figshare because:
 
 ### 3.2 GitHub
 
-The `lanxin2391/d1-benchmark` repository at the `v1.0` tag is the
-canonical source. Anyone who clones the tag and follows the
-`README.md` instructions will reproduce the headline numbers to
-1e-4.
+The `lanxin2391/d1-benchmark` repository at the `v1.0-prep` tag
+is the canonical source. Anyone who clones the tag and follows
+the `README.md` instructions will reproduce the headline numbers
+to 1e-4. The tag name `v1.0-prep` is intentional: it is the
+"pre-publication" form of the v1.0 release; a future
+`v1.0-released` tag will be cut at the M6 manuscript-acceptance
+milestone and will reference the same commit unless the journal
+review process requires a fix.
 
 ### 3.3 Bioinformatics resource registry
 
@@ -202,10 +206,13 @@ The benchmark follows [semantic versioning](https://semver.org/):
 * **Patch version** (v1.0.1): bug fixes that do not change
   results (e.g., test fixes, doc fixes).
 
-The v1.0 release is locked at the commit `bbf87e1` (the M2-M4
-merge commit on `main` as of 2026-10-07, tagged `v1.0-prep`).
-The README release index points to all 30+ deliverables. Any
-change beyond v1.0.0 requires:
+The v1.0 release is locked at the commit `d9c68e5` (the
+post-cleanup merge commit on `main` as of 2026-10-08, tagged
+`v1.0-prep`). The README release index points to all 30+
+deliverables. The intervening commit `bbf87e1` (the M2-M4
+merge) is a strict ancestor of `d9c68e5`; if you need to
+reproduce a number from a milestone between M2 and v1.0, use
+`bbf87e1`. Any change beyond v1.0.0 requires:
 
 1. A new pre-registration filing (with a new DOI).
 2. A new release with a new v1.x or v2.0 tag.
@@ -216,7 +223,7 @@ change beyond v1.0.0 requires:
 When a third party reports a number on the D1 benchmark v1.0:
 
 * The commit hash on `lanxin2391/d1-benchmark` must be a descendant
-  of `bbf87e1` (the `v1.0-prep` tag) or be `bbf87e1` itself.
+  of `d9c68e5` (the `v1.0-prep` tag) or be `d9c68e5` itself.
 * The default parameters in §4.2 must be used unless explicitly
   noted as a deviation.
 * The pre-registration DOI must be cited.

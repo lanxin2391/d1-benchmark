@@ -2,8 +2,9 @@
 
 **What a network prior contributes to cancer-driver prioritisation: a leakage-controlled benchmark.**
 
-**Release:** v1.0-prep (tag `v1.0-prep` at commit `55e358c`) ·
-pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762)
+**Release:** v1.0-prep (tag `v1.0-prep` at commit `d9c68e5`) ·
+pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762) ·
+audit: 45 PASS / 0 FAIL on `python scripts/audit_reproducibility.py`
 
 A fixed learner (random walk with restart, RWR), a panel of six gene
 networks and four driver-gene label sets. The primary endpoint is the

@@ -27,25 +27,29 @@ checks:
 
 1. **Network file integrity** (8 networks, 6 primary + 2 sensitivity)
 2. **Label file integrity** (5 label sets, 4 primary + ClinGen)
-3. **Split file integrity** (24 standard splits)
+3. **Split file integrity** (30 standard splits: 5 labels × 6
+   networks; the ClinGen standard splits are included as of
+   amendment #1)
 4. **SHA-256 fingerprint** of pre-reg-locked tables against
-   `docs/pre_registration_manifest.json`
+   `docs/pre_registration_manifest.json` (post-amendment #1:
+   all 6 SHAs match the current `main` HEAD)
 5. **End-to-end smoke run** of one arm (funmap × intogen2024 ×
    native_funmap, fold 0 / repeat 0)
 
 Run on a clean machine:
 
 ```powershell
-# clone the repo at the v1.0 tag (commit hash TBD)
+# clone the repo at the v1.0-prep tag (commit hash d9c68e5)
 git clone https://github.com/lanxin2391/d1-benchmark.git
 cd d1-benchmark
-git checkout <v1.0-commit>
+git checkout v1.0-prep    # or: git checkout d9c68e5
 conda env create -f environment.yml    # or: uv venv .venv-d1 && pip install -e .
 conda activate d1                      # or: source .venv-d1/bin/activate
 python scripts/audit_reproducibility.py
 ```
 
-Expected: 39 + 4 = 43 PASS entries, 0 FAIL.
+Expected output: **45 PASS entries, 0 FAIL** (8 networks + 5
+labels + 30 splits + 1 manifest + 1 smoke arm = 45).
 
 ## 2. Audit results (this run)
 
