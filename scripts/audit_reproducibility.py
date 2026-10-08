@@ -107,8 +107,8 @@ for label_id in LABELS_PRIMARY:
 print("\n[3] Split files (data/processed/splits/)")
 NET_IDS = NETWORKS_PRIMARY
 
-# Standard C4 splits (24 files)
-for label_id in LABELS_PRIMARY[:4]:
+# Standard C4 splits (24 files for 4 primary labels, plus 6 clingen splits)
+for label_id in LABELS_PRIMARY:
     for net_id in NET_IDS:
         # Standard splits live in either data/processed/splits/ or data/processed/splits_d11/
         # Naming convention: {label}__native_{net_id}.tsv
@@ -127,9 +127,17 @@ for label_id in LABELS_PRIMARY[:4]:
         n_rows = len(df)
         # Per-fold y positivity rate
         rate = df.groupby(["repeat", "fold"])["y"].mean()
-        if (rate < 0.005).any() or (rate > 0.5).any():
+        # Lower bound depends on the label size: clingen_label has 84 genes and
+        # intact/rna_coexp have larger LCCs, giving per-fold rates ~0.005.
+        # Allow a tighter lower bound for larger labels.
+        n_pos = (df["y"] == 1).sum() // 50  # average per fold
+        n_universe = df["gene"].nunique()
+        expected_rate = n_pos / n_universe if n_universe > 0 else 0
+        lower_bound = max(0.001, expected_rate * 0.5)  # at least half the expected rate
+        if (rate < lower_bound).any() or (rate > 0.5).any():
             add(FAIL, f"split-{label_id}-{net_id}-rate",
-                f"per-fold positive rate out of range: {rate.min():.4f}-{rate.max():.4f}")
+                f"per-fold positive rate out of range: {rate.min():.4f}-{rate.max():.4f} "
+                f"(expected ~{expected_rate:.4f})")
             continue
         add(PASS, f"split-{label_id}-{net_id}",
             f"{n_rows} rows, {df['gene'].nunique()} unique genes")
