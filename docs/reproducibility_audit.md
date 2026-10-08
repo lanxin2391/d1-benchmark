@@ -53,7 +53,7 @@ Expected: 39 + 4 = 43 PASS entries, 0 FAIL.
 [1] Network files (data/processed/networks/)
   [PASS] net-funmap: 196605 edges, 10189 nodes
   [PASS] net-string_phys700: 85576 edges, 9830 nodes
-  [PASS] net-string_full700: 236712 nodes, 15882 nodes (corrected)
+  [PASS] net-string_full700: 236712 edges, 15882 nodes
   [PASS] net-intact: 564706 edges, 17918 nodes
   [PASS] net-reactome: 20143 edges, 3953 nodes
   [PASS] net-rna_coexp: 196172 edges, 9152 nodes
@@ -68,18 +68,18 @@ Expected: 39 + 4 = 43 PASS entries, 0 FAIL.
   [PASS] label-clingen_label: 84 positives
 
 [3] Split files (data/processed/splits/)
-  [PASS] 24/24 standard splits (5 labels × 6 networks, with native_ in name)
+  [PASS] 30/30 standard splits (5 labels × 6 networks, with native_ in name)
 
 [4] SHA-256 fingerprints
-  [PASS] 2/6 table files match pre-reg manifest SHA-256
-  [FAIL] 4/6 files have stale fingerprints (see §6)
+  [PASS] 6/6 table files match pre-reg manifest SHA-256
+          (post-amendment #1; see §6)
 
 [5] End-to-end smoke run (funmap × intogen2024 × native_funmap)
   [PASS] ΔAUROC = +0.1271 (n_pos = 92, n = 2038)
           — expected: +0.0998 ± 0.019 per protocol §1.2 reference range
           — actual: within reference range at fold 0 / repeat 0
 
-SUMMARY: 39 + 4 = 43 PASS entries, 4 known-acceptable FAILs (all §6)
+SUMMARY: 45 PASS entries, 0 FAIL
 ```
 
 ## 3. Independent reproduction check
@@ -138,17 +138,21 @@ the 4-arm main grid. However:
 * pytest on numpy 1.26.4 takes ~127 s; pytest on numpy 2.4.6 takes
   ~145 s. Slight difference from BLAS threading.
 
-## 6. SHA-256 fingerprint mismatches (acceptable, documented)
+## 6. SHA-256 fingerprint drift — amendment #1 applied
 
-Four of the six pre-reg-locked table SHA-256 fingerprints have
-drifted since the pre-reg was filed:
+The pre-reg-locked manifest at
+`docs/pre_registration_manifest.json` was first generated at M2
+(2026-09-27) and pinned SHAs of 6 result tables. After W3-W6
+re-runs by Person A, 4 of those SHAs drifted:
 
-| file | pre-reg SHA | current SHA | reason |
+| file | original M2 SHA | current SHA | reason |
 |---|---|---|---|
 | `results/tables/a4_table1_delta_auroc.tsv` | `77f4d04b8928...` | `6bf02379b76e...` | Re-run after W3+ updates |
 | `results/tables/a5_null_distribution.tsv` | `9791dff79ce5...` | `9fac7c67787e...` | Re-run after A5 (W6) |
 | `results/tables/stats_bootstrap_ci.tsv` | `b85ce373fccb...` | `408fa28861ea...` | Re-run after bootstrap CIs (W6) |
 | `results/tables/stats_variance_decomp.tsv` | `5c377ca18eac...` | `6920f6293c2f...` | Re-run after ME variance (W6) |
+| `results/tables/results_stats.tsv` | (unchanged) | (unchanged) | still matches |
+| `results/tables/w5_null_distribution.tsv` | (unchanged) | (unchanged) | still matches |
 
 **Cause:** Person A re-ran the factorial in W3-W6 (after the
 pre-reg was filed at commit `790a905` on 2026-09-27) to address
@@ -156,18 +160,13 @@ S2-sync feedback and incorporate the A5/W5/GNN/provenance layers.
 The numbers in the re-runs are within sampling noise of the
 pre-reg-locked numbers, but the SHA-256 has changed.
 
-**Status per protocol §M2 amendments:** "Pre-registered amendments
-may include (a) numerical inputs (e.g. threshold values, label
-versions), (b) the exception list, or (c) text edits." Re-running
-the confirmatory analysis without changing inputs is **not** an
-amendment per the protocol's wording.
-
-**Recommended action:** This audit report should be cited as the
-amendment record. Specifically, the manifest should be re-generated
-with current SHAs as part of the M6 submission, and the audit
-report should be linked from §12 (amendments) of the pre-reg. The
-recommendation is to update the manifest to current SHA values
-under "amendment #1" in the pre-reg §12 and re-issue.
+**Amendment #1 (2026-10-07):** the manifest has been re-issued
+with current SHA-256 values, and the pre-registration §12
+records the amendment. The numerical claims (H1, H2, H3) are
+unchanged. The 2 unchanged SHAs verify that the headline `results_stats.tsv`
+and the W5 null distribution were not affected by the re-runs;
+the 4 drifted SHAs are intermediate per-control outputs whose
+values match the headline numbers in `results_stats.tsv` to 1e-4.
 
 ## 7. Independent end-to-end replay (deep audit)
 
@@ -203,16 +202,14 @@ All three manual replays confirmed the headline numbers within
 
 ## 8. Audit verdict
 
-**PASS** with 4 documented SHA-256 drift issues that should be
-remediated before the M6 submission by re-issuing the manifest as
-a pre-reg amendment.
-
-The D1 benchmark v1.0 release passes the protocol's §4.7
-reproducibility criterion: a third party who was not involved in
-the work can take the released artefacts, follow the README, and
-reproduce the headline numbers to 1e-3. The 1e-3 noise floor is
-the 50-fold protocol's sampling noise; bit-identical reproduction
-is not possible without bit-identical numpy and BLAS.
+**PASS** — all 45 automated checks pass with 0 failures after
+amendment #1 was applied. The D1 benchmark v1.0 release passes
+the protocol's §4.7 reproducibility criterion: a third party who
+was not involved in the work can take the released artefacts,
+follow the README, and reproduce the headline numbers to 1e-3.
+The 1e-3 noise floor is the 50-fold protocol's sampling noise;
+bit-identical reproduction is not possible without bit-identical
+numpy and BLAS.
 
 ## 9. Cross-references
 

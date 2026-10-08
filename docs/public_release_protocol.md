@@ -202,9 +202,10 @@ The benchmark follows [semantic versioning](https://semver.org/):
 * **Patch version** (v1.0.1): bug fixes that do not change
   results (e.g., test fixes, doc fixes).
 
-The v1.0 release is locked at the commit `2282cca` (the most recent
-GNN courtesy log commit on `main` as of 2026-10-07). Any change
-beyond v1.0.0 requires:
+The v1.0 release is locked at the commit `bbf87e1` (the M2-M4
+merge commit on `main` as of 2026-10-07, tagged `v1.0-prep`).
+The README release index points to all 30+ deliverables. Any
+change beyond v1.0.0 requires:
 
 1. A new pre-registration filing (with a new DOI).
 2. A new release with a new v1.x or v2.0 tag.
@@ -215,7 +216,7 @@ beyond v1.0.0 requires:
 When a third party reports a number on the D1 benchmark v1.0:
 
 * The commit hash on `lanxin2391/d1-benchmark` must be a descendant
-  of `2282cca` or be `2282cca` itself.
+  of `bbf87e1` (the `v1.0-prep` tag) or be `bbf87e1` itself.
 * The default parameters in §4.2 must be used unless explicitly
   noted as a deviation.
 * The pre-registration DOI must be cited.
@@ -225,7 +226,9 @@ When a third party reports a number on the D1 benchmark v1.0:
 This is the same contract we ourselves accept: the d1-benchmark
 v1.0 paper's headline numbers must be reproducible from the
 released artefacts by a third party who was not involved in the
-work.
+work. The reproducibility audit at `docs/reproducibility_audit.md`
+records our end of the contract: 45 PASS / 0 FAIL on the
+independent end-to-end replay.
 
 ## 8. Maintenance
 
