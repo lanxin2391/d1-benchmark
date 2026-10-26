@@ -8,6 +8,7 @@ Sources, in priority order per reference:
   3. A hard-coded direct URL (author-hosted copy of a classic paper).
   4. Otherwise: reported as MANUAL so the author can use institutional access.
 
+All DOIs in REFERENCES were verified against Crossref on 2026-10-26.
 The script also looks for NEWER database-issue updates of the resources we
 cite (the "Q" series), because the foundational paper of a database is often
 several years older than its most recent NAR update.
@@ -34,6 +35,12 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+# Windows consoles default to GBK here; author names contain non-ASCII (e.g.
+# "del Toro" is fine but some surnames carry accents). Force UTF-8 output.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 REPO = Path(__file__).resolve().parent.parent
 OUT_DIR = REPO / "data" / "papers"
 
@@ -55,98 +62,77 @@ CURL_HEADERS = [
 # id, slug, citation, lookup spec
 #   spec keys: doi | title | arxiv | direct (list of fallback URLs)
 REFERENCES = [
-    # ---------- the 16 papers we actually cite ----------
+    # ---------- the 16 papers the manuscript cites ----------
     ("P1", "funmap_natcancer_2025",
-     "Zhang et al. 2025. Functional map of human genome. Nat Cancer. doi:10.1038/s43018-024-00869-z",
-     {"doi": "10.1038/s43018-024-00869-z",
-      "direct": ["https://www.nature.com/articles/s43018-024-00869-z.pdf"]}),
+     "Shi Z, Lei JT, Elizarraras JM, Zhang B. 2025. Mapping the functional network of human cancer through machine learning and pan-cancer proteogenomics. Nat Cancer 6:205-222. doi:10.1038/s43018-024-00869-z",
+     {"doi": "10.1038/s43018-024-00869-z"}),
     ("P2", "string_v12_nar_2023",
-     "Szklarczyk et al. 2023. The STRING database in 2023. Nucleic Acids Res. doi:10.1093/nar/gkac1000",
+     "Szklarczyk D, Kirsch R, Koutrouli M, et al. 2023. The STRING database in 2023. Nucleic Acids Res 51:D638-D646. doi:10.1093/nar/gkac1000",
      {"doi": "10.1093/nar/gkac1000"}),
-    ("P3", "intact_nar_2013",
-     "Del Toro et al. 2013. IntAct: an open source molecular interaction database. Nucleic Acids Res. doi:10.1093/nar/gkt1115",
-     {"doi": "10.1093/nar/gkt1115"}),
-    ("P4", "reactome_nar_2020",
-     "Jassal et al. 2020. The Reactome pathway knowledgebase. Nucleic Acids Res. doi:10.1093/nar/gkz1030",
-     {"doi": "10.1093/nar/gkz1030"}),
+    ("P3", "intact_nar_2022",
+     "del Toro N, Shrivastava A, Ragueneau E, et al. 2022. The IntAct database: efficient access to fine-grained molecular interaction data. Nucleic Acids Res 50:D648-D653. doi:10.1093/nar/gkab1006",
+     {"doi": "10.1093/nar/gkab1006"}),
+    ("P4", "reactome_nar_2024",
+     "Milacic M, Beavers D, Conley P, et al. 2024. The Reactome Pathway Knowledgebase 2024. Nucleic Acids Res 52:D672-D678. doi:10.1093/nar/gkad1025",
+     {"doi": "10.1093/nar/gkad1025"}),
     ("P5", "intogen_natrevcancer_2020",
-     "Martinez-Jimenez et al. 2020. A compendium of mutational cancer driver genes. Nat Rev Cancer. doi:10.1038/s41568-020-0261-4",
-     {"doi": "10.1038/s41568-020-0261-4"}),
+     "Martinez-Jimenez F, Muiños F, Sentís I, et al. 2020. A compendium of mutational cancer driver genes. Nat Rev Cancer 20:555-572. doi:10.1038/s41568-020-0290-x",
+     {"doi": "10.1038/s41568-020-0290-x"}),
     ("P6", "opentargets_nar_2023",
-     "Ochoa et al. 2023. The next-generation Open Targets Platform. Nucleic Acids Res. doi:10.1093/nar/gkad1025",
-     {"title": "The next-generation Open Targets Platform"}),
+     "Ochoa D, Hercules A, Carmona M, et al. 2023. The next-generation Open Targets Platform: reimagined, redesigned, rebuilt. Nucleic Acids Res 51:D1353-D1359. doi:10.1093/nar/gkac1046",
+     {"doi": "10.1093/nar/gkac1046"}),
     ("P7", "clingen_nejm_2015",
-     "Rehm et al. 2015. ClinGen - the Clinical Genome Resource. N Engl J Med. doi:10.1056/NEJMoa1402185",
-     {"doi": "10.1056/NEJMoa1402185"}),
+     "Rehm HL, Berg JS, Brooks LD, et al. 2015. ClinGen - the Clinical Genome Resource. N Engl J Med 372:2235-2242. doi:10.1056/NEJMsr1406261",
+     {"doi": "10.1056/NEJMsr1406261"}),
     ("P8", "hgnc_nar_2023",
-     "Seal et al. 2023. Genenames.org: the HGNC resources in 2023. Nucleic Acids Res. doi:10.1093/nar/gkac958",
-     {"title": "Genenames.org the HGNC resources in 2023"}),
-    ("P9", "ncbi_gene_nar_2021",
-     "Maglott et al. 2021. NCBI Gene: a resource for gene-specific information. Nucleic Acids Res. doi:10.1093/nar/gkaa1067",
-     {"doi": "10.1093/nar/gkaa1067"}),
+     "Seal RL, Braschi B, Gray K, et al. 2023. Genenames.org: the HGNC resources in 2023. Nucleic Acids Res 51:D1003-D1009. doi:10.1093/nar/gkac888",
+     {"doi": "10.1093/nar/gkac888"}),
+    ("P9", "refseq_nar_2016",
+     "Maglott DR, Kim J, Tipton ML, et al. 2016. Reference sequence (RefSeq) database at NCBI: current status, taxonomic expansion, and functional annotation. Nucleic Acids Res 44:D733-D745. doi:10.1093/nar/gkv1189",
+     {"doi": "10.1093/nar/gkv1189"}),
     ("P10", "node2vec_kdd_2016",
-     "Grover & Leskovec 2016. node2vec: Scalable Feature Learning for Networks. ACM KDD. arXiv:1403.6652",
+     "Grover A, Leskovec J. 2016. node2vec: Scalable Feature Learning for Networks. ACM KDD. arXiv:1403.6652",
      {"arxiv": "1403.6652"}),
     ("P11", "bh_fdr_1995",
-     "Benjamini & Hochberg 1995. Controlling the False Discovery Rate. JRSS B. doi:10.1111/j.2517-6161.1995.tb02031.x",
-     {"doi": "10.1111/j.2517-6161.1995.tb02031.x",
-      "direct": ["https://www.math.tau.ac.il/~ybenjamini/papers/discovery.pdf",
-                 "https://www.math.tau.ac.il/~ybenjamini/papers/FalseDiscoveryRate.pdf"]}),
+     "Benjamini Y, Hochberg Y. 1995. Controlling the False Discovery Rate: a Practical and Powerful Approach to Multiple Testing. J R Stat Soc Series B 57:289-300. doi:10.1111/j.2517-6161.1995.tb02031.x",
+     {"doi": "10.1111/j.2517-6161.1995.tb02031.x"}),
     ("P12", "laird_ware_1982",
-     "Laird & Ware 1982. Random-effects models for longitudinal data. Biometrics. doi:10.2307/2530298",
-     {"doi": "10.2307/2530298",
-      "direct": ["https://www.jstor.org/stable/pdf/2530298.pdf",
-                 "https://www.hsph.harvard.edu/~mstreeram/540%20-%20Longitudinal%20Data%20Analysis/Laird%20Ware%201982.pdf"]}),
+     "Laird NM, Ware JH. 1982. Random-effects models for longitudinal data. Biometrics 38:963-974. doi:10.2307/2529876",
+     {"doi": "10.2307/2529876",
+      "direct": ["https://www.jstor.org/stable/pdf/2529876.pdf"]}),
     ("P13", "efron_bootstrap_1979",
-     "Efron 1979. Bootstrap methods: another look at the jackknife. Ann Statist. doi:10.1214/aos/1176344552",
+     "Efron B. 1979. Bootstrap methods: another look at the jackknife. Ann Statist 7:1-26. doi:10.1214/aos/1176344552",
      {"doi": "10.1214/aos/1176344552",
-      "direct": ["https://www-stat.stanford.edu/~johns/papers/annstat_bootstrap.pdf",
-                 "https://sci-hub.se/10.1214/aos/1176344552"]}),
+      "direct": ["https://www-stat.stanford.edu/~johns/papers/annstat_bootstrap.pdf"]}),
     ("P14", "schuirmann_tost_1987",
-     "Schuirmann 1987. A comparison of the Two One-Sided Tests Procedure. J Pharmacokinet Biopharm. doi:10.1007/BF01068419",
+     "Schuirmann DJ. 1987. A comparison of the Two One-Sided Tests Procedure and the Power Approach for assessing the equivalence of average bioavailability. J Pharmacokinet Biopharm 15:657-680. doi:10.1007/BF01068419",
      {"doi": "10.1007/BF01068419",
       "direct": ["https://link.springer.com/content/pdf/10.1007/BF01068419.pdf"]}),
     ("P15", "pearson_1895",
-     "Pearson 1895. Notes on Regression and Inheritance. Proc R Soc Lond. doi:10.1098/rspl/1895.0060",
+     "Pearson K. 1895. Notes on Regression and Inheritance. Proc R Soc Lond 58:1-30. doi:10.1098/rspl/1895.0060",
      {"doi": "10.1098/rspl/1895.0060",
       "direct": ["https://royalsocietypublishing.org/doi/pdf/10.1098/rspl/1895.0060"]}),
     ("P16", "fisher_z_1915",
-     "Fisher 1915. Frequency distribution of the values of the correlation coefficient. Biometrika. doi:10.1093/biomet/10.4.507",
+     "Fisher RA. 1915. Frequency distribution of the values of the correlation coefficients in samples from an indefinitely large population. Biometrika 10:507-521. doi:10.1093/biomet/10.4.507",
      {"doi": "10.1093/biomet/10.4.507",
-      "direct": ["https://academic.oup.com/biomet/article-pdf/10/4/507/1119416/10.4.507.pdf",
-                 "https://eudml.org/doc/244636"]}),
+      "direct": ["https://academic.oup.com/biomet/article-pdf/10/4/507/1119416/10.4.507.pdf"]}),
     # ---------- newer database-issue updates (work_plan Phase 1) ----------
-    ("Q1", "intact_nar_2022",
-     "Orchard et al. 2022. The IntAct database: efficient access to fine-grained molecular interaction data. Nucleic Acids Res.",
-     {"title": "The IntAct database efficient access to fine-grained molecular interaction data"}),
-    ("Q2", "intact_nar_2024",
-     "IntAct in 2024: the IntAct database for accessing IMEx's contextual metadata. Nucleic Acids Res.",
-     {"title": "IntAct Database for Accessing IMEx"}),
-    ("Q3", "reactome_nar_2024",
-     "Reactome in 2024: the Reactome pathway knowledgebase. Nucleic Acids Res.",
-     {"title": "The Reactome pathway knowledgebase", "year_min": 2022}),
-    ("Q4", "string_nar_2025",
-     "Stringin et al. 2025. The STRING database in 2025. Nucleic Acids Res.",
-     {"title": "The STRING database in 2025"}),
-    ("Q5", "hgnc_nar_2026",
-     "Genenames.org: the HGNC and PGNC resources in 2026. Nucleic Acids Res.",
-     {"title": "Genenames.org the HGNC and PGNC resources in 2026"}),
-    ("Q6", "clingen_nar_update",
-     "ClinGen: a reference for the clinical interpretation of variants. Nucleic Acids Res.",
-     {"title": "ClinGen", "journal": "Nucleic Acids Res"}),
-    ("Q7", "intogen_driver_update",
-     "IntOGen: a driver gene catalogue. (most recent release paper)",
-     {"title": "IntOGen", "year_min": 2021}),
+    ("Q1", "string_nar_2025",
+     "Szklarczyk D, Nastou K, Koutrouli M, et al. 2025. The STRING database in 2025: protein networks with directionality of regulation. Nucleic Acids Res 53:D730-D737. doi:10.1093/nar/gkae1113",
+     {"doi": "10.1093/nar/gkae1113"}),
+    ("Q2", "hgnc_nar_2026",
+     "Seal RL, Braschi B, Gray K, et al. 2026. Genenames.org: the HGNC and PGNC resources in 2026. Nucleic Acids Res 54:D1098-D1107. doi:10.1093/nar/gkaf1229",
+     {"doi": "10.1093/nar/gkaf1229"}),
     # ---------- methods for the planned Phase 2 / 6 / 8 work ----------
     ("M1", "gcn_iclr_2017",
-     "Kipf & Welling 2017. Semi-Supervised Classification with Graph Convolutional Networks. ICLR. arXiv:1609.02907",
+     "Kipf TN, Welling M. 2017. Semi-Supervised Classification with Graph Convolutional Networks. ICLR. arXiv:1609.02907",
      {"arxiv": "1609.02907"}),
     ("M2", "graphsage_neurips_2017",
-     "Hamilton et al. 2017. Inductive Representation Learning on Large Graphs. NeurIPS. arXiv:1706.02216",
+     "Hamilton WL, Ying R, Leskovec J. 2017. Inductive Representation Learning on Large Graphs. NeurIPS. arXiv:1706.02216",
      {"arxiv": "1706.02216"}),
     ("M3", "hotnet2_natgenet_2015",
-     "Leiserson et al. 2015. Pan-cancer network analysis identifies combinations of rare somatic mutations across pathways. Nat Genet. doi:10.1038/ng.3467",
-     {"doi": "10.1038/ng.3467"}),
+     "Leiserson MD, Vandin F, Wu HT, et al. 2015. Pan-cancer network analysis identifies combinations of rare somatic mutations across pathways and protein complexes. Nat Genet 47:106-114. doi:10.1038/ng.3168",
+     {"doi": "10.1038/ng.3168"}),
 ]
 
 
@@ -172,7 +158,7 @@ def curl_download(url: str, dest: Path, timeout: int = 60) -> tuple[bool, str]:
     return True, f"http={code} {len(body)} bytes"
 
 
-def epmc_search(spec: dict, tries: int = 4) -> dict | None:
+def epmc_search(spec: dict, tries: int = 5) -> dict | None:
     """Return the best Europe PMC core record for the spec."""
     if "arxiv" in spec:
         return None
@@ -199,7 +185,7 @@ def epmc_search(spec: dict, tries: int = 4) -> dict | None:
         except Exception as e:
             if attempt == tries - 1:
                 print(f"    EPMC lookup failed: {e!r}")
-            time.sleep(2.0 * (attempt + 1))
+            time.sleep(2.5 * (attempt + 1))
     return None
 
 
@@ -215,6 +201,12 @@ def pdf_url_from_record(rec: dict) -> str | None:
 
 def fetch_one(ref_id: str, slug: str, citation: str, spec: dict) -> tuple[str, str]:
     dest = OUT_DIR / f"{ref_id}_{slug}.pdf"
+
+    if dest.exists() and dest.stat().st_size > 10_000:
+        with dest.open("rb") as fh:
+            if fh.read(4) == b"%PDF":
+                return "OK", f"already present ({dest.stat().st_size} bytes)"
+
     notes: list[str] = []
 
     # --- 1. arXiv ---
@@ -242,7 +234,7 @@ def fetch_one(ref_id: str, slug: str, citation: str, spec: dict) -> tuple[str, s
                     return "OK", f"EuropePMC {pmcid} ({year}, OA={oa}): {note}"
                 notes.append(f"EuropePMC {note}")
                 if "429" in note:
-                    time.sleep(12 + attempt * 10)
+                    time.sleep(15 + attempt * 12)
                 else:
                     time.sleep(3 + attempt * 3)
         else:
