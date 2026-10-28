@@ -197,14 +197,21 @@ def _node2vec_walks(edges, num_walks, walk_length, p, q, seed):
                             w.append(1.0 / q)
                     nxt = weighted_pick(cand, w, rng.random)
                 walk.append(nxt)
-                walk.append(nxt)
             walks.append(walk)
     return walks
 
 
 def _node2vec_train(edges, dim=64, walk_length=40, num_walks=80,
-                     window=10, p=1.0, q=1.0, seed=0, workers=4):
-    """Train a gensim Word2Vec on biased random walks over the graph."""
+                     window=10, p=1.0, q=1.0, seed=0, workers=1):
+    """Train a gensim Word2Vec on biased random walks over the graph.
+
+    workers defaults to 1 on purpose. gensim's Word2Vec uses Hogwild
+    asynchronous SGD: with workers > 1 the result depends on thread
+    scheduling, so two runs of the same cell differ by up to ~0.05 in
+    delta-AUROC. That is the same order as the fold noise we are trying
+    to measure, so a non-reproducible learner cannot serve as a
+    comparability argument. workers=1 is slower but bit-reproducible.
+    """
     from gensim.models import Word2Vec
     walks = _node2vec_walks(edges, num_walks, walk_length, p, q, seed)
     sentences = [list(map(str, w)) for w in walks]
@@ -388,26 +395,48 @@ def _run_one_cell(net_id: str, label: str, alpha: float, status_payload):
         if not pos_emb:
             continue
         mean = np.mean(pos_emb, axis=0)
-        scores, labels = [], []
-        for g in all_genes:
-            if g in model.wv:
-                v = model.wv[g]
-                sim = float(np.dot(v, mean) /
-                             (np.linalg.norm(v) * np.linalg.norm(mean) + 1e-12))
-                scores.append(sim)
-                labels.append(g in set(train_pos))
-        if not labels or sum(labels) == 0 or sum(labels) == len(labels):
+
+        # --- evaluation set -------------------------------------------------
+        # FIX (was: the whole universe scored against the TRAINING positives).
+        # d1/engine/evaluate.py ranks the TEST fold only:
+        #     seeds = rows with fold != f and y == 1
+        #     test  = rows with fold == f  (positives and negatives)
+        # D-06: the seeds are never in the ranked test set. The split file
+        # assigns every gene to exactly one fold per repeat, so the test fold
+        # contains neither seeds nor training negatives.
+        # The old code scored all_genes with labels = (gene in train_pos),
+        # i.e. the training positives were the positives and the TEST
+        # positives were scored as negatives -> the evaluation was inverted
+        # and the training signal was inside the evaluated set.
+        test = splits_df[(splits_df.repeat == rep) & (splits_df.fold == fold)]
+        test_genes = [g for g in test.gene if g in model.wv]
+        if len(test_genes) < 2:
             continue
-        gnn_auc = float(roc_auc_score(labels, scores))
-        # Degree scoring: just degree, no propagation.
-        deg_scores = [deg_per_gene.get(g, 0) for g in all_genes]
-        deg_auc = float(roc_auc_score(labels, deg_scores))
+        y_test = np.array([int(y) for g, y in zip(test.gene, test.y) if g in model.wv])
+        if y_test.sum() == 0 or y_test.sum() == len(y_test):
+            continue
+
+        scores = []
+        for g in test_genes:
+            v = model.wv[g]
+            scores.append(float(np.dot(v, mean) /
+                                (np.linalg.norm(v) * np.linalg.norm(mean) + 1e-12)))
+        gnn_auc = float(roc_auc_score(y_test, scores))
+        # Degree scoring: just degree, no propagation -- same test set.
+        deg_scores = [deg_per_gene.get(g, 0) for g in test_genes]
+        deg_auc = float(roc_auc_score(y_test, deg_scores))
         gnn_folds.append((rep, fold, float(gnn_auc)))
         deg_folds.append((rep, fold, float(deg_auc)))
 
     save_fn(gnn_folds, deg_folds,
             params={"dim": 64, "walk_length": 40, "num_walks": 80,
-                    "alpha": alpha, "p": 1.0, "q": 1.0,
+                    "alpha": alpha,
+                    # Node2Vec has NO restart parameter: the RWR alpha does
+                    # not exist for this learner, so the three alpha=0.3/0.5/0.7
+                    # runs of a cell were the SAME computation three times.
+                    # The GNN arm therefore has ONE cell per (network, label).
+                    "alpha_applies": False,
+                    "p": 1.0, "q": 1.0,
                     "train_time_sec": float(t_train)})
     return (gnn_folds, deg_folds)
 
@@ -431,13 +460,14 @@ def main():
     else:
         n_jobs = args.n_jobs
 
-    for path in (LOG, DOCS):
+    # Only the scratch log is cleared at startup. docs/gnn_courtesy_log.md
+    # is a hand-written narrative document (it was deleted by an earlier
+    # version of this script at every run -- restore with
+    # `git checkout HEAD -- docs/gnn_courtesy_log.md` if it goes missing).
+    for path in (LOG,):
         try:
             os.remove(path)
         except FileNotFoundError:
-            pass
-        except OSError:
-            # if locked by Windows or by another process, just open for append
             pass
     status_payload = _status_init()
     status_payload["params"]["n_jobs"] = n_jobs

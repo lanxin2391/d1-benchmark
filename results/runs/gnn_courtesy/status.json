@@ -1,6 +1,6 @@
 {
-  "started": "2026-10-04T04:51:22",
-  "last_updated": "2026-10-04T04:51:22",
+  "started": "2026-10-28T23:58:41",
+  "last_updated": "2026-10-29T02:53:01",
   "completed_cells": [
     {
       "network": "funmap",
@@ -9,18 +9,8 @@
     },
     {
       "network": "funmap",
-      "label": "intogen2024",
-      "alpha": 0.3
-    },
-    {
-      "network": "funmap",
       "label": "ot_all",
       "alpha": 0.5
-    },
-    {
-      "network": "funmap",
-      "label": "ot_all",
-      "alpha": 0.3
     },
     {
       "network": "funmap",
@@ -29,18 +19,8 @@
     },
     {
       "network": "funmap",
-      "label": "ot_nolit",
-      "alpha": 0.3
-    },
-    {
-      "network": "funmap",
       "label": "intogen_temporal_new",
       "alpha": 0.5
-    },
-    {
-      "network": "funmap",
-      "label": "intogen_temporal_new",
-      "alpha": 0.3
     },
     {
       "network": "rna_coexp",
@@ -49,18 +29,8 @@
     },
     {
       "network": "rna_coexp",
-      "label": "intogen2024",
-      "alpha": 0.3
-    },
-    {
-      "network": "rna_coexp",
       "label": "ot_all",
       "alpha": 0.5
-    },
-    {
-      "network": "rna_coexp",
-      "label": "ot_all",
-      "alpha": 0.3
     },
     {
       "network": "rna_coexp",
@@ -69,18 +39,8 @@
     },
     {
       "network": "rna_coexp",
-      "label": "ot_nolit",
-      "alpha": 0.3
-    },
-    {
-      "network": "rna_coexp",
       "label": "intogen_temporal_new",
       "alpha": 0.5
-    },
-    {
-      "network": "rna_coexp",
-      "label": "intogen_temporal_new",
-      "alpha": 0.3
     },
     {
       "network": "string_phys700",
@@ -89,18 +49,8 @@
     },
     {
       "network": "string_phys700",
-      "label": "intogen2024",
-      "alpha": 0.3
-    },
-    {
-      "network": "string_phys700",
       "label": "ot_all",
       "alpha": 0.5
-    },
-    {
-      "network": "string_phys700",
-      "label": "ot_all",
-      "alpha": 0.3
     },
     {
       "network": "string_phys700",
@@ -109,18 +59,8 @@
     },
     {
       "network": "string_phys700",
-      "label": "ot_nolit",
-      "alpha": 0.3
-    },
-    {
-      "network": "string_phys700",
       "label": "intogen_temporal_new",
       "alpha": 0.5
-    },
-    {
-      "network": "string_phys700",
-      "label": "intogen_temporal_new",
-      "alpha": 0.3
     },
     {
       "network": "intact",
@@ -129,18 +69,8 @@
     },
     {
       "network": "intact",
-      "label": "intogen2024",
-      "alpha": 0.3
-    },
-    {
-      "network": "intact",
       "label": "ot_all",
       "alpha": 0.5
-    },
-    {
-      "network": "intact",
-      "label": "ot_all",
-      "alpha": 0.3
     },
     {
       "network": "intact",
@@ -149,18 +79,8 @@
     },
     {
       "network": "intact",
-      "label": "ot_nolit",
-      "alpha": 0.3
-    },
-    {
-      "network": "intact",
       "label": "intogen_temporal_new",
       "alpha": 0.5
-    },
-    {
-      "network": "intact",
-      "label": "intogen_temporal_new",
-      "alpha": 0.3
     },
     {
       "network": "string_full700",
@@ -169,18 +89,8 @@
     },
     {
       "network": "string_full700",
-      "label": "intogen2024",
-      "alpha": 0.3
-    },
-    {
-      "network": "string_full700",
       "label": "ot_all",
       "alpha": 0.5
-    },
-    {
-      "network": "string_full700",
-      "label": "ot_all",
-      "alpha": 0.3
     },
     {
       "network": "string_full700",
@@ -189,18 +99,8 @@
     },
     {
       "network": "string_full700",
-      "label": "ot_nolit",
-      "alpha": 0.3
-    },
-    {
-      "network": "string_full700",
       "label": "intogen_temporal_new",
       "alpha": 0.5
-    },
-    {
-      "network": "string_full700",
-      "label": "intogen_temporal_new",
-      "alpha": 0.3
     },
     {
       "network": "reactome",
@@ -209,18 +109,8 @@
     },
     {
       "network": "reactome",
-      "label": "intogen2024",
-      "alpha": 0.3
-    },
-    {
-      "network": "reactome",
       "label": "ot_all",
       "alpha": 0.5
-    },
-    {
-      "network": "reactome",
-      "label": "ot_all",
-      "alpha": 0.3
     },
     {
       "network": "reactome",
@@ -229,26 +119,16 @@
     },
     {
       "network": "reactome",
-      "label": "ot_nolit",
-      "alpha": 0.3
-    },
-    {
-      "network": "reactome",
       "label": "intogen_temporal_new",
       "alpha": 0.5
-    },
-    {
-      "network": "reactome",
-      "label": "intogen_temporal_new",
-      "alpha": 0.3
     }
   ],
   "in_progress": null,
   "n_total": 72,
-  "n_complete": 48,
-  "elapsed_seconds": 0,
+  "n_complete": 24,
+  "elapsed_seconds": 10459,
   "params": {
-    "n_jobs": 1,
-    "n_cells": 48
+    "n_jobs": 4,
+    "n_cells": 24
   }
 }

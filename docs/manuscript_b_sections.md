@@ -447,8 +447,8 @@ rises after adjustment):
 1. **The anti-bias hypothesis**: some networks (rna_coexp,
    intact) are themselves biased *against* over-cited genes.
    This is most striking for `funmap × clingen_label` (+0.049
-   survivor) — FunMap is a hand-curated functional map whose
-   features may not track PubMed volume.
+   survivor) — FunMap is a supervised-machine-learning functional map
+   (Shi et al. 2025) whose features may not track PubMed volume.
 
 2. **The noise hypothesis**: the survivor cells are within
    1-σ of zero effect after adjustment, and the positive diff

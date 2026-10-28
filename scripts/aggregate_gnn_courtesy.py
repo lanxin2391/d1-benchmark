@@ -1,12 +1,19 @@
-"""Aggregate all 72 gnn_courtesy JSONs into a single summary table.
+"""Aggregate the gnn_courtesy JSONs into a single summary table.
 
-Reads results/runs/gnn_courtesy/<net>__<label>__alpha{0.3,0.5,0.7}.json
-(72 files = 6 nets x 4 labels x 3 alphas) and writes
-results/tables/gnn_courtesy_arm.tsv with one row per (network, label, alpha)
-containing mean Node2Vec AUROC, mean degree AUROC, mean delta, and SD of delta.
+Reads results/runs/gnn_courtesy/<net>__<label>__alpha*.json and writes
+results/tables/gnn_courtesy_arm.tsv with one row per (network, label, alpha).
 
-This fills in the alpha=0.3 and alpha=0.7 cells that the original
-run_gnn_courtesy.py only produced for alpha=0.5.
+NOTE (2026-10-29): Node2Vec has NO restart parameter -- the RWR alpha does
+not exist for this learner. The previous alpha=0.3 / 0.5 / 0.7 JSON sets were
+the same computation repeated (they differed only by Word2Vec's Hogwild
+thread nondeterminism), so the GNN arm is ONE cell per (network, label).
+scripts/run_gnn_courtesy.py now writes the table directly; this script is
+kept for the case where alpha-specific files exist.
+
+Also note: the evaluation was fixed on 2026-10-29 (the old code scored the
+whole universe against the TRAINING positives instead of ranking the test
+fold, which inverted the labels). The old JSONs are archived under
+results/runs/gnn_courtesy_OLD_BUGGY/ and must not be used.
 """
 
 from __future__ import annotations

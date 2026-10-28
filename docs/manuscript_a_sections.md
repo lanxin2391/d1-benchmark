@@ -331,12 +331,16 @@ candidate for the most informative Discussion paragraph.
 ### I.1 H1 holds: the prior contributes beyond degree
 
 Combining W5 (topology matters), A5 (gene identity matters), and the
-variance decomposition (label explains 33 % of between-arm variance,
-network explains 15 %, residual 52 %), the verdict is:
+variance decomposition (label explains 34 % of between-arm spread,
+network x label interaction 41 %, network 24 %, fold-to-fold sampling
+noise 1.3 %), the verdict is:
 
 **H1 holds**: the network prior contributes signal beyond node
-degree in 23/24 (network, label) cells, with bootstrap CIs
-excluding zero and z-scores 5-200.
+degree in 24/24 (network, label) cells, with bootstrap CIs
+excluding zero and z-scores 5-200. The CI is computed with the
+resampling unit clustered at the repeat level, which is the correct
+unit for a 5-fold x 10-repeat design (see amendment 2); the
+fold-level CI is reported alongside it as a sensitivity analysis.
 
 ### I.2 Provenance matters in different ways
 
@@ -367,21 +371,39 @@ across all (network, label) cells. Headline:
 
 | method (mean over 24 cells, α=0.5) | mean ΔAUROC |
 |---|---|
-| **RWR** (chosen learner)            | +0.07 |
-| **GNN** (Node2Vec baseline)          | +0.06 |
-| degree baseline (no propagation)   | 0     |
+| method (mean over 24 cells, α=0.5) | mean ΔAUROC | positive cells |
+|---|---|---|
+| **RWR** (chosen learner)            | +0.079 | 24/24 |
+| **GNN** (Node2Vec baseline)          | +0.028 | 19/24 |
+| degree baseline (no propagation)   | 0     | —     |
 
-→ RWR and the published GNN baseline both beat the degree baseline,
-in overlapping cells, with overlapping magnitudes. The benchmark's
-"prior contributes beyond degree" claim is **robust to the choice
-of learner**, and is not an artefact of choosing a weak RWR.
+→ The published GNN baseline also beats the degree baseline in 19 of
+24 cells, so the benchmark's "prior contributes beyond degree" claim
+is **robust to the choice of learner**: it is not an artefact of
+choosing a weak RWR.
 
-The per-network detail is interesting too: in `string_phys700`
-(intact protein-binding edges only) RWR outperforms the GNN by 14 pp
-(0.119 vs 0.009). This is the cleanest evidence that RWR's
-degree-aware propagation captures physical-binding signal that
-the GNN's random-walk-based embeddings miss. **RWR is a conservative
-baseline**, not an artificially weak one.
+But the corrected numbers sharpen the conclusion rather than blur it.
+Node2Vec reaches only about a third of RWR's margin (+0.028 vs
++0.079), and its per-cell estimate is far less precise (mean SD of
+delta-AUROC 0.051, against RWR's 0.019). The cheapest, fully
+transparent diffusion beats a trained embedding by roughly three to
+one on this task. The per-network detail points the same way: in
+`string_phys700` (intact protein-binding edges only) RWR outperforms
+the GNN by 3.4 pp (0.119 vs 0.085).
+
+**RWR is a conservative baseline, not an artificially weak one** --
+and on this benchmark it is also the better-performing one, at a
+fraction of the cost and with full reproducibility.
+
+(These numbers were recomputed on 2026-10-29 after fixing four
+defects in the GNN arm: the evaluation ranked the whole universe
+against the *training* positives instead of the test fold; the random
+walk appended each step twice; the alpha dimension did not exist for
+Node2Vec, so the three "alpha" arms were the same computation
+repeated; and gensim's Hogwild threading made the learner
+non-reproducible. The old JSONs are archived under
+`results/runs/gnn_courtesy_OLD_BUGGY/` and are not used. See
+`docs/pre_registration_amendments.md` amendment 3.)
 
 ### I.5 Equivalence test confirms the reactome × temporal cell
 
