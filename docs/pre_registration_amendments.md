@@ -166,6 +166,41 @@ choice: it holds under all three repeat-level constructions, and the
 one that is calibrated by simulation is the one reported.
 (`results/tables/stats_ci_variants.tsv`.)
 
+### A2.3c A fourth defect: the published CI table is an alpha-average
+
+While checking the published table against the corrected one, a fourth
+defect in the same family surfaced.
+
+`scripts/run_stats_analysis.py:229` (`_bootstrap_ci`) selects the rows with
+
+    obs = a4[(a4.network == net) & (a4.label_set == label)]
+
+**without filtering on alpha.** The pivot on `(repeat, fold)` then averages
+the three alpha values (0.3 / 0.5 / 0.7) of the RWR arm, because
+`pivot_table` defaults to `aggfunc="mean"`, and pairs that average with the
+single degree value (whose `alpha` is NaN). So the published
+`results/tables/stats_bootstrap_ci.tsv` is a confidence interval on the
+**mean over the three alphas**, while the table is labelled `alpha = 0.5`.
+
+Verified numerically for `funmap x intogen2024`:
+
+| quantity | value |
+|---|---|
+| mean delta, alpha = 0.3 | 0.089494 |
+| mean delta, alpha = 0.5 | 0.099820 |
+| mean delta, alpha = 0.7 | 0.104637 |
+| average of the three (= what the published table reports) | **0.097984** |
+| published `stats_bootstrap_ci.tsv` mean | **0.097984** |
+
+The CI width is barely affected (the alpha effect is largely averaged
+out), so the coverage conclusion in A2.3a is unaffected -- but the table
+must be regenerated with the correct alpha filter before it appears in
+the paper.
+
+**Fix (work-plan A4):** filter to `alpha == 0.5` for the RWR arm and keep
+all degree rows (their alpha is NaN), then emit the five interval
+variants.
+
 ### A2.4 What is NOT changed
 
 The primary endpoint, the learner, the frozen inputs, the decision rule
