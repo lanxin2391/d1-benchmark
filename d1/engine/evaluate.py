@@ -14,6 +14,7 @@ on the full network (LCC); seeds and test genes come only from the split file. A
 universe = all network genes; the `shared` universe = genes present in all six networks.
 """
 import os
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -86,12 +87,82 @@ def read_splits(path):
     return df
 
 
+
+# ------------------------------------------------------------ per-gene dump
+def dump_per_gene_scores(path, genes, sp_df, deg, Ps, alphas, combos):
+    """Persist the per-gene RWR / degree scores of one arm.
+
+    Work-plan v3.1 task A3. The pre-registration section 9.3 asks for a
+    "cluster bootstrap resampling *genes*, not gene-arm rows". That needs
+    the per-gene scores of every fold, which the C5 result table does not
+    carry -- it only has the per-fold metrics. This writes them.
+
+    Layout of the .npz
+    -------------------
+    genes      (N,)        str    universe gene names, the row order of
+                                 every score matrix below
+    y          (N,)        int8   label of each gene (constant across
+                                 repeats by contract C4)
+    degree     (N,)        f64    degree score of each gene
+    rwr        (A,N,F)     f64    RWR score of each gene in each fold,
+                                 A = number of alphas, F = number of
+                                 (repeat, fold) columns
+    in_test    (F,N)       bool   True where the gene is in that fold's
+                                 test set (a gene is in the test set of
+                                 exactly one fold per repeat)
+    repeat_idx (F,)        i16    repeat of each column
+    fold_idx   (F,)        i8     fold of each column
+    alphas     (A,)        f32    the alpha of each rwr slice
+
+    A gene-cluster bootstrap then works like this: draw N gene indices
+    with replacement from the universe, and for each fold use the drawn
+    genes that fall in that fold's test set (with their multiplicities).
+    The gene is the cluster unit, which is what the pre-registration
+    asks for.
+    """
+    index = pd.Series(np.arange(len(genes)), index=genes)
+    N = len(genes)
+    n_folds = len(combos)
+
+    y = np.zeros(N, dtype=np.int8)
+    sp = sp_df.copy()
+    sp["y"] = sp["y"].astype(int)
+    uniq = sp.drop_duplicates("gene")
+    gi = index.loc[uniq.gene].to_numpy()
+    y[gi] = uniq.y.to_numpy()
+
+    in_test = np.zeros((n_folds, N), dtype=bool)
+    for j, (r, f) in enumerate(combos):
+        d = sp[(sp.repeat == r) & (sp.fold == f)]
+        in_test[j, index.loc[d.gene].to_numpy()] = True
+
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(
+        path,
+        genes=np.array(genes, dtype=object),
+        y=y,
+        degree=np.asarray(deg, dtype=np.float64),
+        rwr=np.stack([np.asarray(P, dtype=np.float64) for P in Ps]),
+        in_test=in_test,
+        alphas=np.asarray(alphas, dtype=np.float32),
+        repeat_idx=np.array([r for r, _ in combos], dtype=np.int16),
+        fold_idx=np.array([f for _, f in combos], dtype=np.int8),
+    )
+    return path
+
+
 # ---------------------------------------------------------------- harness
-def run_arm(network, splits, network_id, label_id, universe_id, alphas=(ALPHA,), ks=KS):
+def run_arm(network, splits, network_id, label_id, universe_id, alphas=(ALPHA,), ks=KS,
+            dump_scores=None):
     """Evaluate RWR and the degree baseline for one arm.
 
     network : path to a C2 file, or a (genes, A) tuple from load_network
     splits  : path to a C4 file, or a DataFrame with the C4 columns
+    dump_scores : optional path; if given, the per-gene RWR / degree
+                  scores of every fold are written there as an .npz (see
+                  dump_per_gene_scores). Needed for the gene-cluster
+                  bootstrap of pre-registration section 9.3.
     Returns a DataFrame in the C5 result format.
     """
     genes, A = load_network(network) if isinstance(network, (str, os.PathLike)) else network
@@ -123,13 +194,17 @@ def run_arm(network, splits, network_id, label_id, universe_id, alphas=(ALPHA,),
                      "n_iter": np.nan, **evaluate(deg[ti], t.y.to_numpy(), t.gene.to_numpy(), ks)})
 
     P0 = seed_matrix(len(genes), seeds)
+    Ps = []
     for a in alphas:
         P, n_iter = rwr(WT, P0, alpha=a)
+        Ps.append(P)
         for j, ((r, f), t) in enumerate(zip(combos, tests)):
             ti = t.idx.to_numpy()
             rows.append({**base, "alpha": a, "repeat": r, "fold": f, "method": "rwr",
                          "n_iter": n_iter,
                          **evaluate(P[ti, j], t.y.to_numpy(), t.gene.to_numpy(), ks)})
+    if dump_scores is not None:
+        dump_per_gene_scores(dump_scores, genes, sp_df, deg, Ps, alphas, combos)
     cols = ARM_KEYS + ["alpha", "repeat", "fold", "method", "n_iter", *METRICS,
                        "n_test_pos", "n_test"]
     return pd.DataFrame(rows)[cols]

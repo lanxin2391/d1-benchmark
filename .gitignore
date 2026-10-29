@@ -37,3 +37,6 @@ results/runs/gnn_courtesy_OLD_BUGGY/
 
 # ---- Zenodo release bundles (build artefacts; upload to Zenodo directly) ----
 release/
+
+# ---- per-gene score dumps (derived data; regenerate in ~5 min with --scores-dir) ----
+results/scores_v40/

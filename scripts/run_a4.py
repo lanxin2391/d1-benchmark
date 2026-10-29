@@ -71,13 +71,18 @@ TABLE_DIR.mkdir(parents=True, exist_ok=True)
 SPLIT_DIR = PROCESSED_SPLIT
 OUT_RUNS_DIR = RUNS_DIR
 TABLE_SUFFIX = ""
+SCORES_DIR = None
+SCORES_SUFFIX = ""
+N_REP_OVERRIDE = N_REP
 
 
 def _split_path(label: str, net_id: str) -> Path:
     return SPLIT_DIR / f"{label}__native_{net_id}.tsv"
 
 
-def _ensure_split(label: str, net_id: str, n_rep: int = N_REP) -> Path:
+def _ensure_split(label: str, net_id: str, n_rep: int | None = None) -> Path:
+    if n_rep is None:
+        n_rep = N_REP_OVERRIDE
     """Run build_splits.py if the split file is missing."""
     p = _split_path(label, net_id)
     if p.exists():
@@ -100,6 +105,9 @@ def _run_arm(net_id: str, label: str, alphas: tuple[float, ...]) -> Path:
     net_path = PROCESSED_NET / f"{net_id}.tsv"
     split_path = _ensure_split(label, net_id)
     out_path = OUT_RUNS_DIR / f"a4_{net_id}__{label}.tsv"
+    dump = None
+    if SCORES_DIR:
+        dump = str(SCORES_DIR / f"{net_id}__{label}{SCORES_SUFFIX}.npz")
     t0 = time.time()
     res = run_arm(
         network=str(net_path),
@@ -108,6 +116,7 @@ def _run_arm(net_id: str, label: str, alphas: tuple[float, ...]) -> Path:
         label_id=label,
         universe_id=f"native_{net_id}",
         alphas=alphas,
+        dump_scores=dump,
     )
     res.to_csv(out_path, sep="\t", index=False)
     dt = time.time() - t0
@@ -134,12 +143,24 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--table-suffix", default="",
                     help="suffix appended to the Table-1 output filenames, "
                          "e.g. '_v40'")
+    ap.add_argument("--scores-dir", default=None,
+                    help="if given, write the per-gene RWR/degree scores of "
+                         "every fold to <dir>/<net>__<label>.npz "
+                         "(work-plan A3; needed for the gene-cluster "
+                         "bootstrap of pre-registration section 9.3)")
+    ap.add_argument("--scores-suffix", default="",
+                    help="suffix appended to the per-gene score filenames")
     args = ap.parse_args(argv)
 
-    global SPLIT_DIR, OUT_RUNS_DIR, TABLE_SUFFIX
+    global SPLIT_DIR, OUT_RUNS_DIR, TABLE_SUFFIX, SCORES_DIR, SCORES_SUFFIX, N_REP_OVERRIDE
     SPLIT_DIR = Path(args.splits_dir) if args.splits_dir else PROCESSED_SPLIT
     OUT_RUNS_DIR = Path(args.runs_dir) if args.runs_dir else RUNS_DIR
     TABLE_SUFFIX = args.table_suffix
+    SCORES_DIR = Path(args.scores_dir) if args.scores_dir else None
+    SCORES_SUFFIX = args.scores_suffix
+    N_REP_OVERRIDE = args.n_rep
+    if SCORES_DIR:
+        SCORES_DIR.mkdir(parents=True, exist_ok=True)
     OUT_RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
     nets = args.only_net or NETWORKS
@@ -152,7 +173,7 @@ def main(argv: list[str] | None = None) -> int:
     print("\nStep 1: ensure split files exist (generate if missing)")
     for net in nets:
         for label in labels:
-            _ensure_split(label, net, args.n_rep)
+            _ensure_split(label, net)
 
     # Run each arm.
     print(f"\nStep 2: run {len(nets) * len(labels)} arms (one C5 file per arm)")
