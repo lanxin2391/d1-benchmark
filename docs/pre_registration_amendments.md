@@ -91,23 +91,80 @@ folds come from a single `StratifiedKFold` partition — a gene in fold 1's
 test set is therefore not in fold 2's test set. The five fold values inside
 one repeat are negatively dependent and partially cancel.
 
-Measured: the ratio `(sigma2_within / 5) / var(repeat means)` has
-**median 4.21** (range 1.11 – 13.51) across the 24 cells. Treating the 50
-folds as 50 independent observations therefore inflates the standard error
-of every cell mean by roughly **2x**.
+Measured over the 24 cells (`results/tables/stats_intra_repeat_rho.tsv`):
 
-Recomputing the per-cell bootstrap CI with the repeat as the resampling unit:
-
-| unit | mean CI width | arms whose CI excludes 0 |
+| quantity | median | range |
 |---|---|---|
-| fold-level (old) | 0.0111 | **23 / 24** |
-| repeat-clustered (new) | 0.0057 | **24 / 24** |
+| ratio = (sigma2_within / 5) / var(repeat means) | 4.21 | 1.11 – 13.51 |
+| ICC (intra-repeat correlation) | −0.24 | −0.25 – −0.24 |
+| SE ratio, fold-unit vs repeat-unit | 2.05x | 1.8x – 2.7x |
 
-The single arm that previously failed — `reactome x intogen_temporal_new`,
-mean −0.0112 — gets CI **[−0.0174, −0.0056]** under repeat clustering: the
-interval lies entirely **below** zero. This is what the pre-registration
-§10 states ("its 95 % CI is entirely below zero, so it is a real null effect,
-not just a weak positive"); the fold-level CI contradicted it.
+The ratio above 1 means the observed spread of the repeat means is about
+4x SMALLER than independent folds would produce. The ICC is **negative**,
+which is the signature of a partition: the five fold values of one repeat
+cancel rather than accumulate. Treating 50 folds as 50 independent
+observations therefore inflates the standard error of every cell mean by
+roughly 2x.
+
+### A2.3a Which interval, and why it is not the percentile bootstrap
+
+`scripts/run_coverage_simulation.py` measured the actual coverage of four
+interval constructions by simulation (400 iterations per cell per
+simulator, 1000 bootstrap resamples; two simulators — a nonparametric one
+that resamples the empirical repeat offsets, and a parametric one that
+draws normal repeat means with matched variance).
+
+| simulator | n_repeats | fold percentile | repeat percentile | **repeat t** | repeat BCa | mean width (fold / repeat-t) |
+|---|---|---|---|---|---|---|
+| nonparametric | 10 | **1.000** | 0.904 | **0.944** | 0.914 | 0.0100 / 0.0058 |
+| nonparametric | 20 | 1.000 | 0.925 | 0.946 | 0.934 | 0.0071 / 0.0038 |
+| nonparametric | 40 | 1.000 | 0.940 | 0.948 | 0.944 | 0.0050 / 0.0026 |
+| parametric | 10 | **1.000** | 0.895 | **0.949** | 0.894 | 0.0101 / 0.0061 |
+| parametric | 20 | 1.000 | 0.917 | 0.943 | 0.914 | 0.0072 / 0.0040 |
+| parametric | 40 | 1.000 | 0.940 | 0.950 | 0.939 | 0.0051 / 0.0028 |
+
+Three things follow.
+
+1. The **fold-level interval is unusable**: it over-covers at 100% in
+   every design. It is conservative rather than anti-conservative, but a
+   confidence interval that is 2x too wide is a poor instrument for a
+   decision rule. This conclusion is independent of any outcome.
+2. The **repeat-level percentile bootstrap under-covers** at 10 repeats
+   (0.90 / 0.90). That is the well-known finite-sample behaviour of the
+   percentile bootstrap with only ten clusters, not evidence that the
+   repeat is the wrong unit. It improves monotonically with more repeats
+   (0.94 at 40 repeats).
+3. The **repeat-level t interval is calibrated** (0.944 / 0.949 at ten
+   repeats; 0.943–0.950 across all designs) and satisfies the coverage
+   criterion fixed in advance (nominal 95%, accept if the measured
+   coverage lies in 0.93–0.97).
+
+**The primary interval is therefore the repeat-level t interval.** The
+repeat-level percentile and BCa bootstrap are reported as sensitivity
+analyses, with the under-coverage caveat stated explicitly; the
+fold-level interval (the one used in the original manuscript) is reported
+as a third sensitivity analysis, labelled as conservative.
+
+### A2.3b The H1 verdict under each interval
+
+| interval | arms whose 95 % CI excludes 0 | mean CI width |
+|---|---|---|
+| fold-level percentile (original manuscript) | 23 / 24 | 0.0110 |
+| repeat-level percentile | 24 / 24 | 0.0057 |
+| **repeat-level t (primary)** | **24 / 24** | 0.0070 |
+| repeat-level BCa | 24 / 24 | 0.0058 |
+
+Under the primary interval the single previously-failing arm,
+`reactome x intogen_temporal_new` (mean −0.0112), has CI
+**[−0.0186, −0.0037]** — entirely below zero. This is what
+pre-registration §10 states ("its 95 % CI is entirely below zero, so it
+is a real null effect, not just a weak positive"); the fold-level
+interval contradicted it.
+
+The verdict 24/24 is therefore **not** an artefact of the interval
+choice: it holds under all three repeat-level constructions, and the
+one that is calibrated by simulation is the one reported.
+(`results/tables/stats_ci_variants.tsv`.)
 
 ### A2.4 What is NOT changed
 
@@ -120,16 +177,27 @@ and the CI are computed, not **what** is tested.
 
 1. The unit choice was made after seeing that it turns 23/24 into 24/24.
    The *design* argument (repeated CV => cluster on the repeat) is
-   a-priori correct, but a coverage simulation must be run to confirm the
-   repeat-clustered CI has ~95 % coverage, and **both** CIs must be
-   reported. This is scheduled as week-0 work.
+   a-priori correct, and the coverage simulation in A2.3a was run with
+   the acceptance criterion fixed in advance (nominal 95%, accept if
+   measured coverage lies in 0.93–0.97). It **failed for the fold unit
+   (100 % coverage) and passed for the repeat-level t interval
+   (0.944 / 0.949)** — a result that would have been obtained whatever
+   the outcome. All three repeat-level constructions give 24/24, so the
+   verdict is also robust to the interval family.
 2. The pre-registration §9.3 asks for a **gene-level** cluster bootstrap
    ("resampling genes, not gene-arm rows"). That is still outstanding,
    because per-gene scores were not written to disk by the original run.
    It is scheduled for week 2 (`run_arm` must persist per-gene scores).
    The gene-level CI may be wider than the repeat-level CI for the small
    label sets, and the manuscript must state whichever it ends up using.
-3. `docs/pre_registration.md` §12 and §14 cross-reference the wrong
+3. The **repeat-level percentile bootstrap is reported only as a
+   sensitivity analysis** because it under-covers at ten repeats
+   (0.90 against a 0.95 nominal). The primary interval is the
+   repeat-level **t** interval. If the number of repeats is raised
+   (work-plan B1, 20–40 repeats), the percentile bootstrap becomes
+   calibrated as well (0.94 at 40 repeats) and the two will be reported
+   side by side.
+4. `docs/pre_registration.md` §12 and §14 cross-reference the wrong
    sections. This is a typographical fix to a frozen document; it is
    recorded here rather than edited in place, and will be corrected in the
    Zenodo **version 2** of the record with a note pointing here.

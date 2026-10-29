@@ -336,11 +336,21 @@ network x label interaction 41 %, network 24 %, fold-to-fold sampling
 noise 1.3 %), the verdict is:
 
 **H1 holds**: the network prior contributes signal beyond node
-degree in 24/24 (network, label) cells, with bootstrap CIs
-excluding zero and z-scores 5-200. The CI is computed with the
-resampling unit clustered at the repeat level, which is the correct
-unit for a 5-fold x 10-repeat design (see amendment 2); the
-fold-level CI is reported alongside it as a sensitivity analysis.
+degree in 24/24 (network, label) cells, with 95% confidence
+intervals excluding zero and z-scores 5-200.
+
+The confidence interval uses the **repeat** as its resampling unit,
+not the fold. Within one repeat the five folds come from a single
+stratified partition and are negatively dependent (measured
+intra-repeat ICC = -0.24), so treating the 50 folds as 50
+independent observations inflates every standard error by about
+two-fold. A coverage simulation over 400 synthetic datasets per
+cell confirms the choice: the fold-level interval covers 100% of
+the time (far too conservative) whereas the repeat-level t
+interval covers 94.4%, i.e. it is calibrated. The pre-registered
+rule is met under all three repeat-level constructions (percentile,
+t, BCa); the fold-level and repeat-percentile intervals are
+reported alongside as sensitivity analyses (see amendment 2).
 
 ### I.2 Provenance matters in different ways
 
