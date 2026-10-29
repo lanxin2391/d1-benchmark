@@ -340,17 +340,18 @@ degree in 24/24 (network, label) cells, with 95% confidence
 intervals excluding zero and z-scores 5-200.
 
 The confidence interval uses the **repeat** as its resampling unit,
-not the fold. Within one repeat the five folds come from a single
-stratified partition and are negatively dependent (measured
-intra-repeat ICC = -0.24), so treating the 50 folds as 50
-independent observations inflates every standard error by about
-two-fold. A coverage simulation over 400 synthetic datasets per
-cell confirms the choice: the fold-level interval covers 100% of
-the time (far too conservative) whereas the repeat-level t
-interval covers 94.4%, i.e. it is calibrated. The pre-registered
-rule is met under all three repeat-level constructions (percentile,
-t, BCa); the fold-level and repeat-percentile intervals are
-reported alongside as sensitivity analyses (see amendment 2).
+not the fold, and the design uses 40 repeats rather than 10. Within
+one repeat the five folds come from a single stratified partition and
+are negatively dependent (measured intra-repeat ICC = -0.235), so
+treating the 200 folds as 200 independent observations inflates every
+standard error by about two-fold. A coverage simulation over 400
+synthetic datasets per cell, run with the acceptance criterion fixed
+in advance, confirms the choice: the fold-level interval covers 100%
+of the time (far too conservative), whereas the repeat-level
+cluster bootstrap covers 93.6% and the repeat-level t interval 94.6%,
+i.e. both are calibrated. The pre-registered rule is met under all
+four interval constructions; the fold-level interval is reported
+alongside as a sensitivity analysis (see amendment 2).
 
 ### I.2 Provenance matters in different ways
 

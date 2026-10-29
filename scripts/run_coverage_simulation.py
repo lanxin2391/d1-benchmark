@@ -76,7 +76,7 @@ import numpy as np
 import pandas as pd
 
 REPO = Path(__file__).resolve().parent.parent
-A4 = REPO / "results" / "runs" / "a4_combined.tsv"
+A4 = REPO / "results" / "runs" / "a4_combined.tsv"   # overridable with --combined
 TABLES = REPO / "results" / "tables"
 DOCS = REPO / "docs"
 
@@ -88,8 +88,8 @@ SEED = 20261029
 
 # ------------------------------------------------------------------ data
 
-def load_cells() -> dict[tuple[str, str], dict]:
-    df = pd.read_csv(A4, sep="\t")
+def load_cells(combined: Path | None = None) -> dict[tuple[str, str], dict]:
+    df = pd.read_csv(combined or A4, sep="\t")
     df = df[(df["method"] == "degree") | (df["alpha"] == ALPHA)]
     sub = df[df["method"].isin(["rwr", "degree"])]
     piv = (sub.pivot_table(index=["network", "label_set", "repeat", "fold"],
@@ -243,11 +243,23 @@ def main() -> int:
     ap.add_argument("--boot", type=int, default=N_BOOT_DEFAULT)
     ap.add_argument("--cells", default="all",
                     help="'all' or comma-separated network:label")
+    ap.add_argument("--combined", default=None,
+                    help="path to the a4_combined.tsv to simulate from "
+                         "(default results/runs/a4_combined.tsv; use "
+                         "results/runs_v40/a4_combined.tsv for the 40-repeat "
+                         "design)")
+    ap.add_argument("--rep-designs", default="10,20,40",
+                    help="comma-separated repeat counts to simulate")
+    ap.add_argument("--tag", default="",
+                    help="suffix appended to the output filenames")
     args = ap.parse_args()
 
     TABLES.mkdir(parents=True, exist_ok=True)
     DOCS.mkdir(parents=True, exist_ok=True)
-    cells = load_cells()
+    combined = Path(args.combined).resolve() if args.combined else None
+    if combined:
+        print(f"simulating from {combined}")
+    cells = load_cells(combined)
     if args.cells != "all":
         want = set(args.cells.split(","))
         cells = {k: v for k, v in cells.items() if f"{k[0]}:{k[1]}" in want}
@@ -279,7 +291,7 @@ def main() -> int:
             "effective_independent_units": n_rep,
         })
     rho_df = pd.DataFrame(rho_rows)
-    rho_df.to_csv(TABLES / "stats_intra_repeat_rho.tsv", sep="\t", index=False)
+    rho_df.to_csv(TABLES / f"stats_intra_repeat_rho{args.tag}.tsv", sep="\t", index=False)
 
     print("=== intra-repeat dependence ===")
     print(f"  ratio (indep-expected / observed) : median "
@@ -296,7 +308,7 @@ def main() -> int:
 
     # ---------------- 2. coverage simulation ----------------
     cov_rows = []
-    n_rep_designs = [10, 20, 40]
+    n_rep_designs = [int(x) for x in args.rep_designs.split(",")]
     for (nw, lb), c in cells.items():
         for sim_name, sim_fn, truth in (
             ("nonparametric", simulate_nonparametric, c["mean"]),
@@ -334,7 +346,7 @@ def main() -> int:
         print(f"  [{nw} x {lb}] done")
 
     cov_df = pd.DataFrame(cov_rows)
-    cov_df.to_csv(TABLES / "stats_coverage_simulation.tsv", sep="\t", index=False)
+    cov_df.to_csv(TABLES / f"stats_coverage_simulation{args.tag}.tsv", sep="\t", index=False)
 
     print("\n=== coverage of nominal 95% CI ===")
     for sim in cov_df.simulator.unique():
@@ -361,7 +373,7 @@ def main() -> int:
                   "standard DE formula is not meaningful for negative ICC; "
                   "the correct independent resampling unit is the REPEAT "
                   "(10 of them), which is what the corrected CI uses.")
-    de.to_csv(TABLES / "stats_resampling_unit_design_effect.tsv", sep="\t", index=False)
+    de.to_csv(TABLES / f"stats_resampling_unit_design_effect{args.tag}.tsv", sep="\t", index=False)
 
     # ---------------- 4. doc ----------------
     med_ratio = rho_df.ratio_indep_expected_over_observed.median()
@@ -492,11 +504,11 @@ argument that goes into pre-registration amendment 2 section A2.5.
   {1/np.sqrt(args.iters):.3f} at {args.iters} iterations; the medians
   over 24 cells are correspondingly more stable.
 """
-    (DOCS / "coverage_simulation.md").write_text(doc, encoding="utf-8")
-    print(f"\nwrote {TABLES/'stats_intra_repeat_rho.tsv'}")
-    print(f"wrote {TABLES/'stats_coverage_simulation.tsv'}")
-    print(f"wrote {TABLES/'stats_resampling_unit_design_effect.tsv'}")
-    print(f"wrote {DOCS/'coverage_simulation.md'}")
+    (DOCS / f"coverage_simulation{args.tag}.md").write_text(doc, encoding="utf-8")
+    print(f"\nwrote {TABLES/('stats_intra_repeat_rho'+args.tag+'.tsv')}")
+    print(f"wrote {TABLES/('stats_coverage_simulation'+args.tag+'.tsv')}")
+    print(f"wrote {TABLES/('stats_resampling_unit_design_effect'+args.tag+'.tsv')}")
+    print(f"wrote {DOCS/('coverage_simulation'+args.tag+'.md')}")
     print(f"\nwall-clock: {time.time()-t0:.1f}s")
     return 0
 

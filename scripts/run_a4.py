@@ -65,12 +65,19 @@ TABLE_DIR = ROOT / "results" / "tables"
 RUNS_DIR.mkdir(parents=True, exist_ok=True)
 TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
+# Overridden at runtime by --splits-dir / --runs-dir / --table-suffix so a
+# different repeat count can be run without overwriting the released v1
+# artefacts (work-plan v3.1 A2).
+SPLIT_DIR = PROCESSED_SPLIT
+OUT_RUNS_DIR = RUNS_DIR
+TABLE_SUFFIX = ""
+
 
 def _split_path(label: str, net_id: str) -> Path:
-    return PROCESSED_SPLIT / f"{label}__native_{net_id}.tsv"
+    return SPLIT_DIR / f"{label}__native_{net_id}.tsv"
 
 
-def _ensure_split(label: str, net_id: str) -> Path:
+def _ensure_split(label: str, net_id: str, n_rep: int = N_REP) -> Path:
     """Run build_splits.py if the split file is missing."""
     p = _split_path(label, net_id)
     if p.exists():
@@ -80,7 +87,9 @@ def _ensure_split(label: str, net_id: str) -> Path:
     subprocess.run(
         [sys.executable, str(script),
          "--label", label,
-         "--universe", f"native_{net_id}"],
+         "--universe", f"native_{net_id}",
+         "--n-rep", str(n_rep),
+         "--out-dir", str(SPLIT_DIR)],
         check=True, cwd=str(ROOT),
     )
     return p
@@ -90,7 +99,7 @@ def _run_arm(net_id: str, label: str, alphas: tuple[float, ...]) -> Path:
     """Run one network x label x alpha-set arm; return the output path."""
     net_path = PROCESSED_NET / f"{net_id}.tsv"
     split_path = _ensure_split(label, net_id)
-    out_path = RUNS_DIR / f"a4_{net_id}__{label}.tsv"
+    out_path = OUT_RUNS_DIR / f"a4_{net_id}__{label}.tsv"
     t0 = time.time()
     res = run_arm(
         network=str(net_path),
@@ -116,7 +125,22 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--alpha", type=float, nargs="+", default=list(ALPHAS))
     ap.add_argument("--n-rep", type=int, default=N_REP)
     ap.add_argument("--k", type=int, default=K)
+    ap.add_argument("--splits-dir", default=None,
+                    help="directory holding the split files "
+                         "(default data/processed/splits)")
+    ap.add_argument("--runs-dir", default=None,
+                    help="where to write the per-arm C5 files "
+                         "(default results/runs)")
+    ap.add_argument("--table-suffix", default="",
+                    help="suffix appended to the Table-1 output filenames, "
+                         "e.g. '_v40'")
     args = ap.parse_args(argv)
+
+    global SPLIT_DIR, OUT_RUNS_DIR, TABLE_SUFFIX
+    SPLIT_DIR = Path(args.splits_dir) if args.splits_dir else PROCESSED_SPLIT
+    OUT_RUNS_DIR = Path(args.runs_dir) if args.runs_dir else RUNS_DIR
+    TABLE_SUFFIX = args.table_suffix
+    OUT_RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
     nets = args.only_net or NETWORKS
     labels = args.only_label or LABELS
@@ -128,7 +152,7 @@ def main(argv: list[str] | None = None) -> int:
     print("\nStep 1: ensure split files exist (generate if missing)")
     for net in nets:
         for label in labels:
-            _ensure_split(label, net)
+            _ensure_split(label, net, args.n_rep)
 
     # Run each arm.
     print(f"\nStep 2: run {len(nets) * len(labels)} arms (one C5 file per arm)")
@@ -141,7 +165,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"\nStep 3: concatenate {len(arm_paths)} arm tables into results/runs/a4_combined.tsv")
     combined = pd.concat([pd.read_csv(p, sep="\t") for p in arm_paths],
                          ignore_index=True)
-    combined.to_csv(RUNS_DIR / "a4_combined.tsv", sep="\t", index=False)
+    combined.to_csv(OUT_RUNS_DIR / "a4_combined.tsv", sep="\t", index=False)
     print(f"  combined rows: {len(combined):,}")
 
     # Build Table 1 (paper Table 1): mean +- SD of delta_AUROC per (net, label, alpha).
@@ -167,8 +191,8 @@ def main(argv: list[str] | None = None) -> int:
         "a0.5_mean", "a0.5_std", "a0.5_n",
         "a0.7_mean", "a0.7_std", "a0.7_n",
     ])
-    table1.to_csv(TABLE_DIR / "a4_table1_delta_auroc.tsv", sep="\t")
-    print("  Table 1 (delta_AUROC, mean +- SD across 50 folds):")
+    table1.to_csv(TABLE_DIR / f"a4_table1_delta_auroc{TABLE_SUFFIX}.tsv", sep="\t")
+    print(f"  Table 1 (delta_AUROC, mean +- SD across {len(m) // max(1, len(m))} folds):")
     print(table1.to_string())
 
     # Raw RWR and degree AUROC tables (for the supplementary).
@@ -179,14 +203,14 @@ def main(argv: list[str] | None = None) -> int:
         index=["network", "label_set"], columns="alpha", values=["mean", "std"]
     )
     table1_rwr.columns = [f"a{alpha}_{stat}" for stat, alpha in table1_rwr.columns]
-    table1_rwr.to_csv(TABLE_DIR / "a4_table1_rwr_auroc.tsv", sep="\t")
+    table1_rwr.to_csv(TABLE_DIR / f"a4_table1_rwr_auroc{TABLE_SUFFIX}.tsv", sep="\t")
 
     deg_df = combined[combined["method"] == "degree"]
     table1_deg = deg_df.groupby(["network", "label_set"])["auroc"].agg(
         ["mean", "std"]
     ).round(4)
     table1_deg.columns = [f"degree_{stat}" for stat in table1_deg.columns]
-    table1_deg.to_csv(TABLE_DIR / "a4_table1_degree_auroc.tsv", sep="\t")
+    table1_deg.to_csv(TABLE_DIR / f"a4_table1_degree_auroc{TABLE_SUFFIX}.tsv", sep="\t")
 
     print(f"\nDone. {len(arm_paths)} arms; combined file {len(combined):,} rows.")
     return 0

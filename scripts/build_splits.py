@@ -50,6 +50,9 @@ SPLITS_DIR.mkdir(parents=True, exist_ok=True)
 CANONICAL_D11_LABELS = ("intogen2024", "ot_all", "ot_nolit",
                         "intogen_temporal_new")
 
+# Directory the split files are written to. Overridden by --out-dir.
+out_dir = SPLITS_DIR
+
 
 def _read_label_genes(label_id: str) -> set[str]:
     p = LABELS_DIR / f"{label_id}.tsv"
@@ -112,12 +115,25 @@ def main(argv: list[str] | None = None) -> int:
                     help="universe spec (e.g. shared, native_funmap); may be repeated")
     ap.add_argument("--base-seed", type=int, default=20260926,
                     help="D-BASE; default 20260926")
-    ap.add_argument("--n-rep", type=int, default=10)
+    ap.add_argument("--n-rep", type=int, default=10,
+                    help="number of repeats (10 = the original design; "
+                         "40 = the A2 design, see work_plan v3.1)")
     ap.add_argument("--k", type=int, default=5)
+    ap.add_argument("--out-dir", default=None,
+                    help="where to write the split files "
+                         "(default data/processed/splits). Use a separate "
+                         "directory for a different repeat count so the "
+                         "released v1 splits are never overwritten.")
     ap.add_argument("--apply-d11-cap", action="store_true",
                     help="cap each label's positives to the per-universe minimum N_u "
                          "(D-11 proposal A, B-side preferred)")
     args = ap.parse_args(argv)
+
+    global out_dir
+    out_dir = Path(args.out_dir) if args.out_dir else SPLITS_DIR
+    if not out_dir.is_absolute():
+        out_dir = (REPO_ROOT / out_dir).resolve()
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     sys.path.insert(0, str(REPO_ROOT))
     from d1.splits import make_splits, write_splits, summarise_splits
@@ -168,12 +184,12 @@ def main(argv: list[str] | None = None) -> int:
 
             df = make_splits(universe, positives,
                              base_seed=args.base_seed, n_rep=args.n_rep, k=args.k)
-            path = write_splits(df, label_id, u_id, out_dir=SPLITS_DIR)
+            path = write_splits(df, label_id, u_id, out_dir=out_dir)
             summ = summarise_splits(df)
             print(f"[{label_id} x {u_id}] {len(universe):,} genes, "
                   f"{len(positives):,} positives (of {len(positives_full):,} full), "
                   f"{summ['n_positives']} positives in universe -> "
-                  f"{path.relative_to(REPO_ROOT)} ({len(df):,} rows){cap_note}")
+                  f"{path} ({len(df):,} rows){cap_note}")
             written.append(path)
             n_log.append({"label": label_id, "universe": u_id,
                           "n_universe": len(universe),
@@ -187,7 +203,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # record D-11 audit
     if args.apply_d11_cap:
-        n_json = SPLITS_DIR / "N_per_universe.json"
+        n_json = out_dir / "N_per_universe.json"
         n_json.write_text(json.dumps({
             "scheme": "per_universe_min_across_4_canonical_labels",
             "canonical_labels": list(CANONICAL_D11_LABELS),
@@ -196,10 +212,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"\nWrote D-11 audit to {n_json.relative_to(REPO_ROOT)}")
 
     log_df = pd.DataFrame(n_log)
-    log_path = SPLITS_DIR / "build_log.tsv"
+    log_path = out_dir / "build_log.tsv"
     log_df.to_csv(log_path, sep="\t", index=False)
     print(f"\nWrote {len(written)} split files to "
-          f"{SPLITS_DIR.relative_to(REPO_ROOT)} + audit log")
+          f"{out_dir} + audit log")
     return 0
 
 
