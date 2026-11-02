@@ -12,11 +12,19 @@ Algorithm
    of their gene sets (genes present in ALL six networks).
 2. For each of the 4 labels, restrict positives to those in the
    shared universe.
-3. Build splits using the shared universe (using build_splits.py).
+3. Build splits over the SHARED UNIVERSE ITSELF
+   (`build_splits.py --universe shared`). ONE split file per label:
+   the shared universe and the shared labels do not depend on the
+   network.
+   FIX (P0-5): the original built the splits with
+   `--universe native_<net_id>`, so the split universe was the network's
+   full LCC and only the positives were restricted -- the evaluation
+   set was never restricted, which is the whole point of the control.
 4. For each (network, label) combination, run run_arm with the
    shared-universe splits. RWR propagates on the full network LCC
-   (run_arm does this automatically); evaluation is restricted to
-   the shared-universe genes.
+   (run_arm does this automatically); evaluation is restricted to the
+   shared-universe genes; the degree baseline stays the full-LCC degree
+   (D-12).
 
 Output:
     * data/processed/labels/<label>_shared.tsv         (shared-universe capped labels)
@@ -51,6 +59,11 @@ TABLE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--force", action="store_true",
+                    help="rebuild the shared splits even if they exist")
+    args = ap.parse_args()
+
     # Step 1: shared universe
     print("Step 1: compute shared universe = intersection of 6 networks' gene sets")
     net_genes_list = []
@@ -79,21 +92,32 @@ def main():
         df_shared.to_csv(LABELS_DIR / f"{label}_shared.tsv", sep="\t", index=False)
         print(f"  {label}_shared: {len(df_shared)} positives")
 
-    # Step 3: regenerate splits for shared universe
-    print("\nStep 3: regenerate shared-universe splits")
-    for net_id in NETWORKS:
-        for label in LABELS:
-            shared_label = f"{label}_shared"
-            split_path = PROCESSED_SPLIT / f"{shared_label}__native_{net_id}.tsv"
-            if split_path.exists():
-                print(f"  [SKIP] {split_path.name}")
-                continue
-            print(f"  building {split_path.name}")
-            subprocess.run(
-                [sys.executable, str(ROOT / "scripts" / "build_splits.py"),
-                 "--label", shared_label,
-                 "--universe", f"native_{net_id}"],
-                check=True, cwd=str(ROOT))
+    # Step 3: build the splits over the SHARED UNIVERSE itself.
+    #
+    # FIX (P0-5): the original used `--universe native_<net_id>`, so the
+    # split universe was the network's FULL LCC and only the positives
+    # were restricted to the shared set. The evaluation set was therefore
+    # never restricted, and the control did not control anything.
+    #
+    # The shared universe and the shared labels do not depend on the
+    # network, so ONE split file per label is enough.
+    print("\nStep 3: build shared-universe splits "
+          "(universe = shared, not native_<net>)")
+    shared_split = {}
+    for label in LABELS:
+        shared_label = f"{label}_shared"
+        split_path = PROCESSED_SPLIT / f"{shared_label}__shared.tsv"
+        shared_split[label] = split_path
+        if split_path.exists() and not args.force:
+            print(f"  [SKIP] {split_path.name}")
+            continue
+        print(f"  building {split_path.name}")
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "build_splits.py"),
+             "--label", shared_label,
+             "--universe", "shared",
+             "--out-dir", str(PROCESSED_SPLIT)],
+            check=True, cwd=str(ROOT))
 
     # Step 4: run arms at alpha=0.5
     print("\nStep 4: run 24 shared-universe arms at alpha=0.5")
@@ -103,7 +127,7 @@ def main():
         for label in LABELS:
             shared_label = f"{label}_shared"
             net_path = PROCESSED_NET / f"{net_id}.tsv"
-            split_path = PROCESSED_SPLIT / f"{shared_label}__native_{net_id}.tsv"
+            split_path = shared_split[label]
             out_path = RUNS_DIR / f"d12_{net_id}__{shared_label}.tsv"
             res = run_arm(network=str(net_path), splits=str(split_path),
                           network_id=net_id, label_id=shared_label,
@@ -114,6 +138,16 @@ def main():
             d = m[m.alpha == 0.5]
             n_test_pos = int(res[(res.alpha == 0.5) & (res.method == "rwr")].n_test_pos.iloc[0])
             n_test = int(res[(res.alpha == 0.5) & (res.method == "rwr")].n_test.iloc[0])
+            # The whole point of D-12 is that the evaluation universe is
+            # the shared gene set. Assert it, so a silent regression to
+            # the full-LCC universe cannot recur unnoticed.
+            if n_test != len(shared):
+                raise AssertionError(
+                    f"[{net_id} x {shared_label}] evaluation universe is "
+                    f"{n_test} genes, expected the shared universe "
+                    f"({len(shared)}). The split file was probably built "
+                    f"over native_<net> instead of shared."
+                )
             if len(d):
                 summary_rows.append({
                     "network": net_id, "label": shared_label, "alpha": 0.5,

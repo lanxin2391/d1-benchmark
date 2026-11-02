@@ -84,15 +84,51 @@ def _load_split(path: Path) -> pd.DataFrame:
     return df
 
 
+def _build_degree_index(gene_to_degree, in_network):
+    """Pre-compute the degree -> candidate-gene lookup for one arm.
+
+    Returns (by_degree, sorted_genes, degrees_sorted, orig_pos) where
+
+      by_degree[d]     : genes of degree d, in the SAME order as
+                         gene_to_degree.items() would list them
+      sorted_genes     : the usable genes sorted by degree (stable, so
+                         genes of equal degree keep their original order)
+      degrees_sorted   : the degrees of sorted_genes, as an array
+      orig_pos[g]      : the position of g in gene_to_degree, used to
+                         restore the original order in the fallback path
+
+    Built once per (network, label) instead of once per observed seed.
+    The excluded (observed) seeds are filtered out when a candidate list
+    is selected, because the excluded set differs per fold.
+    """
+    usable = [g for g in gene_to_degree if g in in_network]
+    orig_pos = {g: i for i, (g, _) in enumerate(gene_to_degree.items())}
+    by_degree: dict[int, list[str]] = {}
+    for g in usable:
+        by_degree.setdefault(gene_to_degree[g], []).append(g)
+    sorted_genes = sorted(usable, key=lambda g: (gene_to_degree[g], orig_pos[g]))
+    degrees_sorted = np.array([gene_to_degree[g] for g in sorted_genes],
+                              dtype=np.int64)
+    return by_degree, sorted_genes, degrees_sorted, orig_pos
+
+
 def _degree_matched_seeds(observed_seeds, gene_to_degree,
-                             seed_indices_in_network, rng):
+                             seed_indices_in_network, rng,
+                             index=None):
     """Sample a seed set of the same size as observed, where each new seed
     has the same degree as the corresponding observed seed. Falls back to
     the nearest available degree if the exact-degree bin is empty.
     Excludes already-observed seeds to avoid trivial identity match.
 
     Raises if the network has fewer non-observed genes than the
-    seed-set size (no valid null can be constructed)."""
+    seed-set size (no valid null can be constructed).
+
+    OPTIMISED: the candidate list comes from a pre-computed degree index
+    instead of scanning every gene in the network for every seed. The
+    candidate LISTS and the RNG call order are unchanged, so the output
+    is bit-identical to the original implementation (verified by
+    scripts/verify_a5_equivalence.py).
+    """
     all_excluded = set(observed_seeds)
     available_in_net = set(gene_to_degree) - all_excluded
     available_in_net &= seed_indices_in_network
@@ -101,20 +137,32 @@ def _degree_matched_seeds(observed_seeds, gene_to_degree,
             f"network has only {len(available_in_net)} non-observed genes "
             f"but need {len(observed_seeds)} to build a degree-matched null"
         )
+    if index is None:
+        index = _build_degree_index(gene_to_degree, seed_indices_in_network)
+    by_degree, sorted_genes, degrees_sorted, orig_pos = index
+
     out = []
     for s in observed_seeds:
         target_deg = gene_to_degree[s]
-        candidates = [g for g, d in gene_to_degree.items()
-                       if d == target_deg
-                       and g not in all_excluded
-                       and g in seed_indices_in_network]
+        # exact-degree bin, minus the observed seeds
+        candidates = [g for g in by_degree.get(target_deg, [])
+                      if g not in all_excluded and g in seed_indices_in_network]
         if not candidates:
-            for radius in range(1, 10000):
-                candidates = [g for g, d in gene_to_degree.items()
-                               if abs(d - target_deg) <= radius
-                               and g not in all_excluded
-                               and g in seed_indices_in_network]
-                if candidates:
+            # nearest available degree: the smallest radius whose band
+            # contains at least one gene that is not an observed seed.
+            # The genes are returned in their ORIGINAL order, which is
+            # what the scan this replaces produced.
+            radius = 1
+            while True:
+                lo = int(np.searchsorted(degrees_sorted, target_deg - radius, "left"))
+                hi = int(np.searchsorted(degrees_sorted, target_deg + radius, "right"))
+                band = [g for g in sorted_genes[lo:hi]
+                        if g not in all_excluded and g in seed_indices_in_network]
+                if band:
+                    candidates = sorted(band, key=lambda g: orig_pos[g])
+                    break
+                radius += 1
+                if radius > 10000:
                     break
         out.append(rng.choice(candidates))
     return out
@@ -132,6 +180,12 @@ def _run_one_resample(net_id, label, seed):
     gene_to_degree = dict(zip(genes, np.asarray(A.sum(axis=1)).ravel().astype(int)))
     net_gene_set = set(genes)
 
+    # OPTIMISED: the degree -> candidates index is built ONCE per arm.
+    # It holds every network gene per degree bin; the per-fold exclusion
+    # filter is applied when the candidate list is selected. Building it
+    # per fold meant the cache never hit.
+    degree_index = _build_degree_index(gene_to_degree, net_gene_set)
+
     fold_deltas = []
     for (repeat, fold), split_df_test_only in df_splits.groupby(
             ["repeat", "fold"], sort=False):
@@ -139,7 +193,8 @@ def _run_one_resample(net_id, label, seed):
         obs_seeds_df = cell[cell.y == 1]
         obs_seeds_gene = list(obs_seeds_df.gene)
         null_seeds_gene = _degree_matched_seeds(
-            obs_seeds_gene, gene_to_degree, net_gene_set, rng)
+            obs_seeds_gene, gene_to_degree, net_gene_set, rng,
+            index=degree_index)
         null_seeds_idx = [int(gene_to_idx[g]) for g in null_seeds_gene
                          if g in gene_to_idx.index]
         if len(null_seeds_idx) == 0:
@@ -214,6 +269,13 @@ def main():
     ap.add_argument("--n-jobs", type=int, default=N_JOBS)
     ap.add_argument("--only-net", action="append", default=None)
     ap.add_argument("--only-label", action="append", default=None)
+    ap.add_argument("--splits-dir", default=None,
+                    help="directory holding the split files (default "
+                         "data/processed/splits; use "
+                         "data/processed/splits_v40 for the 40-repeat "
+                         "design, work plan A2)")
+    ap.add_argument("--force", action="store_true",
+                    help="recompute arms even if a checkpoint exists")
     args = ap.parse_args()
 
     nets = args.only_net or NETWORKS
@@ -224,10 +286,51 @@ def main():
          f"{len(cells) * args.n_resamples} total seed-null runs, "
          f"n_jobs={args.n_jobs}")
 
+    global PROCESSED_SPLIT
+    if args.splits_dir:
+        PROCESSED_SPLIT = ROOT / args.splits_dir
+
     t_overall = time.time()
-    per_cell_results = Parallel(n_jobs=args.n_jobs, verbose=0)(
-        delayed(_run_one_arm)(net, lab, args.n_resamples) for net, lab in cells
-    )
+    # PER-ARM CHECKPOINTING: the original wrote nothing until the whole
+    # Parallel call returned, so a multi-hour run gave no visibility into
+    # progress and a crash lost everything. Each arm now writes its
+    # per-resample trace as soon as it finishes, and the driver logs it.
+    trace_dir = RUNS_DIR / "a5"
+    trace_dir.mkdir(parents=True, exist_ok=True)
+    done_files = {}
+    pending = []
+    for net, lab in cells:
+        safe = lab.replace("/", "_")
+        fp = trace_dir / f"{net}__{safe}__seed_resamples.tsv"
+        if fp.exists() and not args.force:
+            done_files[(net, lab)] = fp
+        else:
+            pending.append((net, lab))
+
+    def _run_and_checkpoint(net, lab):
+        t0 = time.time()
+        all_df, mean_resamples = _run_one_arm(net, lab, args.n_resamples)
+        safe = lab.replace("/", "_")
+        fp = trace_dir / f"{net}__{safe}__seed_resamples.tsv"
+        all_df.to_csv(fp, sep="\t", index=False)
+        _log(f"  [{net} x {lab}] done in {(time.time()-t0)/60:.1f} min "
+             f"-> {fp.name}")
+        return (net, lab), (all_df, mean_resamples)
+
+    per_cell_results = []
+    if pending:
+        results = Parallel(n_jobs=args.n_jobs, verbose=0)(
+            delayed(_run_and_checkpoint)(net, lab) for net, lab in pending
+        )
+        per_cell_results.extend(results)
+    for net, lab in cells:
+        if (net, lab) not in done_files:
+            continue
+        fp = done_files[(net, lab)]
+        df = pd.read_csv(fp, sep="\t")
+        per_cell_results.append(((net, lab), (df, df["delta"].to_numpy())))
+    order = {c: i for i, c in enumerate(cells)}
+    per_cell_results.sort(key=lambda r: order[r[0]])
 
     null_summary = []
     p_summary = []

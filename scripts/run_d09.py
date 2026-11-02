@@ -16,7 +16,12 @@ Algorithm
 3. For each repeat (we do n_rep = 50, more than the 10 the main
    pipeline uses, to stabilise the AUROC estimate for this small label):
       a. Seed matrix over the network's LCC, using only training seeds
-         that map to nodes in the network.
+         that map to nodes in the network. Each repeat DRAWS THE TRAINING
+         SEED SET WITH REPLACEMENT (a bootstrap), so the repeats are
+         genuinely independent draws. Before the P0-6 fix the repeat
+         only reordered the same seed set, which cannot change a binary
+         seed matrix -- so all 50 repeats were identical and the
+         effective n was 1.
       b. RWR(alpha) and degree scores over all genes.
       c. AUROC on (positive = temporal_new, negative = all other genes
          in the network's LCC that are NOT in temporal_new).
@@ -110,13 +115,30 @@ def main():
         test_g = [genes[i] for i in test_all_idx]
 
         # For each repeat, build a fresh seed matrix.
+        #
+        # FIX (P0-6): the original code did
+        #     seed_idx_shuf = train_idx.copy(); rng.shuffle(seed_idx_shuf)
+        # which only reorders the SAME seed set. seed_matrix is a binary
+        # indicator matrix, so the RWR result is unchanged and all 50
+        # repeats were identical: the effective n was 1 and the released
+        # delta_auroc_sd was 0.
+        #
+        # The control's null is a randomisation of the TRAINING SEED SET,
+        # so each repeat now draws n_train_seeds seeds WITH REPLACEMENT
+        # from the training pool. The held-out evaluation set stays
+        # fixed, because resampling it as well would measure a different
+        # quantity.
         rwr_rows = []
         deg_rows = []
+        seed_set_hashes = []
         for rep in range(N_REP):
             rng = np.random.default_rng(rep)
-            seed_idx_shuf = train_idx.copy()
-            rng.shuffle(seed_idx_shuf)
-            P0 = seed_matrix(len(genes), [seed_idx_shuf.tolist()])
+            # bootstrap the training seed set: n draws with replacement
+            draw = rng.choice(train_idx, size=len(train_idx), replace=True)
+            # the distinct seed set is what actually matters to RWR
+            distinct = np.unique(draw)
+            seed_set_hashes.append(hash(tuple(sorted(int(x) for x in distinct))))
+            P0 = seed_matrix(len(genes), [distinct.tolist()])
             test_d = deg[test_all_idx]
             deg_metrics = evaluate(test_d, test_y, test_g)
             deg_rows.append({"network": net_id, "repeat": rep, "method": "degree",
@@ -144,6 +166,11 @@ def main():
         joined.to_csv(out_path, sep="\t", index=False)
 
         # Summary row
+        # `n_eff_seed_sets` is the number of DISTINCT training seed sets
+        # actually used. Before the fix every repeat reused the same set,
+        # so this was 1 while n_rep claimed 50 -- that gap is exactly
+        # what made the defect invisible.
+        n_eff = len(set(seed_set_hashes))
         for alpha in (0.3, 0.5, 0.7):
             sub = joined[joined.alpha == alpha]
             summary_rows.append(
@@ -155,8 +182,12 @@ def main():
                  "degree_auroc_mean": sub.degree_auroc.mean(),
                  "delta_auroc_mean": sub.delta_auroc.mean(),
                  "delta_auroc_sd": sub.delta_auroc.std(),
-                 "n_rep": len(sub)}
+                 "n_rep": len(sub),
+                 "n_eff_seed_sets": n_eff}
             )
+            if n_eff < 2 and len(sub) > 1:
+                print(f"  WARNING [{net_id}] only {n_eff} distinct seed set(s) "
+                      f"across {len(sub)} repeats -- the replication is fake")
 
     summary = pd.DataFrame(summary_rows)
     summary.to_csv(TABLE_DIR / "d09_table.tsv", sep="\t", index=False)
