@@ -190,13 +190,21 @@ def _observed_delta(net_id, label):
     sub = df[(df.network == net_id) & (df.label_set == label)].copy()
     if sub.empty:
         return np.nan
+    # FIX (pre-registration amendment 2, P0-1): the alpha filter below was
+    # DEAD CODE -- `pivot` was built from the unfiltered `sub`, so
+    # pivot_table averaged the RWR arm over alpha in {0.3, 0.5, 0.7} while
+    # the degree arm (alpha = NaN) stayed single-valued. The released
+    # observed_delta was therefore the mean over the three alphas, while
+    # the null distribution this function is compared against was
+    # generated at alpha = 0.5 only (run_a5.py uses ALPHA = 0.5).
+    # Null and observed were built on different alphas.
     sub_rwr_05 = sub[(sub.alpha == 0.5) & (sub.method == "rwr")]
     sub_deg = sub[sub.method == "degree"]
     if sub_rwr_05.empty or sub_deg.empty:
         return np.nan
-    pivot = sub.pivot_table(index=["repeat", "fold"], values="auroc",
-                             columns="method")
-    pivot["delta"] = pivot["rwr"] - pivot["degree"]
+    pivot = sub_rwr_05.pivot_table(index=["repeat", "fold"], values="auroc",
+                                    columns="method")
+    pivot["delta"] = pivot["rwr"] - sub_deg.set_index(["repeat", "fold"])["auroc"]
     return float(pivot["delta"].mean())
 
 

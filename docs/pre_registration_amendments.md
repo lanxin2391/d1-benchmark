@@ -259,6 +259,47 @@ fold unit that the original released table used — that is a further
 correction to §10, recorded here because the pre-registration is
 frozen and cannot be edited in place.
 
+### A2.3d How the alpha-averaging defect propagated (three instances)
+
+The single missing `alpha` filter was not confined to the confidence
+interval. Three released artefacts were computed on the mean over
+alpha in {0.3, 0.5, 0.7} while being labelled alpha = 0.5:
+
+| # | artefact | how it happened | fix |
+|---|---|---|---|
+| 1 | `stats_bootstrap_ci.tsv`, `stats_equivalence.tsv` | `_bootstrap_ci` and `_tost` selected rows without an alpha filter, then `pivot_table` averaged the RWR arm (the degree arm has alpha = NaN and stayed single-valued) | A2.3e; `d1/engine/stats.py`, `scripts/run_statistics.py` |
+| 2 | `stats_variance_decomp.tsv` | `mixedlm` was grouped by `fold_idx` (five buckets) and the network/label variances were the variances of group MEANS; the interaction term was hard-coded to 0 | `scripts/run_variance_decomp.py` (balanced random-effects ANOVA) |
+| 3 | `a5_null_distribution.tsv`, `a5_p_values.tsv` | `run_a5.py::_observed_delta` **filtered** the alpha = 0.5 RWR rows into `sub_rwr_05` and then pivoted the *unfiltered* `sub` -- the filter was dead code | the pivot now uses `sub_rwr_05`; the released `observed_delta` column was recomputed at alpha = 0.5 |
+
+The third instance is the one that matters for the science: the
+degree-matched seed null (control 2) was **simulated at alpha = 0.5
+only** (`run_a5.py` uses `ALPHA = 0.5`), so the released
+`observed_delta` -- the quantity the observed value is compared against
+that null with -- was on a different alpha from the null itself. The
+null distribution is correct (it was simulated at alpha = 0.5); only the
+observed column was wrong, so no re-simulation was required.
+
+Corrected values (10-repeat design, alpha = 0.5, matching the
+simulated null):
+
+| cell | released (wrong, alpha-averaged) | corrected |
+|---|---|---|
+| funmap x intogen2024 | +0.097984 | **+0.099820** |
+| funmap x ot_all | +0.083495 | **+0.084637** |
+| reactome x intogen_temporal_new | −0.011239 | **−0.011186** |
+
+The released `stats_bootstrap_ci.tsv` and `stats_equivalence.tsv` have
+been replaced with the corrected 40-repeat versions; the superseded
+10-repeat files are kept as
+`results/tables/stats_bootstrap_ci_v10_superseded.tsv` and
+`results/tables/stats_equivalence_v10_superseded.tsv`.
+
+**Still outstanding:** the degree-matched seed null has not been
+re-simulated on the 40-repeat design. Its null distribution and its
+corrected observed value are both on the 10-repeat design, which is
+internally consistent, but the whole control-2 arm should eventually be
+re-run on the 40 repeats like the primary factorial.
+
 ### A2.3e The TOST implementation itself was wrong
 
 The original `_tost` in `scripts/run_stats_analysis.py` tested
