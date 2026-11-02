@@ -300,6 +300,41 @@ corrected observed value are both on the 10-repeat design, which is
 internally consistent, but the whole control-2 arm should eventually be
 re-run on the 40 repeats like the primary factorial.
 
+### A2.3f The multiplicity control was never run on the primary endpoint
+
+`scripts/results_stats.py` hard-coded `ARMS` to FOUR (network, label)
+pairs, so the released `results/tables/results_stats.tsv` had four rows
+while the README and two other documents claimed "BH-FDR q<0.05 in
+23/24". The claim was never backed by the released table.
+
+`ARMS` is now the full 6 x 4 primary factorial, and the script reads the
+40-repeat per-arm files so the statistics match the current design. The
+released table now has 24 rows and the claim is true:
+
+| unit | BH-FDR q < 0.05 |
+|---|---|
+| fold (n = 200 folds) | **23 / 24** |
+| repeat (n = 40 repeats) | **23 / 24** |
+
+The single arm that fails is `reactome x intogen_temporal_new` in both
+cases. Its one-sided p-value (H1: mean > 0) is 0.9997 because the point
+estimate is negative, which is the same cell the equivalence test calls
+a null.
+
+A second defect in the same function: `bh_fdr` returned the
+`reject_H0_at_q_0.05` flags in **p-value-ranked** order while the
+adjusted p-values were returned in the **original** order, and the
+caller assigns the two arrays positionally. Every reject flag therefore
+landed on the wrong cell. Fixed by deriving the flags from the
+original-order array.
+
+The fixed-effects meta-analysis across the 24 cells now weights by the
+**repeat-unit** SE; the fold-unit weighting is kept in the table for
+comparison. The fixed-effect interval is narrow ([0.0969, 0.0974])
+because the 24 cells share networks and label sets, so the cell-level
+SEs are not independent; the random-effects interval
+(0.0788, 95% CI [0.0637, 0.0939]) is the honest one.
+
 ### A2.3e The TOST implementation itself was wrong
 
 The original `_tost` in `scripts/run_stats_analysis.py` tested

@@ -265,10 +265,22 @@ wide relative to the effect.
 
 ### D.4 Multiplicity control
 
-Benjamini-Hochberg FDR at q = 0.05 is applied within each cell
-(across the three alphas) and across the 24 (network × label)
-cells. The primary claim "H1 holds" requires q < 0.05 within the
-cell.
+Benjamini-Hochberg FDR at q = 0.05 is applied across the 24
+(network × label) cells of the pre-registered primary factorial at
+alpha = 0.5. Those 24 cells are the **verification family**; every
+other analysis (the other two alphas, the auxiliary arms, the
+exploratory controls) belongs to the exploratory family and is reported
+with bootstrap confidence intervals rather than q-values.
+
+The one-sided test is a paired test of H1 (mean delta-AUROC > 0) and
+is computed at two resampling units: over the 200 folds and over the 40
+repeat means. The repeat-level p-value is the one to read, because the
+folds inside a repeat are not independent (see D.2).
+
+Result: **23 of 24 cells reach BH-FDR q < 0.05** under both units. The
+single arm that does not is `reactome x intogen_temporal_new`, whose
+point estimate is negative -- the same cell the equivalence test calls
+a null. See I.5.
 
 ---
 

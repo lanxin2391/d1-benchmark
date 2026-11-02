@@ -37,7 +37,7 @@ script and regenerate.
 | `results/tables/d09_table.tsv` | A | Control 6 (temporal split) |
 | `results/tables/d11_table.tsv` | A | Control 5 (per-network cap) |
 | `results/tables/d12_table.tsv` | A | Control 4 (shared universe) |
-| `results/tables/results_stats.tsv` | A | Primary endpoint stats (BH-FDR q<0.05 in 23/24) |
+| `results/tables/results_stats.tsv` | A | Primary endpoint stats, 24 cells: BH-FDR q<0.05 in **23/24** (the one failure is `reactome x intogen_temporal_new`, whose point estimate is negative) |
 | `results/tables/stats_fine_z.tsv` | A | Fine-mode per-fold z (A5) |
 | `results/tables/stats_variance_decomp.tsv` | A | Mixed-effects variance partition |
 | `results/tables/stats_bootstrap_ci.tsv` | A | Cluster bootstrap 95 % CIs |

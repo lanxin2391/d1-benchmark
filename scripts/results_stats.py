@@ -24,15 +24,20 @@ from scipy import stats
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 RUNS_DIR = REPO_ROOT / "results" / "runs"
+# the 40-repeat primary design (work plan A2) takes precedence
+RUNS_DIR_V40 = REPO_ROOT / "results" / "runs_v40"
 TABLES_DIR = REPO_ROOT / "results" / "tables"
 DOCS_DIR = REPO_ROOT / "docs"
 
-ARMS = [
-    ("funmap", "intogen2024"),
-    ("string_full700", "intogen2024"),
-    ("funmap", "ot_all"),
-    ("string_full700", "ot_all"),
-]
+# The primary factorial: 6 networks x 4 label sets = 24 cells.
+# FIX (P0-9): this list was hard-coded to FOUR cells, which is why the
+# released results/tables/results_stats.tsv had only four rows while the
+# README and two documents claim "BH-FDR q<0.05 in 23/24".
+PRIMARY_NETWORKS = ["funmap", "intact", "reactome", "rna_coexp",
+                    "string_full700", "string_phys700"]
+PRIMARY_LABELS = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
+
+ARMS = [(net, lbl) for net in PRIMARY_NETWORKS for lbl in PRIMARY_LABELS]
 
 D09_ARMS = [
     ("funmap", "intogen_temporal_new"),
@@ -61,12 +66,38 @@ CLINGEN_ARMS = [
 
 
 def load_arm(network: str, label: str) -> tuple[np.ndarray, np.ndarray]:
-    """Return (rwr_aurocs, degree_aurocs) of length 50 for one arm."""
-    path = RUNS_DIR / f"end_to_end_{label}_{network}.tsv"
-    df = pd.read_csv(path, sep="\t")
-    pivot = df.pivot_table(index=["repeat", "fold"], columns="method",
-                           values="auroc").reset_index()
-    return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
+    """Return (rwr_aurocs, degree_aurocs) for one arm.
+
+    Reads the 40-repeat per-arm files (results/runs_v40/) when they
+    exist, so the statistics match the current primary design; falls back
+    to the 10-repeat files otherwise.
+    """
+    for runs in (RUNS_DIR_V40, RUNS_DIR):
+        path = runs / f"a4_{network}__{label}.tsv"
+        if path.exists():
+            df = pd.read_csv(path, sep="\t")
+            df = df[(df.method == "degree") | (df.alpha == 0.5)]
+            pivot = (df.pivot_table(index=["repeat", "fold"], values="auroc",
+                                    columns="method").reset_index()
+                       .dropna(subset=["rwr", "degree"]))
+            return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
+    raise FileNotFoundError(f"no per-arm file for {network} x {label}")
+
+
+def load_arm_by_unit(network: str, label: str,
+                     unit: str = "repeat") -> tuple[np.ndarray, np.ndarray]:
+    """Same as load_arm but aggregated to the requested resampling unit.
+
+    fold   : one value per (repeat, fold)
+    repeat : one value per repeat (the mean of its five folds) -- the
+             calibrated unit (work plan A1/A2, coverage 0.936)
+    """
+    rwr, deg = load_arm(network, label)
+    if unit == "fold":
+        return rwr, deg
+    n_rep = len(rwr) // 5
+    return (rwr.reshape(n_rep, 5).mean(axis=1),
+            deg.reshape(n_rep, 5).mean(axis=1))
 
 
 def load_arm_d11(network: str, label: str) -> tuple[np.ndarray, np.ndarray]:
@@ -110,7 +141,12 @@ def bh_fdr(pvals: list[float]) -> tuple[np.ndarray, np.ndarray]:
     adj = np.clip(adj, 0.0, 1.0)
     out = np.empty(n)
     out[order] = adj
-    rejected = adj < 0.05
+    # FIX: `rejected` must be derived from `out` (the ORIGINAL order), not
+    # from `adj` (the p-value-RANKED order). The old code returned the
+    # ranked-order flags, and the caller assigns the two arrays
+    # positionally, so every `reject_H0_at_q_0.05` flag landed on the
+    # wrong cell.
+    rejected = out < 0.05
     return out, rejected
 
 
@@ -157,10 +193,25 @@ def main() -> int:
         ci_high = mean_d + 1.96 * se_d
         # Cohen's d for paired samples
         cohens_d = mean_d / sd_d if sd_d > 0 else float("nan")
+        # The same test at the REPEAT unit. The folds are NOT independent
+        # -- inside one repeat the five folds come from a single
+        # StratifiedKFold partition and partially cancel (intra-repeat
+        # ICC = -0.235, work plan A1). The fold-level p is therefore
+        # anti-conservative; the repeat-level one is calibrated
+        # (work plan A1/A2).
+        rwr_r, deg_r = load_arm_by_unit(net, lbl, unit="repeat")
+        dr = rwr_r - deg_r
+        nr = dr.size
+        t_r, p2_r = stats.ttest_rel(rwr_r, deg_r)
+        p_one_r = p2_r / 2.0 if t_r > 0 else 1.0 - p2_r / 2.0
+
         rows.append({
             "network": net,
             "label": lbl,
+            "alpha": 0.5,
+            "family": "verification (pre-registered primary factorial)",
             "n_folds": n,
+            "n_repeats": nr,
             "mean_delta_AUROC": mean_d,
             "sd_delta_AUROC": sd_d,
             "se_delta_AUROC": se_d,
@@ -168,20 +219,44 @@ def main() -> int:
             "ci95_high": ci_high,
             "t_stat": float(t_stat),
             "p_one_sided": float(p_one),
+            "t_stat_repeat": float(t_r),
+            "p_one_sided_repeat": float(p_one_r),
             "cohens_d": cohens_d,
             "mean_rwr_AUROC": float(rwr.mean()),
             "mean_degree_AUROC": float(deg.mean()),
         })
 
     df = pd.DataFrame(rows)
-    # BH-FDR across the 4 arms
+    # BH-FDR across the 24 primary cells -- this is the pre-registered
+    # verification family, so these are the q-values the H1 rule uses.
     df["p_FDR_BH"], df["reject_H0_at_q_0.05"] = bh_fdr(df["p_one_sided"].tolist())
+    df["p_FDR_BH_repeat"], df["reject_H0_at_q_0.05_repeat"] = bh_fdr(
+        df["p_one_sided_repeat"].tolist())
 
-    # Fixed-effects meta across the 4 arms (per-fold deltas are NOT
-    # independent across arms because they share label positives; the
-    # proper meta is across arm-level mean estimates, weighting by
-    # within-arm SE^-1, which is what we report).
+    # Fixed-effects meta across the 24 cells (per-fold deltas are NOT
+    # independent across arms because they share label positives and the
+    # same network; the proper meta is across arm-level mean estimates,
+    # weighting by within-arm SE^-1, which is what we report).
+    # The meta-analysis weights each cell by its within-cell SE^-1. That SE
+    # must come from the REPEAT unit: the per-fold SE (n = 200) treats the
+    # folds as independent, which inflates the weight and shrinks the
+    # interval. The fold-unit version is kept as a column for comparison.
+    sd_rep = []
+    n_rep_col = []
+    for net, lbl in ARMS:
+        rwr_r, deg_r = load_arm_by_unit(net, lbl, unit="repeat")
+        dr = rwr_r - deg_r
+        sd_rep.append(float(dr.std(ddof=1)))
+        n_rep_col.append(int(dr.size))
+    df["sd_delta_AUROC_repeat"] = sd_rep
+    df["n_repeats_unit"] = n_rep_col
+
     mu_meta, mu_low, mu_high = meta_fixed_effects(
+        df["mean_delta_AUROC"].to_numpy(),
+        df["sd_delta_AUROC_repeat"].to_numpy(),
+        df["n_repeats_unit"].to_numpy(),
+    )
+    mu_meta_fold, mu_low_fold, mu_high_fold = meta_fixed_effects(
         df["mean_delta_AUROC"].to_numpy(),
         df["sd_delta_AUROC"].to_numpy(),
         df["n_folds"].to_numpy(),
@@ -338,9 +413,16 @@ def main() -> int:
 
     md_lines.append("## 3. Fixed-effects meta-analysis\n\n")
     md_lines.append(
-        f"Weighted across the 4 arms by `1/SE^2`:\n\n"
-        f"* **Meta mean ΔAUROC = {mu_meta:.4f}** "
-        f"(95% CI [{mu_low:.4f}, {mu_high:.4f}])\n\n"
+        f"Weighted across the 24 cells by `1/SE^2` (SE from the REPEAT unit;\n"
+        f"the fold-unit SE treats the folds as independent and is "
+        f"anti-conservative):\n\n"
+        f"* **Fixed-effect meta mean ΔAUROC = {mu_meta:.4f}** "
+        f"(95% CI [{mu_low:.4f}, {mu_high:.4f}])\n"
+        f"  -- this interval is narrow because the 24 cells share networks and\n"
+        f"  label sets, so the cell-level SEs are not independent; the\n"
+        f"  random-effects interval below is the honest one.\n"
+        f"* Fixed-effect meta mean with fold-unit weights (anti-conservative): "
+        f"{mu_meta_fold:.4f} (95% CI [{mu_low_fold:.4f}, {mu_high_fold:.4f}])\n\n"
         "Interpretation: across the 4 arms we tried, RWR adds "
         f"approximately {mu_meta*100:.1f} AUROC percentage points over "
         "the degree-only baseline. The lower bound of the CI is "
