@@ -195,7 +195,8 @@ only negative cell is still `reactome x intogen_temporal_new`.
 | repeat-level t | 24 / 24 | 0.0070 |
 | repeat-level BCa | 24 / 24 | 0.0058 |
 
-**40-repeat design** (`results/tables/stats_ci_variants_v40.tsv`):
+**40-repeat design** (`results/tables/stats_ci_all_units_v40.tsv`,
+`results/tables/stats_h1_verdict_v40.tsv`):
 
 | interval | arms whose 95 % CI excludes 0 | mean CI width | coverage (A2.3d) |
 |---|---|---|---|
@@ -203,17 +204,99 @@ only negative cell is still `reactome x intogen_temporal_new`.
 | **repeat-level percentile (primary)** | **24 / 24** | **0.0031** | **0.936 — calibrated** |
 | repeat-level t | 24 / 24 | 0.0033 | 0.946–0.950 — calibrated |
 | repeat-level BCa | 24 / 24 | 0.0031 | 0.932–0.943 — calibrated |
+| **gene-cluster (pre-registration §9.3)** | **20 / 24** | **0.0387** | not established — conservative bound |
 
-Under the primary interval the single negative-mean arm,
-`reactome x intogen_temporal_new` (mean −0.0125), has CI
-**[−0.0155, −0.0094]** — entirely below zero. This is what
-pre-registration §10 states ("its 95 % CI is entirely below zero, so it
-is a real null effect, not just a weak positive"); the 10-repeat
-fold-level interval contradicted it.
+**The pre-registered H1 rule is met under four of the five interval
+constructions and is NOT met under the gene-cluster bootstrap.** The
+four arms that fail the gene-cluster interval are all
+`intogen_temporal_new` — the label set with the smallest effects
+(mean 0.007 to 0.038). The gene-cluster interval is 12x wider than the
+repeat-level one because resampling genes measures how much the
+estimate would move if a *different set of genes* had been measured,
+which is a different question from how much it moves if the same
+universe is re-partitioned.
 
-The verdict 24/24 is therefore **not** an artefact of the interval
-choice: at 40 repeats it holds under all four constructions, and the
-three that are calibrated by simulation all agree.
+### A2.3c What the negative cell actually is (correction to an earlier
+draft of this amendment)
+
+An earlier draft of A2.3b in this file read:
+
+> "Under the primary interval the single negative-mean arm,
+> `reactome x intogen_temporal_new` (mean −0.0125), has CI
+> **[−0.0155, −0.0094]** — entirely below zero. This is what
+> pre-registration §10 states ... so it is a real null effect, not
+> just a weak positive"
+
+**That inference was wrong, and so was the manuscript text it was
+meant to support.** The fact that a confidence interval excludes zero
+says the effect is *distinguishable* from zero; it does not say the
+effect is *real*. The equivalence test of pre-registration §4.6
+answers the second question, and with the corrected TOST (A2.3e) the
+answer for this cell is:
+
+    mean −0.0125, 90 % equivalence CI [−0.0151, −0.0099],
+    p_low = 0, p_high = 1.3e−33  ⇒  EQUIVALENT TO ZERO
+
+**Equivalent to zero means there is no evidence of an effect in either
+direction.** The cell is a NULL. It is not a detected negative effect,
+and the phrase "a real null effect, not just a weak positive" (used in
+pre-registration §10) is not a safe way to describe it. The curator-lag
+story is retained as a *hypothesis* about why the cell is null, and
+moved to the Discussion.
+
+The corrected 95 % CIs of that cell, per unit:
+
+| unit | 95 % CI | contains 0? |
+|---|---|---|
+| fold | [−0.0254, +0.0030] | yes |
+| repeat (primary) | [−0.0155, −0.0094] | no |
+| gene | [−0.0589, +0.0375] | yes, and it reaches past ±0.05 |
+
+**No unit supports reading the cell as evidence of a negative effect.**
+The pre-registration's factual claim that the interval is "entirely
+below zero" is true only under the repeat unit and false under the
+fold unit that the original released table used — that is a further
+correction to §10, recorded here because the pre-registration is
+frozen and cannot be edited in place.
+
+### A2.3e The TOST implementation itself was wrong
+
+The original `_tost` in `scripts/run_stats_analysis.py` tested
+`-margin <= mean <= margin` **before** the equivalence branch, so any
+cell whose point estimate happened to fall inside the margin was
+labelled BOUND and never reached the equivalence test. All 24 released
+rows are BOUND for that reason. The original also wrote neither the
+equivalence interval nor the 95 % CI, so the released table could not
+be checked against §10 at all.
+
+Corrected rule (`d1/engine/stats.py::tost`): H0 (`|mu| >= margin`) is
+rejected, i.e. the cell is declared **equivalent to zero**, when both
+one-sided p-values are below 0.05 — which is exactly the condition that
+the 90 % CI lies entirely inside ±0.05. The 95 % CI is written out as
+well.
+
+With the corrected rule, **six** cells are equivalent to zero, not
+one:
+
+| cell | mean | 90 % equivalence CI |
+|---|---|---|
+| funmap x intogen_temporal_new | +0.0196 | [+0.0169, +0.0223] |
+| intact x intogen_temporal_new | +0.0071 | [+0.0054, +0.0089] |
+| reactome x intogen2024 | +0.0429 | [+0.0419, +0.0438] |
+| reactome x intogen_temporal_new | −0.0125 | [−0.0151, −0.0099] |
+| rna_coexp x intogen_temporal_new | +0.0127 | [+0.0093, +0.0161] |
+| string_phys700 x intogen_temporal_new | +0.0378 | [+0.0359, +0.0398] |
+
+All six have an interval inside ±0.05 because the margin is wide
+relative to their effects. The reactome x temporal cell is the only one
+whose point estimate is negative; it is not otherwise special. The
+manuscript previously singled it out as "a real signal, not noise",
+which inverted the meaning of the test.
+
+Regenerated tables: `results/tables/stats_equivalence_v40.tsv`,
+`results/tables/stats_bootstrap_ci_v40.tsv`,
+`results/tables/stats_ci_all_units_v40.tsv`,
+`results/tables/stats_h1_verdict_v40.tsv`.
 
 ### A2.3c A fourth defect: the published CI table is an alpha-average
 
@@ -266,14 +349,27 @@ and the CI are computed, not **what** is tested.
    measured coverage lies in 0.93–0.97). It **failed for the fold unit
    (100 % coverage) and passed for the repeat-level t interval
    (0.944 / 0.949)** — a result that would have been obtained whatever
-   the outcome. All three repeat-level constructions give 24/24, so the
-   verdict is also robust to the interval family.
+   the outcome.
+
+   **The gene-cluster bootstrap required by pre-registration §9.3 is
+   reported alongside and gives a different answer: 20/24, not 24/24.**
+   The decision of 2026-10-29 is to report **both**: the repeat-level
+   interval as the primary one (it is the calibrated construction for
+   this estimand, in which the gene universe is fixed and only the
+   partition varies), and the gene-cluster interval as the conservative
+   bound the pre-registration names. The manuscript states the H1 rule
+   is met under four of five constructions and not under the fifth, and
+   names the four arms that fail it. This is a limitation of the
+   benchmark, not a footnote: with a fixed 0.05 margin, the
+   `intogen_temporal_new` label set cannot be resolved at the gene
+   level.
 2. The pre-registration §9.3 asks for a **gene-level** cluster bootstrap
-   ("resampling genes, not gene-arm rows"). That is still outstanding,
-   because per-gene scores were not written to disk by the original run.
-   It is scheduled for week 2 (`run_arm` must persist per-gene scores).
-   The gene-level CI may be wider than the repeat-level CI for the small
-   label sets, and the manuscript must state whichever it ends up using.
+   ("resampling genes, not gene-arm rows"). It is now implemented
+   (`d1/engine/intervals.py::gene_cluster_bootstrap`, verified against a
+   naive implementation to 0.00e+00) and computed for all 24 arms
+   (`results/tables/stats_bootstrap_ci_gene.tsv`). It is 12x wider than
+   the repeat-level interval and the H1 rule is met in 20 of 24 arms
+   under it. Both intervals are reported.
 3. The **primary interval is the repeat-level percentile bootstrap** --
    the construction the pre-registration names. It under-covers at ten
    repeats (0.90) and becomes calibrated at forty (0.936), which is why

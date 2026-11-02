@@ -227,15 +227,41 @@ This is the **"actual deliverable"** named in §4.6.
 For each (network, label, alpha) arm: resample folds (cluster unit
 = the fold-level observation) with replacement, 1,000 iterations.
 The 95 % CI = 2.5th / 97.5th percentile of the bootstrap
-distribution. The cluster unit is the gene, not the gene-arm row.
+distribution.
+
+**Three resampling units are reported side by side**, because they
+answer different questions and the pre-registration names the third:
+
+| unit | what is resampled | what the CI answers |
+|---|---|---|
+| `fold` | the 200 (repeat, fold) values | how much the number moves if the universe is re-partitioned differently |
+| `repeat` | the 40 per-repeat means | the same, with the dependence inside a repeat respected (**primary**) |
+| `gene` | the genes of the universe | how much the number moves if a different set of genes had been measured (the pre-registration's cluster unit; a conservative bound) |
+
+The `repeat` unit is primary because it is the one a coverage
+simulation shows to be calibrated (measured coverage 0.936 against a
+0.95 nominal, with the acceptance band fixed in advance), whereas the
+`fold` unit covers 100 % of the time (far too conservative) and the
+`gene` unit is not calibrated for this estimand. The `gene` unit is
+reported in full so that a reader can see the conservative bound.
 
 ### D.3 Equivalence test (TOST)
 
 For each (network, label, alpha) arm, compute the TOST
 two one-sided test against a pre-specified equivalence margin of
 **0.05** in ΔAUROC units (the reviewer-typical smallest meaningful
-difference). A cell is "equivalent to zero" only if both one-sided
-p-values are below 0.025 (i.e., mean is bounded inside ±0.05).
+difference). H0 is rejected -- i.e. the cell is declared
+**equivalent to zero** -- when both one-sided p-values are below 0.05,
+which is exactly the condition that the 90 % CI lies entirely inside
+±0.05. The 95 % CI is reported alongside it.
+
+**A cell that is equivalent to zero is a null: there is no evidence of
+an effect in either direction.** This is a different statement from
+"the 95 % CI excludes zero" (which asks whether the effect is
+distinguishable from zero at all) and the two must not be conflated:
+an effect can be precisely estimated, have a CI that excludes zero, and
+still be statistically equivalent to zero because the 0.05 margin is
+wide relative to the effect.
 
 ### D.4 Multiplicity control
 
@@ -274,12 +300,16 @@ table; the H2 verdict in Discussion §I summarises.
 For each (network, label) cell at α = 0.5, observed ΔAUROC vs null
 distribution:
 
-* 23/24 cells have z > 5 (i.e., observed > rewired null by 8-200 SD)
+* 23/24 cells have z > 5 (i.e., observed exceeds the rewired null by
+  8-200 null standard errors)
 * The single exception: `reactome × intogen_temporal_new`, observed
-  = −0.011, rewired null mean ≈ +0.005, z = −3.5 → observed is
-  significantly **below** the rewired null. This is a real negative
-  effect, not a missing signal (the 95 % bootstrap CI is entirely
-  below zero in the equivalence test).
+  = −0.012, rewired null mean ≈ +0.005, z = −3.5 → observed is
+  significantly **below** the rewired null. The rewiring null says the
+  signal is not produced by the degree sequence; for this one cell the
+  network performs *worse* than the rewired null. Whether that reflects
+  a genuine negative effect or a curator lag (the Reactome release
+  cycle trailing the IntOGen driver catalogue) is a hypothesis, tested
+  in the Discussion, not a result.
 
 The W5 result means: **observed ΔAUROC cannot be explained by the
 network's degree sequence**. The specific topology matters.
@@ -416,18 +446,45 @@ non-reproducible. The old JSONs are archived under
 `results/runs/gnn_courtesy_OLD_BUGGY/` and are not used. See
 `docs/pre_registration_amendments.md` amendment 3.)
 
-### I.5 Equivalence test confirms the reactome × temporal cell
+### I.5 The equivalence test: six null cells, not one
 
-For the one negative cell, the TOST p-values are:
+The TOST with the pre-specified margin of 0.05 finds **six** cells
+whose margin is statistically equivalent to zero, not one:
 
-* lower bound test (mean ≤ −0.05): p ≈ 0.0002 → reject (mean not
-  significantly bounded below −0.05 by the loose 0.05 threshold)
-* upper bound test (mean ≥ +0.05): p ≈ 0 → reject
+| cell | mean ΔAUROC | 90 % CI (equivalence interval) | verdict |
+|---|---|---|---|
+| funmap × intogen_temporal_new | +0.0196 | [+0.0169, +0.0223] | equivalent to zero |
+| intact × intogen_temporal_new | +0.0071 | [+0.0054, +0.0089] | equivalent to zero |
+| reactome × intogen2024 | +0.0429 | [+0.0419, +0.0438] | equivalent to zero |
+| **reactome × intogen_temporal_new** | **−0.0125** | **[−0.0151, −0.0099]** | **equivalent to zero** |
+| rna_coexp × intogen_temporal_new | +0.0127 | [+0.0093, +0.0161] | equivalent to zero |
+| string_phys700 × intogen_temporal_new | +0.0378 | [+0.0359, +0.0398] | equivalent to zero |
 
-Mean = −0.011, with the 95 % bootstrap CI = [−0.025, +0.003],
-entirely below zero at the lower end. So the cell is bounded in the
-**negative** direction. The null result is **bounded**, not just
-"indeterminate" — this is a real signal, not noise.
+**Reading these correctly.** *Equivalent to zero* means **there is no
+evidence of an effect** — it is a null, not a detection of a negative
+effect. The reactome × temporal cell is the only one whose point
+estimate is negative, but its margin is bounded, which places it in the
+same category as the other five.
+
+The 95 % confidence interval of that cell depends on the resampling
+unit and is reported for all three:
+
+| unit | 95 % CI | contains 0? |
+|---|---|---|
+| fold | [−0.0254, +0.0030] | yes |
+| **repeat (primary)** | **[−0.0155, −0.0094]** | **no** |
+| gene | [−0.0589, +0.0375] | yes (and it reaches past ±0.05) |
+
+So the interval is entirely below zero under the primary unit and
+contains zero under the other two; **no unit supports reading this cell
+as evidence of a negative effect.** The curator-lag explanation is a
+hypothesis for why the cell is null, and it is tested in the Discussion.
+
+The pre-registered H1 rule — the 95 % CI excludes 0 in **every** arm —
+is met under four of the five interval constructions (fold, repeat
+percentile, repeat t, repeat BCa: 24/24) and **not** under the
+gene-cluster bootstrap (20/24; the four failing arms are all
+`intogen_temporal_new`, the label set with the smallest effects).
 
 ---
 

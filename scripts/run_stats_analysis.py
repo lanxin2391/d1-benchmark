@@ -223,27 +223,48 @@ def _variance_decomp() -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 
 def _bootstrap_ci(net: str, label: str, alpha: float = 0.5,
-                 n_iter: int = 1000, seed: int = 42) -> dict:
+                  n_iter: int = 1000, seed: int = 42,
+                  unit: str = "repeat") -> dict:
+    """Bootstrap CI of the mean delta for one cell.
+
+    FIX (pre-registration amendment 2): the original version did NOT
+    filter on alpha, so `pivot_table` averaged the RWR arm over
+    alpha in {0.3, 0.5, 0.7} while the degree arm (alpha = NaN) stayed
+    single-valued. Every released CI was therefore computed on the mean
+    over the three alphas. The alpha filter below keeps the degree rows
+    unconditionally (their alpha is NaN) and filters the RWR rows.
+
+    The resampling unit is explicit: unit="repeat" (primary) clusters
+    on the repeat, unit="fold" on the individual folds. The gene-cluster
+    bootstrap of pre-registration section 9.3 is computed separately by
+    scripts/run_gene_cluster_ci.py.
+    """
     a4 = pd.read_csv(RUN_A4, sep="\t")
-    # Use method filter directly; don't filter by alpha (degree rows have NaN).
     obs = a4[(a4.network == net) & (a4.label_set == label)].copy()
+    # FIX: keep the degree rows unconditionally (their alpha is NaN) and
+    # filter the RWR rows to the requested alpha.
+    obs = obs[(obs.method == "degree") | (obs.alpha == alpha)]
     if obs.empty:
-        return {"network": net, "label": label, "alpha": alpha,
+        return {"network": net, "label": label, "alpha": alpha, "unit": unit,
                 "ci_low": np.nan, "ci_high": np.nan, "n_iter": 0,
-                "mean": np.nan}
-    pivot = obs.pivot_table(index=["repeat", "fold"], values="auroc", columns="method")
+                "n": 0, "mean": np.nan}
+    pivot = (obs.pivot_table(index=["repeat", "fold"], values="auroc",
+                              columns="method").reset_index())
     pivot["delta"] = pivot["rwr"] - pivot["degree"]
-    obs_delta = pivot["delta"].dropna().values
+    if unit == "repeat":
+        obs_delta = pivot.groupby("repeat")["delta"].mean().to_numpy()
+    else:
+        obs_delta = pivot["delta"].dropna().to_numpy()
     rng = np.random.default_rng(seed)
     deltas = []
     for _ in range(n_iter):
-        # Resample folds (cluster unit) with replacement
         idx = rng.integers(0, len(obs_delta), size=len(obs_delta))
         deltas.append(float(np.mean(obs_delta[idx])))
     deltas = np.array(deltas)
     return {
-        "network": net, "label": label, "alpha": alpha,
-        "n_iter": n_iter, "mean": float(np.mean(obs_delta)),
+        "network": net, "label": label, "alpha": alpha, "unit": unit,
+        "n_iter": n_iter, "n": len(obs_delta),
+        "mean": float(np.mean(obs_delta)),
         "ci_low": float(np.quantile(deltas, 0.025)),
         "ci_high": float(np.quantile(deltas, 0.975)),
     }
@@ -253,7 +274,7 @@ def _bootstrap_all():
     rows = []
     for net in NETS:
         for lab in LABELS:
-            rows.append(_bootstrap_ci(net, lab, 0.5, n_iter=1000))
+            rows.append(_bootstrap_ci(net, lab, 0.5, n_iter=1000, unit="repeat"))
     return pd.DataFrame(rows)
 
 
@@ -265,45 +286,91 @@ def _tost(
     net: str, label: str,
     margin: float = 0.05,
     alpha: float = 0.05,
+    rwr_alpha: float = 0.5,
+    unit: str = "repeat",
 ) -> dict:
-    """Two one-sided tests (TOST) for equivalence of zero, within +-margin.
-    H0: |delta| > margin. H1: |delta| <= margin (truly null)."""
+    """Two one-sided tests for equivalence of zero, within +-margin.
+
+    H0: |delta| >= margin (the effect is at least the margin).
+    H1: |delta| <  margin (the effect is indistinguishable from zero).
+
+    FIX (pre-registration amendment 2): the original implementation
+    tested `-margin <= mean <= margin` BEFORE the equivalence branch,
+    so any cell whose point estimate sat inside the margin was labelled
+    BOUND and never reached the equivalence test -- all 24 released
+    rows are BOUND for that reason. It also never wrote the
+    equivalence interval, so the released table could not be checked
+    against pre-registration section 10.
+
+    The TOST rule is: reject H0 when BOTH one-sided p-values are below
+    alpha, which is exactly the condition that the (1-2*alpha) CI lies
+    entirely inside [-margin, +margin]. The (1-alpha) CI is written out
+    as well.
+
+    A cell that is EQUIVALENT to zero is a NULL: there is no evidence
+    of an effect in either direction.
+
+    Parameters
+    ----------
+    alpha     : significance level of the TOST (0.05)
+    rwr_alpha : the RWR restart parameter of the arm (0.5, the primary
+                endpoint). NOTE this is a different quantity from
+                `alpha`; the original implementation reused one name for
+                both, which is why it never filtered on it at all.
+    """
     a4 = pd.read_csv(RUN_A4, sep="\t")
     obs = a4[(a4.network == net) & (a4.label_set == label)].copy()
+    # FIX: alpha filter (the degree rows carry alpha = NaN and are kept
+    # unconditionally; the RWR rows are filtered to the requested alpha).
+    obs = obs[(obs.method == "degree") | (obs.alpha == rwr_alpha)]
     if obs.empty:
         return {"network": net, "label": label, "margin": margin,
+                "alpha": alpha, "rwr_alpha": rwr_alpha, "unit": unit,
                 "t_low": np.nan, "p_low": np.nan,
                 "t_high": np.nan, "p_high": np.nan,
                 "verdict": "no data"}
-    pivot = obs.pivot_table(index=["repeat", "fold"], values="auroc", columns="method")
-    delta = (pivot["rwr"] - pivot["degree"]).dropna().values
+    pivot = (obs.pivot_table(index=["repeat", "fold"], values="auroc",
+                              columns="method").reset_index())
+    pivot["delta"] = pivot["rwr"] - pivot["degree"]
+    if unit == "repeat":
+        delta = pivot.groupby("repeat")["delta"].mean().to_numpy()
+    else:
+        delta = pivot["delta"].dropna().to_numpy()
     n = len(delta)
     mean = float(delta.mean())
     sd = float(delta.std(ddof=1))
     if sd == 0:
         return {"network": net, "label": label, "margin": margin,
+                "alpha": alpha, "rwr_alpha": rwr_alpha, "unit": unit,
                 "t_low": np.nan, "p_low": np.nan,
                 "t_high": np.nan, "p_high": np.nan,
                 "verdict": "zero variance"}
     se = sd / np.sqrt(n)
-    # Lower test: H0: mean <= -margin; reject if t_high < 0
-    t_low = (mean - (-margin)) / se
-    p_low = 1 - stats.t.cdf(t_low, df=n-1)
-    # Upper test: H0: mean >= +margin; reject if t_low > 0
+    # Lower test: H0: mean <= -margin; reject when the mean is above it
+    t_low = (mean + margin) / se
+    p_low = 1 - stats.t.cdf(t_low, df=n - 1)
+    # Upper test: H0: mean >= +margin; reject when the mean is below it
     t_high = (mean - margin) / se
-    p_high = stats.t.cdf(t_high, df=n-1)
-    # Bound if BOTH p_low < alpha/2 AND p_high < alpha/2 (TOST convention)
-    reject = (p_low < alpha / 2) and (p_high < alpha / 2)
-    if mean >= -margin and mean <= margin:
-        verdict = f"BOUND: mean={mean:.4f} within [-{margin},+{margin}]"
-    elif reject:
-        verdict = f"EQUIVALENT to zero (mean={mean:.4f}, margin={margin})"
+    p_high = stats.t.cdf(t_high, df=n - 1)
+    reject = (p_low < alpha) and (p_high < alpha)
+    t90 = stats.t.ppf(1 - alpha, df=n - 1)
+    t95 = stats.t.ppf(1 - alpha / 2, df=n - 1)
+    ci90 = (mean - t90 * se, mean + t90 * se)
+    ci95 = (mean - t95 * se, mean + t95 * se)
+    if reject:
+        verdict = (f"EQUIVALENT to zero (mean={mean:.4f}, margin=+-{margin}, "
+                   f"90% CI [{ci90[0]:+.4f}, {ci90[1]:+.4f}] inside)")
     else:
-        verdict = f"NOT equivalent (mean={mean:.4f} outside +-margin)"
+        verdict = (f"NOT equivalent to zero (mean={mean:.4f}, margin=+-{margin}, "
+                   f"90% CI [{ci90[0]:+.4f}, {ci90[1]:+.4f}])")
     return {"network": net, "label": label, "margin": margin,
+            "alpha": alpha, "rwr_alpha": rwr_alpha, "unit": unit,
             "mean": mean, "sd": sd, "n": n,
             "t_low": t_low, "p_low": p_low,
             "t_high": t_high, "p_high": p_high,
+            "ci90_low": ci90[0], "ci90_high": ci90[1],
+            "ci95_low": ci95[0], "ci95_high": ci95[1],
+            "equivalent_to_zero": bool(reject),
             "verdict": verdict}
 
 
