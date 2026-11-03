@@ -1,101 +1,401 @@
 network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
-intact	intogen_temporal_new_shared	native_intact		0	0	degree		0.837356803576418	0.007741947357521461	0.0	0.01	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		0	1	degree		0.6360715283598771	0.003765424877767586	0.0	0.01	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact		0	2	degree		0.8384744341994971	0.024799917650593445	0.04	0.02	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		0	3	degree		0.7739798770262717	0.00557822312101483	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		0	4	degree		0.8272778088317496	0.005349562887761191	0.0	0.0	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact		1	0	degree		0.7216540933221569	0.005854129957154593	0.0	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		1	1	degree		0.8012852752165409	0.007025113831691264	0.0	0.01	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		1	2	degree		0.6355965353450685	0.0025053544154165068	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact		1	3	degree		0.8372554499720514	0.006431084498778222	0.0	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		1	4	degree		0.9117104527669089	0.025655281342459528	0.02	0.01	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact		2	0	degree		0.8586197261804974	0.00938139907605146	0.02	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		2	1	degree		0.8404861693210394	0.007417552350682912	0.0	0.0	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		2	2	degree		0.7745459625593741	0.005162400470212469	0.0	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		2	3	degree		0.6293180547792062	0.004147726249500513	0.0	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact		2	4	degree		0.8115427613191728	0.018287148834436398	0.02	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		3	0	degree		0.8139424420229114	0.00447218086749648	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		3	1	degree		0.6576697401508802	0.004064803080759561	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		3	2	degree		0.7888516345347862	0.005595378684556688	0.0	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		3	3	degree		0.7481553940749022	0.03468975659183738	0.04	0.02	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact		3	4	degree		0.9084684181106764	0.009352527772852936	0.0	0.01	0.01	5	3583
-intact	intogen_temporal_new_shared	native_intact		4	0	degree		0.7774238614138028	0.02367125616817079	0.02	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		4	1	degree		0.7637049455155072	0.007694221890943518	0.0	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		4	2	degree		0.878401788208997	0.007714332917998644	0.0	0.0	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		4	3	degree		0.6973169368362213	0.004723092570905659	0.0	0.01	0.002	5	3583
-intact	intogen_temporal_new_shared	native_intact		4	4	degree		0.7901062045835662	0.005801856602397988	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		5	0	degree		0.7982117910030735	0.009464059967731881	0.02	0.01	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		5	1	degree		0.7621402626431965	0.0043342894150121	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		5	2	degree		0.72883487007544	0.003322706513847527	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		5	3	degree		0.845807713806596	0.030239568618348624	0.02	0.02	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		5	4	degree		0.7776690888764672	0.005192155187977318	0.0	0.0	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact		6	0	degree		0.7726739312657167	0.005588722687579444	0.0	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		6	1	degree		0.6743783179659123	0.002627932211626839	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact		6	2	degree		0.7907795473595977	0.02961517570934638	0.02	0.01	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		6	3	degree		0.9064002235885971	0.010555834888406387	0.0	0.0	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact		6	4	degree		0.7608999441028509	0.007302924751099943	0.02	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact		7	0	degree		0.7526962838781783	0.02408750607120471	0.02	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		7	1	degree		0.7988264878457669	0.003928625146532009	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		7	2	degree		0.8396479463537301	0.009815445730262402	0.02	0.01	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		7	3	degree		0.7762996087199553	0.005816319801308846	0.0	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		7	4	degree		0.7403018446059252	0.00791886179525718	0.0	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact		8	0	degree		0.6414082145850796	0.002436844478328426	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact		8	1	degree		0.7389494272143057	0.034025537397902254	0.02	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact		8	2	degree		0.818105616093881	0.005495741745309111	0.0	0.0	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		8	3	degree		0.8551425377305757	0.013563848142487605	0.02	0.02	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact		8	4	degree		0.8526271660145333	0.006520872787445585	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		9	0	degree		0.8366582844369936	0.004942241551559507	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		9	1	degree		0.7872031293657445	0.008747564536981296	0.0	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact		9	2	degree		0.8797429449566918	0.011944365558957268	0.02	0.01	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact		9	3	degree		0.7629122414756847	0.004071998761658618	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact		9	4	degree		0.6417551704863051	0.02394577949938009	0.02	0.01	0.002	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	0	0	rwr	17.0	0.807264599050014	0.0058687325472099455	0.0	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	0	1	rwr	17.0	0.5776473875384186	0.0029958115977408097	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	0	2	rwr	17.0	0.816876222408494	0.013036222910377737	0.02	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	0	3	rwr	17.0	0.7901621017328117	0.005863632730875787	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	0	4	rwr	17.0	0.7936277249860257	0.005630669230104217	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	1	0	rwr	17.0	0.6932662754959485	0.0034842173832547443	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	1	1	rwr	17.0	0.8139145012573344	0.004549997162745181	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	1	2	rwr	17.0	0.557809443978765	0.0026273080554295248	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	1	3	rwr	17.0	0.8426495248742314	0.0064471319987503585	0.0	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	1	4	rwr	17.0	0.8897708216880938	0.07023299737440038	0.04	0.02	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	2	0	rwr	17.0	0.8307348421346745	0.004930423698576936	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	2	1	rwr	17.0	0.8242525845208158	0.0060778667398321525	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	2	2	rwr	17.0	0.7354009499860297	0.004182470304643286	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	2	3	rwr	17.0	0.7080491894913359	0.005702934155006712	0.0	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	2	4	rwr	17.0	0.8194522079373951	0.04176284076500112	0.04	0.02	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	3	0	rwr	17.0	0.7923442302319083	0.0039324260793145395	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	3	1	rwr	17.0	0.6112880692930986	0.0032721624921306525	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	3	2	rwr	17.0	0.758927074601844	0.004304255510216454	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	3	3	rwr	17.0	0.8295695919508106	0.01952988972595733	0.02	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	3	4	rwr	17.0	0.919564002235886	0.057877346392503706	0.02	0.01	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	4	0	rwr	17.0	0.7603241128806929	0.06205567676201457	0.04	0.02	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	4	1	rwr	17.0	0.7493713327745181	0.004592989614666924	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	4	2	rwr	17.0	0.8562727018720314	0.005918750696740832	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	4	3	rwr	17.0	0.7698155394074903	0.006104020696923841	0.0	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	4	4	rwr	17.0	0.8070989379541642	0.006661512052588896	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	5	0	rwr	17.0	0.786700195585359	0.006970763994882867	0.0	0.0	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	5	1	rwr	17.0	0.821737915618888	0.004484082799309087	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	5	2	rwr	17.0	0.6733165688739872	0.00270675293306735	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	5	3	rwr	17.0	0.825489100055897	0.021099775467406524	0.02	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	5	4	rwr	17.0	0.7684181106763555	0.03795212087317947	0.02	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	6	0	rwr	17.0	0.6639843531712769	0.0025665712004371076	0.0	0.0	0.0	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	6	1	rwr	17.0	0.7478625314333612	0.0034891066380213563	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	6	2	rwr	17.0	0.7601005867560772	0.008058349302561666	0.02	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	6	3	rwr	17.0	0.8855785354946899	0.02662081596173233	0.02	0.01	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	6	4	rwr	17.0	0.7755170486305198	0.004122226553973202	0.0	0.0	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	7	0	rwr	17.0	0.7054484492875105	0.01620534261850733	0.02	0.01	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	7	1	rwr	17.0	0.7854149203688182	0.0036949299430691146	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	7	2	rwr	17.0	0.8366024029058395	0.0063549550163445115	0.0	0.0	0.008	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	7	3	rwr	17.0	0.7924538848518725	0.006755722102425936	0.0	0.0	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	7	4	rwr	17.0	0.7083286752375629	0.005156598077687204	0.0	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	8	0	rwr	17.0	0.6082145850796311	0.0022007761625776607	0.0	0.0	0.0	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	8	1	rwr	17.0	0.8087175188600166	0.01740408543096536	0.02	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	8	2	rwr	17.0	0.7958088851634536	0.004347740366398693	0.0	0.0	0.004	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	8	3	rwr	17.0	0.8524874231414197	0.008074360856974154	0.0	0.0	0.008	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	8	4	rwr	17.0	0.8572386808272778	0.07130956358874502	0.02	0.01	0.006	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	9	0	rwr	17.0	0.8016764459346186	0.003986951941962725	0.0	0.0	0.002	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	9	1	rwr	17.0	0.7616093880972339	0.00734453944734247	0.0	0.01	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	9	2	rwr	17.0	0.8718636490639844	0.007216779022904551	0.0	0.0	0.006	5	3584
-intact	intogen_temporal_new_shared	native_intact	0.5	9	3	rwr	17.0	0.7610955841252096	0.036692579581380634	0.02	0.01	0.004	5	3583
-intact	intogen_temporal_new_shared	native_intact	0.5	9	4	rwr	17.0	0.7281162660704305	0.023146288176012435	0.02	0.01	0.004	5	3583
+intact	intogen_temporal_new_shared	native_intact		0	0	degree		0.7079113924050633	0.054182856155603754	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		0	1	degree		0.7848101265822786	0.05690710795252973	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		0	2	degree		0.525	0.04522273871648725	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		0	3	degree		0.5525316455696203	0.02054415813825674	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		0	4	degree		0.5838607594936709	0.025947103313488405	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		1	0	degree		0.8069620253164557	0.10118768168668515	0.06	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		1	1	degree		0.5506329113924051	0.02060887009281831	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		1	2	degree		0.5734177215189873	0.02679654702613192	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		1	3	degree		0.6822784810126582	0.033679450709662426	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		1	4	degree		0.5411392405063291	0.022565938703983778	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		2	0	degree		0.6088607594936709	0.05987995630100894	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		2	1	degree		0.43765822784810127	0.04069362325925856	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		2	2	degree		0.5136075949367088	0.01812761044053235	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		2	3	degree		0.7930379746835443	0.05204244182738806	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		2	4	degree		0.7658227848101267	0.03762718762718763	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		3	0	degree		0.5822784810126583	0.02133618910546363	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		3	1	degree		0.7367088607594936	0.03539384077844337	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		3	2	degree		0.6382911392405064	0.04294895059145695	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		3	3	degree		0.7240506329113924	0.262030204214303	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		3	4	degree		0.4778481012658228	0.01744372107359389	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		4	0	degree		0.6800632911392405	0.03151191720157237	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		4	1	degree		0.6927215189873418	0.0932587425451994	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		4	2	degree		0.5	0.018857903937111863	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		4	3	degree		0.7512658227848101	0.041085981410723685	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		4	4	degree		0.5373417721518987	0.026648873785609276	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		5	0	degree		0.4768987341772152	0.017241334199780595	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		5	1	degree		0.6746835443037974	0.02882301446502908	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		5	2	degree		0.4740506329113924	0.0171938031679782	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		5	3	degree		0.7655063291139241	0.0901881431990027	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		5	4	degree		0.7408227848101265	0.06352580611329285	0.06	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		6	0	degree		0.6920886075949367	0.03715547006795213	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		6	1	degree		0.47120253164556963	0.017538213435780145	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		6	2	degree		0.7819620253164558	0.059566088969074046	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		6	3	degree		0.7208860759493672	0.07436913406974073	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		6	4	degree		0.484493670886076	0.022185732205192366	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		7	0	degree		0.804746835443038	0.05564993246152666	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		7	1	degree		0.35443037974683544	0.013858103147842752	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		7	2	degree		0.670253164556962	0.031245026857966953	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		7	3	degree		0.6272151898734177	0.025111210915782625	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		7	4	degree		0.680379746835443	0.13554581620629447	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		8	0	degree		0.7787974683544304	0.040683107727260075	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		8	1	degree		0.3268987341772152	0.013205618515789632	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		8	2	degree		0.6822784810126582	0.08786201143245996	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		8	3	degree		0.7999999999999999	0.0556946486564738	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		8	4	degree		0.5974683544303798	0.022729448341740323	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		9	0	degree		0.719620253164557	0.04831626216920335	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		9	1	degree		0.5113924050632912	0.02182104577912545	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		9	2	degree		0.7484177215189873	0.08528941753377021	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		9	3	degree		0.4199367088607595	0.015250752847856963	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact		9	4	degree		0.7724683544303796	0.039190874232111345	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		10	0	degree		0.7892405063291139	0.042519409115900346	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		10	1	degree		0.7164556962025317	0.04190770677865351	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		10	2	degree		0.5056962025316456	0.021651305421242918	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		10	3	degree		0.5537974683544303	0.0691861033788172	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		10	4	degree		0.6120253164556962	0.025393906147648707	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		11	0	degree		0.6047468354430379	0.029743456874489604	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		11	1	degree		0.6588607594936708	0.03887294309476928	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		11	2	degree		0.8018987341772151	0.11596593567004265	0.06	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		11	3	degree		0.55	0.021470779460329666	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		11	4	degree		0.5240506329113923	0.02211044219293764	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		12	0	degree		0.7063291139240506	0.10042977442296783	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		12	1	degree		0.6376582278481013	0.02913216261926979	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		12	2	degree		0.44556962025316454	0.015803543616469063	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		12	3	degree		0.5781645569620253	0.03314732543212058	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		12	4	degree		0.7892405063291139	0.046914487607477136	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		13	0	degree		0.8360759493670886	0.09024207943586282	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		13	1	degree		0.5484177215189874	0.023679685580938345	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		13	2	degree		0.5025316455696203	0.01908692090767205	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		13	3	degree		0.7601265822784811	0.05717358659036487	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		13	4	degree		0.529113924050633	0.021858613356581548	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		14	0	degree		0.3708860759493671	0.014460171525778467	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		14	1	degree		0.6613924050632911	0.07175823244552058	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		14	2	degree		0.7746835443037975	0.04414142976383365	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		14	3	degree		0.634493670886076	0.025203045298717676	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		14	4	degree		0.7205696202531646	0.05282117209389937	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		15	0	degree		0.6626582278481012	0.029011739939017036	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		15	1	degree		0.6085443037974683	0.07045285741318953	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		15	2	degree		0.6626582278481012	0.0367851384481046	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		15	3	degree		0.6082278481012658	0.03800929366833323	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		15	4	degree		0.6224683544303797	0.023217307145878576	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		16	0	degree		0.7012658227848101	0.034269330734243014	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		16	1	degree		0.7848101265822784	0.10021859860569539	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		16	2	degree		0.575632911392405	0.03218794340307505	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		16	3	degree		0.539873417721519	0.019374203185968348	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		16	4	degree		0.5689873417721519	0.026437225764420928	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		17	0	degree		0.6496835443037975	0.03663467183908456	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		17	1	degree		0.6734177215189874	0.036215954861030866	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		17	2	degree		0.7715189873417723	0.08782748156132004	0.06	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		17	3	degree		0.5183544303797468	0.019920306259194664	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		17	4	degree		0.5582278481012659	0.020444437064035925	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		18	0	degree		0.7756329113924051	0.041589718891509184	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		18	1	degree		0.3712025316455696	0.014703147195695737	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		18	2	degree		0.7693037974683545	0.05313594460315114	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		18	3	degree		0.5800632911392405	0.04524298968204505	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		18	4	degree		0.6949367088607594	0.0471630256734621	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		19	0	degree		0.5768987341772152	0.023062726142405746	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		19	1	degree		0.6588607594936708	0.03998425399134619	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		19	2	degree		0.7683544303797468	0.043191758403722906	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		19	3	degree		0.6151898734177215	0.08836555415202832	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		19	4	degree		0.5205696202531646	0.022488799720974954	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		20	0	degree		0.7746835443037974	0.05284190869330188	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		20	1	degree		0.744620253164557	0.047910872215767446	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		20	2	degree		0.469620253164557	0.05285696447524506	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		20	3	degree		0.6034810126582278	0.02669269782160097	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		20	4	degree		0.5832278481012658	0.02754384102290292	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		21	0	degree		0.5003164556962025	0.019145088256784504	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		21	1	degree		0.6920886075949367	0.03982648757715366	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		21	2	degree		0.7522151898734176	0.09192679000719947	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		21	3	degree		0.6800632911392405	0.031090289355088403	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		21	4	degree		0.5164556962025316	0.02406005114774962	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		22	0	degree		0.6506329113924051	0.03410887283504677	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		22	1	degree		0.6240506329113924	0.026579992673354088	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		22	2	degree		0.4651898734177215	0.026369054514151512	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		22	3	degree		0.7348101265822785	0.10251990500507921	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		22	4	degree		0.7044303797468354	0.030402845242987194	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		23	0	degree		0.6740506329113923	0.03860288447319164	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		23	1	degree		0.5952531645569621	0.11694543705019128	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		23	2	degree		0.4775316455696203	0.017900933213492662	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		23	3	degree		0.6800632911392405	0.04817906872894085	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		23	4	degree		0.7240506329113925	0.03779607602803188	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		24	0	degree		0.660126582278481	0.052034797535870134	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		24	1	degree		0.595253164556962	0.06682286098789447	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		24	2	degree		0.8319620253164557	0.05443893993074321	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		24	3	degree		0.6003164556962025	0.028740455227649012	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		24	4	degree		0.470253164556962	0.01702105627319349	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		25	0	degree		0.5734177215189873	0.024821884041538723	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		25	1	degree		0.5414556962025316	0.020200739213680992	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		25	2	degree		0.6563291139240506	0.03304111330362356	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		25	3	degree		0.790506329113924	0.05254131659749637	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		25	4	degree		0.589873417721519	0.07854999876479614	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		26	0	degree		0.5389240506329114	0.019523824067333266	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		26	1	degree		0.7525316455696202	0.06105499806267135	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		26	2	degree		0.42594936708860764	0.015412087296312547	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		26	3	degree		0.8063291139240506	0.07269606045019328	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		26	4	degree		0.644620253164557	0.04138469020523295	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		27	0	degree		0.7227848101265822	0.03555082455111973	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		27	1	degree		0.5848101265822785	0.03298058083605994	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		27	2	degree		0.6598101265822786	0.07763526717422253	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		27	3	degree		0.6145569620253164	0.026589154431076636	0.0	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		27	4	degree		0.5620253164556962	0.040563504469572395	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		28	0	degree		0.7281645569620253	0.04467683072338034	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		28	1	degree		0.6132911392405064	0.024382982335422885	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		28	2	degree		0.6259493670886076	0.031022248261827912	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		28	3	degree		0.5753164556962025	0.09698071390126442	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		28	4	degree		0.5876582278481013	0.022718247607721665	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		29	0	degree		0.7044303797468355	0.23163195999402897	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		29	1	degree		0.4892405063291139	0.018458622744588378	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		29	2	degree		0.6661392405063291	0.027319281123356347	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		29	3	degree		0.7968354430379747	0.05119976147883124	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		29	4	degree		0.4920886075949367	0.031596284497115754	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		30	0	degree		0.4873417721518988	0.017155672296337257	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		30	1	degree		0.43575949367088607	0.0155547787942569	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		30	2	degree		0.7104430379746836	0.0532900767814561	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		30	3	degree		0.7490506329113925	0.09456165456165458	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		30	4	degree		0.7674050632911392	0.039461029136739226	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		31	0	degree		0.5439873417721519	0.025974993203081664	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		31	1	degree		0.6962025316455696	0.030572459470051654	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		31	2	degree		0.5158227848101266	0.022744314060546188	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		31	3	degree		0.5955696202531645	0.027231306128211386	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		31	4	degree		0.8018987341772152	0.08927335095937228	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		32	0	degree		0.7015822784810126	0.09200873693861071	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		32	1	degree		0.5886075949367089	0.030810893090474703	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		32	2	degree		0.7110759493670886	0.04733866018180766	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		32	3	degree		0.48417721518987344	0.020849416845372355	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		32	4	degree		0.6693037974683543	0.026833759670030214	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		33	0	degree		0.4319620253164557	0.016391699369297887	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		33	1	degree		0.48860759493670886	0.017434883956623088	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		33	2	degree		0.8066455696202532	0.1430777600849257	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		33	3	degree		0.8031645569620253	0.04423962794531031	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		33	4	degree		0.6240506329113924	0.05132936507936508	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		34	0	degree		0.8025316455696202	0.05469256319043077	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		34	1	degree		0.7474683544303797	0.040587130909711555	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		34	2	degree		0.4737341772151899	0.017013475623471042	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		34	3	degree		0.6329113924050632	0.06601462273493351	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		34	4	degree		0.4768987341772151	0.027388770651684956	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		35	0	degree		0.4389240506329114	0.01564859165764934	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		35	1	degree		0.49335443037974686	0.01884115884115884	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		35	2	degree		0.7746835443037975	0.05141196606713847	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		35	3	degree		0.8876582278481012	0.1206390977443609	0.06	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		35	4	degree		0.5905063291139241	0.02232131528174592	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		36	0	degree		0.5107594936708861	0.045089270908989995	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		36	1	degree		0.6825949367088608	0.03269556927091174	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		36	2	degree		0.7933544303797468	0.04122485760180332	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact		36	3	degree		0.6534810126582279	0.08870385368834029	0.06	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		36	4	degree		0.5164556962025316	0.018175134753496986	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		37	0	degree		0.4063291139240506	0.015819157151779752	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		37	1	degree		0.7639240506329115	0.06251554366685945	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		37	2	degree		0.5731012658227848	0.021996716266180816	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		37	3	degree		0.6911392405063291	0.2220596004213257	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		37	4	degree		0.6857594936708862	0.040396540183723406	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		38	0	degree		0.7433544303797468	0.042275814701443995	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		38	1	degree		0.4987341772151899	0.017763881124201377	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact		38	2	degree		0.5569620253164557	0.02681768537455619	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		38	3	degree		0.7139240506329114	0.07794841943392668	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		38	4	degree		0.6439873417721518	0.03267175309280572	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		39	0	degree		0.5863924050632912	0.023866648912020963	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact		39	1	degree		0.6091772151898734	0.13158001662203345	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact		39	2	degree		0.825632911392405	0.06878828526715851	0.06	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact		39	3	degree		0.4936708860759494	0.01760831412771658	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact		39	4	degree		0.6363924050632911	0.028081056608089777	0.0	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	0	0	rwr	17.0	0.6664556962025316	0.028686502002919285	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	0	1	rwr	17.0	0.7253164556962026	0.04375863902179691	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	0	2	rwr	17.0	0.6164556962025317	0.04887500819547356	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	0	3	rwr	17.0	0.5518987341772152	0.11538897960584708	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	0	4	rwr	17.0	0.549367088607595	0.023284821634281826	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	1	0	rwr	17.0	0.7259493670886076	0.06291019131602436	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	1	1	rwr	17.0	0.5316455696202531	0.021641849996696497	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	1	2	rwr	17.0	0.6658227848101266	0.03212964607433719	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	1	3	rwr	17.0	0.6468354430379747	0.027518145927992208	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	1	4	rwr	17.0	0.5556962025316456	0.11765325051802629	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	2	0	rwr	17.0	0.7183544303797469	0.09116229628798364	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	2	1	rwr	17.0	0.3518987341772152	0.018541940315431084	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	2	2	rwr	17.0	0.5006329113924051	0.017777113145874157	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	2	3	rwr	17.0	0.7620253164556963	0.04430294167423018	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	2	4	rwr	17.0	0.7930379746835443	0.13378302382975282	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	3	0	rwr	17.0	0.5658227848101266	0.022758532695374797	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	3	1	rwr	17.0	0.6272151898734177	0.023612542848409298	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	3	2	rwr	17.0	0.6955696202531646	0.03533346367744178	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	3	3	rwr	17.0	0.6474683544303798	0.04212268418150771	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	3	4	rwr	17.0	0.4481012658227848	0.06239079445680695	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	4	0	rwr	17.0	0.5949367088607596	0.02354518011587707	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	4	1	rwr	17.0	0.7037974683544304	0.10396436145545118	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	4	2	rwr	17.0	0.4651898734177215	0.01785267017459787	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	4	3	rwr	17.0	0.7721518987341773	0.04678582362048322	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	4	4	rwr	17.0	0.6322784810126583	0.031497072309901016	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	5	0	rwr	17.0	0.44113924050632913	0.01594422395931608	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	5	1	rwr	17.0	0.6639240506329114	0.07316201916201917	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	5	2	rwr	17.0	0.46455696202531643	0.01746584466938115	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	5	3	rwr	17.0	0.6860759493670886	0.09901751298810123	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	5	4	rwr	17.0	0.7987341772151898	0.04244834903658433	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	6	0	rwr	17.0	0.7563291139240507	0.09778029260787882	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	6	1	rwr	17.0	0.6050632911392405	0.02422061752066772	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	6	2	rwr	17.0	0.7202531645569621	0.04388966904179886	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	6	3	rwr	17.0	0.6658227848101266	0.05432952529582916	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	6	4	rwr	17.0	0.39936708860759496	0.017007301830489832	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	7	0	rwr	17.0	0.7550632911392405	0.04126325252003371	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	7	1	rwr	17.0	0.43544303797468353	0.016832607863282813	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	7	2	rwr	17.0	0.6670886075949367	0.028144801730861167	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	7	3	rwr	17.0	0.5911392405063292	0.024850367001853987	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	7	4	rwr	17.0	0.6563291139240506	0.1641556602667792	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	8	0	rwr	17.0	0.7734177215189874	0.13438570777148068	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	8	1	rwr	17.0	0.43544303797468353	0.01679768804381379	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	8	2	rwr	17.0	0.6170886075949367	0.055902021568973	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	8	3	rwr	17.0	0.7265822784810126	0.0368674111957694	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	8	4	rwr	17.0	0.5582278481012659	0.021030200434541204	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	9	0	rwr	17.0	0.6436708860759494	0.029046217776243007	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	9	1	rwr	17.0	0.6455696202531644	0.03164595386267213	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	9	2	rwr	17.0	0.7151898734177216	0.058271140818912597	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	9	3	rwr	17.0	0.2879746835443038	0.012487240427659255	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	9	4	rwr	17.0	0.7120253164556962	0.12479029196864952	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	10	0	rwr	17.0	0.7145569620253165	0.03159302251103425	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	10	1	rwr	17.0	0.6860759493670886	0.06392716895636807	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	10	2	rwr	17.0	0.5968354430379748	0.030597794836409634	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	10	3	rwr	17.0	0.4689873417721519	0.049118914780789724	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	10	4	rwr	17.0	0.629746835443038	0.023739732888058248	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	11	0	rwr	17.0	0.5537974683544303	0.027655791061363816	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	11	1	rwr	17.0	0.6443037974683544	0.08893965310003613	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	11	2	rwr	17.0	0.7556962025316456	0.07198539036933146	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	11	3	rwr	17.0	0.6886075949367089	0.030594489517719828	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	11	4	rwr	17.0	0.4658227848101266	0.01826759437708343	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	12	0	rwr	17.0	0.660759493670886	0.06660126825264441	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	12	1	rwr	17.0	0.6221518987341772	0.028319678699412147	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	12	2	rwr	17.0	0.3917721518987342	0.01462613915535967	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	12	3	rwr	17.0	0.5563291139240507	0.026171534730311453	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	12	4	rwr	17.0	0.7632911392405063	0.03919900134777099	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	13	0	rwr	17.0	0.8272151898734178	0.17563992432377157	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	13	1	rwr	17.0	0.6550632911392404	0.02962090296670553	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	13	2	rwr	17.0	0.4848101265822785	0.02238616703006878	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	13	3	rwr	17.0	0.7417721518987341	0.03633479758910051	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	13	4	rwr	17.0	0.43481012658227847	0.015756228949400795	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	14	0	rwr	17.0	0.3810126582278481	0.016254438194934155	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	14	1	rwr	17.0	0.5917721518987342	0.057729756564081594	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	14	2	rwr	17.0	0.7075949367088608	0.03796169702200558	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	14	3	rwr	17.0	0.6107594936708861	0.026468479024606074	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	14	4	rwr	17.0	0.6740506329113924	0.03333516142361719	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	15	0	rwr	17.0	0.5943037974683545	0.025332762336491225	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	15	1	rwr	17.0	0.6088607594936709	0.078932484127461	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	15	2	rwr	17.0	0.6126582278481013	0.02625526177060402	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	15	3	rwr	17.0	0.5272151898734176	0.027051118096284864	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	15	4	rwr	17.0	0.5727848101265823	0.020388232036583683	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	16	0	rwr	17.0	0.6518987341772152	0.0250465611919213	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	16	1	rwr	17.0	0.7601265822784811	0.05771494033256781	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	16	2	rwr	17.0	0.5563291139240506	0.02766627810673685	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	16	3	rwr	17.0	0.44999999999999996	0.018301555300188087	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	16	4	rwr	17.0	0.5886075949367089	0.03547431687742006	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	17	0	rwr	17.0	0.7126582278481013	0.030988728252879197	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	17	1	rwr	17.0	0.6487341772151899	0.1256735420406629	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	17	2	rwr	17.0	0.7272151898734177	0.07327058095965659	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	17	3	rwr	17.0	0.5088607594936709	0.022845840843054598	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	17	4	rwr	17.0	0.5348101265822784	0.01896510123373835	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	18	0	rwr	17.0	0.6993670886075949	0.031000967843073105	0.0	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	18	1	rwr	17.0	0.39936708860759496	0.015826512477023994	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	18	2	rwr	17.0	0.7550632911392405	0.05589979993982116	0.06	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	18	3	rwr	17.0	0.5449367088607595	0.028039297036889087	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	18	4	rwr	17.0	0.7234177215189874	0.13192434101277883	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	19	0	rwr	17.0	0.4272151898734177	0.015295137960611344	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	19	1	rwr	17.0	0.7455696202531645	0.033969953882293936	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	19	2	rwr	17.0	0.7677215189873418	0.12875328892686658	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	19	3	rwr	17.0	0.6525316455696203	0.06175139244031956	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	19	4	rwr	17.0	0.42784810126582284	0.02226988014803708	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	20	0	rwr	17.0	0.7050632911392405	0.032059550873489495	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	20	1	rwr	17.0	0.6670886075949367	0.030342189456113507	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	20	2	rwr	17.0	0.41835443037974684	0.04513489054315853	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	20	3	rwr	17.0	0.7835443037974683	0.039532278996005324	0.02	0.05		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	20	4	rwr	17.0	0.6025316455696202	0.08795368185599527	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	21	0	rwr	17.0	0.6715189873417722	0.03088677324496007	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	21	1	rwr	17.0	0.6088607594936708	0.02525268414001756	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	21	2	rwr	17.0	0.7025316455696203	0.1262006792298657	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	21	3	rwr	17.0	0.7430379746835443	0.07936348744692943	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	21	4	rwr	17.0	0.46645569620253163	0.021370032538338277	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	22	0	rwr	17.0	0.6778481012658228	0.036664362782602024	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	22	1	rwr	17.0	0.5512658227848102	0.020584046872792583	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	22	2	rwr	17.0	0.5234177215189875	0.022483100856196286	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	22	3	rwr	17.0	0.7272151898734178	0.0851477208598578	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	22	4	rwr	17.0	0.6639240506329114	0.22016319150934538	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	23	0	rwr	17.0	0.618987341772152	0.02947195855925665	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	23	1	rwr	17.0	0.5462025316455696	0.08171333119907037	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	23	2	rwr	17.0	0.5569620253164558	0.020674956860211112	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	23	3	rwr	17.0	0.6582278481012658	0.03159297896390138	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	23	4	rwr	17.0	0.6094936708860759	0.11931135585589413	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	24	0	rwr	17.0	0.7759493670886076	0.062203699609269615	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	24	1	rwr	17.0	0.5386075949367088	0.05502418404793584	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	24	2	rwr	17.0	0.7968354430379747	0.10139384931243184	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	24	3	rwr	17.0	0.609493670886076	0.029337545954167855	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	24	4	rwr	17.0	0.4170886075949367	0.015797406343000614	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	25	0	rwr	17.0	0.5810126582278481	0.02563596143738474	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	25	1	rwr	17.0	0.4962025316455696	0.018813408173443853	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	25	2	rwr	17.0	0.6126582278481013	0.028341831790748402	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	25	3	rwr	17.0	0.699367088607595	0.029889489779322424	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	25	4	rwr	17.0	0.5879746835443038	0.06417665809740694	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	26	0	rwr	17.0	0.47848101265822784	0.01892907995437444	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	26	1	rwr	17.0	0.7215189873417722	0.045200035287543454	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	26	2	rwr	17.0	0.5518987341772152	0.02121664455191455	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	26	3	rwr	17.0	0.7620253164556963	0.09805934015063623	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	26	4	rwr	17.0	0.5974683544303798	0.026780798177857	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	27	0	rwr	17.0	0.709493670886076	0.03526678550207962	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	27	1	rwr	17.0	0.5835443037974684	0.08036945121814855	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	27	2	rwr	17.0	0.7658227848101266	0.08155894177324483	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	27	3	rwr	17.0	0.5506329113924051	0.021225322952475655	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	27	4	rwr	17.0	0.49683544303797467	0.01934042749244203	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	28	0	rwr	17.0	0.7069620253164557	0.03451421397510442	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	28	1	rwr	17.0	0.5670886075949367	0.02169395761485414	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	28	2	rwr	17.0	0.6145569620253164	0.12629056007876968	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	28	3	rwr	17.0	0.7126582278481013	0.08918834415523158	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	28	4	rwr	17.0	0.5613924050632911	0.02072843850238889	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	29	0	rwr	17.0	0.6240506329113924	0.06981414139820924	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	29	1	rwr	17.0	0.38101265822784813	0.01460666478320631	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	29	2	rwr	17.0	0.6772151898734178	0.029013640668505605	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	29	3	rwr	17.0	0.7126582278481013	0.07649168395385231	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	29	4	rwr	17.0	0.5632911392405062	0.025272696296658098	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	30	0	rwr	17.0	0.37341772151898733	0.014069080475723084	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	30	1	rwr	17.0	0.530379746835443	0.0195446991550891	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	30	2	rwr	17.0	0.5924050632911393	0.038945891342728266	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	30	3	rwr	17.0	0.618987341772152	0.044800641154077336	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	30	4	rwr	17.0	0.739873417721519	0.12834051454660356	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	31	0	rwr	17.0	0.6259493670886076	0.03291384047165731	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	31	1	rwr	17.0	0.7082278481012658	0.03171198274632227	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	31	2	rwr	17.0	0.47025316455696203	0.020142809806662686	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	31	3	rwr	17.0	0.5867088607594937	0.02387854820527209	0.0	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	31	4	rwr	17.0	0.7981012658227848	0.16941507130186376	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	32	0	rwr	17.0	0.689873417721519	0.1060200357764922	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	32	1	rwr	17.0	0.5386075949367088	0.027098410822376524	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	32	2	rwr	17.0	0.6848101265822786	0.0312227090184549	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	32	3	rwr	17.0	0.5468354430379747	0.02046193099019627	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	32	4	rwr	17.0	0.6354430379746836	0.02589811867186304	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	33	0	rwr	17.0	0.38101265822784813	0.014425245105581172	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	33	1	rwr	17.0	0.5392405063291139	0.019450794307985297	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	33	2	rwr	17.0	0.799367088607595	0.15748391035760956	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	33	3	rwr	17.0	0.7999999999999999	0.04914881802369659	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	33	4	rwr	17.0	0.5474683544303798	0.028551619462801076	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	34	0	rwr	17.0	0.7867088607594936	0.1336319988393721	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	34	1	rwr	17.0	0.7518987341772152	0.037318448653212995	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	34	2	rwr	17.0	0.38544303797468354	0.014320848959911734	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	34	3	rwr	17.0	0.6113924050632912	0.05524223602484472	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	34	4	rwr	17.0	0.5753164556962026	0.03182708506798049	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	35	0	rwr	17.0	0.5031645569620253	0.018740538037617716	0.0	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	35	1	rwr	17.0	0.4892405063291139	0.213746584940075	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	35	2	rwr	17.0	0.6981012658227848	0.03051171059695915	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	35	3	rwr	17.0	0.8398734177215189	0.07007076257076256	0.06	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	35	4	rwr	17.0	0.6050632911392405	0.026672076858893667	0.02	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	36	0	rwr	17.0	0.5949367088607596	0.02594870399928327	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	36	1	rwr	17.0	0.6930379746835443	0.035190684218419664	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	36	2	rwr	17.0	0.7708860759493671	0.12926995962170978	0.02	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	36	3	rwr	17.0	0.5734177215189873	0.05304881521579857	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	36	4	rwr	17.0	0.49493670886075947	0.017548874888709265	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	37	0	rwr	17.0	0.3056962025316456	0.013111507123795338	0.0	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	37	1	rwr	17.0	0.7259493670886076	0.12816209874178866	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	37	2	rwr	17.0	0.7310126582278482	0.032707795258422066	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	37	3	rwr	17.0	0.6443037974683544	0.059433680405536635	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	37	4	rwr	17.0	0.629746835443038	0.028896206255781667	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	38	0	rwr	17.0	0.6525316455696203	0.029174378013823922	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	38	1	rwr	17.0	0.43860759493670887	0.01584852941973877	0.0	0.0		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	38	2	rwr	17.0	0.6860759493670887	0.033558860811985135	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	38	3	rwr	17.0	0.679746835443038	0.07392191381295554	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	38	4	rwr	17.0	0.6468354430379748	0.12896137839339217	0.04	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	39	0	rwr	17.0	0.5848101265822785	0.024971931700832846	0.02	0.03		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	39	1	rwr	17.0	0.5841772151898734	0.13028277847554956	0.04	0.02		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	39	2	rwr	17.0	0.7664556962025317	0.040352312439743285	0.04	0.04		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	39	3	rwr	17.0	0.4664556962025317	0.05301505473037924	0.02	0.01		5	321
+intact	intogen_temporal_new_shared	native_intact	0.5	39	4	rwr	17.0	0.7265822784810126	0.03163399729224005	0.02	0.02		5	321

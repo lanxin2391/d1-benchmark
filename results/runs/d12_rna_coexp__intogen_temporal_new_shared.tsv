@@ -1,101 +1,401 @@
 network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	0	degree		0.675027382256298	0.005897298900579287	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	1	degree		0.5327491785323111	0.011088724272743843	0.02	0.01	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	2	degree		0.8087671232876712	0.011168118356868732	0.0	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	3	degree		0.5944109589041097	0.004916867326703817	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	4	degree		0.552109589041096	0.0049381183443165284	0.0	0.01	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	0	degree		0.6747535596933187	0.01019031023273769	0.0	0.02	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	1	degree		0.48346111719605694	0.0031091167457109586	0.0	0.0	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	2	degree		0.5637260273972602	0.004332450764165598	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	3	degree		0.6447123287671233	0.007329070170951068	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	4	degree		0.7873972602739726	0.014767324953974745	0.02	0.01	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	0	degree		0.7375684556407448	0.006877635503093115	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	1	degree		0.43822562979189483	0.002710577716163298	0.0	0.0	0.0	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	2	degree		0.5547397260273973	0.005990351881389658	0.0	0.01	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	3	degree		0.6749041095890411	0.01422314053057505	0.02	0.01	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	4	degree		0.7656438356164385	0.0121976033747653	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	0	degree		0.7113910186199343	0.008006514268928747	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	1	degree		0.5757940854326397	0.014990655754999046	0.02	0.01	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	2	degree		0.7746849315068493	0.010106531920488385	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	3	degree		0.5980821917808219	0.004061531929110194	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	4	degree		0.5023561643835617	0.0032594569612544484	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	0	degree		0.5951259583789703	0.006409630588869273	0.0	0.01	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	1	degree		0.5477546549835707	0.0035577927788616663	0.0	0.0	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	2	degree		0.6883287671232876	0.0078044122376161335	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	3	degree		0.5744657534246576	0.01170126190490332	0.02	0.01	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	4	degree		0.7624109589041096	0.008986918566244471	0.0	0.0	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	0	degree		0.541237677984666	0.010620093916248602	0.02	0.01	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	1	degree		0.5140197152245346	0.003927482290545001	0.0	0.0	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	2	degree		0.7152876712328767	0.012030199420239631	0.0	0.02	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	3	degree		0.8592876712328767	0.010815132461900731	0.0	0.0	0.01	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	4	degree		0.5412602739726028	0.0036011327346793906	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	0	degree		0.4957283680175246	0.004747127271083599	0.0	0.01	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	1	degree		0.47119386637458927	0.003551035707685958	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	2	degree		0.7479452054794521	0.00854374535927934	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	3	degree		0.7113972602739727	0.012826625461684157	0.02	0.01	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	4	degree		0.7364383561643836	0.008875083044308327	0.0	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	0	degree		0.48598028477546545	0.003398420529252084	0.0	0.0	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	1	degree		0.6843921139101862	0.006390421987238508	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	2	degree		0.32394520547945205	0.002191380106373587	0.0	0.0	0.0	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	3	degree		0.7721095890410958	0.013157849569414334	0.02	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	4	degree		0.8947397260273974	0.014668629409805881	0.0	0.01	0.01	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	0	degree		0.8586527929901424	0.01187797694487333	0.0	0.0	0.008	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	1	degree		0.5369112814895947	0.00478792457755627	0.0	0.01	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	2	degree		0.5745205479452055	0.004345018855535981	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	3	degree		0.598027397260274	0.004541259309899681	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	4	degree		0.5926575342465753	0.012879473730060823	0.02	0.02	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	0	degree		0.613855421686747	0.004839846943460383	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	1	degree		0.5756297918948521	0.014570849725077637	0.02	0.01	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	2	degree		0.5485479452054794	0.004410929118580772	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	3	degree		0.7864657534246575	0.010621657618883066	0.0	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	4	degree		0.632	0.0046719288343218136	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	0	rwr	21.0	0.7105147864184008	0.005397175534837043	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	1	rwr	21.0	0.704709748083242	0.007203966357298807	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	2	rwr	21.0	0.8437260273972603	0.011690882286476396	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	3	rwr	21.0	0.7106849315068494	0.008696593384983135	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	4	rwr	21.0	0.6074520547945205	0.006229440318698026	0.0	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	0	rwr	21.0	0.8141292442497262	0.012132303765184326	0.0	0.01	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	1	rwr	21.0	0.596604600219058	0.004044835305385588	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	2	rwr	21.0	0.366027397260274	0.0024620909383064674	0.0	0.0	0.0	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	3	rwr	21.0	0.7036712328767123	0.008860613232045147	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	4	rwr	21.0	0.8459178082191782	0.010964235695744935	0.0	0.0	0.01	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	0	rwr	21.0	0.7590361445783133	0.007873881477179705	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	1	rwr	21.0	0.6501642935377876	0.004854157637129098	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	2	rwr	21.0	0.571068493150685	0.007657650047411764	0.0	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	3	rwr	21.0	0.7480547945205479	0.007212768995594809	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	4	rwr	21.0	0.8577534246575342	0.013152039512112378	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	0	rwr	21.0	0.5111719605695509	0.004736389186285949	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	1	rwr	21.0	0.6178532311062431	0.006375650889707957	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	2	rwr	21.0	0.809095890410959	0.010295151101422097	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	3	rwr	21.0	0.6712328767123288	0.006063392507334985	0.0	0.01	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	4	rwr	21.0	0.6287123287671234	0.004284171855710346	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	0	rwr	21.0	0.6063526834611171	0.006950597178818995	0.0	0.01	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	1	rwr	21.0	0.5875136911281489	0.004039401335605139	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	2	rwr	21.0	0.8207123287671233	0.009936410309719736	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	3	rwr	21.0	0.7432328767123287	0.007768465469237599	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	4	rwr	21.0	0.8337534246575343	0.011783903623845036	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	0	rwr	21.0	0.6499452354874041	0.006785136163904922	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	1	rwr	21.0	0.624315443592552	0.0044765581367639555	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	2	rwr	21.0	0.7185753424657534	0.012741941824853078	0.0	0.02	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	3	rwr	21.0	0.8526027397260274	0.01221392949934998	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	4	rwr	21.0	0.4910684931506849	0.003085698258910979	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	0	rwr	21.0	0.6955093099671413	0.006116461179265053	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	1	rwr	21.0	0.49791894852135815	0.003585311806637224	0.0	0.0	0.002	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	2	rwr	21.0	0.8071232876712329	0.00948820258812439	0.0	0.01	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	3	rwr	21.0	0.7876164383561645	0.009791144564852161	0.0	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	4	rwr	21.0	0.8088767123287671	0.011012585396994078	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	0	rwr	21.0	0.6141292442497261	0.004809679890932916	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	1	rwr	21.0	0.7381161007667032	0.006823091710010838	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	2	rwr	21.0	0.5078356164383562	0.0031638601691276512	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	3	rwr	21.0	0.8322191780821918	0.014988655419833597	0.0	0.0	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	4	rwr	21.0	0.8929315068493151	0.014833559226680487	0.0	0.01	0.01	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	0	rwr	21.0	0.9058050383351588	0.016391766568642906	0.0	0.0	0.01	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	1	rwr	21.0	0.6244249726177438	0.005845202032411739	0.0	0.0	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	2	rwr	21.0	0.7304109589041096	0.0059673508518328965	0.0	0.0	0.002	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	3	rwr	21.0	0.6314520547945205	0.005144738266373663	0.0	0.0	0.006	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	4	rwr	21.0	0.7004931506849315	0.008705309413614767	0.0	0.01	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	0	rwr	21.0	0.7387732749178532	0.006856602484676574	0.0	0.0	0.004	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	1	rwr	21.0	0.6113910186199343	0.009089521670336775	0.0	0.01	0.006	5	1831
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	2	rwr	21.0	0.5821369863013699	0.004240445462757209	0.0	0.0	0.004	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	3	rwr	21.0	0.8065753424657535	0.012817252405967657	0.02	0.01	0.008	5	1830
-rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	4	rwr	21.0	0.6996164383561644	0.0055209195834319096	0.0	0.0	0.006	5	1830
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	0	degree		0.4813291139240506	0.019811728249754114	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	1	degree		0.3981012658227848	0.0161341762480369	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	2	degree		0.5471518987341772	0.020467469847128397	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	3	degree		0.8246835443037974	0.04834203618861167	0.04	0.05		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		0	4	degree		0.5550632911392406	0.03335794613970759	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	0	degree		0.4588607594936709	0.017490850434335688	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	1	degree		0.5015822784810127	0.020011795133805903	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	2	degree		0.4927215189873418	0.017366180386148976	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	3	degree		0.5851265822784811	0.04373830134823297	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		1	4	degree		0.7658227848101267	0.03879932148388524	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	0	degree		0.5287974683544304	0.04015124915213621	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	1	degree		0.564240506329114	0.02265519918185767	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	2	degree		0.770253164556962	0.03946581383933587	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	3	degree		0.6306962025316455	0.02695663079204955	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		2	4	degree		0.354746835443038	0.014184603448924695	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	0	degree		0.7401898734177216	0.03589070480081716	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	1	degree		0.545253164556962	0.03834151777452065	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	2	degree		0.43955696202531647	0.016010189036631057	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	3	degree		0.33544303797468356	0.015321441843180975	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		3	4	degree		0.7689873417721519	0.041740505039923645	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	0	degree		0.5300632911392404	0.019214778108382576	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	1	degree		0.5613924050632911	0.022893729348349347	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	2	degree		0.31740506329113927	0.014441957615563427	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	3	degree		0.6844936708860759	0.049919679242227274	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		4	4	degree		0.7066455696202533	0.031359931359931356	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	0	degree		0.47278481012658236	0.020666619820579483	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	1	degree		0.7145569620253165	0.03781246059782011	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	2	degree		0.7829113924050632	0.06027153234175027	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	3	degree		0.5468354430379747	0.019180999836275345	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		5	4	degree		0.3167721518987342	0.01316121845833221	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	0	degree		0.4870253164556962	0.01960714586494064	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	1	degree		0.6414556962025316	0.02636681840879232	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	2	degree		0.3386075949367089	0.01547358483968805	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	3	degree		0.7357594936708861	0.04953222958840936	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		6	4	degree		0.6262658227848101	0.024945017100701974	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	0	degree		0.5655063291139241	0.037769822189365	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	1	degree		0.670253164556962	0.027812335545572747	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	2	degree		0.4117088607594937	0.01574036444813463	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	3	degree		0.5174050632911392	0.023618594129638522	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		7	4	degree		0.654746835443038	0.028624183436617393	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	0	degree		0.6142405063291139	0.025342187288646685	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	1	degree		0.49240506329113926	0.017934249838051513	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	2	degree		0.5477848101265823	0.027361992785428058	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	3	degree		0.4677215189873417	0.017202160104153652	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		8	4	degree		0.6914556962025317	0.04664557097135989	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	0	degree		0.6177215189873418	0.02802962838368031	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	1	degree		0.6617088607594936	0.06117332613915122	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	2	degree		0.44240506329113927	0.0172385794211011	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	3	degree		0.6582278481012658	0.027617915853209968	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		9	4	degree		0.45664556962025316	0.017044157502168714	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		10	0	degree		0.3395569620253165	0.013215818254354635	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		10	1	degree		0.531012658227848	0.021173599054704364	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		10	2	degree		0.760759493670886	0.03763136196753744	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		10	3	degree		0.5712025316455697	0.021703577357999597	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		10	4	degree		0.6268987341772152	0.040262088250063735	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		11	0	degree		0.5886075949367089	0.02492081987332308	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		11	1	degree		0.5291139240506331	0.022325450049076323	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		11	2	degree		0.5395569620253164	0.024475960999407347	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		11	3	degree		0.5784810126582278	0.023582160952422278	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		11	4	degree		0.589873417721519	0.03915636799708094	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		12	0	degree		0.5481012658227848	0.019991616364124085	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		12	1	degree		0.5598101265822785	0.025277939464811907	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		12	2	degree		0.6759493670886075	0.03260351143109764	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		12	3	degree		0.5262658227848102	0.02463777234156561	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		12	4	degree		0.5408227848101266	0.04065902487038285	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		13	0	degree		0.430379746835443	0.017563176730043262	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		13	1	degree		0.5531645569620254	0.020995295182053186	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		13	2	degree		0.7854430379746835	0.04539515989497256	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		13	3	degree		0.4484177215189874	0.03247931430301035	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		13	4	degree		0.6110759493670886	0.026105267456068434	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		14	0	degree		0.525	0.020452010237781305	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		14	1	degree		0.529113924050633	0.02127746220135833	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		14	2	degree		0.6015822784810126	0.024026057729089605	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		14	3	degree		0.5905063291139241	0.027161396593410363	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		14	4	degree		0.5863924050632912	0.04050315656565657	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		15	0	degree		0.7306962025316457	0.14489873240593953	0.06	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		15	1	degree		0.6117088607594937	0.02372804026580118	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		15	2	degree		0.4721518987341773	0.017381947319677994	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		15	3	degree		0.5443037974683544	0.019623275430470526	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		15	4	degree		0.4892405063291139	0.020957967383073327	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		16	0	degree		0.5075949367088608	0.0200778137547686	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		16	1	degree		0.4373417721518988	0.017473318890336077	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		16	2	degree		0.779746835443038	0.04682424199237539	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		16	3	degree		0.5139240506329114	0.020941377142676396	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		16	4	degree		0.5860759493670886	0.02859019620134144	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		17	0	degree		0.4424050632911392	0.016811393421654705	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		17	1	degree		0.7167721518987342	0.041514967206456574	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		17	2	degree		0.5022151898734177	0.02062687143819293	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		17	3	degree		0.6075949367088608	0.027861828683766864	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		17	4	degree		0.5265822784810126	0.02114335612970895	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		18	0	degree		0.49936708860759493	0.019636185765448965	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		18	1	degree		0.5509493670886076	0.019498771613419185	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		18	2	degree		0.7142405063291138	0.03770877199600374	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		18	3	degree		0.3924050632911393	0.015441328387939195	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		18	4	degree		0.6531645569620252	0.05581529908889255	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		19	0	degree		0.6762658227848102	0.029745326872549854	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		19	1	degree		0.4262658227848101	0.03249187320615893	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		19	2	degree		0.6322784810126583	0.025434637491517836	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		19	3	degree		0.4272151898734178	0.020103164485769535	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		19	4	degree		0.6772151898734177	0.033802685840901195	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		20	0	degree		0.5224683544303796	0.018967709127892196	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		20	1	degree		0.28860759493670884	0.012884519709801407	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		20	2	degree		0.6920886075949366	0.03628616903007111	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		20	3	degree		0.6886075949367089	0.054869215357738046	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		20	4	degree		0.6180379746835443	0.027742686731723684	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		21	0	degree		0.5582278481012659	0.0227531341745076	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		21	1	degree		0.45854430379746836	0.01887069134975413	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		21	2	degree		0.6167721518987341	0.0430691887803031	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		21	3	degree		0.6344936708860759	0.02858140827181075	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		21	4	degree		0.5424050632911392	0.02060988314232551	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		22	0	degree		0.4389240506329114	0.0198730474704515	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		22	1	degree		0.494620253164557	0.01766322693950031	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		22	2	degree		0.5227848101265823	0.019118865497104016	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		22	3	degree		0.5863924050632912	0.06687589267712882	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		22	4	degree		0.7670886075949367	0.037432703027105815	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		23	0	degree		0.4389240506329114	0.016844244088855095	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		23	1	degree		0.7588607594936709	0.043159372197731895	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		23	2	degree		0.6572784810126582	0.039492167028068556	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		23	3	degree		0.4930379746835444	0.01867012835457776	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		23	4	degree		0.4664556962025317	0.017124341466269087	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		24	0	degree		0.5056962025316456	0.06399483875634666	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		24	1	degree		0.6382911392405063	0.02715309200603318	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		24	2	degree		0.4987341772151899	0.020896455455075437	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		24	3	degree		0.6474683544303798	0.028154379478768882	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		24	4	degree		0.530379746835443	0.02097678258804378	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		25	0	degree		0.8208860759493671	0.08102164178796366	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		25	1	degree		0.46645569620253163	0.020504612858549896	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		25	2	degree		0.6449367088607596	0.027271693186264823	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		25	3	degree		0.5088607594936709	0.02004249632110044	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		25	4	degree		0.4050632911392405	0.01491863271199782	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		26	0	degree		0.7278481012658228	0.051567398119122254	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		26	1	degree		0.3949367088607595	0.01546316080394038	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		26	2	degree		0.5408227848101266	0.023516840920914897	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		26	3	degree		0.6113924050632911	0.025325084793980483	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		26	4	degree		0.5338607594936708	0.019648746399274948	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		27	0	degree		0.6430379746835444	0.04017780555728752	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		27	1	degree		0.6813291139240506	0.03317895516664061	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		27	2	degree		0.46930379746835443	0.016577768956121366	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		27	3	degree		0.42120253164556964	0.015795293598738203	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		27	4	degree		0.6050632911392405	0.02850891010541014	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		28	0	degree		0.6443037974683544	0.028538306066008733	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		28	1	degree		0.5895569620253165	0.024552601095069324	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		28	2	degree		0.5148734177215191	0.01948697200346169	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		28	3	degree		0.6636075949367088	0.05496150955969313	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		28	4	degree		0.40601265822784816	0.018431290496391053	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		29	0	degree		0.5101265822784811	0.021060039295866095	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		29	1	degree		0.7063291139240506	0.03143579730497993	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		29	2	degree		0.5927215189873418	0.0417029916773695	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		29	3	degree		0.6003164556962025	0.023812369049657188	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		29	4	degree		0.4183544303797469	0.017418531141472522	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		30	0	degree		0.7063291139240506	0.03293819655521783	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		30	1	degree		0.584493670886076	0.0430247601188761	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		30	2	degree		0.6205696202531646	0.02509278211660556	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		30	3	degree		0.49335443037974686	0.022057351189376462	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		30	4	degree		0.41613924050632917	0.017165361667793498	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		31	0	degree		0.6971518987341773	0.04003038198389525	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		31	1	degree		0.455379746835443	0.02506854756082259	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		31	2	degree		0.47056962025316457	0.017587397190073864	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		31	3	degree		0.6433544303797468	0.027364120148117545	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		31	4	degree		0.5382911392405063	0.021419521658346458	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		32	0	degree		0.6344936708860759	0.025788841301376302	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		32	1	degree		0.41297468354430383	0.015855407700730486	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		32	2	degree		0.6126582278481012	0.03369025797173607	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		32	3	degree		0.5069620253164557	0.022159291150151705	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		32	4	degree		0.6579113924050632	0.03162801433588949	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		33	0	degree		0.5487341772151899	0.03977775891689278	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		33	1	degree		0.6401898734177215	0.02444516274732336	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		33	2	degree		0.489873417721519	0.02143822709494085	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		33	3	degree		0.625	0.02442353162239327	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		33	4	degree		0.5196202531645571	0.020193117581746724	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		34	0	degree		0.3531645569620253	0.015114085976041738	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		34	1	degree		0.7170886075949366	0.05407278597109107	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		34	2	degree		0.760759493670886	0.03584901648059543	0.02	0.05		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		34	3	degree		0.4613924050632912	0.01844819633069821	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		34	4	degree		0.5443037974683544	0.019529091511503574	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		35	0	degree		0.6917721518987342	0.04528933816178565	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		35	1	degree		0.8246835443037975	0.048144570794040414	0.02	0.05		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		35	2	degree		0.4528481012658228	0.0165479585563132	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		35	3	degree		0.30791139240506327	0.012248055781670979	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		35	4	degree		0.5344936708860759	0.024771352208105068	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		36	0	degree		0.610759493670886	0.02675974512743628	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		36	1	degree		0.4104430379746836	0.016833965192801698	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		36	2	degree		0.5857594936708861	0.025353137683442856	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		36	3	degree		0.4167721518987342	0.015377770611903676	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		36	4	degree		0.770253164556962	0.0486323412809129	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		37	0	degree		0.539873417721519	0.02541743289229511	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		37	1	degree		0.6474683544303798	0.030871037127306454	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		37	2	degree		0.6889240506329114	0.028072074219758825	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		37	3	degree		0.4977848101265824	0.038994894427137425	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		37	4	degree		0.47943037974683544	0.018220532750046935	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		38	0	degree		0.44018987341772153	0.01588039714798765	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		38	1	degree		0.5699367088607595	0.023434640806396595	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		38	2	degree		0.5503164556962026	0.019546611588737984	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		38	3	degree		0.4854430379746836	0.04313502764335759	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		38	4	degree		0.7693037974683544	0.047470395151903946	0.06	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		39	0	degree		0.6031645569620253	0.028329905930038944	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		39	1	degree		0.47658227848101264	0.019962476131784243	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		39	2	degree		0.5189873417721519	0.03646172002101242	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		39	3	degree		0.6781645569620253	0.027906118639814292	0.0	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp		39	4	degree		0.5183544303797469	0.019079138709129508	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	0	rwr	21.0	0.49873417721518987	0.01895006976242674	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	1	rwr	21.0	0.4734177215189873	0.01672110466544369	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	2	rwr	21.0	0.6481012658227848	0.028559919580303312	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	3	rwr	21.0	0.8613924050632912	0.06369767561385031	0.06	0.05		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	0	4	rwr	21.0	0.5006329113924051	0.019050716652593183	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	0	rwr	21.0	0.4639240506329114	0.017099441040182097	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	1	rwr	21.0	0.4645569620253165	0.01708092897648869	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	2	rwr	21.0	0.5158227848101266	0.018758411897916896	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	3	rwr	21.0	0.6037974683544304	0.027693018562500105	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	1	4	rwr	21.0	0.7379746835443037	0.03480105025741229	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	0	rwr	21.0	0.5962025316455697	0.026069389547650416	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	1	rwr	21.0	0.5278481012658228	0.021432123142839793	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	2	rwr	21.0	0.7898734177215191	0.046055561654147134	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	3	rwr	21.0	0.6265822784810127	0.02459868987427804	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	2	4	rwr	21.0	0.4455696202531646	0.017868161381731106	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	0	rwr	21.0	0.709493670886076	0.030217868437046515	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	1	rwr	21.0	0.5025316455696203	0.020268096324093182	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	2	rwr	21.0	0.5411392405063291	0.02048646363528396	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	3	rwr	21.0	0.46708860759493676	0.018435576669432595	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	3	4	rwr	21.0	0.7177215189873418	0.04259417199715707	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	0	rwr	21.0	0.5556962025316456	0.020225794062724334	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	1	rwr	21.0	0.5170886075949368	0.021432548728417305	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	2	rwr	21.0	0.4930379746835443	0.019865463577903315	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	3	rwr	21.0	0.6354430379746836	0.026717409940480885	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	4	4	rwr	21.0	0.8050632911392406	0.05316965631287829	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	0	rwr	21.0	0.5348101265822784	0.024905094905094904	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	1	rwr	21.0	0.6981012658227849	0.03574425400381572	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	2	rwr	21.0	0.7227848101265824	0.0393176609683016	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	3	rwr	21.0	0.5791139240506329	0.020814001150409184	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	5	4	rwr	21.0	0.35443037974683544	0.013610161997439165	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	0	rwr	21.0	0.6417721518987343	0.027558476067769316	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	1	rwr	21.0	0.7082278481012658	0.03498417400267584	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	2	rwr	21.0	0.3221518987341772	0.013339817464375152	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	3	rwr	21.0	0.729113924050633	0.03789441670679474	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	6	4	rwr	21.0	0.5715189873417722	0.021613753064747134	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	0	rwr	21.0	0.5170886075949368	0.020217091043747797	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	1	rwr	21.0	0.7569620253164557	0.03927520264108746	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	2	rwr	21.0	0.4917721518987342	0.017696182256701554	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	3	rwr	21.0	0.5082278481012659	0.01905217057086216	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	7	4	rwr	21.0	0.6626582278481012	0.03362846510214931	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	0	rwr	21.0	0.6512658227848102	0.032033369847913905	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	1	rwr	21.0	0.5930379746835444	0.025489106730311347	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	2	rwr	21.0	0.5481012658227848	0.03127236967223856	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	3	rwr	21.0	0.30886075949367087	0.012796309792501678	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	8	4	rwr	21.0	0.6765822784810127	0.029601576397210422	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	0	rwr	21.0	0.41582278481012663	0.021854019400125286	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	1	rwr	21.0	0.6955696202531647	0.04448397638625343	0.06	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	2	rwr	21.0	0.4689873417721519	0.017318934693926386	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	3	rwr	21.0	0.5867088607594937	0.02248842428533697	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	9	4	rwr	21.0	0.5468354430379747	0.02095779033560143	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	10	0	rwr	21.0	0.44430379746835447	0.016427672774843367	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	10	1	rwr	21.0	0.49683544303797467	0.020524917824256014	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	10	2	rwr	21.0	0.5930379746835442	0.03953145805359154	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	10	3	rwr	21.0	0.5816455696202532	0.022970589613059915	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	10	4	rwr	21.0	0.6335443037974684	0.027312707312302578	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	11	0	rwr	21.0	0.6246835443037975	0.03294501631522281	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	11	1	rwr	21.0	0.5487341772151899	0.021706654735822454	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	11	2	rwr	21.0	0.5082278481012659	0.018655774115083103	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	11	3	rwr	21.0	0.59873417721519	0.024415408008419404	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	11	4	rwr	21.0	0.5835443037974684	0.026881898551648784	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	12	0	rwr	21.0	0.529746835443038	0.019143202321557775	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	12	1	rwr	21.0	0.6037974683544304	0.02882169309701147	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	12	2	rwr	21.0	0.6443037974683544	0.028845762596674474	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	12	3	rwr	21.0	0.5664556962025317	0.026972786505223674	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	12	4	rwr	21.0	0.5234177215189874	0.020142055304864997	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	13	0	rwr	21.0	0.5303797468354431	0.022657051514302126	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	13	1	rwr	21.0	0.6177215189873418	0.02805066358031641	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	13	2	rwr	21.0	0.7677215189873418	0.04100231524166616	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	13	3	rwr	21.0	0.4930379746835443	0.020290391352036585	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	13	4	rwr	21.0	0.5968354430379748	0.022929588942383942	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	14	0	rwr	21.0	0.6075949367088608	0.02620413589151621	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	14	1	rwr	21.0	0.4645569620253165	0.017089873826082957	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	14	2	rwr	21.0	0.6177215189873417	0.024207339379051014	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	14	3	rwr	21.0	0.6677215189873417	0.027790875213227866	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	14	4	rwr	21.0	0.5563291139240506	0.03106583230212343	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	15	0	rwr	21.0	0.6962025316455696	0.051110009601866103	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	15	1	rwr	21.0	0.6822784810126583	0.0310916026684603	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	15	2	rwr	21.0	0.4310126582278481	0.01557530370106277	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	15	3	rwr	21.0	0.6	0.02399153047701415	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	15	4	rwr	21.0	0.5550632911392406	0.02020830627922125	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	16	0	rwr	21.0	0.4791139240506329	0.01799195117473839	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	16	1	rwr	21.0	0.4544303797468355	0.01702691378653818	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	16	2	rwr	21.0	0.7348101265822785	0.03809392471693452	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	16	3	rwr	21.0	0.5455696202531646	0.020736658989545652	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	16	4	rwr	21.0	0.5670886075949367	0.028591539657260225	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	17	0	rwr	21.0	0.4829113924050633	0.021741322997913037	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	17	1	rwr	21.0	0.539873417721519	0.028557745144384482	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	17	2	rwr	21.0	0.5512658227848102	0.025259416741828803	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	17	3	rwr	21.0	0.6651898734177215	0.030106643162319143	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	17	4	rwr	21.0	0.5208860759493671	0.018931372385578946	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	18	0	rwr	21.0	0.5449367088607595	0.021998439851821643	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	18	1	rwr	21.0	0.6272151898734177	0.024847389144813034	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	18	2	rwr	21.0	0.679113924050633	0.02986469613806062	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	18	3	rwr	21.0	0.45126582278481014	0.015977842690580696	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	18	4	rwr	21.0	0.65	0.04152847240304458	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	19	0	rwr	21.0	0.6360759493670887	0.025606265743523926	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	19	1	rwr	21.0	0.4246835443037975	0.016540036257598416	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	19	2	rwr	21.0	0.6677215189873418	0.029012922320346073	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	19	3	rwr	21.0	0.45949367088607596	0.02073897184844815	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	19	4	rwr	21.0	0.6974683544303798	0.03791663559300967	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	20	0	rwr	21.0	0.539873417721519	0.019196663107766875	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	20	1	rwr	21.0	0.3500000000000001	0.014023531927432354	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	20	2	rwr	21.0	0.7082278481012658	0.03580494923167	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	20	3	rwr	21.0	0.7291139240506329	0.03618466898954704	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	20	4	rwr	21.0	0.6379746835443039	0.02985892545864683	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	21	0	rwr	21.0	0.6170886075949368	0.024363408521303257	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	21	1	rwr	21.0	0.4291139240506329	0.01887169478220861	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	21	2	rwr	21.0	0.6265822784810127	0.03173123683505562	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	21	3	rwr	21.0	0.7322784810126584	0.0396891796064709	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	21	4	rwr	21.0	0.5525316455696202	0.021606818786129654	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	22	0	rwr	21.0	0.5044303797468355	0.01810483870967742	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	22	1	rwr	21.0	0.5056962025316456	0.0178774407672753	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	22	2	rwr	21.0	0.5784810126582278	0.024867937358120304	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	22	3	rwr	21.0	0.5759493670886077	0.03542548316091999	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	22	4	rwr	21.0	0.7626582278481013	0.038771043771043776	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	23	0	rwr	21.0	0.5284810126582279	0.022112294355188373	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	23	1	rwr	21.0	0.6797468354430379	0.02893000577546759	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	23	2	rwr	21.0	0.7113924050632912	0.04664611549086989	0.06	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	23	3	rwr	21.0	0.47468354430379756	0.017132037938406487	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	23	4	rwr	21.0	0.5246835443037975	0.02135835750194531	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	24	0	rwr	21.0	0.5778481012658228	0.02532039219515065	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	24	1	rwr	21.0	0.65	0.026421115256261507	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	24	2	rwr	21.0	0.4835443037974683	0.024007288228740688	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	24	3	rwr	21.0	0.6335443037974684	0.028238688292338915	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	24	4	rwr	21.0	0.6335443037974683	0.027173079758219074	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	25	0	rwr	21.0	0.8012658227848102	0.047019103470716375	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	25	1	rwr	21.0	0.5436708860759494	0.024935727935727937	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	25	2	rwr	21.0	0.730379746835443	0.03726692495571214	0.02	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	25	3	rwr	21.0	0.5278481012658227	0.02089416791957513	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	25	4	rwr	21.0	0.4208860759493671	0.015325943661438711	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	26	0	rwr	21.0	0.6867088607594937	0.031538847117794484	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	26	1	rwr	21.0	0.4759493670886076	0.018247258510950395	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	26	2	rwr	21.0	0.629746835443038	0.036118845808518873	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	26	3	rwr	21.0	0.439873417721519	0.022344924719642015	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	26	4	rwr	21.0	0.5651898734177215	0.02155747713312343	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	27	0	rwr	21.0	0.6120253164556962	0.024849294471431877	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	27	1	rwr	21.0	0.6354430379746836	0.03375780891381067	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	27	2	rwr	21.0	0.5670886075949367	0.02057662022129027	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	27	3	rwr	21.0	0.5329113924050634	0.02184339229033682	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	27	4	rwr	21.0	0.5639240506329114	0.029014619389785886	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	28	0	rwr	21.0	0.6139240506329113	0.02619920618595743	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	28	1	rwr	21.0	0.5677215189873418	0.02084691805871073	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	28	2	rwr	21.0	0.5329113924050632	0.02023399005615148	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	28	3	rwr	21.0	0.7411392405063291	0.04430311123390277	0.06	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	28	4	rwr	21.0	0.469620253164557	0.023994157358189182	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	29	0	rwr	21.0	0.5810126582278481	0.020882622959318604	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	29	1	rwr	21.0	0.7379746835443038	0.03610896089692165	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	29	2	rwr	21.0	0.5594936708860759	0.020881858693098485	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	29	3	rwr	21.0	0.6417721518987343	0.02951793393610411	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	29	4	rwr	21.0	0.44113924050632913	0.024000295334490877	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	30	0	rwr	21.0	0.5974683544303797	0.022365131590151258	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	30	1	rwr	21.0	0.6620253164556962	0.02969448175642444	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	30	2	rwr	21.0	0.6303797468354431	0.026984232376327452	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	30	3	rwr	21.0	0.5316455696202531	0.024234549642513266	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	30	4	rwr	21.0	0.529746835443038	0.022511053029461357	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	31	0	rwr	21.0	0.5050632911392405	0.02390364363722959	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	31	1	rwr	21.0	0.4886075949367089	0.02212815076286226	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	31	2	rwr	21.0	0.5417721518987342	0.021034311398892433	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	31	3	rwr	21.0	0.6683544303797468	0.03091200404323714	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	31	4	rwr	21.0	0.5462025316455696	0.023888039020064294	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	32	0	rwr	21.0	0.6367088607594936	0.029118267843082912	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	32	1	rwr	21.0	0.43544303797468353	0.018198549603311416	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	32	2	rwr	21.0	0.5550632911392406	0.022433422812295645	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	32	3	rwr	21.0	0.6234177215189873	0.03239141185073673	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	32	4	rwr	21.0	0.6645569620253164	0.026106244631167255	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	33	0	rwr	21.0	0.5867088607594937	0.03188515885424349	0.04	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	33	1	rwr	21.0	0.6354430379746836	0.025932678795067776	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	33	2	rwr	21.0	0.6139240506329114	0.02836192036697228	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	33	3	rwr	21.0	0.6322784810126583	0.024188382995885386	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	33	4	rwr	21.0	0.4512658227848101	0.01656291921215229	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	34	0	rwr	21.0	0.42784810126582273	0.01992820344929657	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	34	1	rwr	21.0	0.6930379746835443	0.031121002165765375	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	34	2	rwr	21.0	0.6873417721518987	0.031221897454634027	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	34	3	rwr	21.0	0.5449367088607595	0.021730880230880233	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	34	4	rwr	21.0	0.6031645569620253	0.02619168241582793	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	35	0	rwr	21.0	0.6316455696202532	0.027649757463961193	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	35	1	rwr	21.0	0.8031645569620253	0.04389407136117662	0.0	0.05		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	35	2	rwr	21.0	0.46962025316455697	0.016909285543091204	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	35	3	rwr	21.0	0.4018987341772152	0.014918201310412871	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	35	4	rwr	21.0	0.5582278481012658	0.022085289544459416	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	36	0	rwr	21.0	0.630379746835443	0.036073807765410665	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	36	1	rwr	21.0	0.28354430379746837	0.012321793241968282	0.0	0.0		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	36	2	rwr	21.0	0.6645569620253164	0.02936705051886579	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	36	3	rwr	21.0	0.46518987341772156	0.01798216558016546	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	36	4	rwr	21.0	0.6594936708860759	0.027858649060718287	0.0	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	37	0	rwr	21.0	0.5	0.0225235028129765	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	37	1	rwr	21.0	0.4588607594936709	0.029738161332624163	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	37	2	rwr	21.0	0.6949367088607595	0.02831503262202961	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	37	3	rwr	21.0	0.5386075949367088	0.02156081666488943	0.0	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	37	4	rwr	21.0	0.589873417721519	0.02342308411068184	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	38	0	rwr	21.0	0.48037974683544304	0.017737867607861203	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	38	1	rwr	21.0	0.5968354430379746	0.023515655073357487	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	38	2	rwr	21.0	0.589240506329114	0.021545546008615676	0.0	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	38	3	rwr	21.0	0.5481012658227848	0.029070753480521197	0.04	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	38	4	rwr	21.0	0.7398734177215189	0.04109716584358554	0.04	0.04		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	39	0	rwr	21.0	0.6759493670886076	0.028966641201935317	0.02	0.03		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	39	1	rwr	21.0	0.5417721518987342	0.025334773102957554	0.02	0.01		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	39	2	rwr	21.0	0.5145569620253165	0.02305582026625083	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	39	3	rwr	21.0	0.6455696202531646	0.02750537961064277	0.02	0.02		5	321
+rna_coexp	intogen_temporal_new_shared	native_rna_coexp	0.5	39	4	rwr	21.0	0.5632911392405064	0.023256040721393128	0.02	0.02		5	321

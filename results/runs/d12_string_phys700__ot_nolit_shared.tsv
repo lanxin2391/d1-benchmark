@@ -1,101 +1,401 @@
 network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
-string_phys700	ot_nolit_shared	native_string_phys700		0	0	degree		0.6926906858030628	0.029614843761843715	0.0	0.01	0.032	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		0	1	degree		0.7341643855885182	0.0393852852101621	0.06	0.03	0.044	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		0	2	degree		0.7181475179403713	0.04017510543169232	0.06	0.04	0.036	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		0	3	degree		0.7623560736902706	0.06004667428127312	0.08	0.05	0.042	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		0	4	degree		0.72573402417962	0.04664363125727248	0.04	0.04	0.042	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		1	0	degree		0.6964563142709181	0.03051987626127447	0.02	0.01	0.04	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		1	1	degree		0.7687948509284603	0.06443905169484694	0.1	0.07	0.046	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		1	2	degree		0.7625360656950506	0.06207660409446085	0.1	0.06	0.038	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		1	3	degree		0.6729922279792746	0.03149046225113669	0.02	0.02	0.034	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		1	4	degree		0.7370754173862982	0.039841418458817585	0.0	0.02	0.04	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		2	0	degree		0.8188503366131539	0.06748450130685234	0.06	0.04	0.052	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		2	1	degree		0.7272249759562033	0.03568447610841281	0.0	0.0	0.042	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		2	2	degree		0.7340312199452541	0.03406684868226977	0.0	0.01	0.038	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		2	3	degree		0.6601468048359239	0.041262878418849694	0.08	0.05	0.028	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		2	4	degree		0.7001655152561889	0.04855369508920111	0.08	0.06	0.038	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		3	0	degree		0.7885107642228305	0.051561458845957316	0.04	0.02	0.048	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		3	1	degree		0.745261522527188	0.04264909608028047	0.06	0.06	0.04	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		3	2	degree		0.6914478064659317	0.03238578673123253	0.02	0.01	0.036	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		3	3	degree		0.783815486470927	0.06783176405346175	0.08	0.06	0.048	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		3	4	degree		0.6268998272884283	0.029627027819121566	0.04	0.03	0.03	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		4	0	degree		0.6944588296219576	0.04958125029796633	0.08	0.05	0.03	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		4	1	degree		0.7269512465783827	0.042197390154743525	0.06	0.04	0.038	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		4	2	degree		0.7630465339942296	0.040668142097177375	0.02	0.02	0.044	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		4	3	degree		0.7158031088082902	0.04641358828556648	0.06	0.06	0.042	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		4	4	degree		0.7352187679907887	0.03997895242250819	0.02	0.01	0.046	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		5	0	degree		0.6767182067026707	0.03569811590441363	0.04	0.03	0.028	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		5	1	degree		0.7559517644447732	0.050897090610863546	0.1	0.05	0.04	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		5	2	degree		0.7666863949101133	0.06186467582746552	0.08	0.06	0.046	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		5	3	degree		0.7124064478986759	0.03428264292622739	0.0	0.0	0.038	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		5	4	degree		0.7238701784686241	0.037912481053939816	0.02	0.02	0.042	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		6	0	degree		0.730235999112229	0.04020751111034837	0.04	0.03	0.04	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		6	1	degree		0.7281719316416364	0.05135124411959865	0.1	0.05	0.04	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		6	2	degree		0.6814085965820817	0.03344353188207813	0.02	0.04	0.034	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		6	3	degree		0.7274755325273461	0.035309187835199256	0.02	0.03	0.032	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		6	4	degree		0.766457973517559	0.0574320390799064	0.06	0.04	0.052	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		7	0	degree		0.7264037878227416	0.04120635375036952	0.04	0.03	0.038	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		7	1	degree		0.7048753421617222	0.03870302819374935	0.06	0.04	0.036	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		7	2	degree		0.8218021750388399	0.05808691337963134	0.02	0.03	0.056	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		7	3	degree		0.6928108808290155	0.0348555944080875	0.06	0.03	0.03	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		7	4	degree		0.6947538860103628	0.04528782992198149	0.06	0.04	0.038	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		8	0	degree		0.7144040837463934	0.036771387814552886	0.02	0.02	0.034	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		8	1	degree		0.7524080787156913	0.04783760212873802	0.06	0.04	0.044	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		8	2	degree		0.7064955241547681	0.036110019702957546	0.04	0.03	0.034	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		8	3	degree		0.7079303396660909	0.04434327010168585	0.06	0.05	0.042	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		8	4	degree		0.7526482440990214	0.04579565448817758	0.06	0.04	0.042	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		9	0	degree		0.7272101797736185	0.0402149651633345	0.04	0.03	0.042	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		9	1	degree		0.6825257083672411	0.03614098161033613	0.04	0.04	0.028	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		9	2	degree		0.723045054375971	0.03819230754246031	0.04	0.02	0.044	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700		9	3	degree		0.7731793321819228	0.06546853573217007	0.1	0.07	0.048	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700		9	4	degree		0.7328223949337939	0.039426352155238584	0.02	0.03	0.038	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	0	rwr	21.0	0.8653621365687652	0.1394815091971625	0.16	0.18	0.06	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	1	rwr	21.0	0.9047125841532884	0.1862731187245364	0.3	0.19	0.064	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	2	rwr	21.0	0.8089147000073981	0.22747406118454797	0.22	0.16	0.05	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	3	rwr	21.0	0.8837435233160622	0.2543498381474948	0.26	0.2	0.058	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	4	rwr	21.0	0.8446747265400114	0.28853754310988067	0.34	0.2	0.056	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	0	rwr	21.0	0.7918473033957238	0.09262504842088172	0.14	0.14	0.05	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	1	rwr	21.0	0.899918620995783	0.37277881339522895	0.36	0.23	0.062	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	2	rwr	21.0	0.9000517866390471	0.24991379921518803	0.26	0.2	0.064	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	3	rwr	21.0	0.8564407023603915	0.18841309074077936	0.24	0.19	0.06	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	4	rwr	21.0	0.8581390328151985	0.18882481794076109	0.3	0.18	0.056	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	0	rwr	21.0	0.8837020048827402	0.29005792232744654	0.32	0.23	0.06	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	1	rwr	21.0	0.8352593030998003	0.15907784278270803	0.24	0.17	0.056	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	2	rwr	21.0	0.9166826958644669	0.18488612566613677	0.22	0.2	0.064	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	3	rwr	21.0	0.8430915371329879	0.21063641629935512	0.16	0.15	0.058	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	4	rwr	21.0	0.8481505469199769	0.24226214941621146	0.28	0.2	0.06	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	0	rwr	21.0	0.9263150107272323	0.2578905936228111	0.3	0.24	0.064	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	1	rwr	21.0	0.8794850928460456	0.18963432261049246	0.22	0.16	0.06	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	2	rwr	21.0	0.7985943626544352	0.13585021607263517	0.18	0.16	0.056	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	3	rwr	21.0	0.9103914795624641	0.2788731292386491	0.3	0.21	0.064	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	4	rwr	21.0	0.8005541162924582	0.19645436977105363	0.24	0.16	0.05	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	0	rwr	21.0	0.8727528297699193	0.1497800084923836	0.18	0.13	0.062	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	1	rwr	21.0	0.812110675445735	0.20404980442432585	0.28	0.18	0.054	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	2	rwr	21.0	0.8845527853813715	0.11039992792885822	0.1	0.15	0.062	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	3	rwr	21.0	0.8821171560161196	0.3145847617437488	0.3	0.2	0.062	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	4	rwr	21.0	0.8567645365572827	0.2632505056989828	0.28	0.22	0.056	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	0	rwr	21.0	0.8718206702670711	0.13863312581985437	0.2	0.18	0.064	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	1	rwr	21.0	0.8654879041207368	0.21583909207451427	0.22	0.17	0.056	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	2	rwr	21.0	0.8810090996522897	0.32680981303118034	0.3	0.19	0.056	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	3	rwr	21.0	0.8231865284974094	0.14377366088696475	0.22	0.17	0.058	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	4	rwr	21.0	0.8654432930339666	0.22483081651804754	0.32	0.2	0.06	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	0	rwr	21.0	0.8461566915735741	0.15235024140173242	0.22	0.14	0.06	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	1	rwr	21.0	0.8519419989642671	0.24924885292447482	0.3	0.23	0.056	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	2	rwr	21.0	0.8337057039283865	0.17745179887953685	0.24	0.15	0.05	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	3	rwr	21.0	0.8704087507196315	0.16701458206905426	0.24	0.16	0.06	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	4	rwr	21.0	0.8949337938975244	0.2270932894445896	0.22	0.17	0.064	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	0	rwr	21.0	0.9096397129540579	0.23492834475601168	0.26	0.21	0.06	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	1	rwr	21.0	0.8601168898424207	0.14236422090153678	0.22	0.16	0.058	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	2	rwr	21.0	0.9266405267441	0.35619743962014955	0.4	0.24	0.062	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	3	rwr	21.0	0.8032887161773172	0.21720085592762747	0.18	0.15	0.054	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	4	rwr	21.0	0.8345063327576281	0.1522558974488955	0.16	0.18	0.06	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	0	rwr	21.0	0.8483539246874306	0.15908458740570391	0.2	0.18	0.054	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	1	rwr	21.0	0.8618184508396833	0.19364213625725393	0.22	0.21	0.058	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	2	rwr	21.0	0.8629429607161352	0.14716768299155503	0.18	0.17	0.058	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	3	rwr	21.0	0.8449913644214162	0.2675734249181975	0.28	0.2	0.06	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	4	rwr	21.0	0.8908750719631549	0.2490884810327892	0.2	0.17	0.064	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	0	rwr	21.0	0.858681660131686	0.24821763751424641	0.22	0.17	0.058	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	1	rwr	21.0	0.8129762521269512	0.14164287862422487	0.18	0.14	0.052	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	2	rwr	21.0	0.8477842716579121	0.1626588249918324	0.22	0.14	0.06	35	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	3	rwr	21.0	0.9011658031088081	0.20178881154480288	0.28	0.21	0.062	36	1966
-string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	4	rwr	21.0	0.8672783534830166	0.223665644942899	0.28	0.19	0.06	36	1966
+string_phys700	ot_nolit_shared	native_string_phys700		0	0	degree		0.6068931068931069	0.17070087867518108	0.22	0.13		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		0	1	degree		0.6382617382617383	0.1679401514061655	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		0	2	degree		0.7052447552447552	0.2588213114834835	0.22	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		0	3	degree		0.6059454191033139	0.20584500525806815	0.24	0.16		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		0	4	degree		0.7456140350877193	0.2923502359821	0.26	0.22		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		1	0	degree		0.7223276723276724	0.22078184417643504	0.26	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		1	1	degree		0.5904095904095904	0.18033325514372445	0.18	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		1	2	degree		0.6398101898101898	0.1820614990815014	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		1	3	degree		0.7133528265107212	0.2617646141217622	0.26	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		1	4	degree		0.6412768031189084	0.2985136981571837	0.22	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		2	0	degree		0.6366633366633366	0.19173959954821904	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		2	1	degree		0.6295204795204796	0.18905805510591442	0.24	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		2	2	degree		0.6026473526473526	0.23089496896579703	0.22	0.12		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		2	3	degree		0.7190058479532163	0.23004828533321536	0.26	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		2	4	degree		0.717690058479532	0.25472579876662127	0.28	0.22		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		3	0	degree		0.6881118881118882	0.19226215488158876	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		3	1	degree		0.6352147852147852	0.27328922732936795	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		3	2	degree		0.665934065934066	0.22475373783024233	0.24	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		3	3	degree		0.650438596491228	0.23177987049740112	0.28	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		3	4	degree		0.6619883040935672	0.20502518842327372	0.26	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		4	0	degree		0.6621378621378621	0.19515072490708274	0.24	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		4	1	degree		0.5765234765234766	0.16090091799498435	0.16	0.14		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		4	2	degree		0.7174825174825173	0.2518359201392697	0.28	0.22		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		4	3	degree		0.6515107212475634	0.1935680245026553	0.22	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		4	4	degree		0.6956627680311891	0.33559495998567634	0.28	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		5	0	degree		0.6294705294705294	0.18143357527903498	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		5	1	degree		0.6348651348651349	0.1880383902724486	0.2	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		5	2	degree		0.7264235764235765	0.2740107430465727	0.28	0.22		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		5	3	degree		0.6544346978557505	0.2201205065007339	0.26	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		5	4	degree		0.6678362573099415	0.24847351327812003	0.24	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		6	0	degree		0.574975024975025	0.1617065770958614	0.12	0.14		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		6	1	degree		0.6930069930069931	0.2742078615185413	0.26	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		6	2	degree		0.7136363636363637	0.22237904649199342	0.24	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		6	3	degree		0.667056530214425	0.23987905678245505	0.28	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		6	4	degree		0.6510721247563352	0.21953545357679588	0.26	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		7	0	degree		0.6110889110889111	0.1754267405289729	0.22	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		7	1	degree		0.6655844155844157	0.2103773160924127	0.2	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		7	2	degree		0.6813686313686314	0.2523905851656381	0.24	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		7	3	degree		0.6524853801169591	0.2392648258660186	0.28	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		7	4	degree		0.6933235867446393	0.2166909334040297	0.22	0.2		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		8	0	degree		0.6901098901098901	0.2481673743963388	0.22	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		8	1	degree		0.6082417582417582	0.1783940879296895	0.18	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		8	2	degree		0.6906093906093906	0.23572170899973668	0.32	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		8	3	degree		0.6599902534113061	0.23620954059978833	0.24	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		8	4	degree		0.6554580896686161	0.2434910277451358	0.2	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		9	0	degree		0.6273726273726273	0.19904481146131875	0.2	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		9	1	degree		0.6461538461538461	0.19426847281037146	0.22	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		9	2	degree		0.6570929070929071	0.2474241541031838	0.26	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		9	3	degree		0.7114522417153996	0.26219979126459864	0.28	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		9	4	degree		0.6624269005847953	0.21384987804600916	0.22	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		10	0	degree		0.6696303696303696	0.21135160800115002	0.26	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		10	1	degree		0.6643356643356644	0.23090944775290437	0.22	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		10	2	degree		0.6332667332667333	0.1839259681585266	0.2	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		10	3	degree		0.6923489278752437	0.24483164470172636	0.24	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		10	4	degree		0.648635477582846	0.25916312386696017	0.22	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		11	0	degree		0.6487012987012987	0.19453071329588006	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		11	1	degree		0.6929070929070928	0.26618047935679967	0.24	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		11	2	degree		0.7235764235764236	0.2550648087768832	0.28	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		11	3	degree		0.605214424951267	0.1902863749236328	0.2	0.16		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		11	4	degree		0.6416666666666667	0.22624800086025887	0.22	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		12	0	degree		0.6749250749250749	0.2858674826041658	0.26	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		12	1	degree		0.6434065934065933	0.15819472079016622	0.18	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		12	2	degree		0.7061438561438561	0.2554065444142095	0.26	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		12	3	degree		0.651608187134503	0.2537112304078555	0.28	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		12	4	degree		0.6322124756335282	0.19057741729022074	0.24	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		13	0	degree		0.5996003996003996	0.2300825647452028	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		13	1	degree		0.6445054945054944	0.2225284200600237	0.2	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		13	2	degree		0.736063936063936	0.23026436565498556	0.3	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		13	3	degree		0.7256335282651072	0.23504745450474135	0.26	0.2		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		13	4	degree		0.6014132553606238	0.21735245889159877	0.2	0.14		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		14	0	degree		0.7381618381618381	0.28908638562027256	0.2	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		14	1	degree		0.5996003996003997	0.22496227444093725	0.26	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		14	2	degree		0.5791208791208792	0.1782286363584464	0.24	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		14	3	degree		0.6822124756335283	0.2411746061786886	0.16	0.16		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		14	4	degree		0.6953703703703704	0.251774332356187	0.3	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		15	0	degree		0.6776223776223776	0.26680282098395247	0.2	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		15	1	degree		0.6624375624375625	0.24075639643839913	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		15	2	degree		0.6093406593406594	0.16886418408690473	0.26	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		15	3	degree		0.6820662768031189	0.2379570341265304	0.26	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		15	4	degree		0.6786549707602337	0.256895287419547	0.26	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		16	0	degree		0.723976023976024	0.28731104325780776	0.3	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		16	1	degree		0.6168331668331669	0.20389329879819973	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		16	2	degree		0.6238261738261739	0.16460434401133447	0.16	0.14		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		16	3	degree		0.674074074074074	0.2530566612894503	0.22	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		16	4	degree		0.6630116959064327	0.22367403671752414	0.3	0.2		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		17	0	degree		0.750999000999001	0.2662622862616841	0.3	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		17	1	degree		0.630969030969031	0.15059960740274186	0.16	0.14		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		17	2	degree		0.6895604395604396	0.22065453531534712	0.24	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		17	3	degree		0.7023879142300193	0.2946824938149384	0.3	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		17	4	degree		0.5409356725146199	0.2139179064672735	0.2	0.13		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		18	0	degree		0.5983016983016983	0.139822329319381	0.18	0.13		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		18	1	degree		0.6171828171828173	0.15002179163092647	0.18	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		18	2	degree		0.7046453546453547	0.35359184041608316	0.28	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		18	3	degree		0.6445906432748538	0.2032592351558322	0.26	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		18	4	degree		0.7399610136452242	0.3400900127325879	0.28	0.22		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		19	0	degree		0.6493506493506493	0.1872884578977824	0.22	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		19	1	degree		0.6352647352647351	0.19529224424580988	0.2	0.13		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		19	2	degree		0.6530969030969032	0.24655986084107412	0.24	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		19	3	degree		0.7231481481481482	0.29275632920517247	0.28	0.22		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		19	4	degree		0.655214424951267	0.22218268050133147	0.24	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		20	0	degree		0.6646853146853147	0.2085735329350824	0.18	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		20	1	degree		0.7141858141858142	0.2676678035581694	0.26	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		20	2	degree		0.6495004995004995	0.18971427755682485	0.22	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		20	3	degree		0.6139376218323587	0.1966884877137055	0.24	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		20	4	degree		0.6645711500974659	0.2700455413836048	0.32	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		21	0	degree		0.6087912087912087	0.1419652895019598	0.14	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		21	1	degree		0.6468531468531469	0.2147620588078455	0.22	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		21	2	degree		0.6687312687312688	0.23959973210474889	0.24	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		21	3	degree		0.6580896686159845	0.24028727892471335	0.26	0.15		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		21	4	degree		0.724317738791423	0.30043103457850784	0.28	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		22	0	degree		0.6495004995004995	0.2654553250038796	0.26	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		22	1	degree		0.6765734265734267	0.16548746401388262	0.18	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		22	2	degree		0.6605894105894106	0.2692220725841675	0.28	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		22	3	degree		0.6985867446393763	0.24981364725990343	0.24	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		22	4	degree		0.6214912280701754	0.1970881333469827	0.22	0.14		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		23	0	degree		0.7055444555444556	0.35677255418328807	0.3	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		23	1	degree		0.543956043956044	0.1301231897047982	0.12	0.13		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		23	2	degree		0.7179320679320679	0.22341075041467848	0.24	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		23	3	degree		0.6831384015594542	0.1980778490002874	0.24	0.2		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		23	4	degree		0.6623294346978559	0.2322484832622054	0.26	0.16		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		24	0	degree		0.7296203796203796	0.3254372550782665	0.34	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		24	1	degree		0.6669330669330669	0.2842802399805097	0.24	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		24	2	degree		0.6266733266733266	0.1410172207903443	0.14	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		24	3	degree		0.6260233918128655	0.22252706682028828	0.22	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		24	4	degree		0.6546783625730993	0.19074072837639344	0.2	0.2		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		25	0	degree		0.6805694305694305	0.22559397859716945	0.26	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		25	1	degree		0.6607392607392607	0.2421498623497963	0.18	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		25	2	degree		0.586063936063936	0.16575376846650772	0.16	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		25	3	degree		0.7040448343079923	0.2675756341671942	0.28	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		25	4	degree		0.6736354775828459	0.2191741169097246	0.28	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		26	0	degree		0.6684815184815185	0.2831880061186582	0.24	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		26	1	degree		0.6617382617382618	0.24968994327643765	0.26	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		26	2	degree		0.6408091908091907	0.18977156401282225	0.2	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		26	3	degree		0.6723196881091618	0.19789884738937116	0.22	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		26	4	degree		0.6601851851851852	0.19316570843134004	0.24	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		27	0	degree		0.7147352647352647	0.2450721572924468	0.26	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		27	1	degree		0.6941558441558442	0.2821685160485869	0.3	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		27	2	degree		0.6757242757242757	0.20969889738668962	0.26	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		27	3	degree		0.60229044834308	0.22351953323747747	0.18	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		27	4	degree		0.6258284600389863	0.18595752591683823	0.22	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		28	0	degree		0.6894605394605395	0.2525879403505547	0.3	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		28	1	degree		0.6808691308691309	0.19402056544269913	0.24	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		28	2	degree		0.6282217782217783	0.15534956001902864	0.18	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		28	3	degree		0.6342592592592592	0.23447583639064493	0.26	0.16		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		28	4	degree		0.670224171539961	0.26861687598720635	0.2	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		29	0	degree		0.6989010989010989	0.23900911814782516	0.26	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		29	1	degree		0.6617382617382617	0.2327421992601756	0.24	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		29	2	degree		0.5666833166833166	0.18705209312263776	0.18	0.13		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		29	3	degree		0.7467348927875244	0.273262333937199	0.28	0.22		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		29	4	degree		0.6331384015594542	0.18177357880789452	0.22	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		30	0	degree		0.7588411588411589	0.27541954980583117	0.32	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		30	1	degree		0.6125374625374624	0.19355042694626476	0.16	0.15		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		30	2	degree		0.7148351648351648	0.2586740479131109	0.26	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		30	3	degree		0.5914717348927875	0.2108167802222724	0.22	0.13		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		30	4	degree		0.6286062378167642	0.19176435645021545	0.2	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		31	0	degree		0.6068931068931068	0.31522594663278025	0.24	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		31	1	degree		0.6305694305694306	0.1729147965458687	0.18	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		31	2	degree		0.7289210789210788	0.22648274254350495	0.3	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		31	3	degree		0.6506335282651072	0.23277030728381215	0.24	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		31	4	degree		0.6898635477582845	0.19297702639669895	0.2	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		32	0	degree		0.7022477522477522	0.29786112072333315	0.3	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		32	1	degree		0.63996003996004	0.2125540626690367	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		32	2	degree		0.6243256743256744	0.21466560782835944	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		32	3	degree		0.7504385964912281	0.27070856682959704	0.26	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		32	4	degree		0.594785575048733	0.1485331568585651	0.18	0.12		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		33	0	degree		0.6356143856143857	0.250346435595933	0.28	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		33	1	degree		0.6367132867132868	0.20725000079135295	0.22	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		33	2	degree		0.6559440559440559	0.22430059997924412	0.2	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		33	3	degree		0.6855263157894738	0.17990546128840432	0.16	0.18		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		33	4	degree		0.6976608187134503	0.2690396060206496	0.3	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		34	0	degree		0.6939560439560438	0.22999093768908513	0.26	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		34	1	degree		0.6389610389610391	0.20548855851504558	0.28	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		34	2	degree		0.7144855144855146	0.2420226027627651	0.24	0.22		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		34	3	degree		0.6348927875243665	0.21426754226437741	0.2	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		34	4	degree		0.6242690058479532	0.219140991581515	0.16	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		35	0	degree		0.6795204795204796	0.2598567614703549	0.24	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		35	1	degree		0.701998001998002	0.2222273993506938	0.22	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		35	2	degree		0.6384115884115884	0.2243242335931369	0.2	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		35	3	degree		0.6544346978557505	0.21769474129207644	0.26	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		35	4	degree		0.6374269005847953	0.20812445005983943	0.26	0.16		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		36	0	degree		0.6056943056943057	0.18014621087877203	0.14	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		36	1	degree		0.5804695304695305	0.17477139264636837	0.2	0.12		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		36	2	degree		0.6829170829170829	0.2247404488885894	0.22	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		36	3	degree		0.7211013645224171	0.36528200099197483	0.34	0.21		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		36	4	degree		0.7085769980506823	0.2092428179239046	0.24	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		37	0	degree		0.7231768231768232	0.31658185211224127	0.26	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		37	1	degree		0.6483516483516484	0.17871570454361627	0.22	0.14		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		37	2	degree		0.6604395604395604	0.17390562595156034	0.2	0.18		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		37	3	degree		0.6551169590643275	0.2816797109129069	0.26	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		37	4	degree		0.6226120857699806	0.20024357549804328	0.22	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		38	0	degree		0.6525974025974026	0.243016048575334	0.24	0.19		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		38	1	degree		0.7291708291708292	0.2472028348317756	0.26	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		38	2	degree		0.5729270729270728	0.18548087782867873	0.18	0.11		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		38	3	degree		0.6648148148148149	0.2221101645132254	0.26	0.2		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		38	4	degree		0.6812865497076024	0.2236008855877581	0.2	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		39	0	degree		0.6687812187812189	0.32304686022516615	0.3	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		39	1	degree		0.6198801198801197	0.16032538562990883	0.2	0.16		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		39	2	degree		0.6315184815184816	0.17288088915722385	0.2	0.17		35	321
+string_phys700	ot_nolit_shared	native_string_phys700		39	3	degree		0.6785087719298246	0.23565477583054023	0.24	0.19		36	321
+string_phys700	ot_nolit_shared	native_string_phys700		39	4	degree		0.7107699805068227	0.24886035222953654	0.28	0.17		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	0	rwr	21.0	0.7387612387612388	0.3836555332530062	0.34	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	1	rwr	21.0	0.7495504495504495	0.3221801252651496	0.38	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	2	rwr	21.0	0.8505494505494505	0.42414097913137605	0.42	0.3		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	3	rwr	21.0	0.7507797270955165	0.36816232543884997	0.3	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	0	4	rwr	21.0	0.871345029239766	0.5306142980977289	0.48	0.32		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	0	rwr	21.0	0.8346653346653347	0.3709984420638115	0.4	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	1	rwr	21.0	0.7098901098901098	0.3829473562032398	0.4	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	2	rwr	21.0	0.7497502497502497	0.35187163979783137	0.32	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	3	rwr	21.0	0.8293372319688108	0.41133095920254725	0.4	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	1	4	rwr	21.0	0.7613060428849903	0.43462300849367913	0.42	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	0	rwr	21.0	0.7703296703296703	0.39090739385258283	0.36	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	1	rwr	21.0	0.7756243756243757	0.4528121327861947	0.4	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	2	rwr	21.0	0.7421578421578422	0.4314757078046441	0.38	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	3	rwr	21.0	0.8217348927875244	0.33886197226932857	0.34	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	2	4	rwr	21.0	0.8332358674463938	0.45441413162602134	0.48	0.31		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	0	rwr	21.0	0.8536463536463537	0.4011158671032323	0.36	0.3		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	1	rwr	21.0	0.7931068931068931	0.39635618946939455	0.38	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	2	rwr	21.0	0.7684315684315683	0.42505428309403176	0.38	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	3	rwr	21.0	0.7957115009746588	0.49136958392742985	0.5	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	3	4	rwr	21.0	0.7850877192982455	0.4203898153917597	0.38	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	0	rwr	21.0	0.8185814185814185	0.36202595860619197	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	1	rwr	21.0	0.7312687312687313	0.39750538277975833	0.38	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	2	rwr	21.0	0.8073926073926074	0.42536701356211226	0.42	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	3	rwr	21.0	0.7916666666666666	0.45610864373148907	0.38	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	4	4	rwr	21.0	0.7985380116959064	0.4024233603819804	0.42	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	0	rwr	21.0	0.7573426573426574	0.3962196922168665	0.38	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	1	rwr	21.0	0.8114885114885115	0.38606304010888143	0.38	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	2	rwr	21.0	0.8641358641358642	0.5409976521122434	0.4	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	3	rwr	21.0	0.7406432748538011	0.3375509939814149	0.38	0.24		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	5	4	rwr	21.0	0.7689083820662768	0.3871676542164034	0.36	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	0	rwr	21.0	0.7305694305694306	0.30413867290281305	0.28	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	1	rwr	21.0	0.8022977022977024	0.46677076991852495	0.38	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	2	rwr	21.0	0.8169830169830169	0.4006020228205004	0.4	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	3	rwr	21.0	0.7844054580896686	0.39981319892172656	0.42	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	6	4	rwr	21.0	0.8155945419103313	0.4817755985870942	0.46	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	0	rwr	21.0	0.8298701298701299	0.5140405306639833	0.42	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	1	rwr	21.0	0.778071928071928	0.45581886450419734	0.4	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	2	rwr	21.0	0.8316683316683317	0.4488364174645148	0.44	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	3	rwr	21.0	0.69317738791423	0.30265459907765424	0.3	0.24		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	7	4	rwr	21.0	0.8352826510721247	0.3500727463830402	0.36	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	0	rwr	21.0	0.8506493506493507	0.5058166869102547	0.48	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	1	rwr	21.0	0.7488511488511489	0.3606915452094879	0.36	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	2	rwr	21.0	0.8123876123876124	0.4557217607602225	0.42	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	3	rwr	21.0	0.7696881091617933	0.4097269852157224	0.36	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	8	4	rwr	21.0	0.8118908382066278	0.4398354433187251	0.44	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	0	rwr	21.0	0.7916083916083917	0.38315644755880635	0.34	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	1	rwr	21.0	0.7855144855144855	0.38921536390808403	0.42	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	2	rwr	21.0	0.8001998001998002	0.4763007915377697	0.4	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	3	rwr	21.0	0.7929337231968812	0.37411711772673056	0.38	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	9	4	rwr	21.0	0.8099415204678362	0.43797134374309465	0.38	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	10	0	rwr	21.0	0.847052947052947	0.5396137435805762	0.44	0.3		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	10	1	rwr	21.0	0.7779220779220779	0.36006300421538134	0.44	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	10	2	rwr	21.0	0.7867632367632367	0.3629297495001349	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	10	3	rwr	21.0	0.7950292397660819	0.4366691743672203	0.4	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	10	4	rwr	21.0	0.7873294346978557	0.35522159800128406	0.36	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	11	0	rwr	21.0	0.7611388611388611	0.3827329911207726	0.38	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	11	1	rwr	21.0	0.8497502497502498	0.42166251658782994	0.42	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	11	2	rwr	21.0	0.8633366633366634	0.5107377428139838	0.44	0.3		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	11	3	rwr	21.0	0.7654970760233919	0.4735639963747569	0.44	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	11	4	rwr	21.0	0.704775828460039	0.3088652073119121	0.26	0.23		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	12	0	rwr	21.0	0.8274725274725273	0.5714202897841496	0.44	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	12	1	rwr	21.0	0.7349650349650351	0.2682606218661695	0.32	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	12	2	rwr	21.0	0.8310689310689311	0.42623775853786205	0.42	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	12	3	rwr	21.0	0.7840155945419104	0.4418356344150123	0.4	0.24		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	12	4	rwr	21.0	0.7605263157894736	0.3361233533845896	0.4	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	13	0	rwr	21.0	0.7487512487512488	0.4423076469238092	0.36	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	13	1	rwr	21.0	0.7123876123876125	0.3084474815149401	0.26	0.22		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	13	2	rwr	21.0	0.8233766233766234	0.4333357004812921	0.38	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	13	3	rwr	21.0	0.8469785575048733	0.4847279583365461	0.48	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	13	4	rwr	21.0	0.784307992202729	0.3641216477093655	0.4	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	14	0	rwr	21.0	0.8312687312687312	0.3454013621397582	0.42	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	14	1	rwr	21.0	0.7342657342657342	0.33293456357064993	0.32	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	14	2	rwr	21.0	0.7207792207792209	0.38023998363674893	0.32	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	14	3	rwr	21.0	0.83411306042885	0.5294995647204088	0.42	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	14	4	rwr	21.0	0.8401559454191033	0.4923547866476803	0.48	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	15	0	rwr	21.0	0.8271728271728271	0.4985453861324975	0.36	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	15	1	rwr	21.0	0.7368631368631369	0.30938235146782783	0.38	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	15	2	rwr	21.0	0.7366633366633367	0.38299113004883395	0.34	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	15	3	rwr	21.0	0.7847953216374269	0.3214831238533003	0.28	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	15	4	rwr	21.0	0.8514619883040936	0.5187671411888117	0.44	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	16	0	rwr	21.0	0.8250749250749252	0.4632137678488071	0.42	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	16	1	rwr	21.0	0.731968031968032	0.2912321189509582	0.3	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	16	2	rwr	21.0	0.796003996003996	0.39412635766891546	0.4	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	16	3	rwr	21.0	0.8245614035087719	0.48462466711102686	0.46	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	16	4	rwr	21.0	0.7844054580896687	0.46018192453499535	0.42	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	17	0	rwr	21.0	0.8575424575424575	0.46629783311244083	0.42	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	17	1	rwr	21.0	0.801998001998002	0.3353922611830056	0.32	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	17	2	rwr	21.0	0.8175824175824176	0.431547251306708	0.42	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	17	3	rwr	21.0	0.8621832358674463	0.6125106869419199	0.54	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	17	4	rwr	21.0	0.6632553606237817	0.31151113877276404	0.32	0.23		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	18	0	rwr	21.0	0.735064935064935	0.3486155926147084	0.28	0.22		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	18	1	rwr	21.0	0.8306693306693307	0.44186749051755403	0.46	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	18	2	rwr	21.0	0.7527972027972027	0.4236354552376775	0.38	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	18	3	rwr	21.0	0.7530214424951267	0.35024399147038954	0.36	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	18	4	rwr	21.0	0.8651072124756335	0.5053349469528853	0.44	0.31		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	19	0	rwr	21.0	0.7626373626373627	0.39499306895964525	0.38	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	19	1	rwr	21.0	0.7677322677322677	0.3179092074745691	0.36	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	19	2	rwr	21.0	0.8077922077922077	0.4551546961941946	0.42	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	19	3	rwr	21.0	0.8393762183235867	0.5907715623772856	0.52	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	19	4	rwr	21.0	0.7860623781676412	0.30242755756862655	0.34	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	20	0	rwr	21.0	0.8016983016983017	0.40069267759684746	0.4	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	20	1	rwr	21.0	0.822977022977023	0.5042277542560107	0.4	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	20	2	rwr	21.0	0.8015984015984016	0.3378267344150437	0.36	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	20	3	rwr	21.0	0.7326998050682262	0.33334204257719013	0.36	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	20	4	rwr	21.0	0.7585769980506822	0.3970850834796598	0.36	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	21	0	rwr	21.0	0.7503496503496503	0.3710926898272358	0.36	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	21	1	rwr	21.0	0.7953046953046953	0.30043211520639296	0.32	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	21	2	rwr	21.0	0.8307692307692308	0.47267037085632463	0.44	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	21	3	rwr	21.0	0.8133528265107212	0.5599770817980868	0.46	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	21	4	rwr	21.0	0.7654970760233919	0.41071537231393773	0.38	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	22	0	rwr	21.0	0.727972027972028	0.3243526495278456	0.36	0.22		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	22	1	rwr	21.0	0.839060939060939	0.5042609680136894	0.4	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	22	2	rwr	21.0	0.8497502497502497	0.48733256275919706	0.38	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	22	3	rwr	21.0	0.8424951267056531	0.42619534749903876	0.46	0.31		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	22	4	rwr	21.0	0.7060428849902534	0.3399554406420808	0.34	0.24		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	23	0	rwr	21.0	0.7916083916083916	0.46903897029953423	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	23	1	rwr	21.0	0.7005994005994007	0.2631581332621107	0.32	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	23	2	rwr	21.0	0.82997002997003	0.3836204501718919	0.36	0.3		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	23	3	rwr	21.0	0.8250487329434698	0.4591189244363845	0.4	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	23	4	rwr	21.0	0.7866471734892787	0.4782808676605904	0.44	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	24	0	rwr	21.0	0.8480519480519482	0.5558383927472442	0.44	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	24	1	rwr	21.0	0.7938061938061938	0.44076265300068745	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	24	2	rwr	21.0	0.7393606393606393	0.2902129453338428	0.32	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	24	3	rwr	21.0	0.7563352826510721	0.45879321329960937	0.4	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	24	4	rwr	21.0	0.8248538011695905	0.4004752310596237	0.38	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	25	0	rwr	21.0	0.8189810189810189	0.4615035175794679	0.44	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	25	1	rwr	21.0	0.7702297702297702	0.30691360221522734	0.32	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	25	2	rwr	21.0	0.6964035964035965	0.31537435091914334	0.3	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	25	3	rwr	21.0	0.8452241715399611	0.5564981054134858	0.44	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	25	4	rwr	21.0	0.776803118908382	0.371019380202806	0.38	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	26	0	rwr	21.0	0.7992007992007991	0.36697099832199553	0.4	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	26	1	rwr	21.0	0.8418581418581418	0.5372352174928761	0.44	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	26	2	rwr	21.0	0.7675324675324676	0.3575303200159462	0.36	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	26	3	rwr	21.0	0.7879142300194932	0.42835840777208484	0.38	0.23		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	26	4	rwr	21.0	0.7893762183235867	0.46039315534590597	0.42	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	27	0	rwr	21.0	0.8217782217782218	0.41345611557319634	0.46	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	27	1	rwr	21.0	0.802097902097902	0.3729535565069098	0.34	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	27	2	rwr	21.0	0.7770229770229771	0.40578631147938793	0.42	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	27	3	rwr	21.0	0.7600389863547758	0.45622352094176183	0.42	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	27	4	rwr	21.0	0.804775828460039	0.4713181245537481	0.4	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	28	0	rwr	21.0	0.8299700299700299	0.4389473326341294	0.46	0.31		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	28	1	rwr	21.0	0.7987012987012987	0.3458630518892809	0.36	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	28	2	rwr	21.0	0.7702297702297702	0.33022579815211384	0.36	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	28	3	rwr	21.0	0.7870370370370371	0.44784611754680126	0.32	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	28	4	rwr	21.0	0.7415204678362574	0.34899400151419036	0.32	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	29	0	rwr	21.0	0.8167832167832169	0.446503871314915	0.42	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	29	1	rwr	21.0	0.8219780219780219	0.4017483121421349	0.36	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	29	2	rwr	21.0	0.6854145854145853	0.3291546593821342	0.3	0.2		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	29	3	rwr	21.0	0.8302144249512672	0.4774469461134751	0.5	0.31		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	29	4	rwr	21.0	0.8101364522417154	0.3935346012464694	0.38	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	30	0	rwr	21.0	0.8935064935064935	0.5816048682633239	0.48	0.31		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	30	1	rwr	21.0	0.702997002997003	0.2774016546253665	0.26	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	30	2	rwr	21.0	0.8006993006993007	0.37089240356733655	0.32	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	30	3	rwr	21.0	0.7493177387914229	0.38953763993611257	0.38	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	30	4	rwr	21.0	0.7267056530214425	0.2940331682591969	0.38	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	31	0	rwr	21.0	0.6714285714285714	0.34867155901821545	0.34	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	31	1	rwr	21.0	0.8027972027972028	0.4508453682260752	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	31	2	rwr	21.0	0.8643356643356643	0.49062528079841766	0.46	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	31	3	rwr	21.0	0.7828460038986356	0.3592326622704401	0.36	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	31	4	rwr	21.0	0.8255360623781676	0.4114041270199741	0.38	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	32	0	rwr	21.0	0.8509490509490509	0.5586463676167489	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	32	1	rwr	21.0	0.7384615384615384	0.3420767987839223	0.36	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	32	2	rwr	21.0	0.7329670329670329	0.4482733401580573	0.42	0.24		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	32	3	rwr	21.0	0.8752436647173489	0.4664882172172773	0.46	0.3		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	32	4	rwr	21.0	0.7299220272904483	0.27397761333503656	0.26	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	33	0	rwr	21.0	0.6946053946053946	0.33663508810357406	0.3	0.21		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	33	1	rwr	21.0	0.82007992007992	0.4085316319674062	0.44	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	33	2	rwr	21.0	0.7751248751248752	0.4235608620088506	0.36	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	33	3	rwr	21.0	0.8190058479532164	0.3674503936835228	0.36	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	33	4	rwr	21.0	0.8216374269005848	0.5235736930781744	0.38	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	34	0	rwr	21.0	0.7791208791208791	0.3249159819680767	0.38	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	34	1	rwr	21.0	0.7758241758241757	0.5089308657920857	0.34	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	34	2	rwr	21.0	0.8496503496503497	0.5227124287039551	0.44	0.29		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	34	3	rwr	21.0	0.7752436647173488	0.4123641029229599	0.36	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	34	4	rwr	21.0	0.7698830409356725	0.2899101457552648	0.3	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	35	0	rwr	21.0	0.8245254745254744	0.3825991122997185	0.36	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	35	1	rwr	21.0	0.8037962037962038	0.45060231074302576	0.4	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	35	2	rwr	21.0	0.8052947052947053	0.4294761325062168	0.44	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	35	3	rwr	21.0	0.7836257309941521	0.42609438341435124	0.38	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	35	4	rwr	21.0	0.7176413255360623	0.30062367637707876	0.32	0.25		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	36	0	rwr	21.0	0.7287712287712288	0.34062420484968414	0.36	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	36	1	rwr	21.0	0.7625374625374625	0.3379300682778738	0.36	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	36	2	rwr	21.0	0.7902097902097903	0.4463349870109524	0.42	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	36	3	rwr	21.0	0.8230994152046784	0.4263387528742412	0.42	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	36	4	rwr	21.0	0.8552631578947368	0.504917756073765	0.42	0.28		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	37	0	rwr	21.0	0.8375624375624376	0.44915104425552577	0.38	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	37	1	rwr	21.0	0.8468531468531468	0.5175499775215026	0.48	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	37	2	rwr	21.0	0.7888111888111888	0.3683595061146655	0.38	0.28		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	37	3	rwr	21.0	0.7153021442495127	0.390600440167055	0.34	0.22		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	37	4	rwr	21.0	0.767543859649123	0.3454442019131178	0.4	0.24		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	38	0	rwr	21.0	0.7611388611388612	0.4059298469780532	0.4	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	38	1	rwr	21.0	0.8138861138861139	0.4123516444818291	0.44	0.26		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	38	2	rwr	21.0	0.749050949050949	0.29140481528044915	0.28	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	38	3	rwr	21.0	0.7876218323586744	0.48262538161564256	0.4	0.27		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	38	4	rwr	21.0	0.8123781676413255	0.4213169892814312	0.42	0.29		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	39	0	rwr	21.0	0.7504495504495505	0.5164744601265198	0.36	0.25		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	39	1	rwr	21.0	0.7000999000999001	0.27181930804974846	0.3	0.23		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	39	2	rwr	21.0	0.8185814185814188	0.357753478501707	0.36	0.27		35	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	39	3	rwr	21.0	0.8101364522417153	0.39865446271217114	0.4	0.26		36	321
+string_phys700	ot_nolit_shared	native_string_phys700	0.5	39	4	rwr	21.0	0.8434697855750487	0.4512560380841753	0.42	0.3		36	321

@@ -1,101 +1,401 @@
 network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
-string_phys700	intogen_temporal_new_shared	native_string_phys700		0	0	degree		0.5885772565017848	0.003961563658231522	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		0	1	degree		0.6548699643039265	0.005686158198785574	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		0	2	degree		0.5217746047934727	0.003081253451937049	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		0	3	degree		0.7656807751147374	0.006149244610564613	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		0	4	degree		0.655634880163182	0.00432577819500273	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		1	0	degree		0.6453340132585416	0.003914421146429172	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		1	1	degree		0.7539010708822029	0.006290296154689801	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		1	2	degree		0.44869964303926574	0.003230542858578208	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		1	3	degree		0.7662927078021418	0.006208667266503784	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		1	4	degree		0.566649668536461	0.004087841220990822	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		2	0	degree		0.798368179500255	0.007828235757807533	0.0	0.0	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		2	1	degree		0.7466088730239673	0.005956894424148124	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		2	2	degree		0.5852116267210608	0.003822596496786795	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		2	3	degree		0.37057623661397243	0.0023409218348469213	0.0	0.0	0.0	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		2	4	degree		0.6860275369709332	0.0044777045851943755	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		3	0	degree		0.7401835798062213	0.005913738684995367	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		3	1	degree		0.5477817440081592	0.0033339928878075593	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		3	2	degree		0.5294237633860276	0.0031589975866049827	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		3	3	degree		0.5671086180520143	0.0035843802528670392	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		3	4	degree		0.795257521672616	0.007699379437523351	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		4	0	degree		0.7579296277409485	0.006729941697704575	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		4	1	degree		0.6543600203977562	0.004045225192057756	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		4	2	degree		0.6550229474757776	0.004462534179646341	0.0	0.0	0.0	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		4	3	degree		0.35869454360020403	0.0029196983494063026	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		4	4	degree		0.7535441101478837	0.0059025507139685955	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		5	0	degree		0.5106578276389597	0.002979705911535934	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		5	1	degree		0.6244773074961755	0.004831371607179885	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		5	2	degree		0.7572667006629271	0.006134081485683225	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		5	3	degree		0.5940336562978072	0.003930720680189502	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		5	4	degree		0.6944926058133606	0.004839419004762722	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		6	0	degree		0.56649668536461	0.003540214877060982	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		6	1	degree		0.7831718510963794	0.006865306534174897	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		6	2	degree		0.5287608363080061	0.003180760855756257	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		6	3	degree		0.5776134625191228	0.003758016715798907	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		6	4	degree		0.7282508924018358	0.005382928998406145	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		7	0	degree		0.6288628250892402	0.003784683225371718	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		7	1	degree		0.5573686894441612	0.0037486354836166174	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		7	2	degree		0.6946455889852117	0.00461893423894555	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		7	3	degree		0.6855175930647629	0.006383791665377698	0.0	0.0	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		7	4	degree		0.6192758796532382	0.004648412242933548	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		8	0	degree		0.5573176950535441	0.0038637075231549786	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		8	1	degree		0.6183579806221315	0.004668859947453064	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		8	2	degree		0.6082100968893422	0.004346558789271218	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		8	3	degree		0.6743498215196329	0.004614557791028162	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		8	4	degree		0.7262621111677716	0.005120904525007713	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		9	0	degree		0.6722080571137176	0.006411739878157463	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		9	1	degree		0.6816930137684855	0.004620471482509573	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		9	2	degree		0.5390107088220296	0.003225489776101338	0.0	0.0	0.002	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		9	3	degree		0.5227434982151963	0.003104240765251847	0.0	0.0	0.0	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700		9	4	degree		0.7740438551759307	0.006785710601562433	0.0	0.0	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	0	rwr	21.0	0.688934217236104	0.00910180353220514	0.0	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	1	rwr	21.0	0.7434982151963285	0.02664096383223084	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	2	rwr	21.0	0.679449260581336	0.007029655568844519	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	3	rwr	21.0	0.8643549209586946	0.05938428185818122	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	4	rwr	21.0	0.8481387047424783	0.018224769828767414	0.0	0.03	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	0	rwr	21.0	0.83161652218256	0.018055724317753825	0.02	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	1	rwr	21.0	0.9006629270780214	0.03167385953415871	0.02	0.02	0.01	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	2	rwr	21.0	0.5461499235084141	0.004541795532284117	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	3	rwr	21.0	0.8506884242733299	0.01304805269852318	0.02	0.01	0.01	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	4	rwr	21.0	0.7089240183579807	0.01672082688671136	0.02	0.02	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	0	rwr	21.0	0.8938296787353391	0.030831946190437474	0.04	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	1	rwr	21.0	0.8287608363080061	0.047577302764921954	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	2	rwr	21.0	0.7521672616012239	0.0189790513420436	0.02	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	3	rwr	21.0	0.5392146863844977	0.003940751303644211	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	4	rwr	21.0	0.8708822029576746	0.01763620797809816	0.02	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	0	rwr	21.0	0.8486486486486486	0.014439030670980721	0.02	0.01	0.01	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	1	rwr	21.0	0.6665986741458441	0.018627408817675422	0.02	0.02	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	2	rwr	21.0	0.6462009178990311	0.0056155242472998215	0.0	0.0	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	3	rwr	21.0	0.7008669046404896	0.011183340369363585	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	4	rwr	21.0	0.9039265680775115	0.024167673079423486	0.02	0.02	0.01	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	0	rwr	21.0	0.8810810810810811	0.02926821553562501	0.02	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	1	rwr	21.0	0.8187659357470678	0.016079145394326595	0.02	0.02	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	2	rwr	21.0	0.8467108618052014	0.00931905634619451	0.0	0.0	0.01	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	3	rwr	21.0	0.4671086180520143	0.011260381414860883	0.02	0.01	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	4	rwr	21.0	0.7782763895971443	0.018517748459100425	0.02	0.01	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	0	rwr	21.0	0.6744518103008669	0.007164932303559706	0.0	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	1	rwr	21.0	0.7099439061703212	0.009542546776600696	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	2	rwr	21.0	0.8780214176440593	0.06261384163837608	0.02	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	3	rwr	21.0	0.7596124426313104	0.01752964958565548	0.0	0.03	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	4	rwr	21.0	0.847526772055074	0.02579920394556021	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	0	rwr	21.0	0.7318714941356451	0.013932514207279457	0.02	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	1	rwr	21.0	0.8283528811830699	0.030383871660336542	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	2	rwr	21.0	0.6412034676185621	0.0064970048562568595	0.0	0.01	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	3	rwr	21.0	0.7322794492605813	0.009890761044894059	0.0	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	4	rwr	21.0	0.847526772055074	0.03371302523673086	0.04	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	0	rwr	21.0	0.7684854665986742	0.00798918411408122	0.0	0.0	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	1	rwr	21.0	0.7266700662927078	0.010782544403753038	0.02	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	2	rwr	21.0	0.8141764405915349	0.011781998465134797	0.0	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	3	rwr	21.0	0.715859255481897	0.010352144334110693	0.0	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	4	rwr	21.0	0.7382967873533912	0.027806183361023487	0.02	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	0	rwr	21.0	0.6786333503314635	0.020149548434851613	0.02	0.01	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	1	rwr	21.0	0.6815910249872514	0.009089939265557775	0.0	0.01	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	2	rwr	21.0	0.7442121366649669	0.08694094671546371	0.04	0.02	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	3	rwr	21.0	0.8480367159612443	0.014688708112724045	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	4	rwr	21.0	0.9065782763895971	0.01991634045775889	0.02	0.02	0.01	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	0	rwr	21.0	0.7152473227944927	0.017665496703268464	0.02	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	1	rwr	21.0	0.8223355430902601	0.040656539271131845	0.02	0.01	0.006	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	2	rwr	21.0	0.7369709331973483	0.01695463250818597	0.02	0.01	0.008	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	3	rwr	21.0	0.6210096889342172	0.010558058034927341	0.02	0.01	0.004	5	1966
-string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	4	rwr	21.0	0.896787353391127	0.023780011344990824	0.0	0.03	0.008	5	1966
+string_phys700	intogen_temporal_new_shared	native_string_phys700		0	0	degree		0.3933544303797468	0.016697229391875183	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		0	1	degree		0.6287974683544304	0.024690081858734985	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		0	2	degree		0.5351265822784811	0.021893802049729252	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		0	3	degree		0.6287974683544304	0.02416364849850186	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		0	4	degree		0.49335443037974686	0.01690135840463554	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		1	0	degree		0.4034810126582279	0.016404816594071194	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		1	1	degree		0.5373417721518988	0.02150055311046023	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		1	2	degree		0.6180379746835443	0.02252352719744024	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		1	3	degree		0.6465189873417722	0.024136934591772324	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		1	4	degree		0.484493670886076	0.021052849886887562	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		2	0	degree		0.584493670886076	0.020618280411205843	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		2	1	degree		0.25063291139240507	0.0121691354634375	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		2	2	degree		0.40569620253164557	0.01463692390900993	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		2	3	degree		0.6901898734177214	0.02836097563907244	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		2	4	degree		0.7439873417721519	0.03687983464198298	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		3	0	degree		0.46867088607594937	0.016752311197231667	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		3	1	degree		0.5787974683544304	0.020135948852132355	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		3	2	degree		0.6237341772151899	0.023957125088751058	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		3	3	degree		0.4816455696202531	0.02282704274325286	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		3	4	degree		0.4924050632911392	0.019469392182614963	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		4	0	degree		0.41772151898734183	0.016133969160256736	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		4	1	degree		0.47531645569620257	0.019205205807237353	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		4	2	degree		0.514240506329114	0.018888813170684568	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		4	3	degree		0.6661392405063291	0.02691518847006652	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		4	4	degree		0.603481012658228	0.022935397935397936	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		5	0	degree		0.3221518987341772	0.013592647201744433	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		5	1	degree		0.55	0.021668756854257485	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		5	2	degree		0.5623417721518987	0.021692161129171987	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		5	3	degree		0.6768987341772152	0.0291124913307009	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		5	4	degree		0.5759493670886076	0.0232112596498493	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		6	0	degree		0.7050632911392405	0.030817765840067356	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		6	1	degree		0.4503164556962025	0.018648420618877542	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		6	2	degree		0.4496835443037975	0.0175275045661791	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		6	3	degree		0.649367088607595	0.02640105788202093	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		6	4	degree		0.43765822784810127	0.015824844399409784	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		7	0	degree		0.5063291139240507	0.018480971554518895	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		7	1	degree		0.5101265822784811	0.020141505411310906	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		7	2	degree		0.5237341772151899	0.02096534662100815	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		7	3	degree		0.5028481012658228	0.018417704362698233	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		7	4	degree		0.6512658227848102	0.03195853449681008	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		8	0	degree		0.6825949367088606	0.04092529790165854	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		8	1	degree		0.36455696202531646	0.013687715672318544	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		8	2	degree		0.4537974683544304	0.016104370838877897	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		8	3	degree		0.6186708860759494	0.023192935805384843	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		8	4	degree		0.5306962025316456	0.018145094466044853	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		9	0	degree		0.47436708860759497	0.017591717695013318	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		9	1	degree		0.4569620253164557	0.017785204062235428	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		9	2	degree		0.5838607594936709	0.025915782854192826	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		9	3	degree		0.4408227848101266	0.015419803440128724	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		9	4	degree		0.7069620253164557	0.032794716598058396	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		10	0	degree		0.6924050632911393	0.028558376571772136	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		10	1	degree		0.48322784810126584	0.02021501616298037	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		10	2	degree		0.48132911392405064	0.01823921810274935	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		10	3	degree		0.474367088607595	0.01697142809180159	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		10	4	degree		0.5496835443037975	0.0190203702075054	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		11	0	degree		0.5870253164556962	0.02383699304282485	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		11	1	degree		0.4677215189873418	0.01846975962102916	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		11	2	degree		0.5848101265822785	0.024184060931967857	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		11	3	degree		0.6082278481012658	0.021701062713223005	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		11	4	degree		0.4335443037974684	0.015461808545456096	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		12	0	degree		0.6617088607594936	0.02705701688189288	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		12	1	degree		0.6781645569620253	0.029172785235526768	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		12	2	degree		0.5161392405063292	0.018857654915532845	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		12	3	degree		0.23829113924050632	0.013472396956625927	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		12	4	degree		0.5544303797468354	0.020037688273581093	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		13	0	degree		0.7066455696202532	0.03255090692933654	0.02	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		13	1	degree		0.6319620253164557	0.024049038493542355	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		13	2	degree		0.4316455696202532	0.015816337868181013	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		13	3	degree		0.46772151898734177	0.017656702691505162	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		13	4	degree		0.4246835443037975	0.01547594250841644	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		14	0	degree		0.4930379746835443	0.019518644151144432	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		14	1	degree		0.5136075949367088	0.017554274552410338	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		14	2	degree		0.6566455696202532	0.0336847266247919	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		14	3	degree		0.5319620253164558	0.01825832245089484	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		14	4	degree		0.47373417721518984	0.017323118031233643	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		15	0	degree		0.5547468354430379	0.020372953987932936	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		15	1	degree		0.6262658227848101	0.024757298618207895	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		15	2	degree		0.4835443037974683	0.01979401508801603	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		15	3	degree		0.5218354430379747	0.020436531863272895	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		15	4	degree		0.4984177215189874	0.01799092964569927	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		16	0	degree		0.4082278481012659	0.01591100525215356	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		16	1	degree		0.5050632911392405	0.019671293793150392	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		16	2	degree		0.5120253164556962	0.020378166498645673	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		16	3	degree		0.5151898734177216	0.019410035312474337	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		16	4	degree		0.7120253164556962	0.032703500250064556	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		17	0	degree		0.2908227848101266	0.012862520264689772	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		17	1	degree		0.7113924050632912	0.03269289533995416	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		17	2	degree		0.6835443037974683	0.029862882632537363	0.0	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		17	3	degree		0.4170886075949367	0.015046138355177305	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		17	4	degree		0.5579113924050633	0.021415521823498325	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		18	0	degree		0.5648734177215191	0.019841929873900228	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		18	1	degree		0.4126582278481013	0.014858371540614531	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		18	2	degree		0.5496835443037974	0.02249591768759464	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		18	3	degree		0.5848101265822785	0.020769176303289505	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		18	4	degree		0.570886075949367	0.028544034030670504	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		19	0	degree		0.3835443037974684	0.014395020466034011	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		19	1	degree		0.5474683544303798	0.02198303088968333	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		19	2	degree		0.6677215189873418	0.028883477633477633	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		19	3	degree		0.5094936708860759	0.019942070582373864	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		19	4	degree		0.5677215189873417	0.02047963474212966	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		20	0	degree		0.6386075949367089	0.02513501992385553	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		20	1	degree		0.5015822784810127	0.018643546801597934	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		20	2	degree		0.4553797468354431	0.016243835576420784	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		20	3	degree		0.5427215189873418	0.019956874251705267	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		20	4	degree		0.5449367088607595	0.026794125592082378	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		21	0	degree		0.4493670886075949	0.015762292960480692	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		21	1	degree		0.3598101265822785	0.014513115356592936	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		21	2	degree		0.6284810126582279	0.02297023437304912	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		21	3	degree		0.6822784810126582	0.028849100244431145	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		21	4	degree		0.5566455696202531	0.02407786580035024	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		22	0	degree		0.594620253164557	0.021518795548904325	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		22	1	degree		0.6341772151898735	0.025217348807204342	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		22	2	degree		0.30411392405063287	0.013083548063453531	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		22	3	degree		0.614240506329114	0.022329858202935173	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		22	4	degree		0.5278481012658228	0.021030507449592548	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		23	0	degree		0.48955696202531646	0.018181122868423306	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		23	1	degree		0.4357594936708861	0.015557738701096203	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		23	2	degree		0.5974683544303797	0.021286407515527205	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		23	3	degree		0.5158227848101267	0.01983567632412087	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		23	4	degree		0.6455696202531644	0.03062522470991992	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		24	0	degree		0.6939873417721519	0.02848420595164574	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		24	1	degree		0.5693037974683545	0.021259471122484823	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		24	2	degree		0.5123417721518988	0.02163245957683849	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		24	3	degree		0.4882911392405063	0.01673057077040508	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		24	4	degree		0.414873417721519	0.0195371545705872	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		25	0	degree		0.3164556962025316	0.013284240041642276	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		25	1	degree		0.5281645569620252	0.01806498279988707	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		25	2	degree		0.680379746835443	0.028430507112905123	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		25	3	degree		0.5626582278481014	0.025869573150820047	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		25	4	degree		0.5743670886075949	0.02066531583242514	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		26	0	degree		0.5433544303797468	0.01873919178342185	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		26	1	degree		0.4341772151898735	0.015625092894930456	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		26	2	degree		0.569620253164557	0.021766486593052057	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		26	3	degree		0.6170886075949367	0.02894569523663388	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		26	4	degree		0.5066455696202532	0.02041663009887309	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		27	0	degree		0.6531645569620254	0.024955725265418997	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		27	1	degree		0.6183544303797468	0.025547497537827916	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		27	2	degree		0.5791139240506329	0.020309980915123253	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		27	3	degree		0.5338607594936708	0.021046926631608648	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		27	4	degree		0.2746835443037975	0.012565131304204023	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		28	0	degree		0.4490506329113924	0.01602412054575891	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		28	1	degree		0.43417721518987346	0.01663907432131731	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		28	2	degree		0.6316455696202532	0.02523660748051162	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		28	3	degree		0.5750000000000001	0.022952324306627067	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		28	4	degree		0.5806962025316456	0.022352212136179148	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		29	0	degree		0.6287974683544304	0.023570570900246363	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		29	1	degree		0.45094936708860767	0.016048673561621596	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		29	2	degree		0.609493670886076	0.023275747728178937	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		29	3	degree		0.5860759493670885	0.02887381672264968	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		29	4	degree		0.3651898734177215	0.013761431320543575	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		30	0	degree		0.3408227848101266	0.013167966254637137	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		30	1	degree		0.5212025316455696	0.018158363444453346	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		30	2	degree		0.529113924050633	0.02192404780808198	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		30	3	degree		0.5455696202531645	0.02545016737043103	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		30	4	degree		0.7240506329113925	0.03286953242835596	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		31	0	degree		0.6000000000000001	0.02227223684357613	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		31	1	degree		0.6537974683544304	0.027315121113075075	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		31	2	degree		0.5101265822784811	0.018818408123803823	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		31	3	degree		0.5085443037974684	0.01763832787660184	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		31	4	degree		0.4196202531645569	0.018697670297450397	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		32	0	degree		0.6287974683544304	0.027817554767571768	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		32	1	degree		0.5639240506329114	0.023697577370930766	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		32	2	degree		0.43386075949367087	0.01645437942383078	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		32	3	degree		0.6193037974683545	0.022150205021313964	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		32	4	degree		0.4322784810126582	0.015461056813780356	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		33	0	degree		0.4534810126582279	0.01609894958628539	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		33	1	degree		0.38607594936708856	0.015484160008508262	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		33	2	degree		0.7291139240506329	0.03196563137062554	0.02	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		33	3	degree		0.6588607594936708	0.029632271397539378	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		33	4	degree		0.455379746835443	0.0178058245543226	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		34	0	degree		0.5281645569620254	0.022376631246727684	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		34	1	degree		0.5066455696202532	0.018524098842023995	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		34	2	degree		0.4727848101265823	0.016229564183824888	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		34	3	degree		0.6427215189873418	0.023963303647514173	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		34	4	degree		0.5268987341772152	0.023030347172319336	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		35	0	degree		0.5018987341772152	0.017256649999957296	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		35	1	degree		0.4382911392405064	0.020406108917653723	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		35	2	degree		0.5256329113924051	0.020411585617799197	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		35	3	degree		0.7164556962025317	0.03103066285592623	0.0	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		35	4	degree		0.4806962025316456	0.01663478679082805	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		36	0	degree		0.41550632911392404	0.01484950569718225	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		36	1	degree		0.5911392405063292	0.02108508744977468	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		36	2	degree		0.7091772151898734	0.03803494690311383	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		36	3	degree		0.5987341772151898	0.02593463600605399	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		36	4	degree		0.390506329113924	0.014227786780462543	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		37	0	degree		0.45316455696202534	0.015709125921630186	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		37	1	degree		0.5756329113924051	0.026325574727931574	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		37	2	degree		0.46930379746835443	0.017542412216992046	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		37	3	degree		0.5582278481012659	0.02276237761426457	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		37	4	degree		0.6212025316455696	0.02733495541082331	0.0	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		38	0	degree		0.4272151898734177	0.01670524256944705	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		38	1	degree		0.5632911392405063	0.021442190790493074	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		38	2	degree		0.6253164556962025	0.0278940273064897	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		38	3	degree		0.6424050632911392	0.023724318385300036	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		38	4	degree		0.4389240506329114	0.02086453618432943	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		39	0	degree		0.5420886075949367	0.021750853495204343	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		39	1	degree		0.5933544303797469	0.021579764962117904	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		39	2	degree		0.4547468354430379	0.01953333789782388	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		39	3	degree		0.5791139240506329	0.024067002549974688	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700		39	4	degree		0.4787974683544304	0.016498483879789833	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	0	rwr	21.0	0.38291139240506333	0.015603704909068178	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	1	rwr	21.0	0.6417721518987342	0.028727154390630477	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	2	rwr	21.0	0.579746835443038	0.043875864355404	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	3	rwr	21.0	0.7310126582278481	0.075145581564898	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	0	4	rwr	21.0	0.6892405063291139	0.037736117627861464	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	0	rwr	21.0	0.4183544303797469	0.020179807646917566	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	1	rwr	21.0	0.6563291139240507	0.08735375454718058	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	2	rwr	21.0	0.6525316455696203	0.04391514483073495	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	3	rwr	21.0	0.7968354430379746	0.07360865910046238	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	1	4	rwr	21.0	0.6392405063291139	0.0427449152360745	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	0	rwr	21.0	0.8468354430379746	0.07287815543629497	0.08	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	1	rwr	21.0	0.3234177215189873	0.013803965755772642	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	2	rwr	21.0	0.529746835443038	0.021183447189720792	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	3	rwr	21.0	0.5632911392405063	0.02145616800623376	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	2	4	rwr	21.0	0.7569620253164557	0.10823832981468451	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	0	rwr	21.0	0.5411392405063291	0.021350111988401643	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	1	rwr	21.0	0.718987341772152	0.04777787121443019	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	2	rwr	21.0	0.6829113924050633	0.0391292505321792	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	3	rwr	21.0	0.4867088607594937	0.043470908661991464	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	3	4	rwr	21.0	0.6164556962025316	0.058286884243908564	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	0	rwr	21.0	0.5835443037974685	0.028869199962998502	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	1	rwr	21.0	0.549367088607595	0.07532655190818507	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	2	rwr	21.0	0.4854430379746836	0.017889215788779635	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	3	rwr	21.0	0.8373417721518988	0.11163049186305	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	4	4	rwr	21.0	0.6031645569620253	0.03575041401815056	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	0	rwr	21.0	0.3430379746835443	0.013780101946152246	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	1	rwr	21.0	0.7056962025316456	0.07411844284397189	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	2	rwr	21.0	0.7354430379746836	0.12093356189482445	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	3	rwr	21.0	0.8272151898734178	0.0538530589388963	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	5	4	rwr	21.0	0.6196202531645569	0.04374989449874243	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	0	rwr	21.0	0.6746835443037975	0.06257840360050045	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	1	rwr	21.0	0.6987341772151899	0.15662837867919538	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	2	rwr	21.0	0.46455696202531643	0.017439685917946788	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	3	rwr	21.0	0.7822784810126582	0.05786701159855569	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	6	4	rwr	21.0	0.5740506329113925	0.027813082972467783	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	0	rwr	21.0	0.6848101265822786	0.060131600222819145	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	1	rwr	21.0	0.6303797468354431	0.04664470613540307	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	2	rwr	21.0	0.6272151898734177	0.08919455829794405	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	3	rwr	21.0	0.5158227848101267	0.01816153189135657	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	7	4	rwr	21.0	0.7677215189873418	0.09087351714501458	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	0	rwr	21.0	0.7272151898734178	0.31277655011049005	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	1	rwr	21.0	0.5170886075949367	0.04237582667324892	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	2	rwr	21.0	0.5708860759493671	0.026786199666336056	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	3	rwr	21.0	0.6354430379746836	0.024662126569634613	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	8	4	rwr	21.0	0.5721518987341772	0.03613897892524777	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	0	rwr	21.0	0.6518987341772151	0.03677176737206542	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	1	rwr	21.0	0.6424050632911392	0.035239732873423545	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	2	rwr	21.0	0.5626582278481013	0.026557600245738045	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	3	rwr	21.0	0.5082278481012659	0.01786740977881411	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	9	4	rwr	21.0	0.6981012658227849	0.1065446608891275	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	10	0	rwr	21.0	0.6981012658227848	0.07817347499292648	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	10	1	rwr	21.0	0.6183544303797469	0.0531036251533146	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	10	2	rwr	21.0	0.6411392405063291	0.04648120387287165	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	10	3	rwr	21.0	0.5145569620253165	0.02375597671207383	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	10	4	rwr	21.0	0.7132911392405064	0.04624428362844962	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	11	0	rwr	21.0	0.7075949367088608	0.04278033794162826	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	11	1	rwr	21.0	0.44367088607594934	0.029225442368645556	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	11	2	rwr	21.0	0.6645569620253164	0.04291860786057857	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	11	3	rwr	21.0	0.670253164556962	0.03566208040593287	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	11	4	rwr	21.0	0.6215189873417722	0.04326741323430065	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	12	0	rwr	21.0	0.7234177215189873	0.03692816727034604	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	12	1	rwr	21.0	0.7411392405063291	0.04765594683621249	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	12	2	rwr	21.0	0.6563291139240507	0.08776776576839998	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	12	3	rwr	21.0	0.26772151898734176	0.012686581929035823	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	12	4	rwr	21.0	0.8044303797468355	0.05713427934220523	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	13	0	rwr	21.0	0.7202531645569621	0.06986915721518541	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	13	1	rwr	21.0	0.8170886075949367	0.06962501507780144	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	13	2	rwr	21.0	0.5436708860759494	0.021090703501342872	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	13	3	rwr	21.0	0.5860759493670886	0.03922172492855305	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	13	4	rwr	21.0	0.43544303797468353	0.016050832395211084	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	14	0	rwr	21.0	0.5278481012658228	0.03286372537969772	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	14	1	rwr	21.0	0.5772151898734177	0.025817798724067892	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	14	2	rwr	21.0	0.6721518987341772	0.1282689685304511	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	14	3	rwr	21.0	0.6246835443037975	0.02392294812943882	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	14	4	rwr	21.0	0.6829113924050633	0.05325383306544483	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	15	0	rwr	21.0	0.729113924050633	0.04734472202745124	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	15	1	rwr	21.0	0.8322784810126582	0.06019293588534234	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	15	2	rwr	21.0	0.5424050632911392	0.08793534016759114	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	15	3	rwr	21.0	0.5607594936708861	0.024051624365865377	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	15	4	rwr	21.0	0.5132911392405064	0.022516673574849967	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	16	0	rwr	21.0	0.5158227848101266	0.024353050792275118	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	16	1	rwr	21.0	0.6310126582278481	0.051923119047073904	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	16	2	rwr	21.0	0.5917721518987341	0.04029806058771089	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	16	3	rwr	21.0	0.6063291139240506	0.022608162921653893	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	16	4	rwr	21.0	0.7974683544303798	0.06291610509043231	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	17	0	rwr	21.0	0.4563291139240506	0.029814834195386455	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	17	1	rwr	21.0	0.8468354430379748	0.0999443052074631	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	17	2	rwr	21.0	0.7968354430379747	0.04415907871279637	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	17	3	rwr	21.0	0.44113924050632913	0.0162264796892488	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	17	4	rwr	21.0	0.5968354430379746	0.03148410567692119	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	18	0	rwr	21.0	0.5259493670886076	0.01871428489169338	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	18	1	rwr	21.0	0.5987341772151898	0.04475791735715565	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	18	2	rwr	21.0	0.4632911392405063	0.02457930552625141	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	18	3	rwr	21.0	0.5943037974683545	0.02562422520523748	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	18	4	rwr	21.0	0.6886075949367089	0.14858391608391605	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	19	0	rwr	21.0	0.44493670886075953	0.016623989111656835	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	19	1	rwr	21.0	0.6575949367088608	0.08626194932289796	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	19	2	rwr	21.0	0.7746835443037975	0.07126441459774793	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	19	3	rwr	21.0	0.5424050632911392	0.025210871753153632	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	19	4	rwr	21.0	0.5120253164556963	0.01968269805409106	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	20	0	rwr	21.0	0.6265822784810127	0.03175517607040583	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	20	1	rwr	21.0	0.4379746835443038	0.016105461987982257	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	20	2	rwr	21.0	0.6348101265822785	0.03038281522085433	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	20	3	rwr	21.0	0.8588607594936709	0.2545991290069251	0.06	0.05		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	20	4	rwr	21.0	0.538607594936709	0.05716542536574418	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	21	0	rwr	21.0	0.6424050632911392	0.034362654735723815	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	21	1	rwr	21.0	0.3518987341772152	0.014084989728963054	0.0	0.0		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	21	2	rwr	21.0	0.8518987341772152	0.06963245088245089	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	21	3	rwr	21.0	0.5132911392405064	0.05410299253137429	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	21	4	rwr	21.0	0.6550632911392406	0.06767372305665817	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	22	0	rwr	21.0	0.6012658227848101	0.02572326457749217	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	22	1	rwr	21.0	0.5487341772151899	0.08239294209124473	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	22	2	rwr	21.0	0.4955696202531645	0.02845516424041749	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	22	3	rwr	21.0	0.7936708860759494	0.060816144639674045	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	22	4	rwr	21.0	0.65	0.08289607323357354	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	23	0	rwr	21.0	0.5734177215189874	0.02879454702267318	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	23	1	rwr	21.0	0.5221518987341772	0.022305940940365816	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	23	2	rwr	21.0	0.7037974683544304	0.03244600227358848	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	23	3	rwr	21.0	0.5886075949367089	0.06890739737219444	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	23	4	rwr	21.0	0.6594936708860759	0.04872668897464276	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	24	0	rwr	21.0	0.8240506329113924	0.05727256759619948	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	24	1	rwr	21.0	0.6139240506329114	0.02461505926206374	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	24	2	rwr	21.0	0.6145569620253165	0.05620378904249872	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	24	3	rwr	21.0	0.659493670886076	0.02851138745076387	0.0	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	24	4	rwr	21.0	0.39746835443037976	0.2114784105817741	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	25	0	rwr	21.0	0.5025316455696203	0.03748114871312258	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	25	1	rwr	21.0	0.5810126582278481	0.021068711583820184	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	25	2	rwr	21.0	0.7683544303797468	0.046438711071301576	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	25	3	rwr	21.0	0.4253164556962025	0.022726636199626102	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	25	4	rwr	21.0	0.6487341772151899	0.041287166263452066	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	26	0	rwr	21.0	0.718987341772152	0.054600479091942135	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	26	1	rwr	21.0	0.5373417721518987	0.02473852393072913	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	26	2	rwr	21.0	0.7575949367088608	0.11846725289146548	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	26	3	rwr	21.0	0.6208860759493671	0.05480835112463153	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	26	4	rwr	21.0	0.6196202531645569	0.03303544049880325	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	27	0	rwr	21.0	0.7	0.038570581721355295	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	27	1	rwr	21.0	0.7215189873417722	0.05994802097698018	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	27	2	rwr	21.0	0.7588607594936709	0.052806300527263275	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	27	3	rwr	21.0	0.5056962025316456	0.024554453336203815	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	27	4	rwr	21.0	0.3424050632911393	0.014256716541811192	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	28	0	rwr	21.0	0.450632911392405	0.016778963891488335	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	28	1	rwr	21.0	0.5436708860759494	0.021738674517417532	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	28	2	rwr	21.0	0.6379746835443038	0.04354139142428973	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	28	3	rwr	21.0	0.7367088607594938	0.06662699640119994	0.06	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	28	4	rwr	21.0	0.6822784810126582	0.03281754374323079	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	29	0	rwr	21.0	0.6075949367088608	0.027947075421337605	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	29	1	rwr	21.0	0.6006329113924052	0.026788300209727355	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	29	2	rwr	21.0	0.7550632911392405	0.2761413026236477	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	29	3	rwr	21.0	0.5765822784810127	0.036676078309546285	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	29	4	rwr	21.0	0.5392405063291139	0.029215927550176855	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	30	0	rwr	21.0	0.4645569620253165	0.020175457262876638	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	30	1	rwr	21.0	0.6670886075949367	0.029496464272369228	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	30	2	rwr	21.0	0.570253164556962	0.025617619098456078	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	30	3	rwr	21.0	0.6430379746835443	0.049177301405219385	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	30	4	rwr	21.0	0.6177215189873417	0.046488814476759364	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	31	0	rwr	21.0	0.7424050632911392	0.043555235238805216	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	31	1	rwr	21.0	0.7373417721518988	0.12555482618122304	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	31	2	rwr	21.0	0.48860759493670886	0.01922055319473176	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	31	3	rwr	21.0	0.6563291139240506	0.02658750669620235	0.0	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	31	4	rwr	21.0	0.5651898734177215	0.0614041920570583	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	32	0	rwr	21.0	0.7000000000000001	0.06103368768506383	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	32	1	rwr	21.0	0.6664556962025316	0.2306685906685907	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	32	2	rwr	21.0	0.5829113924050633	0.03670361387568462	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	32	3	rwr	21.0	0.7164556962025317	0.043246470305293834	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	32	4	rwr	21.0	0.5259493670886076	0.022395982311634963	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	33	0	rwr	21.0	0.5531645569620254	0.030644473065254724	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	33	1	rwr	21.0	0.5436708860759494	0.03235857804361453	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	33	2	rwr	21.0	0.7594936708860759	0.05109540037828106	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	33	3	rwr	21.0	0.7822784810126583	0.23051150077729574	0.02	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	33	4	rwr	21.0	0.5487341772151899	0.02641433836188008	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	34	0	rwr	21.0	0.600632911392405	0.06391457208329793	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	34	1	rwr	21.0	0.6708860759493671	0.050220599372498106	0.02	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	34	2	rwr	21.0	0.5113924050632912	0.018374759179180654	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	34	3	rwr	21.0	0.5556962025316456	0.024800475633677002	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	34	4	rwr	21.0	0.6512658227848102	0.1100103122683768	0.06	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	35	0	rwr	21.0	0.5974683544303798	0.028135381059096087	0.04	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	35	1	rwr	21.0	0.5069620253164557	0.04570279616863467	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	35	2	rwr	21.0	0.5531645569620254	0.028872040976900992	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	35	3	rwr	21.0	0.7170886075949368	0.039555603033863906	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	35	4	rwr	21.0	0.5981012658227848	0.021864834114595184	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	36	0	rwr	21.0	0.5594936708860759	0.03260068370352114	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	36	1	rwr	21.0	0.6626582278481012	0.025708250251412997	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	36	2	rwr	21.0	0.7329113924050632	0.07208842658794225	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	36	3	rwr	21.0	0.6531645569620254	0.035060282269584596	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	36	4	rwr	21.0	0.5177215189873418	0.03307806720599672	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	37	0	rwr	21.0	0.599367088607595	0.02326844040341351	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	37	1	rwr	21.0	0.45126582278481014	0.06296431607949933	0.02	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	37	2	rwr	21.0	0.7658227848101267	0.056155984371088694	0.04	0.04		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	37	3	rwr	21.0	0.6670886075949367	0.0807606347385527	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	37	4	rwr	21.0	0.580379746835443	0.025823654975881134	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	38	0	rwr	21.0	0.5151898734177216	0.019855199134519805	0.0	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	38	1	rwr	21.0	0.5651898734177215	0.02017967875110732	0.0	0.01		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	38	2	rwr	21.0	0.7221518987341772	0.0571772557470498	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	38	3	rwr	21.0	0.7702531645569621	0.06064286440850372	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	38	4	rwr	21.0	0.5329113924050632	0.045555025866483044	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	39	0	rwr	21.0	0.5689873417721519	0.057090837314845114	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	39	1	rwr	21.0	0.6778481012658227	0.03237657778845078	0.02	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	39	2	rwr	21.0	0.5417721518987342	0.042061650234444865	0.04	0.03		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	39	3	rwr	21.0	0.5867088607594937	0.05147729682233858	0.02	0.02		5	321
+string_phys700	intogen_temporal_new_shared	native_string_phys700	0.5	39	4	rwr	21.0	0.7734177215189874	0.06419653492318476	0.04	0.03		5	321
