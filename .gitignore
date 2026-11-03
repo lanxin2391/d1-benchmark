@@ -40,3 +40,9 @@ release/
 
 # ---- per-gene score dumps (derived data; regenerate in ~5 min with --scores-dir) ----
 results/scores_v40/
+
+# ---- control-2 resampling artefacts (derived; regenerate with run_a5.py) ----
+results/runs/a5_v40_partial/
+results/runs/a5_10rep_validated/
+results/runs/a5_ORIGINAL_10rep_backup/
+results/tables/*_BEFORE_optimisation.tsv
