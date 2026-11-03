@@ -394,6 +394,52 @@ depends on their exact value. The manuscript states that control 2's null
 was simulated on the 10-repeat design and that the resulting z-scores
 are therefore conservative.
 
+### A2.3h Two controls were not doing what they claimed (P0-5, P0-06)
+
+**D-12 (shared universe).** The splits were built with
+`build_splits.py --universe native_<net_id>`, so the split universe was
+the network's FULL LCC and only the positives were restricted to the
+shared set. The evaluation set was therefore never restricted -- which
+is the entire point of the control. The released table shows it: the
+per-fold test sets were 791 / 1831 / 1966 / 2038 / 3177 / 3584 genes
+(the six networks' LCC sizes), not |shared| / 5 = 321.
+
+Fixed: the splits are now built over the shared universe itself
+(`--universe shared`, 40 repeats to match the primary design), one file
+per label instead of 24, and the run asserts that the per-fold test set
+is |shared| / 5, so a silent regression cannot recur. All 24 arms moved.
+
+**D-09 (temporal drift).** The repeat loop did
+
+    seed_idx_shuf = train_idx.copy(); rng.shuffle(seed_idx_shuf)
+
+which only reorders the SAME seed set. `seed_matrix` is a binary
+indicator matrix, so the RWR result is order-invariant: all 50 repeats
+were identical, the effective n was 1, and the released
+`delta_auroc_sd` was 0.
+
+Fixed: each repeat draws the training seed set WITH REPLACEMENT (the
+control's null is a randomisation of the training seeds; the held-out
+evaluation set stays fixed, because resampling it would measure a
+different quantity). The summary reports `n_eff_seed_sets` -- now 50,
+was 1 -- and the per-cell SD is no longer identically zero.
+
+**What the corrected controls now show -- and this is the interesting
+part.** Under D-09 the network prior still recovers the held-out new
+drivers (mean delta-AUROC +0.025 to +0.092) on five of six networks,
+and **reactome is the only one that is negative** (-0.0095 +- 0.0116 at
+alpha = 0.5). Under D-12 -- where the coverage difference between
+networks is controlled by evaluating on the 1,605 shared genes only --
+reactome is STILL negative (-0.0360) on `intogen_temporal_new`, as is
+intact (-0.0150), while the other 22 arms are positive.
+
+So the reactome failure on temporal extrapolation is **not** an
+artefact of network coverage: it survives the control that removes that
+explanation. That is direct evidence for the curator-lag hypothesis
+(Reactome's release cycle trails the IntOGen driver catalogue), and it
+moves curator lag from a Discussion hypothesis to a supported
+explanation -- the strongest single piece of evidence in the project.
+
 ### A2.3e The TOST implementation itself was wrong
 
 The original `_tost` in `scripts/run_stats_analysis.py` tested

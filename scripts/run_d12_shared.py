@@ -62,6 +62,13 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--force", action="store_true",
                     help="rebuild the shared splits even if they exist")
+    ap.add_argument("--n-rep", type=int, default=40,
+                    help="repeats for the shared splits; must match the "
+                         "primary design (40, work plan A2)")
+    ap.add_argument("--splits-dir", default="data/processed/splits_v40",
+                    help="directory holding the primary splits; the shared "
+                         "splits are written here so the control runs on the "
+                         "same design as the primary factorial")
     args = ap.parse_args()
 
     # Step 1: shared universe
@@ -102,11 +109,13 @@ def main():
     # The shared universe and the shared labels do not depend on the
     # network, so ONE split file per label is enough.
     print("\nStep 3: build shared-universe splits "
-          "(universe = shared, not native_<net>)")
+          f"(universe = shared, not native_<net>; n_rep={args.n_rep})")
+    splits_dir = (ROOT / args.splits_dir) if args.splits_dir else PROCESSED_SPLIT
+    splits_dir.mkdir(parents=True, exist_ok=True)
     shared_split = {}
     for label in LABELS:
         shared_label = f"{label}_shared"
-        split_path = PROCESSED_SPLIT / f"{shared_label}__shared.tsv"
+        split_path = splits_dir / f"{shared_label}__shared.tsv"
         shared_split[label] = split_path
         if split_path.exists() and not args.force:
             print(f"  [SKIP] {split_path.name}")
@@ -116,7 +125,8 @@ def main():
             [sys.executable, str(ROOT / "scripts" / "build_splits.py"),
              "--label", shared_label,
              "--universe", "shared",
-             "--out-dir", str(PROCESSED_SPLIT)],
+             "--n-rep", str(args.n_rep),
+             "--out-dir", str(splits_dir)],
             check=True, cwd=str(ROOT))
 
     # Step 4: run arms at alpha=0.5
@@ -141,12 +151,20 @@ def main():
             # The whole point of D-12 is that the evaluation universe is
             # the shared gene set. Assert it, so a silent regression to
             # the full-LCC universe cannot recur unnoticed.
-            if n_test != len(shared):
+            #
+            # The shared universe is partitioned across the five folds, so
+            # each fold's TEST SET holds about |shared| / 5 genes -- NOT
+            # |shared|. (Before the P0-5 fix the split file was built
+            # over native_<net>, so n_test was the full LCC size: 2,038
+            # for funmap instead of 321.)
+            expected = len(shared) / 5.0
+            if abs(n_test - expected) > 1:
                 raise AssertionError(
-                    f"[{net_id} x {shared_label}] evaluation universe is "
-                    f"{n_test} genes, expected the shared universe "
-                    f"({len(shared)}). The split file was probably built "
-                    f"over native_<net> instead of shared."
+                    f"[{net_id} x {shared_label}] fold test set is "
+                    f"{n_test} genes, expected |shared|/5 = {expected:.0f} "
+                    f"(shared universe = {len(shared)}). The split file "
+                    f"was probably built over native_<net> instead of "
+                    f"shared."
                 )
             if len(d):
                 summary_rows.append({
