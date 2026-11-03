@@ -144,28 +144,98 @@ def _degree_matched_seeds(observed_seeds, gene_to_degree,
     out = []
     for s in observed_seeds:
         target_deg = gene_to_degree[s]
-        # exact-degree bin, minus the observed seeds
-        candidates = [g for g in by_degree.get(target_deg, [])
-                      if g not in all_excluded and g in seed_indices_in_network]
+        candidates = _select_candidates(
+            index, gene_to_degree, target_deg, all_excluded, seed_indices_in_network)
         if not candidates:
-            # nearest available degree: the smallest radius whose band
-            # contains at least one gene that is not an observed seed.
-            # The genes are returned in their ORIGINAL order, which is
-            # what the scan this replaces produced.
-            radius = 1
-            while True:
-                lo = int(np.searchsorted(degrees_sorted, target_deg - radius, "left"))
-                hi = int(np.searchsorted(degrees_sorted, target_deg + radius, "right"))
-                band = [g for g in sorted_genes[lo:hi]
-                        if g not in all_excluded and g in seed_indices_in_network]
-                if band:
-                    candidates = sorted(band, key=lambda g: orig_pos[g])
-                    break
-                radius += 1
-                if radius > 10000:
-                    break
+            continue
         out.append(rng.choice(candidates))
     return out
+
+
+def _select_candidates(index, gene_to_degree, target_deg, all_excluded,
+                       seed_indices_in_network):
+    """The candidate list for one seed, exactly as the ORIGINAL
+    implementation produced it.
+
+    Rule (verbatim from the original): the list is the genes whose degree
+    equals target_deg and which are neither an observed seed nor outside
+    the network; if that is empty, the smallest radius r >= 1 whose band
+    [target_deg - r, target_deg + r] contains at least one usable gene,
+    and the list is every usable gene in that band, in the order
+    gene_to_degree lists them.
+
+    The implementation avoids the original's O(r^2) rebuild-the-band-every
+    -radius scan: the smallest such radius is
+        R* = min over usable g of |deg(g) - target_deg|
+    so the nearest usable gene determines it, and the band is then sliced
+    ONCE. The nearest usable gene must be searched on BOTH sides at
+    every step, otherwise a gene further out on the right can be picked
+    while a closer one sits on the left.
+
+    This function is exercised directly by
+    scripts/verify_fallback.py, so it is the single source of truth.
+    """
+    by_degree, sorted_genes, degrees_sorted, orig_pos = index
+    all_excluded = set(all_excluded)
+    # exact-degree bin, minus the observed seeds
+    candidates = [g for g in by_degree.get(target_deg, [])
+                  if g not in all_excluded and g in seed_indices_in_network]
+    if not candidates:
+            # Nearest available degree.
+            #
+            # The original scanned radius = 1, 2, 3, ... and rebuilt the
+            # whole band at every radius. For a physical-interaction
+            # network the degree of a driver gene can be hundreds away
+            # from the next available gene, so the scan ran hundreds of
+            # times over a band that grows with the radius -- O(R^2).
+            # That is why the arms with 600+ positives took 235 minutes
+            # while the 152-positive arm took 11.
+            #
+            # The smallest radius whose band contains a usable gene is
+            #   R* = |deg(nearest usable gene) - target_deg|
+            # and the band at R* is every usable gene with degree in
+            # [target - R*, target + R*]. So: find the nearest usable
+            # gene (a short walk outwards from the insertion point),
+            # then slice the band ONCE.
+            # The smallest radius whose band holds a usable gene is
+            #   R* = min over usable g of |deg(g) - target_deg|.
+            # The nearest usable gene on each side must be found
+            # INDEPENDENTLY: the degree gaps are asymmetric (one step
+            # right can jump six degrees while one step left moves one),
+            # so stopping at the first usable gene found while
+            # interleaving the two walks can pick a gene further out
+            # than one that sits on the other side -- and then the band
+            # is too wide and the candidate list differs from the
+            # original implementation.
+            n = len(sorted_genes)
+            pos = int(np.searchsorted(degrees_sorted, target_deg, "left"))
+            d_left = None
+            lo_i = pos - 1
+            while lo_i >= 0:
+                g = sorted_genes[lo_i]
+                if g not in all_excluded and g in seed_indices_in_network:
+                    d_left = abs(gene_to_degree[g] - target_deg)
+                    break
+                lo_i -= 1
+            d_right = None
+            hi_i = pos
+            while hi_i < n:
+                g = sorted_genes[hi_i]
+                if g not in all_excluded and g in seed_indices_in_network:
+                    d_right = abs(gene_to_degree[g] - target_deg)
+                    break
+                hi_i += 1
+            dists = [d for d in (d_left, d_right) if d is not None]
+            if not dists:
+                # no usable gene at any degree: cannot build a null here
+                return []
+            radius = min(dists)
+            lo = int(np.searchsorted(degrees_sorted, target_deg - radius, "left"))
+            hi = int(np.searchsorted(degrees_sorted, target_deg + radius, "right"))
+            band = [g for g in sorted_genes[lo:hi]
+                    if g not in all_excluded and g in seed_indices_in_network]
+            candidates = sorted(band, key=lambda g: orig_pos[g])
+    return candidates
 
 
 def _run_one_resample(net_id, label, seed):
@@ -327,8 +397,12 @@ def main():
         if (net, lab) not in done_files:
             continue
         fp = done_files[(net, lab)]
+        _log(f"  [{net} x {lab}] resumed from {fp.name}")
         df = pd.read_csv(fp, sep="\t")
-        per_cell_results.append(((net, lab), (df, df["delta"].to_numpy())))
+        # the per-resample trace column is `delta_auroc` (written by
+        # _run_one_arm), not `delta`
+        col = "delta_auroc" if "delta_auroc" in df.columns else "delta"
+        per_cell_results.append(((net, lab), (df, df[col].to_numpy())))
     order = {c: i for i, c in enumerate(cells)}
     per_cell_results.sort(key=lambda r: order[r[0]])
 
