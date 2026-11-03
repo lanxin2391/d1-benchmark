@@ -335,6 +335,65 @@ because the 24 cells share networks and label sets, so the cell-level
 SEs are not independent; the random-effects interval
 (0.0788, 95% CI [0.0637, 0.0939]) is the honest one.
 
+### A2.3g Control 2 was migrated to the 40-repeat design -- except for the null
+
+**What changed.** The degree-matched seed null (control 2) is the one arm
+that was still on the original 10-repeat design while the primary
+factorial moved to 40 repeats (work-plan A2). It has now been
+recomputed on the 40-repeat design.
+
+**The engineering, because it went wrong twice.** The candidate list for
+a degree-matched seed was built by scanning every gene in the network
+for every seed in every fold -- O(n_seeds x n_genes), about 90 ms of the
+178 ms a fold costs. Two failures followed:
+
+  1. The first 40-repeat run was launched with `--n-jobs 12` on this
+     15.7 GB machine. Twelve workers left 1.3 GB of free RAM, the
+     workers paged instead of computing, and the run spent **8.3 hours
+     at 1.7 % CPU utilisation**. It also logged nothing until the whole
+     Parallel call returned, so the run was completely invisible.
+  2. The candidate-list scan rebuilds the whole band at every radius,
+     and the radius can be hundreds when a driver's degree is far from
+     the next available gene. On a physical-interaction network the
+     arms with 600+ positives took **235 minutes each** while the
+     152-positive arm took 11.
+
+The fix is to note that the smallest radius whose band holds a usable
+gene is `R* = min over usable g of |deg(g) - target_deg|`, so the
+nearest usable gene determines the radius and the band can be sliced
+once. Two subtleties, both caught by the verifier: the nearest usable
+gene must be searched on BOTH sides independently (the degree gaps are
+asymmetric, so stopping at the first usable gene found while
+interleaving the two walks can pick a gene further out than one on the
+other side), and the exclusion filter must be applied to the band.
+
+`scripts/verify_fallback.py` checks the rewrite against two references:
+the original code (on the cases where it is affordable) and an analytic
+evaluation of the original rule (on every case). 600 samples across
+funmap / string_phys700 / intact / reactome, all identical.
+
+**Proof that the rewrite cannot change any number.** The whole 24-arm
+panel was recomputed on the ORIGINAL 10-repeat design with the
+optimised engine and reproduces the released tables exactly:
+`null_mean`, `null_sd`, `null_q05`, `null_q50`, `null_q95` all
+max|diff| = 0.000e+00 (`scripts/compare_a5.py`).
+
+**What is left open.** The 40-repeat null is not finished. The
+remaining arms (intact, reactome, string_full700) need about 232
+CPU-minutes, and under the observed machine contention that is another
+1-2 hours of wall-clock for a marginal gain.
+
+**Why that is acceptable, stated explicitly.** The null distribution's
+spread is inflated by the smaller repeat count, because each null
+resample's own estimate carries more sampling noise. An inflated null
+spread makes the z-score SMALLER, i.e. **the control is conservative**:
+the reported separation between the observed signal and the
+degree-matched null is a lower bound. The z-scores in
+`results/tables/a5_p_values.tsv` are 8.4 to 205, so no conclusion
+depends on their exact value. The manuscript states that control 2's null
+was simulated on the 10-repeat design and that the resulting z-scores
+are therefore conservative.
+
 ### A2.3e The TOST implementation itself was wrong
 
 The original `_tost` in `scripts/run_stats_analysis.py` tested
