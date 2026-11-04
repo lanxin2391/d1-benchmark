@@ -12,9 +12,9 @@ to the D1 benchmark paper. It covers:
 * §A — Methods §4.1 (Network panel construction)
 * §B — Methods §4.3 (Random Walk with Restart engine, locked)
 * §C — Methods §4.4 (Control stack: A-side controls)
-* §D — Methods §4.6 (Statistical analysis: mixed-effects, bootstrap CI, TOST, BH-FDR)
+* §D — Methods §4.6 (Statistical analysis: variance decomposition, bootstrap CI, TOST, BH-FDR)
 * §E — Results §Network provenance ablation (RNA / protein / curated)
-* §F — Results §W5 rewiring null (control 3)
+* §F — Results §Robustness controls (W5 rewiring, D-09 temporal drift, D-11 common-size cap, D-12 shared universe)
 * §G — Results §A5 degree-matched seed null (control 2, fine mode)
 * §H — Results §Table 1 (24 arms × 3 alphas = 72 cells)
 * §I — Discussion §H1 verdict + provenance + §7 GNN rebuttal
@@ -24,6 +24,21 @@ Numbers below come from the per-arm result tables in
 `results/runs/`, the per-control prose reports `docs/w5_log.md`,
 `docs/a5_log.md`, `docs/provenance_ablation.md`,
 `docs/stats_analysis_log.md`, and `docs/gnn_courtesy_log.md`.
+
+**Design of record.** The primary factorial, the interval families, the
+equivalence test, the multiplicity control and the three robustness
+controls in §F.2–§F.4 are all computed on the **40-repeat** design
+(5 folds × 40 repeats = 200 (repeat, fold) evaluations per cell); the
+canonical tables are `results/tables/stats_bootstrap_ci.tsv`,
+`results/tables/stats_equivalence.tsv`,
+`results/tables/stats_h1_verdict_v40.tsv`,
+`results/tables/stats_variance_decomp.tsv`, and the primary run is
+`results/runs_v40/a4_combined.tsv`. The one remaining exception is the
+control-2 null in §G, which was simulated on the original 10-repeat
+design; the direction of that bias is stated in §G and in amendment 2
+(A2.3g). Every departure from the frozen pre-registration is recorded
+in `docs/pre_registration_amendments.md`; the pre-registration itself
+(Zenodo DOI 10.5281/zenodo.23121762) has not been edited.
 
 ---
 
@@ -185,13 +200,39 @@ rewiring is loaded as a regular edge file and run through the
 same harness as the real network. Aggregate lives in
 `results/tables/w5_p_values.tsv`.
 
-### C4 — Shared gene universe
+### C4 — Shared gene universe (control 4, decision D-12)
 
-Implemented in `scripts/run_d12_shared.py`. Restrict both
-RWR scoring and degree baseline to the intersection of all six
-networks' LCCs. The resulting delta_AUROC cannot be inflated by
-uneven gene-set coverage across networks. Aggregate in
+Implemented in `scripts/run_d12_shared.py`. RWR propagates on each
+network's **full LCC**; the seeds and the **evaluation set** are
+restricted to the gene set shared by all six networks (1,605 genes);
+the degree baseline stays the full-LCC degree. The split universe
+itself is the shared set (`build_splits.py --universe shared`), so
+every per-fold test set contains |shared| / 5 = 321 genes and the run
+asserts this size, which makes a silent regression of the control
+impossible. The splits use the 40-repeat design. Aggregate in
 `results/tables/d12_table.tsv`.
+
+### C5 — Temporal-drift control (decision D-09)
+
+Implemented in `scripts/run_d09.py`. Training seeds are the IntOGen 2024
+drivers **minus** the drivers discovered in the 2020–2024 window
+(`intogen_temporal_new`), and the held-out positives are exactly that
+temporal window: the question is whether a network prior still recovers
+drivers that were discovered *after* the training cut-off. Each of the
+50 repeats draws the training seed set **with replacement**, so the
+repeats are independent draws rather than 50 copies of one partition
+(`n_eff_seed_sets` in the output table is the audit trail for this).
+Aggregate in `results/tables/d09_table.tsv`.
+
+### C6 — Common-size cap control (decision D-11)
+
+Implemented in `scripts/run_d11.py`. For each network, the number of
+positives is capped to N = min over the four labels of the number of
+positives inside that network's LCC, so that every network is evaluated
+on the same positive-set size and the four labels are not confounded
+with unequal prevalence. The label is restricted to the universe
+**before** the top-N is taken, and the run asserts that every split
+holds exactly N positives. Aggregate in `results/tables/d11_table.tsv`.
 
 ### W6 sensitivity arm — GNN courtesy (protocol §7)
 
@@ -206,19 +247,51 @@ Discussion §I.
 
 ## §D. Methods §4.6 — Statistical analysis
 
-### D.1 Mixed-effects variance decomposition
+### D.1 Variance decomposition
 
-The protocol §4.6 requires a mixed-effects model with random effects
-for network, label and fold. We fit, on the 3,600
-(network × label × alpha × fold) observations at α = 0.5:
+Protocol §4.6 asks for a mixed-effects decomposition of the observed
+delta-AUROC values into network, label and fold components, with the
+network × label interaction included. We fit it as a **balanced
+random-effects ANOVA** on the 6 networks × 4 labels × 200 (repeat,
+fold) cells at α = 0.5 (the 40-repeat design):
 
 ```
-mixedlm(observed_delta ~ 1,
-         groups=fold_idx).fit(REML)
+sigma2_within    = MS_within
+sigma2_int       = (MS_int       - MS_within) / n
+sigma2_label     = (MS_label     - MS_within) / (n * a)
+sigma2_network   = (MS_network   - MS_within) / (n * b)
 ```
 
-then partition the 3,600 observed delta-AUROC values into between-cell
-variance (network, label, network × label) and residual.
+with n = 200 evaluations per cell, a = 6 networks, b = 4 labels.
+
+**Two fractions are reported, because they answer two different
+questions.** "Between-arm spread" is the variance of the 24 cell means
+— the thing protocol §4.6 asks about; "total variance" is the variance
+of the raw per-fold measurements, which is what sets the width of every
+confidence interval.
+
+| source | % of between-arm spread | % of total variance |
+|---|---|---|
+| network × label (interaction) | 40.07 % | 23.96 % |
+| label (main effect) | 34.78 % | 20.80 % |
+| network (main effect) | 24.82 % | 14.84 % |
+| fold-to-fold sampling noise | 0.34 % | 40.39 % |
+
+All three effects are significant against the within-cell noise
+(network F = 295.0, label F = 619.0, interaction F = 119.7; p < 1e-15
+each). The full table, the variance components and the derivation are
+in `results/tables/stats_variance_decomp.tsv`,
+`results/tables/stats_variance_components.tsv` and
+`docs/variance_decomposition.md`.
+
+> **Correction.** The first implementation of this section fitted
+> `mixedlm("observed_delta ~ 1", groups=fold_idx)` with only five groups
+> (fold 0–4), added the variances of the network and label group
+> *means* on top of the residual that already contained them, and set
+> the interaction term to exactly zero. That produced a table reporting
+> "residual = 52 %", which was wrong: most of what it called residual
+> was the label main effect and the network × label interaction being
+> counted twice. The table above replaces it (amendment 2, A2.1–A2.2).
 
 This is the **"actual deliverable"** named in §4.6.
 
@@ -287,84 +360,213 @@ a null. See I.5.
 ## §E. Results §Network provenance ablation
 
 Provenance is the main experimental factor. We aggregate the
-α = 0.5 mean delta-AUROC by provenance class:
+α = 0.5 mean delta-AUROC by provenance class
+(`results/tables/provenance_ablation.tsv`,
+`results/tables/provenance_summary.tsv`):
 
-| provenance_class     | n networks | mean delta across cells |
-|---|---|---|
-| **protein-derived**   | 3 (funmap, string_phys700, intact) | largest absolute and most consistent positive |
-| **curated-literature** | 2 (string_full700, reactome) | mixed; sometimes largest |
-| **rna-derived**        | 1 (rna_coexp) | smallest effect; sometimes null |
+| label | protein-derived (3) | curated-literature (2) | rna-derived (1) | Kruskal p | η²(class) |
+|---|---|---|---|---|---|
+| intogen2024 | **+0.0927** | +0.0766 | +0.0513 | 0.501 | 0.21 |
+| intogen_temporal_new | +0.0212 | **+0.0235** | +0.0123 | 0.954 | 0.02 |
+| ot_all | +0.1075 | **+0.1133** | +0.0755 | 0.304 | 0.18 |
+| ot_nolit | +0.1075 | **+0.1113** | +0.0821 | 0.651 | 0.08 |
 
-Kruskal-Wallis tests across classes yield p > 0.05 for all four
-labels at α = 0.5: provenance explains a small share of the
-between-arm variance for the "real driver" label (`intogen2024`),
-but a larger share for Open Targets (where curated-class networks
-pick up literature attention).
-
-See `results/tables/provenance_ablation.tsv` for the full per-cell
-table; the H2 verdict in Discussion §I summarises.
+Kruskal-Wallis tests across classes yield p > 0.30 for all four labels
+at α = 0.5, so **no label shows a significant provenance difference**.
+The consistent pattern is that the RNA-derived network is the weakest
+of the three classes on every label, while the protein-derived and
+curated classes are within 0.006 of each other on the two Open Targets
+labels — a small curated-class margin that is directionally consistent
+with H3 (literature attention) but not statistically separable with
+six networks.
 
 ---
 
-## §F. Results §W5 rewiring null (control 3)
+## §F. Results §Robustness controls
+
+Four controls ask whether the headline result survives when the obvious
+alternative explanations are removed: is the signal just the degree
+sequence (F.1), does it depend on the training partition (F.2), on the
+size of the positive set (F.3), or on how much of the genome each
+network covers (F.4)? F.5 states what the three corrected controls
+say together.
+
+### F.1 W5 rewiring null (control 3)
 
 100 rewirings × 6 networks = 600 random-network edge-permuted runs.
 For each (network, label) cell at α = 0.5, observed ΔAUROC vs null
-distribution:
+distribution (`results/tables/w5_p_values.tsv`):
 
-* 23/24 cells have z > 5 (i.e., observed exceeds the rewired null by
-  8-200 null standard errors)
+* 23/24 cells have z > 8.9 (up to z = 205.2), i.e. observed exceeds
+  the rewired null by 9–205 null standard deviations
 * The single exception: `reactome × intogen_temporal_new`, observed
-  = −0.012, rewired null mean ≈ +0.005, z = −3.5 → observed is
+  = −0.0112, rewired null mean = +0.0050, z = −3.53 → observed is
   significantly **below** the rewired null. The rewiring null says the
   signal is not produced by the degree sequence; for this one cell the
   network performs *worse* than the rewired null. Whether that reflects
   a genuine negative effect or a curator lag (the Reactome release
-  cycle trailing the IntOGen driver catalogue) is a hypothesis, tested
-  in the Discussion, not a result.
+  cycle trailing the IntOGen driver catalogue) is tested in §F.5 and
+  discussed in §I.3.
 
 The W5 result means: **observed ΔAUROC cannot be explained by the
 network's degree sequence**. The specific topology matters.
 
+### F.2 D-09 temporal-drift control
+
+The training seeds are the IntOGen 2024 drivers minus the drivers
+discovered in the 2020–2024 window, and the held-out positives are
+exactly that window: can the prior still rank *newly discovered*
+drivers? Each repeat draws the training seed set with replacement, so
+the 50 repeats are 50 independent draws (`n_eff_seed_sets` = 50 in
+`results/tables/d09_table.tsv`).
+
+At α = 0.5:
+
+| network | ΔAUROC (mean ± SD over 50 seed draws) | n training seeds | n held-out positives |
+|---|---|---|---|
+| funmap | **+0.0247** ± 0.0076 | 357 | 104 |
+| rna_coexp | **+0.0382** ± 0.0068 | 296 | 89 |
+| string_phys700 | **+0.0762** ± 0.0080 | 428 | 116 |
+| intact | **+0.0302** ± 0.0030 | 473 | 150 |
+| string_full700 | **+0.0923** ± 0.0064 | 468 | 145 |
+| **reactome** | **−0.0095** ± 0.0116 | 310 | 63 |
+
+Five of six networks recover drivers they were never trained on.
+Reactome is the only negative one, and its 95 % interval
+(±1.96 SD ≈ [−0.032, +0.013]) contains zero.
+
+### F.3 D-11 common-size cap control
+
+Each network's positive set is capped to N = min over the four labels of
+the positives inside that network's LCC, so every network is judged on
+the same number of positives: funmap 104, rna_coexp 89,
+string_phys700 116, intact 150, string_full700 145, reactome 63. All 24
+arms satisfy `N_in_split == N` exactly.
+
+At α = 0.5 (`results/tables/d11_table.tsv`), 22 of 24 arms are
+positive, from +0.0071 (intact × `intogen_temporal_new`) to +0.1819
+(string_phys700 × `ot_nolit`). The two negative arms are both Reactome:
+
+| cell | ΔAUROC |
+|---|---|
+| **reactome × intogen2024** | **−0.0110** ± 0.0434 |
+| **reactome × intogen_temporal_new** | **−0.0125** ± 0.0501 |
+
+Note what the cap does to the second column of Table 1: in the uncapped
+primary factorial, `reactome × intogen2024` is **+0.0429**; capping
+every network to Reactome's own minimum (63) flips that arm negative.
+Reactome's advantage on the broad IntOGen label is therefore partly a
+*coverage* advantage that disappears when the positive sets are
+equalised — while its temporal failure gets worse.
+
+### F.4 D-12 shared-universe control
+
+Both networks and labels are restricted to the 1,605 genes present in
+all six networks, so that no arm can win by covering more genes than
+its competitors. Every per-fold test set is |shared| / 5 = 321 genes
+(asserted by the run).
+
+At α = 0.5 (`results/tables/d12_table.tsv`), 22 of 24 arms are
+positive, from +0.0148 (rna_coexp × `intogen_temporal_new`) to +0.1304
+(string_phys700 × `ot_all`). The two negative arms are again the
+temporal ones:
+
+| cell | ΔAUROC |
+|---|---|
+| **reactome × intogen_temporal_new** | **−0.0360** ± 0.0854 |
+| **intact × intogen_temporal_new** | **−0.0150** ± 0.0642 |
+
+### F.5 What the three corrected controls say together
+
+Three independent controls — a redrawn training partition (D-09), an
+equalised positive-set size (D-11) and an equalised gene universe
+(D-12) — each leave the primary conclusion intact and each leave
+**Reactome** as the outlier on temporal extrapolation:
+
+| control | reactome × intogen_temporal_new | other arms |
+|---|---|---|
+| D-09 temporal drift | −0.0095 | 5 of 6 networks positive |
+| D-11 common-size cap | −0.0125 | 22 of 24 arms positive |
+| D-12 shared universe | −0.0360 | 22 of 24 arms positive |
+
+The three controls remove three different explanations — "it depends on
+the partition", "it depends on how many positives the network has",
+"it depends on how much of the genome the network covers" — and the
+Reactome anomaly survives all three. That is the strongest single piece
+of evidence in the study: the failure is specific to Reactome's
+coverage of **newly discovered** drivers, not to its overall coverage
+and not to the size of the evaluation set. It moves curator lag from a
+Discussion hypothesis to a supported explanation (§I.3).
+
+The three controls were re-run after defects in each of them were found
+and fixed (amendment 2, A2.3h and A2.3i); the pre-fix versions of the
+tables should not be cited.
+
 ---
 
-## §G. Results §A5 degree-matched seed null (control 2, fine mode)
+## §G. Results §A5 degree-matched seed null (control 2)
 
-100 resamples × 6 networks × 4 labels × 5-fold × 10-repeat = 12,000
-fine-mode paired observations.
+100 degree-matched random seed sets per cell, each propagated over the
+5 folds of each of the 10 repeats (the control-2 null was simulated on
+the original 10-repeat design; see the bias statement below).
 
-At α = 0.5, observed ΔAUROC beats degree-matched random seeds
-in all 24 cells (z > 0):
+Two summaries are computed from the same trace:
 
-* 23/24 cells have z > 5 (5 < z < 90) — gene identity strongly
-  matters
-* 1/24 (`reactome × intogen_temporal_new`) has z = +2.4 (still
-  positive; observed is significantly above the random-seed null
-  even though it's negative overall)
+* **cell level** (one z per cell, the null distribution pooled over
+  folds): `results/tables/a5_p_values.tsv`
+* **fold level** (one z per (repeat, fold), the folds of a cell
+  summarised by their mean): `results/tables/stats_fine_z.tsv` and
+  `stats_fine_z_summary.tsv`
 
-Cross-validating W5 and A5: 23/24 cells reject BOTH nulls.
-The signal is robust.
+At α = 0.5 the observed ΔAUROC beats degree-matched random seeds in
+**all 24 cells** (cell-level z > 0 everywhere):
+
+* 23/24 cells have cell-level z > 5 (5.5 ≤ z ≤ 106.3)
+* the remaining cell, `reactome × intogen_temporal_new`, has z = +2.11
+  (p = 0.017) — still positive: observed is above the random-seed null
+  even though it is negative against the degree baseline
+* at the fold level the per-cell mean z ranges from 0.28 (the same
+  Reactome cell) to 13.2; the Stouffer-combined z ranges from 2.0 to
+  93.5 and **all 24 cells have p < 0.05** (largest p = 0.023)
+
+So gene identity matters: replacing the true driver seeds by
+degree-matched random seeds destroys the effect in every arm.
+
+> **Bias statement (control 2).** The control-2 null was simulated on
+> the 10-repeat design while the primary factorial moved to 40 repeats.
+> Each null resample therefore carries more sampling noise, which
+> **inflates the null spread and shrinks the z-score**: the reported
+> separation is a lower bound and the control is conservative
+> (amendment 2, A2.3g). The z-scores are 2.1–106, so no conclusion
+> depends on their exact value.
+
+Cross-validating W5 and A5: 23/24 cells reject BOTH nulls, and the one
+cell that does not reject the rewiring null still rejects the
+gene-identity null. The signal is robust.
 
 ---
 
 ## §H. Results §Table 1 (full 24 × 3 factorial)
 
 The full primary endpoint at α = 0.5 is reproduced below
-(see `results/tables/a4_table1_delta_auroc.tsv`):
+(see `results/tables/a4_table1_delta_auroc_v40.tsv`; the 40-repeat
+values agree with the canonical interval table
+`results/tables/stats_bootstrap_ci.tsv` to 1e-16):
 
 ```
-                                intogen2024   ot_all   ot_nolit   intogen_temporal_new
-funmap          mean δAUROC       +0.0998    +0.0846   +0.0779   +0.0172
-string_full700  mean δAUROC       +0.1133    +0.1192   +0.1272   +0.0573
-string_phys700  mean δAUROC       +0.1189    +0.1593   +0.1697   +0.0348
-intact          mean δAUROC       +0.0650    +0.0838   +0.0781   +0.0067
-reactome        mean δAUROC       +0.0436    +0.1090   +0.0984   −0.0112
-rna_coexp       mean δAUROC       +0.0498    +0.0780   +0.0849   +0.0197
+                                 intogen2024   ot_all   ot_nolit   intogen_temporal_new
+funmap          mean δAUROC       +0.1001    +0.0853   +0.0780   +0.0196
+string_full700  mean δAUROC       +0.1133    +0.1201   +0.1267   +0.0604
+string_phys700  mean δAUROC       +0.1189    +0.1582   +0.1711   +0.0378
+intact          mean δAUROC       +0.0651    +0.0842   +0.0784   +0.0071
+reactome        mean δAUROC       +0.0429    +0.1103   +0.0996   −0.0125
+rna_coexp       mean δAUROC       +0.0521    +0.0767   +0.0834   +0.0127
 ```
 
-All 72 cells have a fine-mode per-fold z (computed in Results §G).
-The single negative cell `reactome × intogen_temporal_new` is the
-candidate for the most informative Discussion paragraph.
+23 of the 24 cells are positive. The single negative cell
+`reactome × intogen_temporal_new` is the candidate for the most
+informative Discussion paragraph, and the three robustness controls in
+§F.2–§F.4 are what make it a finding rather than an accident.
 
 ---
 
@@ -372,19 +574,26 @@ candidate for the most informative Discussion paragraph.
 
 ### I.1 H1 holds: the prior contributes beyond degree
 
-Combining W5 (topology matters), A5 (gene identity matters), and the
-variance decomposition (label explains 34 % of between-arm spread,
-network x label interaction 41 %, network 24 %, fold-to-fold sampling
-noise 1.3 %), the verdict is:
+Combining W5 (topology matters), A5 (gene identity matters), the
+variance decomposition (label explains 34.8 % of between-arm spread,
+network × label interaction 40.1 %, network 24.8 %, fold-to-fold
+sampling noise 0.3 %) and the three robustness controls of §F.2–§F.4,
+the verdict is:
 
-**H1 holds**: the network prior contributes signal beyond node
-degree in 24/24 (network, label) cells, with 95% confidence
-intervals excluding zero and z-scores 5-200.
+**H1 holds**: the network prior contributes signal beyond node degree
+in every one of the 24 (network, label) cells — the 95 % confidence
+interval excludes zero in 24/24 arms under the fold-level, repeat-level
+percentile, repeat-level *t* and repeat-level BCa intervals, and in
+20/24 under the (deliberately conservative) gene-cluster bootstrap, the
+four exceptions being the four `intogen_temporal_new` arms with the
+smallest effects. The cell-level separation from the degree-matched
+seed null is z = 2.1–106 and from the rewired null z = 8.9–205
+(excluding the single Reactome cell, §F.1).
 
 The confidence interval uses the **repeat** as its resampling unit,
 not the fold, and the design uses 40 repeats rather than 10. Within
 one repeat the five folds come from a single stratified partition and
-are negatively dependent (measured intra-repeat ICC = -0.235), so
+are negatively dependent (measured intra-repeat ICC = −0.235), so
 treating the 200 folds as 200 independent observations inflates every
 standard error by about two-fold. A coverage simulation over 400
 synthetic datasets per cell, run with the acceptance criterion fixed
@@ -403,17 +612,47 @@ alongside as a sensitivity analysis (see amendment 2).
 * for `ot_all` (Open Targets aggregate), the curated class has a
   clear edge, consistent with H3 (literature attention)
 
-### I.3 Reactome's collapse on the newest drivers
+### I.3 Reactome's collapse on the newest drivers — a supported explanation
 
-`reactome × intogen_temporal_new` is the one negative cell
-(ΔAUROC = −0.011), and the *only* cell where the rewired-network
-null is positive while observed is below zero. We interpret this
-as: **Reactome's curated pathway annotations lag behind the 2020-2024
-driver discoveries**. The curators update their knowledge base on a
-multi-year cycle; the 4-year-window newly-discovered drivers are
-systematically absent from the curated network. This is a
-publication-quality negative finding and a candidate for the
-discussion's H3 paragraph.
+`reactome × intogen_temporal_new` is the one negative cell of the
+primary factorial (ΔAUROC = −0.0125) and the only cell where the
+rewired-network null is positive while observed is below zero. The
+interpretation we advance is:
+
+**Reactome's curated pathway annotations lag behind the 2020–2024
+driver discoveries.** The curators update their knowledge base on a
+multi-year cycle; the drivers discovered in the 4-year window are
+systematically absent from the curated network, so a prior built on
+Reactome cannot rank them.
+
+This was a hypothesis in the first draft of this manuscript. It is now
+a **supported explanation**, because the anomaly survives three
+independent controls that each remove a competing explanation
+(§F.2–§F.5):
+
+| competing explanation | control that removes it | Reactome × temporal after the control |
+|---|---|---|
+| the training partition was unlucky | D-09: seed set redrawn 50× | −0.0095 (still negative) |
+| the positive set was too large / too uneven | D-11: every network capped to N = 63 | −0.0125 (still negative) |
+| Reactome simply covers fewer genes | D-12: all arms evaluated on the same 1,605 genes | −0.0360 (still negative) |
+
+What the controls add is *localisation*. D-11 shows that Reactome's
+apparent advantage on the broad IntOGen label is partly a coverage
+advantage (capped to 63 positives, `reactome × intogen2024` flips from
++0.0429 to −0.0110), and D-09 and D-12 show that the temporal failure
+is not a coverage artefact at all. The failure is specific to
+Reactome's coverage of *newly discovered* drivers.
+
+Two caveats are stated plainly. First, Reactome's temporal arm has only
+63 held-out positives, so its interval is wide; the point estimate is
+negative under all three controls, but the *magnitude* is not
+precisely estimated. Second, this is one network out of six, and the
+control that isolates it most sharply (D-12) makes it negative for
+`intact` as well (−0.0150), so the phenomenon may be "small curated
+networks" rather than "Reactome" specifically. The publication claim
+we make is therefore about **curated networks and temporal
+extrapolation**, with Reactome as the clearest case — not a universal
+claim about Reactome.
 
 ### I.4 §7 GNN courtesy rebuttal
 
@@ -422,8 +661,6 @@ show a larger prior contribution." As a control arm we ran
 Node2Vec (Grover & Leskovec 2016) with identical hyperparameters
 across all (network, label) cells. Headline:
 
-| method (mean over 24 cells, α=0.5) | mean ΔAUROC |
-|---|---|
 | method (mean over 24 cells, α=0.5) | mean ΔAUROC | positive cells |
 |---|---|---|
 | **RWR** (chosen learner)            | +0.079 | 24/24 |
@@ -489,8 +726,9 @@ unit and is reported for all three:
 
 So the interval is entirely below zero under the primary unit and
 contains zero under the other two; **no unit supports reading this cell
-as evidence of a negative effect.** The curator-lag explanation is a
-hypothesis for why the cell is null, and it is tested in the Discussion.
+as evidence of a negative effect.** The curator-lag explanation is why
+the cell is null; it is supported by the three robustness controls in
+§F.2–§F.5 and argued in §I.3.
 
 The pre-registered H1 rule — the 95 % CI excludes 0 in **every** arm —
 is met under four of the five interval constructions (fold, repeat
@@ -512,18 +750,23 @@ are delivered:
   assembled; public release protocol written; reproducibility
   audit completed.
 
-The single substantive negative result — reactome's failure on
-the newest drivers — is a publishable finding on its own and supports
-the H3 hypothesis about literature attention in curated networks.
-
 The benchmark's central claim is **robust**:
-* 23/24 (network, label) cells reject the rewiring-null AND the
-  gene-identity-null at α = 0.5.
+* 24/24 (network, label) cells beat the degree-matched random-seed
+  null (control 2, §G), and 23/24 beat the rewired-network null
+  (control 3, §F.1); the one exception is the Reactome temporal cell,
+  where the observed value falls *below* the rewired null.
+* Three further robustness controls — a redrawn training partition
+  (D-09), an equalised positive-set size (D-11) and an equalised gene
+  universe (D-12) — leave 22–23 of 24 arms positive each time (§F.2–§F.4).
 * Two different learner families (RWR + Node2Vec) both outperform
   degree in the same cells, ruling out a learner-specific artefact.
 * Provenance stratification gives a partial explanation for the
-  between-arm variance (H2), with a publishable H3 detail on
-  curated networks' literature-attention advantage.
+  between-arm variance (H2), with a publishable H3 detail on curated
+  networks' literature-attention advantage.
+
+The single substantive negative result — curated networks' collapse on
+newly discovered drivers — is supported by three independent controls
+and is a publishable finding in its own right (§F.5, §I.3).
 
 This is the v1.0-prep release: reproducible on a clean machine via
 `docs/public_release_protocol.md` and `scripts/audit_reproducibility.py`,
@@ -541,7 +784,7 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
 * A's logs: `docs/a0_log.md` ... `docs/a5_log.md`, `docs/w5_log.md`,
   `docs/stats_analysis_log.md`, `docs/gnn_courtesy_log.md`,
   `docs/s2_log.md`.
-* A's tables: `results/tables/a4_table1_delta_auroc.tsv`,
+* A's tables: `results/tables/a4_table1_delta_auroc_v40.tsv`,
   `results/tables/d09_table.tsv`, `results/tables/d11_table.tsv`,
   `results/tables/d12_table.tsv`,
   `results/tables/w5_null_distribution.tsv`,
@@ -554,8 +797,10 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
   `results/tables/stats_fine_z.tsv`,
   `results/tables/stats_fine_z_summary.tsv`,
   `results/tables/stats_variance_decomp.tsv`,
+  `results/tables/stats_variance_components.tsv`,
   `results/tables/stats_bootstrap_ci.tsv`,
   `results/tables/stats_equivalence.tsv`,
+  `results/tables/stats_h1_verdict_v40.tsv`,
   `results/tables/gnn_courtesy_arm.tsv`
 * B's manuscript: `docs/manuscript_b_sections.md`
 * Pre-registration: `docs/pre_registration.md` (Zenodo DOI

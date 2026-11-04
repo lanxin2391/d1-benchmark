@@ -25,6 +25,7 @@ Outputs:
     results/tables/provenance_summary.tsv
         per (label, alpha): class means + ANOVA / Kruskal effect size.
 """
+import argparse
 import sys
 from pathlib import Path
 
@@ -52,7 +53,19 @@ LABELS = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
 
 
 def main():
-    df = pd.read_csv(RUN_A4, sep="\t")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--a4", default=None,
+                    help="path to a4_combined.tsv (default "
+                         "results/runs/a4_combined.tsv; use "
+                         "results/runs_v40/a4_combined.tsv for the 40-repeat "
+                         "primary design)")
+    args = ap.parse_args()
+    run_a4 = RUN_A4
+    if args.a4:
+        run_a4 = Path(args.a4)
+        if not run_a4.is_absolute():
+            run_a4 = ROOT / run_a4
+    df = pd.read_csv(run_a4, sep="\t")
     df["repeat"] = df["repeat"].astype(int)
     df["fold"] = df["fold"].astype(int)
     # Compute delta per fold = RWR(auroc) - degree(auroc).
@@ -101,6 +114,9 @@ def main():
     # Test H2: do the three classes differ in their mean delta_AUROC?
     # Kruskal-Wallis on per-network class means (1 observation per network).
     summary = []
+    # class names are unique -- PROVENANCE.values() repeats each class
+    # once per network, which would duplicate the printed columns
+    CLASSES = sorted(set(PROVENANCE.values()))
     for (lab, alpha), sub in grouped.groupby(["label_set", "alpha"]):
         if sub["provence_class"].nunique() < 2:
             summary.append({
@@ -109,7 +125,7 @@ def main():
                 "eta_squared_class": np.nan,
                 "n_classes": 1,
                 "n_networks": len(sub),
-                **{f"{c}_mean": np.nan for c in PROVENANCE.values()},
+                **{f"{c}_mean": np.nan for c in CLASSES},
             })
             continue
         classes = sorted(sub["provence_class"].unique())
@@ -145,7 +161,7 @@ def main():
     summary_df.to_csv(TABLE_DIR / "provenance_summary.tsv",
                        sep="\t", index=False)
     print("\nPer-(label, alpha=0.5) provenance class means + Kruskal effect size:")
-    cls_cols = [f"{c}_mean" for c in PROVENANCE.values()]
+    cls_cols = [f"{c}_mean" for c in CLASSES]
     keep = ["label", "alpha", "n_classes", "n_networks",
             "H_kruskal", "p_kruskal", "eta_squared_class"] + cls_cols
     keep = [c for c in keep if c in summary_df.columns]
