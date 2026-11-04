@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_full700_rewired	intogen_temporal_new	native_string_full700		0	0	degree		0.6570510011830172	0.01601316329012591	0.0	0.01	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		0	1	degree		0.6324376725233317	0.013039670471429829	0.0	0.0	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		0	2	degree		0.5720609666568051	0.020408619750462906	0.02	0.02	0.018	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		0	3	degree		0.5760877902326245	0.011205929194937661	0.0	0.0	0.006	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		0	4	degree		0.6960652181059137	0.02083703496632873	0.02	0.03	0.024	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		1	0	degree		0.6605014678175525	0.015825935592704603	0.0	0.01	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		1	1	degree		0.5894930552512817	0.013865686344030029	0.02	0.01	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		1	2	degree		0.6737505889571896	0.025925959473670056	0.02	0.02	0.022	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		1	3	degree		0.6368024281472229	0.015576340708108935	0.0	0.01	0.02	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		1	4	degree		0.5737977055323625	0.010786785898118934	0.0	0.01	0.004	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		2	0	degree		0.6718003768128642	0.01583909549579736	0.0	0.01	0.022	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		2	1	degree		0.5241313587170836	0.010604301027652027	0.0	0.01	0.01	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		2	2	degree		0.5931812454116127	0.011672205490741753	0.0	0.0	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		2	3	degree		0.6043303419786771	0.021137478331561828	0.02	0.01	0.012	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		2	4	degree		0.7367060035282645	0.02318685783314298	0.0	0.02	0.028	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		3	0	degree		0.6550793059632826	0.014849595316406622	0.0	0.0	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		3	1	degree		0.5978125136923278	0.011901528124318494	0.0	0.01	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		3	2	degree		0.7339666677624012	0.022327703648133336	0.02	0.02	0.026	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		3	3	degree		0.6533041868007846	0.021975622145706676	0.02	0.03	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		3	4	degree		0.4933872434612055	0.010250377998296378	0.0	0.0	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		4	0	degree		0.6556598606668712	0.016014514271627193	0.0	0.0	0.02	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		4	1	degree		0.6296663453533716	0.02275179939095594	0.02	0.01	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		4	2	degree		0.5993118788556151	0.011951891130383483	0.0	0.0	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		4	3	degree		0.5957233490023339	0.013370712660563763	0.02	0.02	0.012	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		4	4	degree		0.6510305381151178	0.017294130675950394	0.0	0.03	0.018	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		5	0	degree		0.6335494895500153	0.014486345841186523	0.0	0.01	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		5	1	degree		0.5756802348508084	0.018889721966676973	0.02	0.01	0.014	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		5	2	degree		0.5939153873968641	0.013249955563464068	0.0	0.0	0.016	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		5	3	degree		0.6212649156832453	0.012136729103923258	0.0	0.0	0.012	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		5	4	degree		0.7055761918849917	0.020551510433434655	0.0	0.03	0.02	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		6	0	degree		0.5612649520220829	0.0182378183035605	0.02	0.02	0.014	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		6	1	degree		0.6132300749244184	0.013166472005910215	0.0	0.01	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		6	2	degree		0.662946648696624	0.01754808686649524	0.02	0.03	0.02	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		6	3	degree		0.6800236678610171	0.016079635872822896	0.0	0.0	0.02	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		6	4	degree		0.6146905098451727	0.013309386871381265	0.0	0.0	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		7	0	degree		0.6941462559698549	0.019792804877054274	0.0	0.02	0.022	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		7	1	degree		0.6662960609911056	0.016327242891109393	0.0	0.01	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		7	2	degree		0.5698640193725825	0.012007462059599615	0.0	0.0	0.018	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		7	3	degree		0.5962219081117212	0.017693843654595497	0.02	0.01	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		7	4	degree		0.6070258483722867	0.012281333297767837	0.0	0.01	0.008	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		8	0	degree		0.6189863295798098	0.014509824567158597	0.02	0.01	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		8	1	degree		0.6442075975989133	0.027126235120311804	0.02	0.02	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		8	2	degree		0.5737812695177674	0.011701753595766948	0.0	0.0	0.012	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		8	3	degree		0.6324468842794999	0.013426690611684644	0.0	0.0	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		8	4	degree		0.663850629499359	0.016834419842619467	0.0	0.02	0.022	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		9	0	degree		0.622529904044166	0.022355210691492176	0.02	0.02	0.02	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		9	1	degree		0.5904843797923147	0.01291760714446326	0.0	0.01	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700		9	2	degree		0.6132222258746699	0.01341606902465261	0.0	0.01	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		9	3	degree		0.6651545533239099	0.014347553555973353	0.0	0.01	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700		9	4	degree		0.6419030713432607	0.01512737632054265	0.0	0.01	0.018	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	0	0	rwr	12.0	0.6443499978092275	0.016229932051265567	0.02	0.01	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	0	1	rwr	12.0	0.6325307803531525	0.015699197859741797	0.0	0.03	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	0	2	rwr	12.0	0.551110526719481	0.012463021413206841	0.0	0.02	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	0	3	rwr	12.0	0.5775834675607858	0.010972037795670284	0.0	0.0	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	0	4	rwr	12.0	0.7349857006673022	0.024257258570858576	0.02	0.02	0.026	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	1	0	rwr	12.0	0.637668141786794	0.014725345331827924	0.0	0.01	0.014	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	1	1	rwr	12.0	0.5776519300705429	0.017099599208190035	0.04	0.03	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	1	2	rwr	12.0	0.682894491743642	0.023275166407520587	0.02	0.04	0.024	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	1	3	rwr	12.0	0.6550847550485959	0.01488869347934014	0.0	0.0	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	1	4	rwr	12.0	0.5744167954154475	0.010598973715230935	0.0	0.0	0.002	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	2	0	rwr	12.0	0.6530035490513956	0.01670891432409449	0.02	0.02	0.014	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	2	1	rwr	12.0	0.5356329141655347	0.010418858237572718	0.0	0.0	0.01	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	2	2	rwr	12.0	0.5710638484380307	0.011002979578364236	0.0	0.0	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	2	3	rwr	12.0	0.5747564730504148	0.011834049699806948	0.0	0.01	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	2	4	rwr	12.0	0.7041188652575523	0.0196059425695964	0.02	0.03	0.016	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	3	0	rwr	12.0	0.6277658502387942	0.012432111492323528	0.0	0.0	0.008	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	3	1	rwr	12.0	0.6118279805459406	0.014910681700073874	0.02	0.01	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	3	2	rwr	12.0	0.7270416269462981	0.018231560385396355	0.0	0.0	0.02	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	3	3	rwr	12.0	0.6309457282798067	0.01728211694236845	0.0	0.03	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	3	4	rwr	12.0	0.5038843781159945	0.012528985735602509	0.04	0.03	0.012	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	4	0	rwr	12.0	0.6415019936029444	0.020503902718840707	0.04	0.03	0.018	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	4	1	rwr	12.0	0.5817377207203259	0.011712060847451425	0.0	0.01	0.006	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	4	2	rwr	12.0	0.5914225918499282	0.011235417436333007	0.0	0.0	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	4	3	rwr	12.0	0.5871601853982445	0.012872745474757252	0.0	0.02	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	4	4	rwr	12.0	0.662305644127412	0.015781431375824235	0.0	0.0	0.018	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	5	0	rwr	12.0	0.5977851290364983	0.013358463779418383	0.0	0.01	0.014	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	5	1	rwr	12.0	0.5969197739122815	0.014665880053356367	0.02	0.02	0.014	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	5	2	rwr	12.0	0.5981065711186352	0.013689778159898159	0.0	0.02	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	5	3	rwr	12.0	0.62670523651425	0.01448039235645739	0.02	0.02	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	5	4	rwr	12.0	0.7116356025990818	0.018558637829862976	0.0	0.02	0.016	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	6	0	rwr	12.0	0.5282390570915305	0.010726857032097668	0.0	0.0	0.01	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	6	1	rwr	12.0	0.605682863777768	0.012108038614905246	0.0	0.0	0.01	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	6	2	rwr	12.0	0.6631931889155518	0.01589199680494241	0.0	0.02	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	6	3	rwr	12.0	0.6824671553641674	0.02178103307182137	0.02	0.04	0.016	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	6	4	rwr	12.0	0.6201198733331141	0.013515268120535672	0.0	0.01	0.016	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	7	0	rwr	12.0	0.7114095430048635	0.02058832897655389	0.0	0.03	0.024	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	7	1	rwr	12.0	0.6730491171186961	0.017535111551548802	0.02	0.02	0.02	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	7	2	rwr	12.0	0.5487875699900288	0.010643662114794984	0.0	0.01	0.006	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	7	3	rwr	12.0	0.5674150531979006	0.010935209893125946	0.0	0.01	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	7	4	rwr	12.0	0.5811665187425352	0.011193488072712105	0.0	0.0	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	8	0	rwr	12.0	0.6066248959383078	0.01751778101378835	0.02	0.02	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	8	1	rwr	12.0	0.6265828331069535	0.01402951733756767	0.0	0.02	0.012	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	8	2	rwr	12.0	0.5882887917337803	0.012425145660654797	0.0	0.01	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	8	3	rwr	12.0	0.5975148745932086	0.012755552588035256	0.0	0.02	0.01	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	8	4	rwr	12.0	0.6838696952762895	0.017768668125201517	0.0	0.01	0.018	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	9	0	rwr	12.0	0.6139420759759893	0.018259172643308973	0.02	0.04	0.016	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	9	1	rwr	12.0	0.5735661394207597	0.012357090081031861	0.0	0.02	0.008	29	3177
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	9	2	rwr	12.0	0.6295322310246212	0.01578748893738825	0.0	0.01	0.016	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	9	3	rwr	12.0	0.6796401608537962	0.014488513771018086	0.0	0.01	0.014	29	3176
+string_full700_rewired	intogen_temporal_new	native_string_full700	0.5	9	4	rwr	12.0	0.6167997983848876	0.013308837133404361	0.0	0.0	0.014	29	3176

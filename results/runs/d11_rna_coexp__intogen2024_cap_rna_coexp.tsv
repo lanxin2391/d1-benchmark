@@ -1,0 +1,401 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		0	0	degree		0.6873812588098303	0.05471485596988539	0.06	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		0	1	degree		0.4799748728320157	0.016329506327867598	0.04	0.03	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		0	2	degree		0.5356575062457415	0.010090641468558821	0.0	0.0	0.008	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		0	3	degree		0.5672982585234241	0.034595535739705904	0.06	0.04	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		0	4	degree		0.6292923718420407	0.0240068720138972	0.06	0.04	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		1	0	degree		0.6108659680088251	0.024481018352823552	0.04	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		1	1	degree		0.6030826745112459	0.02729030747212719	0.04	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		1	2	degree		0.5084844748710294	0.03241165849561891	0.04	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		1	3	degree		0.6061595535933285	0.02234992478149915	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		1	4	degree		0.567190949227373	0.02133169458615566	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		2	0	degree		0.6125360053931482	0.049895338382528964	0.04	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		2	1	degree		0.5728075013789299	0.011807126371121555	0.0	0.0	0.008	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		2	2	degree		0.48210635605593594	0.011685249511194234	0.02	0.02	0.006	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		2	3	degree		0.5766341672798626	0.020072887541181104	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		2	4	degree		0.6478722099583027	0.06549281335003812	0.1	0.06	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		3	0	degree		0.500474964760679	0.014620201179005388	0.04	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		3	1	degree		0.5779861494147209	0.03244063645518354	0.02	0.03	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		3	2	degree		0.6776386230167744	0.03859168550129392	0.06	0.04	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		3	3	degree		0.5689232278636253	0.04485926715303004	0.04	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		3	4	degree		0.5844830757910228	0.01653578527445689	0.04	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		4	0	degree		0.5868572654286941	0.04984010003601112	0.08	0.04	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		4	1	degree		0.5588803088803088	0.01513004582789032	0.02	0.03	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		4	2	degree		0.5762629376074755	0.011605400969297918	0.0	0.01	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		4	3	degree		0.5379415011037528	0.013381446873326586	0.02	0.01	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		4	4	degree		0.6369879813588422	0.061293925071407705	0.08	0.05	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		5	0	degree		0.5325121039406754	0.014638649182139907	0.02	0.01	0.006	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		5	1	degree		0.47361647361647363	0.02156850578176831	0.04	0.02	0.006	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		5	2	degree		0.6072645274325946	0.04187887699506375	0.02	0.01	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		5	3	degree		0.6433038999264166	0.030654902122826108	0.08	0.05	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		5	4	degree		0.6428899926416483	0.033572637104596584	0.04	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		6	0	degree		0.5896610896610897	0.014517124190475279	0.02	0.01	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		6	1	degree		0.5772813629956487	0.017654430353890693	0.02	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		6	2	degree		0.6095681515849584	0.02529600574760248	0.04	0.02	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		6	3	degree		0.6070026980623007	0.030098988673465863	0.06	0.04	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		6	4	degree		0.5199748589649252	0.04817825096482417	0.06	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		7	0	degree		0.7022430593859165	0.04801375688541798	0.08	0.05	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		7	1	degree		0.5506067291781578	0.01113918196724564	0.0	0.0	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		7	2	degree		0.4962038869601895	0.01993542463102079	0.04	0.03	0.008	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		7	3	degree		0.4998313711062055	0.01582693904888633	0.02	0.01	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		7	4	degree		0.6452354672553349	0.0319313094081506	0.06	0.05	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		8	0	degree		0.6263406263406264	0.016929521339675763	0.04	0.02	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		8	1	degree		0.6297726297726298	0.0172753072772288	0.02	0.02	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		8	2	degree		0.49278089614224074	0.048191848392668525	0.04	0.03	0.008	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		8	3	degree		0.4825545744419917	0.025691262611464698	0.04	0.04	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		8	4	degree		0.6640759136620064	0.0301418585243253	0.06	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		9	0	degree		0.5399430042287184	0.012476465405056847	0.02	0.01	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		9	1	degree		0.627704234847092	0.09661112190627164	0.06	0.05	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		9	2	degree		0.46565653288342373	0.011373447625215805	0.02	0.02	0.006	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		9	3	degree		0.5544058130978661	0.01176676397892448	0.0	0.01	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		9	4	degree		0.7000091979396614	0.05393834146075601	0.1	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		10	0	degree		0.5467610467610466	0.027111851131496573	0.06	0.04	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		10	1	degree		0.6381994239137097	0.02655376545186835	0.06	0.04	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		10	2	degree		0.5064890821193343	0.042463384439566154	0.04	0.03	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		10	3	degree		0.5751931567328918	0.01247878063972325	0.0	0.01	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		10	4	degree		0.6290317635516312	0.028982787207906122	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		11	0	degree		0.6580866580866581	0.03054486179058028	0.04	0.03	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		11	1	degree		0.5165011950726236	0.0684404564388251	0.02	0.03	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		11	2	degree		0.545926478699588	0.023140819925256295	0.06	0.03	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		11	3	degree		0.5793322295805738	0.023696503384607336	0.04	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		11	4	degree		0.6003188619082658	0.015196699163269317	0.02	0.01	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		12	0	degree		0.6182662254090826	0.0203928982656959	0.02	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		12	1	degree		0.5562450205307348	0.04361402777791047	0.06	0.04	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		12	2	degree		0.5592453197495214	0.0338793256068141	0.06	0.03	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		12	3	degree		0.650892200147167	0.022643495869020955	0.04	0.02	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		12	4	degree		0.5130150846210448	0.013149066096341727	0.02	0.02	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		13	0	degree		0.5620212048783476	0.013098637995540965	0.0	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		13	1	degree		0.4575902433045289	0.013247067679900875	0.04	0.02	0.006	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		13	2	degree		0.5351221569708965	0.015555689539677984	0.02	0.02	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		13	3	degree		0.6272534952170714	0.034190295794275065	0.06	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		13	4	degree		0.7163815305371596	0.07175783769594693	0.08	0.04	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		14	0	degree		0.6851596494453637	0.022311519133906447	0.02	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		14	1	degree		0.5696053196053196	0.0695613757561053	0.04	0.02	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		14	2	degree		0.4158852730281301	0.008031027331129932	0.0	0.0	0.004	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		14	3	degree		0.6019285013490312	0.023592238704654354	0.06	0.04	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		14	4	degree		0.614514348785872	0.0455284358033419	0.08	0.05	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		15	0	degree		0.49721149721149727	0.049145998645880824	0.04	0.03	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		15	1	degree		0.7234326162897591	0.03975948387513295	0.06	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		15	2	degree		0.5140488627883586	0.01191531652741364	0.02	0.02	0.008	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		15	3	degree		0.6519806230071131	0.02474431753106504	0.06	0.04	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		15	4	degree		0.5070057640421879	0.016619431165185473	0.02	0.02	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		16	0	degree		0.48139976711405286	0.01499809971871334	0.04	0.02	0.008	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		16	1	degree		0.5895385181099466	0.021849650935535828	0.02	0.04	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		16	2	degree		0.5276759352389605	0.035635215972462816	0.08	0.04	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		16	3	degree		0.6865495462349767	0.023307424957082983	0.02	0.02	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		16	4	degree		0.606757419671327	0.03285110792240128	0.04	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		17	0	degree		0.5780321137463994	0.016125214777666732	0.02	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		17	1	degree		0.5471747257461543	0.024337598040147592	0.04	0.04	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		17	2	degree		0.7538528925083546	0.03574505553360639	0.06	0.04	0.022	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		17	3	degree		0.4577048074564631	0.011377054413890616	0.02	0.01	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		17	4	degree		0.5718359087564385	0.04412608748614979	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		18	0	degree		0.5954679168964883	0.018937843112938738	0.02	0.02	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		18	1	degree		0.5397131825703254	0.024539423747588347	0.06	0.03	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		18	2	degree		0.5841958404983615	0.022977988818866854	0.04	0.03	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		18	3	degree		0.5655046602894285	0.022963554470883774	0.04	0.02	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		18	4	degree		0.6159860191317146	0.045988110690766804	0.04	0.03	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		19	0	degree		0.5013482870625728	0.012289858274169238	0.02	0.02	0.008	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		19	1	degree		0.6855580069865784	0.07339710057653977	0.08	0.05	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		19	2	degree		0.5633658868952987	0.01953112855421544	0.04	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		19	3	degree		0.5563373804267844	0.02376966588640121	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		19	4	degree		0.5953673043904832	0.01567417288732556	0.02	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		20	0	degree		0.5424863639149353	0.012542112545303248	0.0	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		20	1	degree		0.5452442238156523	0.021898986881108674	0.04	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		20	2	degree		0.5027903053113136	0.01288051138114547	0.02	0.02	0.006	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		20	3	degree		0.6262263919548688	0.0697427266760469	0.1	0.06	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		20	4	degree		0.6735804513122393	0.029008526549642345	0.04	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		21	0	degree		0.48740577312005884	0.009840078883432595	0.0	0.01	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		21	1	degree		0.7528651100079671	0.08871649191111355	0.1	0.05	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		21	2	degree		0.5019305019305019	0.014609939469413328	0.04	0.02	0.008	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		21	3	degree		0.615602771645818	0.019622484723746926	0.04	0.03	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		21	4	degree		0.5487644101054697	0.022602479333431773	0.02	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		22	0	degree		0.6079548936691793	0.030927074736601487	0.08	0.04	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		22	1	degree		0.5607342035913464	0.04259142919348684	0.02	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		22	2	degree		0.5727101651471399	0.013263138385364588	0.02	0.02	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		22	3	degree		0.6353323522197695	0.04473697738045572	0.06	0.04	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		22	4	degree		0.5214465293107677	0.013227507771146167	0.02	0.01	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		23	0	degree		0.6533216890359748	0.01856860962185723	0.04	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		23	1	degree		0.48443341300484155	0.018951657817903457	0.04	0.04	0.008	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		23	2	degree		0.5287953019045456	0.01859975504769455	0.02	0.01	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		23	3	degree		0.6735497915133677	0.05741587849105059	0.04	0.03	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		23	4	degree		0.5525202354672554	0.02595485927176764	0.06	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		24	0	degree		0.6485873628730772	0.022197704901732646	0.04	0.03	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		24	1	degree		0.5518324446895876	0.03259593834885424	0.06	0.04	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		24	2	degree		0.7276532234515428	0.025538870402876272	0.04	0.03	0.022	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		24	3	degree		0.4848080696590631	0.05501844999647485	0.04	0.03	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		24	4	degree		0.4926569781702232	0.013083470390715536	0.02	0.01	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		25	0	degree		0.5796868296868296	0.01908816887105433	0.02	0.03	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		25	1	degree		0.7477477477477478	0.11565342499563638	0.1	0.06	0.022	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		25	2	degree		0.5360306284676033	0.012238814298647779	0.02	0.01	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		25	3	degree		0.5829347559480009	0.017242427350554864	0.02	0.01	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		25	4	degree		0.45082168260976213	0.01499238240746427	0.04	0.03	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		26	0	degree		0.46482196482196475	0.011140525782840388	0.02	0.02	0.004	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		26	1	degree		0.5631549917264204	0.0939372551878658	0.06	0.05	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		26	2	degree		0.6037766457934525	0.021378804408062745	0.04	0.02	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		26	3	degree		0.6410657346087809	0.028713436276582464	0.04	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		26	4	degree		0.6270542065244051	0.017215583753029666	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		27	0	degree		0.5964025249739535	0.04812549292290682	0.06	0.04	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		27	1	degree		0.5698811055953913	0.014142288081594474	0.02	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		27	2	degree		0.5767009506505304	0.01780828471158543	0.04	0.02	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		27	3	degree		0.6591243561442237	0.03179641806550547	0.08	0.05	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		27	4	degree		0.4949411331861664	0.01761989060642644	0.02	0.01	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		28	0	degree		0.6381228166942453	0.031776725362761896	0.06	0.05	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		28	1	degree		0.6255898755898757	0.02728461391917676	0.04	0.02	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		28	2	degree		0.6319068167807663	0.01587708349851273	0.02	0.02	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		28	3	degree		0.4486908265881776	0.05586257923791416	0.06	0.03	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		28	4	degree		0.5582229580573951	0.014921862047854074	0.04	0.02	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		29	0	degree		0.6355794570080285	0.02869123884603772	0.04	0.02	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		29	1	degree		0.6707881350738494	0.031104108279842627	0.06	0.05	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		29	2	degree		0.5401511956133804	0.011396177173696178	0.0	0.02	0.006	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		29	3	degree		0.5636344125582535	0.040531348031946454	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		29	4	degree		0.4900202354672553	0.042545757242861734	0.06	0.03	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		30	0	degree		0.5592327020898449	0.04211489334673625	0.06	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		30	1	degree		0.6869062940491512	0.03268279770944878	0.04	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		30	2	degree		0.6009701177768404	0.024097436962607702	0.06	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		30	3	degree		0.5569812362030905	0.02511151748215281	0.02	0.01	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		30	4	degree		0.5029893303899927	0.013179552743168977	0.02	0.02	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		31	0	degree		0.5570723785009498	0.020605828797758404	0.02	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		31	1	degree		0.5045964331678617	0.014616071972216496	0.02	0.01	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		31	2	degree		0.5964764284092015	0.04091005980315253	0.04	0.05	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		31	3	degree		0.6899374540103017	0.024059252496493443	0.06	0.03	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		31	4	degree		0.5533327201373559	0.07398879767110972	0.06	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		32	0	degree		0.5703560703560704	0.014292083320017534	0.02	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		32	1	degree		0.6336029907458479	0.035700677651918936	0.08	0.04	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		32	2	degree		0.5655721748158724	0.018855493223151668	0.04	0.03	0.008	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		32	3	degree		0.5702109394162374	0.039593991698272095	0.02	0.01	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		32	4	degree		0.5554635761589404	0.02505727033208143	0.04	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		33	0	degree		0.5124103695532267	0.015454337407944847	0.04	0.02	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		33	1	degree		0.6398081755224612	0.025998735847684862	0.02	0.03	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		33	2	degree		0.6457123389896499	0.026259632947993564	0.06	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		33	3	degree		0.4981604120676968	0.01656079784044518	0.04	0.02	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		33	4	degree		0.6065887907775325	0.04367417235752656	0.04	0.03	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		34	0	degree		0.5374149659863945	0.029935905140745914	0.04	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		34	1	degree		0.6402831402831403	0.020997488590068676	0.04	0.02	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		34	2	degree		0.6200966873235781	0.01711076174539226	0.04	0.03	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		34	3	degree		0.5190397350993379	0.05592888208319113	0.06	0.03	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		34	4	degree		0.5848816531763552	0.02013390477830105	0.04	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		35	0	degree		0.5464086535515107	0.011861054321601113	0.0	0.01	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		35	1	degree		0.614129435558007	0.06146632772728674	0.04	0.03	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		35	2	degree		0.5929723240647611	0.025688521475482125	0.08	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		35	3	degree		0.5211399313220505	0.031824875424044725	0.06	0.03	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		35	4	degree		0.6207076281579593	0.01901810812537063	0.02	0.03	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		36	0	degree		0.592510878225164	0.047644616598982906	0.06	0.05	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		36	1	degree		0.7224214009928295	0.028748514718348862	0.04	0.04	0.022	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		36	2	degree		0.5031472048278771	0.01550246248632704	0.04	0.02	0.006	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		36	3	degree		0.6505089526612705	0.0452049179440808	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		36	4	degree		0.43031027716458176	0.010293113414942545	0.02	0.01	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		37	0	degree		0.4723754366611509	0.01585913312225537	0.02	0.01	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		37	1	degree		0.6016884231169946	0.026074339183054268	0.04	0.04	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		37	2	degree		0.6813211771194965	0.03387497830397704	0.08	0.05	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		37	3	degree		0.5815550649987735	0.01268958197316654	0.02	0.01	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		37	4	degree		0.5655046602894285	0.07620084060696974	0.06	0.04	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		38	0	degree		0.596846846846847	0.032920819774977	0.08	0.04	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		38	1	degree		0.5292486363914936	0.017935437281320882	0.02	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		38	2	degree		0.645761007105545	0.08104612989881071	0.04	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		38	3	degree		0.5982646553838608	0.017418959862857745	0.04	0.02	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		38	4	degree		0.5304298503801815	0.01989834215547122	0.02	0.02	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		39	0	degree		0.6225715511429797	0.032365393602764345	0.08	0.04	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		39	1	degree		0.6119997548568977	0.06888171702932498	0.02	0.01	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		39	2	degree		0.5473540767658415	0.0185170467631951	0.04	0.04	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		39	3	degree		0.4471271768457199	0.009215810598364876	0.0	0.01	0.004	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp		39	4	degree		0.6742089771891097	0.04402794815293111	0.06	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	0	0	rwr	21.0	0.7014463443034872	0.02576824901920132	0.02	0.04	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	0	1	rwr	21.0	0.6718759575902433	0.03701363269993525	0.02	0.02	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	0	2	rwr	21.0	0.6226598747607152	0.03800875895005679	0.04	0.02	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	0	3	rwr	21.0	0.6609946038753985	0.021996109018103435	0.02	0.04	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	0	4	rwr	21.0	0.7087779004169732	0.0868548852489594	0.06	0.04	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	1	0	rwr	21.0	0.693295336152479	0.019367756902421644	0.02	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	1	1	rwr	21.0	0.6767481767481767	0.019170723584261175	0.02	0.01	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	1	2	rwr	21.0	0.5986178255085819	0.06325973433579736	0.08	0.04	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	1	3	rwr	21.0	0.6629568310031886	0.021866128485075114	0.02	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	1	4	rwr	21.0	0.6911638459651704	0.048726519885121396	0.04	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	2	0	rwr	21.0	0.6881779738922595	0.0553685732333403	0.06	0.05	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	2	1	rwr	21.0	0.6818655390083961	0.02202369548775157	0.02	0.02	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	2	2	rwr	21.0	0.5709094448590246	0.013030097674661685	0.0	0.01	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	2	3	rwr	21.0	0.6917770419426048	0.03472797668029618	0.04	0.03	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	2	4	rwr	21.0	0.7358658327201374	0.0992251166647911	0.06	0.06	0.024	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	3	0	rwr	21.0	0.5442789728504014	0.01388234084361217	0.02	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	3	1	rwr	21.0	0.7412820984249555	0.04255612471955022	0.04	0.02	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	3	2	rwr	21.0	0.7181142727361214	0.10615770179559912	0.06	0.07	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	3	3	rwr	21.0	0.6904586705911209	0.08089422811127216	0.04	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	3	4	rwr	21.0	0.6871167525141035	0.023302962843490222	0.02	0.02	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	4	0	rwr	21.0	0.7086474229331372	0.08734415266869837	0.04	0.06	0.022	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	4	1	rwr	21.0	0.6181589753018325	0.016564257950408376	0.0	0.01	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	4	2	rwr	21.0	0.6475130592777651	0.01379014644689057	0.0	0.0	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	4	3	rwr	21.0	0.6221486387049301	0.03415451073508585	0.08	0.04	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	4	4	rwr	21.0	0.6435031886190826	0.021247718024629665	0.02	0.02	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	5	0	rwr	21.0	0.6690261690261691	0.07647537460225	0.06	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	5	1	rwr	21.0	0.5930624502053073	0.03695530700694138	0.06	0.04	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	5	2	rwr	21.0	0.6813211771194965	0.04421140547140388	0.04	0.02	0.022	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	5	3	rwr	21.0	0.6833149374540104	0.025072757064157663	0.02	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	5	4	rwr	21.0	0.7582168260976209	0.03290012903265622	0.02	0.04	0.026	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	6	0	rwr	21.0	0.6311515597229882	0.021359882659946074	0.02	0.02	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	6	1	rwr	21.0	0.6606913035484465	0.019395024932912168	0.0	0.02	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	6	2	rwr	21.0	0.7088997761266669	0.03473210950591554	0.04	0.03	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	6	3	rwr	21.0	0.6492212411086583	0.019622335187510675	0.04	0.02	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	6	4	rwr	21.0	0.6077691930340937	0.047724122766618894	0.04	0.04	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	7	0	rwr	21.0	0.7721548078690936	0.07288149409358154	0.08	0.06	0.022	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	7	1	rwr	21.0	0.5991297419868848	0.012844893644281114	0.0	0.0	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	7	2	rwr	21.0	0.6114662081048635	0.01587190199601897	0.0	0.01	0.018	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	7	3	rwr	21.0	0.5945854795192544	0.015572190589555931	0.02	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	7	4	rwr	21.0	0.6750981113563895	0.03334356958931807	0.06	0.06	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	8	0	rwr	21.0	0.7147453576025005	0.026809059644057425	0.02	0.03	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	8	1	rwr	21.0	0.7157106085677514	0.048522248246388344	0.04	0.02	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	8	2	rwr	21.0	0.5367119820901334	0.017577737811026978	0.02	0.02	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	8	3	rwr	21.0	0.6086889870002453	0.030984036697409272	0.04	0.05	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	8	4	rwr	21.0	0.733505028207015	0.03253770649556217	0.04	0.05	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	9	0	rwr	21.0	0.6327143470000612	0.022137748510571542	0.04	0.02	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	9	1	rwr	21.0	0.6918244775387633	0.027570599383221026	0.02	0.04	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	9	2	rwr	21.0	0.5538918270010706	0.042474540161318505	0.04	0.02	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	9	3	rwr	21.0	0.6050711307333825	0.014633784686656286	0.0	0.0	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	9	4	rwr	21.0	0.7060031886190826	0.026504781407045486	0.02	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	10	0	rwr	21.0	0.6878102592388308	0.05021802151926437	0.04	0.04	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	10	1	rwr	21.0	0.7770423484709199	0.09106223194863913	0.06	0.04	0.026	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	10	2	rwr	21.0	0.6092923655948864	0.05908483865410581	0.04	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	10	3	rwr	21.0	0.6176416482707874	0.017084088810201997	0.02	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	10	4	rwr	21.0	0.703335786117243	0.03199359656881113	0.06	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	11	0	rwr	21.0	0.709627995342281	0.02897325904645903	0.06	0.04	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	11	1	rwr	21.0	0.6503952932524362	0.0472737800584252	0.04	0.02	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	11	2	rwr	21.0	0.6563382109600596	0.1535773218131003	0.08	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	11	3	rwr	21.0	0.6595535933284277	0.01999785681827906	0.0	0.02	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	11	4	rwr	21.0	0.6617304390483199	0.01884583360686384	0.02	0.02	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	12	0	rwr	21.0	0.6337562051847766	0.048499209221686136	0.04	0.05	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	12	1	rwr	21.0	0.6489857204142918	0.0961594952308169	0.04	0.05	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	12	2	rwr	21.0	0.6548132766620162	0.02063527045567379	0.02	0.03	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	12	3	rwr	21.0	0.7502759381898454	0.04639290288043925	0.04	0.04	0.024	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	12	4	rwr	21.0	0.6094554819720382	0.014520038004763133	0.0	0.01	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	13	0	rwr	21.0	0.5800851872280444	0.013321624877090939	0.0	0.01	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	13	1	rwr	21.0	0.5619292762149906	0.013416017361666855	0.0	0.01	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	13	2	rwr	21.0	0.6687648032185847	0.03431253632531166	0.04	0.03	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	13	3	rwr	21.0	0.7404034829531518	0.08595461093313626	0.08	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	13	4	rwr	21.0	0.8091734118224184	0.06061045699076315	0.06	0.08	0.028	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	14	0	rwr	21.0	0.7695654838511982	0.03582713608065363	0.02	0.05	0.026	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	14	1	rwr	21.0	0.6716921002635289	0.09492298080306831	0.08	0.04	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	14	2	rwr	21.0	0.551636870964602	0.025519361363898988	0.02	0.01	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	14	3	rwr	21.0	0.6514594064262939	0.01959827748464989	0.02	0.02	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	14	4	rwr	21.0	0.6631714495952906	0.02435334054628564	0.02	0.04	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	15	0	rwr	21.0	0.6054115339829625	0.04846536969278977	0.04	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	15	1	rwr	21.0	0.7482993197278911	0.027018283780759038	0.02	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	15	2	rwr	21.0	0.6165763602738392	0.016234929191819042	0.0	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	15	3	rwr	21.0	0.771952415992151	0.08988064136959524	0.06	0.05	0.022	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	15	4	rwr	21.0	0.5672982585234241	0.015075463513528863	0.02	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	16	0	rwr	21.0	0.5618986333272048	0.01349845213295844	0.02	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	16	1	rwr	21.0	0.7257461543175828	0.02246608632272141	0.02	0.01	0.024	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	16	2	rwr	21.0	0.6108172998929302	0.049995988328035645	0.04	0.04	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	16	3	rwr	21.0	0.7398516065734609	0.03896946893495775	0.04	0.03	0.022	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	16	4	rwr	21.0	0.734700760363012	0.0649289718224153	0.08	0.06	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	17	0	rwr	21.0	0.6091499662928235	0.017068200892994906	0.02	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	17	1	rwr	21.0	0.6332965618679904	0.01645400656820804	0.0	0.01	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	17	2	rwr	21.0	0.7866714253268874	0.03888332436180137	0.04	0.06	0.026	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	17	3	rwr	21.0	0.5587441746382144	0.04428220242216999	0.04	0.03	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	17	4	rwr	21.0	0.6264410105469708	0.023618313895666262	0.04	0.03	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	18	0	rwr	21.0	0.7069314212171355	0.025463930256776887	0.02	0.02	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	18	1	rwr	21.0	0.5719801434087148	0.01703604853231233	0.02	0.03	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	18	2	rwr	21.0	0.6431004834366179	0.018929473611181392	0.02	0.03	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	18	3	rwr	21.0	0.6538202109394162	0.02944983160422709	0.02	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	18	4	rwr	21.0	0.6920223203335785	0.03362589043296923	0.04	0.03	0.022	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	19	0	rwr	21.0	0.6004167432738862	0.013732176627207375	0.0	0.01	0.01	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	19	1	rwr	21.0	0.7167677881963596	0.023851772179957154	0.02	0.03	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	19	2	rwr	21.0	0.713247461146621	0.062067358217993446	0.04	0.05	0.018	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	19	3	rwr	21.0	0.6534829531518273	0.041905056051243866	0.04	0.04	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	19	4	rwr	21.0	0.6646124601422614	0.03394021758056988	0.04	0.02	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	20	0	rwr	21.0	0.6247778390635534	0.017257725867413	0.02	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	20	1	rwr	21.0	0.6801495372923944	0.07754977515727973	0.06	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	20	2	rwr	21.0	0.5878459491904869	0.01314624019942333	0.0	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	20	3	rwr	21.0	0.6731665440274712	0.03491207970799675	0.06	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	20	4	rwr	21.0	0.7735160657346088	0.0746259696150525	0.06	0.05	0.022	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	21	0	rwr	21.0	0.6314886314886315	0.014660402369423061	0.0	0.0	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	21	1	rwr	21.0	0.8293497579211865	0.05018350308665736	0.08	0.07	0.026	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	21	2	rwr	21.0	0.5944648129522079	0.015513467311724004	0.02	0.03	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	21	3	rwr	21.0	0.7098356634780475	0.15712260316810941	0.06	0.05	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	21	4	rwr	21.0	0.6242641648270787	0.03199292120533185	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	22	0	rwr	21.0	0.700864129435558	0.08360037753844164	0.04	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	22	1	rwr	21.0	0.6756143899001041	0.023056402431187166	0.04	0.02	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	22	2	rwr	21.0	0.690827682424321	0.023656889893989688	0.02	0.03	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	22	3	rwr	21.0	0.7025999509443217	0.034821328430243964	0.06	0.04	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	22	4	rwr	21.0	0.6181015452538631	0.05068741651128591	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	23	0	rwr	21.0	0.6949806949806949	0.03748878887627306	0.02	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	23	1	rwr	21.0	0.5711527854384997	0.01440626974604873	0.0	0.01	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	23	2	rwr	21.0	0.6129586969923104	0.022664968393137027	0.04	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	23	3	rwr	21.0	0.7574196713269562	0.027189907159455996	0.02	0.02	0.022	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	23	4	rwr	21.0	0.5719892077507971	0.018763119064089683	0.04	0.04	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	24	0	rwr	21.0	0.719372433658148	0.0816504783747066	0.04	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	24	1	rwr	21.0	0.6431329288472145	0.0216283501630301	0.04	0.03	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	24	2	rwr	21.0	0.7763213393465495	0.04749149332227712	0.06	0.06	0.02	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	24	3	rwr	21.0	0.6154034829531518	0.03764462051075376	0.04	0.03	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	24	4	rwr	21.0	0.602587687024773	0.014043008264302818	0.0	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	25	0	rwr	21.0	0.7033768462339891	0.072577812619004	0.08	0.06	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	25	1	rwr	21.0	0.8074707360421646	0.05836224054973855	0.06	0.06	0.026	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	25	2	rwr	21.0	0.599883196521852	0.01743669494347391	0.02	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	25	3	rwr	21.0	0.6203397105714986	0.014335889961697273	0.0	0.01	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	25	4	rwr	21.0	0.626532989943586	0.03613824534085738	0.02	0.03	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	26	0	rwr	21.0	0.574829931972789	0.04295955232501297	0.02	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	26	1	rwr	21.0	0.6256971256971258	0.02333505530376549	0.04	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	26	2	rwr	21.0	0.6354109211252068	0.016387106815825055	0.0	0.02	0.012	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	26	3	rwr	21.0	0.6983382389011529	0.03646356358810876	0.06	0.05	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	26	4	rwr	21.0	0.7432855040470934	0.0241451175758036	0.02	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	27	0	rwr	21.0	0.6347674204817062	0.025186895335739576	0.04	0.03	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	27	1	rwr	21.0	0.6860636146350432	0.01640032481350683	0.0	0.0	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	27	2	rwr	21.0	0.6787904350929561	0.056217824626873567	0.04	0.04	0.018	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	27	3	rwr	21.0	0.689784155015943	0.02497474257936729	0.02	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	27	4	rwr	21.0	0.5405629139072848	0.013378959490916189	0.02	0.02	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	28	0	rwr	21.0	0.7033462033462033	0.029804132020227175	0.04	0.04	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	28	1	rwr	21.0	0.6167187595759024	0.02792873861252755	0.06	0.04	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	28	2	rwr	21.0	0.7312546640277733	0.07877160566630192	0.02	0.02	0.018	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	28	3	rwr	21.0	0.5399497179298504	0.015886511077637718	0.02	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	28	4	rwr	21.0	0.7124724061810155	0.07946892107324594	0.06	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	29	0	rwr	21.0	0.7163081448795734	0.0648169122372601	0.06	0.04	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	29	1	rwr	21.0	0.7459704602561745	0.03605991640636017	0.02	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	29	2	rwr	21.0	0.6324908341715063	0.013287099209566122	0.0	0.0	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	29	3	rwr	21.0	0.6776428746627422	0.02556146680817555	0.02	0.04	0.022	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	29	4	rwr	21.0	0.6136252146185921	0.08556856719884208	0.06	0.05	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	30	0	rwr	21.0	0.5939817368388798	0.022860408714416264	0.02	0.04	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	30	1	rwr	21.0	0.6900778329349757	0.028478492619972266	0.02	0.05	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	30	2	rwr	21.0	0.6632815288277474	0.019630379016268677	0.02	0.03	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	30	3	rwr	21.0	0.6993806720627912	0.07467232169875071	0.04	0.02	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	30	4	rwr	21.0	0.590584375766495	0.04099810272938654	0.02	0.02	0.01	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	31	0	rwr	21.0	0.625298768155911	0.01630959065473207	0.0	0.02	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	31	1	rwr	21.0	0.6340626340626341	0.05941902908875076	0.04	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	31	2	rwr	21.0	0.687485805132864	0.03581973740458711	0.04	0.04	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	31	3	rwr	21.0	0.726391954868776	0.03234405144267799	0.04	0.05	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	31	4	rwr	21.0	0.6568248712288448	0.07455803989026538	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	32	0	rwr	21.0	0.6689342403628118	0.017527945034310426	0.0	0.02	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	32	1	rwr	21.0	0.6946742661028374	0.02926360845690125	0.02	0.04	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	32	2	rwr	21.0	0.6009376723662438	0.07886574441647523	0.04	0.04	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	32	3	rwr	21.0	0.6214741231297521	0.016763240092005603	0.02	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	32	4	rwr	21.0	0.6610252636742703	0.019987606681393627	0.0	0.03	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	33	0	rwr	21.0	0.6432248575105719	0.11092346911488714	0.1	0.06	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	33	1	rwr	21.0	0.6774223202794631	0.03202750122397625	0.04	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	33	2	rwr	21.0	0.7358619123325005	0.021962682301833788	0.0	0.03	0.018	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	33	3	rwr	21.0	0.6521339220014717	0.0719591434251979	0.02	0.02	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	33	4	rwr	21.0	0.6525324993868039	0.02147920050954808	0.04	0.02	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	34	0	rwr	21.0	0.6120916835202549	0.017621784694916265	0.0	0.03	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	34	1	rwr	21.0	0.7118036403750689	0.022244994389317027	0.0	0.03	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	34	2	rwr	21.0	0.6784984263975861	0.016937841698660954	0.02	0.02	0.01	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	34	3	rwr	21.0	0.6064814814814815	0.037183263333588776	0.06	0.05	0.018	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	34	4	rwr	21.0	0.6517046848172676	0.02078531040024033	0.02	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	35	0	rwr	21.0	0.6099620028191457	0.013136571671819192	0.0	0.01	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	35	1	rwr	21.0	0.6868909726052583	0.0986128464908732	0.08	0.05	0.02	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	35	2	rwr	21.0	0.7303137471204699	0.13061582657591658	0.08	0.05	0.02	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	35	3	rwr	21.0	0.58915869511896	0.018019155043900517	0.04	0.03	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	35	4	rwr	21.0	0.7267905322541084	0.023781265372161704	0.02	0.02	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	36	0	rwr	21.0	0.6443280014708587	0.0180458146736823	0.0	0.03	0.012	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	36	1	rwr	21.0	0.7753569896427039	0.030240915233728592	0.02	0.02	0.022	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	36	2	rwr	21.0	0.5694169559715778	0.014476069768454378	0.0	0.01	0.014	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	36	3	rwr	21.0	0.690673289183223	0.02661168981452299	0.06	0.04	0.016	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	36	4	rwr	21.0	0.49086337993622764	0.010653932793834482	0.0	0.01	0.006	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	37	0	rwr	21.0	0.5637678494821352	0.015315773724332741	0.0	0.03	0.014	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	37	1	rwr	21.0	0.6500582214867929	0.01907103365335853	0.0	0.03	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	37	2	rwr	21.0	0.7594821712468772	0.1197231938333514	0.04	0.05	0.02	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	37	3	rwr	21.0	0.6778574932548442	0.03477683577806767	0.02	0.02	0.012	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	37	4	rwr	21.0	0.6683836154034829	0.02997976403764415	0.06	0.03	0.02	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	38	0	rwr	21.0	0.693417907703622	0.08056935938761799	0.02	0.05	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	38	1	rwr	21.0	0.6739903168474597	0.052893965822365725	0.04	0.04	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	38	2	rwr	21.0	0.7089646669478602	0.038449160552057965	0.06	0.03	0.02	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	38	3	rwr	21.0	0.713392200147167	0.02533938496742715	0.02	0.02	0.024	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	38	4	rwr	21.0	0.5793782192788816	0.03335147506471247	0.04	0.02	0.008	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	39	0	rwr	21.0	0.6698228841085985	0.029983605275526615	0.02	0.05	0.016	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	39	1	rwr	21.0	0.6674020959735245	0.020472684078625125	0.02	0.01	0.018	18	1831
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	39	2	rwr	21.0	0.6664936244768177	0.031084382613366816	0.04	0.03	0.016	17	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	39	3	rwr	21.0	0.6297829286239882	0.050554019655446994	0.04	0.02	0.014	18	1830
+rna_coexp	intogen2024_cap_rna_coexp	native_rna_coexp	0.5	39	4	rwr	21.0	0.7449411331861664	0.08040916785261255	0.04	0.04	0.02	18	1830

@@ -440,6 +440,49 @@ explanation. That is direct evidence for the curator-lag hypothesis
 moves curator lag from a Discussion hypothesis to a supported
 explanation -- the strongest single piece of evidence in the project.
 
+### A2.3i D-11 had two defects, not one (P0-4)
+
+**Defect 1 -- the filename collision.** `scripts/run_d11.py` wrote every
+network's capped label to the SAME path, `labels/{label}_cap.tsv`, so each
+network OVERWROTE the previous one; step 3 then skipped any split whose
+file already existed, so the stale splits were never rebuilt and the
+control silently used whichever cap happened to be on disk. The released
+`d11_table.tsv` reported one N per network while the splits actually held
+a different number of positives (funmap claimed N = 104, its split held
+42).
+
+**Defect 2 -- the cap was applied before the universe restriction.**
+The cap N is defined as "the minimum over the four labels of the number
+of positives inside the network's LCC", so the label must be restricted
+to the universe BEFORE the top-N is taken. The original code took the
+top-N of the FULL label file, letting genes that are not in the LCC into
+the cap, so the split then held fewer than N positives (funmap: 73
+instead of 104). This defect was masked by defect 1 and only became
+visible once the filename collision was fixed.
+
+**Fixed.** Capped label files are now per-(network, label)
+(`{label}_cap_{net}.tsv`); the splits are ALWAYS rebuilt from the
+matching capped label (the unconditional `[SKIP]` is gone); the run
+verifies that each split holds exactly the intended N and raises if not;
+and the capped splits use the 40-repeat design, matching the primary
+factorial.
+
+All 24 arms now satisfy `N_in_split == N`, with N = 104 (funmap), 150
+(intact), 63 (reactome), 89 (rna_coexp), 145 (string_full700), 116
+(string_phys700).
+
+**What the corrected control shows.** Under D-11 (equal positive-set
+size per network) reactome is negative on two labels -- -0.0110 on
+`intogen2024` and -0.0125 on `intogen_temporal_new` -- while the other
+22 arms are positive (0.0071 to 0.1819). Note that in the uncapped
+primary factorial reactome x intogen2024 is +0.0429: capping to
+reactome's minimum of 63 flips it negative. Together with the D-09 and
+D-12 results (also negative for reactome on temporal extrapolation) this
+is the third independent control in which reactome is the outlier, and it
+strengthens the curator-lag explanation: the failure is specific to
+reactome's coverage of newly discovered drivers, not to its overall
+coverage or to the size of the evaluation set.
+
 ### A2.3e The TOST implementation itself was wrong
 
 The original `_tost` in `scripts/run_stats_analysis.py` tested

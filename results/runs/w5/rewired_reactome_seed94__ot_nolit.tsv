@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+reactome_rewired	ot_nolit	native_reactome		0	0	degree		0.7118387160689519	0.2670583431529473	0.28	0.27	0.12	70	791
+reactome_rewired	ot_nolit	native_reactome		0	1	degree		0.6647909649296613	0.17800933804115354	0.24	0.22	0.108	70	791
+reactome_rewired	ot_nolit	native_reactome		0	2	degree		0.6952171361502347	0.27406341285271096	0.32	0.3	0.116	71	791
+reactome_rewired	ot_nolit	native_reactome		0	3	degree		0.6573511904761904	0.16941309133948712	0.22	0.2	0.112	70	790
+reactome_rewired	ot_nolit	native_reactome		0	4	degree		0.6812003968253969	0.18678430608229432	0.2	0.22	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome		1	0	degree		0.680899544283733	0.22579097951002985	0.34	0.27	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome		1	1	degree		0.7219041014464038	0.2345351547645425	0.26	0.23	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome		1	2	degree		0.6049393583724569	0.13167406684129984	0.14	0.18	0.108	71	791
+reactome_rewired	ot_nolit	native_reactome		1	3	degree		0.7470238095238095	0.2288306664863661	0.26	0.24	0.128	70	790
+reactome_rewired	ot_nolit	native_reactome		1	4	degree		0.6547321428571429	0.2532926886275332	0.28	0.28	0.106	70	790
+reactome_rewired	ot_nolit	native_reactome		2	0	degree		0.6737467802655043	0.1629410267602594	0.16	0.23	0.11	70	791
+reactome_rewired	ot_nolit	native_reactome		2	1	degree		0.6738161283931048	0.22624889033612627	0.32	0.26	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome		2	2	degree		0.6723982785602505	0.22178908513059722	0.3	0.25	0.116	71	791
+reactome_rewired	ot_nolit	native_reactome		2	3	degree		0.680595238095238	0.20862140004584312	0.26	0.22	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome		2	4	degree		0.7097916666666667	0.24793920592854962	0.28	0.29	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome		3	0	degree		0.6760253616009511	0.21216379923730277	0.24	0.23	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome		3	1	degree		0.6849910838121657	0.22171875798871682	0.26	0.27	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome		3	2	degree		0.6472026604068857	0.1629789729419827	0.22	0.21	0.108	71	791
+reactome_rewired	ot_nolit	native_reactome		3	3	degree		0.6900793650793651	0.19782409245905802	0.22	0.25	0.118	70	790
+reactome_rewired	ot_nolit	native_reactome		3	4	degree		0.7112797619047619	0.2630144046885967	0.36	0.26	0.116	70	790
+reactome_rewired	ot_nolit	native_reactome		4	0	degree		0.6878145432930454	0.19512476862757738	0.3	0.26	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome		4	1	degree		0.672260748959778	0.2525433289313692	0.26	0.22	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome		4	2	degree		0.6433196400625978	0.17414010011208922	0.22	0.24	0.106	71	791
+reactome_rewired	ot_nolit	native_reactome		4	3	degree		0.6518154761904762	0.18262569910699866	0.22	0.22	0.11	70	790
+reactome_rewired	ot_nolit	native_reactome		4	4	degree		0.7506250000000001	0.2818555653028667	0.3	0.3	0.126	70	790
+reactome_rewired	ot_nolit	native_reactome		5	0	degree		0.6643946899148009	0.2180667401233873	0.24	0.22	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome		5	1	degree		0.7202397463839905	0.2640234383596861	0.32	0.29	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome		5	2	degree		0.6616099374021909	0.17355062674625624	0.22	0.24	0.116	71	791
+reactome_rewired	ot_nolit	native_reactome		5	3	degree		0.6898710317460317	0.2119752332043661	0.24	0.22	0.11	70	790
+reactome_rewired	ot_nolit	native_reactome		5	4	degree		0.6720535714285715	0.20371919032375255	0.28	0.23	0.11	70	790
+reactome_rewired	ot_nolit	native_reactome		6	0	degree		0.6737368733901328	0.22841420153388323	0.3	0.24	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome		6	1	degree		0.7280364573013672	0.29320279054886494	0.38	0.28	0.12	70	791
+reactome_rewired	ot_nolit	native_reactome		6	2	degree		0.6318661971830986	0.15504446367219796	0.16	0.22	0.112	71	791
+reactome_rewired	ot_nolit	native_reactome		6	3	degree		0.6970337301587302	0.21866375002438093	0.22	0.23	0.112	70	790
+reactome_rewired	ot_nolit	native_reactome		6	4	degree		0.6772321428571428	0.20674785367657716	0.3	0.22	0.112	70	790
+reactome_rewired	ot_nolit	native_reactome		7	0	degree		0.6818307905686547	0.23190388325646874	0.24	0.22	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome		7	1	degree		0.6527739251040222	0.18327703708859427	0.22	0.22	0.11	70	791
+reactome_rewired	ot_nolit	native_reactome		7	2	degree		0.6607198748043819	0.18539544882672093	0.22	0.22	0.112	71	791
+reactome_rewired	ot_nolit	native_reactome		7	3	degree		0.6966964285714285	0.2296190193833093	0.34	0.27	0.116	70	790
+reactome_rewired	ot_nolit	native_reactome		7	4	degree		0.7143253968253969	0.23295280950035	0.28	0.26	0.116	70	790
+reactome_rewired	ot_nolit	native_reactome		8	0	degree		0.6900634040023776	0.26527750676583506	0.28	0.25	0.11	70	791
+reactome_rewired	ot_nolit	native_reactome		8	1	degree		0.739072716465227	0.25065402936766673	0.26	0.25	0.124	70	791
+reactome_rewired	ot_nolit	native_reactome		8	2	degree		0.6490121283255086	0.19687573358486615	0.24	0.21	0.112	71	791
+reactome_rewired	ot_nolit	native_reactome		8	3	degree		0.6302380952380952	0.14261538444369504	0.22	0.19	0.108	70	790
+reactome_rewired	ot_nolit	native_reactome		8	4	degree		0.700406746031746	0.22557263294252888	0.28	0.26	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome		9	0	degree		0.7158510005944125	0.2367485228841578	0.32	0.24	0.118	70	791
+reactome_rewired	ot_nolit	native_reactome		9	1	degree		0.6931543491182881	0.22746621553138024	0.26	0.24	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome		9	2	degree		0.5831866197183098	0.14750464314388634	0.12	0.19	0.098	71	791
+reactome_rewired	ot_nolit	native_reactome		9	3	degree		0.6558134920634922	0.1627816471063836	0.2	0.24	0.112	70	790
+reactome_rewired	ot_nolit	native_reactome		9	4	degree		0.7576587301587303	0.3153151043744519	0.4	0.33	0.122	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	0	0	rwr	17.0	0.6793342579750348	0.24272197902178982	0.28	0.24	0.11	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	0	1	rwr	17.0	0.6506340400237766	0.16549519459259018	0.18	0.19	0.106	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	0	2	rwr	17.0	0.6860524256651017	0.2350671206316593	0.24	0.23	0.116	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	0	3	rwr	17.0	0.6324107142857143	0.16768011776986208	0.26	0.18	0.112	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	0	4	rwr	17.0	0.6492460317460317	0.16693536814891788	0.18	0.17	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	1	0	rwr	17.0	0.6743015652863087	0.21497389174936019	0.2	0.23	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	1	1	rwr	17.0	0.6746582127996831	0.21268381502115946	0.26	0.21	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	1	2	rwr	17.0	0.5757042253521126	0.12757896650798345	0.12	0.11	0.104	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	1	3	rwr	17.0	0.7365674603174603	0.22583071540816074	0.22	0.25	0.126	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	1	4	rwr	17.0	0.6651984126984125	0.24291149269597773	0.34	0.25	0.108	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	2	0	rwr	17.0	0.6715078264315435	0.18295949482022317	0.22	0.21	0.106	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	2	1	rwr	17.0	0.653685357638201	0.23596015861949216	0.26	0.22	0.108	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	2	2	rwr	17.0	0.6592723004694835	0.20943625508853325	0.3	0.2	0.114	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	2	3	rwr	17.0	0.6635119047619048	0.17920823405346886	0.16	0.19	0.118	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	2	4	rwr	17.0	0.6732936507936509	0.20380956852285215	0.24	0.2	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	3	0	rwr	17.0	0.6599960372498515	0.23179820507211704	0.32	0.22	0.11	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	3	1	rwr	17.0	0.6650287299385774	0.19098755378995574	0.2	0.21	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	3	2	rwr	17.0	0.6286482785602503	0.16254692297257783	0.2	0.19	0.104	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	3	3	rwr	17.0	0.6471626984126984	0.16880207838881958	0.16	0.15	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	3	4	rwr	17.0	0.6859027777777778	0.22515917749320014	0.28	0.24	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	4	0	rwr	17.0	0.6750247671884287	0.15976690048771325	0.22	0.23	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	4	1	rwr	17.0	0.6473548642758074	0.2563172124648045	0.28	0.2	0.11	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	4	2	rwr	17.0	0.636023082942097	0.16217497594257188	0.22	0.2	0.106	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	4	3	rwr	17.0	0.651686507936508	0.2075760097250871	0.26	0.17	0.11	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	4	4	rwr	17.0	0.7333730158730158	0.2592318183986774	0.26	0.25	0.12	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	5	0	rwr	17.0	0.6670992668912226	0.22305945982659164	0.26	0.21	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	5	1	rwr	17.0	0.6983752724390727	0.23529990193171096	0.28	0.23	0.12	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	5	2	rwr	17.0	0.6399647887323944	0.1555299326559219	0.2	0.21	0.106	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	5	3	rwr	17.0	0.6890476190476191	0.2408274059534571	0.24	0.21	0.116	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	5	4	rwr	17.0	0.6420436507936508	0.19299389832047417	0.26	0.21	0.11	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	6	0	rwr	17.0	0.6699425401228453	0.2279442254105	0.24	0.17	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	6	1	rwr	17.0	0.7133148404993065	0.2479225056081709	0.32	0.29	0.124	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	6	2	rwr	17.0	0.6137715179968701	0.15270440719413134	0.2	0.15	0.11	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	6	3	rwr	17.0	0.665595238095238	0.18404461952198248	0.2	0.2	0.11	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	6	4	rwr	17.0	0.6584920634920636	0.2001705162664739	0.2	0.2	0.112	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	7	0	rwr	17.0	0.6621161085793541	0.1989765681013964	0.24	0.21	0.116	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	7	1	rwr	17.0	0.6306716861501882	0.19510949937135064	0.2	0.19	0.108	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	7	2	rwr	17.0	0.6356807511737088	0.15655196577558889	0.18	0.17	0.106	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	7	3	rwr	17.0	0.6896130952380953	0.218471433522607	0.32	0.25	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	7	4	rwr	17.0	0.6965873015873016	0.21924428613499386	0.26	0.21	0.118	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	8	0	rwr	17.0	0.6648900336833762	0.23427798797720728	0.22	0.21	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	8	1	rwr	17.0	0.6839310481474141	0.2264061822741659	0.28	0.2	0.112	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	8	2	rwr	17.0	0.6549100156494523	0.18369253473061536	0.2	0.19	0.118	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	8	3	rwr	17.0	0.5895238095238096	0.12236858106941756	0.16	0.18	0.104	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	8	4	rwr	17.0	0.6725	0.24566841877236545	0.24	0.24	0.114	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	9	0	rwr	17.0	0.6925995640974837	0.1879589799180036	0.22	0.21	0.118	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	9	1	rwr	17.0	0.6666138299980187	0.21816827665815564	0.26	0.19	0.114	70	791
+reactome_rewired	ot_nolit	native_reactome	0.5	9	2	rwr	17.0	0.5847906885758999	0.1595121213267448	0.16	0.14	0.098	71	791
+reactome_rewired	ot_nolit	native_reactome	0.5	9	3	rwr	17.0	0.6232142857142857	0.15021136717963587	0.16	0.19	0.108	70	790
+reactome_rewired	ot_nolit	native_reactome	0.5	9	4	rwr	17.0	0.7300297619047619	0.269365518484501	0.36	0.28	0.118	70	790
