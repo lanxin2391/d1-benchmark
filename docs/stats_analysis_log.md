@@ -5,6 +5,29 @@
 **Result:** All four §4.6 outputs produced; the protocol's headline claim
 ("gene identity matters, not just degree") is now quantitative.
 
+> **SUPERSEDED (2026-10-29 / 2026-11-05).** This log is the historical
+> record of the 2026-09-27 run and is kept as it was written. Its
+> numbers are **not** the released ones. What changed:
+>
+> * the run used the **10-repeat** design and the **10-repeat** control-2
+>   null; both are now on the **40-repeat** design (P0-4b, amendment 2
+>   A2.3g), so the observed means, the intervals and the fine-mode z all
+>   moved;
+> * the **TOST verdict** was wrong (the equivalence branch was
+>   unreachable, so every cell read `BOUND`) — six cells are equivalent
+>   to zero, not one (amendment 2, A2.3e);
+> * the **variance decomposition** was wrong (double counting produced a
+>   spurious "52 % residual") and is replaced by
+>   `scripts/run_variance_decomp.py` (amendment 2, A2.1–A2.2);
+> * the **cluster bootstrap** now resamples genes, as the pre-registration
+>   §9.3 requires (24 of 24 cells computed, 20 of 24 intervals exclude
+>   zero).
+>
+> The released tables are `results/tables/stats_bootstrap_ci.tsv`,
+> `stats_equivalence.tsv`, `stats_variance_decomp.tsv`,
+> `stats_h1_verdict_v40.tsv`, `stats_fine_z_summary.tsv`. The current
+> manuscript text quotes those, not this log.
+
 ---
 
 ## 1. What this is
