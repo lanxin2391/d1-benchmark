@@ -64,6 +64,62 @@ script and regenerate.
 
 ---
 
+## Exploratory arm (2026-11-05) — stability of a network prior
+
+> **Not part of the confirmatory analysis.** This arm changes the learner's
+> output, so it never enters the H1 decision rule and its numbers are not mixed
+> with the primary table. It was pre-registered in
+> `docs/stability_regularization_plan.md` (committed before any result existed).
+
+| File | What it is |
+|---|---|
+| `docs/stability_regularization_plan.md` | Pre-registration: the stability-regularised scorer, the predictions P1–P7 with their decision rules, the control stack, and Amendment A1 |
+| `docs/stability_regularization.md` | Method + results + limitations: what the operator did, why it could not work, and what does control the instability |
+| `results/tables/stability_per_gene.tsv` | Per-gene rank SD, score CV, crowding (24 arms, 40 repeats) |
+| `results/tables/stability_by_arm.tsv` | Per-arm stability summary + the crowding correlation |
+| `results/tables/stability_crowding_attribution.tsv` | Which per-gene property predicts the rank instability (24 arms) |
+| `results/tables/stability_regularization_grid.tsv` | The full operator grid (variant × k × λ × control) |
+| `results/tables/stability_control_comparison.tsv` | C1 replicate-level random null + robust Z, per arm and λ |
+| `results/tables/stability_control_c1_null.tsv` | The 20-replicate random-smoothing null values |
+| `results/tables/stability_control_c3_flattening.tsv` | The monotone-flattening invariance check |
+| `results/tables/stability_selected_scorer.tsv` | Cross-fitted λ selection and its out-of-sample performance |
+| `results/tables/stability_seed_size_scaling.tsv` | Stability and discrimination as a function of the training seed count |
+| `results/tables/stability_seed_size_exponents.tsv` | The fitted 1/√n exponent per arm |
+| `results/tables/stability_tradeoff_curve.tsv` | The (stability, discrimination) curve of every operator family |
+| `results/tables/stability_prediction_scorecard.tsv` | Every pre-registered prediction, its rule, the observed value and the verdict |
+| `results/tables/stability_splits_v40_manifest.tsv` | SHA-256 of the 40-repeat split panel (the panel itself is derived data) |
+| `results/tables/stability_per_gene_scores_manifest.tsv` | SHA-256 of the 72 per-gene score dumps |
+| `figures/figure7_stability_tradeoff.png` | The trade-off figure (smoothing axis, seed axis, mechanism) |
+| `d1/engine/stability.py` | The operators and the stability metrics |
+| `scripts/build_splits_v40.py` | Builds and *verifies* the 40-repeat split panel |
+| `scripts/run_stability_dump.py` | Per-gene score dump + AUROC cross-check against the harness |
+| `scripts/run_stability_regularized.py` | The operator grid with the controls, over all 24 arms |
+| `scripts/run_stability_controls.py` | The replicate-level random-neighbourhood null |
+| `scripts/run_stability_seedsize.py` | The seed-count axis |
+| `scripts/run_stability_attribution.py` | Which per-gene property predicts the instability |
+| `scripts/summarize_stability.py` | The trade-off curve and the prediction scorecard |
+
+```bash
+python scripts/build_splits_v40.py            # 40-repeat panel + byte-identity check
+python scripts/run_stability_dump.py --alpha 0.3 0.5 0.7
+python scripts/run_stability_regularized.py --alpha 0.5
+python scripts/run_stability_controls.py
+python scripts/run_stability_seedsize.py
+python scripts/run_stability_attribution.py
+python scripts/summarize_stability.py
+python scripts/make_figure_stability_tradeoff.py
+```
+
+**Headline.** The pre-registered stability-regularised scorer does not change the
+ranking at all (the median per-gene rank SD moves by ≤ 5.3 × 10⁻⁵ in 24/24 arms),
+because shrinking toward the *score* neighbourhood is order-preserving; every
+operator that does change the ranking makes the prior *less* stable. The
+instability of a network prior is instead the sampling noise of a mean over
+seeds — the per-gene rank SD falls as n_seeds^−0.49 — and since RWR is linear in
+the seed weights, bagging over seed resamples is provably a no-op for it.
+
+---
+
 ## 1. Setup (once per computer)
 
 Use the **Anaconda Prompt** or **Anaconda PowerShell Prompt** (Windows Start menu).

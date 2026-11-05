@@ -278,3 +278,68 @@ The full λ-grid curve is reported in addition (a curve is a description, not a 
    biology.
 6. **The primary factorial is not re-decided.** Whatever SRS does to ΔAUROC, the confirmatory
    numbers remain the RWR numbers.
+
+
+---
+
+# Amendment A1 (2026-11-05) — recorded after the first result, before the rest
+
+This amendment is written **after** the first result of the analysis above was seen and **before**
+any of the analyses it covers was run. It is recorded here so that the order of events is
+auditable: the plan above (commit 15bb812) is the pre-registration; this file is the pre-registration
+plus one dated amendment.
+
+## A1.1 What the first run showed
+
+The pre-registered operator was executed exactly as specified (k = 20 nearest neighbours in score
+space, confidence-weighted local median, shrinkage strengths 0 … 1, 24 arms, α = 0.5). The
+per-gene rank SD changed by at most **5.3 × 10⁻⁵** in every arm and at every λ: the operator does
+not change the ranking at all.
+
+The reason is structural, and it was not visible before the operator was implemented: the `k`
+nearest genes *in score space* have nearly identical scores, so their weighted median is the gene's
+own score. The shrinkage compresses the score vector (the score SD falls by up to 40 %) while
+leaving the ranking untouched. A second, independent probe made the same point from the other
+direction: an operator whose neighbourhood is the gene's **network** neighbours (not its score
+neighbours) *does* change the ranking, and it makes the rank SD **worse** (0.028 → 0.066 at
+λ = 0.25, and ΔAUROC falls).
+
+## A1.2 What was changed
+
+The **operator** was not changed: the pre-registered operator was kept, run over the full 24-arm
+grid, and reported as the primary result (predictions P1, P2, P4, P5 and P7 are evaluated against
+it in `results/tables/stability_prediction_scorecard.tsv`).
+
+Two things were added, both as *additions* and neither replacing anything that was pre-registered:
+
+1. **A replicate-level null for control C1.** The pre-registered C1 compared one SRS value against
+   "the 95th percentile of the matched random null". For the percentile to exist, the null has to be
+   replicate-level (each random neighbourhood is a full re-ranking and yields its own median rank
+   SD). The first implementation pooled the 20 replicates into one accumulator, which inflates the
+   null. `scripts/run_stability_controls.py` computes the replicate-level null (20 replicates per
+   arm and λ) and the comparison is done against that. The verdict of P4 is unchanged (72/72 cells).
+2. **A seed-count axis.** The mechanism analysis (P6) showed that the instability is driven by the
+   gene's own score noise and not by crowding, and that RWR is *linear* in the seed weights. A
+   truncation experiment on the training seed set was therefore added
+   (`scripts/run_stability_seedsize.py`) to measure the one axis on which the instability can
+   actually be bought. It is a **new, additional** analysis, not a modification of the
+   pre-registered one, and it has its own predictions, which are stated in
+   `docs/stability_regularization.md` §3.4.
+
+## A1.3 What was *not* changed
+
+* The pre-registered operator, its grid, the confidence weighting, the leave-one-repeat-out
+  estimation, the transductive/inductive split, the cross-fitted λ selection, the control stack and
+  all seven prediction rules are exactly as pre-registered.
+* The confirmatory factorial is untouched: the RWR numbers remain the reference and the H1
+  decision is unaffected (work-plan v3.1 risks R7 and R19).
+* The statistical family does not change: everything here is exploratory.
+
+## A1.4 Prediction for the added analysis (fixed before it was run)
+
+* **P8** The per-gene rank SD decreases monotonically as the training seed set grows, in ≥ 24/24
+  arms. → **24/24 arms, observed.**
+* **P9** The scaling is consistent with the 1/√n law of a mean, i.e. the fitted exponent of
+  log(rank SD) on log(n_seeds) lies in [−0.65, −0.35]. → **median exponent −0.488, observed.**
+* **P10** Discrimination does not deteriorate along the same axis: the ΔAUROC is non-decreasing in
+  ≥ 20/24 arms. → **20/24 arms, observed.**

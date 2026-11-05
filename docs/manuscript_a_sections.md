@@ -434,6 +434,117 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
 
 ---
 
+## §L. Exploratory — the stability of a network prior (SRS)
+
+> **Family: EXPLORATORY.** This section reports an analysis that changes the
+> learner's output. It is therefore **not** part of the confirmatory analysis,
+> it does not enter the H1 decision rule, and every number in it is a
+> property of the *exploratory* arm, not of the benchmark's primary endpoint.
+> It was pre-registered in `docs/stability_regularization_plan.md` (committed
+> before any result existed) and is reported in full in
+> `docs/stability_regularization.md`.
+
+### L.1 The question and the pre-registered operator
+
+If a prior's ranking is unstable, can the instability be removed? We
+pre-registered a **stability-regularised scorer (SRS)**: shrink each gene's
+score toward the *confidence-weighted median of its score neighbourhood*,
+
+    s'_g = s_g + lambda_g * (m_g - s_g),
+
+where `N(g)` is the `k` genes with the smallest `|s_j - s_g|` and the weights
+`c_j = 1/(1 + CV_j^2)` come from gene `j`'s own score coefficient of variation,
+estimated **leave-one-repeat-out** so that no evaluated repeat contributes to
+its own weights. The objective was our own stability metric: the per-gene SD of
+the within-fold percentile rank across the 40 cross-validation repeats.
+Pre-registered predictions: (P1) the rank SD falls; (P2) ΔAUROC does not;
+(P3) a stability-versus-discrimination trade-off curve exists; (P4) the effect
+is specific — it must beat a matched-strength random-neighbourhood control;
+(P5) it is not a flattening artefact; (P6) it is crowding-specific; (P7) it
+survives an inductive (no test gene in the neighbourhood) variant.
+
+### L.2 The result: the prior's ranking cannot be smoothed into stability
+
+The operator **does not change the ranking**. Across all 24 arms and all eight
+shrinkage strengths the median per-gene rank SD moved by at most
+**5.3 x 10^-5** (baseline 0.019-0.044 percentile units) and ΔAUROC by at most
+**4.1 x 10^-5**. The score dispersion, in contrast, fell by up to 40 %: the
+operator compresses the scores and leaves every rank statistic untouched.
+
+The reason is structural. The `k` nearest genes *in score space* have nearly
+identical scores, so their weighted median **is** the gene's own score. Worse,
+for two genes in the same crowded block the shrinkage rescales the *signal* and
+the *noise* in their gap by the same factor `(1 - lambda)`, so the probability
+that the pair swaps order is unchanged: shrinking toward a neighbourhood cannot
+separate signal from noise in a gap.
+
+Both matched controls point the same way. **C1** (random neighbourhood of the
+same size) raises the median rank SD from 0.028 to 0.109 at λ = 0.4, 0.168 at
+λ = 0.7 and 0.287 at λ = 1, and drives ΔAUROC from +0.081 to −0.108. **C2**
+(shrinkage toward the fold's global median) is flat until λ = 1, where every
+score collapses onto one value, the D-07 symbol tie-break takes over and the
+rank SD jumps to 0.111 while ΔAUROC falls to −0.147. **C3** (a monotone
+flattening) changes the AUROC by at most 3.0 x 10^-5, confirming that rank
+statistics are invariant to monotone score transforms — so there is no
+"flattening" story to tell, because there is no ranking change to explain.
+
+**The unsmoothed prior is the Pareto point of the stability/discrimination
+plane.** The trade-off curve the exercise set out to draw does not exist in the
+smoothing direction: every operator that moves the ranking moves it to worse
+stability *and* worse discrimination.
+
+### L.3 What does drive the instability, and what buys it
+
+The pre-registered mechanism — crowding — is **not** supported in its
+score-space form. The per-arm Spearman correlation between score-space crowding
+and the per-gene rank SD has median **−0.10** (negative in 21/24 arms).
+Rank-space crowding (±1 % of ranks) is weakly and consistently positive
+(**+0.23**, positive in 24/24 arms). What dominates is the gene's **own score
+noise**: the correlation with the score coefficient of variation is **+0.82**
+(positive in 24/24 arms).
+
+That points at the seed set, and truncating the training seed set closes the
+argument. As the seed set grows from 15 to 304 seeds (5 % → 100 % of the
+available positives), the median per-gene rank SD falls from 0.134 to **0.028**
+— monotonically in **24/24 arms** — with a fitted exponent of
+**−0.488** (median; IQR −0.51 to −0.46) against the seed count, i.e. the
+textbook 1/sqrt(n) law for the sampling error of a mean. Along the same axis
+ΔAUROC *rises* (monotonically in 20/24 arms, median +0.039 → +0.081), so even
+here stability and discrimination improve together.
+
+This has an exact corollary. RWR is linear in the seed weights,
+`P = alpha (I - (1-alpha) W^T)^-1 P0`; the bootstrap mean of `P0` is `P0`, so
+**bagging over seed resamples is provably a no-op for an RWR prior**. The
+instability of a network prior is the sampling noise of a mean over seeds, and
+the only stabiliser is more distinct seeds — that is, a larger training set.
+
+### L.4 Consequences for the benchmark
+
+1. Do not smooth the prior: there is no stability to buy and discrimination to
+   pay.
+2. Report the instability instead of hiding it. The per-gene rank SD (0.019 –
+   0.044 percentile units across the 24 arms) is a cheap, reproducible property
+   of a prior and belongs in the benchmark's output.
+3. The seed count is a design parameter, not a nuisance: the benchmark's ΔAUROC
+   and its ranking stability are both functions of the training-set size, and
+   the CV's training fraction (5 folds ⇒ 80 % of the positives) is the lever.
+4. The claim "crowding causes rank instability" should not be repeated in its
+   score-space form.
+
+**Artefacts:** `results/tables/stability_per_gene.tsv`,
+`results/tables/stability_by_arm.tsv`,
+`results/tables/stability_crowding_attribution.tsv`,
+`results/tables/stability_regularization_grid.tsv`,
+`results/tables/stability_control_comparison.tsv`,
+`results/tables/stability_selected_scorer.tsv`,
+`results/tables/stability_seed_size_scaling.tsv`,
+`results/tables/stability_tradeoff_curve.tsv`,
+`results/tables/stability_prediction_scorecard.tsv`,
+`figures/figure7_stability_tradeoff.png`,
+`docs/stability_regularization.md`.
+
+---
+
 ## Cross-references
 
 * A's logs: `docs/a0_log.md` ... `docs/a5_log.md`, `docs/w5_log.md`,
