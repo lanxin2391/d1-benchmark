@@ -1,0 +1,25 @@
+[11:21:31] A5 degree-matched seed null. 6 nets x 4 labels x 100 resamples = 2400 total seed-null runs, n_jobs=4
+[18:13:16]   [intact x intogen_temporal_new] done in 411.7 min -> intact__intogen_temporal_new__seed_resamples.tsv
+[18:22:40]   [intact x ot_all] done in 421.1 min -> intact__ot_all__seed_resamples.tsv
+[18:23:08]   [intact x intogen2024] done in 421.6 min -> intact__intogen2024__seed_resamples.tsv
+[18:23:44]   [intact x ot_nolit] done in 422.2 min -> intact__ot_nolit__seed_resamples.tsv
+[18:40:50]   [string_full700 x intogen_temporal_new] done in 17.1 min -> string_full700__intogen_temporal_new__seed_resamples.tsv
+[18:42:15]   [string_full700 x intogen2024] done in 29.0 min -> string_full700__intogen2024__seed_resamples.tsv
+[18:46:10]   [string_full700 x ot_all] done in 23.5 min -> string_full700__ot_all__seed_resamples.tsv
+[18:47:21]   [string_full700 x ot_nolit] done in 24.2 min -> string_full700__ot_nolit__seed_resamples.tsv
+[18:50:08]   [reactome x intogen2024] done in 9.3 min -> reactome__intogen2024__seed_resamples.tsv
+[18:51:00]   [reactome x ot_all] done in 8.8 min -> reactome__ot_all__seed_resamples.tsv
+[18:51:28]   [reactome x intogen_temporal_new] done in 4.1 min -> reactome__intogen_temporal_new__seed_resamples.tsv
+[18:53:28]   [reactome x ot_nolit] done in 7.3 min -> reactome__ot_nolit__seed_resamples.tsv
+[18:53:28]   [funmap x intogen2024] resumed from funmap__intogen2024__seed_resamples.tsv
+[18:53:28]   [funmap x ot_all] resumed from funmap__ot_all__seed_resamples.tsv
+[18:53:28]   [funmap x ot_nolit] resumed from funmap__ot_nolit__seed_resamples.tsv
+[18:53:28]   [funmap x intogen_temporal_new] resumed from funmap__intogen_temporal_new__seed_resamples.tsv
+[18:53:28]   [rna_coexp x intogen2024] resumed from rna_coexp__intogen2024__seed_resamples.tsv
+[18:53:28]   [rna_coexp x ot_all] resumed from rna_coexp__ot_all__seed_resamples.tsv
+[18:53:28]   [rna_coexp x ot_nolit] resumed from rna_coexp__ot_nolit__seed_resamples.tsv
+[18:53:28]   [rna_coexp x intogen_temporal_new] resumed from rna_coexp__intogen_temporal_new__seed_resamples.tsv
+[18:53:28]   [string_phys700 x intogen2024] resumed from string_phys700__intogen2024__seed_resamples.tsv
+[18:53:28]   [string_phys700 x ot_all] resumed from string_phys700__ot_all__seed_resamples.tsv
+[18:53:28]   [string_phys700 x ot_nolit] resumed from string_phys700__ot_nolit__seed_resamples.tsv
+[18:53:28]   [string_phys700 x intogen_temporal_new] resumed from string_phys700__intogen_temporal_new__seed_resamples.tsv

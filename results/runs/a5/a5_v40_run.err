@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\Grade3\swxxx\final\D1\d1-benchmark\scripts\run_a5.py", line 463, in <module>
+    main()
+  File "D:\Grade3\swxxx\final\D1\d1-benchmark\scripts\run_a5.py", line 424, in main
+    null_mean = float(np.mean(mean_resamples))
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\anaconda\Lib\site-packages\numpy\core\fromnumeric.py", line 3504, in mean
+    return _methods._mean(a, axis=axis, dtype=dtype,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\anaconda\Lib\site-packages\numpy\core\_methods.py", line 102, in _mean
+    arr = asanyarray(a)
+          ^^^^^^^^^^^^^
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 2 dimensions. The detected shape was (2, 20000) + inhomogeneous part.

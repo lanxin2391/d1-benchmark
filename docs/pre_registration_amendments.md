@@ -378,21 +378,65 @@ optimised engine and reproduces the released tables exactly:
 `null_mean`, `null_sd`, `null_q05`, `null_q50`, `null_q95` all
 max|diff| = 0.000e+00 (`scripts/compare_a5.py`).
 
-**What is left open.** The 40-repeat null is not finished. The
-remaining arms (intact, reactome, string_full700) need about 232
-CPU-minutes, and under the observed machine contention that is another
-1-2 hours of wall-clock for a marginal gain.
+**What is left open.** *(superseded — see "A2.3g, completed" below)* The
+40-repeat null was not finished at the time of writing; the remaining
+arms (intact, reactome, string_full700) needed about 232 CPU-minutes.
 
-**Why that is acceptable, stated explicitly.** The null distribution's
-spread is inflated by the smaller repeat count, because each null
-resample's own estimate carries more sampling noise. An inflated null
-spread makes the z-score SMALLER, i.e. **the control is conservative**:
-the reported separation between the observed signal and the
-degree-matched null is a lower bound. The z-scores in
-`results/tables/a5_p_values.tsv` are 8.4 to 205, so no conclusion
-depends on their exact value. The manuscript states that control 2's null
-was simulated on the 10-repeat design and that the resulting z-scores
-are therefore conservative.
+**Why that was acceptable, stated explicitly.** *(superseded)* The null
+distribution's spread is inflated by the smaller repeat count, because
+each null resample's own estimate carries more sampling noise. An
+inflated null spread makes the z-score SMALLER, i.e. **the control is
+conservative**: the reported separation between the observed signal and
+the degree-matched null is a lower bound.
+
+**A2.3g, completed (2026-11-05).** The 40-repeat null is now complete
+for all 24 arms, so the conservative-bias argument above no longer
+applies and the control is now on the same design as the primary
+factorial. Two further defects were found while finishing it, and both
+had to be fixed before the numbers could be released:
+
+1. **The resumed arms were aggregated with the wrong statistic.** The
+   per-arm checkpoint file holds one row per (resample, repeat, fold).
+   A freshly computed arm contributes to the null distribution its 100
+   **per-resample means** (each the mean over that resample's folds).
+   A resumed arm was instead contributing the raw 20,000 **pooled
+   fold-level deltas**. Those measure different things -- the spread of
+   individual folds versus the spread of seed draws -- and the pooled
+   version has a much smaller SD, which would have made the resumed
+   arms' z-scores far too large (anti-conservative). Fixed: the resume
+   path now computes `groupby("resample")[col].mean()`, exactly like
+   the fresh path.
+
+2. **The aggregation loop unpacked one level too few.** The loop read
+   `for (net, lab), (all_df, mean_resamples) in zip(cells,
+   per_cell_results)`, but every element of `per_cell_results` is
+   already `((net, lab), (df, means))`, so the zip added a third level
+   and `mean_resamples` became the tuple `(df, means)`. `np.mean()` then
+   died with "inhomogeneous shape" and the run crashed **after** all
+   24 arms had been simulated. The zip was also redundant (the list has
+   just been sorted into the order of `cells`) and unsafe (it could pair
+   a cell with another cell's data). Fixed: the elements are unpacked
+   directly and an assertion checks the alignment.
+
+Both defects were invisible in the released tables only because the
+released tables had been produced before the resume feature existed;
+the defect was latent, not active. `scripts/run_a5.py` now also has
+`--aggregate-only`, which rebuilds the two control-2 tables from the
+per-arm traces on disk without re-running the simulation, and
+`scripts/run_stats_analysis.py` gained `--only fine-z` so the per-fold
+z table can be regenerated on the 40-repeat inputs without the
+superseded steps 2-4 overwriting the corrected tables.
+
+**The completed control (40-repeat null, observed values from the
+40-repeat primary run):** the observed ΔAUROC exceeds the
+degree-matched-seed null in **all 24 cells** (cell-level z = 3.09 to
+226.9; 23/24 have z > 5, the exception being
+`reactome × intogen_temporal_new` at z = 3.09, p = 1.0e-3). At the
+fold level the per-cell mean z runs from 0.25 to 13.20 and the
+Stouffer-combined z from 3.56 to 186.7, with all 24 cells at p < 0.05
+(largest p = 1.8e-4). The null distribution itself is informative: with
+random degree-matched seeds the RWR prior is *worse* than the degree
+baseline in most cells (null mean ΔAUROC from −0.052 to +0.005).
 
 ### A2.3h Two controls were not doing what they claimed (P0-5, P0-06)
 

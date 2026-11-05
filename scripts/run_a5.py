@@ -306,9 +306,9 @@ def _run_one_arm(net_id, label, n_resamples):
     return all_df, np.array(means)
 
 
-def _observed_delta(net_id, label):
+def _observed_delta(net_id, label, a4_path=None):
     """Mean observed delta across folds for alpha=0.5 (RWR - degree)."""
-    p = ROOT / "results" / "runs" / "a4_combined.tsv"
+    p = Path(a4_path) if a4_path else (ROOT / "results" / "runs" / "a4_combined.tsv")
     if not p.exists():
         return np.nan
     df = pd.read_csv(p, sep="\t")
@@ -344,6 +344,17 @@ def main():
                          "data/processed/splits; use "
                          "data/processed/splits_v40 for the 40-repeat "
                          "design, work plan A2)")
+    ap.add_argument("--a4", default=None,
+                    help="path to a4_combined.tsv for the OBSERVED delta "
+                         "(default results/runs/a4_combined.tsv; use "
+                         "results/runs_v40/a4_combined.tsv when the null is "
+                         "simulated on the 40-repeat design, so that the "
+                         "observed value and the null come from the same "
+                         "design)")
+    ap.add_argument("--aggregate-only", action="store_true",
+                    help="skip the simulation and rebuild the null "
+                         "distribution tables from the per-arm trace files "
+                         "already on disk (results/runs/a5/a5/)")
     ap.add_argument("--force", action="store_true",
                     help="recompute arms even if a checkpoint exists")
     args = ap.parse_args()
@@ -388,6 +399,14 @@ def main():
         return (net, lab), (all_df, mean_resamples)
 
     per_cell_results = []
+    if args.aggregate_only:
+        missing = [c for c in cells if c not in done_files]
+        if missing:
+            raise SystemExit(
+                f"--aggregate-only: {len(missing)} of {len(cells)} arms have "
+                f"no trace file in {trace_dir}: {missing}")
+        _log(f"  aggregating {len(cells)} arms from the trace files on disk "
+             f"(no simulation)")
     if pending:
         results = Parallel(n_jobs=args.n_jobs, verbose=0)(
             delayed(_run_and_checkpoint)(net, lab) for net, lab in pending
@@ -402,18 +421,40 @@ def main():
         # the per-resample trace column is `delta_auroc` (written by
         # _run_one_arm), not `delta`
         col = "delta_auroc" if "delta_auroc" in df.columns else "delta"
-        per_cell_results.append(((net, lab), (df, df[col].to_numpy())))
+        # BUG (found 2026-11-04): the resumed arms used the RAW 20,000
+        # fold-level deltas as the null sample, while the freshly computed
+        # arms used the 100 PER-RESAMPLE MEANS (one value per degree-matched
+        # seed draw, each the mean over that resample's folds). Those are
+        # different statistics: pooling the folds measures the spread of
+        # individual folds, the per-resample means measure the spread of
+        # seed draws. Mixing the two made the resumed arms' null SD far
+        # too small and their z-scores far too large (anti-conservative),
+        # and it crashed the aggregation with a ragged-array ValueError.
+        # The resumed arms must be aggregated exactly like the fresh ones.
+        means = (df.groupby("resample")[col].mean()
+                   .reindex(range(N_RESAMPLES)).to_numpy())
+        per_cell_results.append(((net, lab), (df, means)))
     order = {c: i for i, c in enumerate(cells)}
     per_cell_results.sort(key=lambda r: order[r[0]])
+    # BUG (found 2026-11-04): the aggregation loop unpacked
+    #     `for (net, lab), (all_df, mean_resamples) in zip(cells, per_cell_results)`
+    # but every element of per_cell_results is ALREADY ((net, lab), (df, means)),
+    # so zip added a third level: mean_resamples became the tuple (df, means)
+    # and np.mean() died on a ragged array. The zip was also redundant: the
+    # list has just been sorted into the order of `cells`, and the zip could
+    # silently pair a cell with another cell's data. Unpack the elements
+    # directly and assert the alignment instead.
+    assert [r[0] for r in per_cell_results] == cells, (
+        "control-2 results are not aligned with the cell list")
 
     null_summary = []
     p_summary = []
     from scipy.stats import norm as _norm
-    for (net, lab), (all_df, mean_resamples) in zip(cells, per_cell_results):
+    for (net, lab), (all_df, mean_resamples) in per_cell_results:
         if len(mean_resamples) == 0:
             _log(f"  [{net} x {lab}] no usable resamples")
             continue
-        obs_delta = _observed_delta(net, lab)
+        obs_delta = _observed_delta(net, lab, a4_path=args.a4)
         null_mean = float(np.mean(mean_resamples))
         null_sd = float(np.std(mean_resamples, ddof=1))
         null_q05 = float(np.quantile(mean_resamples, 0.05))

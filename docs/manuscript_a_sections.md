@@ -507,10 +507,9 @@ tables should not be cited.
 ## §G. Results §A5 degree-matched seed null (control 2)
 
 100 degree-matched random seed sets per cell, each propagated over the
-5 folds of each of the 10 repeats (the control-2 null was simulated on
-the original 10-repeat design; see the bias statement below).
-
-Two summaries are computed from the same trace:
+5 folds of each of the **40 repeats** (200 (repeat, fold) evaluations
+per cell) — the control-2 null uses the same design as the primary
+factorial. Two summaries are computed from the same trace:
 
 * **cell level** (one z per cell, the null distribution pooled over
   folds): `results/tables/a5_p_values.tsv`
@@ -521,24 +520,19 @@ Two summaries are computed from the same trace:
 At α = 0.5 the observed ΔAUROC beats degree-matched random seeds in
 **all 24 cells** (cell-level z > 0 everywhere):
 
-* 23/24 cells have cell-level z > 5 (5.5 ≤ z ≤ 106.3)
-* the remaining cell, `reactome × intogen_temporal_new`, has z = +2.11
-  (p = 0.017) — still positive: observed is above the random-seed null
+* 23/24 cells have cell-level z > 5 (8.2 ≤ z ≤ 226.9)
+* the remaining cell, `reactome × intogen_temporal_new`, has z = +3.09
+  (p = 1.0e-3) — still positive: observed is above the random-seed null
   even though it is negative against the degree baseline
-* at the fold level the per-cell mean z ranges from 0.28 (the same
-  Reactome cell) to 13.2; the Stouffer-combined z ranges from 2.0 to
-  93.5 and **all 24 cells have p < 0.05** (largest p = 0.023)
+* at the fold level the per-cell mean z ranges from 0.25 (the same
+  Reactome cell) to 13.20; the Stouffer-combined z ranges from 3.56 to
+  186.7 and **all 24 cells have p < 0.05** (largest p = 1.8e-4)
 
 So gene identity matters: replacing the true driver seeds by
-degree-matched random seeds destroys the effect in every arm.
-
-> **Bias statement (control 2).** The control-2 null was simulated on
-> the 10-repeat design while the primary factorial moved to 40 repeats.
-> Each null resample therefore carries more sampling noise, which
-> **inflates the null spread and shrinks the z-score**: the reported
-> separation is a lower bound and the control is conservative
-> (amendment 2, A2.3g). The z-scores are 2.1–106, so no conclusion
-> depends on their exact value.
+degree-matched random seeds destroys the effect in every arm. The null
+distribution itself is informative — with random seeds the RWR prior is
+*worse* than the degree baseline in most cells (null mean ΔAUROC between
+−0.052 and +0.005), i.e. a random seed set actively hurts.
 
 Cross-validating W5 and A5: 23/24 cells reject BOTH nulls, and the one
 cell that does not reject the rewiring null still rejects the
@@ -587,7 +581,7 @@ percentile, repeat-level *t* and repeat-level BCa intervals, and in
 20/24 under the (deliberately conservative) gene-cluster bootstrap, the
 four exceptions being the four `intogen_temporal_new` arms with the
 smallest effects. The cell-level separation from the degree-matched
-seed null is z = 2.1–106 and from the rewired null z = 8.9–205
+seed null is z = 3.1–227 and from the rewired null z = 8.9–205
 (excluding the single Reactome cell, §F.1).
 
 The confidence interval uses the **repeat** as its resampling unit,

@@ -18,6 +18,7 @@ Outputs:
         TOST equivalence test for the borderline cell
         (reactome x intogen_temporal_new).
 """
+import pathlib
 import sys
 import warnings
 from pathlib import Path
@@ -47,7 +48,8 @@ LABELS = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
 # 1. FINE z-score (per-fold paired test, protocol §4.4)
 # ---------------------------------------------------------------------------
 
-def _fine_z_one_cell(net: str, label: str, alpha: float = 0.5) -> pd.DataFrame:
+def _fine_z_one_cell(net: str, label: str, alpha: float = 0.5,
+                     a4_path=None, trace_dir=None) -> pd.DataFrame:
     """For each (network, label), compute per-fold paired z using the
     saved null distribution. The fine z for the cell is the mean of
     the per-fold z's (or the z of the paired means -- here we use the
@@ -62,7 +64,7 @@ def _fine_z_one_cell(net: str, label: str, alpha: float = 0.5) -> pd.DataFrame:
     run_a5.py's saved trace. We pool over the 3 alphas in the trace to
     get 300 null points per (repeat, fold).
     """
-    a4 = pd.read_csv(RUN_A4, sep="\t")
+    a4 = pd.read_csv(a4_path or RUN_A4, sep="\t")
     obs = a4[(a4.network == net) & (a4.label_set == label)].copy()
     if obs.empty:
         return None
@@ -80,7 +82,7 @@ def _fine_z_one_cell(net: str, label: str, alpha: float = 0.5) -> pd.DataFrame:
     if len(obs_per_fold) == 0:
         return None
 
-    trace_path = RUNS_DIR_A5 / f"{net}__{label}__seed_resamples.tsv"
+    trace_path = (trace_dir or RUNS_DIR_A5) / f"{net}__{label}__seed_resamples.tsv"
     if not trace_path.exists():
         return None
     null_df = pd.read_csv(trace_path, sep="\t")
@@ -111,12 +113,13 @@ def _fine_z_one_cell(net: str, label: str, alpha: float = 0.5) -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
-def _fine_z_all() -> pd.DataFrame:
+def _fine_z_all(a4_path=None, trace_dir=None) -> pd.DataFrame:
     rows = []
     for net in NETS:
         for lab in LABELS:
             for alpha in (0.3, 0.5, 0.7):
-                df = _fine_z_one_cell(net, lab, alpha)
+                df = _fine_z_one_cell(net, lab, alpha,
+                                      a4_path=a4_path, trace_dir=trace_dir)
                 if df is not None and len(df):
                     rows.append(df)
     return pd.concat(rows, ignore_index=True)
@@ -239,7 +242,7 @@ def _bootstrap_ci(net: str, label: str, alpha: float = 0.5,
     bootstrap of pre-registration section 9.3 is computed separately by
     scripts/run_gene_cluster_ci.py.
     """
-    a4 = pd.read_csv(RUN_A4, sep="\t")
+    a4 = pd.read_csv(a4_path or RUN_A4, sep="\t")
     obs = a4[(a4.network == net) & (a4.label_set == label)].copy()
     # FIX: keep the degree rows unconditionally (their alpha is NaN) and
     # filter the RWR rows to the requested alpha.
@@ -318,7 +321,7 @@ def _tost(
                 `alpha`; the original implementation reused one name for
                 both, which is why it never filtered on it at all.
     """
-    a4 = pd.read_csv(RUN_A4, sep="\t")
+    a4 = pd.read_csv(a4_path or RUN_A4, sep="\t")
     obs = a4[(a4.network == net) & (a4.label_set == label)].copy()
     # FIX: alpha filter (the degree rows carry alpha = NaN and are kept
     # unconditionally; the RWR rows are filtered to the requested alpha).
@@ -387,17 +390,55 @@ def _equivalence_all():
 # ---------------------------------------------------------------------------
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", default="fine-z",
+                    choices=["fine-z", "all"],
+                    help="which steps to run. Steps 2-4 (variance "
+                         "decomposition, gene-cluster CI, TOST) are "
+                         "SUPERSEDED by scripts/run_variance_decomp.py, "
+                         "scripts/run_statistics.py and "
+                         "scripts/run_ci_variants.py and must not be "
+                         "written from this script; 'all' is kept only "
+                         "for archaeology and needs --allow-superseded")
+    ap.add_argument("--allow-superseded", action="store_true")
+    ap.add_argument("--a4", default=None,
+                    help="a4_combined.tsv for the observed values "
+                         "(default results/runs/a4_combined.tsv; use "
+                         "results/runs_v40/a4_combined.tsv for the 40-repeat "
+                         "design)")
+    ap.add_argument("--a5-dir", default=None,
+                    help="directory holding the control-2 per-resample "
+                         "traces (default results/runs/a5)")
+    args = ap.parse_args()
+
+    a4_path = pathlib.Path(args.a4) if args.a4 else None
+    if a4_path is not None and not a4_path.is_absolute():
+        a4_path = ROOT / a4_path
+    trace_dir = pathlib.Path(args.a5_dir) if args.a5_dir else None
+    if trace_dir is not None and not trace_dir.is_absolute():
+        trace_dir = ROOT / trace_dir
+
     print("=" * 70)
     print("§4.6 statistical analysis")
     print("=" * 70)
 
     print("\n--- 1. fine-mode z-score (per-fold paired) ---")
-    fz = _fine_z_all()
+    fz = _fine_z_all(a4_path=a4_path, trace_dir=trace_dir)
     fz.to_csv(TABLE_DIR / "stats_fine_z.tsv", sep="\t", index=False)
     fz_summary = _summarize_fine_z(fz)
     fz_summary.to_csv(TABLE_DIR / "stats_fine_z_summary.tsv", sep="\t",
                         index=False)
     print(fz_summary.round(4).to_string(index=False))
+
+    if args.only == "fine-z":
+        print("\n--- steps 2-4 skipped: they are superseded by "
+              "run_variance_decomp.py / run_statistics.py / "
+              "run_ci_variants.py (see amendment 2) ---")
+        return
+    if not args.allow_superseded:
+        raise SystemExit("--only all would overwrite the corrected tables; "
+                         "pass --allow-superseded only for archaeology")
 
     print("\n--- 2. mixed-effects variance decomposition ---")
     vd = _variance_decomp()
