@@ -1,0 +1,37 @@
+target	target_label	feature	spearman	p	n_networks	q_bh
+net_stability_sd	arm-level SD of delta-AUROC	n_nodes	-0.8571428571428572	0.006530017254715292	8	0.02612006901886117
+net_stability_sd	arm-level SD of delta-AUROC	n_edges	-0.6190476190476191	0.1017330374542646	8	0.23905961227758518
+net_stability_sd	arm-level SD of delta-AUROC	density	0.07142857142857144	0.8665262706759088	8	0.9108491685195835
+net_stability_sd	arm-level SD of delta-AUROC	mean_degree	-0.30952380952380953	0.4556448907375822	8	0.5467738688850986
+net_stability_sd	arm-level SD of delta-AUROC	mean_clustering	0.4523809523809524	0.260404767436885	8	0.34720635658251336
+net_stability_sd	arm-level SD of delta-AUROC	modularity	0.4761904761904762	0.23293553465009798	8	0.34720635658251336
+net_stability_sd	arm-level SD of delta-AUROC	degree_assortativity	0.5000000000000001	0.20703124999999997	8	0.34720635658251336
+net_stability_sd	arm-level SD of delta-AUROC	approx_mean_path_length	0.7142857142857144	0.04652823228416724	8	0.13958469685250172
+net_stability_sd	arm-level SD of delta-AUROC	max_k_core	-0.04761904761904763	0.9108491685195836	8	0.9108491685195835
+net_stability_sd	arm-level SD of delta-AUROC	frac_in_2core	-0.9047619047619048	0.0020082755054294677	8	0.012049653032576806
+net_stability_sd	arm-level SD of delta-AUROC	frac_in_10core	-0.5952380952380953	0.11952980613879259	8	0.23905961227758518
+net_stability_sd	arm-level SD of delta-AUROC	mean_label_coverage	-0.9047619047619048	0.0020082755054294677	8	0.012049653032576806
+net_cross_label_spread	spread of the four label means	n_nodes	-0.6428571428571429	0.08555889101267318	8	0.12833833651900978
+net_cross_label_spread	spread of the four label means	n_edges	-0.8571428571428572	0.006530017254715292	8	0.03918010352829175
+net_cross_label_spread	spread of the four label means	density	-0.6428571428571429	0.08555889101267318	8	0.12833833651900978
+net_cross_label_spread	spread of the four label means	mean_degree	-0.7619047619047621	0.028004939153071794	8	0.08401481745921538
+net_cross_label_spread	spread of the four label means	mean_clustering	0.7142857142857144	0.04652823228416724	8	0.11166775748200138
+net_cross_label_spread	spread of the four label means	modularity	0.8333333333333335	0.01017554012345675	8	0.040702160493827
+net_cross_label_spread	spread of the four label means	degree_assortativity	0.1666666666666667	0.693238811728395	8	0.6932388117283951
+net_cross_label_spread	spread of the four label means	approx_mean_path_length	0.5714285714285715	0.1389599571607067	8	0.16675194859284803
+net_cross_label_spread	spread of the four label means	max_k_core	-0.6666666666666669	0.07098765432098751	8	0.12833833651900978
+net_cross_label_spread	spread of the four label means	frac_in_2core	-0.5476190476190477	0.1600256425388966	8	0.17457342822425082
+net_cross_label_spread	spread of the four label means	frac_in_10core	-0.9047619047619048	0.0020082755054294677	8	0.024099306065153613
+net_cross_label_spread	spread of the four label means	mean_label_coverage	-0.5714285714285715	0.1389599571607067	8	0.16675194859284803
+net_delta_mean	mean delta-AUROC	n_nodes	0.2380952380952381	0.5701563208157683	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	n_edges	-0.1666666666666667	0.693238811728395	8	0.8318865740740741
+net_delta_mean	mean delta-AUROC	density	-0.6904761904761906	0.057990318164572716	8	0.6958838179748725
+net_delta_mean	mean delta-AUROC	mean_degree	-0.4285714285714286	0.2894032248467901	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	mean_clustering	0.28571428571428575	0.4927262450169573	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	modularity	0.523809523809524	0.18272075053971484	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	degree_assortativity	0.3333333333333334	0.4197530864197531	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	approx_mean_path_length	0.023809523809523815	0.9553740118158807	8	0.9553740118158807
+net_delta_mean	mean delta-AUROC	max_k_core	-0.04761904761904763	0.9108491685195836	8	0.9553740118158807
+net_delta_mean	mean delta-AUROC	frac_in_2core	0.28571428571428575	0.4927262450169573	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	frac_in_10core	-0.2380952380952381	0.5701563208157683	8	0.7602084277543577
+net_delta_mean	mean delta-AUROC	mean_label_coverage	0.30952380952380953	0.4556448907375822	8	0.7602084277543577

@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_full900	intogen_temporal_new	native_string_full900		0	0	degree		0.5098789974070873	0.011394887998556098	0.0	0.01	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		0	1	degree		0.5852376836646499	0.032573400658932924	0.02	0.01	0.008	25	2339
+string_full900	intogen_temporal_new	native_string_full900		0	2	degree		0.6106870863680202	0.016528890492438733	0.02	0.01	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900		0	3	degree		0.7015910073497622	0.020436686211916424	0.0	0.01	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900		0	4	degree		0.5167661046260268	0.011693305853557283	0.0	0.0	0.008	25	2338
+string_full900	intogen_temporal_new	native_string_full900		1	0	degree		0.546724286949006	0.012720028636655277	0.02	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		1	1	degree		0.5229645635263613	0.02460655396273788	0.02	0.01	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		1	2	degree		0.5973760351192259	0.014843676846376112	0.0	0.0	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900		1	3	degree		0.6711629917855598	0.01672427947856039	0.02	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		1	4	degree		0.5858798097708604	0.014695764352396284	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		2	0	degree		0.6416940363007779	0.016379071379238528	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		2	1	degree		0.522999135695765	0.012064592853979886	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		2	2	degree		0.6407346436529316	0.016024696142466738	0.0	0.0	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		2	3	degree		0.520250756593169	0.023040919525161324	0.04	0.02	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		2	4	degree		0.5943536532641591	0.014502603208154727	0.0	0.0	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900		3	0	degree		0.534200518582541	0.012208917057831533	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		3	1	degree		0.557752808988764	0.011978524906336347	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		3	2	degree		0.5769397053443746	0.014777284821090387	0.02	0.01	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900		3	3	degree		0.5900302637267618	0.014023575037743	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		3	4	degree		0.6659316904453092	0.03856496345216953	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		4	0	degree		0.5425496974935178	0.013392257094767882	0.0	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		4	1	degree		0.5753327571305099	0.01412201976998061	0.02	0.02	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		4	2	degree		0.54340017958695	0.012259929711112602	0.0	0.0	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		4	3	degree		0.615495028102032	0.01452457025345409	0.0	0.0	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		4	4	degree		0.64757457846952	0.026497837847741082	0.02	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		5	0	degree		0.628504753673293	0.03255692836553497	0.02	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900		5	1	degree		0.5393777009507347	0.011870482712521769	0.0	0.0	0.008	25	2339
+string_full900	intogen_temporal_new	native_string_full900		5	2	degree		0.6661013003425456	0.01839714989099806	0.0	0.0	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900		5	3	degree		0.5993428447903156	0.012952099679727025	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		5	4	degree		0.4897622135754431	0.011324976957030605	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		6	0	degree		0.5640103716508211	0.012525278620461011	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		6	1	degree		0.5510976663785653	0.012712075091257978	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		6	2	degree		0.5885463434101568	0.01360955094038403	0.0	0.0	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		6	3	degree		0.6526675313445741	0.020370449781621374	0.04	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900		6	4	degree		0.5665542585386943	0.026679321887707632	0.02	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		7	0	degree		0.5038115816767502	0.010910959220937466	0.0	0.0	0.004	25	2339
+string_full900	intogen_temporal_new	native_string_full900		7	1	degree		0.5244252376836647	0.012190124661201018	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		7	2	degree		0.66994246566231	0.03326709608582501	0.02	0.02	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900		7	3	degree		0.5512667531344574	0.012701408169533123	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		7	4	degree		0.6733246865542586	0.016984312739101785	0.02	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		8	0	degree		0.5496888504753674	0.013087152613489665	0.0	0.01	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		8	1	degree		0.5920138288677614	0.013882188116273415	0.0	0.01	0.008	25	2339
+string_full900	intogen_temporal_new	native_string_full900		8	2	degree		0.5649506135887459	0.014551823868492712	0.0	0.0	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900		8	3	degree		0.6388759187202767	0.016740302873862453	0.0	0.0	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		8	4	degree		0.5806658019887592	0.02667331673607545	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		9	0	degree		0.6332929991356958	0.015087508114239843	0.0	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		9	1	degree		0.5897579948141745	0.01298595126094986	0.0	0.0	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		9	2	degree		0.5373391200239449	0.012395305808387694	0.0	0.0	0.01	26	2339
+string_full900	intogen_temporal_new	native_string_full900		9	3	degree		0.5689753566796368	0.013447694703377106	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		9	4	degree		0.5991699092088197	0.040602172784840684	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		10	0	degree		0.5886949006050131	0.03352587084924427	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		10	1	degree		0.5127917026793432	0.01130768581961195	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		10	2	degree		0.6180617912135422	0.015149276286988981	0.02	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		10	3	degree		0.6034154777345438	0.015334770896794424	0.0	0.01	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		10	4	degree		0.6037786424556852	0.015397627391028018	0.0	0.0	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		11	0	degree		0.6712273120138288	0.018307872403441762	0.0	0.0	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900		11	1	degree		0.46269662921348315	0.010258905095272157	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		11	2	degree		0.6207472812531177	0.016222197872616806	0.02	0.01	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900		11	3	degree		0.5604323389537397	0.027741144067689467	0.02	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		11	4	degree		0.6071076523994812	0.013392766289929773	0.0	0.0	0.008	25	2338
+string_full900	intogen_temporal_new	native_string_full900		12	0	degree		0.5858254105445116	0.014191389917983592	0.0	0.01	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		12	1	degree		0.5921175453759724	0.033405107257357736	0.02	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		12	2	degree		0.5100851375170441	0.011189844172042907	0.0	0.0	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		12	3	degree		0.6009338521400778	0.014030449523049998	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		12	4	degree		0.6404063986165153	0.01756383543615773	0.0	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		13	0	degree		0.5504494382022472	0.012811911536724977	0.0	0.01	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		13	1	degree		0.5453068280034572	0.011822437419488345	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		13	2	degree		0.6500798164222289	0.01589530934235892	0.0	0.0	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		13	3	degree		0.5908862948551664	0.023051629561909488	0.02	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		13	4	degree		0.5852831820146995	0.016090356568208803	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		14	0	degree		0.5728176318063959	0.012745731202986737	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		14	1	degree		0.6112532411408815	0.01421569774567519	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		14	2	degree		0.5905168113339319	0.02861123514728712	0.02	0.02	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900		14	3	degree		0.5684306095979248	0.013925678169930865	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		14	4	degree		0.5814180717682663	0.013579410442173255	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		15	0	degree		0.6156525496974935	0.028175491301510897	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		15	1	degree		0.6584701815038894	0.017785407959550182	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		15	2	degree		0.5471498885895772	0.012707291423899213	0.0	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		15	3	degree		0.5702031993082577	0.013003495945921744	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		15	4	degree		0.5362905317769131	0.012151924360745497	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		16	0	degree		0.6271996542783059	0.015733309772443617	0.0	0.0	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		16	1	degree		0.5547104580812446	0.012786640484718116	0.0	0.01	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		16	2	degree		0.5917306860886627	0.035732396899038864	0.04	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		16	3	degree		0.509174232598357	0.010779882952463463	0.0	0.0	0.008	25	2338
+string_full900	intogen_temporal_new	native_string_full900		16	4	degree		0.6435624729788154	0.015563394762014654	0.0	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		17	0	degree		0.4948660328435609	0.03244497158099455	0.04	0.02	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		17	1	degree		0.5896197061365601	0.013828605561983549	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		17	2	degree		0.6840350527120955	0.018136074281105426	0.0	0.0	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900		17	3	degree		0.5395071335927367	0.01149708180158215	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		17	4	degree		0.610402075226978	0.015292642731808512	0.0	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		18	0	degree		0.617571305099395	0.01617160389634463	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		18	1	degree		0.6611668107173725	0.030975389899987535	0.04	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		18	2	degree		0.5397585553227576	0.012226103538726201	0.0	0.0	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		18	3	degree		0.5419887591872028	0.011721927023880637	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		18	4	degree		0.5687678339818418	0.014615682951554835	0.0	0.0	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		19	0	degree		0.6213569576490925	0.014219381750993647	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		19	1	degree		0.6129472774416594	0.03442185641433666	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		19	2	degree		0.5823938275300142	0.01398034554266271	0.0	0.01	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		19	3	degree		0.45769995676610464	0.009558203842666061	0.0	0.0	0.006	25	2338
+string_full900	intogen_temporal_new	native_string_full900		19	4	degree		0.6530393428447904	0.020854410938002343	0.04	0.02	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900		20	0	degree		0.5802592912705273	0.028110014466215312	0.02	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		20	1	degree		0.6362489196197062	0.015784581664931265	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		20	2	degree		0.6273404502976487	0.01613207090409642	0.02	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		20	3	degree		0.5070038910505836	0.011122569214167924	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		20	4	degree		0.5717769130998704	0.012758965918383153	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		21	0	degree		0.6059809853068281	0.014271820014096603	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		21	1	degree		0.5630423509075194	0.02297773566420148	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		21	2	degree		0.5765988227077721	0.014008775188048446	0.0	0.0	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		21	3	degree		0.6223000432338954	0.01620722381868647	0.0	0.02	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		21	4	degree		0.557008214440121	0.01287408779206473	0.0	0.0	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		22	0	degree		0.5356266205704409	0.011693800935706936	0.0	0.01	0.006	25	2339
+string_full900	intogen_temporal_new	native_string_full900		22	1	degree		0.6377268798617113	0.017366222644598216	0.0	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900		22	2	degree		0.5979330872326981	0.014538112522138043	0.02	0.01	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		22	3	degree		0.5249546044098573	0.01220440887624556	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		22	4	degree		0.6305490704712494	0.054767097274735985	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		23	0	degree		0.6751858254105445	0.01749392331738411	0.0	0.0	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		23	1	degree		0.588513396715644	0.013873490957065079	0.0	0.0	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		23	2	degree		0.5517559612890351	0.012675096178071792	0.0	0.0	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		23	3	degree		0.5407349762213576	0.013000192901089275	0.02	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		23	4	degree		0.5704626026805015	0.027577361043483028	0.04	0.02	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		24	0	degree		0.614494382022472	0.013549972996318663	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		24	1	degree		0.5924719101123596	0.015378762128774277	0.0	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		24	2	degree		0.5252918287937743	0.012361769763134888	0.0	0.01	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		24	3	degree		0.6264937310851708	0.03638462675782018	0.02	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		24	4	degree		0.5712321660181583	0.013896494741863953	0.0	0.0	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		25	0	degree		0.5139757994814174	0.012142502174909017	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		25	1	degree		0.5906050129645635	0.020635002163595477	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		25	2	degree		0.5923459376766771	0.015199655764337072	0.02	0.01	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		25	3	degree		0.5730912235192391	0.01332890353582306	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		25	4	degree		0.6521833117163857	0.015234844106347942	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		26	0	degree		0.5508988764044944	0.012253351391976345	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		26	1	degree		0.6428176318063958	0.019084689479536794	0.02	0.01	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900		26	2	degree		0.5611094482689813	0.02500074987466452	0.02	0.01	0.01	26	2339
+string_full900	intogen_temporal_new	native_string_full900		26	3	degree		0.5768525724167748	0.013858168523336887	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		26	4	degree		0.594569822741029	0.014369959588434622	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		27	0	degree		0.5219533275713051	0.011453230997190866	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		27	1	degree		0.5297666378565254	0.01214363640048437	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		27	2	degree		0.6012421430709368	0.015413564417098133	0.02	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		27	3	degree		0.6511543450064852	0.018534485331042586	0.0	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		27	4	degree		0.617812364894077	0.03375191804173764	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		28	0	degree		0.44019878997407086	0.009382047044690658	0.0	0.0	0.008	25	2339
+string_full900	intogen_temporal_new	native_string_full900		28	1	degree		0.5917891097666379	0.016074566073104892	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		28	2	degree		0.5796335095945991	0.013502653406757943	0.0	0.0	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		28	3	degree		0.6284911370514483	0.03494096656856838	0.02	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		28	4	degree		0.6860700389105059	0.0176632239804604	0.0	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		29	0	degree		0.5937770095073467	0.014533103517095204	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		29	1	degree		0.5767761452031115	0.013370143633901328	0.0	0.0	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		29	2	degree		0.5604110545744787	0.013723616781973647	0.0	0.0	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		29	3	degree		0.6169130998702983	0.014613106911428135	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		29	4	degree		0.5791093817552961	0.03377281664005895	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		30	0	degree		0.6289801210025929	0.016034731941779054	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		30	1	degree		0.60552290406223	0.01591149725063416	0.0	0.0	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		30	2	degree		0.5673783630982074	0.012576712070885523	0.0	0.01	0.008	26	2339
+string_full900	intogen_temporal_new	native_string_full900		30	3	degree		0.6203026372676178	0.02885810040406126	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		30	4	degree		0.5007176826632079	0.01144418848895832	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		31	0	degree		0.4628435609334486	0.030286454021467023	0.02	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		31	1	degree		0.6010025929127053	0.013509577076175072	0.0	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		31	2	degree		0.6057900162958528	0.014739603526669452	0.0	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		31	3	degree		0.6359878945092953	0.01810218341841314	0.0	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		31	4	degree		0.6233376567228708	0.01557372986663075	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		32	0	degree		0.6504148660328436	0.01769381830286137	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		32	1	degree		0.5727657735522904	0.013681966785959652	0.0	0.01	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		32	2	degree		0.5220243440087798	0.030064110326077507	0.02	0.01	0.006	26	2339
+string_full900	intogen_temporal_new	native_string_full900		32	3	degree		0.5852918287937743	0.014946436885971418	0.0	0.0	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900		32	4	degree		0.5959792477302205	0.014125848069855397	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		33	0	degree		0.55533275713051	0.02476346623429657	0.02	0.01	0.008	25	2339
+string_full900	intogen_temporal_new	native_string_full900		33	1	degree		0.5945548833189283	0.013291938685576144	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		33	2	degree		0.6064967242010043	0.01723787330916663	0.02	0.01	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		33	3	degree		0.5780025940337224	0.013658432332809608	0.0	0.0	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		33	4	degree		0.5891569390402075	0.015347479292188887	0.02	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900		34	0	degree		0.6413310285220397	0.017289221827577177	0.0	0.0	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900		34	1	degree		0.6261452031114951	0.05936102059768572	0.06	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		34	2	degree		0.49696531311317305	0.010847135964278484	0.0	0.0	0.01	26	2339
+string_full900	intogen_temporal_new	native_string_full900		34	3	degree		0.5745092952875054	0.013326615223262362	0.0	0.0	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		34	4	degree		0.5866839602248163	0.012814795594277697	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		35	0	degree		0.5717026793431288	0.012166974969493611	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		35	1	degree		0.6414347450302508	0.01711303812440482	0.0	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900		35	2	degree		0.56076025142173	0.012923242868817438	0.0	0.0	0.01	26	2339
+string_full900	intogen_temporal_new	native_string_full900		35	3	degree		0.5178901859057501	0.031435628956198725	0.02	0.01	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		35	4	degree		0.637008214440121	0.019634902741210637	0.02	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900		36	0	degree		0.5563958513396715	0.01337643235767576	0.02	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		36	1	degree		0.6119360414866033	0.015511123492918074	0.0	0.0	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900		36	2	degree		0.5473577438557984	0.013424487788199633	0.0	0.0	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900		36	3	degree		0.5714915693904021	0.03263967951198883	0.02	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900		36	4	degree		0.6370860354517942	0.01537967702546458	0.0	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		37	0	degree		0.6473898012100259	0.016314847643663036	0.02	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900		37	1	degree		0.45530682800345723	0.010034348568528337	0.0	0.0	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900		37	2	degree		0.6012753999135322	0.02219293493582055	0.02	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900		37	3	degree		0.5869347168179853	0.014099279842299497	0.0	0.0	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		37	4	degree		0.6303415477734544	0.015695169451312746	0.0	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900		38	0	degree		0.6089196197061365	0.014261358983207014	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		38	1	degree		0.5719965427830596	0.013286154227799583	0.0	0.01	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900		38	2	degree		0.6431540789517444	0.01784108471760757	0.02	0.01	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900		38	3	degree		0.5235278858625163	0.011380075516531099	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900		38	4	degree		0.5756074362300043	0.05415428534410094	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		39	0	degree		0.5998012100259291	0.025688880566342706	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900		39	1	degree		0.5444598098530683	0.012108465928686328	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900		39	2	degree		0.5776380990388772	0.014057311378747477	0.0	0.0	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900		39	3	degree		0.5954085603112841	0.015066748389032677	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900		39	4	degree		0.608543017725897	0.013830835376001032	0.0	0.0	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	0	0	rwr	39.0	0.5526361279170268	0.016290585101002456	0.02	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	0	1	rwr	39.0	0.72	0.020267362794636493	0.0	0.0	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	0	2	rwr	39.0	0.6884582127772789	0.021485385870228395	0.02	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	0	3	rwr	39.0	0.7154690877648076	0.025526538969438687	0.04	0.04	0.028	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	0	4	rwr	39.0	0.5920968439256377	0.0207971162603758	0.06	0.03	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	1	0	rwr	39.0	0.6585133967156439	0.021812834109010904	0.04	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	1	1	rwr	39.0	0.5605790838375109	0.01355350227630623	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	1	2	rwr	39.0	0.6505370980079153	0.025381394875263863	0.02	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	1	3	rwr	39.0	0.7137224383916991	0.020573952026359206	0.02	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	1	4	rwr	39.0	0.6868568958063122	0.02355327075046356	0.04	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	2	0	rwr	39.0	0.6945548833189283	0.019474186617704475	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	2	1	rwr	39.0	0.6195505617977528	0.01645497148168601	0.02	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	2	2	rwr	39.0	0.6973627323821876	0.02520442141032669	0.04	0.02	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	2	3	rwr	39.0	0.5573194984868137	0.01308850452194919	0.02	0.01	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	2	4	rwr	39.0	0.6752529182879377	0.031196473609196286	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	3	0	rwr	39.0	0.6377873811581677	0.016371562904234565	0.0	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	3	1	rwr	39.0	0.6610025929127052	0.01836640583954256	0.02	0.02	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	3	2	rwr	39.0	0.6260517476470784	0.02016272523242446	0.04	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	3	3	rwr	39.0	0.6273151750972763	0.01735256514262843	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	3	4	rwr	39.0	0.6715434500648508	0.020783364201391374	0.02	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	4	0	rwr	39.0	0.5838720829732066	0.019338396953149463	0.02	0.02	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	4	1	rwr	39.0	0.6598444252376836	0.02413967932428746	0.08	0.04	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	4	2	rwr	39.0	0.6186354717483122	0.017650709599586003	0.02	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	4	3	rwr	39.0	0.689727626459144	0.02413837966252608	0.04	0.02	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	4	4	rwr	39.0	0.695495028102032	0.020793987217047345	0.0	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	5	0	rwr	39.0	0.6605358686257563	0.022876422394429878	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	5	1	rwr	39.0	0.5983923941227312	0.014390177679610337	0.02	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	5	2	rwr	39.0	0.7479962752336293	0.031242075307176195	0.02	0.05	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	5	3	rwr	39.0	0.6982014699524427	0.044079951797506074	0.04	0.03	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	5	4	rwr	39.0	0.5987202766969304	0.018237457034029257	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	6	0	rwr	39.0	0.6449265341400173	0.021403414321173837	0.02	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	6	1	rwr	39.0	0.6333794295592049	0.019994743910513084	0.04	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	6	2	rwr	39.0	0.6963899697362733	0.023433452490440373	0.04	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	6	3	rwr	39.0	0.674526588845655	0.024381490885992074	0.04	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	6	4	rwr	39.0	0.6148811067877216	0.016279525039359206	0.0	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	7	0	rwr	39.0	0.6689455488331892	0.030845069061545546	0.04	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	7	1	rwr	39.0	0.5513569576490924	0.015508545123642855	0.02	0.03	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	7	2	rwr	39.0	0.7568841664172403	0.034939789151897355	0.04	0.05	0.032	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	7	3	rwr	39.0	0.6089407695633376	0.017314786146052998	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	7	4	rwr	39.0	0.7566536964980546	0.03337254409027418	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	8	0	rwr	39.0	0.6437337942955921	0.018818584928941215	0.04	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	8	1	rwr	39.0	0.6677182368193604	0.03186822470214841	0.08	0.05	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	8	2	rwr	39.0	0.6610878313212945	0.024072610570685705	0.04	0.04	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	8	3	rwr	39.0	0.6797233030696066	0.02111360359479008	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	8	4	rwr	39.0	0.6607003891050585	0.03321498289670921	0.02	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	9	0	rwr	39.0	0.687571305099395	0.027650387624059553	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	9	1	rwr	39.0	0.6728176318063959	0.04136249800282115	0.04	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	9	2	rwr	39.0	0.6177541654195351	0.018670079341990758	0.0	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	9	3	rwr	39.0	0.6542066580198875	0.02344962718708403	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	9	4	rwr	39.0	0.6424989191526156	0.024303273952149006	0.06	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	10	0	rwr	39.0	0.6849178910976665	0.01751665857262546	0.0	0.0	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	10	1	rwr	39.0	0.5651253241140881	0.018804949957131806	0.02	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	10	2	rwr	39.0	0.7059429977717916	0.034910750831846235	0.06	0.05	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	10	3	rwr	39.0	0.6925378296584522	0.02024415817227417	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	10	4	rwr	39.0	0.7115866839602247	0.02543399708423612	0.04	0.03	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	11	0	rwr	39.0	0.7309939498703544	0.02457065122977203	0.02	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	11	1	rwr	39.0	0.5213310285220397	0.01507972523796994	0.02	0.02	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	11	2	rwr	39.0	0.7113804915361336	0.03216421555841437	0.06	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	11	3	rwr	39.0	0.653385214007782	0.022095832634226154	0.02	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	11	4	rwr	39.0	0.6894336359706009	0.02763252965398894	0.06	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	12	0	rwr	39.0	0.6953586862575627	0.028380193454452078	0.04	0.05	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	12	1	rwr	39.0	0.6184010371650821	0.018383484193204798	0.02	0.02	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	12	2	rwr	39.0	0.601965479397386	0.015387547169817009	0.0	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	12	3	rwr	39.0	0.6977777777777778	0.027986568556020577	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	12	4	rwr	39.0	0.7002680501513185	0.02679629672451033	0.02	0.02	0.028	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	13	0	rwr	39.0	0.6354537597234227	0.03293581390727865	0.02	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	13	1	rwr	39.0	0.6386516853932585	0.016519795262603477	0.0	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	13	2	rwr	39.0	0.6852073564135821	0.022670229815501968	0.04	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	13	3	rwr	39.0	0.6380717682663208	0.017131553333095323	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	13	4	rwr	39.0	0.6484824902723736	0.031898896496934157	0.08	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	14	0	rwr	39.0	0.6147796024200518	0.0153801953197358	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	14	1	rwr	39.0	0.718496110630942	0.032604482933638206	0.04	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	14	2	rwr	39.0	0.6693854135488376	0.02291889784400334	0.04	0.03	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	14	3	rwr	39.0	0.6012364894076957	0.024826146335916142	0.06	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	14	4	rwr	39.0	0.6507479463899697	0.017255678054966674	0.02	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	15	0	rwr	39.0	0.6828349178910977	0.04265571797829632	0.04	0.02	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	15	1	rwr	39.0	0.7400345721694036	0.034409200415109496	0.06	0.05	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	15	2	rwr	39.0	0.6380907246666001	0.018975458637086946	0.02	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	15	3	rwr	39.0	0.6251448335495027	0.018352968574690074	0.02	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	15	4	rwr	39.0	0.6067617812364895	0.016073340893422296	0.02	0.03	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	16	0	rwr	39.0	0.6997666378565255	0.023287381110928904	0.04	0.02	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	16	1	rwr	39.0	0.6496802074330165	0.028459848715723164	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	16	2	rwr	39.0	0.6507782101167316	0.027716753504596684	0.04	0.04	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	16	3	rwr	39.0	0.6346389969736272	0.0223045589399542	0.02	0.05	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	16	4	rwr	39.0	0.6831560743623	0.021925022582103392	0.0	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	17	0	rwr	39.0	0.60504753673293	0.021829828427164397	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	17	1	rwr	39.0	0.6415125324114088	0.01918976041527353	0.04	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	17	2	rwr	39.0	0.7584555522298714	0.039561235528520436	0.08	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	17	3	rwr	39.0	0.6528145265888456	0.018914698387520197	0.0	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	17	4	rwr	39.0	0.6297016861219196	0.029384230106942247	0.02	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	18	0	rwr	39.0	0.6972515125324115	0.022303022665368332	0.02	0.03	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	18	1	rwr	39.0	0.7158513396715643	0.03254064951587234	0.06	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	18	2	rwr	39.0	0.6313811566729854	0.01704943143863898	0.0	0.02	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	18	3	rwr	39.0	0.582568093385214	0.013649790804539659	0.0	0.01	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	18	4	rwr	39.0	0.6086121919584955	0.01791273395541948	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	19	0	rwr	39.0	0.7144338807260155	0.02051622473417602	0.0	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	19	1	rwr	39.0	0.6725929127052722	0.0336696256472845	0.06	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	19	2	rwr	39.0	0.6758455552229872	0.025616216399742053	0.06	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	19	3	rwr	39.0	0.5347686986597493	0.011386941628994266	0.0	0.0	0.008	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	19	4	rwr	39.0	0.716126242974492	0.03756120640260332	0.04	0.05	0.03	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	20	0	rwr	39.0	0.6564217804667243	0.023284201763825174	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	20	1	rwr	39.0	0.6873033707865168	0.021688484827925462	0.04	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	20	2	rwr	39.0	0.6603977518374406	0.027177885887469954	0.04	0.05	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	20	3	rwr	39.0	0.5792304366623433	0.014421668238994802	0.0	0.02	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	20	4	rwr	39.0	0.6305404236921747	0.029124785961838234	0.02	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	21	0	rwr	39.0	0.6611408815903198	0.024948168429207683	0.02	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	21	1	rwr	39.0	0.6707519446845289	0.028400285276902963	0.04	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	21	2	rwr	39.0	0.6832950879643487	0.02758811930945461	0.04	0.05	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	21	3	rwr	39.0	0.6492261132728059	0.01841404007362342	0.02	0.03	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	21	4	rwr	39.0	0.6518115002161695	0.017928739451439857	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	22	0	rwr	39.0	0.6315384615384616	0.021751669515237045	0.04	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	22	1	rwr	39.0	0.6991184096802074	0.025598895299983316	0.06	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	22	2	rwr	39.0	0.6510359506468456	0.026119776533747696	0.04	0.03	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	22	3	rwr	39.0	0.5963769995676611	0.01813434696071422	0.04	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	22	4	rwr	39.0	0.7157976653696498	0.02549463473509026	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	23	0	rwr	39.0	0.7660155574762316	0.03327707426665393	0.04	0.06	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	23	1	rwr	39.0	0.6245980985306828	0.015811758004950143	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	23	2	rwr	39.0	0.5703631647211413	0.020179269112766192	0.02	0.02	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	23	3	rwr	39.0	0.6433463035019455	0.019051435115199824	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	23	4	rwr	39.0	0.6685257241677475	0.029100907982556275	0.02	0.02	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	24	0	rwr	39.0	0.6443560933448574	0.01775451685685175	0.02	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	24	1	rwr	39.0	0.6737683664649956	0.02269406625581569	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	24	2	rwr	39.0	0.6556004522930594	0.03209206699522818	0.06	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	24	3	rwr	39.0	0.6999135322092521	0.019448968927625446	0.0	0.01	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	24	4	rwr	39.0	0.6313618677042802	0.03101234947416184	0.06	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	25	0	rwr	39.0	0.6413223854796889	0.022458766953841528	0.02	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	25	1	rwr	39.0	0.6690406222990493	0.030709723720317262	0.06	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	25	2	rwr	39.0	0.6277727892513885	0.01621310535294182	0.02	0.01	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	25	3	rwr	39.0	0.6997146562905316	0.023060851872442233	0.02	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	25	4	rwr	39.0	0.6955987894509295	0.030727888379794878	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	26	0	rwr	39.0	0.6656439066551426	0.04621634792957718	0.08	0.05	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	26	1	rwr	39.0	0.6498876404494383	0.01874901419337407	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	26	2	rwr	39.0	0.5725165452791912	0.014071260882128381	0.0	0.01	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	26	3	rwr	39.0	0.6398616515348033	0.018101360080431915	0.0	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	26	4	rwr	39.0	0.7051275399913532	0.026095142584765453	0.02	0.05	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	27	0	rwr	39.0	0.5980207433016422	0.014900068414895133	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	27	1	rwr	39.0	0.6069144338807261	0.024460789568150704	0.02	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	27	2	rwr	39.0	0.6949682397153214	0.040660747573217394	0.08	0.06	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	27	3	rwr	39.0	0.656463467358409	0.021115241886477842	0.04	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	27	4	rwr	39.0	0.7209511456982274	0.022744850304258317	0.02	0.02	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	28	0	rwr	39.0	0.6163958513396715	0.020093745982541832	0.0	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	28	1	rwr	39.0	0.6811927398444253	0.03720473002470793	0.06	0.05	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	28	2	rwr	39.0	0.6687618477501746	0.018961171989067813	0.02	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	28	3	rwr	39.0	0.6825594466061392	0.030693537677542064	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	28	4	rwr	39.0	0.7080069174232597	0.023346365062964208	0.02	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	29	0	rwr	39.0	0.6643733794295592	0.04598135252166026	0.06	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	29	1	rwr	39.0	0.5964217804667243	0.013515912352911434	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	29	2	rwr	39.0	0.6425720842063255	0.01901152304390864	0.04	0.02	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	29	3	rwr	39.0	0.6850324254215305	0.021405170203198112	0.0	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	29	4	rwr	39.0	0.7155036748811068	0.04009770899443963	0.06	0.05	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	30	0	rwr	39.0	0.7138288677614519	0.034343274093046175	0.06	0.05	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	30	1	rwr	39.0	0.6128867761452031	0.018395645693098227	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	30	2	rwr	39.0	0.654045694901726	0.023815601353282655	0.06	0.04	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	30	3	rwr	39.0	0.6388499783830524	0.019705749790056695	0.0	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	30	4	rwr	39.0	0.6431474275832252	0.03780548559339213	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	31	0	rwr	39.0	0.5796888504753673	0.025879659264048775	0.04	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	31	1	rwr	39.0	0.6672342264477096	0.018920020434824783	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	31	2	rwr	39.0	0.7065000498852639	0.021261958173760403	0.04	0.02	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	31	3	rwr	39.0	0.6595071335927367	0.01996015249728021	0.02	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	31	4	rwr	39.0	0.6840207522697794	0.02436048763915167	0.06	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	32	0	rwr	39.0	0.6582022471910112	0.018762323447695455	0.0	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	32	1	rwr	39.0	0.664200518582541	0.03321016710618611	0.08	0.05	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	32	2	rwr	39.0	0.5933852140077821	0.021960607935658745	0.02	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	32	3	rwr	39.0	0.6632857760484219	0.023646287363027076	0.04	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	32	4	rwr	39.0	0.7126934716817985	0.021149947208782417	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	33	0	rwr	39.0	0.6072687986171132	0.014272882998881936	0.0	0.01	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	33	1	rwr	39.0	0.7132411408815904	0.02064445121093776	0.0	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	33	2	rwr	39.0	0.6582526854900396	0.03205556835128714	0.08	0.05	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	33	3	rwr	39.0	0.6178037181150022	0.015710634706527095	0.0	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	33	4	rwr	39.0	0.6428188499783831	0.019712200945811855	0.02	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	34	0	rwr	39.0	0.6738461538461539	0.02449804026278599	0.02	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	34	1	rwr	39.0	0.6920311149524633	0.021916809358486444	0.02	0.02	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	34	2	rwr	39.0	0.6006934051681134	0.015781111343132773	0.02	0.01	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	34	3	rwr	39.0	0.6332036316472114	0.025967469420492367	0.04	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	34	4	rwr	39.0	0.6982187635105923	0.020587069945580325	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	35	0	rwr	39.0	0.6746413137424374	0.01891287887955184	0.02	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	35	1	rwr	39.0	0.7364044943820225	0.05087258660394514	0.08	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	35	2	rwr	39.0	0.6237653397186471	0.019442961795792503	0.02	0.01	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	35	3	rwr	39.0	0.5917769130998702	0.01724085663560159	0.02	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	35	4	rwr	39.0	0.6501513186338089	0.022661251731509208	0.0	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	36	0	rwr	39.0	0.6040968020743303	0.017024453972644342	0.02	0.01	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	36	1	rwr	39.0	0.6980466724286949	0.03317162561077344	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	36	2	rwr	39.0	0.6698510093451728	0.0207823404095336	0.02	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	36	3	rwr	39.0	0.6343450064850843	0.034167353172947675	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	36	4	rwr	39.0	0.71936878512754	0.02689365676507378	0.02	0.05	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	37	0	rwr	39.0	0.7164736387208297	0.021581539347114757	0.02	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	37	1	rwr	39.0	0.571866897147796	0.01964464422222988	0.04	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	37	2	rwr	39.0	0.6704330040905917	0.01841326624253508	0.0	0.02	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	37	3	rwr	39.0	0.6399135322092522	0.03430124499316533	0.06	0.05	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	37	4	rwr	39.0	0.6807868568958063	0.019058602811695267	0.0	0.01	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	38	0	rwr	39.0	0.6743993085566119	0.020585517600249507	0.04	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	38	1	rwr	39.0	0.6351426101987899	0.01925468577399201	0.04	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	38	2	rwr	39.0	0.747123283115501	0.03605645350960186	0.04	0.04	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	38	3	rwr	39.0	0.5946476437527022	0.014831482768776539	0.0	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	38	4	rwr	39.0	0.6557717250324253	0.031950487013925596	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	39	0	rwr	39.0	0.6132065687121866	0.01773333815362143	0.02	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	39	1	rwr	39.0	0.6500777873811582	0.023235779806484516	0.06	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	39	2	rwr	39.0	0.667539658784795	0.02669175681217689	0.02	0.03	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.3	39	3	rwr	39.0	0.655918720276697	0.017131406561904414	0.0	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.3	39	4	rwr	39.0	0.6590575010808475	0.027541942014803433	0.04	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	0	0	rwr	21.0	0.570103716508211	0.01745158324111018	0.0	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	0	1	rwr	21.0	0.7264995678478825	0.021159083371342376	0.0	0.01	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	0	2	rwr	21.0	0.6938624496990256	0.022019860136292306	0.02	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	0	3	rwr	21.0	0.7031214872460008	0.024248888113084933	0.02	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	0	4	rwr	21.0	0.5894855166450497	0.0189686935266035	0.04	0.03	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	1	0	rwr	21.0	0.6697320656871218	0.021447260799299744	0.02	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	1	1	rwr	21.0	0.5668539325842696	0.013783820858166766	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	1	2	rwr	21.0	0.6482590042901327	0.027568699238992193	0.02	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	1	3	rwr	21.0	0.71410289667099	0.02040475941670952	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	1	4	rwr	21.0	0.6840034587116299	0.0234541575313805	0.06	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	2	0	rwr	21.0	0.6885220397579948	0.01838413113432162	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	2	1	rwr	21.0	0.6225410544511669	0.01721306564835388	0.02	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	2	2	rwr	21.0	0.6944860154976886	0.02575706864822098	0.04	0.03	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	2	3	rwr	21.0	0.5625940337224384	0.012884033601891831	0.02	0.01	0.008	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	2	4	rwr	21.0	0.6788153912667532	0.03672394260032499	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	3	0	rwr	21.0	0.6440968020743302	0.016540264667201966	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	3	1	rwr	21.0	0.6716508210890234	0.018912615047217547	0.0	0.02	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	3	2	rwr	21.0	0.6273653929295953	0.019706065139048927	0.04	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	3	3	rwr	21.0	0.6285257241677475	0.01735353156600393	0.02	0.01	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	3	4	rwr	21.0	0.6593514915693904	0.019309978468773026	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	4	0	rwr	21.0	0.588314606741573	0.02430407524062872	0.02	0.02	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	4	1	rwr	21.0	0.6681590319792566	0.020905995904885392	0.02	0.04	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	4	2	rwr	21.0	0.6152432738035851	0.01890045170333336	0.02	0.03	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	4	3	rwr	21.0	0.697181150021617	0.02451461682953579	0.04	0.02	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	4	4	rwr	21.0	0.6852745352356246	0.019838331243339856	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	5	0	rwr	21.0	0.6571650821089023	0.020920137640684802	0.0	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	5	1	rwr	21.0	0.6063439930855661	0.014699853622229675	0.0	0.01	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	5	2	rwr	21.0	0.7454853836176794	0.03119062581893791	0.02	0.05	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	5	3	rwr	21.0	0.7057241677475139	0.062259510364033904	0.04	0.03	0.028	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	5	4	rwr	21.0	0.6010722006052746	0.01950079576317667	0.06	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	6	0	rwr	21.0	0.6463267070008643	0.024201436648978048	0.02	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	6	1	rwr	21.0	0.6397925669835783	0.01985222776280484	0.0	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	6	2	rwr	21.0	0.6955086634074961	0.024066820600647763	0.04	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	6	3	rwr	21.0	0.6708257674016429	0.023308712009422528	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	6	4	rwr	21.0	0.6233376567228708	0.016946846610861308	0.0	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	7	0	rwr	21.0	0.6799740708729474	0.03214893781360188	0.04	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	7	1	rwr	21.0	0.5480726015557477	0.01496204588116418	0.0	0.03	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	7	2	rwr	21.0	0.761972463334331	0.035865445716420544	0.04	0.05	0.032	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	7	3	rwr	21.0	0.6093731085170775	0.017250434523062158	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	7	4	rwr	21.0	0.7547686986597493	0.03906779712018049	0.02	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	8	0	rwr	21.0	0.6458081244598098	0.017983976310591822	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	8	1	rwr	21.0	0.6708815903197927	0.033077837861002	0.04	0.05	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	8	2	rwr	21.0	0.6701004356646381	0.024436730628975552	0.02	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	8	3	rwr	21.0	0.6791007349762214	0.021383876316541248	0.04	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	8	4	rwr	21.0	0.6601124081279723	0.03317199747730488	0.02	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	9	0	rwr	21.0	0.6884701815038894	0.0312110519559939	0.02	0.02	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	9	1	rwr	21.0	0.671296456352636	0.061275195716697976	0.04	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	9	2	rwr	21.0	0.617704280155642	0.019782497041995018	0.02	0.04	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	9	3	rwr	21.0	0.6521487246000864	0.022861386944732456	0.04	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	9	4	rwr	21.0	0.6472114137483787	0.02302130692306499	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	10	0	rwr	21.0	0.6845721694036301	0.017503089189902503	0.0	0.0	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	10	1	rwr	21.0	0.5758772687986171	0.01919888393170573	0.02	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	10	2	rwr	21.0	0.7045794672253816	0.03481930300577166	0.04	0.05	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	10	3	rwr	21.0	0.6968093385214008	0.020283161567051115	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	10	4	rwr	21.0	0.7111024643320363	0.024753237740006852	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	11	0	rwr	21.0	0.724494382022472	0.024833887181603682	0.02	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	11	1	rwr	21.0	0.5294036300777873	0.015052762685038346	0.02	0.02	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	11	2	rwr	21.0	0.7122285410223154	0.03501780629165241	0.04	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	11	3	rwr	21.0	0.6614613056636404	0.022560097026758	0.02	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	11	4	rwr	21.0	0.6892434068309555	0.025792866832206312	0.02	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	12	0	rwr	21.0	0.6990060501296456	0.026219082262872614	0.02	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	12	1	rwr	21.0	0.6283923941227312	0.019736967298958186	0.02	0.02	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	12	2	rwr	21.0	0.5973760351192258	0.015153203941882775	0.0	0.02	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	12	3	rwr	21.0	0.6947686986597492	0.028738998370286442	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	12	4	rwr	21.0	0.699706009511457	0.027978492720669636	0.02	0.01	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	13	0	rwr	21.0	0.6419706136560069	0.06057481812435186	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	13	1	rwr	21.0	0.6463958513396715	0.01756335170176987	0.02	0.01	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	13	2	rwr	21.0	0.6802354584455752	0.022888979626457015	0.04	0.03	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	13	3	rwr	21.0	0.6359619541720709	0.016556612775834225	0.02	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	13	4	rwr	21.0	0.6508862948551664	0.03306435381479576	0.06	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	14	0	rwr	21.0	0.6182973206568713	0.01577260689300374	0.0	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	14	1	rwr	21.0	0.7223509075194469	0.04540815975708785	0.02	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	14	2	rwr	21.0	0.6736755462436397	0.02385754210694622	0.04	0.03	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	14	3	rwr	21.0	0.5922092520536101	0.0230503062240661	0.04	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	14	4	rwr	21.0	0.6514396887159534	0.017071810644829873	0.0	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	15	0	rwr	21.0	0.6876750216076059	0.043224346720905214	0.04	0.02	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	15	1	rwr	21.0	0.740847018150389	0.03601188523102684	0.04	0.06	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	15	2	rwr	21.0	0.6355382619974059	0.019288114242895657	0.02	0.04	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	15	3	rwr	21.0	0.6292434068309555	0.017845446651651383	0.02	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	15	4	rwr	21.0	0.6136273238218763	0.017156655991662037	0.02	0.03	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	16	0	rwr	21.0	0.70009507346586	0.02301391576281136	0.02	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	16	1	rwr	21.0	0.6481417458945549	0.029168333799466963	0.04	0.02	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	16	2	rwr	21.0	0.650703382220892	0.02657749142437795	0.02	0.04	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	16	3	rwr	21.0	0.6451015996541288	0.023193949603669748	0.02	0.05	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	16	4	rwr	21.0	0.6821098140942499	0.0219196870376279	0.0	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	17	0	rwr	21.0	0.6183405358686258	0.021821532854168185	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	17	1	rwr	21.0	0.6466983578219533	0.020199196603733212	0.04	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	17	2	rwr	21.0	0.7524028068775152	0.03922639346751773	0.06	0.04	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	17	3	rwr	21.0	0.6576913099870298	0.019487913462841757	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	17	4	rwr	21.0	0.6200172935581496	0.02963580216923326	0.02	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	18	0	rwr	21.0	0.703837510803803	0.022691820701564475	0.0	0.03	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	18	1	rwr	21.0	0.7084874675885912	0.0341753900547726	0.04	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	18	2	rwr	21.0	0.629468888223752	0.01726322154261574	0.0	0.03	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	18	3	rwr	21.0	0.5850410722006053	0.013835530569080467	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	18	4	rwr	21.0	0.6089753566796368	0.017422299297989725	0.02	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	19	0	rwr	21.0	0.7128954191875541	0.02128389271775892	0.02	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	19	1	rwr	21.0	0.6728176318063959	0.035041645513021094	0.06	0.05	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	19	2	rwr	21.0	0.6766437194452759	0.025400151298561383	0.06	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	19	3	rwr	21.0	0.5519757890185906	0.011836540971979774	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	19	4	rwr	21.0	0.7194466061392131	0.04008302005103213	0.04	0.05	0.03	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	20	0	rwr	21.0	0.6660501296456353	0.02326780789360129	0.02	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	20	1	rwr	21.0	0.695133967156439	0.022261139480421865	0.04	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	20	2	rwr	21.0	0.6487578569290631	0.025742215512236547	0.04	0.05	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	20	3	rwr	21.0	0.5871162991785559	0.01485484184568327	0.02	0.02	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	20	4	rwr	21.0	0.6302464332036316	0.056030956002307675	0.02	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	21	0	rwr	21.0	0.663171996542783	0.030566135183022394	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	21	1	rwr	21.0	0.6762834917891098	0.031421749612881335	0.04	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	21	2	rwr	21.0	0.6884332701453324	0.028357838529461186	0.04	0.05	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	21	3	rwr	21.0	0.6388153912667531	0.01715673042549	0.0	0.03	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	21	4	rwr	21.0	0.6558408992650238	0.018124501675733335	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	22	0	rwr	21.0	0.6305704407951598	0.02181096911156149	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	22	1	rwr	21.0	0.6970613656006914	0.02837632881129895	0.06	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	22	2	rwr	21.0	0.6490072832485283	0.027956014750949675	0.02	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	22	3	rwr	21.0	0.6043147427583226	0.018131027754551676	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	22	4	rwr	21.0	0.713601383484652	0.02767292097817205	0.02	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	23	0	rwr	21.0	0.7669144338807261	0.0342260693574154	0.04	0.07	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	23	1	rwr	21.0	0.6226793431287814	0.01615966604988739	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	23	2	rwr	21.0	0.5651501546443181	0.021908623911866293	0.02	0.02	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	23	3	rwr	21.0	0.645006485084306	0.018659647296071176	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	23	4	rwr	21.0	0.6685603112840468	0.028790331383060783	0.02	0.02	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	24	0	rwr	21.0	0.6461711322385479	0.0178529094372134	0.02	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	24	1	rwr	21.0	0.6770700086430423	0.023659236961439074	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	24	2	rwr	21.0	0.6728940104426486	0.03450374181571147	0.06	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	24	3	rwr	21.0	0.7002248162559447	0.018666580463777	0.0	0.0	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	24	4	rwr	21.0	0.6361521833117164	0.03610867649792344	0.06	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	25	0	rwr	21.0	0.6530596369922212	0.023910386637132963	0.06	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	25	1	rwr	21.0	0.6696629213483146	0.0360852651466377	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	25	2	rwr	21.0	0.6274568492467325	0.016207629854883096	0.02	0.01	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	25	3	rwr	21.0	0.7064245568525724	0.02361543559026191	0.0	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	25	4	rwr	21.0	0.6871249459576307	0.03312192077785293	0.02	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	26	0	rwr	21.0	0.6727484874675886	0.06628780313123087	0.06	0.05	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	26	1	rwr	21.0	0.6414001728608469	0.017693387056703428	0.0	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	26	2	rwr	21.0	0.5697229705011806	0.01406779693658259	0.0	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	26	3	rwr	21.0	0.6451361867704279	0.01851498583413146	0.02	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	26	4	rwr	21.0	0.7087073065283181	0.027729200465846662	0.02	0.06	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	27	0	rwr	21.0	0.6044511668107174	0.01580491476277962	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	27	1	rwr	21.0	0.6101296456352636	0.026507187407615197	0.02	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	27	2	rwr	21.0	0.6954504639329542	0.03900114918146059	0.08	0.06	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	27	3	rwr	21.0	0.6461219195849546	0.019500738780937887	0.0	0.04	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	27	4	rwr	21.0	0.7207609165585819	0.023427382333331363	0.02	0.02	0.028	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	28	0	rwr	21.0	0.6272169403630078	0.021515698252476016	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	28	1	rwr	21.0	0.6893171996542783	0.03584346649047005	0.04	0.05	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	28	2	rwr	21.0	0.6787056436861885	0.020194236342437	0.02	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	28	3	rwr	21.0	0.6792217898832684	0.02966606455221804	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	28	4	rwr	21.0	0.7044444444444444	0.023720625493289967	0.02	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	29	0	rwr	21.0	0.6687121866897148	0.044816596589063104	0.06	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	29	1	rwr	21.0	0.5956093344857389	0.013530930822318842	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	29	2	rwr	21.0	0.6425887126276231	0.01905766644016305	0.02	0.03	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	29	3	rwr	21.0	0.687833981841764	0.021841752961118153	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	29	4	rwr	21.0	0.7175443147427583	0.041896651478712583	0.06	0.06	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	30	0	rwr	21.0	0.7052203975799481	0.037311694999215744	0.06	0.05	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	30	1	rwr	21.0	0.6158426966292134	0.019506698403932723	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	30	2	rwr	21.0	0.6610462602680502	0.024767108765942302	0.04	0.05	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	30	3	rwr	21.0	0.6306009511456983	0.01900495417648162	0.0	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	30	4	rwr	21.0	0.6545438824038046	0.03883963835528839	0.02	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	31	0	rwr	21.0	0.5947796024200519	0.027832843163145264	0.04	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	31	1	rwr	21.0	0.6707087294727745	0.018968879616839664	0.0	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	31	2	rwr	21.0	0.7072649572649573	0.021349313000035213	0.02	0.02	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	31	3	rwr	21.0	0.6654474708171206	0.020148428816598268	0.0	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	31	4	rwr	21.0	0.6755987894509294	0.024459393118510184	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	32	0	rwr	21.0	0.6523249783923941	0.018058464892336756	0.0	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	32	1	rwr	21.0	0.6625929127052723	0.034940032247770425	0.06	0.05	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	32	2	rwr	21.0	0.5963118161561741	0.02287173268860425	0.02	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	32	3	rwr	21.0	0.6636835278858625	0.024703153353628375	0.06	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	32	4	rwr	21.0	0.7160830090791181	0.021153101961119122	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	33	0	rwr	21.0	0.6083751080380294	0.01430800409387266	0.0	0.02	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	33	1	rwr	21.0	0.7225756266205703	0.02195869639419017	0.0	0.02	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	33	2	rwr	21.0	0.6586683960224816	0.030296498205746446	0.08	0.05	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	33	3	rwr	21.0	0.6118201469952442	0.015240562571848639	0.0	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	33	4	rwr	21.0	0.6464677907479464	0.019069793027464373	0.0	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	34	0	rwr	21.0	0.6795851339671565	0.025300269218510224	0.02	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	34	1	rwr	21.0	0.6917199654278307	0.02044825279087823	0.0	0.01	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	34	2	rwr	21.0	0.6057650736639064	0.016287650712425314	0.02	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	34	3	rwr	21.0	0.6348119325551231	0.025233424946567766	0.02	0.04	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	34	4	rwr	21.0	0.6994293125810637	0.021395575910534086	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	35	0	rwr	21.0	0.6810717372515126	0.020086554949669096	0.04	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	35	1	rwr	21.0	0.737389801210026	0.04839812931004153	0.08	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	35	2	rwr	21.0	0.622568093385214	0.020593624782846272	0.02	0.02	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	35	3	rwr	21.0	0.5967401642888024	0.017198998744327496	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	35	4	rwr	21.0	0.6454128837008215	0.021398866590599086	0.0	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	36	0	rwr	21.0	0.6082973206568713	0.01670230015782032	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	36	1	rwr	21.0	0.6996715643906656	0.03335069966968626	0.04	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	36	2	rwr	21.0	0.6738750872992119	0.022238374494170893	0.04	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	36	3	rwr	21.0	0.633895373973195	0.03405084553369689	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	36	4	rwr	21.0	0.7174492001729356	0.026475993760380564	0.02	0.05	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	37	0	rwr	21.0	0.7181676750216077	0.02194012265412235	0.0	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	37	1	rwr	21.0	0.5827917026793432	0.019179651142103064	0.02	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	37	2	rwr	21.0	0.6725281851740996	0.0188368107837802	0.02	0.02	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	37	3	rwr	21.0	0.6388240380458279	0.03660364437168047	0.06	0.05	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	37	4	rwr	21.0	0.6831560743623001	0.018908721743132666	0.0	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	38	0	rwr	21.0	0.6716335350043215	0.020024293254510293	0.02	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	38	1	rwr	21.0	0.6408988764044945	0.01890126721448959	0.04	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	38	2	rwr	21.0	0.7479879610229805	0.035435780715462085	0.04	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	38	3	rwr	21.0	0.602153047989624	0.01515421065477794	0.0	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	38	4	rwr	21.0	0.6635192390834415	0.036994760006999465	0.04	0.05	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	39	0	rwr	21.0	0.612705272255834	0.016307654039231425	0.0	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	39	1	rwr	21.0	0.6491961970613657	0.0220547071885217	0.02	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	39	2	rwr	21.0	0.6670241777245668	0.026565245101871502	0.02	0.03	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.5	39	3	rwr	21.0	0.652546476437527	0.017232670545427597	0.02	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.5	39	4	rwr	21.0	0.661513186338089	0.02883356795681283	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	0	0	rwr	13.0	0.582532411408816	0.01818578646825902	0.0	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	0	1	rwr	13.0	0.7300086430423509	0.021995527486170334	0.0	0.02	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	0	2	rwr	13.0	0.6956749476204729	0.022073766051181373	0.02	0.03	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	0	3	rwr	13.0	0.6923303069606572	0.02379596910291964	0.02	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	0	4	rwr	13.0	0.5837786424556852	0.018320567736764683	0.04	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	1	0	rwr	13.0	0.6760414866032844	0.020963292197712657	0.02	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	1	1	rwr	13.0	0.5714866032843561	0.014031374160273741	0.0	0.01	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	1	2	rwr	13.0	0.6472945558548672	0.027505349642871376	0.02	0.03	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	1	3	rwr	13.0	0.7145006485084306	0.019971606410461126	0.0	0.02	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	1	4	rwr	13.0	0.6797665369649806	0.02388912501106087	0.06	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	2	0	rwr	13.0	0.684114088159032	0.018007140686085783	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	2	1	rwr	13.0	0.6255315471045808	0.017930388361740622	0.02	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	2	2	rwr	13.0	0.6888822375203698	0.024994201987871566	0.04	0.03	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	2	3	rwr	13.0	0.5641331603977517	0.012632086169172397	0.02	0.01	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	2	4	rwr	13.0	0.6794725464764376	0.03638801765025525	0.04	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	3	0	rwr	13.0	0.6495419187554019	0.016770927489351842	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	3	1	rwr	13.0	0.6795505617977528	0.018973301112532485	0.0	0.02	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	3	2	rwr	13.0	0.6270494529249393	0.019818263956223867	0.04	0.03	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	3	3	rwr	13.0	0.6266407263294422	0.01703630341253464	0.02	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	3	4	rwr	13.0	0.6502204928664073	0.01843564622050687	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	4	0	rwr	13.0	0.5916681071737252	0.024410139956217	0.02	0.02	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	4	1	rwr	13.0	0.6716335350043215	0.01972505185941925	0.02	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	4	2	rwr	13.0	0.6142788253683196	0.019624075930121773	0.04	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	4	3	rwr	13.0	0.7042369217466493	0.024986171667482116	0.02	0.03	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	4	4	rwr	13.0	0.677094682230869	0.019367174266755823	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	5	0	rwr	13.0	0.6556266205704409	0.01973011646320543	0.0	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	5	1	rwr	13.0	0.610838375108038	0.014870900792124617	0.0	0.02	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	5	2	rwr	13.0	0.7431075193721108	0.030947145983376542	0.02	0.05	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	5	3	rwr	13.0	0.7097189796800693	0.06304002697643916	0.04	0.03	0.028	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	5	4	rwr	13.0	0.6018677042801557	0.020028482543748328	0.06	0.03	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	6	0	rwr	13.0	0.6442350907519447	0.024482471641576863	0.02	0.01	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	6	1	rwr	13.0	0.6413828867761452	0.01948178008895152	0.0	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	6	2	rwr	13.0	0.6962901992084871	0.0246475707279573	0.04	0.04	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	6	3	rwr	13.0	0.6689234760051881	0.022542531981033922	0.04	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	6	4	rwr	13.0	0.6293125810635538	0.017600745660396013	0.0	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	7	0	rwr	13.0	0.6862489196197061	0.03355496896905233	0.06	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	7	1	rwr	13.0	0.5461019878997407	0.014179979916605297	0.0	0.02	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	7	2	rwr	13.0	0.7647660381123416	0.036479847265754546	0.04	0.05	0.03	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	7	3	rwr	13.0	0.6055166450497191	0.016841189107558097	0.02	0.01	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	7	4	rwr	13.0	0.7504798962386512	0.04595083960697261	0.02	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	8	0	rwr	13.0	0.6479515989628349	0.017619799501036367	0.02	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	8	1	rwr	13.0	0.6710717372515125	0.033864120252237964	0.04	0.05	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	8	2	rwr	13.0	0.6763527220725665	0.024221373865065933	0.02	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	8	3	rwr	13.0	0.674483354950281	0.021216625265786934	0.04	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	8	4	rwr	13.0	0.6571552096843926	0.03301980302241875	0.02	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	9	0	rwr	13.0	0.6924114088159032	0.03158404861541373	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	9	1	rwr	13.0	0.6680121002592914	0.06046816158656841	0.04	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	9	2	rwr	13.0	0.6176876517343444	0.020652633638649047	0.04	0.04	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	9	3	rwr	13.0	0.6460613921314311	0.023001666603048303	0.04	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	9	4	rwr	13.0	0.6497881539126675	0.022296987498729742	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	10	0	rwr	13.0	0.6865427830596371	0.017655015196536908	0.0	0.0	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	10	1	rwr	13.0	0.5872342264477095	0.019633620005729865	0.02	0.03	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	10	2	rwr	13.0	0.7025507998270645	0.034628536613508745	0.04	0.05	0.028	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	10	3	rwr	13.0	0.6958581928231734	0.0200424024944404	0.0	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	10	4	rwr	13.0	0.7074189364461737	0.023873774306597106	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	11	0	rwr	13.0	0.7205704407951599	0.025042219344948585	0.02	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	11	1	rwr	13.0	0.537770095073466	0.015242773944400491	0.02	0.02	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	11	2	rwr	13.0	0.7091689115035419	0.0342511921402928	0.04	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	11	3	rwr	13.0	0.666908776480761	0.023185401436299862	0.02	0.04	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	11	4	rwr	13.0	0.6886381322957198	0.024847843132865886	0.02	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	12	0	rwr	13.0	0.6994036300777874	0.024639003324616857	0.02	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	12	1	rwr	13.0	0.6356352636127917	0.020479853217547864	0.04	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	12	2	rwr	13.0	0.59296950347534	0.015045048396962486	0.02	0.02	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	12	3	rwr	13.0	0.6881625594466061	0.0278844143209078	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	12	4	rwr	13.0	0.6980804150453956	0.029007227363488576	0.02	0.02	0.026	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	13	0	rwr	13.0	0.6472255834053586	0.061182584001000684	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	13	1	rwr	13.0	0.6499394987035437	0.018355467039697385	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	13	2	rwr	13.0	0.6732182646579534	0.02252309887695823	0.04	0.03	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	13	3	rwr	13.0	0.6360311284046692	0.016446420633070107	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	13	4	rwr	13.0	0.6527539991353222	0.031857616553127924	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	14	0	rwr	13.0	0.62038029386344	0.01588165173462737	0.0	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	14	1	rwr	13.0	0.7219878997407088	0.04528724116199157	0.02	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	14	2	rwr	13.0	0.6773337989291297	0.024183804184936	0.04	0.04	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	14	3	rwr	13.0	0.5833376567228707	0.022417375137274008	0.04	0.04	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	14	4	rwr	13.0	0.6488110678772158	0.017011718284180483	0.0	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	15	0	rwr	13.0	0.6937597234226447	0.04346589485414963	0.04	0.02	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	15	1	rwr	13.0	0.739723422644771	0.03659205050150326	0.04	0.06	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	15	2	rwr	13.0	0.6312564435132528	0.019254657071260534	0.02	0.03	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	15	3	rwr	13.0	0.6349156939040207	0.01768659697798596	0.0	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	15	4	rwr	13.0	0.6207003891050583	0.01807795023776802	0.04	0.03	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	16	0	rwr	13.0	0.6980380293863441	0.022501389447229386	0.02	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	16	1	rwr	13.0	0.6480726015557476	0.030270823451464444	0.04	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	16	2	rwr	13.0	0.6537713259503143	0.025995457336257848	0.02	0.03	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	16	3	rwr	13.0	0.6523130134025075	0.023800461449714625	0.04	0.05	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	16	4	rwr	13.0	0.6797319498486813	0.021815788884324214	0.0	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	17	0	rwr	13.0	0.6273984442523769	0.021466563938946595	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	17	1	rwr	13.0	0.6494468452895419	0.020444026701803557	0.02	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	17	2	rwr	13.0	0.7475805647011873	0.03932217957728644	0.06	0.05	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	17	3	rwr	13.0	0.6592650237786424	0.019654563245734218	0.0	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	17	4	rwr	13.0	0.6134630350194552	0.028651476239019112	0.02	0.04	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	18	0	rwr	13.0	0.7088331892826275	0.02285133362731789	0.0	0.02	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	18	1	rwr	13.0	0.6984096802074331	0.03220753657382643	0.04	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	18	2	rwr	13.0	0.6255113239549037	0.01730044378636332	0.02	0.03	0.012	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	18	3	rwr	13.0	0.586614785992218	0.013922268401254111	0.0	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	18	4	rwr	13.0	0.6072978815391267	0.01736914870372548	0.02	0.01	0.012	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	19	0	rwr	13.0	0.710838375108038	0.02167015588625722	0.04	0.03	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	19	1	rwr	13.0	0.6754278305963699	0.03606840277878565	0.06	0.05	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	19	2	rwr	13.0	0.6752469320562706	0.024394725138376157	0.04	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	19	3	rwr	13.0	0.5659922178988327	0.012268947758586661	0.0	0.0	0.01	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	19	4	rwr	13.0	0.7182014699524428	0.03861424190444089	0.04	0.05	0.028	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	20	0	rwr	13.0	0.6762143474503025	0.023409081431490848	0.02	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	20	1	rwr	13.0	0.7002074330164219	0.022537726233393833	0.02	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	20	2	rwr	13.0	0.6407429578635805	0.023033661471893795	0.02	0.04	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	20	3	rwr	13.0	0.5941547773454388	0.015260424592744761	0.02	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	20	4	rwr	13.0	0.6287073065283182	0.05630397774736447	0.02	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	21	0	rwr	13.0	0.660933448573898	0.030682865362068944	0.02	0.02	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	21	1	rwr	13.0	0.6793777009507347	0.031290171297905955	0.04	0.03	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	21	2	rwr	13.0	0.6917090691409757	0.029040229142855957	0.06	0.05	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	21	3	rwr	13.0	0.6321054907047126	0.0165395102971779	0.0	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	21	4	rwr	13.0	0.6610635538261997	0.01837099828767791	0.02	0.02	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	22	0	rwr	13.0	0.6279948141745895	0.02148474883793033	0.04	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	22	1	rwr	13.0	0.6955401901469318	0.028582377116039	0.06	0.04	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	22	2	rwr	13.0	0.648508430609598	0.027115606511574283	0.02	0.02	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	22	3	rwr	13.0	0.6095633376567229	0.018562277804625885	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	22	4	rwr	13.0	0.7097449200172936	0.029657935555457874	0.02	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	23	0	rwr	13.0	0.7643042350907521	0.03354735272182277	0.02	0.07	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	23	1	rwr	13.0	0.6206914433880726	0.016399854781425704	0.0	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	23	2	rwr	13.0	0.5629635172436729	0.023486482397570316	0.02	0.02	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	23	3	rwr	13.0	0.6445741461305664	0.01884777452542153	0.02	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	23	4	rwr	13.0	0.6676264591439689	0.02885241384113716	0.02	0.02	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	24	0	rwr	13.0	0.645600691443388	0.017332599764628982	0.02	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	24	1	rwr	13.0	0.6804235090751944	0.024509468543166234	0.04	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	24	2	rwr	13.0	0.6834031727027836	0.03777011663383589	0.04	0.05	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	24	3	rwr	13.0	0.6998789450929528	0.01833403614025677	0.0	0.0	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	24	4	rwr	13.0	0.6421530479896238	0.042712609200404275	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	25	0	rwr	13.0	0.661305099394987	0.025124853427981382	0.06	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	25	1	rwr	13.0	0.6677441659464132	0.035917056470233084	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	25	2	rwr	13.0	0.6300675113904686	0.016352594815571105	0.02	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	25	3	rwr	13.0	0.707116299178556	0.02365092830834955	0.02	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	25	4	rwr	13.0	0.6795157803718115	0.031453834441654296	0.02	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	26	0	rwr	13.0	0.6744425237683664	0.06478359795696009	0.06	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	26	1	rwr	13.0	0.6321521175453759	0.016982933720415164	0.0	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	26	2	rwr	13.0	0.5691576041770594	0.014131848810304713	0.0	0.01	0.014	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	26	3	rwr	13.0	0.6527107652399482	0.018983205932708313	0.0	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	26	4	rwr	13.0	0.7114051015996542	0.028874469226459754	0.04	0.07	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	27	0	rwr	13.0	0.6083578219533277	0.016405066819240987	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	27	1	rwr	13.0	0.6108729472774417	0.026675347594471988	0.02	0.02	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	27	2	rwr	13.0	0.6950014965579168	0.03808016821169756	0.06	0.06	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	27	3	rwr	13.0	0.6371465629053178	0.01832458366431912	0.0	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	27	4	rwr	13.0	0.7203631647211415	0.024054319009856776	0.02	0.02	0.03	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	28	0	rwr	13.0	0.6324027657735523	0.02233464503693776	0.06	0.04	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	28	1	rwr	13.0	0.6940535868625757	0.034644294003049164	0.04	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	28	2	rwr	13.0	0.6843593069274003	0.021153451902507732	0.0	0.04	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	28	3	rwr	13.0	0.6758841331603977	0.03023204285216588	0.04	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	28	4	rwr	13.0	0.6996887159533074	0.023844343803036128	0.02	0.03	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	29	0	rwr	13.0	0.6745375972342265	0.044424706113141615	0.04	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	29	1	rwr	13.0	0.5919101123595506	0.013484020423044692	0.0	0.0	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	29	2	rwr	13.0	0.6436695600119724	0.019005774698604892	0.02	0.03	0.018	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	29	3	rwr	13.0	0.6881971465629053	0.02241277505148774	0.0	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	29	4	rwr	13.0	0.71789018590575	0.04473427203859627	0.06	0.07	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	30	0	rwr	13.0	0.6961797752808989	0.040154176955171275	0.06	0.05	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	30	1	rwr	13.0	0.6207692307692307	0.020060037343581208	0.02	0.02	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	30	2	rwr	13.0	0.6635571518840001	0.025007287413037614	0.04	0.05	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	30	3	rwr	13.0	0.6237527021184608	0.018530731371147927	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	30	4	rwr	13.0	0.662481625594466	0.03958651330787427	0.02	0.04	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	31	0	rwr	13.0	0.605704407951599	0.028085335861516195	0.04	0.03	0.012	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	31	1	rwr	13.0	0.6694641313742438	0.01839937218630693	0.0	0.01	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	31	2	rwr	13.0	0.7049536067045795	0.02136156933110393	0.0	0.02	0.024	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	31	3	rwr	13.0	0.6672114137483788	0.0200908434987611	0.0	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	31	4	rwr	13.0	0.6717250324254216	0.023887408368595126	0.04	0.04	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	32	0	rwr	13.0	0.6499049265341401	0.017529252343171643	0.0	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	32	1	rwr	13.0	0.6579256698357823	0.036557138731603434	0.04	0.05	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	32	2	rwr	13.0	0.5978250024942633	0.024054284209462935	0.02	0.02	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	32	3	rwr	13.0	0.6620925205361003	0.025312607211901598	0.06	0.04	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	32	4	rwr	13.0	0.7163251188932123	0.02099621809869918	0.02	0.03	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	33	0	rwr	13.0	0.6077182368193604	0.014489513757860392	0.02	0.02	0.01	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	33	1	rwr	13.0	0.7266551426101987	0.022921399443802178	0.0	0.02	0.028	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	33	2	rwr	13.0	0.656506701253783	0.027988980383420306	0.04	0.05	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	33	3	rwr	13.0	0.6071854734111544	0.014648330658122174	0.0	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	33	4	rwr	13.0	0.6492607003891051	0.01874870811549734	0.0	0.02	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	34	0	rwr	13.0	0.683828867761452	0.025663172316482682	0.02	0.02	0.026	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	34	1	rwr	13.0	0.6890924805531548	0.01957938302770518	0.0	0.01	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	34	2	rwr	13.0	0.6074279157936746	0.016795746737015706	0.02	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	34	3	rwr	13.0	0.6350886294855167	0.02529358116346144	0.02	0.03	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	34	4	rwr	13.0	0.6962300043233894	0.02150653694165384	0.04	0.03	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	35	0	rwr	13.0	0.6842523768366465	0.020814125210353213	0.04	0.03	0.016	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	35	1	rwr	13.0	0.7355401901469317	0.06695368736104125	0.06	0.04	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	35	2	rwr	13.0	0.6205560544081945	0.02052122787836017	0.02	0.02	0.016	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	35	3	rwr	13.0	0.5993341980112408	0.01717632625459624	0.02	0.01	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	35	4	rwr	13.0	0.6453955901426719	0.020832198788558312	0.0	0.02	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	36	0	rwr	13.0	0.6107865168539326	0.016561661003448063	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	36	1	rwr	13.0	0.6997061365600691	0.03389807386908199	0.04	0.04	0.022	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	36	2	rwr	13.0	0.6766354052346271	0.023454392435279196	0.04	0.04	0.022	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	36	3	rwr	13.0	0.6346389969736274	0.04148387128864638	0.04	0.03	0.024	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	36	4	rwr	13.0	0.7119671422395157	0.02549529082992113	0.0	0.05	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	37	0	rwr	13.0	0.7164909248055316	0.02214452785133926	0.0	0.04	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	37	1	rwr	13.0	0.588599827139153	0.018431035038409357	0.02	0.02	0.018	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	37	2	rwr	13.0	0.6742907978316539	0.019254457964815338	0.02	0.02	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	37	3	rwr	13.0	0.6361867704280155	0.03620736172520259	0.06	0.05	0.018	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	37	4	rwr	13.0	0.6842282749675747	0.018819474751765326	0.0	0.01	0.02	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	38	0	rwr	13.0	0.6701123595505618	0.01968809183384578	0.02	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	38	1	rwr	13.0	0.6452031114952463	0.018480545429035693	0.02	0.03	0.014	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	38	2	rwr	13.0	0.7436645714855833	0.03469984499248705	0.02	0.04	0.026	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	38	3	rwr	13.0	0.6079290964115867	0.01559613737465094	0.0	0.02	0.016	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	38	4	rwr	13.0	0.6694682230869001	0.037179697259087985	0.02	0.05	0.022	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	39	0	rwr	13.0	0.6143474503025064	0.01588394543368244	0.0	0.02	0.02	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	39	1	rwr	13.0	0.6494036300777873	0.021386569380318986	0.02	0.03	0.024	25	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	39	2	rwr	13.0	0.6637816355715188	0.026300317494381758	0.02	0.03	0.02	26	2339
+string_full900	intogen_temporal_new	native_string_full900	0.7	39	3	rwr	13.0	0.6497622135754431	0.017450496414622683	0.02	0.02	0.014	25	2338
+string_full900	intogen_temporal_new	native_string_full900	0.7	39	4	rwr	13.0	0.6632944228274967	0.02996361350470842	0.04	0.04	0.02	25	2338
