@@ -47,6 +47,9 @@ results/runs/a5_10rep_validated/
 results/runs/a5_ORIGINAL_10rep_backup/
 results/tables/*_BEFORE_optimisation.tsv
 
-results/runs/a5/a5/              # control-2 per-arm checkpoint copies (the released copies live one level up)
+results/runs/a5/a5/
+# control-2 per-arm checkpoint copies (the released copies live one level up)
 
-data/processed/splits_v40_sens8/     # splits for the two STRING sensitivity arms (regenerable, see docs/network_stability.md)
+data/processed/splits_v40_sens8/
+# splits for the two STRING sensitivity arms (regenerable, see docs/network_stability.md)
+results/scores_shared/

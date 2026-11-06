@@ -1,0 +1,71 @@
+=== step 1: build the 40-repeat splits for the two sensitivity arms ===
+[intogen2024 x native_string_full400] 19,486 genes, 633 positives (of 633 full), 632 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\intogen2024__native_string_full400.tsv (779,440 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[ot_all x native_string_full400] 19,486 genes, 600 positives (of 600 full), 597 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\ot_all__native_string_full400.tsv (779,440 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[ot_nolit x native_string_full400] 19,486 genes, 600 positives (of 600 full), 595 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\ot_nolit__native_string_full400.tsv (779,440 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[intogen_temporal_new x native_string_full400] 19,486 genes, 152 positives (of 152 full), 151 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\intogen_temporal_new__native_string_full400.tsv (779,440 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[intogen2024 x native_string_full900] 11,693 genes, 633 positives (of 633 full), 560 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\intogen2024__native_string_full900.tsv (467,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[ot_all x native_string_full900] 11,693 genes, 600 positives (of 600 full), 569 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\ot_all__native_string_full900.tsv (467,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[ot_nolit x native_string_full900] 11,693 genes, 600 positives (of 600 full), 561 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\ot_nolit__native_string_full900.tsv (467,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+[intogen_temporal_new x native_string_full900] 11,693 genes, 152 positives (of 152 full), 126 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8\intogen_temporal_new__native_string_full900.tsv (467,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40_sens8 + audit log
+
+Name                                              Length
+----                                              ------
+build_log.tsv                                        131
+intogen_temporal_new__native_string_full400.tsv 11128600
+intogen_temporal_new__native_string_full900.tsv  6534290
+intogen2024__native_string_full400.tsv          11128600
+intogen2024__native_string_full900.tsv           6534290
+ot_all__native_string_full400.tsv               11128600
+ot_all__native_string_full900.tsv                6534290
+ot_nolit__native_string_full400.tsv             11128600
+ot_nolit__native_string_full900.tsv              6534290
+
+=== step 2: run the 40-repeat factorial for the two sensitivity arms ===
+A4 factorial: 2 networks x 4 labels x 3 alphas = 8 arms
+
+Step 1: ensure split files exist (generate if missing)
+
+Step 2: run 8 arms (one C5 file per arm)
+  [string_full400 x intogen2024] 800 rows in 23.8s -> a4_string_full400__intogen2024.tsv
+  [string_full400 x ot_all] 800 rows in 23.4s -> a4_string_full400__ot_all.tsv
+  [string_full400 x ot_nolit] 800 rows in 22.8s -> a4_string_full400__ot_nolit.tsv
+  [string_full400 x intogen_temporal_new] 800 rows in 25.6s -> a4_string_full400__intogen_temporal_new.tsv
+  [string_full900 x intogen2024] 800 rows in 7.5s -> a4_string_full900__intogen2024.tsv
+  [string_full900 x ot_all] 800 rows in 7.6s -> a4_string_full900__ot_all.tsv
+  [string_full900 x ot_nolit] 800 rows in 7.7s -> a4_string_full900__ot_nolit.tsv
+  [string_full900 x intogen_temporal_new] 800 rows in 7.1s -> a4_string_full900__intogen_temporal_new.tsv
+
+Step 3: concatenate 8 arm tables into results/runs/a4_combined.tsv
+  combined rows: 6,400
+
+Step 4: aggregate to Table 1 -> results/tables/a4_table1_delta_auroc.tsv
+  Table 1 (delta_AUROC, mean +- SD across 1 folds):
+                                     a0.3_mean  a0.3_std  a0.3_n  a0.5_mean  a0.5_std  a0.5_n  a0.7_mean  a0.7_std  a0.7_n
+network        label_set                                                                                                  
+string_full400 intogen2024              0.0750    0.0076   200.0     0.0872    0.0094   200.0     0.0927    0.0105   200.0
+               intogen_temporal_new     0.0515    0.0167   200.0     0.0567    0.0205   200.0     0.0567    0.0233   200.0
+               ot_all                   0.0606    0.0060   200.0     0.0707    0.0073   200.0     0.0753    0.0081   200.0
+               ot_nolit                 0.0687    0.0081   200.0     0.0781    0.0096   200.0     0.0820    0.0105   200.0
+string_full900 intogen2024              0.1278    0.0131   200.0     0.1334    0.0145   200.0     0.1339    0.0154   200.0
+               intogen_temporal_new     0.0721    0.0315   200.0     0.0739    0.0346   200.0     0.0743    0.0369   200.0
+               ot_all                   0.1449    0.0139   200.0     0.1523    0.0152   200.0     0.1540    0.0159   200.0
+               ot_nolit                 0.1567    0.0151   200.0     0.1633    0.0166   200.0     0.1636    0.0174   200.0
+
+Done. 8 arms; combined file 6,400 rows.
+sens8 run finished at 16:05:08
