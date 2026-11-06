@@ -150,25 +150,45 @@ be broken up. The rule below breaks it deterministically.
 
 ### 5.2 The algorithm (proposed; B may refine it, but must document any change)
 
+> **CORRECTION (2026-11-05, before implementation).** The first version
+> of this section said the opposite of what is needed: it proposed to
+> **spread** a complex's members across the folds ("no complex group
+> entirely inside one fold"). That is the *worst* possible choice for
+> this control, and it was wrong because the leakage has a direction.
+> The leak is: *a held-out positive has a complex-linked gene in the
+> training fold*, and RWR then propagates that partner's signal into
+> the held-out gene. Spreading a complex across folds **maximises**
+> that leak. The correct control keeps each complex **together in one
+> fold**: then a held-out gene's complex partners are held out with it
+> and cannot leak into its score. This is the standard group-preserving
+> (grouped) CV, and it is what Picart-Armada et al. 2019 ask for. The
+> D1 audit (`docs/d1_leakage_audit.md`) is the check: after D3 the same
+> metric must be ~0 for the complex-bearing held-out positives.
+
 1. Build the **complex graph** on the universe: an edge between two
    genes if they share a complex. (If the graph is too dense, use a
-   *sparse* graph: keep, for each gene, at most the 10 complex-links of
-   its largest complexes — document the choice.)
+   *sparse* graph: keep, for each gene, at most the 10 complex-links
+   of its largest complexes — document the choice.)
 2. Partition the genes into **connected components** of the complex
-   graph. A component is a "group" that must be split across folds.
-3. Assign each gene in a group to a fold by a **deterministic hash**
-   `fold = H(group_id, gene, repeat) mod k`, where `H` is a fixed hash
-   (e.g. `blake2b(f"{group_id}|{gene}|{repeat}")`) and `group_id` is the
-   index of the component in the sorted component list. Using the gene
-   in the hash spreads a large component across folds; using the repeat
-   makes the assignment differ between repeats.
-4. **Balance**: after the hash assignment, greedily move genes between
-   folds to bring the number of positives per fold within ±10 % of the
-   target, **without** moving two genes of the same group into the same
-   fold if that can be avoided (if it cannot be avoided, prefer the
-   balance and record the violation in the invariant report).
-5. Genes **not** in any complex keep the plain `StratifiedKFold`
-   assignment (seed `base_seed + repeat`, as in v1).
+   graph. A component is a "group" that must stay together. Overlapping
+   complexes merge into one group, which is the conservative choice.
+3. Genes **not** in any complex are singleton groups.
+4. **Assign whole groups to folds**, balancing the number of positives
+   per fold: process the groups in descending order of positive count
+   (ties broken by size, then randomly per repeat) and give each group
+   to the fold that currently holds the fewest positives (ties: the
+   fold with the fewest genes, then the smallest index). The tie
+   breaking is randomised with `base_seed + repeat` so that the 40
+   repeats are genuinely different partitions.
+5. **Balance is a goal, not a hard constraint.** Group-preserving CV
+   cannot balance the positives exactly when a complex is large
+   relative to the positive set (the temporal label has 12–30 positives
+   per fold). The greedy assignment keeps the deviation as small as it
+   can; the achieved per-fold positive counts and their deviations are
+   **recorded in the invariant report**, and the acceptance criterion is
+   "recorded and reported", not "zero deviation".
+6. Genes **not** in any complex are assigned by the same greedy
+   procedure, so the fold sizes stay comparable with v1.
 
 This keeps the v1 behaviour for everything that is not complex-linked,
 which makes the v1-versus-v2 comparison interpretable.
@@ -181,8 +201,11 @@ def make_splits_complex_aware(universe, positives, *, complex_map,
                               base_seed=20260926, n_rep=40, k=5,
                               max_links_per_gene=10):
     """Same output schema as make_splits(): columns gene, repeat, fold, y.
-    Guarantees: (a) no complex group is entirely inside one fold;
-    (b) positives per fold within +-10 % of the target;
+    Guarantees: (a) every complex group (connected component of the
+    complex graph) lies ENTIRELY in one fold -- the leakage channel
+    "a held-out gene has a complex partner in the training fold" is
+    therefore closed; (b) the positives per fold are as balanced as
+    group preservation allows, and the achieved deviation is reported;
     (c) byte-identical output for identical inputs.
     """
 ```
@@ -197,14 +220,19 @@ python scripts/build_splits.py --label intogen2024 --universe native_funmap \
 
 ### 5.4 Tests (in `tests/test_splits_complex_aware.py`)
 
-1. **No complex group entirely within one fold** — checked on a synthetic
-   example with a 12-member complex and k = 5.
+1. **No complex group is split across folds** — every member of a
+   complex (of a connected component of the complex graph) is in the
+   same fold; checked on a synthetic example with a 12-member complex
+   and k = 5.
 2. **Determinism** — two runs give byte-identical files.
-3. **Positives per fold** within ±10 % of the target on the real panel.
-4. **v1 parity** — with an empty complex map, `make_splits_complex_aware`
-   reproduces `make_splits` exactly (this is the strongest test that the
-   new path does not silently change anything else).
-5. **Every gene of the universe appears exactly once per repeat.**
+3. **Positives per fold** are as balanced as group preservation allows
+   (the deviation is reported; on the real panel it must be no worse
+   than the deviation the greedy assignment achieves).
+4. **v1 parity** — with an EMPTY complex map, `make_splits_complex_aware`
+   reproduces `make_splits` exactly (the strongest test that the new
+   path does not silently change anything else).
+5. **Every gene of the universe appears exactly once per repeat**, and
+   every fold has at least one positive.
 
 ## 6. Task D3 + D4 — generate v2, re-run, compare (Person B, ~2–3 days)
 

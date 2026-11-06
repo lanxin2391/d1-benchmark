@@ -124,6 +124,15 @@ def main(argv: list[str] | None = None) -> int:
                          "(default data/processed/splits). Use a separate "
                          "directory for a different repeat count so the "
                          "released v1 splits are never overwritten.")
+    ap.add_argument("--complex-aware", action="store_true",
+                    help="Phase D: use the group-preserving (complex-aware) "
+                         "splitter, which keeps every complex group in ONE "
+                         "fold. Requires --complex-map.")
+    ap.add_argument("--complex-map", default=None,
+                    help="path to complex_map.tsv (columns complex_id, gene)")
+    ap.add_argument("--max-links-per-gene", type=int, default=10,
+                    help="sparsity guard: a gene keeps at most this many of "
+                         "its complexes (the largest ones first)")
     ap.add_argument("--apply-d11-cap", action="store_true",
                     help="cap each label's positives to the per-universe minimum N_u "
                          "(D-11 proposal A, B-side preferred)")
@@ -136,7 +145,18 @@ def main(argv: list[str] | None = None) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     sys.path.insert(0, str(REPO_ROOT))
-    from d1.splits import make_splits, write_splits, summarise_splits
+    from d1.splits import (make_splits, make_splits_complex_aware,
+                            write_splits, summarise_splits)
+    complex_map = {}
+    if args.complex_aware:
+        if not args.complex_map:
+            print("!! --complex-aware requires --complex-map")
+            return 1
+        cm = pd.read_csv(args.complex_map, sep="\t")
+        for gene, cids in cm.groupby("gene")["complex_id"]:
+            complex_map[str(gene)] = list(cids)
+        print(f"[complex-aware] {len(complex_map):,} genes with complex "
+              f"membership from {args.complex_map}")
 
     # ---- D-11 precompute: per-universe N_u = min(positives_in_universe across canonical labels)
     d11_N: dict[str, int] = {}
@@ -182,8 +202,17 @@ def main(argv: list[str] | None = None) -> int:
                 positives = _cap_label_genes(positives_full, n_u, label_file)
                 cap_note = f" [D-11 cap → {len(positives)}]"
 
-            df = make_splits(universe, positives,
-                             base_seed=args.base_seed, n_rep=args.n_rep, k=args.k)
+            exceptions: list = []
+            if args.complex_aware:
+                df = make_splits_complex_aware(
+                    universe, positives, complex_map=complex_map,
+                    base_seed=args.base_seed, n_rep=args.n_rep, k=args.k,
+                    max_links_per_gene=args.max_links_per_gene,
+                    exceptions_out=exceptions)
+            else:
+                df = make_splits(universe, positives,
+                                 base_seed=args.base_seed, n_rep=args.n_rep,
+                                 k=args.k)
             path = write_splits(df, label_id, u_id, out_dir=out_dir)
             summ = summarise_splits(df)
             print(f"[{label_id} x {u_id}] {len(universe):,} genes, "
@@ -195,7 +224,21 @@ def main(argv: list[str] | None = None) -> int:
                           "n_universe": len(universe),
                           "n_positives_full": len(positives_full),
                           "n_positives_used": len(positives),
-                          "rows": len(df)})
+                          "rows": len(df),
+                          "n_complex_repair_exceptions": len(exceptions),
+                          "pos_per_fold_min": summ["pos_per_fold_min"],
+                          "pos_per_fold_max": summ["pos_per_fold_max"]})
+            if exceptions:
+                for e in exceptions:
+                    n_log.append({"label": label_id, "universe": u_id,
+                                  "n_universe": len(universe),
+                                  "n_positives_full": len(positives_full),
+                                  "n_positives_used": len(positives),
+                                  "rows": len(df),
+                                  "repair_gene": e["gene"],
+                                  "repair_repeat": e["repeat"],
+                                  "repair_from_fold": e["from_fold"],
+                                  "repair_to_fold": e["to_fold"]})
 
     if not written:
         print("!! no split files written")
