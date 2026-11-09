@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Iterable
 
 REPO = Path(__file__).resolve().parent.parent
-TAG = "v1.0-prep"
+TAG = "v1.0-rc1"      # the release commit; override with --tag
 PREFIX = "d1-benchmark-v1.0/"   # top-level folder inside each zip
 RELEASE_DIR = REPO / "release"
 
@@ -38,8 +38,16 @@ EXCLUDE_PREFIXES = (
 SOURCE_ONLY_NOTE = (
     "Note: data/processed/networks/ is excluded because the user rebuilds "
     "it from data/raw/ + scripts/build_*.py. The splits inside this zip are "
-    "the canonical 50-fold (5-fold x 10-repeat) StratifiedKFold outputs at "
-    "seed 20260926 + r, committed at v1.0-prep tag.\n"
+    "the canonical 200-fold (5-fold x 40-repeat) StratifiedKFold outputs at "
+    "seed 20260926 + r, plus the complex-aware v2 splits of Phase D.\n"
+)
+
+
+SPLIT_PREFIXES = (
+    "data/processed/splits/",
+    "data/processed/splits_v40/",
+    "data/processed/splits_v40_cx/",
+    "data/processed/splits_v40_clingen/",
 )
 
 
@@ -94,11 +102,21 @@ SPLITS_README = """D1 benchmark v1.0 - cross-validation splits (Zenodo subset zi
 
 What is in this zip
 -------------------
-data/processed/splits/ -- 104 files
+data/processed/splits/            the v1 design (5-fold x 10-repeat)
+data/processed/splits_v40/         the 40-repeat design of record
+                                   (5-fold x 40-repeat = 200 evaluations
+                                   per cell)
+data/processed/splits_v40_cx/      the complex-aware v2 (Phase D): every
+                                   protein-complex group is kept in ONE
+                                   fold, which closes the
+                                   complex-partner leakage channel
+data/processed/splits_v40_clingen/ the 40-repeat splits of the ClinGen
+                                   arm
 
 Each TSV (except N_per_universe.json + build_log.tsv) is a single
 cross-validation split: rows = genes in the universe, columns include
-'fold' (1..5) and 'repeat' (1..10) and 'split' (train / test / unused).
+'fold' (1..5) and 'repeat' (1..40 in the _v40 families) and the
+label column 'y'.
 
 Naming convention
 -----------------
@@ -220,20 +238,40 @@ JSON files in the source zip at results/runs/gnn_courtesy/.
 
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--tag", default=TAG,
+                    help="the git tag / commit the release is built from")
+    args = ap.parse_args()
+    tag = args.tag
+
     RELEASE_DIR.mkdir(exist_ok=True)
-    files = tracked_files(TAG)
-    print(f"Tag {TAG!r} has {len(files)} tracked files at HEAD of v1.0-prep.")
+    files = tracked_files(tag)
+    print(f"Tag {tag!r} has {len(files)} tracked files.")
 
     write_source_zip(
         files,
         RELEASE_DIR / "d1-benchmark-v1.0-source.zip",
     )
-    write_subset_zip(
-        files,
-        RELEASE_DIR / "d1-benchmark-v1.0-splits.zip",
-        "data/processed/splits/",
-        SPLITS_README,
-    )
+    # the splits zip carries every split family of the release:
+    #   data/processed/splits/        the v1 10-repeat design (provenance)
+    #   data/processed/splits_v40/     the 40-repeat design of record
+    #   data/processed/splits_v40_cx/ the complex-aware v2 (Phase D)
+    #   data/processed/splits_v40_clingen/ the ClinGen 40-repeat splits
+    splits_zip = RELEASE_DIR / "d1-benchmark-v1.0-splits.zip"
+    with zipfile.ZipFile(splits_zip, "w", zipfile.ZIP_DEFLATED,
+                         compresslevel=6) as zf:
+        n_kept = 0
+        for rel in files:
+            if not rel.startswith(SPLIT_PREFIXES):
+                continue
+            if not (REPO / rel).is_file():
+                continue
+            zf.write(REPO / rel, PREFIX + rel)
+            n_kept += 1
+        zf.writestr(PREFIX + "README_zenodo_subset.txt", SPLITS_README)
+    print(f"  subset  zip: {splits_zip}  "
+          f"({splits_zip.stat().st_size / 1e6:.1f} MB, {n_kept} files)")
     write_subset_zip(
         files,
         RELEASE_DIR / "d1-benchmark-v1.0-results.zip",
