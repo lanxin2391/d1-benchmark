@@ -286,6 +286,71 @@ def main() -> int:
                 zf.write(REPO / rel, PREFIX + rel)
     print(f"  + figures added to results zip")
 
+    # ---- the release's own tamper-evidence record --------------------
+    # It goes INTO the source zip (the verifier needs it) and, with the
+    # hashes of the three zips added, into the repository as
+    # docs/release_manifest_v1.0rc1.json (written by
+    # scripts/build_release_manifest.py, which runs after this script
+    # because a zip cannot contain its own hash).
+    import hashlib
+    import json as _json
+
+    def _sha256(path: Path) -> str:
+        h = hashlib.sha256()
+        with open(path, "rb") as fh:
+            for chunk in iter(lambda: fh.read(1 << 20), b""):
+                h.update(chunk)
+        return h.hexdigest()
+
+    key_tables = [
+        "results/tables/a4_table1_delta_auroc_v40.tsv",
+        "results/tables/stats_bootstrap_ci.tsv",
+        "results/tables/stats_equivalence.tsv",
+        "results/tables/stats_h1_verdict_v40.tsv",
+        "results/tables/stats_variance_decomp.tsv",
+        "results/tables/results_stats.tsv",
+        "results/tables/a5_p_values.tsv",
+        "results/tables/w5_p_values.tsv",
+        "results/tables/d09_table.tsv",
+        "results/tables/d11_table.tsv",
+        "results/tables/d12_table.tsv",
+        "results/tables/d1_leakage_summary.tsv",
+        "results/tables/d3_split_invariants.tsv",
+        "results/tables/d4_v1_vs_v2_comparison.tsv",
+        "results/tables/hub_capped_rwr.tsv",
+        "results/tables/stability_by_arm.tsv",
+        "results/tables/stability_attribution.tsv",
+        "results/tables/network_stability.tsv",
+        "results/tables/consensus_table.tsv",
+        "results/tables/consensus_robustness.tsv",
+    ]
+    figures = sorted(str(f.relative_to(REPO)).replace("\\", "/")
+                     for f in (REPO / "figures").glob("*.png"))
+    manifest = {
+        "release": tag,
+        "commit": subprocess.check_output(
+            ["git", "rev-parse", tag], cwd=str(REPO), text=True).strip(),
+        "note": ("The pre-registration manifest "
+                 "(docs/pre_registration_manifest.json) is frozen and "
+                 "records the state filed with Zenodo; the fingerprint "
+                 "mismatches the audit reports are the expected "
+                 "consequence of the P0 repairs. This file is the "
+                 "release's own record."),
+        "sha256_tables": {rel: _sha256(REPO / rel) for rel in key_tables
+                          if (REPO / rel).is_file()},
+        "sha256_figures": {rel: _sha256(REPO / rel) for rel in figures
+                           if (REPO / rel).is_file()},
+    }
+    with zipfile.ZipFile(RELEASE_DIR / "d1-benchmark-v1.0-source.zip", "a",
+                         zipfile.ZIP_DEFLATED, compresslevel=6) as zf:
+        zf.writestr(PREFIX + "release_manifest.json",
+                    _json.dumps(manifest, indent=2) + "\n")
+    (REPO / "docs").mkdir(exist_ok=True)
+    (REPO / "docs" / f"release_manifest_{tag}.json").write_text(
+        _json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    print(f"  release manifest written into the source zip and to "
+          f"docs/release_manifest_{tag}.json")
+
     print()
     print("Done. Files written to:")
     for p in sorted(RELEASE_DIR.glob("d1-benchmark-v1.0-*.zip")):
