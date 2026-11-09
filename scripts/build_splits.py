@@ -130,6 +130,13 @@ def main(argv: list[str] | None = None) -> int:
                          "fold. Requires --complex-map.")
     ap.add_argument("--complex-map", default=None,
                     help="path to complex_map.tsv (columns complex_id, gene)")
+    ap.add_argument("--max-group-size", type=int, default=1000,
+                    help="maximum number of genes in one complex group; a "
+                         "complex that would merge components beyond this "
+                         "is skipped (the curated complex graph is almost "
+                         "connected, so without a cap a single group can "
+                         "hold thousands of genes and destroy the fold "
+                         "balance)")
     ap.add_argument("--max-links-per-gene", type=int, default=10,
                     help="sparsity guard: a gene keeps at most this many of "
                          "its complexes (the largest ones first)")
@@ -208,6 +215,7 @@ def main(argv: list[str] | None = None) -> int:
                     universe, positives, complex_map=complex_map,
                     base_seed=args.base_seed, n_rep=args.n_rep, k=args.k,
                     max_links_per_gene=args.max_links_per_gene,
+                    max_group_size=args.max_group_size,
                     exceptions_out=exceptions)
             else:
                 df = make_splits(universe, positives,

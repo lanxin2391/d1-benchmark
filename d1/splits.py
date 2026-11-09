@@ -125,7 +125,8 @@ def summarise_splits(df: pd.DataFrame) -> dict:
 # complex are singleton groups.
 
 
-def complex_groups(universe, complex_map, max_links_per_gene: int = 10):
+def complex_groups(universe, complex_map, max_links_per_gene: int = 10,
+                   max_group_size: int = 1000):
     """Connected components of the complex graph restricted to `universe`.
 
     Parameters
@@ -157,13 +158,19 @@ def complex_groups(universe, complex_map, max_links_per_gene: int = 10):
         for c in cpx_ids:
             cpx_members.setdefault(c, set()).add(gene)
 
-    # sparsity: a gene keeps its largest complexes only
+    # sparsity: a gene keeps its largest complexes only.
+    #
+    # The gene -> complexes relation is read from complex_map DIRECTLY.
+    # Inverting cpx_members instead (scanning every complex for every
+    # gene) is O(n_universe x n_complexes) -- 46 million set lookups on
+    # the intact panel -- and made the D3 generation unusably slow.
+    gene_cpx: dict[str, list[str]] = {}
+    for gene, cids in complex_map.items():
+        if gene in in_universe and cids:
+            gene_cpx[gene] = list(cids)
     kept: dict[str, list[str]] = {}
-    for gene in universe:
-        cids = [c for c, m in cpx_members.items() if gene in m]
-        if not cids:
-            continue
-        cids.sort(key=lambda c: (-len(cpx_members[c]), c))
+    for gene, cids in gene_cpx.items():
+        cids.sort(key=lambda c: (-len(cpx_members.get(c, ())), c))
         kept[gene] = cids[:max_links_per_gene]
 
     # the union must use the SPARSIFIED membership: a complex links only
@@ -192,10 +199,42 @@ def complex_groups(universe, complex_map, max_links_per_gene: int = 10):
             else:
                 parent[ra] = rb
 
-    for c, members in cpx_kept.items():
+    # SIZE CAP ON THE GROUPS. The curated complex graph is almost
+    # connected: overlapping complexes chain into components of
+    # thousands of genes (8,998 of 9,830 on string_phys700). A whole
+    # component must go into ONE fold, so without a cap the fold sizes
+    # explode (145 vs 8,998 genes) and the degree baseline collapses on
+    # the tiny folds -- which made delta-AUROC larger, not smaller, for
+    # a reason that has nothing to do with the prior.
+    #
+    # The fix: process the complexes from the largest down and KEEP a
+    # complex only if merging it into the components it touches leaves
+    # every component at most max_group_size genes. A complex that would
+    # blow the cap is skipped; the link it carried is then not enforced,
+    # and the residual leakage that leaves is MEASURED by the D1 audit
+    # rather than assumed away.
+    comp_size: dict[str, int] = {g: 1 for g in universe}
+    for c, members in sorted(cpx_kept.items(),
+                             key=lambda kv: (-len(kv[1]), kv[0])):
         members = sorted(members)
+        if not members:
+            continue
+        roots = {find(m) for m in members}
+        if sum(comp_size.get(r, 1) for r in roots) > max_group_size:
+            continue                      # skip this complex
+        base = find(members[0])
+        total = comp_size.get(base, 1)
         for other in members[1:]:
-            union(members[0], other)
+            r2 = find(other)
+            if r2 == base:
+                continue
+            total += comp_size.get(r2, 1)
+            if base < r2:
+                parent[r2] = base
+            else:
+                parent[base] = r2
+                base = r2
+        comp_size[base] = total
 
     comps: dict[str, list[str]] = {}
     for g in universe:
@@ -233,15 +272,29 @@ def _assign_groups_to_folds(groups, y, k: int, rng):
     fold_size = [0] * k
     fold_of: dict[str, int] = {}
     group_of: dict[str, int] = {}
-    band = max(1, int(round(0.10 * sum(y.values()) / k))) if any(y.values()) else 1
+
+    # The assignment must balance BOTH the positives and the fold SIZE.
+    # Balancing only the positives (with a band around the current
+    # minimum) piles every zero-positive group into the fold that
+    # happens to hold the fewest positives -- one fold ended up with
+    # 9,030 of 9,830 genes, which destroyed the degree baseline on the
+    # tiny folds and inflated delta-AUROC for reasons that had nothing
+    # to do with the prior.
+    #
+    # The cost below is the sum of the two relative imbalances; among
+    # the folds within a small tolerance of the best cost the choice is
+    # random, so the repeats are genuinely different partitions.
+    target_pos = max(sum(y.values()) / k, 1.0)
+    target_size = max(sum(len(g) for g in groups) / k, 1.0)
+    tol = 0.02
 
     for gi in order:
         members = groups[gi]
         npos = sum(y[g] for g in members)
-        min_pos = min(fold_pos)
-        cand = [f for f in range(k) if fold_pos[f] <= min_pos + band]
-        min_size = min(fold_size[f] for f in cand)
-        cand = [f for f in cand if fold_size[f] == min_size]
+        cost = [(fold_pos[f] / target_pos) + (fold_size[f] / target_size)
+                for f in range(k)]
+        best = min(cost)
+        cand = [f for f in range(k) if cost[f] <= best * (1 + tol) + tol]
         f = int(rng.choice(cand))
         for g in members:
             fold_of[g] = f
@@ -285,7 +338,8 @@ def _assign_groups_to_folds(groups, y, k: int, rng):
 
 
 def complex_aware_invariants(df: pd.DataFrame, complex_map,
-                              max_links_per_gene: int = 10) -> dict:
+                              max_links_per_gene: int = 10,
+                              groups=None, max_group_size: int = 1000) -> dict:
     """Invariants of a complex-aware split file (for the D3 report).
 
     Returns the number of groups, the number of groups larger than the
@@ -294,7 +348,9 @@ def complex_aware_invariants(df: pd.DataFrame, complex_map,
     per-fold positive counts.
     """
     universe = sorted(df["gene"].unique())
-    groups = complex_groups(universe, complex_map, max_links_per_gene)
+    if groups is None:
+        groups = complex_groups(universe, complex_map, max_links_per_gene,
+                             max_group_size)
     per_repeat = []
     n_split_groups = 0
     for r, g in df.groupby("repeat"):
@@ -323,6 +379,7 @@ def make_splits_complex_aware(universe, positives, *, complex_map,
                               n_rep: int = DEFAULT_N_REP,
                               k: int = DEFAULT_K,
                               max_links_per_gene: int = 10,
+                              max_group_size: int = 1000,
                               exceptions_out: list | None = None):
     """Group-preserving (complex-aware) CV splits.
 
@@ -347,7 +404,8 @@ def make_splits_complex_aware(universe, positives, *, complex_map,
 
     pos = set(positives) & set(universe)
     y = {g: int(g in pos) for g in universe}
-    groups = complex_groups(universe, complex_map, max_links_per_gene)
+    groups = complex_groups(universe, complex_map, max_links_per_gene,
+                             max_group_size)
 
     rows = []
     for r in range(n_rep):
