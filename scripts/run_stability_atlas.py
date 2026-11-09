@@ -176,7 +176,8 @@ def arm_level_stability() -> pd.DataFrame:
     return pd.DataFrame(out)
 
 
-def make_figure(per_gene: pd.DataFrame, by_arm: pd.DataFrame) -> Path:
+def make_figure(per_gene: pd.DataFrame, by_arm: pd.DataFrame,
+                 prefix: str = "") -> Path:
     """Figure 5 -- the stability atlas."""
     import matplotlib
     matplotlib.use("Agg")
@@ -269,13 +270,33 @@ def make_figure(per_gene: pd.DataFrame, by_arm: pd.DataFrame) -> Path:
                  "(per-gene ranking stability across 40 re-partitions)",
                  fontsize=12.5)
     fig.tight_layout(rect=(0, 0, 1, 0.96))
-    out = FIG_DIR / "figure5_stability_atlas.png"
+    out = FIG_DIR / f"figure5_stability_atlas{prefix}.png"
     fig.savefig(out, dpi=200, bbox_inches="tight")
     plt.close(fig)
     return out
 
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--scores-dir", default=None,
+                    help="directory holding the per-gene score dumps "
+                         "(default results/scores_v40)")
+    ap.add_argument("--networks", nargs="+", default=None)
+    ap.add_argument("--labels", nargs="+", default=None)
+    ap.add_argument("--prefix", default="",
+                    help="prefix for the output table names, e.g. '_clingen'")
+    args = ap.parse_args()
+
+    global SCORES, NET_ORDER, LABEL_ORDER
+    if args.scores_dir:
+        SCORES = ROOT / args.scores_dir
+    if args.networks:
+        NET_ORDER = list(args.networks)
+    if args.labels:
+        LABEL_ORDER = list(args.labels)
+    prefix = args.prefix
+
     per_gene_rows = []
     arm_rows = []
 
@@ -358,10 +379,13 @@ def main() -> int:
     # arm-level stability (repeat-level movement of the endpoint itself)
     arm_stab = arm_level_stability()
     by_arm = by_arm.merge(arm_stab, on=["network", "label"], how="left")
-    per_gene.to_csv(TABLES / "stability_per_gene.tsv", sep="\t", index=False)
-    by_arm.to_csv(TABLES / "stability_by_arm.tsv", sep="\t", index=False)
-    print(f"\nwrote {TABLES/'stability_per_gene.tsv'} ({len(per_gene)} rows)")
-    print(f"wrote {TABLES/'stability_by_arm.tsv'} ({len(by_arm)} rows)")
+    per_gene.to_csv(TABLES / f"stability_per_gene{prefix}.tsv", sep="\t",
+                    index=False)
+    by_arm.to_csv(TABLES / f"stability_by_arm{prefix}.tsv", sep="\t",
+                  index=False)
+    print(f"\nwrote {TABLES/f'stability_per_gene{prefix}.tsv'} "
+          f"({len(per_gene)} rows)")
+    print(f"wrote {TABLES/f'stability_by_arm{prefix}.tsv'} ({len(by_arm)} rows)")
     fig = make_figure(per_gene, by_arm)
     print(f"wrote {fig}")
     return 0
