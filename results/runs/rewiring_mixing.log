@@ -1,0 +1,18 @@
+[17:55:45] intact: 17918 nodes, 564706 edges; expected shared edges under full mixing ~ 215.0
+[17:56:09]   sample 0: shared edges 28710 (5.0841%, expected 215.0) | nodes with no shared neighbour 46.2% (24s)
+[17:56:09] string_full700: 15882 nodes, 236712 edges; expected shared edges under full mixing ~ 99.8
+[17:56:18]   sample 0: shared edges 9904 (4.1840%, expected 99.8) | nodes with no shared neighbour 66.9% (8s)
+[17:56:26]   sample 1: shared edges 10047 (4.2444%, expected 99.8) | nodes with no shared neighbour 66.8% (8s)
+[17:56:26] funmap: 10189 nodes, 196605 edges; expected shared edges under full mixing ~ 135.8
+[17:56:33]   sample 0: shared edges 13504 (6.8686%, expected 135.8) | nodes with no shared neighbour 66.1% (7s)
+[17:56:39]   sample 1: shared edges 13529 (6.8813%, expected 135.8) | nodes with no shared neighbour 66.3% (6s)
+[17:56:39] rna_coexp: 9152 nodes, 196172 edges; expected shared edges under full mixing ~ 182.3
+[17:56:47]   sample 0: shared edges 21886 (11.1565%, expected 182.3) | nodes with no shared neighbour 66.0% (8s)
+[17:56:54]   sample 1: shared edges 21858 (11.1423%, expected 182.3) | nodes with no shared neighbour 67.0% (7s)
+[17:56:55] string_phys700: 9830 nodes, 85576 edges; expected shared edges under full mixing ~ 65.8
+[17:56:57]   sample 0: shared edges 4160 (4.8612%, expected 65.8) | nodes with no shared neighbour 76.1% (2s)
+[17:56:59]   sample 1: shared edges 4220 (4.9313%, expected 65.8) | nodes with no shared neighbour 76.2% (2s)
+[17:56:59] reactome: 3953 nodes, 20143 edges; expected shared edges under full mixing ~ 27.5
+[17:57:00]   sample 0: shared edges 772 (3.8326%, expected 27.5) | nodes with no shared neighbour 78.7% (0s)
+[17:57:00]   sample 1: shared edges 714 (3.5447%, expected 27.5) | nodes with no shared neighbour 79.2% (1s)
+[17:57:00] wrote rewiring_mixing_check.tsv (11 rows)

@@ -1,0 +1,27 @@
+[10:30:03] complex map: 3,708 genes
+[10:33:31]   funmap x intogen2024: leak 0.891 -> 0.053 | groups 8,113 split 0 | repairs 0 | pos/fold 84-98
+[10:37:01]   funmap x ot_all: leak 0.917 -> 0.129 | groups 8,113 split 0 | repairs 0 | pos/fold 72-84
+[10:40:32]   funmap x ot_nolit: leak 0.919 -> 0.145 | groups 8,113 split 0 | repairs 0 | pos/fold 68-80
+[10:44:01]   funmap x intogen_temporal_new: leak 0.849 -> 0.026 | groups 8,113 split 0 | repairs 0 | pos/fold 19-22
+[10:47:18]   rna_coexp x intogen2024: leak 0.849 -> 0.079 | groups 7,685 split 0 | repairs 0 | pos/fold 71-81
+[10:50:34]   rna_coexp x ot_all: leak 0.872 -> 0.058 | groups 7,685 split 0 | repairs 0 | pos/fold 65-77
+[10:53:50]   rna_coexp x ot_nolit: leak 0.876 -> 0.051 | groups 7,685 split 0 | repairs 0 | pos/fold 63-74
+[10:57:07]   rna_coexp x intogen_temporal_new: leak 0.869 -> 0.000 | groups 7,685 split 0 | repairs 0 | pos/fold 17-19
+[11:00:16]   string_phys700 x intogen2024: leak 0.949 -> 0.060 | groups 7,201 split 0 | repairs 0 | pos/fold 101-115
+[11:03:21]   string_phys700 x ot_all: leak 0.957 -> 0.161 | groups 7,201 split 0 | repairs 0 | pos/fold 96-115
+[11:06:25]   string_phys700 x ot_nolit: leak 0.961 -> 0.178 | groups 7,201 split 0 | repairs 0 | pos/fold 93-111
+[11:09:31]   string_phys700 x intogen_temporal_new: leak 0.950 -> 0.020 | groups 7,201 split 0 | repairs 0 | pos/fold 21-25
+[11:17:01]   intact x intogen2024: leak 0.954 -> 0.064 | groups 15,119 split 0 | repairs 0 | pos/fold 118-130
+[11:24:30]   intact x ot_all: leak 0.956 -> 0.164 | groups 15,119 split 0 | repairs 0 | pos/fold 110-124
+[11:28:47]   intact x ot_nolit: leak 0.962 -> 0.183 | groups 15,119 split 0 | repairs 0 | pos/fold 109-123
+[11:30:39]   intact x intogen_temporal_new: leak 0.953 -> 0.021 | groups 15,119 split 0 | repairs 0 | pos/fold 28-31
+[11:32:14]   string_full700 x intogen2024: leak 0.957 -> 0.063 | groups 13,119 split 0 | repairs 0 | pos/fold 115-128
+[11:33:46]   string_full700 x ot_all: leak 0.961 -> 0.161 | groups 13,119 split 0 | repairs 0 | pos/fold 109-125
+[11:35:19]   string_full700 x ot_nolit: leak 0.962 -> 0.188 | groups 13,119 split 0 | repairs 0 | pos/fold 109-123
+[11:36:59]   string_full700 x intogen_temporal_new: leak 0.947 -> 0.022 | groups 13,119 split 0 | repairs 0 | pos/fold 27-30
+[11:37:17]   reactome x intogen2024: leak 0.920 -> 0.049 | groups 2,929 split 0 | repairs 0 | pos/fold 70-78
+[11:37:35]   reactome x ot_all: leak 0.933 -> 0.047 | groups 2,929 split 0 | repairs 0 | pos/fold 67-79
+[11:37:53]   reactome x ot_nolit: leak 0.931 -> 0.045 | groups 2,929 split 0 | repairs 0 | pos/fold 63-75
+[11:38:11]   reactome x intogen_temporal_new: leak 0.873 -> 0.034 | groups 2,929 split 0 | repairs 0 | pos/fold 11-13
+[11:38:11] wrote D:\Grade3\swxxx\final\D1\d1-benchmark\results\tables\d3_split_invariants.tsv (24 arms)
+[11:38:11] wrote d3_complex_aware_splits.md

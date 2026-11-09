@@ -1,0 +1,63 @@
+A4 factorial: 6 networks x 4 labels x 3 alphas = 24 arms
+
+Step 1: ensure split files exist (generate if missing)
+
+Step 2: run 24 arms (one C5 file per arm)
+  [funmap x intogen2024] 800 rows in 26.2s -> a4_funmap__intogen2024.tsv
+  [funmap x ot_all] 800 rows in 21.0s -> a4_funmap__ot_all.tsv
+  [funmap x ot_nolit] 800 rows in 9.5s -> a4_funmap__ot_nolit.tsv
+  [funmap x intogen_temporal_new] 800 rows in 9.3s -> a4_funmap__intogen_temporal_new.tsv
+  [rna_coexp x intogen2024] 800 rows in 8.9s -> a4_rna_coexp__intogen2024.tsv
+  [rna_coexp x ot_all] 800 rows in 9.0s -> a4_rna_coexp__ot_all.tsv
+  [rna_coexp x ot_nolit] 800 rows in 9.6s -> a4_rna_coexp__ot_nolit.tsv
+  [rna_coexp x intogen_temporal_new] 800 rows in 9.9s -> a4_rna_coexp__intogen_temporal_new.tsv
+  [string_phys700 x intogen2024] 800 rows in 7.6s -> a4_string_phys700__intogen2024.tsv
+  [string_phys700 x ot_all] 800 rows in 8.2s -> a4_string_phys700__ot_all.tsv
+  [string_phys700 x ot_nolit] 800 rows in 14.6s -> a4_string_phys700__ot_nolit.tsv
+  [string_phys700 x intogen_temporal_new] 800 rows in 19.0s -> a4_string_phys700__intogen_temporal_new.tsv
+  [intact x intogen2024] 800 rows in 45.2s -> a4_intact__intogen2024.tsv
+  [intact x ot_all] 800 rows in 48.7s -> a4_intact__ot_all.tsv
+  [intact x ot_nolit] 800 rows in 48.6s -> a4_intact__ot_nolit.tsv
+  [intact x intogen_temporal_new] 800 rows in 48.1s -> a4_intact__intogen_temporal_new.tsv
+  [string_full700 x intogen2024] 800 rows in 32.3s -> a4_string_full700__intogen2024.tsv
+  [string_full700 x ot_all] 800 rows in 32.0s -> a4_string_full700__ot_all.tsv
+  [string_full700 x ot_nolit] 800 rows in 31.9s -> a4_string_full700__ot_nolit.tsv
+  [string_full700 x intogen_temporal_new] 800 rows in 33.2s -> a4_string_full700__intogen_temporal_new.tsv
+  [reactome x intogen2024] 800 rows in 9.3s -> a4_reactome__intogen2024.tsv
+  [reactome x ot_all] 800 rows in 8.2s -> a4_reactome__ot_all.tsv
+  [reactome x ot_nolit] 800 rows in 4.4s -> a4_reactome__ot_nolit.tsv
+  [reactome x intogen_temporal_new] 800 rows in 4.3s -> a4_reactome__intogen_temporal_new.tsv
+
+Step 3: concatenate 24 arm tables into results/runs/a4_combined.tsv
+  combined rows: 19,200
+
+Step 4: aggregate to Table 1 -> results/tables/a4_table1_delta_auroc.tsv
+  Table 1 (delta_AUROC, mean +- SD across 1 folds):
+                                     a0.3_mean  a0.3_std  a0.3_n  a0.5_mean  a0.5_std  a0.5_n  a0.7_mean  a0.7_std  a0.7_n
+network        label_set                                                                                                  
+funmap         intogen2024              0.0803    0.0170   200.0     0.0895    0.0191   200.0     0.0933    0.0203   200.0
+               intogen_temporal_new     0.0139    0.0274   200.0     0.0240    0.0305   200.0     0.0327    0.0319   200.0
+               ot_all                   0.0428    0.0175   200.0     0.0504    0.0202   200.0     0.0552    0.0223   200.0
+               ot_nolit                 0.0378    0.0197   200.0     0.0425    0.0228   200.0     0.0448    0.0248   200.0
+intact         intogen2024              0.0532    0.0063   200.0     0.0636    0.0083   200.0     0.0665    0.0098   200.0
+               intogen_temporal_new     0.0094    0.0135   200.0     0.0066    0.0178   200.0     0.0023    0.0208   200.0
+               ot_all                   0.0545    0.0088   200.0     0.0672    0.0112   200.0     0.0727    0.0130   200.0
+               ot_nolit                 0.0478    0.0096   200.0     0.0580    0.0123   200.0     0.0619    0.0144   200.0
+reactome       intogen2024              0.0314    0.0178   200.0     0.0234    0.0207   200.0     0.0146    0.0227   200.0
+               intogen_temporal_new    -0.0150    0.0445   200.0    -0.0178    0.0488   200.0    -0.0195    0.0521   200.0
+               ot_all                   0.0850    0.0193   200.0     0.0875    0.0214   200.0     0.0854    0.0226   200.0
+               ot_nolit                 0.0769    0.0254   200.0     0.0757    0.0273   200.0     0.0713    0.0281   200.0
+rna_coexp      intogen2024              0.0383    0.0139   200.0     0.0459    0.0156   200.0     0.0513    0.0170   200.0
+               intogen_temporal_new     0.0113    0.0335   200.0     0.0146    0.0357   200.0     0.0169    0.0371   200.0
+               ot_all                   0.0517    0.0192   200.0     0.0576    0.0206   200.0     0.0608    0.0212   200.0
+               ot_nolit                 0.0463    0.0189   200.0     0.0536    0.0206   200.0     0.0582    0.0216   200.0
+string_full700 intogen2024              0.1022    0.0117   200.0     0.1110    0.0138   200.0     0.1133    0.0151   200.0
+               intogen_temporal_new     0.0585    0.0236   200.0     0.0612    0.0270   200.0     0.0609    0.0291   200.0
+               ot_all                   0.1046    0.0147   200.0     0.1115    0.0158   200.0     0.1126    0.0161   200.0
+               ot_nolit                 0.1141    0.0166   200.0     0.1205    0.0181   200.0     0.1208    0.0189   200.0
+string_phys700 intogen2024              0.1130    0.0183   200.0     0.1162    0.0202   200.0     0.1148    0.0215   200.0
+               intogen_temporal_new     0.0426    0.0313   200.0     0.0418    0.0346   200.0     0.0400    0.0374   200.0
+               ot_all                   0.1347    0.0275   200.0     0.1372    0.0286   200.0     0.1359    0.0293   200.0
+               ot_nolit                 0.1467    0.0288   200.0     0.1495    0.0304   200.0     0.1482    0.0313   200.0
+
+Done. 24 arms; combined file 19,200 rows.

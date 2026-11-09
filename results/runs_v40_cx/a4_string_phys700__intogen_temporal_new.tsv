@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_phys700	intogen_temporal_new	native_string_phys700		0	0	degree		0.5103275401069519	0.014509441185634589	0.0	0.01	0.016	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700		0	1	degree		0.6514800599964707	0.01941487249121129	0.02	0.01	0.022	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700		0	2	degree		0.5530949478531763	0.01928469926920675	0.02	0.01	0.012	23	1949
+string_phys700	intogen_temporal_new	native_string_phys700		0	3	degree		0.5905562882407628	0.01359007285018738	0.0	0.0	0.012	23	2034
+string_phys700	intogen_temporal_new	native_string_phys700		0	4	degree		0.5364447247499774	0.012483007388326386	0.0	0.0	0.012	22	2040
+string_phys700	intogen_temporal_new	native_string_phys700		1	0	degree		0.5647678762006403	0.016471344920415642	0.0	0.01	0.018	24	1898
+string_phys700	intogen_temporal_new	native_string_phys700		1	1	degree		0.5564632545931758	0.015031899005057789	0.0	0.01	0.012	24	1929
+string_phys700	intogen_temporal_new	native_string_phys700		1	2	degree		0.5814404556360293	0.014098225436673344	0.0	0.01	0.01	23	1962
+string_phys700	intogen_temporal_new	native_string_phys700		1	3	degree		0.5139879563584651	0.009834212839444249	0.0	0.0	0.008	21	2164
+string_phys700	intogen_temporal_new	native_string_phys700		1	4	degree		0.6290474905558554	0.027426286626809977	0.02	0.01	0.022	24	1877
+string_phys700	intogen_temporal_new	native_string_phys700		2	0	degree		0.5532531292847981	0.013303975189591394	0.02	0.01	0.01	23	1989
+string_phys700	intogen_temporal_new	native_string_phys700		2	1	degree		0.5657203988000706	0.018321965301130533	0.02	0.02	0.014	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700		2	2	degree		0.6485757254069355	0.023096377986930657	0.02	0.01	0.022	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700		2	3	degree		0.6030068277310925	0.020186686103232786	0.0	0.01	0.022	24	1928
+string_phys700	intogen_temporal_new	native_string_phys700		2	4	degree		0.4658320112207123	0.009456060270808319	0.0	0.0	0.004	21	2092
+string_phys700	intogen_temporal_new	native_string_phys700		3	0	degree		0.5914909969257796	0.01478282596439838	0.02	0.01	0.012	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700		3	1	degree		0.6101865460712267	0.026758094621163138	0.02	0.04	0.022	25	1794
+string_phys700	intogen_temporal_new	native_string_phys700		3	2	degree		0.5209681042228212	0.010007697296924392	0.0	0.0	0.006	21	2141
+string_phys700	intogen_temporal_new	native_string_phys700		3	3	degree		0.5569514788747835	0.013583414892441427	0.0	0.0	0.012	23	2006
+string_phys700	intogen_temporal_new	native_string_phys700		3	4	degree		0.5686985320443967	0.01856248794703447	0.02	0.01	0.02	24	1886
+string_phys700	intogen_temporal_new	native_string_phys700		4	0	degree		0.6116210295728368	0.014022077768830337	0.0	0.0	0.014	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700		4	1	degree		0.5188238777415902	0.013513407991751453	0.0	0.0	0.012	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700		4	2	degree		0.527740386772558	0.020693904014667586	0.02	0.02	0.012	23	1961
+string_phys700	intogen_temporal_new	native_string_phys700		4	3	degree		0.5698336825563122	0.01469800255364151	0.0	0.0	0.01	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700		4	4	degree		0.6156620640821384	0.01900371909513354	0.02	0.01	0.022	24	1907
+string_phys700	intogen_temporal_new	native_string_phys700		5	0	degree		0.652085677100567	0.01837554848948701	0.02	0.01	0.018	23	1994
+string_phys700	intogen_temporal_new	native_string_phys700		5	1	degree		0.6094632768361582	0.017469077996565992	0.0	0.01	0.016	24	1912
+string_phys700	intogen_temporal_new	native_string_phys700		5	2	degree		0.6161897424609288	0.01423569535966986	0.0	0.0	0.016	22	2087
+string_phys700	intogen_temporal_new	native_string_phys700		5	3	degree		0.47720083152566883	0.01724618806296416	0.02	0.01	0.014	24	1868
+string_phys700	intogen_temporal_new	native_string_phys700		5	4	degree		0.4959560302068904	0.012263192244631559	0.0	0.0	0.012	23	1969
+string_phys700	intogen_temporal_new	native_string_phys700		6	0	degree		0.6336136733586544	0.01901673161566344	0.0	0.01	0.022	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700		6	1	degree		0.5658980582524272	0.016973833472184893	0.02	0.01	0.008	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700		6	2	degree		0.5506350267379679	0.018892864662582984	0.02	0.01	0.016	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700		6	3	degree		0.4643483023001095	0.009837129706912959	0.0	0.0	0.006	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700		6	4	degree		0.6291532690246515	0.01810686326145592	0.0	0.0	0.018	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700		7	0	degree		0.5525986842105264	0.014785650784386702	0.0	0.0	0.018	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700		7	1	degree		0.5073285428615377	0.00957545268511666	0.0	0.0	0.006	21	2188
+string_phys700	intogen_temporal_new	native_string_phys700		7	2	degree		0.5908492649519262	0.019255242700295987	0.02	0.01	0.014	23	1972
+string_phys700	intogen_temporal_new	native_string_phys700		7	3	degree		0.5767088607594937	0.02408701336517238	0.04	0.02	0.022	25	1763
+string_phys700	intogen_temporal_new	native_string_phys700		7	4	degree		0.6160714285714286	0.0164812824238921	0.0	0.0	0.016	23	1983
+string_phys700	intogen_temporal_new	native_string_phys700		8	0	degree		0.5681081081081081	0.017212057742275653	0.0	0.02	0.018	25	1764
+string_phys700	intogen_temporal_new	native_string_phys700		8	1	degree		0.5518697621496248	0.01367267361696907	0.0	0.0	0.014	23	2010
+string_phys700	intogen_temporal_new	native_string_phys700		8	2	degree		0.5734979244046319	0.01443988183686748	0.0	0.02	0.008	23	2013
+string_phys700	intogen_temporal_new	native_string_phys700		8	3	degree		0.5996058082045342	0.015849262363985303	0.0	0.0	0.022	22	2063
+string_phys700	intogen_temporal_new	native_string_phys700		8	4	degree		0.5606185154739952	0.019158295470164177	0.02	0.01	0.014	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700		9	0	degree		0.5552490507035961	0.012009538044926228	0.0	0.0	0.012	22	2057
+string_phys700	intogen_temporal_new	native_string_phys700		9	1	degree		0.621604210342418	0.019120955547861328	0.0	0.0	0.022	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700		9	2	degree		0.5626339046598821	0.015166201879298694	0.0	0.01	0.014	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700		9	3	degree		0.4778699238292694	0.01427253501437522	0.02	0.01	0.004	22	2039
+string_phys700	intogen_temporal_new	native_string_phys700		9	4	degree		0.6226373432255786	0.020054326665597928	0.0	0.02	0.022	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700		10	0	degree		0.5508038949275362	0.014242034607347055	0.0	0.0	0.008	24	1864
+string_phys700	intogen_temporal_new	native_string_phys700		10	1	degree		0.627772622834924	0.0184876632941593	0.02	0.01	0.018	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700		10	2	degree		0.5826627899114207	0.020717388568627405	0.02	0.02	0.018	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700		10	3	degree		0.6015433718083246	0.017537135937603317	0.0	0.0	0.02	24	1930
+string_phys700	intogen_temporal_new	native_string_phys700		10	4	degree		0.4760245946962157	0.009236967563729777	0.0	0.0	0.004	21	2174
+string_phys700	intogen_temporal_new	native_string_phys700		11	0	degree		0.44011086474501104	0.009726425126941562	0.0	0.0	0.006	22	2072
+string_phys700	intogen_temporal_new	native_string_phys700		11	1	degree		0.611396800281294	0.017370310448946723	0.0	0.0	0.022	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700		11	2	degree		0.5613102086001432	0.014228275747996245	0.02	0.01	0.012	23	2026
+string_phys700	intogen_temporal_new	native_string_phys700		11	3	degree		0.6531148867313916	0.018612524338597523	0.0	0.0	0.02	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700		11	4	degree		0.5615771392168908	0.015463433572201386	0.02	0.01	0.014	23	1934
+string_phys700	intogen_temporal_new	native_string_phys700		12	0	degree		0.6086717651195499	0.01957823951592471	0.0	0.02	0.026	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700		12	1	degree		0.5477682327414427	0.012833860642398155	0.0	0.0	0.014	22	2075
+string_phys700	intogen_temporal_new	native_string_phys700		12	2	degree		0.540893778983288	0.015419896110522954	0.02	0.01	0.01	22	2100
+string_phys700	intogen_temporal_new	native_string_phys700		12	3	degree		0.619998675145734	0.017160220806376414	0.0	0.0	0.014	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700		12	4	degree		0.5398611111111111	0.015410432194715405	0.0	0.02	0.016	24	1824
+string_phys700	intogen_temporal_new	native_string_phys700		13	0	degree		0.5864400584795322	0.01726767393372379	0.0	0.0	0.018	24	1848
+string_phys700	intogen_temporal_new	native_string_phys700		13	1	degree		0.5760034904013962	0.017576914732323822	0.0	0.02	0.02	24	1934
+string_phys700	intogen_temporal_new	native_string_phys700		13	2	degree		0.5164340680839963	0.010649957960509897	0.0	0.0	0.008	22	2113
+string_phys700	intogen_temporal_new	native_string_phys700		13	3	degree		0.5874971661754704	0.018633222301187757	0.02	0.02	0.014	22	2027
+string_phys700	intogen_temporal_new	native_string_phys700		13	4	degree		0.578047593772116	0.015603830949933676	0.0	0.01	0.014	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700		14	0	degree		0.5581761006289309	0.013544919225278895	0.0	0.0	0.01	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700		14	1	degree		0.6383689839572193	0.02492049472768287	0.02	0.01	0.022	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700		14	2	degree		0.5097694067945784	0.014533301921500574	0.0	0.01	0.016	23	1999
+string_phys700	intogen_temporal_new	native_string_phys700		14	3	degree		0.597306490163633	0.021079709894101628	0.0	0.02	0.018	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700		14	4	degree		0.5406990928649056	0.01035330586145499	0.0	0.0	0.004	21	2168
+string_phys700	intogen_temporal_new	native_string_phys700		15	0	degree		0.4411231884057971	0.013636579264351363	0.02	0.01	0.012	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700		15	1	degree		0.6638277659950512	0.021866495406834587	0.0	0.0	0.022	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700		15	2	degree		0.572814895947426	0.011840204542202245	0.0	0.0	0.012	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700		15	3	degree		0.49901134703965844	0.017557766818628154	0.02	0.01	0.008	23	1958
+string_phys700	intogen_temporal_new	native_string_phys700		15	4	degree		0.6692792792792793	0.02053504135770573	0.02	0.01	0.02	24	1874
+string_phys700	intogen_temporal_new	native_string_phys700		16	0	degree		0.614234987414599	0.016904292644124276	0.0	0.0	0.016	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700		16	1	degree		0.4936290703161869	0.010188861238771	0.0	0.0	0.01	21	2140
+string_phys700	intogen_temporal_new	native_string_phys700		16	2	degree		0.5335842828721288	0.015632511711979415	0.0	0.0	0.016	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700		16	3	degree		0.6102838732149077	0.016892215166395073	0.0	0.02	0.014	24	1938
+string_phys700	intogen_temporal_new	native_string_phys700		16	4	degree		0.588578190743338	0.020566455156099464	0.02	0.01	0.016	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700		17	0	degree		0.5244929453262785	0.013021362935936732	0.0	0.0	0.01	24	1914
+string_phys700	intogen_temporal_new	native_string_phys700		17	1	degree		0.5827684742158425	0.015334220341504725	0.0	0.0	0.014	24	1905
+string_phys700	intogen_temporal_new	native_string_phys700		17	2	degree		0.5463219148001757	0.012474373817145641	0.0	0.0	0.012	22	2092
+string_phys700	intogen_temporal_new	native_string_phys700		17	3	degree		0.6586009381201516	0.019941422521025164	0.02	0.01	0.022	23	1951
+string_phys700	intogen_temporal_new	native_string_phys700		17	4	degree		0.53517380127417	0.019164143825118947	0.02	0.02	0.01	23	1968
+string_phys700	intogen_temporal_new	native_string_phys700		18	0	degree		0.5304741694048923	0.015154240182050152	0.0	0.01	0.016	24	1850
+string_phys700	intogen_temporal_new	native_string_phys700		18	1	degree		0.610841859630228	0.020023280050122622	0.04	0.02	0.02	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700		18	2	degree		0.5209355647459661	0.013456008133540719	0.02	0.01	0.012	23	2052
+string_phys700	intogen_temporal_new	native_string_phys700		18	3	degree		0.5838666840822013	0.012504045285113851	0.0	0.0	0.012	22	2110
+string_phys700	intogen_temporal_new	native_string_phys700		18	4	degree		0.591885875244196	0.014636350776696089	0.0	0.0	0.012	23	1937
+string_phys700	intogen_temporal_new	native_string_phys700		19	0	degree		0.6837948171813986	0.023588908793823513	0.0	0.02	0.026	24	1902
+string_phys700	intogen_temporal_new	native_string_phys700		19	1	degree		0.5675872093023255	0.022620806417464882	0.04	0.02	0.012	24	1830
+string_phys700	intogen_temporal_new	native_string_phys700		19	2	degree		0.46675186180760586	0.009547284269810812	0.0	0.0	0.006	22	2085
+string_phys700	intogen_temporal_new	native_string_phys700		19	3	degree		0.5043233000827634	0.016083666382964112	0.02	0.01	0.014	22	2109
+string_phys700	intogen_temporal_new	native_string_phys700		19	4	degree		0.6295545212765957	0.017876084396216456	0.0	0.0	0.018	24	1904
+string_phys700	intogen_temporal_new	native_string_phys700		20	0	degree		0.537800913723423	0.010414077120303584	0.0	0.0	0.006	21	2189
+string_phys700	intogen_temporal_new	native_string_phys700		20	1	degree		0.6400361324551775	0.025718987449777766	0.04	0.02	0.024	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700		20	2	degree		0.5488668244783447	0.01465699547284725	0.0	0.0	0.02	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700		20	3	degree		0.5731642894875859	0.016973342421774597	0.0	0.03	0.012	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700		20	4	degree		0.5428249605767065	0.014038363021231135	0.02	0.01	0.014	23	1953
+string_phys700	intogen_temporal_new	native_string_phys700		21	0	degree		0.5952228596646072	0.016472615436875462	0.0	0.01	0.014	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700		21	1	degree		0.4771851187808158	0.010812391869078512	0.0	0.0	0.006	23	1963
+string_phys700	intogen_temporal_new	native_string_phys700		21	2	degree		0.615655789568833	0.024354300108152913	0.02	0.02	0.018	23	1947
+string_phys700	intogen_temporal_new	native_string_phys700		21	3	degree		0.6091353781068217	0.017460352974316973	0.0	0.0	0.022	24	1915
+string_phys700	intogen_temporal_new	native_string_phys700		21	4	degree		0.5491047919957873	0.014186906814254859	0.0	0.0	0.012	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700		22	0	degree		0.54316641731937	0.011215737794999726	0.0	0.0	0.008	22	2088
+string_phys700	intogen_temporal_new	native_string_phys700		22	1	degree		0.5645339755272065	0.013724813126069397	0.02	0.01	0.012	23	2027
+string_phys700	intogen_temporal_new	native_string_phys700		22	2	degree		0.6165430586741057	0.027039258693790494	0.02	0.02	0.018	23	1940
+string_phys700	intogen_temporal_new	native_string_phys700		22	3	degree		0.5186532301121196	0.014860019240490394	0.0	0.0	0.014	24	1897
+string_phys700	intogen_temporal_new	native_string_phys700		22	4	degree		0.6000651743976986	0.017102818576107	0.0	0.0	0.018	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700		23	0	degree		0.5695870633666842	0.01435302679539761	0.0	0.0	0.012	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700		23	1	degree		0.6033163265306123	0.01637758871033465	0.0	0.0	0.016	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700		23	2	degree		0.5674670349251603	0.01570019500660657	0.02	0.01	0.014	23	1975
+string_phys700	intogen_temporal_new	native_string_phys700		23	3	degree		0.47660460021905804	0.01094449389831234	0.0	0.0	0.014	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700		23	4	degree		0.6258998348926803	0.01813977783539252	0.02	0.01	0.016	23	1998
+string_phys700	intogen_temporal_new	native_string_phys700		24	0	degree		0.5883261687264911	0.016356242625462182	0.0	0.01	0.018	24	1885
+string_phys700	intogen_temporal_new	native_string_phys700		24	1	degree		0.5647315466120559	0.012305506804781884	0.0	0.0	0.012	22	2064
+string_phys700	intogen_temporal_new	native_string_phys700		24	2	degree		0.5293039086517347	0.012768031147072947	0.0	0.0	0.014	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700		24	3	degree		0.5883790814495874	0.018212863445461146	0.0	0.02	0.016	24	1882
+string_phys700	intogen_temporal_new	native_string_phys700		24	4	degree		0.575486458494017	0.020265641581247246	0.02	0.02	0.01	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700		25	0	degree		0.6293036211699163	0.02416294363973158	0.02	0.04	0.022	25	1820
+string_phys700	intogen_temporal_new	native_string_phys700		25	1	degree		0.584934542712879	0.018435534369670176	0.02	0.01	0.012	23	1926
+string_phys700	intogen_temporal_new	native_string_phys700		25	2	degree		0.556708916083916	0.011571759017715313	0.0	0.0	0.01	22	2102
+string_phys700	intogen_temporal_new	native_string_phys700		25	3	degree		0.5544472428419936	0.014428418540428718	0.0	0.0	0.02	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700		25	4	degree		0.524058854718982	0.013305916338103855	0.0	0.02	0.014	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700		26	0	degree		0.5023649263234491	0.02366529300141274	0.02	0.01	0.016	23	1935
+string_phys700	intogen_temporal_new	native_string_phys700		26	1	degree		0.5844086722280153	0.014770620789210319	0.0	0.0	0.014	24	1942
+string_phys700	intogen_temporal_new	native_string_phys700		26	2	degree		0.6698971518987341	0.023937881125719696	0.04	0.02	0.03	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700		26	3	degree		0.5564847610302156	0.011743897290731782	0.0	0.0	0.008	22	2101
+string_phys700	intogen_temporal_new	native_string_phys700		26	4	degree		0.5332293256200605	0.013678719490478355	0.0	0.0	0.01	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700		27	0	degree		0.5162550625110055	0.016081957229602276	0.04	0.02	0.012	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700		27	1	degree		0.5650782205908058	0.015136033955535828	0.0	0.0	0.018	24	1931
+string_phys700	intogen_temporal_new	native_string_phys700		27	2	degree		0.5896680942184155	0.016380312672168988	0.0	0.0	0.018	24	1892
+string_phys700	intogen_temporal_new	native_string_phys700		27	3	degree		0.618085992286115	0.01644395774227663	0.0	0.01	0.016	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700		27	4	degree		0.5561636875894879	0.011100188291266199	0.0	0.0	0.008	21	2083
+string_phys700	intogen_temporal_new	native_string_phys700		28	0	degree		0.6080736348593492	0.023926808266432793	0.02	0.01	0.018	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700		28	1	degree		0.5176794133053956	0.012586721140805805	0.0	0.01	0.012	23	2015
+string_phys700	intogen_temporal_new	native_string_phys700		28	2	degree		0.5235854366964627	0.013061572138083484	0.02	0.01	0.012	23	1954
+string_phys700	intogen_temporal_new	native_string_phys700		28	3	degree		0.6414300736067298	0.017933414880049812	0.0	0.0	0.02	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700		28	4	degree		0.5522420739183745	0.012397193340311492	0.0	0.0	0.012	22	2098
+string_phys700	intogen_temporal_new	native_string_phys700		29	0	degree		0.5330229291281494	0.01990286509613409	0.02	0.02	0.012	24	1863
+string_phys700	intogen_temporal_new	native_string_phys700		29	1	degree		0.6157282686781609	0.018338120199268913	0.02	0.01	0.02	24	1880
+string_phys700	intogen_temporal_new	native_string_phys700		29	2	degree		0.6342909857670005	0.018726500491848853	0.0	0.01	0.02	24	1921
+string_phys700	intogen_temporal_new	native_string_phys700		29	3	degree		0.4582645991421973	0.008630914731001207	0.0	0.0	0.004	21	2186
+string_phys700	intogen_temporal_new	native_string_phys700		29	4	degree		0.5943102797094043	0.014922924186891711	0.0	0.0	0.014	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700		30	0	degree		0.46765218557253957	0.010315140136900582	0.0	0.0	0.01	22	2056
+string_phys700	intogen_temporal_new	native_string_phys700		30	1	degree		0.6038730862908838	0.02250321131899663	0.02	0.01	0.016	24	1940
+string_phys700	intogen_temporal_new	native_string_phys700		30	2	degree		0.6165847638775646	0.015110782048535866	0.0	0.0	0.012	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700		30	3	degree		0.5888066604995374	0.016417556950134103	0.0	0.02	0.016	23	1997
+string_phys700	intogen_temporal_new	native_string_phys700		30	4	degree		0.5592207851770317	0.01564069804677405	0.0	0.0	0.016	24	1841
+string_phys700	intogen_temporal_new	native_string_phys700		31	0	degree		0.5464183443723085	0.013339339271329874	0.02	0.01	0.012	23	2012
+string_phys700	intogen_temporal_new	native_string_phys700		31	1	degree		0.47320525783619816	0.011557348285422432	0.0	0.01	0.01	23	1915
+string_phys700	intogen_temporal_new	native_string_phys700		31	2	degree		0.6157779564130046	0.025812027992844305	0.02	0.02	0.014	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700		31	3	degree		0.5977481637858997	0.015575286325228978	0.0	0.0	0.018	22	2089
+string_phys700	intogen_temporal_new	native_string_phys700		31	4	degree		0.6113157894736843	0.015930753623798817	0.0	0.0	0.012	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700		32	0	degree		0.5220069636639586	0.01256146239541238	0.0	0.0	0.012	23	1971
+string_phys700	intogen_temporal_new	native_string_phys700		32	1	degree		0.555171277997365	0.013876597080192603	0.0	0.0	0.016	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700		32	2	degree		0.584681697612732	0.01973633192147095	0.02	0.01	0.022	24	1909
+string_phys700	intogen_temporal_new	native_string_phys700		32	3	degree		0.5397230320699709	0.01173137626452989	0.0	0.0	0.012	22	2080
+string_phys700	intogen_temporal_new	native_string_phys700		32	4	degree		0.6486254295532646	0.025291825664234255	0.02	0.01	0.022	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700		33	0	degree		0.5373050116163292	0.0128953543452233	0.0	0.01	0.006	23	1988
+string_phys700	intogen_temporal_new	native_string_phys700		33	1	degree		0.6096433578689099	0.026761606480049695	0.02	0.01	0.022	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700		33	2	degree		0.5923908306458642	0.013165831195216336	0.0	0.0	0.008	22	2108
+string_phys700	intogen_temporal_new	native_string_phys700		33	3	degree		0.5969271968046478	0.018342148679855022	0.02	0.01	0.02	24	1860
+string_phys700	intogen_temporal_new	native_string_phys700		33	4	degree		0.5094409937888198	0.01181301064828567	0.0	0.0	0.012	23	1948
+string_phys700	intogen_temporal_new	native_string_phys700		34	0	degree		0.5783842746644924	0.014751630073924884	0.02	0.01	0.014	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700		34	1	degree		0.6475013255567339	0.025425030291658657	0.02	0.03	0.024	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700		34	2	degree		0.47642588108689804	0.009540790950479633	0.0	0.0	0.008	21	2145
+string_phys700	intogen_temporal_new	native_string_phys700		34	3	degree		0.587548103353491	0.017443979486274307	0.04	0.02	0.016	24	1843
+string_phys700	intogen_temporal_new	native_string_phys700		34	4	degree		0.5544477859135286	0.01434044824403999	0.0	0.0	0.014	24	1936
+string_phys700	intogen_temporal_new	native_string_phys700		35	0	degree		0.6943850679829878	0.022404737146453035	0.0	0.02	0.022	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700		35	1	degree		0.5700989790004012	0.01251105631629632	0.0	0.0	0.012	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700		35	2	degree		0.5469038208168643	0.016350284405539445	0.02	0.01	0.012	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700		35	3	degree		0.5339700625558534	0.01409800573148862	0.0	0.01	0.014	24	1889
+string_phys700	intogen_temporal_new	native_string_phys700		35	4	degree		0.4992819960509783	0.01288078105491058	0.0	0.0	0.012	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700		36	0	degree		0.619511587905124	0.022196811955785108	0.02	0.03	0.018	24	1865
+string_phys700	intogen_temporal_new	native_string_phys700		36	1	degree		0.5531639928698753	0.015187552596495141	0.0	0.0	0.014	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700		36	2	degree		0.42973614657528114	0.008708579122407065	0.0	0.0	0.008	21	2147
+string_phys700	intogen_temporal_new	native_string_phys700		36	3	degree		0.6413264404383174	0.018980420732173063	0.0	0.0	0.022	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700		36	4	degree		0.5994365951127901	0.01925731387136275	0.02	0.02	0.016	23	2014
+string_phys700	intogen_temporal_new	native_string_phys700		37	0	degree		0.47163654618473894	0.011689508521341926	0.0	0.0	0.012	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700		37	1	degree		0.4986451670220327	0.014136893731882006	0.02	0.01	0.012	24	1900
+string_phys700	intogen_temporal_new	native_string_phys700		37	2	degree		0.6299083026919061	0.014155277096336925	0.0	0.0	0.014	21	2119
+string_phys700	intogen_temporal_new	native_string_phys700		37	3	degree		0.6615381209598866	0.02461381457125624	0.02	0.01	0.018	23	1987
+string_phys700	intogen_temporal_new	native_string_phys700		37	4	degree		0.5989332262096054	0.01745047547624045	0.02	0.01	0.018	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700		38	0	degree		0.5358923344310282	0.014595296431032979	0.0	0.01	0.012	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700		38	1	degree		0.5295727054719861	0.010653469602843916	0.0	0.0	0.006	22	2107
+string_phys700	intogen_temporal_new	native_string_phys700		38	2	degree		0.5881172943854667	0.019057816775444034	0.02	0.01	0.018	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700		38	3	degree		0.6409126775381379	0.024613359092561137	0.0	0.02	0.024	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700		38	4	degree		0.5539464713773614	0.014000856031387746	0.02	0.01	0.012	23	2000
+string_phys700	intogen_temporal_new	native_string_phys700		39	0	degree		0.5754380489544786	0.01246621340745293	0.0	0.0	0.014	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700		39	1	degree		0.5833862050212997	0.017945147749868464	0.02	0.01	0.008	22	2028
+string_phys700	intogen_temporal_new	native_string_phys700		39	2	degree		0.589697504069452	0.0174772275229573	0.0	0.01	0.018	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700		39	3	degree		0.5821693395413002	0.017187336480834432	0.0	0.01	0.016	24	1957
+string_phys700	intogen_temporal_new	native_string_phys700		39	4	degree		0.5119849445324881	0.014550622053533918	0.0	0.01	0.012	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	0	0	rwr	38.0	0.5832107843137255	0.02398630230500489	0.02	0.02	0.02	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	0	1	rwr	38.0	0.7004808540674078	0.026161651440984673	0.02	0.02	0.028	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	0	2	rwr	38.0	0.5526547473926589	0.016915867206885024	0.0	0.03	0.014	23	1949
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	0	3	rwr	38.0	0.6284997729876981	0.016531259136185035	0.02	0.01	0.018	23	2034
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	0	4	rwr	38.0	0.5915623029101721	0.017250567080651546	0.0	0.04	0.014	22	2040
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	1	0	rwr	38.0	0.5804651369619352	0.016532317098483247	0.02	0.01	0.016	24	1898
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	1	1	rwr	38.0	0.6082020997375328	0.02043212031284163	0.0	0.0	0.024	24	1929
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	1	2	rwr	38.0	0.6563333856537434	0.03278242947370294	0.04	0.04	0.022	23	1962
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	1	3	rwr	38.0	0.5726507121747438	0.013726223120485128	0.02	0.01	0.012	21	2164
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	1	4	rwr	38.0	0.6334210289620436	0.021331821937144335	0.04	0.03	0.022	24	1877
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	2	0	rwr	38.0	0.6214892299526736	0.024941280398288593	0.06	0.04	0.016	23	1989
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	2	1	rwr	38.0	0.6236875772013412	0.018603102211250333	0.0	0.01	0.024	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	2	2	rwr	38.0	0.6592356687898089	0.020456618634272186	0.0	0.01	0.024	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	2	3	rwr	38.0	0.6043307948179273	0.019956840612468316	0.02	0.04	0.014	24	1928
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	2	4	rwr	38.0	0.5660711411556414	0.016848015745995662	0.02	0.01	0.014	21	2092
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	3	0	rwr	38.0	0.6927426438296004	0.025572498414677902	0.04	0.03	0.026	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	3	1	rwr	38.0	0.6206218202374223	0.03623014291983254	0.08	0.05	0.022	25	1794
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	3	2	rwr	38.0	0.5157681940700809	0.011075300338177097	0.0	0.01	0.012	21	2141
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	3	3	rwr	38.0	0.6159529917340876	0.016987622811110145	0.02	0.01	0.02	23	2006
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	3	4	rwr	38.0	0.556390977443609	0.016857080976835317	0.0	0.02	0.018	24	1886
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	4	0	rwr	38.0	0.6755312157721796	0.018775680265148722	0.0	0.01	0.02	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	4	1	rwr	38.0	0.5224679436080808	0.012826947749318224	0.0	0.0	0.014	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	4	2	rwr	38.0	0.628976533405124	0.025235028748573057	0.04	0.04	0.02	23	1961
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	4	3	rwr	38.0	0.57736380303824	0.025374814056852057	0.02	0.01	0.016	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	4	4	rwr	38.0	0.6457116303770579	0.023520750040745494	0.04	0.03	0.018	24	1907
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	5	0	rwr	38.0	0.6943176052765094	0.02118163135502634	0.0	0.01	0.018	23	1994
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	5	1	rwr	38.0	0.597457627118644	0.020002590169623347	0.02	0.04	0.022	24	1912
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	5	2	rwr	38.0	0.6255998239049088	0.01607376288494869	0.02	0.02	0.018	22	2087
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	5	3	rwr	38.0	0.5839208242950109	0.017128579411409998	0.02	0.01	0.016	24	1868
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	5	4	rwr	38.0	0.5369319451271282	0.02000450640194042	0.02	0.02	0.014	23	1969
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	6	0	rwr	38.0	0.6458333333333334	0.026951007756794078	0.02	0.04	0.024	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	6	1	rwr	38.0	0.6141659311562224	0.015412169502451563	0.0	0.01	0.016	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	6	2	rwr	38.0	0.6358288770053475	0.02378764154563326	0.02	0.03	0.026	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	6	3	rwr	38.0	0.4996385542168674	0.010607764060478704	0.0	0.0	0.012	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	6	4	rwr	38.0	0.6935512683101108	0.0257065969501582	0.04	0.03	0.018	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	7	0	rwr	38.0	0.6125548245614034	0.021764311764206033	0.04	0.04	0.022	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	7	1	rwr	38.0	0.5291713362779353	0.010295954073926887	0.0	0.0	0.01	21	2188
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	7	2	rwr	38.0	0.6682356615432663	0.028988956839323884	0.04	0.03	0.02	23	1972
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	7	3	rwr	38.0	0.6442807825086305	0.024278170002764103	0.02	0.03	0.024	25	1763
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	7	4	rwr	38.0	0.6015860692102928	0.017064888916933713	0.02	0.01	0.018	23	1983
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	8	0	rwr	38.0	0.6021506612995975	0.020780900406867975	0.02	0.03	0.02	25	1764
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	8	1	rwr	38.0	0.6153038226734645	0.019495771736034576	0.02	0.01	0.022	23	2010
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	8	2	rwr	38.0	0.5723071881144854	0.01430072240915747	0.0	0.0	0.012	23	2013
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	8	3	rwr	38.0	0.6519308716760945	0.023136370950962933	0.06	0.03	0.022	22	2063
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	8	4	rwr	38.0	0.6002977050054431	0.015612308403413738	0.0	0.01	0.016	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	9	0	rwr	38.0	0.596068796068796	0.014460447382373745	0.0	0.02	0.014	22	2057
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	9	1	rwr	38.0	0.6964862858141161	0.030258188178298832	0.04	0.03	0.03	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	9	2	rwr	38.0	0.5469782181753258	0.014593760271306395	0.0	0.01	0.014	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	9	3	rwr	38.0	0.4993464641456709	0.010666766728695907	0.0	0.0	0.008	22	2039
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	9	4	rwr	38.0	0.6648339515986575	0.02471266589914786	0.04	0.03	0.026	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	10	0	rwr	38.0	0.5830502717391304	0.02783964106740244	0.02	0.02	0.018	24	1864
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	10	1	rwr	38.0	0.6722781901732061	0.031229832133014217	0.08	0.05	0.024	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	10	2	rwr	38.0	0.5705028512182477	0.017545392072844813	0.02	0.01	0.02	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	10	3	rwr	38.0	0.6195785239594264	0.020016607532874348	0.02	0.03	0.02	24	1930
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	10	4	rwr	38.0	0.5654126025700573	0.013517403200945752	0.0	0.03	0.012	21	2174
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	11	0	rwr	38.0	0.5287250554323725	0.016375001762643088	0.04	0.02	0.014	22	2072
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	11	1	rwr	38.0	0.6567005098452883	0.022891291870651316	0.02	0.04	0.022	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	11	2	rwr	38.0	0.6233041741735224	0.022996350895196114	0.04	0.02	0.016	23	2026
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	11	3	rwr	38.0	0.6758360302049622	0.022299339980430648	0.02	0.02	0.028	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	11	4	rwr	38.0	0.644813778354151	0.023711786501032887	0.02	0.04	0.018	23	1934
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	12	0	rwr	38.0	0.6333509142053446	0.026886081436512683	0.04	0.03	0.024	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	12	1	rwr	38.0	0.5917504317406899	0.020329607921173307	0.06	0.03	0.018	22	2075
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	12	2	rwr	38.0	0.5772705398547554	0.013461308081221332	0.0	0.0	0.016	22	2100
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	12	3	rwr	38.0	0.6814056703762587	0.022993907263812688	0.02	0.04	0.02	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	12	4	rwr	38.0	0.5812384259259259	0.020827355951612003	0.02	0.03	0.014	24	1824
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	13	0	rwr	38.0	0.641984192251462	0.02866194530806753	0.04	0.04	0.022	24	1848
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	13	1	rwr	38.0	0.625043630017452	0.023422953957056142	0.0	0.04	0.024	24	1934
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	13	2	rwr	38.0	0.588898308769184	0.015445651682042082	0.02	0.01	0.018	22	2113
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	13	3	rwr	38.0	0.626694627068692	0.016970357771552147	0.02	0.01	0.016	22	2027
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	13	4	rwr	38.0	0.6077384111818825	0.021454685813075972	0.02	0.03	0.018	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	14	0	rwr	38.0	0.5973095737246681	0.017783013262766656	0.02	0.02	0.018	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	14	1	rwr	38.0	0.7121769162210339	0.033170834928206654	0.04	0.02	0.028	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	14	2	rwr	38.0	0.5586384439359269	0.016365644699125628	0.0	0.02	0.018	23	1999
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	14	3	rwr	38.0	0.5967319360176503	0.024894412031660863	0.04	0.04	0.02	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	14	4	rwr	38.0	0.5748552797924014	0.0119221134461	0.0	0.0	0.012	21	2168
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	15	0	rwr	38.0	0.5410591198303287	0.0328880958364784	0.04	0.04	0.018	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	15	1	rwr	38.0	0.6948568398727466	0.023832307613394457	0.02	0.01	0.026	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	15	2	rwr	38.0	0.5725191675794086	0.013045448820534638	0.0	0.0	0.014	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	15	3	rwr	38.0	0.5892146949780923	0.01864334750563981	0.04	0.03	0.014	23	1958
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	15	4	rwr	38.0	0.671599099099099	0.024092816122333664	0.04	0.02	0.024	24	1874
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	16	0	rwr	38.0	0.6632506292700467	0.024504444756781107	0.04	0.04	0.022	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	16	1	rwr	38.0	0.573349962920515	0.018689016886862364	0.04	0.02	0.012	21	2140
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	16	2	rwr	38.0	0.6058057514921323	0.020740377142281764	0.0	0.02	0.028	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	16	3	rwr	38.0	0.60842258794845	0.022731238551085803	0.04	0.03	0.018	24	1938
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	16	4	rwr	38.0	0.6213731591865357	0.01749982532941501	0.02	0.02	0.016	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	17	0	rwr	38.0	0.6048721340388007	0.026649588931457482	0.02	0.02	0.02	24	1914
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	17	1	rwr	38.0	0.6048533581428318	0.021825924059567556	0.04	0.03	0.018	24	1905
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	17	2	rwr	38.0	0.6291062801932368	0.01831832250821145	0.02	0.02	0.018	22	2092
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	17	3	rwr	38.0	0.6780398701064405	0.02120783419571593	0.0	0.01	0.022	23	1951
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	17	4	rwr	38.0	0.5361461942550576	0.014044544133970467	0.02	0.01	0.014	23	1968
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	18	0	rwr	38.0	0.607749178532311	0.022843312880597537	0.02	0.04	0.02	24	1850
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	18	1	rwr	38.0	0.6025848142164782	0.024209245236495917	0.06	0.03	0.02	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	18	2	rwr	38.0	0.5850065356676024	0.017454518773791325	0.02	0.01	0.016	23	2052
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	18	3	rwr	38.0	0.6322709857192617	0.01588188331583805	0.0	0.0	0.018	22	2110
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	18	4	rwr	38.0	0.6074689927763391	0.024313128536001663	0.04	0.03	0.022	23	1937
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	19	0	rwr	38.0	0.7067580759673412	0.029635999977534157	0.04	0.03	0.032	24	1902
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	19	1	rwr	38.0	0.5771617755629384	0.02597784985632095	0.04	0.02	0.016	24	1830
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	19	2	rwr	38.0	0.5085709249548319	0.010973583383690444	0.0	0.0	0.012	22	2085
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	19	3	rwr	38.0	0.6173171581652654	0.027645215585140066	0.04	0.06	0.02	22	2109
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	19	4	rwr	38.0	0.6193040780141844	0.017542304434059523	0.02	0.01	0.016	24	1904
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	20	0	rwr	38.0	0.6312708662800914	0.015940306025769894	0.0	0.01	0.018	21	2189
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	20	1	rwr	38.0	0.6519049579216978	0.025887963135646536	0.04	0.04	0.022	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	20	2	rwr	38.0	0.5945007013852359	0.02508202675877716	0.02	0.02	0.02	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	20	3	rwr	38.0	0.603770470153196	0.020705399621585876	0.02	0.04	0.018	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	20	4	rwr	38.0	0.5697567019599008	0.01527169347145016	0.0	0.01	0.018	23	1953
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	21	0	rwr	38.0	0.5773278905560459	0.014063075203489456	0.02	0.01	0.014	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	21	1	rwr	38.0	0.5745741819811743	0.018901344137403478	0.02	0.02	0.018	23	1963
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	21	2	rwr	38.0	0.7130751152490282	0.03872107553139742	0.06	0.05	0.028	23	1947
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	21	3	rwr	38.0	0.5955843469063987	0.017069221673209272	0.0	0.02	0.014	24	1915
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	21	4	rwr	38.0	0.6184505002632965	0.018966216196539785	0.0	0.03	0.014	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	22	0	rwr	38.0	0.6127123118894658	0.015563841072559068	0.0	0.0	0.018	22	2088
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	22	1	rwr	38.0	0.5867721079579971	0.015875487283090017	0.02	0.01	0.014	23	2027
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	22	2	rwr	38.0	0.6274749948969177	0.020162014315318236	0.04	0.02	0.022	23	1940
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	22	3	rwr	38.0	0.56783902829685	0.01610744297687135	0.0	0.0	0.016	24	1897
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	22	4	rwr	38.0	0.6842188061848256	0.031293917165645384	0.06	0.04	0.024	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	23	0	rwr	38.0	0.613590486220818	0.020979814113077304	0.02	0.03	0.02	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	23	1	rwr	38.0	0.6448565912851627	0.02077435110029909	0.0	0.0	0.022	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	23	2	rwr	38.0	0.5974697077690663	0.017036407052115125	0.0	0.02	0.018	23	1975
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	23	3	rwr	38.0	0.4980284775465499	0.011293569149562092	0.0	0.01	0.012	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	23	4	rwr	38.0	0.6864611997798569	0.02838042567098723	0.06	0.04	0.024	23	1998
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	24	0	rwr	38.0	0.6578228550958267	0.021269991254178614	0.04	0.03	0.018	24	1885
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	24	1	rwr	38.0	0.5923782388033123	0.0137882512197607	0.0	0.0	0.016	22	2064
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	24	2	rwr	38.0	0.5729907773386034	0.015837974649658988	0.0	0.02	0.018	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	24	3	rwr	38.0	0.6421219052744886	0.027464097927798824	0.04	0.03	0.024	24	1882
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	24	4	rwr	38.0	0.6076268758676922	0.025731281927746416	0.04	0.03	0.018	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	25	0	rwr	38.0	0.6662618384401114	0.03828321936321964	0.06	0.04	0.026	25	1820
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	25	1	rwr	38.0	0.6227923873060841	0.01695893160055635	0.02	0.01	0.02	23	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	25	2	rwr	38.0	0.5863417832167832	0.014435346386115816	0.0	0.0	0.018	22	2102
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	25	3	rwr	38.0	0.5494432661717921	0.01322945278013376	0.0	0.01	0.012	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	25	4	rwr	38.0	0.6389293920113114	0.026552651902277603	0.04	0.04	0.022	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	26	0	rwr	38.0	0.5729034018555575	0.02946929404755787	0.08	0.05	0.02	23	1935
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	26	1	rwr	38.0	0.6386752693778242	0.019030431866513705	0.0	0.02	0.018	24	1942
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	26	2	rwr	38.0	0.6982353199718706	0.025085197477984857	0.02	0.03	0.024	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	26	3	rwr	38.0	0.6349315667497486	0.023269681003562907	0.02	0.01	0.02	22	2101
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	26	4	rwr	38.0	0.5737809460906006	0.01524755668357502	0.0	0.02	0.01	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	27	0	rwr	38.0	0.567419440042261	0.018664523036587874	0.02	0.03	0.016	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	27	1	rwr	38.0	0.5833442579968537	0.01945099920608725	0.0	0.02	0.02	24	1931
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	27	2	rwr	38.0	0.6376695217701641	0.03418834812378254	0.02	0.03	0.022	24	1892
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	27	3	rwr	38.0	0.6472760343618513	0.019236385641058118	0.02	0.02	0.02	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	27	4	rwr	38.0	0.5939910396748418	0.014028646690524397	0.02	0.01	0.012	21	2083
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	28	0	rwr	38.0	0.6563476742048171	0.024901642439442775	0.0	0.03	0.026	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	28	1	rwr	38.0	0.5869128688667715	0.019561861259842203	0.02	0.03	0.02	23	2015
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	28	2	rwr	38.0	0.5871591651093149	0.01706460602079893	0.02	0.03	0.014	23	1954
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	28	3	rwr	38.0	0.6177269540834209	0.019746391385627494	0.0	0.02	0.018	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	28	4	rwr	38.0	0.6245401996847084	0.015652211931628128	0.0	0.02	0.014	22	2098
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	29	0	rwr	38.0	0.5679717237629146	0.017515593889882733	0.02	0.02	0.018	24	1863
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	29	1	rwr	38.0	0.6673626077586207	0.03413506792694258	0.06	0.05	0.018	24	1880
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	29	2	rwr	38.0	0.6668314004568617	0.027815176540817443	0.04	0.04	0.026	24	1921
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	29	3	rwr	38.0	0.5088309688771583	0.009930272782230902	0.0	0.0	0.008	21	2186
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	29	4	rwr	38.0	0.6403767967830085	0.01995744624948357	0.04	0.02	0.024	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	30	0	rwr	38.0	0.49759765799588807	0.019603829331198266	0.02	0.03	0.012	22	2056
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	30	1	rwr	38.0	0.6540100904662491	0.028325313946104512	0.06	0.04	0.022	24	1940
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	30	2	rwr	38.0	0.6273276185019503	0.017901799828635143	0.0	0.02	0.018	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	30	3	rwr	38.0	0.6199066120435224	0.01911272936636852	0.0	0.01	0.022	23	1997
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	30	4	rwr	38.0	0.6670335718216842	0.0216156739105466	0.0	0.01	0.024	24	1841
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	31	0	rwr	38.0	0.6427743895774587	0.02407888030208591	0.04	0.02	0.018	23	2012
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	31	1	rwr	38.0	0.5566688114716426	0.02117736826578191	0.04	0.04	0.016	23	1915
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	31	2	rwr	38.0	0.6669792783136834	0.026847698315842248	0.0	0.03	0.024	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	31	3	rwr	38.0	0.6008598319919075	0.01862685707044219	0.04	0.02	0.016	22	2089
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	31	4	rwr	38.0	0.6355921052631579	0.018732582205654	0.0	0.0	0.024	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	32	0	rwr	38.0	0.5942549772341754	0.025645292463120674	0.02	0.04	0.02	23	1971
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	32	1	rwr	38.0	0.6017676767676767	0.0182446833625719	0.0	0.03	0.02	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	32	2	rwr	38.0	0.5697060123784261	0.015676225273614116	0.0	0.01	0.014	24	1909
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	32	3	rwr	38.0	0.6194010071561091	0.02041300802307294	0.02	0.04	0.018	22	2080
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	32	4	rwr	38.0	0.6454037800687286	0.020752871378978247	0.0	0.02	0.018	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	33	0	rwr	38.0	0.5999114946343622	0.015831431226246744	0.0	0.01	0.014	23	1988
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	33	1	rwr	38.0	0.6454937784787942	0.027921471162610838	0.04	0.03	0.024	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	33	2	rwr	38.0	0.6333674714547197	0.018922349000287834	0.0	0.03	0.02	22	2108
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	33	3	rwr	38.0	0.6050971314451706	0.020813298423707334	0.02	0.02	0.016	24	1860
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	33	4	rwr	38.0	0.6212083568605307	0.020027070928796888	0.04	0.03	0.014	23	1948
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	34	0	rwr	38.0	0.6231847330262896	0.017342019835302237	0.0	0.01	0.022	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	34	1	rwr	38.0	0.6479542241074585	0.028283864133408256	0.04	0.04	0.022	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	34	2	rwr	38.0	0.5534817505156487	0.013523504435053735	0.0	0.02	0.014	21	2145
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	34	3	rwr	38.0	0.595519516217702	0.020521592715690328	0.04	0.02	0.02	24	1843
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	34	4	rwr	38.0	0.606193340306834	0.024523286224889432	0.04	0.03	0.018	24	1936
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	35	0	rwr	38.0	0.7340399744375151	0.03245621862359507	0.06	0.03	0.03	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	35	1	rwr	38.0	0.5977306166124214	0.014210909403409255	0.0	0.01	0.016	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	35	2	rwr	38.0	0.5889547650417215	0.01667648406737395	0.02	0.02	0.012	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	35	3	rwr	38.0	0.5846961572832887	0.019389299901357803	0.0	0.02	0.02	24	1889
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	35	4	rwr	38.0	0.556677436725902	0.015004161707250455	0.0	0.0	0.014	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	36	0	rwr	38.0	0.6333174904942966	0.022575944641049835	0.02	0.01	0.028	24	1865
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	36	1	rwr	38.0	0.6449866310160428	0.025412423132722132	0.04	0.05	0.022	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	36	2	rwr	38.0	0.4953747256193164	0.011962765202158034	0.0	0.02	0.012	21	2147
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	36	3	rwr	38.0	0.61795245669848	0.01659377740906419	0.0	0.0	0.018	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	36	4	rwr	38.0	0.67171838490599	0.03530495755756394	0.06	0.04	0.022	23	2014
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	37	0	rwr	38.0	0.5322485594552122	0.01363141242624332	0.0	0.01	0.012	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	37	1	rwr	38.0	0.5556814143567874	0.02025217123555827	0.04	0.03	0.016	24	1900
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	37	2	rwr	38.0	0.6341413591175269	0.01489143018382848	0.0	0.01	0.016	21	2119
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	37	3	rwr	38.0	0.7105507836713008	0.02808333734003291	0.02	0.02	0.024	23	1987
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	37	4	rwr	38.0	0.6451191751472951	0.021921433646857696	0.02	0.03	0.022	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	38	0	rwr	38.0	0.5813437614343213	0.017804047811591353	0.0	0.0	0.02	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	38	1	rwr	38.0	0.588260300850229	0.01422870183867779	0.02	0.02	0.014	22	2107
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	38	2	rwr	38.0	0.6129555750895936	0.021786199480282743	0.02	0.03	0.02	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	38	3	rwr	38.0	0.6027091004734351	0.018256564205886856	0.02	0.02	0.016	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	38	4	rwr	38.0	0.6035605110949835	0.022015290560009945	0.02	0.04	0.012	23	2000
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	39	0	rwr	38.0	0.6076953943555219	0.015609888262185663	0.0	0.02	0.018	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	39	1	rwr	38.0	0.6335652134505574	0.01815615723266134	0.0	0.01	0.016	22	2028
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	39	2	rwr	38.0	0.6347440766865617	0.02870497622347422	0.04	0.03	0.024	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	39	3	rwr	38.0	0.626573547163304	0.023598035242059813	0.02	0.03	0.022	24	1957
+string_phys700	intogen_temporal_new	native_string_phys700	0.3	39	4	rwr	38.0	0.5718656453600985	0.015147309964669993	0.0	0.01	0.012	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	0	0	rwr	21.0	0.5899621212121212	0.026284081467738234	0.02	0.02	0.02	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	0	1	rwr	21.0	0.6873345685547909	0.026225876292093275	0.02	0.02	0.028	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	0	2	rwr	21.0	0.5479931373876924	0.015500350178523841	0.0	0.02	0.014	23	1949
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	0	3	rwr	21.0	0.6196138628845695	0.01640866253086732	0.02	0.01	0.016	23	2034
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	0	4	rwr	21.0	0.5956392467789892	0.01845295564770335	0.02	0.04	0.014	22	2040
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	1	0	rwr	21.0	0.5788420490928495	0.01673789840591161	0.02	0.01	0.016	24	1898
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	1	1	rwr	21.0	0.610936132983377	0.020094521712933886	0.0	0.02	0.024	24	1929
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	1	2	rwr	21.0	0.658934457474718	0.03608780642891936	0.04	0.04	0.022	23	1962
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	1	3	rwr	21.0	0.5742061640335089	0.014522495091770301	0.02	0.01	0.012	21	2164
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	1	4	rwr	21.0	0.626315434430653	0.02005985189045459	0.04	0.02	0.022	24	1877
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	2	0	rwr	21.0	0.6244084214250962	0.025901799952515785	0.04	0.04	0.016	23	1989
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	2	1	rwr	21.0	0.6312533086289042	0.01839819807933602	0.0	0.01	0.024	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	2	2	rwr	21.0	0.650654635527247	0.019575492239740176	0.0	0.0	0.024	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	2	3	rwr	21.0	0.5897233893557423	0.019505062691961658	0.02	0.04	0.012	24	1928
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	2	4	rwr	21.0	0.5728081672070083	0.02040260341649578	0.02	0.02	0.014	21	2092
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	3	0	rwr	21.0	0.6913372859025032	0.02862276104791521	0.02	0.03	0.026	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	3	1	rwr	21.0	0.6197625777275296	0.04005148802734929	0.06	0.05	0.022	25	1794
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	3	2	rwr	21.0	0.5084681042228212	0.011040840604523202	0.0	0.01	0.01	21	2141
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	3	3	rwr	21.0	0.6152294503277862	0.01684696267281621	0.02	0.01	0.02	23	2006
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	3	4	rwr	21.0	0.5542427497314715	0.016820249485302953	0.0	0.02	0.018	24	1886
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	4	0	rwr	21.0	0.6739101861993428	0.01891213450625075	0.0	0.01	0.022	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	4	1	rwr	21.0	0.5249504634796274	0.012639401856860539	0.0	0.0	0.014	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	4	2	rwr	21.0	0.6300758289585857	0.025454807999712406	0.04	0.04	0.02	23	1961
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	4	3	rwr	21.0	0.5622599092020255	0.024710499486263846	0.02	0.01	0.016	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	4	4	rwr	21.0	0.6505576208178439	0.023921931286894887	0.04	0.03	0.018	24	1907
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	5	0	rwr	21.0	0.6899499261023978	0.020611453870094575	0.0	0.02	0.02	23	1994
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	5	1	rwr	21.0	0.5977445268361582	0.020637800773138835	0.02	0.04	0.022	24	1912
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	5	2	rwr	21.0	0.6152542372881356	0.016465293415342603	0.02	0.02	0.02	22	2087
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	5	3	rwr	21.0	0.5866775126536514	0.017869425134082993	0.02	0.01	0.014	24	1868
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	5	4	rwr	21.0	0.5460476339425354	0.024435081825828823	0.02	0.01	0.012	23	1969
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	6	0	rwr	21.0	0.6510557967082655	0.027092404348361437	0.04	0.04	0.024	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	6	1	rwr	21.0	0.6150706090026479	0.015414965142472134	0.0	0.02	0.016	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	6	2	rwr	21.0	0.6448529411764706	0.023962794999955774	0.02	0.02	0.026	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	6	3	rwr	21.0	0.4964184008762321	0.010559585942531903	0.0	0.0	0.012	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	6	4	rwr	21.0	0.6906707752768846	0.025607729401330437	0.04	0.03	0.018	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	7	0	rwr	21.0	0.6101644736842105	0.021177479860432072	0.02	0.04	0.022	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	7	1	rwr	21.0	0.5320610016041488	0.010326129190968845	0.0	0.0	0.008	21	2188
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	7	2	rwr	21.0	0.6736565016619449	0.029082549008256818	0.04	0.03	0.022	23	1972
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	7	3	rwr	21.0	0.6411277330264673	0.024551651850762978	0.02	0.03	0.024	25	1763
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	7	4	rwr	21.0	0.6062444543034605	0.016913917445381482	0.0	0.01	0.02	23	1983
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	8	0	rwr	21.0	0.5929039677975848	0.019661181582552534	0.02	0.02	0.02	25	1764
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	8	1	rwr	21.0	0.6170543314150675	0.019679952421105453	0.02	0.01	0.02	23	2010
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	8	2	rwr	21.0	0.5722853397421892	0.014110113011619454	0.0	0.01	0.014	23	2013
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	8	3	rwr	21.0	0.6558727896307515	0.023464184575341406	0.06	0.03	0.022	22	2063
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	8	4	rwr	21.0	0.6013196774121881	0.015617744007044385	0.0	0.01	0.016	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	9	0	rwr	21.0	0.5921599285235649	0.014994378243410792	0.02	0.02	0.014	22	2057
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	9	1	rwr	21.0	0.7022078092243187	0.030151545025822516	0.04	0.04	0.032	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	9	2	rwr	21.0	0.53588644884842	0.014262239930758005	0.0	0.01	0.014	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	9	3	rwr	21.0	0.5025014648217425	0.01079573659733474	0.0	0.0	0.008	22	2039
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	9	4	rwr	21.0	0.6621621621621622	0.023979305874462186	0.04	0.03	0.028	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	10	0	rwr	21.0	0.5799932065217391	0.027681525979924945	0.02	0.02	0.016	24	1864
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	10	1	rwr	21.0	0.6636841640155532	0.032083466638730095	0.08	0.05	0.024	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	10	2	rwr	21.0	0.566040074830392	0.017396747061383777	0.02	0.02	0.02	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	10	3	rwr	21.0	0.620125043721581	0.019989823842405333	0.02	0.03	0.02	24	1930
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	10	4	rwr	21.0	0.5723575077964302	0.01424495484503737	0.0	0.03	0.012	21	2174
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	11	0	rwr	21.0	0.5395676274944567	0.016917826839205174	0.04	0.03	0.016	22	2072
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	11	1	rwr	21.0	0.6588541666666666	0.02316725580330593	0.02	0.04	0.022	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	11	2	rwr	21.0	0.6176387592524257	0.02384158004746636	0.04	0.02	0.018	23	2026
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	11	3	rwr	21.0	0.6710490830636462	0.022104431660241897	0.02	0.01	0.028	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	11	4	rwr	21.0	0.647998998930676	0.024235922745123564	0.02	0.04	0.02	23	1934
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	12	0	rwr	21.0	0.637877988748242	0.029613270731636672	0.04	0.03	0.022	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	12	1	rwr	21.0	0.5963556657662844	0.020394962587686707	0.06	0.03	0.02	22	2075
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	12	2	rwr	21.0	0.5716488756671625	0.012967519935431562	0.0	0.0	0.016	22	2100
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	12	3	rwr	21.0	0.675200936230348	0.023886734119027052	0.02	0.04	0.018	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	12	4	rwr	21.0	0.5836921296296296	0.019789732515516075	0.02	0.02	0.016	24	1824
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	13	0	rwr	21.0	0.6518069261695907	0.02914684360978223	0.04	0.03	0.024	24	1848
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	13	1	rwr	21.0	0.6214877835951134	0.02306740057032229	0.0	0.04	0.024	24	1934
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	13	2	rwr	21.0	0.5875070649102213	0.015769580630549975	0.02	0.01	0.016	22	2113
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	13	3	rwr	21.0	0.6204148719111313	0.01640631768058706	0.02	0.01	0.016	22	2027
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	13	4	rwr	21.0	0.6027180644019816	0.022359985066707277	0.02	0.03	0.018	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	14	0	rwr	21.0	0.5972003843466107	0.01822438337339273	0.02	0.02	0.018	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	14	1	rwr	21.0	0.7090017825311943	0.03377036189185409	0.04	0.02	0.024	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	14	2	rwr	21.0	0.5670656574546735	0.01723088245268463	0.02	0.02	0.018	23	1999
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	14	3	rwr	21.0	0.6001792608935466	0.02522842188973374	0.04	0.04	0.024	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	14	4	rwr	21.0	0.5594295473196265	0.011523871833247344	0.0	0.0	0.014	21	2168
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	15	0	rwr	21.0	0.5560379109225875	0.03318981352448021	0.04	0.04	0.016	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	15	1	rwr	21.0	0.6884057971014492	0.023559563597180488	0.02	0.03	0.028	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	15	2	rwr	21.0	0.5771193866374589	0.013469505645415103	0.0	0.0	0.014	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	15	3	rwr	21.0	0.5847657566565555	0.019182076290233583	0.04	0.03	0.012	23	1958
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	15	4	rwr	21.0	0.6632207207207207	0.02297634112929613	0.04	0.02	0.026	24	1874
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	16	0	rwr	21.0	0.6547779575692197	0.025157912642650562	0.04	0.03	0.02	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	16	1	rwr	21.0	0.5915863277826467	0.02302554256139117	0.04	0.03	0.01	21	2140
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	16	2	rwr	21.0	0.6086995840115753	0.0204154277820088	0.0	0.02	0.028	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	16	3	rwr	21.0	0.5979297283176593	0.022452519790538875	0.04	0.03	0.02	24	1938
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	16	4	rwr	21.0	0.6153905154277699	0.017377032113477173	0.0	0.03	0.016	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	17	0	rwr	21.0	0.6044091710758378	0.027293070060770024	0.02	0.01	0.02	24	1914
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	17	1	rwr	21.0	0.5933346624136098	0.022784573609646967	0.04	0.03	0.016	24	1905
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	17	2	rwr	21.0	0.6351888449714537	0.01827831174051827	0.02	0.02	0.016	22	2092
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	17	3	rwr	21.0	0.6854816886162727	0.02141478082282975	0.0	0.01	0.024	23	1951
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	17	4	rwr	21.0	0.5286352967475132	0.013527493491020868	0.02	0.01	0.012	23	1968
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	18	0	rwr	21.0	0.605421686746988	0.023436399678324282	0.02	0.04	0.02	24	1850
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	18	1	rwr	21.0	0.6010366182014001	0.02332416169850607	0.06	0.03	0.022	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	18	2	rwr	21.0	0.586785094392183	0.018662971794836905	0.02	0.01	0.016	23	2052
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	18	3	rwr	21.0	0.634545889933821	0.0162388081491342	0.0	0.01	0.022	22	2110
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	18	4	rwr	21.0	0.6088546635773022	0.026625343672593015	0.04	0.03	0.02	23	1937
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	19	0	rwr	21.0	0.70476127085552	0.02866890657683367	0.04	0.03	0.032	24	1902
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	19	1	rwr	21.0	0.5678179217423404	0.025337003470213764	0.04	0.02	0.016	24	1830
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	19	2	rwr	21.0	0.5108183140175384	0.011078729345085914	0.0	0.0	0.012	22	2085
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	19	3	rwr	21.0	0.6197129415864442	0.026965556384743315	0.02	0.05	0.02	22	2109
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	19	4	rwr	21.0	0.6152482269503546	0.01825876857629577	0.02	0.01	0.016	24	1904
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	20	0	rwr	21.0	0.6346314356000702	0.015936276972779814	0.0	0.02	0.02	21	2189
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	20	1	rwr	21.0	0.6545577204537139	0.02771894091064732	0.04	0.04	0.022	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	20	2	rwr	21.0	0.5867306680694371	0.024577087715286598	0.02	0.02	0.014	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	20	3	rwr	21.0	0.598190702588484	0.01933854362656156	0.02	0.03	0.018	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	20	4	rwr	21.0	0.5741946384320793	0.015370472889102042	0.0	0.02	0.018	23	1953
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	21	0	rwr	21.0	0.571590909090909	0.01372793862150638	0.02	0.02	0.012	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	21	1	rwr	21.0	0.5840990587180637	0.020344131087675126	0.02	0.04	0.018	23	1963
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	21	2	rwr	21.0	0.7161936183675315	0.03913684196012926	0.06	0.04	0.026	23	1947
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	21	3	rwr	21.0	0.5810748281332628	0.016558714383889117	0.0	0.02	0.012	24	1915
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	21	4	rwr	21.0	0.620096103212217	0.020288283748475598	0.02	0.03	0.016	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	22	0	rwr	21.0	0.6151544486491244	0.015871006951785626	0.0	0.01	0.016	22	2088
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	22	1	rwr	21.0	0.579677601319101	0.015713627105009547	0.02	0.01	0.016	23	2027
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	22	2	rwr	21.0	0.6263863373477581	0.019348765713757154	0.04	0.02	0.02	23	1940
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	22	3	rwr	21.0	0.5746907812778075	0.016160973633974705	0.0	0.02	0.016	24	1897
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	22	4	rwr	21.0	0.6905339805825244	0.031146950754258215	0.06	0.04	0.024	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	23	0	rwr	21.0	0.6101676320870634	0.019898227798268334	0.02	0.02	0.02	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	23	1	rwr	21.0	0.6498552123552124	0.02115925191716907	0.0	0.01	0.024	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	23	2	rwr	21.0	0.5972692444761225	0.01681305489474957	0.0	0.03	0.018	23	1975
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	23	3	rwr	21.0	0.5019934282584885	0.01164475817063967	0.02	0.01	0.01	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	23	4	rwr	21.0	0.6827627958172813	0.028551573544707675	0.06	0.04	0.024	23	1998
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	24	0	rwr	21.0	0.6568377216550242	0.020724094900066374	0.04	0.03	0.018	24	1885
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	24	1	rwr	21.0	0.5917994835722554	0.013887431239230282	0.0	0.0	0.016	22	2064
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	24	2	rwr	21.0	0.5680720245937638	0.015156665339620227	0.0	0.01	0.016	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	24	3	rwr	21.0	0.6456202906350914	0.027826566259204023	0.04	0.03	0.026	24	1882
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	24	4	rwr	21.0	0.6080455717402322	0.025875218881902248	0.04	0.03	0.018	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	25	0	rwr	21.0	0.668924791086351	0.039882183838340246	0.06	0.04	0.028	25	1820
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	25	1	rwr	21.0	0.6324796088555826	0.017633359696734054	0.0	0.01	0.02	23	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	25	2	rwr	21.0	0.5803103146853147	0.014056389861591297	0.0	0.01	0.016	22	2102
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	25	3	rwr	21.0	0.5417218981972428	0.012827996330617479	0.0	0.01	0.01	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	25	4	rwr	21.0	0.6449606751502297	0.026156882851292404	0.02	0.04	0.024	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	26	0	rwr	21.0	0.5877751500818629	0.029278897943179463	0.06	0.04	0.02	23	1935
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	26	1	rwr	21.0	0.6278132603406326	0.019701162979638656	0.02	0.02	0.016	24	1942
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	26	2	rwr	21.0	0.7022349683544304	0.02542745606012843	0.02	0.03	0.024	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	26	3	rwr	21.0	0.6284161965980148	0.02625001067054368	0.02	0.01	0.02	22	2101
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	26	4	rwr	21.0	0.5779716218370647	0.015636925009285835	0.0	0.02	0.014	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	27	0	rwr	21.0	0.5786670188413454	0.0192894971924946	0.02	0.03	0.016	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	27	1	rwr	21.0	0.5747465478063276	0.018802360095232173	0.0	0.03	0.02	24	1931
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	27	2	rwr	21.0	0.6296283904354033	0.0330118132412591	0.02	0.02	0.022	24	1892
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	27	3	rwr	21.0	0.6426082573632539	0.019727126456109273	0.02	0.02	0.018	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	27	4	rwr	21.0	0.5879636044524502	0.014347318101637106	0.02	0.02	0.012	21	2083
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	28	0	rwr	21.0	0.6556582092296379	0.02369779008946547	0.0	0.02	0.026	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	28	1	rwr	21.0	0.5936899773005063	0.019466241333198905	0.04	0.03	0.02	23	2015
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	28	2	rwr	21.0	0.5954900592168959	0.017092840633425168	0.02	0.03	0.012	23	1954
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	28	3	rwr	21.0	0.59982912723449	0.018749414867219327	0.0	0.02	0.018	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	28	4	rwr	21.0	0.6328603958661763	0.016236805721594118	0.0	0.02	0.016	22	2098
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	29	0	rwr	21.0	0.5634969186151895	0.017426183694783416	0.0	0.02	0.018	24	1863
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	29	1	rwr	21.0	0.6696300287356323	0.034258092318363825	0.04	0.04	0.022	24	1880
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	29	2	rwr	21.0	0.6556075382182394	0.026728334143685518	0.04	0.04	0.026	24	1921
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	29	3	rwr	21.0	0.5086330144066864	0.009861523781667159	0.0	0.0	0.008	21	2186
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	29	4	rwr	21.0	0.6439537002066162	0.020889599153232394	0.04	0.02	0.024	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	30	0	rwr	21.0	0.496368552784482	0.027336660446147874	0.02	0.03	0.012	22	2056
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	30	1	rwr	21.0	0.6447459986082116	0.02959559332029361	0.06	0.03	0.022	24	1940
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	30	2	rwr	21.0	0.6194495251107339	0.01750430924296649	0.02	0.02	0.016	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	30	3	rwr	21.0	0.6184969825117836	0.01894333879617572	0.0	0.01	0.02	23	1997
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	30	4	rwr	21.0	0.6751972115208218	0.021965354323866718	0.0	0.02	0.024	24	1841
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	31	0	rwr	21.0	0.6508404922727173	0.026873052126403882	0.04	0.02	0.018	23	2012
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	31	1	rwr	21.0	0.5618852835738579	0.021772712258836063	0.04	0.04	0.018	23	1915
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	31	2	rwr	21.0	0.6661754197927832	0.025294812380791162	0.0	0.02	0.026	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	31	3	rwr	21.0	0.5965826626203985	0.01919966371186002	0.04	0.03	0.018	22	2089
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	31	4	rwr	21.0	0.6321491228070175	0.018132807051140114	0.0	0.0	0.02	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	32	0	rwr	21.0	0.6014641549861619	0.028809932642328645	0.02	0.04	0.018	23	1971
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	32	1	rwr	21.0	0.608596837944664	0.018516853708045445	0.0	0.03	0.02	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	32	2	rwr	21.0	0.5676503094606543	0.015342523189318594	0.0	0.01	0.014	24	1909
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	32	3	rwr	21.0	0.6175457195865359	0.02127094634903324	0.04	0.04	0.02	22	2080
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	32	4	rwr	21.0	0.6325850063302587	0.019953713148712394	0.0	0.02	0.018	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	33	0	rwr	21.0	0.5955304790352915	0.015456293103084315	0.0	0.01	0.014	23	1988
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	33	1	rwr	21.0	0.6471586926042762	0.029479728068723697	0.04	0.02	0.024	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	33	2	rwr	21.0	0.6343916150963131	0.018916332305968016	0.0	0.03	0.018	22	2108
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	33	3	rwr	21.0	0.6015114379084967	0.020389567782467893	0.02	0.02	0.018	24	1860
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	33	4	rwr	21.0	0.6209034443817052	0.021620195807577097	0.04	0.03	0.016	23	1948
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	34	0	rwr	21.0	0.6228101104034907	0.017243321915588607	0.0	0.01	0.018	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	34	1	rwr	21.0	0.6514227642276422	0.027569965825823863	0.04	0.04	0.026	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	34	2	rwr	21.0	0.5540646578782171	0.01506394307448005	0.02	0.02	0.01	21	2145
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	34	3	rwr	21.0	0.588899578522998	0.020521777200861267	0.04	0.03	0.022	24	1843
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	34	4	rwr	21.0	0.6056703277545328	0.02506043844436664	0.04	0.03	0.016	24	1936
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	35	0	rwr	21.0	0.7265034487317923	0.03077910461629138	0.04	0.03	0.026	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	35	1	rwr	21.0	0.5972513264077757	0.014731456177195904	0.0	0.01	0.018	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	35	2	rwr	21.0	0.5981554677206851	0.01748003103142461	0.02	0.02	0.014	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	35	3	rwr	21.0	0.5791108132260947	0.01807408561828114	0.0	0.02	0.02	24	1889
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	35	4	rwr	21.0	0.564721324717286	0.015062198970842395	0.0	0.0	0.014	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	36	0	rwr	21.0	0.6282477820025348	0.021830314655488733	0.02	0.02	0.026	24	1865
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	36	1	rwr	21.0	0.6484402852049911	0.024682119161176186	0.02	0.04	0.022	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	36	2	rwr	21.0	0.49647224835371595	0.01303293703102586	0.02	0.02	0.012	21	2147
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	36	3	rwr	21.0	0.6185268646164722	0.016594126853840166	0.0	0.0	0.018	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	36	4	rwr	21.0	0.6666739457995764	0.03360065896254179	0.06	0.04	0.022	23	2014
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	37	0	rwr	21.0	0.5382290029683954	0.013800057624746257	0.0	0.01	0.008	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	37	1	rwr	21.0	0.5558368869936035	0.020352803332885666	0.04	0.04	0.016	24	1900
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	37	2	rwr	21.0	0.6318035317082029	0.015301404598094044	0.0	0.01	0.02	21	2119
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	37	3	rwr	21.0	0.6928849729921189	0.026592855202786488	0.02	0.02	0.026	23	1987
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	37	4	rwr	21.0	0.6408900196393501	0.021083462171927147	0.02	0.02	0.022	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	38	0	rwr	21.0	0.5725164654226125	0.017302314625570397	0.0	0.02	0.02	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	38	1	rwr	21.0	0.5792783954654459	0.015023350141230643	0.02	0.02	0.014	22	2107
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	38	2	rwr	21.0	0.6105889512475489	0.021169313381328533	0.02	0.03	0.02	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	38	3	rwr	21.0	0.5978213221111697	0.01729524401866652	0.02	0.01	0.016	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	38	4	rwr	21.0	0.6013393151679092	0.022278696511668226	0.02	0.04	0.012	23	2000
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	39	0	rwr	21.0	0.6116634713986357	0.016454938779630418	0.02	0.02	0.014	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	39	1	rwr	21.0	0.62731124807396	0.017435790107527195	0.0	0.02	0.018	22	2028
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	39	2	rwr	21.0	0.6311493941038162	0.02867067218226218	0.04	0.02	0.024	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	39	3	rwr	21.0	0.6200422486635626	0.023146886638212166	0.02	0.03	0.022	24	1957
+string_phys700	intogen_temporal_new	native_string_phys700	0.5	39	4	rwr	21.0	0.5785129424194401	0.015479826137732088	0.0	0.01	0.014	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	0	0	rwr	13.0	0.5937277183600713	0.028319568235032677	0.02	0.02	0.02	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	0	1	rwr	13.0	0.6759087700723487	0.025477628801783673	0.02	0.02	0.026	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	0	2	rwr	13.0	0.5451374779899769	0.01513644518368797	0.02	0.02	0.014	23	1949
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	0	3	rwr	13.0	0.6136466823773593	0.016320007299636265	0.02	0.01	0.014	23	2034
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	0	4	rwr	13.0	0.5960221641589332	0.019052015400542695	0.02	0.04	0.012	22	2040
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	1	0	rwr	13.0	0.5743062966915689	0.016803768571672543	0.02	0.01	0.014	24	1898
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	1	1	rwr	13.0	0.6143700787401576	0.020054556048448434	0.0	0.02	0.024	24	1929
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	1	2	rwr	13.0	0.6591362647711729	0.03779665566393991	0.06	0.05	0.02	23	1962
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	1	3	rwr	13.0	0.5743839299602249	0.015323275818692535	0.02	0.01	0.014	21	2164
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	1	4	rwr	13.0	0.6226951789890268	0.019473199373556266	0.04	0.02	0.022	24	1877
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	2	0	rwr	13.0	0.6226613295590252	0.02648871573490807	0.04	0.04	0.018	23	1989
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	2	1	rwr	13.0	0.6365029998235399	0.01828209964752922	0.0	0.01	0.022	24	1913
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	2	2	rwr	13.0	0.6443957891012031	0.01893139157877067	0.0	0.0	0.024	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	2	3	rwr	13.0	0.5777639180672269	0.019072473189035006	0.02	0.04	0.012	24	1928
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	2	4	rwr	13.0	0.5760502172863351	0.022009233014459152	0.02	0.02	0.014	21	2092
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	3	0	rwr	13.0	0.6861550285463329	0.029200781388484944	0.02	0.04	0.024	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	3	1	rwr	13.0	0.617863199547767	0.04385833537296413	0.06	0.05	0.02	25	1794
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	3	2	rwr	13.0	0.49885444743935314	0.010939380390210352	0.0	0.01	0.01	21	2141
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	3	3	rwr	13.0	0.6129491986230788	0.01667382070150579	0.02	0.01	0.018	23	2006
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	3	4	rwr	13.0	0.5547798066595059	0.016794331226677325	0.0	0.02	0.018	24	1886
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	4	0	rwr	13.0	0.668828039430449	0.01893088895101501	0.0	0.01	0.022	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	4	1	rwr	13.0	0.5269091488828661	0.012508720364738329	0.0	0.0	0.014	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	4	2	rwr	13.0	0.6286400143581459	0.026027649248460225	0.04	0.04	0.02	23	1961
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	4	3	rwr	13.0	0.5493168325475817	0.024270683493488023	0.02	0.01	0.014	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	4	4	rwr	13.0	0.6485661178969729	0.023873037625384154	0.04	0.03	0.018	24	1907
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	5	0	rwr	13.0	0.6839278229986985	0.020255532796926327	0.0	0.02	0.02	23	1994
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	5	1	rwr	13.0	0.5991128177966101	0.02100027721719631	0.0	0.04	0.022	24	1912
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	5	2	rwr	13.0	0.6083204930662558	0.01652634603490951	0.02	0.02	0.012	22	2087
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	5	3	rwr	13.0	0.5873101952277657	0.01819629576896645	0.02	0.01	0.014	24	1868
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	5	4	rwr	13.0	0.5528620581795434	0.024479828398692186	0.02	0.01	0.012	23	1969
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	6	0	rwr	13.0	0.651892295170917	0.027184129905998344	0.04	0.04	0.026	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	6	1	rwr	13.0	0.6206531332744925	0.015701630577921566	0.0	0.02	0.016	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	6	2	rwr	13.0	0.6488190730837791	0.02374157648362423	0.0	0.02	0.026	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	6	3	rwr	13.0	0.49376779846659374	0.010553131778458156	0.0	0.0	0.012	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	6	4	rwr	13.0	0.6873883529832083	0.02582041365976268	0.06	0.03	0.02	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	7	0	rwr	13.0	0.6097697368421052	0.021240409529607852	0.02	0.04	0.022	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	7	1	rwr	13.0	0.5310062188234776	0.01031859335368536	0.0	0.0	0.008	21	2188
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	7	2	rwr	13.0	0.6751957525598411	0.0301758701748369	0.06	0.03	0.022	23	1972
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	7	3	rwr	13.0	0.6358342922899886	0.024430186390402675	0.02	0.03	0.024	25	1763
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	7	4	rwr	13.0	0.6117679680567879	0.017004759908449043	0.0	0.01	0.02	23	1983
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	8	0	rwr	13.0	0.5848993674525589	0.019122478017428904	0.0	0.02	0.022	25	1764
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	8	1	rwr	13.0	0.6171856195706877	0.01973154691555202	0.02	0.01	0.018	23	2010
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	8	2	rwr	13.0	0.5748197509285558	0.014209953359061396	0.0	0.01	0.014	23	2013
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	8	3	rwr	13.0	0.6585898178254866	0.023328900450070467	0.04	0.03	0.02	22	2063
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	8	4	rwr	13.0	0.6009642087489725	0.01562522669154889	0.0	0.01	0.014	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	9	0	rwr	13.0	0.5893008711190529	0.014789495500244876	0.02	0.02	0.014	22	2057
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	9	1	rwr	13.0	0.7067719252271139	0.030577709377903037	0.04	0.04	0.032	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	9	2	rwr	13.0	0.5282315657918228	0.014088662033399812	0.0	0.01	0.014	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	9	3	rwr	13.0	0.5007211430116735	0.01077183777479929	0.0	0.0	0.006	22	2039
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	9	4	rwr	13.0	0.6592474827768945	0.02348907713608133	0.04	0.03	0.026	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	10	0	rwr	13.0	0.5787250905797101	0.02782346118125414	0.02	0.02	0.016	24	1864
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	10	1	rwr	13.0	0.6546151466949452	0.03183170405256476	0.08	0.04	0.026	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	10	2	rwr	13.0	0.5598755832037325	0.01733627530528801	0.02	0.02	0.018	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	10	3	rwr	13.0	0.6197315494928296	0.019815652066942385	0.02	0.03	0.02	24	1930
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	10	4	rwr	13.0	0.5740384402716033	0.014727127654335646	0.0	0.03	0.01	21	2174
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	11	0	rwr	13.0	0.5477716186252771	0.01715448046214237	0.04	0.03	0.016	22	2072
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	11	1	rwr	13.0	0.657293864275668	0.023150749122008693	0.02	0.04	0.018	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	11	2	rwr	13.0	0.6133517115630902	0.024411213514601206	0.04	0.02	0.02	23	2026
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	11	3	rwr	13.0	0.6639248471772743	0.02171908418204896	0.02	0.01	0.022	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	11	4	rwr	13.0	0.6480445020817692	0.024453830828014857	0.02	0.04	0.02	23	1934
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	12	0	rwr	13.0	0.6398118846694796	0.030671259503498863	0.04	0.04	0.02	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	12	1	rwr	13.0	0.5974184120798831	0.020131666697907388	0.02	0.03	0.02	22	2075
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	12	2	rwr	13.0	0.5714520080496981	0.012879062324173008	0.0	0.0	0.018	22	2100
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	12	3	rwr	13.0	0.6692170111287759	0.023952510199355622	0.02	0.04	0.018	24	1911
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	12	4	rwr	13.0	0.5839699074074074	0.019845272548289487	0.02	0.02	0.018	24	1824
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	13	0	rwr	13.0	0.6611042580409356	0.030799310469352328	0.04	0.03	0.022	24	1848
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	13	1	rwr	13.0	0.6152268760907504	0.022637701682355058	0.0	0.04	0.022	24	1934
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	13	2	rwr	13.0	0.5888548323985914	0.01613557584417873	0.02	0.02	0.016	22	2113
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	13	3	rwr	13.0	0.6140444343686239	0.016134545045640453	0.0	0.01	0.016	22	2027
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	13	4	rwr	13.0	0.5953534147204529	0.023156697384996264	0.06	0.03	0.018	24	1908
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	14	0	rwr	13.0	0.6000393081761006	0.018740183962501204	0.02	0.02	0.018	24	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	14	1	rwr	13.0	0.7035762032085562	0.03371128946098926	0.04	0.03	0.026	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	14	2	rwr	13.0	0.5683858475620489	0.01773148764242856	0.02	0.02	0.016	23	1999
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	14	3	rwr	13.0	0.6044769259054973	0.025932329411924946	0.04	0.04	0.022	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	14	4	rwr	13.0	0.543859649122807	0.011159071699162425	0.0	0.01	0.014	21	2168
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	15	0	rwr	13.0	0.5632842877341817	0.032692562829838165	0.02	0.04	0.016	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	15	1	rwr	13.0	0.6796129374337222	0.023294304160599456	0.02	0.03	0.022	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	15	2	rwr	13.0	0.5814567360350493	0.013851366488861335	0.0	0.01	0.014	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	15	3	rwr	13.0	0.5778901247050893	0.019227708107752185	0.02	0.03	0.012	23	1958
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	15	4	rwr	13.0	0.6557432432432433	0.02217894804790173	0.04	0.02	0.028	24	1874
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	16	0	rwr	13.0	0.645676015821647	0.025259658543530975	0.04	0.03	0.02	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	16	1	rwr	13.0	0.6078900649452796	0.025687106221518402	0.04	0.03	0.012	21	2140
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	16	2	rwr	13.0	0.6098299873394828	0.02021476004464106	0.02	0.01	0.026	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	16	3	rwr	13.0	0.588394723092999	0.02204522033835958	0.04	0.03	0.02	24	1938
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	16	4	rwr	13.0	0.6105912517531558	0.017143306636060847	0.0	0.03	0.016	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	17	0	rwr	13.0	0.600705467372134	0.027396076798878052	0.02	0.02	0.02	24	1914
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	17	1	rwr	13.0	0.5833444090023038	0.02505041608935695	0.04	0.03	0.014	24	1905
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	17	2	rwr	13.0	0.6392951251646903	0.01826103737112547	0.02	0.02	0.016	22	2092
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	17	3	rwr	13.0	0.6917508569366769	0.02181429106476319	0.0	0.01	0.026	23	1951
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	17	4	rwr	13.0	0.5239856935285571	0.01304818151204148	0.02	0.01	0.012	23	1968
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	18	0	rwr	13.0	0.600355969331873	0.02328787098061259	0.02	0.04	0.02	24	1850
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	18	1	rwr	13.0	0.6033813498474242	0.02275222115291546	0.06	0.03	0.022	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	18	2	rwr	13.0	0.5854136756166027	0.01912917543597892	0.02	0.01	0.016	23	2052
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	18	3	rwr	13.0	0.6351663183559735	0.016501290820011765	0.0	0.02	0.022	22	2110
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	18	4	rwr	13.0	0.6079005951569669	0.026496474805624018	0.02	0.03	0.018	23	1937
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	19	0	rwr	13.0	0.7012557685481009	0.02795922564375248	0.04	0.03	0.03	24	1902
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	19	1	rwr	13.0	0.5576550387596899	0.02456056174763794	0.04	0.02	0.016	24	1830
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	19	2	rwr	13.0	0.5108183140175384	0.01112585449180355	0.0	0.0	0.014	22	2085
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	19	3	rwr	13.0	0.6221522847061898	0.025952492692192127	0.04	0.05	0.02	22	2109
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	19	4	rwr	13.0	0.6107047872340425	0.01822774003630092	0.02	0.01	0.016	24	1904
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	20	0	rwr	13.0	0.6345875065893516	0.015828733968214395	0.0	0.02	0.022	21	2189
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	20	1	rwr	13.0	0.6563186059275521	0.029529133128697052	0.04	0.04	0.022	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	20	2	rwr	13.0	0.5793442048044888	0.02421359756225419	0.02	0.02	0.014	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	20	3	rwr	13.0	0.5934583553442507	0.018770961387862564	0.0	0.03	0.02	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	20	4	rwr	13.0	0.575275963054742	0.015511806360106043	0.0	0.02	0.018	23	1953
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	21	0	rwr	13.0	0.5675088261253309	0.013463733920695277	0.0	0.02	0.012	22	2082
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	21	1	rwr	13.0	0.5915396683101748	0.021345891237621647	0.02	0.03	0.018	23	1963
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	21	2	rwr	13.0	0.7155156829069873	0.041042414605625556	0.04	0.04	0.026	23	1947
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	21	3	rwr	13.0	0.5690661907280099	0.016040794510737432	0.0	0.02	0.012	24	1915
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	21	4	rwr	13.0	0.6175509039845533	0.02146367600700022	0.06	0.03	0.016	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	22	0	rwr	13.0	0.6170685558391269	0.01607715209143819	0.0	0.03	0.016	22	2088
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	22	1	rwr	13.0	0.5711077844311376	0.015487618304644398	0.02	0.01	0.018	23	2027
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	22	2	rwr	13.0	0.6222585108071943	0.0184954479155807	0.02	0.02	0.02	23	1940
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	22	3	rwr	13.0	0.5757585869371774	0.01618368429502443	0.0	0.02	0.014	24	1897
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	22	4	rwr	13.0	0.6955007191657677	0.032192810260038944	0.04	0.04	0.026	24	1878
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	23	0	rwr	13.0	0.6032341583289451	0.019245109847307103	0.02	0.02	0.02	24	1923
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	23	1	rwr	13.0	0.6504527486670343	0.021332711657469302	0.0	0.01	0.022	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	23	2	rwr	13.0	0.5981824661439772	0.016675400593446143	0.0	0.03	0.018	23	1975
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	23	3	rwr	13.0	0.5071851040525739	0.011725335104994381	0.02	0.01	0.008	22	2097
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	23	4	rwr	13.0	0.6766868464501926	0.028852077821099855	0.06	0.04	0.026	23	1998
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	24	0	rwr	13.0	0.6502104603259896	0.0199770457951594	0.0	0.03	0.016	24	1885
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	24	1	rwr	13.0	0.5903971151277714	0.01392621174347539	0.0	0.0	0.016	22	2064
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	24	2	rwr	13.0	0.5621651295564339	0.014871559132250033	0.0	0.01	0.016	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	24	3	rwr	13.0	0.6473246322210262	0.028064431304751825	0.04	0.04	0.022	24	1882
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	24	4	rwr	13.0	0.6096322087309107	0.02619350529339834	0.02	0.03	0.018	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	25	0	rwr	13.0	0.6682451253481894	0.04289813267863217	0.06	0.04	0.028	25	1820
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	25	1	rwr	13.0	0.6403162055335968	0.018171802520317838	0.0	0.01	0.022	23	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	25	2	rwr	13.0	0.5757867132867134	0.013803418549953796	0.0	0.01	0.016	22	2102
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	25	3	rwr	13.0	0.5350057440791799	0.012682223640902532	0.0	0.01	0.01	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	25	4	rwr	13.0	0.6491803640862495	0.026825952119555106	0.02	0.04	0.024	23	1991
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	26	0	rwr	13.0	0.5999863561942878	0.029492583493120325	0.04	0.04	0.02	23	1935
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	26	1	rwr	13.0	0.6169946993395898	0.02062260479035867	0.04	0.03	0.016	24	1942
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	26	2	rwr	13.0	0.704454553445851	0.025631619721862675	0.02	0.03	0.026	24	1920
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	26	3	rwr	13.0	0.6206108706108706	0.026438078269171484	0.02	0.02	0.018	22	2101
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	26	4	rwr	13.0	0.5806135695902703	0.0160810861996865	0.0	0.02	0.016	23	1932
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	27	0	rwr	13.0	0.5834874097552386	0.01950523831839976	0.02	0.03	0.016	24	1917
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	27	1	rwr	13.0	0.5678421604614577	0.018545559325908977	0.0	0.03	0.02	24	1931
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	27	2	rwr	13.0	0.6195797644539615	0.03186908973094102	0.02	0.02	0.02	24	1892
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	27	3	rwr	13.0	0.6353764901823282	0.019425405273083084	0.02	0.03	0.018	23	2007
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	27	4	rwr	13.0	0.5797884624266778	0.014395563020012247	0.02	0.02	0.012	21	2083
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	28	0	rwr	13.0	0.656715388858246	0.023600800146503096	0.0	0.02	0.022	24	1837
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	28	1	rwr	13.0	0.5955779640300332	0.019740693577015272	0.04	0.03	0.02	23	2015
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	28	2	rwr	13.0	0.601794519622633	0.017010322738443134	0.0	0.03	0.012	23	1954
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	28	3	rwr	13.0	0.5842753242201192	0.017996601608102937	0.02	0.02	0.016	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	28	4	rwr	13.0	0.6379838850937117	0.016983789265883655	0.02	0.02	0.016	22	2098
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	29	0	rwr	13.0	0.5578665941634946	0.017574089515466833	0.0	0.02	0.018	24	1863
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	29	1	rwr	13.0	0.6731097341954022	0.034899730977743605	0.04	0.04	0.022	24	1880
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	29	2	rwr	13.0	0.6414623967668247	0.02620137962554142	0.04	0.04	0.02	24	1921
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	29	3	rwr	13.0	0.505553722643792	0.009765860955043	0.0	0.0	0.008	21	2186
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	29	4	rwr	13.0	0.644109217746773	0.021060478035399618	0.04	0.02	0.024	23	1980
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	30	0	rwr	13.0	0.4959439528023598	0.03491255801700047	0.02	0.03	0.012	22	2056
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	30	1	rwr	13.0	0.63767832289492	0.029125643278122695	0.06	0.03	0.022	24	1940
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	30	2	rwr	13.0	0.6153396945723792	0.017237754185928354	0.02	0.03	0.016	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	30	3	rwr	13.0	0.6135412536892648	0.018430147899019745	0.0	0.01	0.018	23	1997
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	30	4	rwr	13.0	0.6788433314988076	0.02188804431943556	0.0	0.01	0.024	24	1841
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	31	0	rwr	13.0	0.6526766782521258	0.026966184935912584	0.02	0.02	0.02	23	2012
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	31	1	rwr	13.0	0.564206268958544	0.02189291527237757	0.04	0.04	0.018	23	1915
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	31	2	rwr	13.0	0.6655948553054662	0.024061620563928424	0.0	0.02	0.028	24	1890
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	31	3	rwr	13.0	0.5902383779742271	0.01958776685174645	0.04	0.03	0.018	22	2089
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	31	4	rwr	13.0	0.6300657894736843	0.017698537489484058	0.0	0.0	0.018	24	1924
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	32	0	rwr	13.0	0.6076912775645031	0.02864921919652487	0.02	0.03	0.018	23	1971
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	32	1	rwr	13.0	0.6161945542380325	0.01893270189162076	0.0	0.03	0.018	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	32	2	rwr	13.0	0.564445181255526	0.015193242611751279	0.0	0.01	0.012	24	1909
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	32	3	rwr	13.0	0.6160217333686722	0.021884385982688895	0.04	0.04	0.018	22	2080
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	32	4	rwr	13.0	0.623180050642069	0.01935691818605418	0.0	0.02	0.018	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	33	0	rwr	13.0	0.593428476601394	0.01597619823856232	0.0	0.03	0.012	23	1988
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	33	1	rwr	13.0	0.6466329302488608	0.030292669465707567	0.04	0.02	0.024	24	1926
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	33	2	rwr	13.0	0.6325176501350999	0.018623084066502336	0.0	0.03	0.018	22	2108
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	33	3	rwr	13.0	0.5986746550472041	0.02035683654319884	0.02	0.02	0.018	24	1860
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	33	4	rwr	13.0	0.6199661208356861	0.02298462936180069	0.04	0.03	0.014	23	1948
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	34	0	rwr	13.0	0.6169483681879283	0.01688534019033685	0.0	0.01	0.02	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	34	1	rwr	13.0	0.6514669494521033	0.027472351289511032	0.04	0.05	0.026	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	34	2	rwr	13.0	0.5534593310017039	0.01581330260704751	0.02	0.02	0.01	21	2145
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	34	3	rwr	13.0	0.5787520615722925	0.02027269290102818	0.02	0.03	0.02	24	1843
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	34	4	rwr	13.0	0.6044281729428174	0.024629092827915425	0.04	0.03	0.016	24	1936
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	35	0	rwr	13.0	0.7145595980519623	0.02948018604795983	0.02	0.03	0.024	23	1996
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	35	1	rwr	13.0	0.5961144054572205	0.01510873771107481	0.0	0.01	0.018	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	35	2	rwr	13.0	0.6027448397013615	0.018210012667373224	0.02	0.02	0.014	23	2003
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	35	3	rwr	13.0	0.5784182305630027	0.017430866897588135	0.0	0.02	0.02	24	1889
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	35	4	rwr	13.0	0.5692200682103752	0.015062260431945878	0.0	0.0	0.018	24	1881
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	36	0	rwr	13.0	0.624287072243346	0.021099439297470626	0.0	0.02	0.026	24	1865
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	36	1	rwr	13.0	0.6462789661319073	0.023936858518644098	0.02	0.04	0.02	24	1894
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	36	2	rwr	13.0	0.49594588540966716	0.013280182682965897	0.02	0.02	0.012	21	2147
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	36	3	rwr	13.0	0.6197419582891481	0.016564603408005436	0.0	0.0	0.018	24	1910
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	36	4	rwr	13.0	0.6616731814906208	0.0350599375289831	0.06	0.04	0.024	23	2014
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	37	0	rwr	13.0	0.5407608695652174	0.013932594955441916	0.0	0.01	0.008	24	1933
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	37	1	rwr	13.0	0.556747512437811	0.020048033106931446	0.02	0.03	0.014	24	1900
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	37	2	rwr	13.0	0.6305324799128422	0.01579468025879882	0.0	0.02	0.016	21	2119
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	37	3	rwr	13.0	0.6808421145842557	0.025872596707360758	0.02	0.02	0.026	23	1987
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	37	4	rwr	13.0	0.6348196750580254	0.020539599341738005	0.02	0.02	0.02	24	1891
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	38	0	rwr	13.0	0.5618825466520307	0.016775968541897408	0.0	0.02	0.018	24	1846
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	38	1	rwr	13.0	0.5681818181818181	0.015264121612352735	0.02	0.02	0.014	22	2107
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	38	2	rwr	13.0	0.6160209164469087	0.02167479689528702	0.02	0.03	0.02	23	1952
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	38	3	rwr	13.0	0.5909828160617219	0.016621627843441317	0.0	0.01	0.016	24	1925
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	38	4	rwr	13.0	0.6020210683732488	0.021777837483157102	0.02	0.03	0.012	23	2000
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	39	0	rwr	13.0	0.6164452271612644	0.017139866485663607	0.02	0.02	0.014	22	2061
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	39	1	rwr	13.0	0.6210346234025197	0.01726863877644229	0.0	0.02	0.02	22	2028
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	39	2	rwr	13.0	0.6258364984626514	0.029512306888762888	0.04	0.02	0.022	24	1867
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	39	3	rwr	13.0	0.6137696154509398	0.02275932013998628	0.02	0.03	0.022	24	1957
+string_phys700	intogen_temporal_new	native_string_phys700	0.7	39	4	rwr	13.0	0.5816164817749604	0.015939311596700118	0.02	0.01	0.016	24	1917

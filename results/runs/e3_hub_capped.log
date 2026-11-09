@@ -1,0 +1,31 @@
+[17:19:27]   funmap x intogen2024: baseline +0.1001 -> baseline +0.1001, trunc128 +0.0388, trunc128_exclude_hubs +0.1196, trunc256 +0.0764, trunc256_exclude_hubs +0.1076, degpen0.5 +0.1323
+[17:19:39]   funmap x ot_all: baseline +0.0853 -> baseline +0.0853, trunc128 +0.0183, trunc128_exclude_hubs +0.0894, trunc256 +0.0824, trunc256_exclude_hubs +0.0885, degpen0.5 +0.1050
+[17:19:51]   funmap x ot_nolit: baseline +0.0780 -> baseline +0.0780, trunc128 +0.0190, trunc128_exclude_hubs +0.0744, trunc256 +0.0702, trunc256_exclude_hubs +0.0800, degpen0.5 +0.0950
+[17:20:02]   funmap x intogen_temporal_new: baseline +0.0196 -> baseline +0.0196, trunc128 -0.0360, trunc128_exclude_hubs +0.0150, trunc256 +0.0181, trunc256_exclude_hubs +0.0234, degpen0.5 +0.0338
+[17:20:02]   funmap done
+[17:20:13]   rna_coexp x intogen2024: baseline +0.0521 -> baseline +0.0521, trunc128 -0.0695, trunc128_exclude_hubs +0.0719, trunc256 -0.0262, trunc256_exclude_hubs +0.0658, degpen0.5 +0.0774
+[17:20:24]   rna_coexp x ot_all: baseline +0.0767 -> baseline +0.0767, trunc128 +0.0337, trunc128_exclude_hubs +0.0843, trunc256 +0.0634, trunc256_exclude_hubs +0.0823, degpen0.5 +0.0946
+[17:20:35]   rna_coexp x ot_nolit: baseline +0.0834 -> baseline +0.0834, trunc128 +0.0392, trunc128_exclude_hubs +0.0855, trunc256 +0.0662, trunc256_exclude_hubs +0.0905, degpen0.5 +0.1067
+[17:20:46]   rna_coexp x intogen_temporal_new: baseline +0.0127 -> baseline +0.0127, trunc128 +0.0037, trunc128_exclude_hubs +0.0323, trunc256 +0.0266, trunc256_exclude_hubs +0.0300, degpen0.5 +0.0245
+[17:20:46]   rna_coexp done
+[17:20:56]   string_phys700 x intogen2024: baseline +0.1189 -> baseline +0.1189, trunc128 +0.1063, trunc128_exclude_hubs +0.1198, trunc256 +0.1198, trunc256_exclude_hubs +0.1192, degpen0.5 +0.1241
+[17:21:07]   string_phys700 x ot_all: baseline +0.1582 -> baseline +0.1582, trunc128 +0.1391, trunc128_exclude_hubs +0.1542, trunc256 +0.1595, trunc256_exclude_hubs +0.1590, degpen0.5 +0.1625
+[17:21:17]   string_phys700 x ot_nolit: baseline +0.1711 -> baseline +0.1711, trunc128 +0.1550, trunc128_exclude_hubs +0.1670, trunc256 +0.1723, trunc256_exclude_hubs +0.1717, degpen0.5 +0.1752
+[17:21:27]   string_phys700 x intogen_temporal_new: baseline +0.0378 -> baseline +0.0378, trunc128 +0.0434, trunc128_exclude_hubs +0.0377, trunc256 +0.0374, trunc256_exclude_hubs +0.0368, degpen0.5 +0.0385
+[17:21:27]   string_phys700 done
+[17:21:51]   intact x intogen2024: baseline +0.0651 -> baseline +0.0651, trunc128 -0.1928, trunc128_exclude_hubs +0.0404, trunc256 -0.0521, trunc256_exclude_hubs +0.0509, degpen0.5 +0.0714
+[17:22:14]   intact x ot_all: baseline +0.0842 -> baseline +0.0842, trunc128 -0.1816, trunc128_exclude_hubs +0.0802, trunc256 -0.0308, trunc256_exclude_hubs +0.0856, degpen0.5 +0.1009
+[17:22:35]   intact x ot_nolit: baseline +0.0784 -> baseline +0.0784, trunc128 -0.1568, trunc128_exclude_hubs +0.0882, trunc256 -0.0242, trunc256_exclude_hubs +0.0851, degpen0.5 +0.0944
+[17:22:56]   intact x intogen_temporal_new: baseline +0.0071 -> baseline +0.0071, trunc128 -0.1190, trunc128_exclude_hubs -0.0253, trunc256 -0.0526, trunc256_exclude_hubs -0.0076, degpen0.5 -0.0088
+[17:22:56]   intact done
+[17:23:13]   string_full700 x intogen2024: baseline +0.1133 -> baseline +0.1133, trunc128 -0.0099, trunc128_exclude_hubs +0.1170, trunc256 +0.0924, trunc256_exclude_hubs +0.1134, degpen0.5 +0.1238
+[17:23:29]   string_full700 x ot_all: baseline +0.1201 -> baseline +0.1201, trunc128 -0.0106, trunc128_exclude_hubs +0.1200, trunc256 +0.0923, trunc256_exclude_hubs +0.1201, degpen0.5 +0.1264
+[17:23:45]   string_full700 x ot_nolit: baseline +0.1267 -> baseline +0.1267, trunc128 +0.0314, trunc128_exclude_hubs +0.1258, trunc256 +0.1081, trunc256_exclude_hubs +0.1267, degpen0.5 +0.1329
+[17:24:01]   string_full700 x intogen_temporal_new: baseline +0.0604 -> baseline +0.0604, trunc128 +0.0519, trunc128_exclude_hubs +0.0657, trunc256 +0.0624, trunc256_exclude_hubs +0.0624, degpen0.5 +0.0601
+[17:24:01]   string_full700 done
+[17:24:07]   reactome x intogen2024: baseline +0.0429 -> baseline +0.0429, trunc128 +0.0332, trunc128_exclude_hubs +0.0411, trunc256 +0.0429, trunc256_exclude_hubs +0.0429, degpen0.5 +0.0365
+[17:24:12]   reactome x ot_all: baseline +0.1103 -> baseline +0.1103, trunc128 +0.0950, trunc128_exclude_hubs +0.1099, trunc256 +0.1103, trunc256_exclude_hubs +0.1103, degpen0.5 +0.1143
+[17:24:17]   reactome x ot_nolit: baseline +0.0996 -> baseline +0.0996, trunc128 +0.0878, trunc128_exclude_hubs +0.1001, trunc256 +0.0996, trunc256_exclude_hubs +0.0996, degpen0.5 +0.1048
+[17:24:23]   reactome x intogen_temporal_new: baseline -0.0125 -> baseline -0.0125, trunc128 -0.0113, trunc128_exclude_hubs -0.0126, trunc256 -0.0125, trunc256_exclude_hubs -0.0125, degpen0.5 -0.0177
+[17:24:23]   reactome done
+[17:24:23] wrote hub_capped_rwr.tsv (144 rows)
