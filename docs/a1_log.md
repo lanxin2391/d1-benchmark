@@ -2,6 +2,7 @@
 
 **Task:** Day 3 (protocol section 6). Person A (Networks & Engine).
 **Author:** lanxin2391
+**Artefacts:** released in the repository (`results/toy/`, 1.8 MB) -- work plan P1-5.
 **Date:** 2026-09-26
 **Outcome:** Toy report at `docs/toy_results.md`. 27 tests still pass.
 
