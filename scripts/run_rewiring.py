@@ -88,7 +88,18 @@ def _write_edge_list(G: nx.Graph, path: Path, meta: dict):
     finalize_edges(edges, net_id=meta["net_id"], meta=meta, out_dir=path.parent)
 
 
-def _rewire_one(G: nx.Graph, seed: int, nswaps_per_edge: int = 2) -> nx.Graph:
+# The frozen pre-registration asks for 10 x |E| double-edge swaps per
+# rewiring (docs/pre_registration.md, line 113). The implementation uses
+# 2 x |E| (the 10 x version was projected at >6 h per network); the run
+# metadata used to RECORD "10 * |E|" -- i.e. it claimed a number that was
+# never executed. The metadata now records what was actually done, and
+# the deviation is documented in amendment 2 (A2.3k) with a measured
+# mixing check (scripts/verify_rewiring_mixing.py).
+NSWAPS_PER_EDGE = 2
+
+
+def _rewire_one(G: nx.Graph, seed: int,
+                nswaps_per_edge: int = NSWAPS_PER_EDGE) -> nx.Graph:
     """Degree-preserving double-edge swap rewiring.
 
     Default 2 swaps per edge (faster than the 10 in bench_rwr_speed.py).
@@ -129,7 +140,9 @@ def _step1_rewire(net_id: str, n_rewire: int):
             Gr, out_path,
             meta={"net_id": net_id, "source": f"rewiring of {net_id}.tsv",
                   "threshold": f"rewiring seed {s}",
-                  "n_swaps": f"10 * {G.number_of_edges()}"}
+                  "n_swaps": (f"{NSWAPS_PER_EDGE} * {G.number_of_edges()}"
+                              f" = {NSWAPS_PER_EDGE * G.number_of_edges()}"),
+                  "pre_registration_spec": "10 * |E| (deviation, A2.3k)"}
         )
         if (s + 1) % 25 == 0 or s == n_rewire - 1:
             _log(f"[{net_id}]   rewired {s + 1}/{n_rewire} "

@@ -136,7 +136,7 @@ positive cell. Not even close.
 ## 6. Interpretation
 
 **All 23 positive arms** (out of 24) have observed ΔAUROC > null mean by
-**8-200 standard deviations**. P-values are astronomically small. This
+**8-200 standard errors of the null mean** (the z divides by `null_sd / sqrt(n_rewirings)`, i.e. the standard error of the null mean, not the null spread). P-values are astronomically small. This
 means:
 
 > **The signal we see in the real networks is genuinely topological.**

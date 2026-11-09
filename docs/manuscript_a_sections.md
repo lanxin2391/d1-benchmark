@@ -398,7 +398,7 @@ For each (network, label) cell at α = 0.5, observed ΔAUROC vs null
 distribution (`results/tables/w5_p_values.tsv`):
 
 * 23/24 cells have z > 8.9 (up to z = 205.2), i.e. observed exceeds
-  the rewired null by 9–205 null standard deviations
+  the rewired null by 9–205 standard errors **of the null mean** (the rewiring z divides by the null mean's standard error, null_sd / sqrt(n_rewirings), not by the null spread)
 * The single exception: `reactome × intogen_temporal_new`, observed
   = −0.0112, rewired null mean = +0.0050, z = −3.53 → observed is
   significantly **below** the rewired null. The rewiring null says the
@@ -410,6 +410,19 @@ distribution (`results/tables/w5_p_values.tsv`):
 
 The W5 result means: **observed ΔAUROC cannot be explained by the
 network's degree sequence**. The specific topology matters.
+
+One caveat is stated rather than buried: the rewiring performs **2 x |E|**
+double-edge swaps per rewiring, where the pre-registration asks for
+10 x |E|. The mixing was measured directly
+(`results/tables/rewiring_mixing_check.tsv`): 4-11 % of the original
+edges survive the rewiring and 21-54 % of the nodes keep at least one
+original neighbour, so the rewired network is a *partial* null -- but
+the pre-registered 10 x |E| would have been a partial null too (2-10 %
+residual edge sharing), and the residual bias is **conservative**, because
+a rewired network that keeps a few original edges sits slightly above
+the fully-mixed null mean and therefore yields a slightly SMALLER z. The
+z-scores are 8.9-205, so no conclusion of this paper depends on the
+mixing level (amendment 2, A2.3k).
 
 ### F.2 D-09 temporal-drift control
 

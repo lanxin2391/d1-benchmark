@@ -527,6 +527,69 @@ strengthens the curator-lag explanation: the failure is specific to
 reactome's coverage of newly discovered drivers, not to its overall
 coverage or to the size of the evaluation set.
 
+### A2.3k The rewiring null uses 2 x |E| swaps, not the pre-registered 10 x |E|
+
+**What the pre-registration says.** Line 113 of `docs/pre_registration.md`:
+"100 rewirings per network ... **10 x |E| double-edge swaps per
+rewiring**".
+
+**What was executed.** `scripts/run_rewiring.py` performs **2 x |E|**
+double-edge swaps per rewiring (`NSWAPS_PER_EDGE = 2`). The reason is
+in `docs/w5_log.md`: the 10 x version was projected at **more than 6
+hours per network**, i.e. roughly 30 hours for the panel, which did not
+fit the compute budget of that phase.
+
+**And the metadata lied.** The rewired-network metadata recorded
+`"n_swaps": "10 * <n_edges>"` -- a number that was never executed. The
+metadata now records what was actually done
+(`"2 * <n_edges> = <n>"`) together with the pre-registration
+specification, so the artefact can no longer misrepresent itself.
+
+**What the deviation actually costs, measured.** `scripts/verify_rewiring_mixing.py`
+measures the mixing directly: the fraction of edges the rewired network
+still shares with the original, against the expectation for two graphs
+with the same degree sequence (which is what a *fully* mixed rewiring
+gives), and the fraction of nodes that keep no neighbour at all.
+
+| network | shared edges after 2 x \|E\| | after 10 x \|E\| | fully mixed | nodes with no shared neighbour (2 x) |
+|---|---|---|---|---|
+| intact | 5.08 % | 3.55 % | 0.04 % | 46 % |
+| string_full700 | 4.21 % | 2.65 % | 0.04 % | 67 % |
+| funmap | 6.87 % | 5.52 % | 0.07 % | 66 % |
+| rna_coexp | 11.15 % | 10.09 % | 0.09 % | 67 % |
+| string_phys700 | 4.90 % | 3.32 % | 0.08 % | 76 % |
+| reactome | 3.69 % | 2.09 % | 0.14 % | 79 % |
+
+Two things follow. First, **the rewiring is a partial null, not a
+complete one**: 4-11 % of the original edges survive and 21-54 % of the
+nodes keep at least one original neighbour. Second, **the pre-registered
+10 x |E| would not have reached full mixing either** -- it only reduces
+the residual edge sharing by 1.5-2 percentage points, because the
+double-edge-swap chain has a long mixing tail. Paying 5 x the compute
+for that would not have changed the control's character.
+
+**The direction of the residual bias is conservative.** A rewired
+network that still carries 4-11 % of the original edges retains a little
+of the original's signal, so the null mean sits slightly ABOVE the
+fully-mixed null mean and the z-score of the observed value is slightly
+SMALLER. The control therefore under-states the separation, not
+over-states it.
+
+**No conclusion depends on it.** The rewiring z-scores are 8.9-205 (and
+the control-2 z-scores 3.1-227), i.e. orders of magnitude away from any
+threshold; the H1 verdict (24/24 under the four repeat-level interval
+families) and the single negative cell are identical under any mixing
+level. The rewired null is reported as an *exploratory* control in the
+paper, not as one of the verification-family analyses.
+
+**What changed.** (i) the metadata records the executed number of swaps
+and the pre-registration specification; (ii) the manuscript states the
+mixing level and the direction of the bias; (iii) the mixing measurement
+is released with the tables
+(`results/tables/rewiring_mixing_check.tsv` and
+`rewiring_mixing_check_10x.tsv`). The frozen pre-registration file is
+NOT edited.
+
 ### A2.3e The TOST implementation itself was wrong
 
 The original `_tost` in `scripts/run_stats_analysis.py` tested
