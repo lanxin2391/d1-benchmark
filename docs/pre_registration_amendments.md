@@ -715,6 +715,62 @@ and the CI are computed, not **what** is tested.
 
 ---
 
+## Amendment 4 — family registration of every analysis
+
+**Date:** 2026-11-05
+**Why this amendment exists.** Work plan item E4. Amendment 2 registered
+the statistical machinery of the primary endpoint; this one registers
+the *analyses* — everything the project has added since the
+pre-registration was filed, and which family each belongs to. The
+pre-registration (DOI 10.5281/zenodo.23121762) is unchanged.
+
+**The two families.**
+
+* **Verification** — the analyses the pre-registered H1 verdict rests
+  on. The rule ("the 95 % CI excludes 0 in every arm") is applied to
+  them, and they are the only ones that can make or break the claim.
+* **Exploratory** — everything else. Reported with confidence
+  intervals, never allowed to change the verification verdict, and
+  labelled as such in the manuscript.
+
+| # | analysis | family | enters the H1 verdict? | where |
+|---|---|---|---|---|
+| 1 | the 24-cell primary factorial at alpha = 0.5 (40 repeats) | **verification** | **yes** | `stats_bootstrap_ci.tsv` |
+| 2 | the five interval families (fold pct, repeat pct, repeat t, repeat BCa, gene cluster) | **verification** | **yes** (all reported; the repeat-level family is primary) | `stats_bootstrap_ci.tsv` |
+| 3 | the TOST at margin ±0.05 | **verification** | yes (it bounds the null cells) | `stats_equivalence.tsv` |
+| 4 | the BH-FDR family over the 24 cells | **verification** | yes | `results_stats.tsv` |
+| 5 | the other two alphas (0.3, 0.7) | exploratory | no | `a4_table1_*_v40.tsv` |
+| 6 | the two STRING sensitivity arms (`string_full400`, `string_full900`) | exploratory | no | `network_stability.tsv` |
+| 7 | the controls: W5 rewiring null, A5 degree-matched seed null, D-09 temporal drift, D-11 common-size cap, D-12 shared universe | exploratory | no | `w5_p_values.tsv`, `a5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv` |
+| 8 | the complex-aware cross-validation (Phase D) | exploratory | **no — and it says so in the paper** | `d4_v1_vs_v2_comparison.tsv` |
+| 9 | the hub-capped RWR and the degree-penalised walk (E3) | exploratory | no | `hub_capped_rwr.tsv` |
+| 10 | the stability atlas and its attribution (Phase S, S1–S3) | exploratory | no | `stability_*.tsv`, `network_stability*.tsv` |
+| 11 | the consensus prior and its robustness checks | exploratory | no | `consensus_table.tsv`, `consensus_robustness.tsv` |
+| 12 | the ClinGen arm and the transfer arms | exploratory | no | `stability_by_arm_clingen.tsv`, `results_stats_transfer.tsv` |
+| 13 | the provenance ablation (H2) and the GNN courtesy arm | exploratory | no | `provenance_ablation.tsv`, `gnn_courtesy_arm.tsv` |
+| 14 | the rewiring mixing measurement (P1-1) | exploratory | no | `rewiring_mixing_check.tsv` |
+
+**The two facts a reader needs.**
+
+1. **The verification family is unchanged and was never re-tuned.** The
+   H1 rule, the resampling units, the TOST margin and the FDR family
+   are the pre-registered ones, computed with the same code as before
+   (the corrected estimators of amendment 2). Everything in rows 5–14
+   is reported with intervals and cannot alter the verdict.
+2. **One exploratory analysis argues *against* the headline, and it is
+   reported as such.** The complex-aware cross-validation (row 8) shrinks
+   the effect sizes by a median of 12 % and would, under the plan's
+   original rule, have been pushed to the second paper. It is reported
+   in the first paper anyway, with its direction and its consequences
+   stated, because the shrinkage is itself the finding: the standard CV
+   inflates the effect, and the verdict survives without it.
+
+**Amendment 4 does not modify the pre-registration.** It records where
+the new analyses live, so that the verification family can be read off
+the paper without hunting through the amendment history.
+
+---
+
 ## Amendment 3 — GNN courtesy arm: evaluation protocol and reproducibility
 
 **Date:** 2026-10-29 · **Who:** A (lanxin2391) · **Status:** accepted, **changes reported numbers**
