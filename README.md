@@ -2,7 +2,7 @@
 
 **What a network prior contributes to cancer-driver prioritisation: a leakage-controlled benchmark.**
 
-**Release:** v1.0-rc1 (tag `v1.0-rc1` at commit `2382593`) — Zenodo DOI pending ·
+**Release:** v1.0-rc1 (tag `v1.0-rc1` at commit `093efe1`) — Zenodo DOI pending ·
 pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762)
 
 A fixed learner (random walk with restart, RWR), a panel of six gene

@@ -1,0 +1,46 @@
+{
+  "release": "v1.0-rc1",
+  "commit": "093efe1b604e7f97b3f6a57504575dcc1fe0eabe",
+  "built_from_tag": "v1.0-rc1",
+  "note": "The pre-registration manifest (docs/pre_registration_manifest.json) is frozen and records the state filed with Zenodo; the fingerprint mismatches reported by scripts/audit_reproducibility.py are the expected consequence of the P0 repairs, which recomputed those tables. This file is the release's own record.",
+  "sha256_tables": {
+    "results/tables/a4_table1_delta_auroc_v40.tsv": "8df29b3c0a91a27dcb2b4d5fda61cba10b1a6606305df084d0f4b341c539eb27",
+    "results/tables/a4_table1_rwr_auroc_v40.tsv": "f9cdd263aa5d298fe41a26e700656a0e2c3fe0e3dad36db20465e99b666367a5",
+    "results/tables/a4_table1_degree_auroc_v40.tsv": "8f42a424aace64109e99d972bd8778cf6d9c1dbe7918049dbd330b1373ecff7f",
+    "results/tables/stats_bootstrap_ci.tsv": "61947e078c97addbfc2b5db30ede2682ac82674a9a1837b6600aa57f40c1b89c",
+    "results/tables/stats_equivalence.tsv": "157d3f7079d9ca50d37d62f623fc5f415f59748e9d73dc98f634708689552338",
+    "results/tables/stats_h1_verdict_v40.tsv": "04f413510d4f93dc2d544fa2e62010f2a2db2b16470b2838d735ceace3f397af",
+    "results/tables/stats_variance_decomp.tsv": "0cf5405f0828df2a1d15f04294c3919c5f8418366a5f720fc05dccd3ba9a3503",
+    "results/tables/results_stats.tsv": "ca4c6a02db32c9c842ada3d545d8bbb694597743dcda8adc15c37aab15ced57d",
+    "results/tables/a5_p_values.tsv": "6b6b344ef07b2e92d77b76957301e92720c6b933c1c0ea55a54f43bd7e900c73",
+    "results/tables/w5_p_values.tsv": "d006f43581747a1793cb43f546b046843befb0dc2757644d4e193be03d2b9a8d",
+    "results/tables/d09_table.tsv": "5ecd03bbb7fe26231c6b8ce9163073194e4e271d3a8c5a5e1b4a14fe14a08628",
+    "results/tables/d11_table.tsv": "522ea59d156fea7906a5097525d0ef24db595510550b565592fe6537771cab5a",
+    "results/tables/d12_table.tsv": "bc47b813232c391bfc5f3b6508958a4b67f494911d6720f12d95924b6bb3dd27",
+    "results/tables/d1_leakage_summary.tsv": "56a66d2406cba7af4e20912633bc2f73ff8f23b806b6f1566a153c189a0bdd43",
+    "results/tables/d3_split_invariants.tsv": "9aac4f021107b63abb4e47682a239b4f567e660de4d403e6363442c0a7af45c5",
+    "results/tables/d4_v1_vs_v2_comparison.tsv": "977a895523aff84901ad51bdb2cd2f3aad7bbb8235470e360e6ade5e7d72c361",
+    "results/tables/hub_capped_rwr.tsv": "ef0538aad1caccf89ed387bdbad3d36fabac1c098711452fac1c54dd7fe6ef7e",
+    "results/tables/stability_by_arm.tsv": "24f92b832648d956d3a00d755199043b40a1a7366aa6afcf046128612682ed1d",
+    "results/tables/stability_attribution.tsv": "b6e03c1ffab61aab83daa64daaf758af9eb46a01bc7b22640324f155334c7709",
+    "results/tables/network_stability.tsv": "a5cea4370f76a18a380c47feb6a1c85cc851b9e12fa090cc441ca8770ef2287d",
+    "results/tables/consensus_table.tsv": "cdcae309ab7a862313d337ece315eced9d9a1eeb41cf8f4bc71bae3df4c2fb56",
+    "results/tables/consensus_robustness.tsv": "ee1be9973c0f2796266dffc8d6359ab58b89aff509490547edab008626dd861b",
+    "results/tables/rewiring_mixing_check.tsv": "b370ba873019eba35192f1b5b00bd96a58afed8239282f73f29111be2d13896a"
+  },
+  "sha256_figures": {
+    "figures/figure1_pilot_overview.png": "10250bdd47b821908a9539184acd1b1fe71e009cffba06646990c9241cbbed5f",
+    "figures/figure2_d09_d11_d12.png": "81b8924a54fd3a934ccd1ea4e860f196950f85ef19cd862afdce69f3ab28423d",
+    "figures/figure2_d09_temporal_strip.png": "d22108130ed9c95ba1822ad68826b30a06bdebc2016403536d7c4a210e78a1c4",
+    "figures/figure2_main_heatmap.png": "1c9150cc45274b04e07e38cc14f3ea489dabf416ffa6663289e2135ecc93b971",
+    "figures/figure5_stability_atlas.png": "fff97b3d1b245c9759a04aa18bc097668392dcf7b786f2673d84ba9e2987f4aa",
+    "figures/figure5b_stability_attribution.png": "0b924d1ddd9355e195ee6a2df90aa9886dd818ca097c7d9fff35368b052f6f2c",
+    "figures/figure6_network_stability.png": "ae6c05a1457cc71cb2ebb3fdeb29289d08bc90cae6f0b12541fd85167655482a",
+    "figures/figure7_consensus_prior.png": "a315adf2894180807e3ac7b4ca325b94d9df02cd405640969fe153652cfcec2f"
+  },
+  "sha256_release_zips": {
+    "d1-benchmark-v1.0-results.zip": "55914fa4186bd69c80c1cc150545b739d0a8a56d19c9510137917061defd694f",
+    "d1-benchmark-v1.0-source.zip": "235da8dddd2464372fc7c2408204f366dba7146a1ac075eba816af0a5d16480a",
+    "d1-benchmark-v1.0-splits.zip": "ec8e9616cc02f0169364e3c16408ff557595e8a55ff7704c09cd116e2e771c1c"
+  }
+}
