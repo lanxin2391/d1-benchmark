@@ -2,7 +2,7 @@
 
 **What a network prior contributes to cancer-driver prioritisation: a leakage-controlled benchmark.**
 
-**Release:** v1.0-prep (tag `v1.0-prep` at commit `55e358c`) ·
+**Release:** v1.0-rc1 (tag `v1.0-rc1` at commit `2382593`) — Zenodo DOI pending ·
 pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762)
 
 A fixed learner (random walk with restart, RWR), a panel of six gene
@@ -86,7 +86,7 @@ After adding a package: `conda env export --no-builds > environment.lock.yml` an
 conda activate d1
 git checkout a-networks          # or b-labels (main has the merged v1.0-prep)
 git pull origin main             # get the other person's merged work
-pytest                           # before every commit (currently 70 tests)
+pytest                           # before every commit (currently 113 tests)
 git add -A
 git commit -m "A1: evaluation harness"
 git push origin a-networks       # then open a Pull Request on GitHub
