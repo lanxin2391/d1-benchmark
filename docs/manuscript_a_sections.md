@@ -4,7 +4,7 @@
 **Status:** Draft (M5.2-M6 in protocol §6; intended for A-side
 manuscript sections §Methods §4.1, §4.3, §4.6, §Results (A-side
 arms), §Discussion §7 GNN rebuttal, §Conclusion)
-**Date:** 2026-10-07
+**Date:** 2026-10-07; revised 2026-11-05 (P0 repairs, Phase D, Phase S)
 
 This file contains the manuscript prose for the A-side contributions
 to the D1 benchmark paper. It covers:
@@ -14,11 +14,12 @@ to the D1 benchmark paper. It covers:
 * §C — Methods §4.4 (Control stack: A-side controls)
 * §D — Methods §4.6 (Statistical analysis: variance decomposition, bootstrap CI, TOST, BH-FDR)
 * §E — Results §Network provenance ablation (RNA / protein / curated)
-* §F — Results §Robustness controls (W5 rewiring, D-09 temporal drift, D-11 common-size cap, D-12 shared universe)
+* §F — Results §Robustness controls (W5 rewiring, D-09 temporal drift, D-11 common-size cap, D-12 shared universe, complex-aware CV, hub-capped RWR)
 * §G — Results §A5 degree-matched seed null (control 2, fine mode)
 * §H — Results §Table 1 (24 arms × 3 alphas = 72 cells)
-* §I — Discussion §H1 verdict + provenance + §7 GNN rebuttal
-* §J — Conclusion
+* §I — Results §Where the stability of the prior comes from (stability atlas, attribution, consensus prior)
+* §J — Discussion §H1 verdict + provenance + §7 GNN rebuttal
+* §K — Conclusion
 
 Numbers below come from the per-arm result tables in
 `results/runs/`, the per-control prose reports `docs/w5_log.md`,
@@ -118,7 +119,7 @@ into three provenance classes:
 * **Curated / literature**: `string_full700`, `reactome`
 
 This stratification is the basis of the provenance ablation in
-Results §E and the H2 verdict in Discussion §I.
+Results §E and the H2 verdict in Discussion §J.
 
 ---
 
@@ -233,6 +234,24 @@ on the same positive-set size and the four labels are not confounded
 with unequal prevalence. The label is restricted to the universe
 **before** the top-N is taken, and the run asserts that every split
 holds exactly N positives. Aggregate in `results/tables/d11_table.tsv`.
+
+### C7 — Complex-aware cross-validation (Phase D)
+
+Implemented in `d1/splits.py::make_splits_complex_aware` and
+`scripts/run_d3_generate_cx_splits.py`. The seven controls above remove
+every leakage channel we could think of except **protein complexes**:
+stratified splits put the members of a complex in different folds, so a
+held-out driver's score is partly determined by a training-set partner,
+and RWR propagates along exactly those edges. The complex-aware
+splitter keeps every complex group (the connected components of the
+complex graph) **in one fold**, so a held-out gene's partners are held
+out with it. The complex map is built from the ComplexPortal
+identifiers curated in UniProtKB (`scripts/build_complex_map.py`);
+grouped CV is then generated into `data/processed/splits_v40_cx/`, with
+the v1 splits untouched, and the invariant report
+(`results/tables/d3_split_invariants.tsv`) records the achieved fold
+balance and the number of complex groups split across folds (0 in
+24/24 arms). Aggregate in `results/tables/d4_v1_vs_v2_comparison.tsv`.
 
 ### W6 sensitivity arm — GNN courtesy (protocol §7)
 
@@ -353,7 +372,7 @@ folds inside a repeat are not independent (see D.2).
 Result: **23 of 24 cells reach BH-FDR q < 0.05** under both units. The
 single arm that does not is `reactome x intogen_temporal_new`, whose
 point estimate is negative -- the same cell the equivalence test calls
-a null. See I.5.
+a null. See J.5.
 
 ---
 
@@ -406,7 +425,7 @@ distribution (`results/tables/w5_p_values.tsv`):
   network performs *worse* than the rewired null. Whether that reflects
   a genuine negative effect or a curator lag (the Reactome release
   cycle trailing the IntOGen driver catalogue) is tested in §F.5 and
-  discussed in §I.3.
+  discussed in §J.3.
 
 The W5 result means: **observed ΔAUROC cannot be explained by the
 network's degree sequence**. The specific topology matters.
@@ -509,11 +528,85 @@ Reactome anomaly survives all three. That is the strongest single piece
 of evidence in the study: the failure is specific to Reactome's
 coverage of **newly discovered** drivers, not to its overall coverage
 and not to the size of the evaluation set. It moves curator lag from a
-Discussion hypothesis to a supported explanation (§I.3).
+Discussion hypothesis to a supported explanation (§J.3).
 
 The three controls were re-run after defects in each of them were found
 and fixed (amendment 2, A2.3h and A2.3i); the pre-fix versions of the
 tables should not be cited.
+
+### F.6 Complex-aware cross-validation: the strictest control we could add
+
+The seven controls above remove every leakage channel we could think of
+except one: **protein complexes**. Standard stratified splits put the
+members of a complex in different folds, so a held-out driver's score
+is partly determined by a training-set partner — and RWR propagates
+along exactly those edges. We measured the channel before fixing it
+(Phase D, task D1): among the held-out positives that are in a curated
+complex, **96 % have a complex-linked gene in the training fold**. The
+channel is wide open — but symmetric, because the held-out *negatives*
+are linked at the same rate (94 %): sharing a complex does not depend
+on being a driver. Whether the leak inflates the *advantage over
+degree* is an empirical question, so we rebuilt the splits to keep
+every complex group in one fold (a held-out gene's partners are then
+held out with it) and re-ran the primary factorial on them.
+
+| | v1 (stratified) | v2 (complex-aware) |
+|---|---|---|
+| held-out positives with a complex-linked gene in the training fold | 0.87–0.96 | **0.02–0.18** |
+| complex groups split across folds | — | 0 (24/24 arms) |
+| H1 (all four repeat-level interval families exclude 0) | 24/24 | **24/24** |
+| arms whose sign flips | — | **0/24** |
+| median \|relative change\| in ΔAUROC | — | **0.142** |
+| repeat-level interval width (v2 / v1) | — | 1.18 |
+
+The result is systematic and in the predicted direction: **the prior
+loses ground in 20 of 24 arms (median signed change −12.3 %)**, i.e. the
+standard CV was inflating the effect. But **no conclusion changes**: the
+H1 verdict is 24/24 in both versions, no arm changes sign, and the
+negative cell becomes slightly *more* negative (reactome ×
+intogen_temporal_new: −0.0125 → −0.0178), so it is not an artefact of
+the leak. Two further points matter for the reader: the v2 intervals are
+**wider** (1.18×), so the v2 significance is not bought with narrower
+intervals; and the change is concentrated in the sparse and curated
+networks (funmap, reactome: up to −45 %) while the protein-derived
+networks barely move (−2 to −6 %).
+
+Because the complex map covers 18.3 % of the panel's genes, this is a
+**lower bound** on the leakage a complete complex resource would
+expose, and the v2 numbers are an additional analysis (the
+pre-registration fixes the stratified design), registered in the
+exploratory family.
+
+### F.7 Hub-capped RWR: is the prior's advantage a hub effect?
+
+A reader can reasonably ask whether "the prior contributes beyond
+degree" is just "the prior is degree plus a hub effect". We tested it
+by running three variants of the learner on the same splits, with the
+degree baseline untouched: **truncation** (the nodes with degree > K
+are removed from the propagation, K = 128 and 256) and the
+**degree-penalised walk** `W[i,j] = A[i,j] / (deg(i)^0.5 · deg(j)^0.5)`.
+The truncation is reported under two conventions, because they answer
+different questions: *keep* (the hubs stay in the universe and score 0,
+so they tie at the bottom) and *exclude* (they leave the evaluation
+set as well, so the AUROC denominator is unchanged).
+
+| variant | median ΔAUROC | vs baseline | arms changing sign |
+|---|---|---|---|
+| baseline | +0.0809 | — | — |
+| trunc128, keep | +0.0252 | −0.0499 (31 % left) | 8/24 |
+| trunc128, exclude | **+0.0849** | −0.0001 | 0/24 |
+| trunc256, exclude | +0.0853 | +0.0007 | 0/24 |
+| degpen0.5 | **+0.0979** | **+0.0063** | 0/24 |
+
+**The headline is not a hub effect**: on the part of the network
+without the hubs the prior still beats the degree baseline by the same
+amount. **But roughly two thirds of the raw margin sits in the hubs'
+own ranking position** — silencing them rather than removing them takes
+the median effect to 31 % of its size and flips a third of the arms, so
+both numbers are stated and the smaller one is quoted. The
+degree-penalised walk, which is the orthogonalisation idea in effect,
+*increases* the effect: there is no hub-driven failure for a
+corrective model to fix.
 
 ---
 
@@ -575,11 +668,169 @@ rna_coexp       mean δAUROC       +0.0521    +0.0767   +0.0834   +0.0127
 informative Discussion paragraph, and the three robustness controls in
 §F.2–§F.4 are what make it a finding rather than an accident.
 
+## §I. Results §Where the stability of the prior comes from
+
+The pre-registration fixes *what* we measure (the effect of the prior
+beyond node degree) but not *what makes the estimate reproducible*.
+This section answers that second question, which is also the question
+the field's leaderboards never ask: not "is the prior better than
+degree?" but "how stable is the prior's answer, and where does that
+stability come from?"
+
+We follow the template of the proteomics study the teacher pointed us
+to (Klingelhuber et al., *Nat Metab* 6:861–879, 2024): treat the
+stability of the measurement layer as a first-class quantity, report
+its distribution, and then ask which features explain it. Here the
+measurement is the RWR prior's score for a gene, and the features are
+the network's topology.
+
+### I.1 What is stable, and what is not
+
+**The endpoint is stable.** The repeat-level SD of ΔAUROC is 0.0047
+(range 0.0017–0.0129) against effects of 0.007–0.171: the effect is
+2–30 times larger than the noise it is measured against.
+
+**A single gene is not.** The per-gene relative error of the score
+across the 40 re-partitions is 0.185 (range 0.100–0.263) — an 18 %
+error on a gene's score. In rank terms a median gene moves 2.7
+percentile points, i.e. **~270 places out of ~10,000**, between two
+partitions of the *same* universe. A re-partition changes the answer
+for a gene far more than it changes the answer for the panel.
+
+That asymmetry is the result: **the benchmark's numbers are
+reproducible; the individual genes it ranks are not.** (Figure 5.)
+
+### I.2 The mechanism is crowding, not the network's shape
+
+Where a gene sits in the score distribution decides how stable its
+rank is. Pooled over the 24 arms, the median rank SD runs 0.0056 (lowest
+score decile) → 0.0382 (decile 7) → 0.0162 (top decile), and the
+number of genes lying within ±10 % of a gene's score runs 119 → 535 →
+193 over the same deciles: **a gene crowded with near-equal-scored
+neighbours swaps places when the partition changes.** The Spearman
+correlation between rank SD and local score density is **+0.468**
+(median over arms) and is **positive in 24 of 24 arms**.
+
+The formal attribution (within-arm OLS with arm fixed effects, 267,696
+gene-arm rows) agrees:
+
+| predictor | coefficient on log(rank SD) | marginal within-arm ρ |
+|---|---|---|
+| log score magnitude | **+0.910** | +0.340 (24/24 arms) |
+| log local score density | **+0.787** | +0.478 (24/24 arms) |
+| log degree | −0.995 | **+0.038 (≈0)** |
+| clustering coefficient | +0.089 | +0.088 |
+| k-core number | −0.001 (q = 0.98) | +0.044 |
+
+Two things must be read carefully here. First, **degree explains
+almost nothing on its own** (marginal ρ = +0.04); its large joint
+coefficient is a suppression artefact, caused by its 0.72 correlation
+with the RWR score, and the paper states the marginal version. Second,
+**k-core — the classic connectivity descriptor — explains nothing at
+all**. The stability of a gene's rank is a property of the *score
+distribution's local density*, not of the network's connectivity.
+
+The attribution transfers: fitted on 23 arms without arm intercepts, it
+predicts the rank SD of an unseen network with an out-of-sample R² of
+0.24–0.56, and of an unseen label with 0.29–0.57 (Figure 5b).
+
+### I.3 Which networks are stable
+
+At the network level (eight networks, four labels, 40 repeats) the
+stable ones are again not the ones with the best topology:
+
+| descriptor | Spearman with the arm-level stability |
+|---|---|
+| mean label coverage | **−0.905 (q = 0.012)** |
+| fraction of nodes in the 2-core | **−0.905 (q = 0.012)** |
+| number of nodes | −0.857 (q = 0.026) |
+| density, clustering, modularity, assortativity, max k-core, path length | all non-significant |
+
+**No descriptor predicts the size of the contribution** (every
+correlation with the mean ΔAUROC has q ≥ 0.70). Which network
+contributes a lot and which network gives a reproducible estimate are
+two different questions, and only the second one has a topological
+answer (Figure 6).
+
+The label matters too, in the direction the variance decomposition
+already indicated: the temporal label is the least stable label in
+*every* network (arm-level SD 0.0065–0.0129 against 0.0017–0.0063 for
+the other three), because its positive set is small (152 genes). The
+intra-repeat ICC is negative in **24 of 24** arms (median −0.178),
+which is the independent confirmation of the repeat-level resampling
+unit chosen in the pre-registration amendment.
+
+### I.4 The picture replicates on two independent systems
+
+* **ClinGen** (clinical validity of cancer variants, 84 positives) — a
+  curation criterion that shares nothing with IntOGen or Open Targets.
+  The network-level stability ordering is the same: intact is the most
+  stable (background rank SD 0.0152, score CV 0.100) and funmap /
+  rna_coexp the least (0.0304 / 0.0289).
+* **Transfer arms** (train on one label system, evaluate on another, 66
+  cells) reproduce the *extremes* of the ordering (the two most stable
+  networks in the primary panel are the most stable here too) but not
+  the full ranking (Spearman +0.37). Their ΔAUROC is much smaller
+  (string_phys700 +0.059 against +0.122), because the model is
+  evaluated on a label system it never saw.
+
+### I.5 A model built from these findings: a consensus prior
+
+The benchmark's one negative cell is a **coverage** failure, not a
+noise artefact: Reactome's curated annotations lag behind the
+2020–2024 driver discoveries, and the failure survives three controls
+that equalise the positive set. A stale network cannot be repaired by
+a better learner — it can only be out-voted. So we built the obvious
+model: a **consensus prior** over the six networks on the shared
+universe (1,605 genes), the mean of the six networks' percentile
+ranks.
+
+| label | median single network | consensus | consensus without Reactome |
+|---|---|---|---|
+| intogen2024 | +0.0486 | **+0.1128** | +0.1068 |
+| ot_all | +0.0826 | **+0.1421** | +0.1211 |
+| ot_nolit | +0.0845 | **+0.1384** | +0.1193 |
+| **intogen_temporal_new** | **−0.0110** | **+0.0358** [0.0301, 0.0416] | **+0.0514** [0.0457, 0.0570] |
+
+On the temporal label the *median single network is negative* and the
+consensus is clearly positive; and **Reactome's inclusion costs the
+consensus 0.016** — a stale network does not merely fail on its own,
+it degrades the aggregate. That is the first quantitative statement of
+the price of curation lag at the level of an ensemble.
+
+The result is robust to the aggregation rule (mean of ranks, median of
+ranks and reciprocal rank fusion agree to within 0.019 on every label)
+and improves when the networks are weighted by their measured
+reliability (+0.0388 on the temporal label). (Figure 7.)
+
+**And the stability axis shows the cost.** The consensus is *less*
+stable per gene than any of its members (rank SD 0.0364–0.0528 against
+0.0210–0.0439): averaging six networks' ranks does not cancel their
+noise, it adds the disagreement between networks as variance — and the
+disagreement is also where the signal is. The consensus trades
+per-gene variance for accuracy, a trade-off that AUROC alone cannot
+see. It is a robustness device for the panel-level estimate, not a
+better gene ranker.
+
+### I.6 What this section does and does not establish
+
+* It establishes that **the benchmark's numbers are reproducible while
+  its gene-level rankings are not**, and that the reason is crowding in
+  the score distribution rather than the shape of the network.
+* It establishes that **the effect size is not predictable from
+  topology**, which is a caution for anyone reading a single network's
+  performance as a property of that network.
+* It does not establish the causal direction of the crowding
+  explanation (the score distribution is itself produced by the
+  network), and it does not establish that the consensus is the best
+  model — it is the one model that follows from our own findings, and
+  its per-gene stability is worse.
+
 ---
 
-## §I. Discussion — H1 verdict, provenance, and §7 rebuttal
+## §J. Discussion — H1 verdict, provenance, and §7 rebuttal
 
-### I.1 H1 holds: the prior contributes beyond degree
+### J.1 H1 holds: the prior contributes beyond degree
 
 Combining W5 (topology matters), A5 (gene identity matters), the
 variance decomposition (label explains 34.8 % of between-arm spread,
@@ -597,6 +848,17 @@ smallest effects. The cell-level separation from the degree-matched
 seed null is z = 3.1–227 and from the rewired null z = 8.9–205
 (excluding the single Reactome cell, §F.1).
 
+Two further results make the verdict stronger rather than weaker.
+**Under the strictest control we could add** — the complex-aware
+cross-validation of §F.6, which keeps every protein complex in one
+fold and so removes the complex-partner leak — the prior still beats
+the degree baseline in **24 of 24 arms** with **no sign change in any
+arm**; the effect sizes shrink by a median of 12 %, i.e. the standard
+CV was inflating them, but the conclusion is unchanged. And **the
+advantage is not a hub effect** (§F.7): removing the hubs from the
+propagation leaves it unchanged (+0.0849 against +0.0809), and the
+degree-penalised walk increases it (+0.0979).
+
 The confidence interval uses the **repeat** as its resampling unit,
 not the fold, and the design uses 40 repeats rather than 10. Within
 one repeat the five folds come from a single stratified partition and
@@ -611,7 +873,7 @@ i.e. both are calibrated. The pre-registered rule is met under all
 four interval constructions; the fold-level interval is reported
 alongside as a sensitivity analysis (see amendment 2).
 
-### I.2 Provenance matters in different ways
+### J.2 Provenance matters in different ways
 
 * for `intogen2024`, a true-driver label, all three provenance
   classes perform similarly → provenance-invariant on real
@@ -619,7 +881,7 @@ alongside as a sensitivity analysis (see amendment 2).
 * for `ot_all` (Open Targets aggregate), the curated class has a
   clear edge, consistent with H3 (literature attention)
 
-### I.3 Reactome's collapse on the newest drivers — a supported explanation
+### J.3 Reactome's collapse on the newest drivers — a supported explanation
 
 `reactome × intogen_temporal_new` is the one negative cell of the
 primary factorial (ΔAUROC = −0.0125) and the only cell where the
@@ -650,9 +912,33 @@ advantage (capped to 63 positives, `reactome × intogen2024` flips from
 is not a coverage artefact at all. The failure is specific to
 Reactome's coverage of *newly discovered* drivers.
 
+A fourth control closes the last channel we could think of. Under the
+**complex-aware cross-validation** (§F.6) — the splits that keep every
+protein complex in one fold, so a held-out driver's complex partners
+are held out with it — Reactome's temporal arm is **not less negative
+but more negative** (−0.0178 against −0.0125), and no arm of the panel
+changes sign. The failure is therefore not produced by the
+complex-partner leak either.
+
+What the controls add is *localisation*. D-11 shows that Reactome's
+apparent advantage on the broad IntOGen label is partly a coverage
+advantage (capped to 63 positives, `reactome × intogen2024` flips from
++0.0429 to −0.0110), and D-09 and D-12 show that the temporal failure
+is not a coverage artefact at all. The failure is specific to
+Reactome's coverage of *newly discovered* drivers.
+
+If the failure is a coverage failure, then the remedy is not a better
+learner but a better *ensemble*: a stale network can only be out-voted.
+The consensus prior of §I.5 does exactly that — on the temporal label
+the median single network is negative (−0.0110) while the consensus is
++0.0358, and **removing Reactome from the consensus raises it to
++0.0514**, i.e. Reactome's presence costs the aggregate 0.016. This is
+the first quantitative statement of the price of curation lag at the
+level of an ensemble.
+
 Two caveats are stated plainly. First, Reactome's temporal arm has only
 63 held-out positives, so its interval is wide; the point estimate is
-negative under all three controls, but the *magnitude* is not
+negative under all four controls, but the *magnitude* is not
 precisely estimated. Second, this is one network out of six, and the
 control that isolates it most sharply (D-12) makes it negative for
 `intact` as well (−0.0150), so the phenomenon may be "small curated
@@ -661,7 +947,7 @@ we make is therefore about **curated networks and temporal
 extrapolation**, with Reactome as the clearest case — not a universal
 claim about Reactome.
 
-### I.4 §7 GNN courtesy rebuttal
+### J.4 §7 GNN courtesy rebuttal
 
 A pre-registered concern is "RWR is too weak; a modern GNN would
 show a larger prior contribution." As a control arm we ran
@@ -702,7 +988,7 @@ non-reproducible. The old JSONs are archived under
 `results/runs/gnn_courtesy_OLD_BUGGY/` and are not used. See
 `docs/pre_registration_amendments.md` amendment 3.)
 
-### I.5 The equivalence test: six null cells, not one
+### J.5 The equivalence test: six null cells, not one
 
 The TOST with the pre-specified margin of 0.05 finds **six** cells
 whose margin is statistically equivalent to zero, not one:
@@ -735,7 +1021,7 @@ So the interval is entirely below zero under the primary unit and
 contains zero under the other two; **no unit supports reading this cell
 as evidence of a negative effect.** The curator-lag explanation is why
 the cell is null; it is supported by the three robustness controls in
-§F.2–§F.5 and argued in §I.3.
+§F.2–§F.5 and argued in §J.3.
 
 The pre-registered H1 rule — the 95 % CI excludes 0 in **every** arm —
 is met under four of the five interval constructions (fold, repeat
@@ -745,7 +1031,7 @@ gene-cluster bootstrap (20/24; the four failing arms are all
 
 ---
 
-## §J. Conclusion
+## §K. Conclusion
 
 The D1 benchmark is complete. All twelve protocol-level milestones
 are delivered:
@@ -762,18 +1048,48 @@ The benchmark's central claim is **robust**:
   null (control 2, §G), and 23/24 beat the rewired-network null
   (control 3, §F.1); the one exception is the Reactome temporal cell,
   where the observed value falls *below* the rewired null.
-* Three further robustness controls — a redrawn training partition
-  (D-09), an equalised positive-set size (D-11) and an equalised gene
-  universe (D-12) — leave 22–23 of 24 arms positive each time (§F.2–§F.4).
+* Four further robustness controls — a redrawn training partition
+  (D-09), an equalised positive-set size (D-11), an equalised gene
+  universe (D-12) and a **complex-aware cross-validation** that keeps
+  every protein complex in one fold (§F.6) — leave 22–24 of 24 arms
+  positive each time, with no sign change in any arm.
+* The advantage is **not a hub effect** (§F.7): removing the hubs from
+  the propagation leaves it unchanged, and the degree-penalised walk
+  increases it.
 * Two different learner families (RWR + Node2Vec) both outperform
   degree in the same cells, ruling out a learner-specific artefact.
 * Provenance stratification gives a partial explanation for the
   between-arm variance (H2), with a publishable H3 detail on curated
   networks' literature-attention advantage.
 
+Two results go beyond the pre-registered endpoint and are, we think,
+the parts of the paper that the field most needs.
+
+**What the stability of a prior is made of (§I).** We measured how much
+the prior's answer moves when the universe is re-partitioned, gene by
+gene, and found that the *panel-level* estimate is reproducible (the
+repeat-level SD of ΔAUROC is 0.0047 against effects of 0.007–0.171)
+while the *individual gene's* rank is not (18 % relative error; a median
+gene moves ~270 places). The mechanism is crowding: a gene with many
+near-equal-scored neighbours swaps places, and the correlation between
+the local score density and the rank instability is positive in 24 of
+24 arms. Classic topology (k-core, density, clustering, modularity)
+explains none of it, and **no descriptor predicts the size of the
+contribution at all** — which is a caution for anyone who reads a
+single network's performance as a property of that network.
+
+**What curation lag costs (§I.5, §J.3).** The benchmark's one negative
+cell is a coverage failure, and a consensus prior over the six networks
+repairs it: on the temporal label the median single network is negative
+while the consensus is +0.0358, and removing Reactome from the
+consensus raises it to +0.0514. A stale network does not merely fail on
+its own — it degrades the aggregate. The price is per-gene stability:
+the consensus is less stable than any of its members, a bias-variance
+trade-off that AUROC alone cannot see.
+
 The single substantive negative result — curated networks' collapse on
-newly discovered drivers — is supported by three independent controls
-and is a publishable finding in its own right (§F.5, §I.3).
+newly discovered drivers — is supported by four independent controls
+and is a publishable finding in its own right (§F.5, §J.3).
 
 This is the v1.0-prep release: reproducible on a clean machine via
 `docs/public_release_protocol.md` and `scripts/audit_reproducibility.py`,
@@ -791,6 +1107,16 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
 * A's logs: `docs/a0_log.md` ... `docs/a5_log.md`, `docs/w5_log.md`,
   `docs/stats_analysis_log.md`, `docs/gnn_courtesy_log.md`,
   `docs/s2_log.md`.
+* A's new tables: `results/tables/stability_per_gene.tsv`,
+  `stability_by_arm.tsv`, `stability_features_per_gene.tsv`,
+  `stability_attribution.tsv`, `network_stability.tsv`,
+  `network_stability_vs_topology.tsv`, `consensus_table.tsv`,
+  `consensus_robustness.tsv`, `hub_capped_rwr.tsv`,
+  `d1_leakage_audit.tsv`, `d3_split_invariants.tsv`,
+  `d4_v1_vs_v2_comparison.tsv`, `rewiring_mixing_check.tsv`
+* A's new figures: `figures/figure5_stability_atlas.png`,
+  `figure5b_stability_attribution.png`, `figure6_network_stability.png`,
+  `figure7_consensus_prior.png`
 * A's tables: `results/tables/a4_table1_delta_auroc_v40.tsv`,
   `results/tables/d09_table.tsv`, `results/tables/d11_table.tsv`,
   `results/tables/d12_table.tsv`,
