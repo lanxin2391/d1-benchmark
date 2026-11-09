@@ -57,3 +57,5 @@ results/scores_shared/
 results/scores_v40_cx/                # per-gene score dumps of the complex-aware run (1.1 GB, derived data)
 results/runs/*.err
 # empty stderr files of the background runs
+results/scores_v40_clingen/         # per-gene score dumps of the ClinGen arm (derived data)
+results/scores_v40_cx/              # per-gene score dumps of the complex-aware run (derived data)
