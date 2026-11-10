@@ -1074,13 +1074,40 @@ i.e. both are calibrated. The pre-registered rule is met under all
 four interval constructions; the fold-level interval is reported
 alongside as a sensitivity analysis (see amendment 2).
 
-### J.2 Provenance matters in different ways
+### J.2 Provenance: an untested hypothesis, and a descriptive pattern
 
-* for `intogen2024`, a true-driver label, all three provenance
-  classes perform similarly → provenance-invariant on real
-  biology → supports H2 in the "real driver" setting
-* for `ot_all` (Open Targets aggregate), the curated class has a
-  clear edge, consistent with H3 (literature attention)
+**H2 (the prior's contribution does not depend on where the network came
+from) is not tested by this design, and the paper does not claim it.**
+The provenance ablation has three classes holding **3, 1 and 2**
+networks. A Kruskal-Wallis test on such a design cannot return a
+p-value below **0.1173** — that is the smallest value attainable over
+all 3! = 6 assignments of the six networks to the three classes. The
+published p = 0.50 is therefore **not** evidence for H2; it is the
+absence of evidence, and the absence is structural rather than
+empirical: with this panel the hypothesis could not have been rejected
+even if the classes were perfectly separated. We report the ablation
+as a **description**, and the H2 verdict as **not tested**.
+
+What the description shows (α = 0.5, the four labels):
+
+* the RNA-derived network is the weakest class on every label
+  (0.0513 / 0.0755 / 0.0821 / 0.0123 against 0.0766–0.1123 for the
+  other two classes);
+* the curated class edges ahead of the protein-derived class on the two
+  Open Targets labels (+0.0058 on `ot_all`, +0.0038 on `ot_nolit`) and
+  behind it on `intogen2024` (−0.0161) — a difference of the size a
+  six-network panel cannot resolve, and we do not read it as H3.
+
+Two further reasons to keep the claim modest. First, the three
+provenance classes are not independent evidence: FunMap's gold standard
+is derived from Reactome (≤ 200 protein pathways), and Reactome is one
+of the STRING `database` channels, so "curated-literature" is partly a
+re-description of the other class. Second, a network's provenance is
+confounded with its size and coverage, which is exactly what the
+stability analysis (§I.3) shows to matter. **Testing H2 properly needs
+a panel in which the provenance classes are separated from the network
+size and coverage** — more networks per class than we have. That is a
+follow-up, not a result of this paper.
 
 ### J.3 Reactome's collapse on the newest drivers — a supported explanation
 
