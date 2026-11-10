@@ -1,6 +1,6 @@
 # D1 benchmark — v1.0-rc1 release note
 
-**Release commit:** `093efe1b604e7f97b3f6a57504575dcc1fe0eabe` (tag `v1.0-rc1`)
+**Release commit:** `9da153b776385618da792919196316e6cec11b6f` (tag `v1.0-rc1`)
 **Built:** 2026-11-05
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
@@ -21,9 +21,9 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 
 | zip | size | content |
 |---|---|---|
-| `d1-benchmark-v1.0-source.zip` | 204.2 MB | the full repository at the release tag, minus `data/raw/`, `data/cache/`, `data/processed/networks/` and `data/processed/rewired/` (all regenerable from the build scripts) |
+| `d1-benchmark-v1.0-source.zip` | 207.0 MB | the full repository at the release tag, minus `data/raw/`, `data/cache/`, `data/processed/networks/` and `data/processed/rewired/` (all regenerable from the build scripts) |
 | `d1-benchmark-v1.0-splits.zip` | 142.1 MB | every split family: the v1 10-repeat set, the 40-repeat design of record, the complex-aware v2 and the ClinGen 40-repeat splits |
-| `d1-benchmark-v1.0-results.zip` | 43.7 MB | `results/tables/` and `figures/` |
+| `d1-benchmark-v1.0-results.zip` | 45.2 MB | `results/tables/` and `figures/` |
 
 ## Verifying the release
 
@@ -32,9 +32,9 @@ SHA-256 of the 23 key tables, the 5 figures and the 3 zips:
 
 | zip | SHA-256 |
 |---|---|
-| `d1-benchmark-v1.0-results.zip` | `55914fa4186bd69c...` |
-| `d1-benchmark-v1.0-source.zip` | `235da8dddd246437...` |
-| `d1-benchmark-v1.0-splits.zip` | `ec8e9616cc02f016...` |
+| `d1-benchmark-v1.0-results.zip` | `2e6eae57617310e7...` |
+| `d1-benchmark-v1.0-source.zip` | `b45dc086e345dbee...` |
+| `d1-benchmark-v1.0-splits.zip` | `10ed09a3ea608841...` |
 
 ```bash
 python -c "import hashlib,sys;print(hashlib.sha256(open(sys.argv[1],'rb').read()).hexdigest())" d1-benchmark-v1.0-source.zip

@@ -1091,8 +1091,9 @@ as a **description**, and the H2 verdict as **not tested**.
 What the description shows (α = 0.5, the four labels):
 
 * the RNA-derived network is the weakest class on every label
-  (0.0513 / 0.0755 / 0.0821 / 0.0123 against 0.0766–0.1123 for the
-  other two classes);
+  (`intogen2024` 0.0513 against 0.0766 / 0.0927; `ot_all` 0.0755
+  against 0.1075 / 0.1133; `ot_nolit` 0.0821 against 0.1075 / 0.1113;
+  `intogen_temporal_new` 0.0123 against 0.0212 / 0.0235);
 * the curated class edges ahead of the protein-derived class on the two
   Open Targets labels (+0.0058 on `ot_all`, +0.0038 on `ot_nolit`) and
   behind it on `intogen2024` (−0.0161) — a difference of the size a
