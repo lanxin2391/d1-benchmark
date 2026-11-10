@@ -1,6 +1,6 @@
 # D1 benchmark — v1.0-rc1 release note
 
-**Release commit:** `9da153b776385618da792919196316e6cec11b6f` (tag `v1.0-rc1`)
+**Release commit:** `3192cc5bdb5f7609e7e3862039c91fbb0857463e` (tag `v1.0-rc1`)
 **Built:** 2026-11-05
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration

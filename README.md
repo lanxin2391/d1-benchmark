@@ -2,7 +2,7 @@
 
 **What a network prior contributes to cancer-driver prioritisation: a leakage-controlled benchmark.**
 
-**Release:** v1.0-rc2 (tag `v1.0-rc2` at commit `9da153b`) — Zenodo DOI pending ·
+**Release:** v1.0-rc2 (tag `v1.0-rc2` at commit `3192cc5`) — Zenodo DOI pending ·
 pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762)
 **Release:** v1.0-prep (tag `v1.0-prep` at commit `d9c68e5`) ·
 pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762) ·
