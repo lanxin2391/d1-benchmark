@@ -253,6 +253,22 @@ the v1 splits untouched, and the invariant report
 balance and the number of complex groups split across folds (0 in
 24/24 arms). Aggregate in `results/tables/d4_v1_vs_v2_comparison.tsv`.
 
+### C8 — Publication-count adjustment with a literature-matched null (Control 7)
+
+Driver genes are more studied than non-drivers, so if the prior's
+contribution is only "popular genes matter", it must vanish once
+literature volume is controlled. The adjustment (decision D-PUB-MARGIN)
+keeps the positives whose residual literature score is above the median
+of the union — it trims the "well-studied only because they are known
+cancer genes" half of each label. Trimming is not enough on its own,
+because the *background* still contains every popular gene, so the
+control adds a **matched null**: the background is replaced by genes
+matched to the positives one-to-one on log10(n_pubmed + 1), so it has
+the same size and the same literature profile as the positives.
+Implemented in `scripts/build_pubcount_adjusted.py` and
+`scripts/run_control7_matched_null.py`; aggregate in
+`results/tables/control7_matched_null.tsv`.
+
 ### W6 sensitivity arm — GNN courtesy (protocol §7)
 
 Implemented in `scripts/run_gnn_courtesy.py`. Run Node2Vec on every
@@ -607,6 +623,38 @@ both numbers are stated and the smaller one is quoted. The
 degree-penalised walk, which is the orthogonalisation idea in effect,
 *increases* the effect: there is no hub-driven failure for a
 corrective model to fix.
+
+### F.8 Control 7: what survives the literature adjustment
+
+Control 7 covers all five label sets (the temporal label was missing
+until now) and is run on the 40-repeat design, so it is comparable with
+the endpoint it is a control for. Three numbers per arm: the
+pre-registered endpoint, the publication-adjusted label, and the
+adjusted label with the literature-matched background. Medians over the
+six networks:
+
+| label | original label | publication-adjusted | adjusted + matched background |
+|---|---|---|---|
+| intogen2024 | +0.0826 | +0.0804 | **+0.0587** |
+| ot_all | +0.0767 | +0.0636 | +0.0530 |
+| ot_nolit | +0.0834 | +0.0608 | +0.0433 |
+| **intogen_temporal_new** | +0.0162 | +0.0308 | **+0.0022** |
+| clingen_label | – | +0.0751 | +0.0844 |
+
+**On the IntOGen and Open Targets labels the prior's contribution is not
+a literature effect**: it survives both the trimming and the matched
+background (e.g. intogen2024 keeps 71 % of its original margin). **On the
+temporal label it is not.** Trimming the publication-heavy positives
+*raises* the effect (those positives were the hard ones) and the
+literature-matched background then removes it. The matched comparison on
+that label is small — 76 positives against 76 matched negatives — so the
+right reading is that the advantage on newly discovered drivers **is no
+longer clearly positive once literature volume is controlled on both
+sides**, not that it is exactly zero.
+
+This is a property of the *label*, not of the method, and it competes
+with the curator-lag reading of §J.3: the two explanations of the
+temporal label are not the same. We report both rather than choosing.
 
 ---
 
@@ -1092,7 +1140,14 @@ level of an ensemble.
 Two caveats are stated plainly. First, Reactome's temporal arm has only
 63 held-out positives, so its interval is wide; the point estimate is
 negative under all four controls, but the *magnitude* is not
-precisely estimated. Second, this is one network out of six, and the
+precisely estimated. Second, **the temporal label has a second,
+competing explanation**: Control 7 with a literature-matched background
+(§F.8) shows that the prior's advantage on newly discovered drivers is
+largely a literature-volume effect — the genes that are both new and
+well studied are the ones the prior ranks well. The curator-lag reading
+above concerns Reactome's *negative* cell; this one concerns why the
+temporal label looks positive at all. They are not the same claim, and
+the paper states both. Second, this is one network out of six, and the
 control that isolates it most sharply (D-12) makes it negative for
 `intact` as well (−0.0150), so the phenomenon may be "small curated
 networks" rather than "Reactome" specifically. The publication claim
