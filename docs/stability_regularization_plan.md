@@ -257,7 +257,7 @@ The full λ-grid curve is reported in addition (a curve is a description, not a 
 | `results/tables/stability_tradeoff_curve.tsv` | the aggregated trade-off curve |
 | `results/tables/stability_control_comparison.tsv` | C1/C2/C3 comparisons, robust Z, BH q |
 | `results/tables/stability_selected_scorer.tsv` | the cross-fitted λ selection and its out-of-sample performance |
-| `figures/figure7_stability_tradeoff.png` | the trade-off figure |
+| `figures/figure8_stability_tradeoff.png` | the trade-off figure |
 | `docs/stability_regularization.md` | method + results + limitations |
 | `docs/manuscript_a_sections.md` | new exploratory section |
 | `tests/test_stability.py` | unit tests (invariance, operator behaviour, no-label-leakage) |

@@ -100,16 +100,35 @@ def load_arm(net: str, label: str):
 
 
 def arm_metrics(arm: dict) -> pd.DataFrame:
+    """Per-gene stability metrics.
+
+    The rank metrics use the SHARED engine (d1/engine/stability.py), so
+    that the D-07 tie-break (score descending, then symbol ascending) is
+    the one used everywhere else in the project. Before the merge this
+    script broke score ties by index order, which made the median rank
+    SD differ from the one B's engine produces (0.0267 vs 0.027715).
+    """
+    from d1.engine.stability import crowding_counts, percentile_ranks
     S = arm["eval_scores"]
     n_genes, n_rep = S.shape
     mean = S.mean(axis=1)
     sd = S.std(axis=1, ddof=1)
-    # percentile rank within each repeat (column-wise), scaled to [0, 1]
-    order = np.argsort(np.argsort(S, axis=0), axis=0)
-    ranks = order / (n_genes - 1)
+    genes = arm["genes"]
+    ranks = np.empty_like(S, dtype=float)
+    for r in range(n_rep):
+        ranks[:, r] = percentile_ranks(S[:, r], genes)
     rank_mean = ranks.mean(axis=1)
     rank_sd = ranks.std(axis=1, ddof=1)
     rank_range = ranks.max(axis=1) - ranks.min(axis=1)
+    # crowding, two definitions: B's Scott-bandwidth count and the
+    # +-10 % score band. They disagree in SIGN (B's attribution finds
+    # the Scott-bandwidth crowding negatively correlated with rank
+    # instability in 21 of 24 arms), so both are reported.
+    crowd = crowding_counts(mean)
+    s_sorted = np.sort(mean)
+    lo = np.searchsorted(s_sorted, mean * 0.9, side="left")
+    hi = np.searchsorted(s_sorted, mean * 1.1, side="right")
+    density = hi - lo
 
     top10 = (ranks <= 10 / (n_genes - 1)).sum(axis=1)
     top50 = (ranks <= 50 / (n_genes - 1)).sum(axis=1)
@@ -119,20 +138,13 @@ def arm_metrics(arm: dict) -> pd.DataFrame:
     cv = np.divide(sd, mean, out=np.full_like(sd, np.nan),
                    where=np.abs(mean) > 1e-12)
 
-    # local score density: how many genes sit within +-10 % of this gene's
-    # score? A gene crowded with near-equals has no stable place in the
-    # ranking; an isolated gene keeps its rank whatever the partition is.
-    s_sorted = np.sort(mean)
-    lo = np.searchsorted(s_sorted, mean * 0.9, side="left")
-    hi = np.searchsorted(s_sorted, mean * 1.1, side="right")
-    density = hi - lo
-
     return pd.DataFrame({
         "gene": arm["genes"], "y": arm["y"], "degree": arm["degree"],
         "score_mean": mean, "score_sd": sd, "score_cv": cv,
         "rank_mean": rank_mean, "rank_sd": rank_sd, "rank_range": rank_range,
         "top10_hits": top10, "top50_hits": top50,
         "top1pct_hits": top1pct, "top5pct_hits": top5pct,
+        "crowding_scott": crowd,
         "local_score_density": density,
     })
 
@@ -255,7 +267,8 @@ def make_figure(per_gene: pd.DataFrame, by_arm: pd.DataFrame,
     rho_cv = by_arm["spearman_cv_vs_local_density"]
     ax.set_xlabel("log10 number of genes within +-10 % of this gene's score")
     ax.set_ylabel("rank SD")
-    ax.set_title("D  Instability comes from crowding, not from the network",
+    ax.set_title("D  Crowding depends on the window; the gene's own\n"
+                 "     score noise is the robust predictor",
                  fontsize=11)
     ax.text(0.02, 0.95,
             f"per-arm Spearman(rank SD, local density):\n"
@@ -361,11 +374,22 @@ def main() -> int:
                                                       df.loc[bg, "score_mean"]),
                 "spearman_ranked_sd_vs_degree_pos": sp(df.loc[pos, "rank_sd"],
                                                        df.loc[pos, "degree"]),
-                # the mechanism: local score density
+                # the crowding signal, TWO definitions: the relative
+                # +-10 % score band and the Scott bandwidth. They
+                # correlate with the rank instability with OPPOSITE
+                # signs, which is why "crowding" is not a mechanism --
+                # the sign depends on the window.
                 "spearman_ranked_sd_vs_local_density": sp(df.loc[bg, "rank_sd"],
                                                           df.loc[bg, "local_score_density"]),
+                "spearman_ranked_sd_vs_crowding_scott": sp(
+                    df.loc[bg, "rank_sd"], df.loc[bg, "crowding_scott"]),
+                # the robust predictor: the gene's OWN score noise
+                "spearman_ranked_sd_vs_score_cv": sp(df.loc[bg, "rank_sd"],
+                                                      df.loc[bg, "score_cv"]),
                 "spearman_cv_vs_local_density": sp(df.loc[bg, "score_cv"],
                                                    df.loc[bg, "local_score_density"]),
+                "spearman_cv_vs_crowding_scott": sp(df.loc[bg, "score_cv"],
+                                                     df.loc[bg, "crowding_scott"]),
                 "spearman_cv_vs_degree": sp(df.loc[bg, "score_cv"],
                                             df.loc[bg, "degree"]),
                 # sensitivity: evaluated score vs all-fold mean

@@ -4,7 +4,7 @@
 **Pre-registration:** `docs/stability_regularization_plan.md` (committed before any result existed;
 Amendment A1 at the end of that file records the one design change that was made after the first
 result was seen, and why).
-**Artefacts:** `results/tables/stability_*.tsv`, `figures/figure7_stability_tradeoff.png`,
+**Artefacts:** `results/tables/stability_*.tsv`, `figures/figure8_stability_tradeoff.png`,
 `scripts/run_stability_*.py`, `d1/engine/stability.py`.
 
 ---

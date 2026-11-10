@@ -44,7 +44,7 @@ if STYLE.exists():
 
 TABLE_DIR = REPO_ROOT / "results" / "tables"
 FIG_DIR = REPO_ROOT / "figures"
-OUT = FIG_DIR / "figure7_stability_tradeoff.png"
+OUT = FIG_DIR / "figure8_stability_tradeoff.png"
 
 INK = "#2a2723"
 GREY = "#cbc6bb"

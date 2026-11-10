@@ -12,7 +12,7 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 |---|---|
 | P0 repairs | all 11 done: the alpha filter, the TOST rule, the D-11 filename collision (plus a second bug: the cap was applied before the universe restriction), the D-12 shared universe, the D-09 seed resampling, the variance decomposition, the gene-cluster bootstrap, the 24-cell BH-FDR, the H1 rule as re-computed, and the control-2 null moved to the 40-repeat design |
 | Phase D | the complex-aware cross-validation: the complex map (ComplexPortal via UniProtKB), the leakage audit of the v1 splits (96 % of the complex-bearing held-out positives have a partner in the training fold), the group-preserving splitter, the v2 splits and the v1-vs-v2 comparison (the effect shrinks by a median of 12 %, the H1 verdict is unchanged) |
-| Phase S | the stability atlas: per-gene stability, its attribution to the crowding of the score distribution, the network level, and the replication on ClinGen |
+| Phase S | the stability atlas: per-gene stability, its attribution to the sampling noise of the seed mean, the network level, and the replication on ClinGen |
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |

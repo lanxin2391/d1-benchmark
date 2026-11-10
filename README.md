@@ -91,7 +91,7 @@ script and regenerate.
 | `results/tables/stability_prediction_scorecard.tsv` | Every pre-registered prediction, its rule, the observed value and the verdict |
 | `results/tables/stability_splits_v40_manifest.tsv` | SHA-256 of the 40-repeat split panel (the panel itself is derived data) |
 | `results/tables/stability_per_gene_scores_manifest.tsv` | SHA-256 of the 72 per-gene score dumps |
-| `figures/figure7_stability_tradeoff.png` | The trade-off figure (smoothing axis, seed axis, mechanism) |
+| `figures/figure8_stability_tradeoff.png` | The trade-off figure (smoothing axis, seed axis, mechanism) |
 | `d1/engine/stability.py` | The operators and the stability metrics |
 | `scripts/build_splits_v40.py` | Builds and *verifies* the 40-repeat split panel |
 | `scripts/run_stability_dump.py` | Per-gene score dump + AUROC cross-check against the harness |

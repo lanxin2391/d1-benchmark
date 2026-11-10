@@ -61,7 +61,13 @@ SEED = 20261105
 
 FEATURES = ["log_degree", "k_core", "clustering", "log_betweenness",
             "log_pagerank", "log_community_size", "dist_to_seed",
-            "log_local_score_density", "log_score_mean"]
+            "log_local_score_density", "log_score_mean",
+            # the gene's OWN score noise -- the robust predictor of the
+            # rank instability (B's attribution: +0.82, 24/24 arms), and
+            # the second crowding definition (Scott bandwidth), whose
+            # correlation with the instability has the OPPOSITE sign to
+            # the relative +-10 % band
+            "log_score_cv", "log_crowding_scott"]
 
 
 def log(msg: str):
@@ -206,6 +212,10 @@ def main() -> int:
     df["log_pagerank"] = np.log10(df["pagerank"].clip(lower=1e-15))
     df["log_community_size"] = np.log1p(df["community_size"])
     df["log_local_score_density"] = np.log1p(df["local_score_density"])
+    df["log_crowding_scott"] = np.log1p(df["crowding_scott"])
+    # the gene's own score noise, on the same scale as the other
+    # predictors (the CV is already a ratio, so log1p keeps it positive)
+    df["log_score_cv"] = np.log1p(df["score_cv"])
     df["log_score_mean"] = np.log10(df["score_mean"].clip(lower=1e-12))
     # any remaining +-inf (e.g. an unreachable gene) becomes NaN and the
     # model drops that row
@@ -293,7 +303,10 @@ def main() -> int:
                 s2 = sub[[feat, col]].dropna()
                 if len(s2) < 50:
                     continue
-                rhos.append(float(sps.spearmanr(s2[feat], s2[col]).statistic))
+                # iloc, not [feat]: when the feature and the outcome are
+                # the same column the subset has duplicate names
+                rhos.append(float(sps.spearmanr(s2.iloc[:, 0],
+                                                s2.iloc[:, 1]).statistic))
             marg_rows.append({
                 "outcome": oc, "feature": feat,
                 "marginal_spearman_median": float(np.median(rhos)),
