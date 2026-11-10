@@ -1,0 +1,75 @@
+A4 factorial: 6 networks x 5 labels x 3 alphas = 30 arms
+
+Step 1: ensure split files exist (generate if missing)
+
+Step 2: run 30 arms (one C5 file per arm)
+  [funmap x intogen2024_pubcount_adjusted] 800 rows in 9.1s -> a4_funmap__intogen2024_pubcount_adjusted.tsv
+  [funmap x ot_all_pubcount_adjusted] 800 rows in 8.9s -> a4_funmap__ot_all_pubcount_adjusted.tsv
+  [funmap x ot_nolit_pubcount_adjusted] 800 rows in 9.3s -> a4_funmap__ot_nolit_pubcount_adjusted.tsv
+  [funmap x intogen_temporal_new_pubcount_adjusted] 800 rows in 9.1s -> a4_funmap__intogen_temporal_new_pubcount_adjusted.tsv
+  [funmap x clingen_label_pubcount_adjusted] 800 rows in 9.2s -> a4_funmap__clingen_label_pubcount_adjusted.tsv
+  [rna_coexp x intogen2024_pubcount_adjusted] 800 rows in 8.6s -> a4_rna_coexp__intogen2024_pubcount_adjusted.tsv
+  [rna_coexp x ot_all_pubcount_adjusted] 800 rows in 9.2s -> a4_rna_coexp__ot_all_pubcount_adjusted.tsv
+  [rna_coexp x ot_nolit_pubcount_adjusted] 800 rows in 9.0s -> a4_rna_coexp__ot_nolit_pubcount_adjusted.tsv
+  [rna_coexp x intogen_temporal_new_pubcount_adjusted] 800 rows in 9.0s -> a4_rna_coexp__intogen_temporal_new_pubcount_adjusted.tsv
+  [rna_coexp x clingen_label_pubcount_adjusted] 800 rows in 8.7s -> a4_rna_coexp__clingen_label_pubcount_adjusted.tsv
+  [string_phys700 x intogen2024_pubcount_adjusted] 800 rows in 8.1s -> a4_string_phys700__intogen2024_pubcount_adjusted.tsv
+  [string_phys700 x ot_all_pubcount_adjusted] 800 rows in 7.8s -> a4_string_phys700__ot_all_pubcount_adjusted.tsv
+  [string_phys700 x ot_nolit_pubcount_adjusted] 800 rows in 8.2s -> a4_string_phys700__ot_nolit_pubcount_adjusted.tsv
+  [string_phys700 x intogen_temporal_new_pubcount_adjusted] 800 rows in 7.4s -> a4_string_phys700__intogen_temporal_new_pubcount_adjusted.tsv
+  [string_phys700 x clingen_label_pubcount_adjusted] 800 rows in 7.7s -> a4_string_phys700__clingen_label_pubcount_adjusted.tsv
+  [intact x intogen2024_pubcount_adjusted] 800 rows in 18.2s -> a4_intact__intogen2024_pubcount_adjusted.tsv
+  [intact x ot_all_pubcount_adjusted] 800 rows in 18.1s -> a4_intact__ot_all_pubcount_adjusted.tsv
+  [intact x ot_nolit_pubcount_adjusted] 800 rows in 18.2s -> a4_intact__ot_nolit_pubcount_adjusted.tsv
+  [intact x intogen_temporal_new_pubcount_adjusted] 800 rows in 18.9s -> a4_intact__intogen_temporal_new_pubcount_adjusted.tsv
+  [intact x clingen_label_pubcount_adjusted] 800 rows in 18.0s -> a4_intact__clingen_label_pubcount_adjusted.tsv
+  [string_full700 x intogen2024_pubcount_adjusted] 800 rows in 13.3s -> a4_string_full700__intogen2024_pubcount_adjusted.tsv
+  [string_full700 x ot_all_pubcount_adjusted] 800 rows in 12.6s -> a4_string_full700__ot_all_pubcount_adjusted.tsv
+  [string_full700 x ot_nolit_pubcount_adjusted] 800 rows in 12.7s -> a4_string_full700__ot_nolit_pubcount_adjusted.tsv
+  [string_full700 x intogen_temporal_new_pubcount_adjusted] 800 rows in 12.8s -> a4_string_full700__intogen_temporal_new_pubcount_adjusted.tsv
+  [string_full700 x clingen_label_pubcount_adjusted] 800 rows in 12.8s -> a4_string_full700__clingen_label_pubcount_adjusted.tsv
+  [reactome x intogen2024_pubcount_adjusted] 800 rows in 3.1s -> a4_reactome__intogen2024_pubcount_adjusted.tsv
+  [reactome x ot_all_pubcount_adjusted] 800 rows in 3.2s -> a4_reactome__ot_all_pubcount_adjusted.tsv
+  [reactome x ot_nolit_pubcount_adjusted] 800 rows in 3.2s -> a4_reactome__ot_nolit_pubcount_adjusted.tsv
+  [reactome x intogen_temporal_new_pubcount_adjusted] 800 rows in 3.3s -> a4_reactome__intogen_temporal_new_pubcount_adjusted.tsv
+  [reactome x clingen_label_pubcount_adjusted] 800 rows in 3.5s -> a4_reactome__clingen_label_pubcount_adjusted.tsv
+
+Step 3: concatenate 30 arm tables into results/runs/a4_combined.tsv
+  combined rows: 24,000
+
+Step 4: aggregate to Table 1 -> results/tables/a4_table1_delta_auroc.tsv
+  Table 1 (delta_AUROC, mean +- SD across 1 folds):
+                                                       a0.3_mean  a0.3_std  a0.3_n  a0.5_mean  a0.5_std  a0.5_n  a0.7_mean  a0.7_std  a0.7_n
+network        label_set                                                                                                                    
+funmap         clingen_label_pubcount_adjusted            0.1130    0.0965   200.0     0.1177    0.1011   200.0     0.1166    0.1039   200.0
+               intogen2024_pubcount_adjusted              0.0940    0.0219   200.0     0.1036    0.0231   200.0     0.1080    0.0238   200.0
+               intogen_temporal_new_pubcount_adjusted     0.0151    0.0327   200.0     0.0205    0.0367   200.0     0.0250    0.0391   200.0
+               ot_all_pubcount_adjusted                   0.0648    0.0240   200.0     0.0715    0.0253   200.0     0.0754    0.0258   200.0
+               ot_nolit_pubcount_adjusted                 0.0675    0.0223   200.0     0.0718    0.0239   200.0     0.0742    0.0249   200.0
+intact         clingen_label_pubcount_adjusted            0.0703    0.0323   200.0     0.0751    0.0370   200.0     0.0725    0.0389   200.0
+               intogen2024_pubcount_adjusted              0.0713    0.0102   200.0     0.0826    0.0125   200.0     0.0856    0.0140   200.0
+               intogen_temporal_new_pubcount_adjusted     0.0055    0.0166   200.0     0.0014    0.0220   200.0    -0.0041    0.0254   200.0
+               ot_all_pubcount_adjusted                   0.0714    0.0109   200.0     0.0847    0.0135   200.0     0.0901    0.0153   200.0
+               ot_nolit_pubcount_adjusted                 0.0614    0.0124   200.0     0.0726    0.0156   200.0     0.0765    0.0176   200.0
+reactome       clingen_label_pubcount_adjusted            0.1256    0.0706   200.0     0.1290    0.0746   200.0     0.1310    0.0771   200.0
+               intogen2024_pubcount_adjusted              0.0483    0.0193   200.0     0.0419    0.0215   200.0     0.0336    0.0229   200.0
+               intogen_temporal_new_pubcount_adjusted    -0.0097    0.0497   200.0    -0.0122    0.0557   200.0    -0.0138    0.0596   200.0
+               ot_all_pubcount_adjusted                   0.0675    0.0186   200.0     0.0666    0.0212   200.0     0.0632    0.0230   200.0
+               ot_nolit_pubcount_adjusted                 0.0580    0.0210   200.0     0.0568    0.0228   200.0     0.0524    0.0238   200.0
+rna_coexp      clingen_label_pubcount_adjusted            0.0196    0.0552   200.0     0.0280    0.0588   200.0     0.0362    0.0612   200.0
+               intogen2024_pubcount_adjusted              0.0702    0.0214   200.0     0.0782    0.0226   200.0     0.0833    0.0237   200.0
+               intogen_temporal_new_pubcount_adjusted     0.0540    0.0448   200.0     0.0601    0.0481   200.0     0.0629    0.0504   200.0
+               ot_all_pubcount_adjusted                   0.0584    0.0228   200.0     0.0636    0.0240   200.0     0.0674    0.0247   200.0
+               ot_nolit_pubcount_adjusted                 0.0561    0.0250   200.0     0.0608    0.0258   200.0     0.0635    0.0263   200.0
+string_full700 clingen_label_pubcount_adjusted            0.0616    0.0180   200.0     0.0618    0.0193   200.0     0.0614    0.0202   200.0
+               intogen2024_pubcount_adjusted              0.0676    0.0093   200.0     0.0687    0.0107   200.0     0.0672    0.0115   200.0
+               intogen_temporal_new_pubcount_adjusted     0.0456    0.0302   200.0     0.0410    0.0345   200.0     0.0358    0.0371   200.0
+               ot_all_pubcount_adjusted                   0.0572    0.0072   200.0     0.0584    0.0082   200.0     0.0573    0.0088   200.0
+               ot_nolit_pubcount_adjusted                 0.0616    0.0084   200.0     0.0631    0.0098   200.0     0.0619    0.0106   200.0
+string_phys700 clingen_label_pubcount_adjusted            0.1114    0.0466   200.0     0.1157    0.0495   200.0     0.1178    0.0514   200.0
+               intogen2024_pubcount_adjusted              0.1095    0.0168   200.0     0.1087    0.0186   200.0     0.1048    0.0200   200.0
+               intogen_temporal_new_pubcount_adjusted     0.0441    0.0424   200.0     0.0413    0.0460   200.0     0.0378    0.0482   200.0
+               ot_all_pubcount_adjusted                   0.1251    0.0169   200.0     0.1261    0.0180   200.0     0.1240    0.0188   200.0
+               ot_nolit_pubcount_adjusted                 0.1208    0.0187   200.0     0.1213    0.0204   200.0     0.1193    0.0215   200.0
+
+Done. 30 arms; combined file 24,000 rows.

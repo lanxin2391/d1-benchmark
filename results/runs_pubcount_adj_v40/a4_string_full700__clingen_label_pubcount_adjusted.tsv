@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		0	0	degree		0.8927644500561167	0.1249057577067977	0.02	0.01	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		0	1	degree		0.9208052749719416	0.02165673773236807	0.0	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		0	2	degree		0.9231573547979798	0.156468497564301	0.06	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		0	3	degree		0.9133917297979799	0.016833927315687794	0.0	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		0	4	degree		0.9231770833333334	0.08846809752254883	0.04	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		1	0	degree		0.8636012906846241	0.012177543943678194	0.0	0.01	0.012	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		1	1	degree		0.9199459876543209	0.021559877764900915	0.02	0.01	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		1	2	degree		0.9585306186868686	0.03977052884354474	0.04	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		1	3	degree		0.9475023674242425	0.17369017388719593	0.04	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		1	4	degree		0.8846077967171717	0.05299774430433182	0.02	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		2	0	degree		0.9274691358024691	0.15351808805840036	0.08	0.04	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		2	1	degree		0.9237689393939394	0.018952890151438403	0.0	0.01	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		2	2	degree		0.8955374053030303	0.0375735127124774	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		2	3	degree		0.9080650252525252	0.13913381455176976	0.02	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		2	4	degree		0.9117345328282828	0.01594947363763131	0.0	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		3	0	degree		0.8808922558922558	0.1254975164555688	0.02	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		3	1	degree		0.9116161616161615	0.01816583371133592	0.02	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		3	2	degree		0.8822403724747474	0.01660520260890602	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		3	3	degree		0.9562026515151515	0.16121136762830526	0.04	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		3	4	degree		0.941879734848485	0.0332920094285159	0.02	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		4	0	degree		0.9283985690235691	0.021907533586705816	0.02	0.01	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		4	1	degree		0.9408670033670035	0.1696321592275393	0.06	0.05	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		4	2	degree		0.914318970959596	0.01752596599541495	0.02	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		4	3	degree		0.8799715909090909	0.07941493706546261	0.04	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		4	4	degree		0.8987728851010102	0.013306424524343143	0.0	0.0	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		5	0	degree		0.8971661054994389	0.016450752380859884	0.02	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		5	1	degree		0.8804363075196409	0.12661946937868745	0.04	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		5	2	degree		0.9148910984848485	0.021314885357811862	0.02	0.03	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		5	3	degree		0.9313644255050505	0.04311752205806053	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		5	4	degree		0.9491990214646466	0.09339416954991184	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		6	0	degree		0.9078282828282829	0.036518418347450905	0.04	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		6	1	degree		0.9073197250280584	0.1258269597915338	0.02	0.01	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		6	2	degree		0.9100970643939393	0.018301783044478156	0.0	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		6	3	degree		0.9218158143939394	0.01999890924255656	0.0	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		6	4	degree		0.9207899305555556	0.16298307354186437	0.06	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		7	0	degree		0.9058992704826038	0.05858263485256775	0.04	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		7	1	degree		0.9372895622895623	0.17781639552733627	0.04	0.03	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		7	2	degree		0.8991082702020202	0.013023813264218934	0.0	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		7	3	degree		0.9117148042929293	0.016086377140227908	0.0	0.0	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		7	4	degree		0.9151081123737373	0.032677181220646764	0.04	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		8	0	degree		0.9041280864197531	0.017881055679233405	0.02	0.01	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		8	1	degree		0.9095293209876543	0.0167961750829508	0.0	0.01	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		8	2	degree		0.9287405303030303	0.14435049715745715	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		8	3	degree		0.9223484848484848	0.023374807032219717	0.0	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		8	4	degree		0.9062105429292929	0.2414078496413337	0.08	0.04	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		9	0	degree		0.9359743265993266	0.19132372254813676	0.06	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		9	1	degree		0.8895552749719416	0.01977796446201892	0.02	0.02	0.012	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		9	2	degree		0.9144373421717171	0.019691898520287833	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		9	3	degree		0.8925189393939394	0.015168382222563354	0.0	0.0	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		9	4	degree		0.937973484848485	0.14725572591163744	0.02	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		10	0	degree		0.9353605499438833	0.026381132547967746	0.02	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		10	1	degree		0.9389029180695847	0.16411410937634666	0.06	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		10	2	degree		0.8804056186868686	0.012049622460303626	0.0	0.0	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		10	3	degree		0.9451941287878789	0.14742876645725816	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		10	4	degree		0.8632023358585857	0.017519968242206217	0.04	0.02	0.008	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		11	0	degree		0.9400077160493827	0.0283719948677644	0.02	0.02	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		11	1	degree		0.931520061728395	0.1755273004954809	0.06	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		11	2	degree		0.893347537878788	0.017183150986627906	0.02	0.01	0.01	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		11	3	degree		0.9373619002525252	0.08331101079717292	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		11	4	degree		0.862432922979798	0.0114298299932455	0.0	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		12	0	degree		0.9101606341189674	0.031875624624599294	0.02	0.01	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		12	1	degree		0.9209631032547699	0.02744534280733028	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		12	2	degree		0.8879024621212122	0.146373148331885	0.04	0.03	0.01	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		12	3	degree		0.9259390782828283	0.019178090648686214	0.0	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		12	4	degree		0.9259390782828283	0.14411668624548155	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		13	0	degree		0.924172278338945	0.029614852150413797	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		13	1	degree		0.9041280864197531	0.12924716966025696	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		13	2	degree		0.899621212121212	0.036645371512262145	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		13	3	degree		0.9109059343434344	0.01909257816005605	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		13	4	degree		0.9273200757575757	0.08491984371815842	0.02	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		14	0	degree		0.9254875140291807	0.025487946686219155	0.02	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		14	1	degree		0.9170349326599327	0.1267911478960691	0.02	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		14	2	degree		0.9091106376262625	0.017922577005007878	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		14	3	degree		0.8833846275252525	0.17924910605546313	0.04	0.03	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		14	4	degree		0.9295888573232324	0.028109923784679813	0.02	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		15	0	degree		0.9100028058361391	0.023598600699074754	0.02	0.03	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		15	1	degree		0.9510030864197532	0.05130632876351641	0.04	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		15	2	degree		0.8749605429292929	0.07706476926938877	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		15	3	degree		0.914358428030303	0.14367100016936993	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		15	4	degree		0.9130563446969697	0.01705378791281939	0.0	0.0	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		16	0	degree		0.9485129068462401	0.05756884792421907	0.04	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		16	1	degree		0.8870124859708193	0.01549444467753201	0.0	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		16	2	degree		0.907986111111111	0.022675210694465826	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		16	3	degree		0.8941169507575758	0.012825317631233183	0.0	0.0	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		16	4	degree		0.9311868686868686	0.2766149736742061	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		17	0	degree		0.8924312570145903	0.034338790326555194	0.02	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		17	1	degree		0.9479692760942761	0.03249695938957696	0.04	0.02	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		17	2	degree		0.9267282196969696	0.14304195977395434	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		17	3	degree		0.9197837752525253	0.1469549841364325	0.02	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		17	4	degree		0.8790443497474748	0.02077925890532365	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		18	0	degree		0.9155794051627385	0.1284712728962741	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		18	1	degree		0.8724747474747475	0.015755542732156094	0.02	0.01	0.012	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		18	2	degree		0.9401041666666667	0.05439494130286462	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		18	3	degree		0.9477588383838383	0.15158837748009354	0.02	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		18	4	degree		0.8959911616161617	0.02237277790179862	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		19	0	degree		0.9457421436588103	0.15104357959455972	0.06	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		19	1	degree		0.8946057800224467	0.07450057953478176	0.04	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		19	2	degree		0.9235519255050505	0.017262192561968755	0.0	0.0	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		19	3	degree		0.9220525568181818	0.03645313555434881	0.02	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		19	4	degree		0.8802872474747474	0.01488736075884078	0.0	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		20	0	degree		0.8803486251402918	0.01580863197927926	0.02	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		20	1	degree		0.9390958193041526	0.13843578691069972	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		20	2	degree		0.9259588068181819	0.22610733338861128	0.04	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		20	3	degree		0.8937421085858587	0.014634920279155774	0.0	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		20	4	degree		0.931857638888889	0.025023916321717153	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		21	0	degree		0.9276795735129069	0.16480594316228916	0.06	0.04	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		21	1	degree		0.9066533389450055	0.017410241718289275	0.02	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		21	2	degree		0.9272017045454546	0.02111749683087794	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		21	3	degree		0.8933672664141414	0.13923774262990138	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		21	4	degree		0.9158972537878789	0.02307760234301848	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		22	0	degree		0.9110900673400673	0.037054818842948346	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		22	1	degree		0.910756874298541	0.0285720854386801	0.04	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		22	2	degree		0.9097814078282828	0.08941976160762562	0.04	0.04	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		22	3	degree		0.9097222222222222	0.14017794854054097	0.02	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		22	4	degree		0.9289772727272727	0.01890474836735971	0.0	0.0	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		23	0	degree		0.9063201459034792	0.020149272110485825	0.0	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		23	1	degree		0.9310115039281706	0.14281153354876774	0.04	0.04	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		23	2	degree		0.8837002840909091	0.011477804237591658	0.0	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		23	3	degree		0.9209674873737373	0.017921363600053614	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		23	4	degree		0.9263533775252525	0.12428558672337826	0.06	0.04	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		24	0	degree		0.931520061728395	0.13740709309081187	0.02	0.04	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		24	1	degree		0.9299943883277216	0.020992601305456722	0.0	0.0	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		24	2	degree		0.8912365845959597	0.037962445573334586	0.04	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		24	3	degree		0.8853180239898989	0.012572479293561633	0.0	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		24	4	degree		0.9263731060606061	0.15494357918270182	0.06	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		25	0	degree		0.9063026094276094	0.01884081085370755	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		25	1	degree		0.9160353535353535	0.1326628182017584	0.04	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		25	2	degree		0.9086766098484849	0.14449829509895495	0.04	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		25	3	degree		0.9024029356060607	0.03657466386609507	0.04	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		25	4	degree		0.9352706755050504	0.022004824185627967	0.0	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		26	0	degree		0.9199985970819304	0.02285779271327299	0.04	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		26	1	degree		0.8872579966329966	0.019265846845839624	0.02	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		26	2	degree		0.929943970959596	0.14221385075604576	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		26	3	degree		0.9109453914141413	0.17032309453646596	0.06	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		26	4	degree		0.9255247790404041	0.02268062110910939	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		27	0	degree		0.9123702300785633	0.019016768032403833	0.0	0.0	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		27	1	degree		0.9034617003367004	0.03757091909388703	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		27	2	degree		0.9272411616161615	0.031348014194793654	0.02	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		27	3	degree		0.9238873106060606	0.14484473143136825	0.04	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		27	4	degree		0.9033301767676767	0.1462160830555938	0.04	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		28	0	degree		0.9126332772166105	0.021643355246554925	0.02	0.02	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		28	1	degree		0.9531951459034793	0.14485891082733274	0.04	0.02	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		28	2	degree		0.8925386679292929	0.14080868982146375	0.02	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		28	3	degree		0.9354087752525253	0.08845636115499042	0.04	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		28	4	degree		0.8747040719696969	0.011455859280384777	0.0	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		29	0	degree		0.9013923961840627	0.07810967482128985	0.02	0.03	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		29	1	degree		0.9303451178451178	0.04208771407931666	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		29	2	degree		0.8773871527777778	0.010771779243785671	0.0	0.0	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		29	3	degree		0.922131470959596	0.14086907684562724	0.02	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		29	4	degree		0.9342645202020202	0.03372488821804364	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		30	0	degree		0.8962717452300786	0.018782240296366555	0.0	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		30	1	degree		0.9473730359147026	0.2142312964004486	0.06	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		30	2	degree		0.90396148989899	0.016819167790037823	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		30	3	degree		0.8879813762626263	0.0309956464439277	0.02	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		30	4	degree		0.9293718434343433	0.026107368715439946	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		31	0	degree		0.9094241021324354	0.1365647351548946	0.04	0.03	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		31	1	degree		0.9147376543209876	0.019939879666140352	0.02	0.01	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		31	2	degree		0.9047506313131314	0.015334398908044368	0.0	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		31	3	degree		0.9229995265151515	0.12688035523151933	0.06	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		31	4	degree		0.9170612373737373	0.018656094489572072	0.0	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		32	0	degree		0.9314148428731761	0.022901561070222953	0.0	0.02	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		32	1	degree		0.9373246352413019	0.18483905120763844	0.08	0.05	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		32	2	degree		0.9318970959595959	0.15081714463309173	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		32	3	degree		0.9009824810606061	0.019706615180334945	0.02	0.02	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		32	4	degree		0.8614267676767676	0.00963169495091587	0.0	0.0	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		33	0	degree		0.9149130190796857	0.017988085231558083	0.0	0.0	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		33	1	degree		0.9454089506172839	0.08321038090532609	0.04	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		33	2	degree		0.8907433712121211	0.01476145428918855	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		33	3	degree		0.9147727272727273	0.16068054638872953	0.06	0.04	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		33	4	degree		0.8936829229797979	0.037639158653396204	0.02	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		34	0	degree		0.8966224747474747	0.015709937279831214	0.0	0.0	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		34	1	degree		0.9025147306397305	0.04528878027903599	0.06	0.03	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		34	2	degree		0.87075836489899	0.014163876168711866	0.02	0.02	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		34	3	degree		0.9452335858585859	0.15242770394661523	0.04	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		34	4	degree		0.9552556818181819	0.15244160949979899	0.02	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		35	0	degree		0.914877946127946	0.13044513838847924	0.02	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		35	1	degree		0.9281530583613917	0.03170714746351689	0.04	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		35	2	degree		0.9156605113636364	0.07668149568026829	0.02	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		35	3	degree		0.8813328598484848	0.015845084040506233	0.0	0.01	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		35	4	degree		0.928582702020202	0.04143675332430929	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		36	0	degree		0.9194023569023568	0.018995287566951853	0.0	0.01	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		36	1	degree		0.8713173400673401	0.011978331253944215	0.0	0.0	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		36	2	degree		0.9440301452020202	0.04987095663593605	0.04	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		36	3	degree		0.9627919823232324	0.16743525963844083	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		36	4	degree		0.8729482323232323	0.14107087383594127	0.04	0.02	0.01	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		37	0	degree		0.921875	0.04422151866082448	0.04	0.03	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		37	1	degree		0.9051276655443322	0.07410716276099348	0.04	0.02	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		37	2	degree		0.9364543876262628	0.1481421157417566	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		37	3	degree		0.9044941603535354	0.024741226137167394	0.04	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		37	4	degree		0.9015940656565656	0.016045885770575856	0.0	0.0	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		38	0	degree		0.8567445286195287	0.011463721989820952	0.0	0.01	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		38	1	degree		0.9614723625140292	0.061259557316224386	0.04	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		38	2	degree		0.9188762626262627	0.07911879708990813	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		38	3	degree		0.9179490214646465	0.01906289965044658	0.02	0.01	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		38	4	degree		0.916568023989899	0.14897256444885093	0.06	0.03	0.01	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		39	0	degree		0.9275918911335578	0.1423257889195379	0.06	0.04	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		39	1	degree		0.9285563973063974	0.026606221233961648	0.02	0.02	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		39	2	degree		0.8773476957070706	0.015028468022330519	0.0	0.0	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		39	3	degree		0.9253274936868687	0.1405605011898565	0.02	0.01	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700		39	4	degree		0.9060724431818181	0.04759840153430419	0.02	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	0	0	rwr	36.0	0.9650322671156004	0.15120880067670936	0.04	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	0	1	rwr	36.0	0.9717662738496072	0.10772740263990366	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	0	2	rwr	36.0	0.9775883838383839	0.42276621336319525	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	0	3	rwr	36.0	0.984375	0.18512424424547042	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	0	4	rwr	36.0	0.9895833333333334	0.5921499878859963	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	1	0	rwr	36.0	0.9292227833894501	0.18519392592473044	0.08	0.04	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	1	1	rwr	36.0	0.982638888888889	0.15149716702427188	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	1	2	rwr	36.0	0.9920296717171717	0.357575850953763	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	1	3	rwr	36.0	0.9872159090909091	0.3312371263271654	0.08	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	1	4	rwr	36.0	0.9775094696969697	0.29940251547394403	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	2	0	rwr	36.0	0.9759048821548821	0.46231081617762504	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	2	1	rwr	36.0	0.9789913019079686	0.09169891233297031	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	2	2	rwr	36.0	0.9719460227272728	0.26270609884840224	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	2	3	rwr	36.0	0.987689393939394	0.22655315114992533	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	2	4	rwr	36.0	0.9581360479797979	0.2040058306254774	0.08	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	3	0	rwr	36.0	0.9841820987654321	0.27701402587098334	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	3	1	rwr	36.0	0.9753086419753086	0.1669016762195663	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	3	2	rwr	36.0	0.973287563131313	0.2697483015550321	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	3	3	rwr	36.0	0.9718276515151516	0.27317100411488887	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	3	4	rwr	36.0	0.980429292929293	0.16578590356550046	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	4	0	rwr	36.0	0.9718013468013468	0.15618957560680916	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	4	1	rwr	36.0	0.988601290684624	0.39575593578729773	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	4	2	rwr	36.0	0.969854797979798	0.1448570731130159	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	4	3	rwr	36.0	0.9499289772727273	0.2936678899764533	0.1	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	4	4	rwr	36.0	0.9780618686868687	0.2934431744954821	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	5	0	rwr	36.0	0.9636644219977554	0.17587418803132354	0.08	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	5	1	rwr	36.0	0.9519851290684623	0.2318404933156835	0.08	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	5	2	rwr	36.0	0.9672900883838383	0.14979386762474997	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	5	3	rwr	36.0	0.9770754419191918	0.2839200402584837	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	5	4	rwr	36.0	0.987649936868687	0.2742622240467068	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	6	0	rwr	36.0	0.9747474747474747	0.31455359443811376	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	6	1	rwr	36.0	0.9829545454545454	0.16431311045091948	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	6	2	rwr	36.0	0.9739977904040403	0.29443552159565983	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	6	3	rwr	36.0	0.9727746212121212	0.16175091724096882	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	6	4	rwr	36.0	0.9786537247474748	0.408232646982647	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	7	0	rwr	36.0	0.9870931537598204	0.33654812344299406	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	7	1	rwr	36.0	0.9787107182940515	0.2971183657188681	0.08	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	7	2	rwr	36.0	0.9562026515151515	0.06035053551373793	0.04	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	7	3	rwr	36.0	0.9848090277777778	0.09766660498828308	0.06	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	7	4	rwr	36.0	0.9867818813131314	0.44612483182779167	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	8	0	rwr	36.0	0.9668911335578002	0.141531961088489	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	8	1	rwr	36.0	0.9756242985409651	0.10349578355095798	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	8	2	rwr	36.0	0.9795612373737375	0.29670499523440697	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	8	3	rwr	36.0	0.9851641414141414	0.39825803334523935	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	8	4	rwr	36.0	0.982204861111111	0.4013714731154045	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	9	0	rwr	36.0	0.976921997755331	0.31987417856873074	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	9	1	rwr	36.0	0.9849537037037037	0.24860724242969462	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	9	2	rwr	36.0	0.9840593434343434	0.16808120552024372	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	9	3	rwr	36.0	0.9715909090909091	0.16142297634732727	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	9	4	rwr	36.0	0.9725378787878787	0.21972775514145304	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	10	0	rwr	36.0	0.9763608305274972	0.1473326086122072	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	10	1	rwr	36.0	0.9787107182940517	0.4128490845455892	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	10	2	rwr	36.0	0.970959595959596	0.063982644650813	0.04	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	10	3	rwr	36.0	0.9846906565656567	0.20205223678359652	0.06	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	10	4	rwr	36.0	0.9729324494949494	0.23145888287970323	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	11	0	rwr	36.0	0.9780794051627385	0.2659410141515405	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	11	1	rwr	36.0	0.993371212121212	0.45864164779082317	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	11	2	rwr	36.0	0.9703282828282828	0.08838378539978797	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	11	3	rwr	36.0	0.9835069444444445	0.22817406777525823	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	11	4	rwr	36.0	0.9617660984848485	0.03751403182025133	0.02	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	12	0	rwr	36.0	0.9657687991021324	0.24261562968594322	0.08	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	12	1	rwr	36.0	0.9664001122334456	0.13460085318728318	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	12	2	rwr	36.0	0.965396148989899	0.18074518416229451	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	12	3	rwr	36.0	0.9887152777777778	0.1464730816569052	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	12	4	rwr	36.0	0.990017361111111	0.4151648905529954	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	13	0	rwr	36.0	0.9765361952861953	0.20949231544469638	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	13	1	rwr	36.0	0.9822881593714927	0.209006565806725	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	13	2	rwr	36.0	0.9740372474747475	0.22616520479546684	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	13	3	rwr	36.0	0.967605744949495	0.27320633300311764	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	13	4	rwr	36.0	0.981021148989899	0.322491261682568	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	14	0	rwr	36.0	0.982077721661055	0.1331236204747978	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	14	1	rwr	36.0	0.958719135802469	0.13784146083468332	0.06	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	14	2	rwr	36.0	0.9769570707070707	0.14949220166754879	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	14	3	rwr	36.0	0.9694996843434344	0.3464666518578772	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	14	4	rwr	36.0	0.9880050505050505	0.4198251519879663	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	15	0	rwr	36.0	0.9752034231200898	0.19751620452744098	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	15	1	rwr	36.0	0.9896534792368126	0.44306027528919095	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	15	2	rwr	36.0	0.9560448232323233	0.1609765012537557	0.04	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	15	3	rwr	36.0	0.9742739898989898	0.382223739919303	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	15	4	rwr	36.0	0.9684343434343434	0.09544599792971462	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	16	0	rwr	36.0	0.9921787317620652	0.4151757532126968	0.14	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	16	1	rwr	36.0	0.9691007295173962	0.12346619593094535	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	16	2	rwr	36.0	0.975418244949495	0.24631273827692268	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	16	3	rwr	36.0	0.9584122474747474	0.0535365085236255	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	16	4	rwr	36.0	0.9822048611111112	0.41378828265410217	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	17	0	rwr	36.0	0.9880401234567902	0.26456670454254994	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	17	1	rwr	36.0	0.9753437149270484	0.16173457052461712	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	17	2	rwr	36.0	0.9751815025252525	0.15115491475555906	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	17	3	rwr	36.0	0.9825599747474748	0.3122797520863252	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	17	4	rwr	36.0	0.968197601010101	0.27550696749222114	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	18	0	rwr	36.0	0.9782547699214366	0.24620841824014666	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	18	1	rwr	36.0	0.9649621212121212	0.2335517756897412	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	18	2	rwr	36.0	0.9717092803030303	0.24192270962649698	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	18	3	rwr	36.0	0.9917140151515151	0.2563044566721037	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	18	4	rwr	36.0	0.9674479166666667	0.1732081992436011	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	19	0	rwr	36.0	0.9820777216610551	0.4018846520781987	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	19	1	rwr	36.0	0.9508978675645342	0.3032296589109472	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	19	2	rwr	36.0	0.982678345959596	0.17181776021121842	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	19	3	rwr	36.0	0.9839015151515152	0.2184370702100793	0.06	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	19	4	rwr	36.0	0.9423532196969697	0.07266768391816256	0.04	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	20	0	rwr	36.0	0.9557730078563412	0.18065209721775147	0.08	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	20	1	rwr	36.0	0.9732744107744107	0.20604486372034764	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	20	2	rwr	36.0	0.9889914772727273	0.4176891872260168	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	20	3	rwr	36.0	0.9739977904040404	0.12448285701713294	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	20	4	rwr	36.0	0.9837436868686869	0.29231437754165024	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	21	0	rwr	36.0	0.9865670594837262	0.337540925925193	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	21	1	rwr	36.0	0.9675925925925926	0.2605746721156536	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	21	2	rwr	36.0	0.9689867424242424	0.12255669922439626	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	21	3	rwr	36.0	0.9479955808080809	0.20964439782225647	0.1	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	21	4	rwr	36.0	0.9853219696969698	0.2530115130658609	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	22	0	rwr	36.0	0.9678381032547699	0.21223209413994304	0.08	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	22	1	rwr	36.0	0.9831299102132436	0.5556106165950725	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	22	2	rwr	36.0	0.9818497474747475	0.3154478923754823	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	22	3	rwr	36.0	0.9865056818181818	0.24034306792712715	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	22	4	rwr	36.0	0.9683159722222222	0.06581363398564066	0.04	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	23	0	rwr	36.0	0.9833403479236812	0.10940900058547116	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	23	1	rwr	36.0	0.9855148709315376	0.34608973195481496	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	23	2	rwr	36.0	0.968197601010101	0.14297932845667907	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	23	3	rwr	36.0	0.9833096590909092	0.27961255866192036	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	23	4	rwr	36.0	0.9612926136363636	0.3134210714359491	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	24	0	rwr	36.0	0.9722222222222222	0.28720234432935593	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	24	1	rwr	36.0	0.9831649831649832	0.15321281948423604	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	24	2	rwr	36.0	0.9472064393939393	0.19231735875712996	0.08	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	24	3	rwr	36.0	0.9707228535353536	0.10846234707083953	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	24	4	rwr	36.0	0.9805082070707071	0.4267245087140457	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	25	0	rwr	36.0	0.9502665544332211	0.20032388645982288	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	25	1	rwr	36.0	0.9852342873176206	0.19733732459572983	0.08	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	25	2	rwr	36.0	0.9803898358585859	0.25083300469650444	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	25	3	rwr	36.0	0.9764441287878788	0.4264478704300351	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	25	4	rwr	36.0	0.9815340909090909	0.19507680771670843	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	26	0	rwr	36.0	0.9854797979797979	0.15876156596818486	0.08	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	26	1	rwr	36.0	0.9488285634118967	0.18498821536850832	0.1	0.05	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	26	2	rwr	36.0	0.9883601641414141	0.21270137199432648	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	26	3	rwr	36.0	0.97265625	0.45746133750276674	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	26	4	rwr	36.0	0.9794823232323232	0.12666997748254732	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	27	0	rwr	36.0	0.9673470819304153	0.11367443383904911	0.08	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	27	1	rwr	36.0	0.9700126262626263	0.2157206048423636	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	27	2	rwr	36.0	0.9802320075757576	0.29352557800732043	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	27	3	rwr	36.0	0.9824021464646465	0.429852594449134	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	27	4	rwr	36.0	0.9837042297979797	0.24678580532971583	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	28	0	rwr	36.0	0.973625140291807	0.2526025442377163	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	28	1	rwr	36.0	0.9710648148148148	0.4011703851003569	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	28	2	rwr	36.0	0.9762863005050504	0.20275137340877153	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	28	3	rwr	36.0	0.9876893939393939	0.2754860429352228	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	28	4	rwr	36.0	0.9729719065656565	0.11728859194737876	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	29	0	rwr	36.0	0.9641203703703702	0.2402270160117797	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	29	1	rwr	36.0	0.9848835578002244	0.20346044450090692	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	29	2	rwr	36.0	0.9653566919191919	0.07880975624431051	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	29	3	rwr	36.0	0.9867029671717172	0.30232784415197206	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	29	4	rwr	36.0	0.9928977272727273	0.36538978101478103	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	30	0	rwr	36.0	0.9762205387205388	0.12832882081688396	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	30	1	rwr	36.0	0.9947039842873175	0.46427775177775177	0.16	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	30	2	rwr	36.0	0.9511521464646464	0.21016947135689418	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	30	3	rwr	36.0	0.9457465277777778	0.15151788677493755	0.06	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	30	4	rwr	36.0	0.978732638888889	0.2344789537464787	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	31	0	rwr	36.0	0.9544402356902356	0.15901082887467943	0.06	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	31	1	rwr	36.0	0.9880050505050505	0.17467357060347535	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	31	2	rwr	36.0	0.978259154040404	0.15163806306362082	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	31	3	rwr	36.0	0.9810606060606061	0.3219492717903937	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	31	4	rwr	36.0	0.9786142676767675	0.19356743063138412	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	32	0	rwr	36.0	0.9808501683501685	0.18901699178358025	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	32	1	rwr	36.0	0.9782547699214366	0.4210735700352172	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	32	2	rwr	36.0	0.9851641414141413	0.3359227318529644	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	32	3	rwr	36.0	0.9708412247474747	0.18181298004523358	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	32	4	rwr	36.0	0.9652777777777778	0.07226924634579628	0.08	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	33	0	rwr	36.0	0.9749579124579125	0.06476535945474463	0.08	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	33	1	rwr	36.0	0.9808501683501685	0.2536919552359157	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	33	2	rwr	36.0	0.9536379419191919	0.10205766437040352	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	33	3	rwr	36.0	0.9809027777777778	0.49632780166757506	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	33	4	rwr	36.0	0.9832307449494949	0.25916161155559236	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	34	0	rwr	36.0	0.9406214927048261	0.12618715462812502	0.08	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	34	1	rwr	36.0	0.9871282267115601	0.3162331986687702	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	34	2	rwr	36.0	0.9538352272727273	0.17754664389880673	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	34	3	rwr	36.0	0.9936079545454546	0.34878665663549385	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	34	4	rwr	36.0	0.9886758207070707	0.3976411782661783	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	35	0	rwr	36.0	0.9766414141414141	0.17900370157020376	0.06	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	35	1	rwr	36.0	0.9916526374859709	0.3783769146707743	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	35	2	rwr	36.0	0.9792455808080809	0.27113577746913503	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	35	3	rwr	36.0	0.9740372474747474	0.14070961718020542	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	35	4	rwr	36.0	0.96875	0.25481763862494883	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	36	0	rwr	36.0	0.9901795735129068	0.2241453166600349	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	36	1	rwr	36.0	0.9693813131313131	0.13216111457460092	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	36	2	rwr	36.0	0.9920691287878788	0.362466104456263	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	36	3	rwr	36.0	0.9760890151515151	0.3374569047837687	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	36	4	rwr	36.0	0.9656328914141414	0.26254507963025814	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	37	0	rwr	36.0	0.9735549943883277	0.2531541696991331	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	37	1	rwr	36.0	0.98712822671156	0.2568783068783069	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	37	2	rwr	36.0	0.9940419823232323	0.3027312354518237	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	37	3	rwr	36.0	0.9732875631313131	0.29799015871664847	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	37	4	rwr	36.0	0.960858585858586	0.05170751238957276	0.04	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	38	0	rwr	36.0	0.9498807519640853	0.042327773707679206	0.04	0.03	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	38	1	rwr	36.0	0.9795524691358025	0.29270601916390676	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	38	2	rwr	36.0	0.9769965277777777	0.21871604826826777	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	38	3	rwr	36.0	0.9901751893939393	0.23010266522263428	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	38	4	rwr	36.0	0.9736032196969697	0.33883938067008756	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	39	0	rwr	36.0	0.9733796296296297	0.4662011724045409	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	39	1	rwr	36.0	0.9777988215488217	0.1676492988166997	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	39	2	rwr	36.0	0.9715909090909091	0.0602433437662804	0.04	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	39	3	rwr	36.0	0.9634232954545455	0.19273708685358176	0.06	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.3	39	4	rwr	36.0	0.9897411616161617	0.23203502210638438	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	0	0	rwr	21.0	0.9655583613916947	0.15488471919362307	0.04	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	0	1	rwr	21.0	0.9703282828282828	0.14363004596460666	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	0	2	rwr	21.0	0.9766019570707071	0.37764487189797585	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	0	3	rwr	21.0	0.9852430555555556	0.23023759816335718	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	0	4	rwr	21.0	0.9921085858585859	0.6110752870699829	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	1	0	rwr	21.0	0.9255050505050505	0.20873927473009252	0.08	0.04	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	1	1	rwr	21.0	0.9839716610549943	0.17764130197382627	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	1	2	rwr	21.0	0.992266414141414	0.30359899445906086	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	1	3	rwr	21.0	0.9878077651515154	0.3424888933033619	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	1	4	rwr	21.0	0.9790482954545454	0.38749624738431543	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	2	0	rwr	21.0	0.9771324354657688	0.474584087175328	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	2	1	rwr	21.0	0.979131593714927	0.10030275124449661	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	2	2	rwr	21.0	0.9714330808080808	0.28898288735762107	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	2	3	rwr	21.0	0.9883207070707072	0.25471897593206966	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	2	4	rwr	21.0	0.954269255050505	0.26448269839056565	0.08	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	3	0	rwr	21.0	0.9865670594837264	0.32706225503600395	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	3	1	rwr	21.0	0.9744668911335579	0.19649410774410775	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	3	2	rwr	21.0	0.9765230429292929	0.3363661775017024	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	3	3	rwr	21.0	0.9679608585858585	0.2746411934061163	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	3	4	rwr	21.0	0.9797190656565657	0.1959244543912736	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	4	0	rwr	21.0	0.9689253647586981	0.31648625980958855	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	4	1	rwr	21.0	0.9886714365881032	0.4329770950900277	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	4	2	rwr	21.0	0.9689867424242425	0.21700363278774173	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	4	3	rwr	21.0	0.9522964015151515	0.25840765831675094	0.1	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	4	4	rwr	21.0	0.9775489267676768	0.4116597535952039	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	5	0	rwr	21.0	0.9642606621773289	0.1810767653079501	0.08	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	5	1	rwr	21.0	0.9537037037037037	0.25959279867163154	0.1	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	5	2	rwr	21.0	0.9655145202020202	0.17178605611291378	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	5	3	rwr	21.0	0.9756549873737375	0.3253192929903288	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	5	4	rwr	21.0	0.9880050505050506	0.3026368297650625	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	6	0	rwr	21.0	0.97611531986532	0.34258227783125955	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	6	1	rwr	21.0	0.9831649831649831	0.1603068872632402	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	6	2	rwr	21.0	0.9737610479797979	0.3193592686865565	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	6	3	rwr	21.0	0.9713541666666667	0.19774544980803263	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	6	4	rwr	21.0	0.9795612373737375	0.42583642014763956	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	7	0	rwr	21.0	0.9889169472502807	0.39776001205139044	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	7	1	rwr	21.0	0.9796226150392818	0.29842098814737555	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	7	2	rwr	21.0	0.951941287878788	0.06586238320464799	0.04	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	7	3	rwr	21.0	0.9848879419191919	0.12307847905630806	0.08	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	7	4	rwr	21.0	0.989425505050505	0.5369977412549877	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	8	0	rwr	21.0	0.9654882154882155	0.1720548740875295	0.08	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	8	1	rwr	21.0	0.9748877665544333	0.1310109190045135	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	8	2	rwr	21.0	0.9808633207070707	0.2932909030980839	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	8	3	rwr	21.0	0.9878472222222223	0.3605574306051362	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	8	4	rwr	21.0	0.9849668560606061	0.414398110870324	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	9	0	rwr	21.0	0.9767115600448933	0.35319557732794216	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	9	1	rwr	21.0	0.9881102693602694	0.27819259557064435	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	9	2	rwr	21.0	0.9846511994949495	0.20518038220288307	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	9	3	rwr	21.0	0.9756155303030303	0.22690864999010724	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	9	4	rwr	21.0	0.9694996843434345	0.244253448540677	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	10	0	rwr	21.0	0.9754489337822672	0.21171698188195265	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	10	1	rwr	21.0	0.9779741863075196	0.4469717844418677	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	10	2	rwr	21.0	0.9712752525252525	0.10515434179200604	0.04	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	10	3	rwr	21.0	0.9840988005050505	0.205485131615225	0.08	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	10	4	rwr	21.0	0.9771543560606061	0.2605555646636209	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	11	0	rwr	21.0	0.9772727272727273	0.3176003207411812	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	11	1	rwr	21.0	0.9950897867564534	0.549525012025012	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	11	2	rwr	21.0	0.9696575126262627	0.10379487448613435	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	11	3	rwr	21.0	0.9826388888888888	0.24516806649891892	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	11	4	rwr	21.0	0.9661852904040404	0.04188089754709409	0.02	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	12	0	rwr	21.0	0.9645763187429854	0.33831947030606085	0.08	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	12	1	rwr	21.0	0.9653128507295174	0.14372318179962135	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	12	2	rwr	21.0	0.965396148989899	0.19066996659694516	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	12	3	rwr	21.0	0.9900568181818182	0.1839899229486516	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	12	4	rwr	21.0	0.9907670454545454	0.45739743210451006	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	13	0	rwr	21.0	0.9775182379349046	0.2427444399459325	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	13	1	rwr	21.0	0.9839015151515151	0.21425293136722026	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	13	2	rwr	21.0	0.9725378787878788	0.29843643607277287	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	13	3	rwr	21.0	0.9663431186868686	0.2933216626367871	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	13	4	rwr	21.0	0.9834674873737372	0.298613458105172	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	14	0	rwr	21.0	0.9832000561167229	0.138108392859064	0.08	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	14	1	rwr	21.0	0.954861111111111	0.13479823124735174	0.06	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	14	2	rwr	21.0	0.9762468434343434	0.2660429978040031	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	14	3	rwr	21.0	0.9724589646464646	0.3537810179434081	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	14	4	rwr	21.0	0.9883207070707071	0.4854786509198274	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	15	0	rwr	21.0	0.9739758698092031	0.24036022778172722	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	15	1	rwr	21.0	0.9897586980920314	0.44006354809064907	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	15	2	rwr	21.0	0.9599510732323233	0.16501058052918077	0.06	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	15	3	rwr	21.0	0.9722616792929293	0.4345807014069247	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	15	4	rwr	21.0	0.9643308080808081	0.10964245782365747	0.08	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	16	0	rwr	21.0	0.991547418630752	0.4370042154524913	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	16	1	rwr	21.0	0.9722572951739619	0.22129187769279196	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	16	2	rwr	21.0	0.9766808712121213	0.34016286935062234	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	16	3	rwr	21.0	0.9547427398989898	0.06084788710777174	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	16	4	rwr	21.0	0.9812578914141414	0.40998382150053103	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	17	0	rwr	21.0	0.9899340628507294	0.3545560953953797	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	17	1	rwr	21.0	0.9736251402918069	0.17307686439406866	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	17	2	rwr	21.0	0.9756549873737373	0.16413352036091333	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	17	3	rwr	21.0	0.9837042297979799	0.34999661796536796	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	17	4	rwr	21.0	0.9702099116161617	0.276554447229158	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	18	0	rwr	21.0	0.9784301346801346	0.2930712951358668	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	18	1	rwr	21.0	0.9663299663299663	0.32689090809151944	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	18	2	rwr	21.0	0.9668955176767676	0.24691984554475138	0.06	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	18	3	rwr	21.0	0.9921085858585859	0.272646684222832	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	18	4	rwr	21.0	0.9660669191919192	0.17563903567082328	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	19	0	rwr	21.0	0.9814113355780022	0.4328738302368989	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	19	1	rwr	21.0	0.9499859708193041	0.32465831547320667	0.08	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	19	2	rwr	21.0	0.9852035984848484	0.2353895093507957	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	19	3	rwr	21.0	0.9844144570707072	0.24593414120618565	0.06	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	19	4	rwr	21.0	0.9398279671717172	0.07313084664689032	0.04	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	20	0	rwr	21.0	0.9574915824915825	0.22589288496937465	0.1	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	20	1	rwr	21.0	0.9707140852974185	0.20570647514468668	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	20	2	rwr	21.0	0.9888731060606061	0.44841626420234665	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	20	3	rwr	21.0	0.9755760732323233	0.15192189580750332	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	20	4	rwr	21.0	0.983783143939394	0.33149551190534793	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	21	0	rwr	21.0	0.9889870931537598	0.33283140201379197	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	21	1	rwr	21.0	0.9656635802469136	0.3005416077068367	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	21	2	rwr	21.0	0.9648832070707071	0.1490011198071043	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	21	3	rwr	21.0	0.9496133207070707	0.2655587153975459	0.1	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	21	4	rwr	21.0	0.9874131944444444	0.2900387458566874	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	22	0	rwr	21.0	0.9661195286195288	0.29499756444348896	0.08	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	22	1	rwr	21.0	0.9839015151515152	0.6050552130227702	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	22	2	rwr	21.0	0.9827967171717171	0.2948969331322272	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	22	3	rwr	21.0	0.9882417929292928	0.2703490893684859	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	22	4	rwr	21.0	0.9676057449494949	0.17024257398385698	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	23	0	rwr	21.0	0.9857954545454545	0.13353989497994392	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	23	1	rwr	21.0	0.9875841750841751	0.3752853129526774	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	23	2	rwr	21.0	0.9673295454545454	0.18817785483341548	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	23	3	rwr	21.0	0.9813368055555556	0.3934624473188549	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	23	4	rwr	21.0	0.95864898989899	0.29561450105689163	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	24	0	rwr	21.0	0.9707491582491583	0.2853202539092334	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	24	1	rwr	21.0	0.9819023569023568	0.1888619884544445	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	24	2	rwr	21.0	0.9457465277777778	0.21622173687327703	0.08	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	24	3	rwr	21.0	0.9702493686868687	0.15082202307670906	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	24	4	rwr	21.0	0.982204861111111	0.42589633491011375	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	25	0	rwr	21.0	0.9457772166105499	0.2249062988687446	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	25	1	rwr	21.0	0.985935746352413	0.2102313829933119	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	25	2	rwr	21.0	0.9847695707070706	0.28435911820662463	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	25	3	rwr	21.0	0.9766019570707071	0.5131693991068992	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	25	4	rwr	21.0	0.9810211489898991	0.2399571184298649	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	26	0	rwr	21.0	0.9865319865319865	0.1964810703897572	0.1	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	26	1	rwr	21.0	0.9468644781144782	0.20957028130774957	0.1	0.05	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	26	2	rwr	21.0	0.9895438762626263	0.25916950197193545	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	26	3	rwr	21.0	0.9713936237373737	0.5118854176722786	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	26	4	rwr	21.0	0.9807054924242424	0.1387062168312168	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	27	0	rwr	21.0	0.9651725589225589	0.14500874578453032	0.06	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	27	1	rwr	21.0	0.9701879910213244	0.27782550898496167	0.08	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	27	2	rwr	21.0	0.9817313762626264	0.3367809558567784	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	27	3	rwr	21.0	0.9822443181818182	0.4330783272866684	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	27	4	rwr	21.0	0.9876104797979798	0.28247876752465184	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	28	0	rwr	21.0	0.9752735690235689	0.31089700764316114	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	28	1	rwr	21.0	0.9681537598204265	0.3608889558656383	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	28	2	rwr	21.0	0.9799558080808081	0.14393246764651357	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	28	3	rwr	21.0	0.9872553661616164	0.2850739385792631	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	28	4	rwr	21.0	0.9762073863636364	0.16064824102530698	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	29	0	rwr	21.0	0.9631734006734006	0.24969478175122717	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	29	1	rwr	21.0	0.9863215488215488	0.25898091783197147	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	29	2	rwr	21.0	0.9667376893939393	0.09899976176773553	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	29	3	rwr	21.0	0.9872553661616161	0.3614008764555242	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	29	4	rwr	21.0	0.9926215277777778	0.39751454016721194	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	30	0	rwr	21.0	0.9785002805836139	0.2110920949840201	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	30	1	rwr	21.0	0.9952651515151515	0.4720225396695985	0.16	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	30	2	rwr	21.0	0.9477588383838385	0.24536787965906484	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	30	3	rwr	21.0	0.9491398358585859	0.1956196725886127	0.08	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	30	4	rwr	21.0	0.9784958964646464	0.3243206522652686	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	31	0	rwr	21.0	0.951459034792368	0.15831873953269687	0.06	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	31	1	rwr	21.0	0.9891273849607182	0.21166368237825486	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	31	2	rwr	21.0	0.9779040404040404	0.23772058102641858	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	31	3	rwr	21.0	0.9833491161616161	0.33394923311100455	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	31	4	rwr	21.0	0.9802714646464646	0.3058237661067275	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	32	0	rwr	21.0	0.9822530864197531	0.22853283956460516	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	32	1	rwr	21.0	0.9771675084175083	0.43270099897616676	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	32	2	rwr	21.0	0.9855587121212122	0.3421158676281076	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	32	3	rwr	21.0	0.9735243055555555	0.21977146278713647	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	32	4	rwr	21.0	0.964922664141414	0.10839654554284267	0.08	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	33	0	rwr	21.0	0.9769921436588103	0.07648951260357043	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	33	1	rwr	21.0	0.9787808641975307	0.2975787601327558	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	33	2	rwr	21.0	0.9544665404040404	0.12637775577944335	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	33	3	rwr	21.0	0.9828756313131314	0.548346585507147	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	33	4	rwr	21.0	0.9857165404040403	0.24419182393355657	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	34	0	rwr	21.0	0.9374298540965208	0.19636531810338526	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	34	1	rwr	21.0	0.9890923120089787	0.33869536705265924	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	34	2	rwr	21.0	0.9523753156565656	0.17750438343364178	0.04	0.02	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	34	3	rwr	21.0	0.9940419823232324	0.37601495726495726	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	34	4	rwr	21.0	0.9895438762626263	0.41708765999302755	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	35	0	rwr	21.0	0.97702721661055	0.1826695718690469	0.08	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	35	1	rwr	21.0	0.9937920875420875	0.5219730082048923	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	35	2	rwr	21.0	0.9784564393939393	0.3439163900014094	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	35	3	rwr	21.0	0.979363952020202	0.1628628441424497	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	35	4	rwr	21.0	0.9652777777777778	0.29006819399428796	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	36	0	rwr	21.0	0.9905653759820428	0.2785401081408341	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	36	1	rwr	21.0	0.9722923681257014	0.21365963647094774	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	36	2	rwr	21.0	0.9934106691919191	0.4109514102670771	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	36	3	rwr	21.0	0.9740767045454546	0.23612357093308942	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	36	4	rwr	21.0	0.96646148989899	0.30949319958376525	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	37	0	rwr	21.0	0.9742213804713805	0.26472768315793566	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	37	1	rwr	21.0	0.9889520202020201	0.27496597055810845	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	37	2	rwr	21.0	0.9952651515151515	0.3589488636363637	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	37	3	rwr	21.0	0.9758917297979799	0.35216214065894824	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	37	4	rwr	21.0	0.9575441919191919	0.053892871881513614	0.04	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	38	0	rwr	21.0	0.9512135241301908	0.05309294375836698	0.04	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	38	1	rwr	21.0	0.976290684624018	0.2933205828425901	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	38	2	rwr	21.0	0.9790482954545454	0.18156634577994402	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	38	3	rwr	21.0	0.9923058712121213	0.3226262648641681	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	38	4	rwr	21.0	0.9734848484848485	0.3768160282130871	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	39	0	rwr	21.0	0.9714506172839505	0.5033875902983581	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	39	1	rwr	21.0	0.977483164983165	0.17846615318112186	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	39	2	rwr	21.0	0.9755366161616161	0.06805965233753039	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	39	3	rwr	21.0	0.9571496212121212	0.20738662164919688	0.06	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.5	39	4	rwr	21.0	0.9920691287878788	0.29111023630840704	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	0	0	rwr	13.0	0.9654882154882154	0.156476111165506	0.04	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	0	1	rwr	13.0	0.9686447811447813	0.17952998763161393	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	0	2	rwr	13.0	0.9770359848484849	0.3810514533549779	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	0	3	rwr	13.0	0.9857165404040404	0.2573125677330705	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	0	4	rwr	13.0	0.9934895833333333	0.6325968891206117	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	1	0	rwr	13.0	0.9227693602693603	0.23938014185048198	0.08	0.04	0.014	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	1	1	rwr	13.0	0.9847081930415266	0.20047807380703717	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	1	2	rwr	13.0	0.9927398989898989	0.3132751634415496	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	1	3	rwr	13.0	0.9874526515151516	0.361114252501335	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	1	4	rwr	13.0	0.9795217803030304	0.44006847250279785	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	2	0	rwr	13.0	0.977483164983165	0.4769896288659385	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	2	1	rwr	13.0	0.9779741863075196	0.10560894675235762	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	2	2	rwr	13.0	0.9706044823232324	0.311489160312579	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	2	3	rwr	13.0	0.9880050505050504	0.28674918179321135	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	2	4	rwr	13.0	0.9508759469696969	0.2636764116467724	0.08	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	3	0	rwr	13.0	0.9868476430976431	0.4165076144281332	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	3	1	rwr	13.0	0.9735549943883278	0.22886331859123657	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	3	2	rwr	13.0	0.9779434974747475	0.3847537450634451	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	3	3	rwr	13.0	0.9648832070707071	0.28066760748011554	0.12	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	3	4	rwr	13.0	0.9796006944444445	0.2308563516656165	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	4	0	rwr	13.0	0.9652777777777778	0.31307132863115705	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	4	1	rwr	13.0	0.9882505611672279	0.43584384963695305	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	4	2	rwr	13.0	0.9682370580808081	0.22523709048766968	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	4	3	rwr	13.0	0.9533617424242424	0.2618016416321698	0.1	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	4	4	rwr	13.0	0.9763257575757576	0.4513237840669513	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	5	0	rwr	13.0	0.9646113916947251	0.18340346885186654	0.08	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	5	1	rwr	13.0	0.9544051627384961	0.2703626072962619	0.1	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	5	2	rwr	13.0	0.9636994949494949	0.21460878503432812	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	5	3	rwr	13.0	0.9741161616161617	0.349401219906698	0.12	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	5	4	rwr	13.0	0.9885574494949495	0.3105446574988735	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	6	0	rwr	13.0	0.976185465768799	0.36910541736628694	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	6	1	rwr	13.0	0.9823933782267116	0.15870859651349775	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	6	2	rwr	13.0	0.9725773358585859	0.33993509594766347	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	6	3	rwr	13.0	0.9695391414141415	0.24422085748531475	0.1	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	6	4	rwr	13.0	0.979324494949495	0.43136326573555334	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	7	0	rwr	13.0	0.989969135802469	0.3901304490085501	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	7	1	rwr	13.0	0.9799382716049383	0.2992695963550893	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	7	2	rwr	13.0	0.9489820075757577	0.08342516818527808	0.04	0.05	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	7	3	rwr	13.0	0.9844539141414141	0.14404623500018238	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	7	4	rwr	13.0	0.9908459595959597	0.5812355559559161	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	8	0	rwr	13.0	0.9635942760942762	0.2865044243479148	0.08	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	8	1	rwr	13.0	0.9741512345679012	0.13970270986437577	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	8	2	rwr	13.0	0.9803503787878788	0.2940423508093179	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	8	3	rwr	13.0	0.9893465909090908	0.3614827985507197	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	8	4	rwr	13.0	0.9854797979797979	0.3760964906498307	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	9	0	rwr	13.0	0.9765011223344556	0.38004552935015845	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	9	1	rwr	13.0	0.9895131874298542	0.29828879512423817	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	9	2	rwr	13.0	0.984887941919192	0.22105079076910064	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	9	3	rwr	13.0	0.9772332702020202	0.33753881322841023	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	9	4	rwr	13.0	0.9661852904040404	0.2704225701733681	0.08	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	10	0	rwr	13.0	0.9732042648709316	0.23067027084486658	0.1	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	10	1	rwr	13.0	0.9775182379349047	0.44965509263912246	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	10	2	rwr	13.0	0.9706044823232324	0.10370671376544763	0.04	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	10	3	rwr	13.0	0.9838620580808081	0.14991241573853148	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	10	4	rwr	13.0	0.9796401515151515	0.3499099225829627	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	11	0	rwr	13.0	0.9757295173961841	0.3989898919939725	0.12	0.08	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	11	1	rwr	13.0	0.9957912457912458	0.6025694893341952	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	11	2	rwr	13.0	0.9687499999999999	0.1057572435440793	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	11	3	rwr	13.0	0.9813368055555556	0.22332791013631173	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	11	4	rwr	13.0	0.9669744318181819	0.04261709775472048	0.04	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	12	0	rwr	13.0	0.9626122334455668	0.3438704535873696	0.08	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	12	1	rwr	13.0	0.9637696408529741	0.14992748073888423	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	12	2	rwr	13.0	0.9645675505050504	0.19197158596769703	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	12	3	rwr	13.0	0.9904513888888888	0.20401549430961197	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	12	4	rwr	13.0	0.991043244949495	0.4403722533894343	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	13	0	rwr	13.0	0.9772727272727272	0.2441848978391934	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	13	1	rwr	13.0	0.9846731200897867	0.21669410650334345	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	13	2	rwr	13.0	0.9708412247474748	0.3639461964499888	0.1	0.07	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	13	3	rwr	13.0	0.9646859217171717	0.30462557898019854	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	13	4	rwr	13.0	0.9837436868686869	0.28505058406341255	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	14	0	rwr	13.0	0.98253367003367	0.1416034099473092	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	14	1	rwr	13.0	0.9517045454545454	0.1362043895464845	0.06	0.04	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	14	2	rwr	13.0	0.9760495580808082	0.34084553050007355	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	14	3	rwr	13.0	0.9741950757575758	0.3721862848870504	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	14	4	rwr	13.0	0.98828125	0.5542608459734945	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	15	0	rwr	13.0	0.9728184624017958	0.28465408414415955	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	15	1	rwr	13.0	0.9896184062850729	0.4448586334572263	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	15	2	rwr	13.0	0.9619633838383839	0.16765146387143806	0.08	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	15	3	rwr	13.0	0.9713936237373738	0.43462514424871873	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	15	4	rwr	13.0	0.9607007575757576	0.15455986575899994	0.08	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	16	0	rwr	13.0	0.9903900112233445	0.464142718362233	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	16	1	rwr	13.0	0.9731341189674523	0.2948067709349634	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	16	2	rwr	13.0	0.9760890151515151	0.3459332121688443	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	16	3	rwr	13.0	0.9510732323232323	0.0662223908334165	0.06	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	16	4	rwr	13.0	0.9805082070707071	0.4303990528722845	0.14	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	17	0	rwr	13.0	0.9904952300785634	0.38541411493997696	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	17	1	rwr	13.0	0.9718714927048261	0.17661965884179548	0.12	0.08	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	17	2	rwr	13.0	0.9758917297979798	0.17337959676946732	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	17	3	rwr	13.0	0.9831123737373738	0.38674973486832387	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	17	4	rwr	13.0	0.9709201388888888	0.2834277343062182	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	18	0	rwr	13.0	0.9782898428731762	0.31947545995559135	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	18	1	rwr	13.0	0.9667859147025814	0.3381485228210359	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	18	2	rwr	13.0	0.9638967803030303	0.18669095321043344	0.06	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	18	3	rwr	13.0	0.9921480429292929	0.3025014673200157	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	18	4	rwr	13.0	0.9653566919191919	0.196453111542473	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	19	0	rwr	13.0	0.9800084175084175	0.43573036557389583	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	19	1	rwr	13.0	0.9494949494949495	0.30970100329234207	0.08	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	19	2	rwr	13.0	0.98599273989899	0.33280715887816203	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	19	3	rwr	13.0	0.9843750000000001	0.24613814818496735	0.06	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	19	4	rwr	13.0	0.9365530303030303	0.07265045277567599	0.04	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	20	0	rwr	13.0	0.9579826038159371	0.231831686841209	0.1	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	20	1	rwr	13.0	0.9679433221099888	0.20495931706015738	0.12	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	20	2	rwr	13.0	0.9877288510101011	0.4807396470823869	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	20	3	rwr	13.0	0.9756155303030304	0.16272657557166761	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	20	4	rwr	13.0	0.9830729166666666	0.37636033910530264	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	21	0	rwr	13.0	0.9905303030303029	0.3218435452904025	0.14	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	21	1	rwr	13.0	0.9646113916947251	0.36545810627451214	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	21	2	rwr	13.0	0.9605034722222222	0.1650898912085251	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	21	3	rwr	13.0	0.9500473484848485	0.26281089019000264	0.1	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	21	4	rwr	13.0	0.9872553661616161	0.30909983520620166	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	22	0	rwr	13.0	0.964716610549944	0.2976042466044922	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	22	1	rwr	13.0	0.9842171717171717	0.6461605800681594	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	22	2	rwr	13.0	0.9832702020202021	0.295141534638273	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	22	3	rwr	13.0	0.988833648989899	0.2843717976870151	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	22	4	rwr	13.0	0.966579861111111	0.17172894047559506	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	23	0	rwr	13.0	0.9864969135802469	0.1577625204315129	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	23	1	rwr	13.0	0.988776655443322	0.3592160648340424	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	23	2	rwr	13.0	0.9661852904040404	0.21713529238352675	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	23	3	rwr	13.0	0.9805476641414143	0.4273144238772377	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	23	4	rwr	13.0	0.9567155934343435	0.27063898500837624	0.08	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	24	0	rwr	13.0	0.9694163860830527	0.2809301695232188	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	24	1	rwr	13.0	0.9800785634118968	0.23204834896624607	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	24	2	rwr	13.0	0.94369476010101	0.24671348127091783	0.08	0.05	0.012	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	24	3	rwr	13.0	0.9698942550505051	0.14870916971911483	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	24	4	rwr	13.0	0.9831912878787877	0.42635099440971436	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	25	0	rwr	13.0	0.9412528058361391	0.23716090890743008	0.1	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	25	1	rwr	13.0	0.9845679012345678	0.21238832892182832	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	25	2	rwr	13.0	0.9865056818181819	0.24369575330892468	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	25	3	rwr	13.0	0.9761679292929293	0.5325222796593958	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	25	4	rwr	13.0	0.9803109217171716	0.2381654388403999	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	26	0	rwr	13.0	0.9874789562289562	0.22472125507327517	0.1	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	26	1	rwr	13.0	0.9441989337822672	0.23970909712256744	0.1	0.05	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	26	2	rwr	13.0	0.9895833333333334	0.30162040866390666	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	26	3	rwr	13.0	0.9704466540404041	0.557618086374096	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	26	4	rwr	13.0	0.9815735479797979	0.13648061308939535	0.08	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	27	0	rwr	13.0	0.9615600448933782	0.14744511184734133	0.08	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	27	1	rwr	13.0	0.969311167227834	0.2377237067857732	0.08	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	27	2	rwr	13.0	0.9818892045454546	0.2952823597220149	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	27	3	rwr	13.0	0.9820864898989898	0.43799804870490217	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	27	4	rwr	13.0	0.9893071338383838	0.3086071797139908	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	28	0	rwr	13.0	0.9759750280583613	0.32400192530387645	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	28	1	rwr	13.0	0.9662948933782267	0.3597125637037297	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	28	2	rwr	13.0	0.9825994318181819	0.15356231956841715	0.08	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	28	3	rwr	13.0	0.9873737373737373	0.25867218771891876	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	28	4	rwr	13.0	0.9773121843434344	0.17128769529492013	0.06	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	29	0	rwr	13.0	0.9614548260381593	0.2569650918472106	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	29	1	rwr	13.0	0.9867774971941639	0.22089949744952367	0.1	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	29	2	rwr	13.0	0.9671322601010099	0.18492828286420102	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	29	3	rwr	13.0	0.9877683080808081	0.46145969203032894	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	29	4	rwr	13.0	0.9908854166666666	0.4292614027835193	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	30	0	rwr	13.0	0.979517396184063	0.24142977974441907	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	30	1	rwr	13.0	0.9950897867564534	0.5114814814814814	0.16	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	30	2	rwr	13.0	0.9455886994949495	0.2164159430034091	0.06	0.03	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	30	3	rwr	13.0	0.9520596590909091	0.24317759945386347	0.08	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	30	4	rwr	13.0	0.9784169823232324	0.3249220099220099	0.12	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	31	0	rwr	13.0	0.9486531986531986	0.15774227654867964	0.06	0.05	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	31	1	rwr	13.0	0.9877946127946128	0.22247338131573927	0.14	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	31	2	rwr	13.0	0.9767597853535354	0.31533289181239	0.1	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	31	3	rwr	13.0	0.9847301136363636	0.3351187474989996	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	31	4	rwr	13.0	0.9807054924242424	0.32071164459978474	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	32	0	rwr	13.0	0.9827791806958475	0.24792008828548937	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	32	1	rwr	13.0	0.9762205387205388	0.44373197433555334	0.14	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	32	2	rwr	13.0	0.98599273989899	0.3632767059541448	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	32	3	rwr	13.0	0.9749842171717171	0.26734872508253804	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	32	4	rwr	13.0	0.9627130681818181	0.1303456441779625	0.08	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	33	0	rwr	13.0	0.9783249158249158	0.08856432479657633	0.1	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	33	1	rwr	13.0	0.9761854657687992	0.3781432066340047	0.14	0.08	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	33	2	rwr	13.0	0.9527304292929294	0.14529762605541788	0.06	0.03	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	33	3	rwr	13.0	0.9846117424242425	0.5560165924089975	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	33	4	rwr	13.0	0.9869002525252525	0.2834798738413197	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	34	0	rwr	13.0	0.9347643097643097	0.22376535782668344	0.1	0.06	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	34	1	rwr	13.0	0.9900392817059483	0.37022877370777907	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	34	2	rwr	13.0	0.9515467171717171	0.18271996012294106	0.04	0.04	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	34	3	rwr	13.0	0.9940025252525252	0.39397236948816533	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	34	4	rwr	13.0	0.9902146464646465	0.32941804927099044	0.1	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	35	0	rwr	13.0	0.9760101010101009	0.18516180218570807	0.08	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	35	1	rwr	13.0	0.994668911335578	0.5591757789535567	0.16	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	35	2	rwr	13.0	0.9773121843434343	0.4010765584752831	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	35	3	rwr	13.0	0.9814551767676768	0.18849975694633742	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	35	4	rwr	13.0	0.9630681818181818	0.2884066369360327	0.12	0.06	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	36	0	rwr	13.0	0.9907407407407407	0.3366419153473747	0.12	0.09	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	36	1	rwr	13.0	0.9732393378226711	0.31408541923383154	0.08	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	36	2	rwr	13.0	0.9940419823232323	0.42341024121626714	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	36	3	rwr	13.0	0.9722222222222223	0.2387703322906936	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	36	4	rwr	13.0	0.9662642045454546	0.31880312910736214	0.08	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	37	0	rwr	13.0	0.9744318181818182	0.21354387066555813	0.1	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	37	1	rwr	13.0	0.9893027497194163	0.27073780302004646	0.12	0.08	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	37	2	rwr	13.0	0.9958570075757576	0.4106506184816881	0.14	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	37	3	rwr	13.0	0.9773516414141414	0.3807206633769917	0.1	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	37	4	rwr	13.0	0.9535984848484849	0.056913092889623915	0.04	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	38	0	rwr	13.0	0.9512485970819304	0.059763911885052076	0.04	0.04	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	38	1	rwr	13.0	0.9732042648709316	0.2949920715706273	0.14	0.07	0.016	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	38	2	rwr	13.0	0.9804687500000001	0.21129448678410148	0.1	0.07	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	38	3	rwr	13.0	0.9928582702020201	0.34033293095793093	0.12	0.08	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	38	4	rwr	13.0	0.9728535353535352	0.3805101625110206	0.12	0.06	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	39	0	rwr	13.0	0.9697320426487093	0.46608173789909774	0.12	0.06	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	39	1	rwr	13.0	0.9769921436588103	0.17195438839714086	0.12	0.07	0.018	9	3177
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	39	2	rwr	13.0	0.9779829545454545	0.07464666514671564	0.06	0.05	0.016	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	39	3	rwr	13.0	0.951467803030303	0.2303476684425685	0.06	0.04	0.014	8	3176
+string_full700	clingen_label_pubcount_adjusted	native_string_full700	0.7	39	4	rwr	13.0	0.993292297979798	0.31532764620999915	0.14	0.08	0.016	8	3176

@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		0	0	degree		0.750202198857021	0.07386892075701657	0.08	0.08	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		0	1	degree		0.7547039008825646	0.08360021126571608	0.1	0.07	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		0	2	degree		0.7964457440473546	0.08723416843027737	0.06	0.07	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		0	3	degree		0.7389990489987823	0.07211101174028167	0.1	0.06	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		0	4	degree		0.7582679334832421	0.06583215083665028	0.04	0.03	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		1	0	degree		0.7452694355318941	0.07692092342658148	0.06	0.05	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		1	1	degree		0.7565881275941447	0.06360461619738235	0.04	0.03	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		1	2	degree		0.7682134508901194	0.08676772175782148	0.1	0.09	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		1	3	degree		0.7811897291868495	0.08031271144677143	0.08	0.08	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		1	4	degree		0.7432829984090727	0.06959221514015052	0.1	0.07	0.064	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		2	0	degree		0.7457849315190245	0.07330221351071742	0.1	0.08	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		2	1	degree		0.7551749575604598	0.07517147291845191	0.12	0.08	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		2	2	degree		0.75749913343347	0.07337493064390967	0.08	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		2	3	degree		0.7590367335330139	0.07440493663915651	0.02	0.05	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		2	4	degree		0.7771013127371948	0.08807189502073731	0.08	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		3	0	degree		0.8150302631695893	0.09086204935933707	0.08	0.08	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		3	1	degree		0.7614275683698772	0.07445494052364748	0.12	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		3	2	degree		0.7461048945455192	0.06713316944929112	0.06	0.04	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		3	3	degree		0.7610898296196884	0.08508604509518704	0.08	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		3	4	degree		0.7112600321740599	0.06506935139983655	0.06	0.07	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		4	0	degree		0.775341516091474	0.07223191021949457	0.06	0.05	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		4	1	degree		0.75749913343347	0.08494709306958782	0.1	0.11	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		4	2	degree		0.7405722005457147	0.06994380169420693	0.1	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		4	3	degree		0.7478957987077048	0.07093762538015916	0.08	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		4	4	degree		0.7729995644947695	0.07914290404104404	0.08	0.05	0.066	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		5	0	degree		0.7863624647818475	0.07411431444340408	0.04	0.05	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		5	1	degree		0.7350172868912925	0.08574453504669073	0.12	0.08	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		5	2	degree		0.7329597468736946	0.07595312736560764	0.12	0.08	0.066	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		5	3	degree		0.7544505968199231	0.06594264797951495	0.06	0.04	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		5	4	degree		0.7859980624461175	0.08389208833385958	0.04	0.08	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		6	0	degree		0.7410743647400746	0.07058784191842848	0.08	0.08	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		6	1	degree		0.7363326904446597	0.07815417776990828	0.12	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		6	2	degree		0.7916462986499337	0.08171071623221586	0.06	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		6	3	degree		0.7759814421444634	0.0787805278931267	0.04	0.05	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		6	4	degree		0.754086194484193	0.07036728590908299	0.1	0.06	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		7	0	degree		0.7643072356083297	0.07765910088990466	0.08	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		7	1	degree		0.778474487392568	0.08494008169210399	0.12	0.08	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		7	2	degree		0.7527219076906668	0.07134607884724899	0.06	0.05	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		7	3	degree		0.7646538622203656	0.0829867243473402	0.1	0.08	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		7	4	degree		0.7349150764800512	0.060292141647373135	0.04	0.04	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		8	0	degree		0.7330930648014007	0.0682643380637179	0.06	0.05	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		8	1	degree		0.7853803560477456	0.07904637751939625	0.08	0.06	0.088	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		8	2	degree		0.7207256050411952	0.07459906312250547	0.12	0.07	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		8	3	degree		0.7853936878405162	0.07181393230955732	0.06	0.03	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		8	4	degree		0.7716263898393964	0.08531132721972443	0.08	0.1	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		9	0	degree		0.812417231786549	0.11285326333066908	0.14	0.1	0.088	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		9	1	degree		0.7274581603903549	0.06228212264768178	0.06	0.06	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		9	2	degree		0.7743549634264485	0.0766389552975433	0.08	0.05	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		9	3	degree		0.7230897762925174	0.06193166081890358	0.02	0.03	0.066	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		9	4	degree		0.7608009741096584	0.07336258924017355	0.08	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		10	0	degree		0.7527263516215903	0.08809074504300167	0.14	0.1	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		10	1	degree		0.7891399216090584	0.08676923218086503	0.12	0.08	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		10	2	degree		0.7583745878254069	0.0663617981544404	0.04	0.04	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		10	3	degree		0.7410388132926862	0.06584843170007962	0.04	0.04	0.064	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		10	4	degree		0.7569125345515629	0.07304739037880062	0.08	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		11	0	degree		0.7465759512234141	0.06022739715678836	0.04	0.03	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		11	1	degree		0.7497622496955909	0.07423074707089188	0.08	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		11	2	degree		0.7296890137139709	0.06388973616678935	0.02	0.04	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		11	3	degree		0.8012051940664634	0.09688241572301784	0.12	0.09	0.088	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		11	4	degree		0.7673913236692649	0.1006543367471946	0.12	0.08	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		12	0	degree		0.7506688116039926	0.065139852944107	0.08	0.05	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		12	1	degree		0.7244051798458845	0.06729076568822942	0.06	0.04	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		12	2	degree		0.8276332512687423	0.09426736440805397	0.08	0.09	0.088	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		12	3	degree		0.7323464844062464	0.07415344955704926	0.12	0.08	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		12	4	degree		0.7618097464293014	0.07633473778098124	0.08	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		13	0	degree		0.7414165474211869	0.061122847674589545	0.04	0.02	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		13	1	degree		0.7491001039879837	0.07821492343197667	0.06	0.08	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		13	2	degree		0.7541884048954343	0.07951652533171907	0.1	0.06	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		13	3	degree		0.7873267977922551	0.08079747471213385	0.08	0.08	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		13	4	degree		0.7626852008212385	0.08131801614328776	0.1	0.07	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		14	0	degree		0.7775723694150898	0.07859499972106014	0.06	0.06	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		14	1	degree		0.7504954982979744	0.0680619071356966	0.08	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		14	2	degree		0.7475802796121338	0.07182768736486633	0.1	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		14	3	degree		0.7885222152106868	0.09702863796340291	0.14	0.08	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		14	4	degree		0.7339862949170319	0.06420116210571294	0.04	0.04	0.066	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		15	0	degree		0.7475402842338219	0.07508087554951998	0.04	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		15	1	degree		0.7939571427301735	0.08063660382428081	0.08	0.07	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		15	2	degree		0.7312621652609032	0.06387975429040027	0.08	0.05	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		15	3	degree		0.7781145289877615	0.07730476802142303	0.04	0.06	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		15	4	degree		0.7429097082114956	0.08064277078386364	0.16	0.08	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		16	0	degree		0.7687556104627911	0.08698345115209598	0.1	0.1	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		16	1	degree		0.750019997689156	0.06695104499711789	0.04	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		16	2	degree		0.7717508199052554	0.07586544688368596	0.06	0.05	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		16	3	degree		0.7671913467777055	0.09609376253650091	0.1	0.07	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		16	4	degree		0.7371592615964377	0.06206244426822163	0.08	0.05	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		17	0	degree		0.7706220614506768	0.08273098653977143	0.14	0.09	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		17	1	degree		0.8049247642494646	0.09931407688547689	0.12	0.08	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		17	2	degree		0.7173215539537654	0.05498758109501929	0.0	0.04	0.062	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		17	3	degree		0.7835050171980127	0.0724674754650718	0.06	0.04	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		17	4	degree		0.7220676721801036	0.07362911054645715	0.08	0.07	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		18	0	degree		0.7859225156204173	0.08048984536986206	0.08	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		18	1	degree		0.7338529769893256	0.06519690597536965	0.06	0.07	0.062	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		18	2	degree		0.7296801258521237	0.07328877491010999	0.1	0.1	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		18	3	degree		0.7666891825833458	0.08101098611893116	0.1	0.05	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		18	4	degree		0.7779101081652786	0.07431746332648093	0.04	0.06	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		19	0	degree		0.7257205833992516	0.06548009955862295	0.04	0.05	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		19	1	degree		0.6974571827255517	0.05239786309159671	0.04	0.02	0.056	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		19	2	degree		0.8019028912214587	0.10753168302662344	0.2	0.11	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		19	3	degree		0.7841760507674669	0.08488205607225674	0.08	0.08	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		19	4	degree		0.784887079715233	0.07636277383639735	0.04	0.06	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		20	0	degree		0.8020850923893239	0.09141268035607826	0.1	0.09	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		20	1	degree		0.7208233715215131	0.061496634805098115	0.06	0.04	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		20	2	degree		0.7928905993085243	0.08848234938648641	0.08	0.08	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		20	3	degree		0.7632051407392924	0.0786148928075491	0.1	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		20	4	degree		0.7146729711233368	0.06072839951782326	0.06	0.04	0.062	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		21	0	degree		0.735359469572405	0.06435364652802585	0.02	0.06	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		21	1	degree		0.7657515131584794	0.08366280066476298	0.1	0.05	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		21	2	degree		0.7625429950316852	0.06565866720993682	0.02	0.02	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		21	3	degree		0.8161945730715562	0.09491669451610121	0.12	0.1	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		21	4	degree		0.7170104787891176	0.08087287435983093	0.12	0.09	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		22	0	degree		0.7197079448597052	0.06037842588416242	0.06	0.03	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		22	1	degree		0.7863535769200004	0.10558581343479165	0.18	0.11	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		22	2	degree		0.7482424253197408	0.07113342244899973	0.04	0.04	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		22	3	degree		0.7500111098273088	0.07155464938779807	0.08	0.06	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		22	4	degree		0.7927928328282066	0.07669423876529967	0.06	0.06	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		23	0	degree		0.7480424484281816	0.07139120842939511	0.08	0.06	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		23	1	degree		0.7609787313465999	0.07464841881861983	0.08	0.1	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		23	2	degree		0.7616008816758952	0.06832013182275143	0.04	0.04	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		23	3	degree		0.7654359940629083	0.0775063533998947	0.08	0.05	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		23	4	degree		0.7618897371859252	0.08621362750281046	0.1	0.06	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		24	0	degree		0.7859713988605761	0.07583332463342378	0.04	0.05	0.084	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		24	1	degree		0.7416920711384463	0.08193593959372214	0.14	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		24	2	degree		0.747615831059522	0.0723126401204908	0.08	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		24	3	degree		0.7563614871170443	0.07181965791542702	0.1	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		24	4	degree		0.7635428794894813	0.07534862107242873	0.08	0.05	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		25	0	degree		0.7260494342875934	0.06153812091693461	0.04	0.03	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		25	1	degree		0.7432296712379904	0.07252374560654953	0.1	0.06	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		25	2	degree		0.7756125958778097	0.07584984028834313	0.08	0.08	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		25	3	degree		0.7667202900998107	0.08868457439048796	0.12	0.08	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		25	4	degree		0.7881355932203391	0.07934366227986495	0.08	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		26	0	degree		0.7738750188867065	0.09239148867900751	0.14	0.1	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		26	1	degree		0.7730839991823167	0.07337771429794777	0.06	0.05	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		26	2	degree		0.7352217077137753	0.0674741723518319	0.06	0.05	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		26	3	degree		0.7555038084488015	0.07702391355354225	0.08	0.09	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		26	4	degree		0.7588545323651489	0.0678418076486013	0.06	0.04	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		27	0	degree		0.7603521370863812	0.07365809559551167	0.08	0.09	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		27	1	degree		0.7548016673628825	0.06698344354919572	0.08	0.05	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		27	2	degree		0.769995467190458	0.07575031231952771	0.04	0.03	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		27	3	degree		0.7693510972065449	0.08432467029733484	0.12	0.08	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		27	4	degree		0.7399500502164195	0.07652345795023933	0.1	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		28	0	degree		0.784300480833326	0.0842684620056954	0.08	0.08	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		28	1	degree		0.7514376116537644	0.07405707374182574	0.12	0.07	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		28	2	degree		0.7690489099037445	0.07659874636569541	0.06	0.06	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		28	3	degree		0.7275381511469786	0.06247054302437279	0.04	0.04	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		28	4	degree		0.7641028147858469	0.07795205130032781	0.08	0.06	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		29	0	degree		0.7587345462302134	0.06969413754786366	0.04	0.04	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		29	1	degree		0.7759814421444633	0.08542185862676559	0.12	0.07	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		29	2	degree		0.7844426866228792	0.0754245584411613	0.06	0.08	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		29	3	degree		0.7308933189942495	0.07474756380221417	0.1	0.07	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		29	4	degree		0.7461982170949135	0.07001609647123945	0.1	0.06	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		30	0	degree		0.746855918871597	0.06739846213234785	0.06	0.05	0.068	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		30	1	degree		0.7521086452232187	0.06561992176242698	0.06	0.03	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		30	2	degree		0.7498911236923733	0.06905064815072337	0.06	0.04	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		30	3	degree		0.7972900909228267	0.09004779690328067	0.08	0.09	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		30	4	degree		0.7513354012425231	0.09116701177410907	0.14	0.1	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		31	0	degree		0.7617830828437603	0.07332181801093035	0.06	0.07	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		31	1	degree		0.7709109169607067	0.09227484568306296	0.14	0.1	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		31	2	degree		0.7725818349879569	0.08548662723112241	0.1	0.07	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		31	3	degree		0.7427941660074836	0.07035347996885796	0.08	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		31	4	degree		0.7491712068827603	0.064626900271932	0.0	0.0	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		32	0	degree		0.7212588767520198	0.057636763565812266	0.06	0.03	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		32	1	degree		0.7807275603708017	0.0860277043287706	0.08	0.07	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		32	2	degree		0.7492378658466132	0.07290452677168485	0.08	0.07	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		32	3	degree		0.778474487392568	0.09216943315016744	0.12	0.09	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		32	4	degree		0.7653160079279727	0.07396919729446427	0.08	0.07	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		33	0	degree		0.7628318505417152	0.07102948551286478	0.08	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		33	1	degree		0.7482202056651232	0.08535973271471217	0.1	0.09	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		33	2	degree		0.769648840578422	0.07545915198797379	0.04	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		33	3	degree		0.7677423942122243	0.07613355173801936	0.12	0.07	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		33	4	degree		0.7475891674739807	0.06887291794291944	0.04	0.05	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		34	0	degree		0.7770346537733418	0.08425872335332105	0.14	0.08	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		34	1	degree		0.7921840142916818	0.09791691686644119	0.16	0.09	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		34	2	degree		0.7091802725018443	0.0579486764971129	0.04	0.05	0.06	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		34	3	degree		0.7623430181401261	0.07649831568306295	0.08	0.06	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		34	4	degree		0.7536862407010746	0.06655055776321257	0.0	0.04	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		35	0	degree		0.787962279914321	0.08378203052105848	0.04	0.09	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		35	1	degree		0.764813843733613	0.09929035140546291	0.12	0.08	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		35	2	degree		0.7525663701083432	0.06924140329648173	0.12	0.06	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		35	3	degree		0.743482975300632	0.06780580399708443	0.06	0.04	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		35	4	degree		0.7471625501053212	0.06902338083772605	0.04	0.03	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		36	0	degree		0.7229520144338876	0.06464758720453165	0.08	0.05	0.064	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		36	1	degree		0.7525708140392666	0.07679378889390646	0.06	0.05	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		36	2	degree		0.747202545483633	0.08961712424479285	0.14	0.11	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		36	3	degree		0.7964368561855075	0.07985633978410187	0.06	0.05	0.09	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		36	4	degree		0.7799365406664118	0.07170671764457881	0.08	0.06	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		37	0	degree		0.7537884511123158	0.0707599425405839	0.08	0.07	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		37	1	degree		0.7943704283060623	0.08877975430082868	0.08	0.07	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		37	2	degree		0.7816518980028975	0.08367777201791111	0.12	0.08	0.082	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		37	3	degree		0.7039986490449992	0.05438555612324094	0.02	0.04	0.064	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		37	4	degree		0.7599432954414156	0.08038761670633489	0.1	0.06	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		38	0	degree		0.7661692426652921	0.07810753664466927	0.06	0.07	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		38	1	degree		0.7392123576831122	0.07177107380936829	0.08	0.08	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		38	2	degree		0.7649071662830073	0.06983270058324598	0.04	0.05	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		38	3	degree		0.7732573124883346	0.0928174744539228	0.14	0.08	0.072	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		38	4	degree		0.7546505737114824	0.06942985604619355	0.06	0.05	0.078	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		39	0	degree		0.7220943357656449	0.08088382204899872	0.14	0.07	0.07	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		39	1	degree		0.777821229546808	0.0816408592395654	0.08	0.09	0.08	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		39	2	degree		0.7558371032680669	0.07039351010083085	0.1	0.06	0.076	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		39	3	degree		0.7654537697866024	0.069358049728659	0.06	0.05	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700		39	4	degree		0.7731417702843227	0.07520265057392461	0.04	0.04	0.074	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	0	0	rwr	38.0	0.8861376018771163	0.3174037840824974	0.36	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	0	1	rwr	38.0	0.8779296614613422	0.2808097494478354	0.3	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	0	2	rwr	38.0	0.8903637801854007	0.3969056486935916	0.48	0.33	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	0	3	rwr	38.0	0.8707171615724404	0.356219259415928	0.36	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	0	4	rwr	38.0	0.9038955498475733	0.29189078941671776	0.36	0.26	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	1	0	rwr	38.0	0.875009998844578	0.35609135193257463	0.42	0.34	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	1	1	rwr	38.0	0.8847155439815844	0.2638117364047342	0.32	0.21	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	1	2	rwr	38.0	0.8852443717614852	0.3670564165637109	0.38	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	1	3	rwr	38.0	0.9032289602090425	0.35150885433521467	0.4	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	1	4	rwr	38.0	0.8908437247251428	0.3032474934542221	0.36	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	2	0	rwr	38.0	0.8714193026583594	0.33919158781846553	0.4	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	2	1	rwr	38.0	0.8737656981859874	0.3117102071531629	0.42	0.31	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	2	2	rwr	38.0	0.8688107152062428	0.2824845711113674	0.34	0.22	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	2	3	rwr	38.0	0.9052242851937109	0.3119415700798439	0.4	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	2	4	rwr	38.0	0.8998515727071539	0.33022873548718057	0.32	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	3	0	rwr	38.0	0.9310213042048474	0.3961830590734324	0.48	0.33	0.114	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	3	1	rwr	38.0	0.8838400895896474	0.37675235028555937	0.4	0.34	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	3	2	rwr	38.0	0.8781429701456721	0.2510001515683693	0.3	0.24	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	3	3	rwr	38.0	0.8857554238176921	0.36908629970943413	0.36	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	3	4	rwr	38.0	0.8369966137246363	0.271343672480052	0.34	0.24	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	4	0	rwr	38.0	0.8875596597726485	0.3081762294900706	0.38	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	4	1	rwr	38.0	0.8665398665043151	0.400636617435645	0.42	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	4	2	rwr	38.0	0.8965364002381946	0.3750126542732247	0.42	0.3	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	4	3	rwr	38.0	0.8591140579310834	0.3039900945560129	0.34	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	4	4	rwr	38.0	0.9130944868592963	0.2915733839842672	0.34	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	5	0	rwr	38.0	0.8873596828810892	0.28890304880631923	0.34	0.26	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	5	1	rwr	38.0	0.8632424697590501	0.3760097528955687	0.4	0.33	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	5	2	rwr	38.0	0.8944210891185908	0.37679491437777507	0.4	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	5	3	rwr	38.0	0.9223245313874842	0.2934801203858445	0.3	0.31	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	5	4	rwr	38.0	0.8855243394096682	0.27236998113128685	0.38	0.24	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	6	0	rwr	38.0	0.8514127256405927	0.2720043923981465	0.34	0.25	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	6	1	rwr	38.0	0.8596073342635963	0.327832565893588	0.4	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	6	2	rwr	38.0	0.9026423613271356	0.3028522245177143	0.3	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	6	3	rwr	38.0	0.9122101446055123	0.3893130761647629	0.46	0.35	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	6	4	rwr	38.0	0.8967141574751363	0.30374526301361954	0.32	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	7	0	rwr	38.0	0.8856932087847627	0.341044137635128	0.34	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	7	1	rwr	38.0	0.905019864371228	0.3377268780400702	0.36	0.3	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	7	2	rwr	38.0	0.8748011340911717	0.30354738573701306	0.38	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	7	3	rwr	38.0	0.8781207504910543	0.37259074019201965	0.4	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	7	4	rwr	38.0	0.8607360927181749	0.2917270601489844	0.34	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	8	0	rwr	38.0	0.8688907059628665	0.32447591182111846	0.38	0.35	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	8	1	rwr	38.0	0.9060064170362535	0.3281531908819053	0.36	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	8	2	rwr	38.0	0.8488885728760232	0.33275057439118005	0.38	0.26	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	8	3	rwr	38.0	0.9034244931696781	0.28838308006624463	0.3	0.25	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	8	4	rwr	38.0	0.9109214046376862	0.3634850116083644	0.36	0.31	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	9	0	rwr	38.0	0.9164096593282555	0.4822890604336731	0.54	0.37	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	9	1	rwr	38.0	0.8919102681467919	0.2920111705242782	0.34	0.26	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	9	2	rwr	38.0	0.9005181623456846	0.28447790764271796	0.34	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	9	3	rwr	38.0	0.8285886964173029	0.2633950944467982	0.38	0.27	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	9	4	rwr	38.0	0.90411774639375	0.2959391322510386	0.32	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	10	0	rwr	38.0	0.8774763805071414	0.3704416581554474	0.36	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	10	1	rwr	38.0	0.9047443406539689	0.3342772826282634	0.38	0.3	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	10	2	rwr	38.0	0.8985272812919396	0.3242236279290235	0.4	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	10	3	rwr	38.0	0.8882440251348733	0.29023657786969087	0.36	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	10	4	rwr	38.0	0.864126812012834	0.3294224943089265	0.36	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	11	0	rwr	38.0	0.9188004941651188	0.30371534742846085	0.28	0.29	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	11	1	rwr	38.0	0.8506039302125088	0.2784560907682093	0.42	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	11	2	rwr	38.0	0.8332903753344059	0.25069329873843194	0.3	0.25	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	11	3	rwr	38.0	0.9133122394745495	0.40822262259361936	0.44	0.34	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	11	4	rwr	38.0	0.9209424688702639	0.38069604787679845	0.36	0.28	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	12	0	rwr	38.0	0.8896127558593229	0.3197481942477399	0.36	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	12	1	rwr	38.0	0.8365300009776648	0.37923678684924345	0.4	0.27	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	12	2	rwr	38.0	0.9097970901140311	0.27181143466534696	0.3	0.27	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	12	3	rwr	38.0	0.862580324051443	0.2879592245760688	0.32	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	12	4	rwr	38.0	0.8852665914161031	0.3469999765834468	0.42	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	13	0	rwr	38.0	0.8630736003839556	0.2700642406244638	0.4	0.29	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	13	1	rwr	38.0	0.8786540222018789	0.3317285578849989	0.38	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	13	2	rwr	38.0	0.8832490467768168	0.2790401212359223	0.34	0.23	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	13	3	rwr	38.0	0.8987228142525753	0.3099911079150635	0.34	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	13	4	rwr	38.0	0.8800716361664874	0.39483139002010503	0.4	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	14	0	rwr	38.0	0.9120146116448766	0.3750428767629256	0.42	0.36	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	14	1	rwr	38.0	0.8818092131575905	0.20951809282147962	0.26	0.23	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	14	2	rwr	38.0	0.8502217521530845	0.3192117511744122	0.38	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	14	3	rwr	38.0	0.8792406210837859	0.35313139342236943	0.4	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	14	4	rwr	38.0	0.8732901975771687	0.29059298238989356	0.36	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	15	0	rwr	38.0	0.855110076168976	0.3085772758829066	0.42	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	15	1	rwr	38.0	0.9171651275852568	0.3187592032428556	0.3	0.25	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	15	2	rwr	38.0	0.8573320416307448	0.2242759465466544	0.3	0.25	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	15	3	rwr	38.0	0.9258396807480024	0.43875284122495384	0.4	0.34	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	15	4	rwr	38.0	0.8833956964972938	0.34759516770032406	0.38	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	16	0	rwr	38.0	0.9118679619243998	0.39920280508450506	0.42	0.33	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	16	1	rwr	38.0	0.871779261063166	0.3209385074066423	0.34	0.23	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	16	2	rwr	38.0	0.8971407748437958	0.28864430536322927	0.32	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	16	3	rwr	38.0	0.8874530054304836	0.37133534450831096	0.4	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	16	4	rwr	38.0	0.8711171153555589	0.2363140283589745	0.3	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	17	0	rwr	38.0	0.8924035444793046	0.38231758462259907	0.42	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	17	1	rwr	38.0	0.8905593131460364	0.3464076861738155	0.36	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	17	2	rwr	38.0	0.8646511958618115	0.2474464264052254	0.24	0.22	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	17	3	rwr	38.0	0.9017091358331926	0.27039999548445903	0.36	0.32	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	17	4	rwr	38.0	0.8600472834250265	0.32422155193179897	0.4	0.31	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	18	0	rwr	38.0	0.878654022201879	0.34026453787985533	0.38	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	18	1	rwr	38.0	0.8823780363158036	0.3745854582075825	0.44	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	18	2	rwr	38.0	0.8615004488370233	0.26976047058732633	0.32	0.24	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	18	3	rwr	38.0	0.8945144116679851	0.3427592195698868	0.34	0.33	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	18	4	rwr	38.0	0.90411774639375	0.317370592299436	0.38	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	19	0	rwr	38.0	0.8657355150071548	0.3415784086705407	0.38	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	19	1	rwr	38.0	0.8609760649880459	0.280568916690928	0.38	0.25	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	19	2	rwr	38.0	0.904108858531903	0.3402008877851635	0.34	0.25	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	19	3	rwr	38.0	0.8990783287264582	0.31435840706923257	0.32	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	19	4	rwr	38.0	0.8934212046607947	0.3123981613142347	0.3	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	20	0	rwr	38.0	0.9084550229751229	0.38857355319182363	0.34	0.3	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	20	1	rwr	38.0	0.8581319491969818	0.29797948551464504	0.28	0.25	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	20	2	rwr	38.0	0.9263907281825211	0.39793100705384726	0.42	0.35	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	20	3	rwr	38.0	0.884662216810502	0.34938801582822243	0.42	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	20	4	rwr	38.0	0.8428359389581649	0.2506248843829319	0.28	0.26	0.088	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	21	0	rwr	38.0	0.8637090825060215	0.32996270836114233	0.36	0.33	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	21	1	rwr	38.0	0.897985121719268	0.33841004579466244	0.34	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	21	2	rwr	38.0	0.9166940709073619	0.2791462482804165	0.26	0.24	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	21	3	rwr	38.0	0.9287193479864548	0.40909045253930604	0.46	0.34	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	21	4	rwr	38.0	0.8482130953756455	0.3310367455062254	0.4	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	22	0	rwr	38.0	0.8420760267702398	0.20795926687582855	0.24	0.23	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	22	1	rwr	38.0	0.9000959889079484	0.45957623170843453	0.5	0.36	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	22	2	rwr	38.0	0.8770942024477173	0.33415236457644926	0.34	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	22	3	rwr	38.0	0.8981451032325154	0.2705804386424337	0.3	0.27	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	22	4	rwr	38.0	0.9042688400451503	0.3366771788465577	0.32	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	23	0	rwr	38.0	0.8773430625794354	0.3848973444794903	0.38	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	23	1	rwr	38.0	0.9031756330379601	0.31339950363454594	0.34	0.3	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	23	2	rwr	38.0	0.860869410645881	0.2718595210895533	0.36	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	23	3	rwr	38.0	0.8965097366526534	0.30773456078406264	0.34	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	23	4	rwr	38.0	0.8594562406121959	0.30208519878410706	0.32	0.23	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	24	0	rwr	38.0	0.9173428848221984	0.36528973881556753	0.38	0.32	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	24	1	rwr	38.0	0.8689706967194901	0.3350562893446538	0.4	0.27	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	24	2	rwr	38.0	0.8830490698852577	0.360873508933773	0.36	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	24	3	rwr	38.0	0.888812848293086	0.2707538867818729	0.36	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	24	4	rwr	38.0	0.878547367859714	0.31302060662478526	0.3	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	25	0	rwr	38.0	0.8620648280643127	0.22414750151833815	0.24	0.19	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	25	1	rwr	38.0	0.8858665220907807	0.41948026024354507	0.4	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	25	2	rwr	38.0	0.8973096442188904	0.33246903013685714	0.36	0.3	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	25	3	rwr	38.0	0.879951650031552	0.30456798149344805	0.3	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	25	4	rwr	38.0	0.9136810857412032	0.34897672447282835	0.42	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	26	0	rwr	38.0	0.8869463973052003	0.3951681249851292	0.42	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	26	1	rwr	38.0	0.8823780363158035	0.2807304850573475	0.34	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	26	2	rwr	38.0	0.8420538071156223	0.24795221225927927	0.28	0.24	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	26	3	rwr	38.0	0.8769297770035462	0.3622529809537356	0.42	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	26	4	rwr	38.0	0.8713437558326593	0.2738927385011269	0.34	0.25	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	27	0	rwr	38.0	0.885497675824127	0.34939273360783024	0.38	0.33	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	27	1	rwr	38.0	0.9028912214588537	0.33116970262376144	0.38	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	27	2	rwr	38.0	0.8932212277692354	0.31989187355290316	0.4	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	27	3	rwr	38.0	0.8740278901104761	0.31694760310441333	0.4	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	27	4	rwr	38.0	0.8676330735115053	0.31381904678309164	0.36	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	28	0	rwr	38.0	0.9183472132109178	0.3202798885358345	0.4	0.28	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	28	1	rwr	38.0	0.8702727684800867	0.3065157184551779	0.34	0.22	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	28	2	rwr	38.0	0.8495240549980891	0.2786881768990561	0.32	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	28	3	rwr	38.0	0.8839689635864301	0.3337178060806038	0.38	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	28	4	rwr	38.0	0.877605254503924	0.33346502513063325	0.4	0.26	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	29	0	rwr	38.0	0.8885195488521326	0.26568716166647405	0.32	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	29	1	rwr	38.0	0.8572076115648857	0.2475954528983798	0.26	0.21	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	29	2	rwr	38.0	0.9196981682116733	0.4534263244504579	0.5	0.34	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	29	3	rwr	38.0	0.8699216979371273	0.37774710415794044	0.4	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	29	4	rwr	38.0	0.9007092513753967	0.3094035704515915	0.32	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	30	0	rwr	38.0	0.8801649587158817	0.224704691168979	0.3	0.24	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	30	1	rwr	38.0	0.8985983841867162	0.35509239805508597	0.36	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	30	2	rwr	38.0	0.8872619164007713	0.27771415083338963	0.3	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	30	3	rwr	38.0	0.8955054082639339	0.36791504772398786	0.44	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	30	4	rwr	38.0	0.8535635882075849	0.36610140574185246	0.38	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	31	0	rwr	38.0	0.8783607227609254	0.26235000374439016	0.28	0.26	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	31	1	rwr	38.0	0.886284251597593	0.40153846753349176	0.42	0.33	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	31	2	rwr	38.0	0.9142587967612631	0.3838642611182709	0.44	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	31	3	rwr	38.0	0.8707838205362937	0.3079318757538294	0.34	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	31	4	rwr	38.0	0.8936789526543598	0.26640100058144583	0.38	0.29	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	32	0	rwr	38.0	0.851639366117693	0.27108468994681323	0.34	0.25	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	32	1	rwr	38.0	0.8952209966848276	0.3304621098451431	0.36	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	32	2	rwr	38.0	0.8679219290215353	0.34318241731858246	0.34	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	32	3	rwr	38.0	0.8914614311235147	0.3413205074177296	0.34	0.25	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	32	4	rwr	38.0	0.8811692871046013	0.25795927014201964	0.24	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	33	0	rwr	38.0	0.9045177001768684	0.27303781470080113	0.28	0.25	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	33	1	rwr	38.0	0.8592740394443309	0.362208015539771	0.44	0.29	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	33	2	rwr	38.0	0.8895061015171581	0.3355779020632163	0.42	0.34	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	33	3	rwr	38.0	0.8888395118786273	0.3725800765103882	0.44	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	33	4	rwr	38.0	0.8807426697359417	0.31975212203709735	0.34	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	34	0	rwr	38.0	0.8922257872423631	0.35919669464344905	0.4	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	34	1	rwr	38.0	0.9090993929590359	0.32374951113139866	0.42	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	34	2	rwr	38.0	0.8646823033782762	0.3148364959823075	0.36	0.29	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	34	3	rwr	38.0	0.8836490005599353	0.33059356485458186	0.34	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	34	4	rwr	38.0	0.8834045843591407	0.292736024049386	0.32	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	35	0	rwr	38.0	0.8982073182654449	0.40273469761577996	0.44	0.31	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	35	1	rwr	38.0	0.8841289450996772	0.3574232187420877	0.4	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	35	2	rwr	38.0	0.8942433318816492	0.3183371726123206	0.34	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	35	3	rwr	38.0	0.8577586589994045	0.28266252696015914	0.32	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	35	4	rwr	38.0	0.8787873401295849	0.28234637932362566	0.32	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	36	0	rwr	38.0	0.8751610924959783	0.27924841170786513	0.32	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	36	1	rwr	38.0	0.86831743887373	0.2769468901378245	0.32	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	36	2	rwr	38.0	0.8886084274706034	0.38756675105431215	0.46	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	36	3	rwr	38.0	0.8924924230977753	0.3404482802846454	0.34	0.32	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	36	4	rwr	38.0	0.8977184858638557	0.27734982949889947	0.34	0.25	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	37	0	rwr	38.0	0.8498662376792014	0.24851109886265874	0.28	0.21	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	37	1	rwr	38.0	0.8929190404664351	0.3760609417687339	0.4	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	37	2	rwr	38.0	0.9145343204785225	0.3937160589722246	0.46	0.33	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	37	3	rwr	38.0	0.8612693644289993	0.2812737255093968	0.34	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	37	4	rwr	38.0	0.8836223369743941	0.2928080398482453	0.36	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	38	0	rwr	38.0	0.8743034138277355	0.34768486979949537	0.36	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	38	1	rwr	38.0	0.8775963666420767	0.3460076823195396	0.38	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	38	2	rwr	38.0	0.8961453343169234	0.3284119136008015	0.42	0.31	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	38	3	rwr	38.0	0.9028601139423889	0.35885065803418265	0.42	0.28	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	38	4	rwr	38.0	0.890688187142819	0.26003001563957845	0.3	0.25	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	39	0	rwr	38.0	0.861598215317341	0.36368814470631705	0.42	0.28	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	39	1	rwr	38.0	0.8843689173695484	0.3821041653808113	0.42	0.34	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	39	2	rwr	38.0	0.9071529512145263	0.2794975166742297	0.34	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	39	3	rwr	38.0	0.8814625865455548	0.2895973101775984	0.34	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.3	39	4	rwr	38.0	0.8899238310239707	0.3284183186776336	0.34	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	0	0	rwr	21.0	0.8891416991814279	0.32445283737470065	0.36	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	0	1	rwr	21.0	0.8782807320043018	0.2713640110386204	0.3	0.26	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	0	2	rwr	21.0	0.889812732750882	0.3981955308226447	0.5	0.33	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	0	3	rwr	21.0	0.8736768195675166	0.3836219400309572	0.4	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	0	4	rwr	21.0	0.9061886182041186	0.3040681527559278	0.36	0.26	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	1	0	rwr	21.0	0.877027543483864	0.3638511532555221	0.4	0.33	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	1	1	rwr	21.0	0.882075849013003	0.2770397524142948	0.36	0.22	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	1	2	rwr	21.0	0.8877151973549724	0.3562287624319989	0.4	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	1	3	rwr	21.0	0.9037355683343259	0.3437806289622542	0.38	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	1	4	rwr	21.0	0.8928434936407348	0.33160736116998585	0.38	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	2	0	rwr	21.0	0.8739523432847759	0.3469035464713581	0.42	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	2	1	rwr	21.0	0.8769386648653933	0.3309004158047035	0.44	0.31	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	2	2	rwr	21.0	0.8689440331339491	0.2901098641423098	0.34	0.24	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	2	3	rwr	21.0	0.9070551847342085	0.31966187712484073	0.42	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	2	4	rwr	21.0	0.8985361691537866	0.3274076110537966	0.34	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	3	0	rwr	21.0	0.9296703492040921	0.3816926231331103	0.46	0.34	0.114	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	3	1	rwr	21.0	0.8838223138659534	0.3918554123688629	0.42	0.34	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	3	2	rwr	21.0	0.879787224587381	0.24458714020482727	0.34	0.25	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	3	3	rwr	21.0	0.8898705038528881	0.3803687663163149	0.38	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	3	4	rwr	21.0	0.8386941953374277	0.27838541613802437	0.32	0.25	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	4	0	rwr	21.0	0.8908215050705252	0.3213954276645052	0.38	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	4	1	rwr	21.0	0.8661310248593495	0.4085767156601843	0.42	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	4	2	rwr	21.0	0.8997804698123772	0.38967277517390003	0.48	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	4	3	rwr	21.0	0.8620559402024655	0.3082665977925672	0.38	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	4	4	rwr	21.0	0.913183365477767	0.29733621690430984	0.34	0.31	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	5	0	rwr	21.0	0.8832268271221992	0.2848914921030819	0.32	0.25	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	5	1	rwr	21.0	0.8645134340031818	0.3677045974334163	0.4	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	5	2	rwr	21.0	0.9005981531023082	0.38126112102764265	0.42	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	5	3	rwr	21.0	0.9245998240203355	0.31738548700328384	0.36	0.32	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	5	4	rwr	21.0	0.8868841822722708	0.27892857064235627	0.36	0.26	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	6	0	rwr	21.0	0.8513149591602748	0.27247287375506	0.34	0.25	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	6	1	rwr	21.0	0.8635624327855448	0.34866215111088855	0.44	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	6	2	rwr	21.0	0.9014513878396274	0.2973835659011388	0.3	0.24	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	6	3	rwr	21.0	0.913241136579773	0.3773515218285404	0.42	0.34	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	6	4	rwr	21.0	0.8999760027730128	0.3059861644508288	0.34	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	7	0	rwr	21.0	0.8871597059895301	0.3462819453664767	0.34	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	7	1	rwr	21.0	0.9068241003261845	0.3285489384709412	0.38	0.29	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	7	2	rwr	21.0	0.8759210046839032	0.3121746271357591	0.42	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	7	3	rwr	21.0	0.8764942717730395	0.37849311183953915	0.42	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	7	4	rwr	21.0	0.8622203656466363	0.322167233050743	0.36	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	8	0	rwr	21.0	0.8719747940238017	0.3241324015322968	0.38	0.36	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	8	1	rwr	21.0	0.9038555544692612	0.34778506750614313	0.38	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	8	2	rwr	21.0	0.8481242167571748	0.3390906154709469	0.36	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	8	3	rwr	21.0	0.9029445486299361	0.2919440850325209	0.34	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	8	4	rwr	21.0	0.9163341125025553	0.3517788181413264	0.42	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	9	0	rwr	21.0	0.917431763440669	0.4824698719201556	0.5	0.37	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	9	1	rwr	21.0	0.8947188324904678	0.3160972430576963	0.34	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	9	2	rwr	21.0	0.903166745176113	0.27965587649512386	0.38	0.26	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	9	3	rwr	21.0	0.8258512349684037	0.2773198550457656	0.4	0.27	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	9	4	rwr	21.0	0.906828544257108	0.2933178630441148	0.32	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	10	0	rwr	21.0	0.8757787988943498	0.3766882677006247	0.38	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	10	1	rwr	21.0	0.9049487614764516	0.34695837754666375	0.42	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	10	2	rwr	21.0	0.89642974589603	0.3242932040281015	0.42	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	10	3	rwr	21.0	0.8948032671780151	0.3036736181809744	0.32	0.25	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	10	4	rwr	21.0	0.8621892581301717	0.3267699840390461	0.42	0.3	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	11	0	rwr	21.0	0.9203825335738982	0.3105846312494974	0.32	0.29	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	11	1	rwr	21.0	0.850870566067921	0.2838855040826865	0.38	0.28	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	11	2	rwr	21.0	0.8352723685263036	0.25754301659440104	0.28	0.23	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	11	3	rwr	21.0	0.916769617733062	0.4161785790569638	0.52	0.34	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	11	4	rwr	21.0	0.9178228293619404	0.3786675320235883	0.34	0.32	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	12	0	rwr	21.0	0.892208011518669	0.32762762857006245	0.42	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	12	1	rwr	21.0	0.8368944033133949	0.38551209810771586	0.38	0.3	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	12	2	rwr	21.0	0.9035755868210784	0.2504368437035274	0.3	0.25	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	12	3	rwr	21.0	0.8628380720450082	0.2897513072993905	0.34	0.28	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	12	4	rwr	21.0	0.8866530978642468	0.34697676865189186	0.44	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	13	0	rwr	21.0	0.865935491898714	0.2880623270564014	0.44	0.31	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	13	1	rwr	21.0	0.8808493240781066	0.32229658402668315	0.38	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	13	2	rwr	21.0	0.8825202421053568	0.2784942191252826	0.3	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	13	3	rwr	21.0	0.897265204909655	0.33652189921946524	0.38	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	13	4	rwr	21.0	0.8803027205745113	0.3976753950441987	0.38	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	14	0	rwr	21.0	0.9127878556255722	0.39335864871493187	0.46	0.36	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	14	1	rwr	21.0	0.8827779900989219	0.21572670014801767	0.26	0.23	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	14	2	rwr	21.0	0.8502750793241669	0.31617057999524656	0.38	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	14	3	rwr	21.0	0.8792495089456329	0.3449463860677442	0.44	0.32	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	14	4	rwr	21.0	0.8736812634984401	0.30277279567942833	0.38	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	15	0	rwr	21.0	0.8569587514331677	0.30962506955272356	0.4	0.31	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	15	1	rwr	21.0	0.914365451103428	0.3228258429800379	0.36	0.26	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	15	2	rwr	21.0	0.8601406059744208	0.2312800083421074	0.3	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	15	3	rwr	21.0	0.926479606800992	0.43716838931057234	0.48	0.32	0.114	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	15	4	rwr	21.0	0.8857598677486158	0.36042484254952106	0.42	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	16	0	rwr	21.0	0.9109169607067629	0.39670223645403063	0.42	0.34	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	16	1	rwr	21.0	0.8727747015900384	0.3265504521325649	0.34	0.26	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	16	2	rwr	21.0	0.8977362615875499	0.28740193332485353	0.28	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	16	3	rwr	21.0	0.8870974909566007	0.36567158183042714	0.4	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	16	4	rwr	21.0	0.8752677468381431	0.2477424000123507	0.36	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	17	0	rwr	21.0	0.8922257872423631	0.3884533040687179	0.4	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	17	1	rwr	21.0	0.8874218979140189	0.33354665906794045	0.38	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	17	2	rwr	21.0	0.868348546390195	0.2438422817679661	0.3	0.22	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	17	3	rwr	21.0	0.9030867544194893	0.278763036444487	0.38	0.33	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	17	4	rwr	21.0	0.8680641348110885	0.3286701187738615	0.38	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	18	0	rwr	21.0	0.8794628176299628	0.3393812309913407	0.42	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	18	1	rwr	21.0	0.8868219672393413	0.3879461394769976	0.44	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	18	2	rwr	21.0	0.8642645738714638	0.28185366967853465	0.36	0.26	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	18	3	rwr	21.0	0.8962475447281648	0.34904680834549884	0.38	0.34	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	18	4	rwr	21.0	0.9028556700114654	0.31587269445055577	0.38	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	19	0	rwr	21.0	0.8670331428368278	0.3387294923424014	0.38	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	19	1	rwr	21.0	0.8639179472594277	0.3094064214131921	0.4	0.28	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	19	2	rwr	21.0	0.9030423151102538	0.3356142951318013	0.36	0.25	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	19	3	rwr	21.0	0.9014158363922391	0.31271145549282303	0.3	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	19	4	rwr	21.0	0.8915103143636736	0.31544693589507616	0.32	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	20	0	rwr	21.0	0.908934967514865	0.3800176838719396	0.34	0.3	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	20	1	rwr	21.0	0.8593140348226427	0.3154439593019396	0.34	0.25	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	20	2	rwr	21.0	0.9283727213744191	0.39991449286568637	0.42	0.37	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	20	3	rwr	21.0	0.8849199648040671	0.3514748934784297	0.42	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	20	4	rwr	21.0	0.8472798698817026	0.2620262908288123	0.34	0.27	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	21	0	rwr	21.0	0.86758863420227	0.3384713508968527	0.48	0.33	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	21	1	rwr	21.0	0.90129140632638	0.3460638793890237	0.38	0.3	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	21	2	rwr	21.0	0.9182849981779885	0.2929054870351864	0.28	0.24	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	21	3	rwr	21.0	0.9255908206162843	0.39591971414644433	0.44	0.36	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	21	4	rwr	21.0	0.8489241243234115	0.3341527245521739	0.4	0.25	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	22	0	rwr	21.0	0.8432225609485127	0.22402709685935523	0.3	0.23	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	22	1	rwr	21.0	0.901464719632398	0.4620055662064785	0.54	0.37	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	22	2	rwr	21.0	0.8749522277425719	0.32492750838460993	0.34	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	22	3	rwr	21.0	0.9002426386284251	0.28345037893148	0.34	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	22	4	rwr	21.0	0.903513371788149	0.3456152534065221	0.38	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	23	0	rwr	21.0	0.8776452498822358	0.39493186844968375	0.42	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	23	1	rwr	21.0	0.9048287753415161	0.3175782134288665	0.34	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	23	2	rwr	21.0	0.8621937020610951	0.2895935217966886	0.4	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	23	3	rwr	21.0	0.8973718592518198	0.31366205106265366	0.36	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	23	4	rwr	21.0	0.860878298507728	0.2999724769500686	0.32	0.25	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	24	0	rwr	21.0	0.9186316247900242	0.35710376998454263	0.42	0.32	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	24	1	rwr	21.0	0.8722592056029081	0.3394067446820859	0.46	0.27	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	24	2	rwr	21.0	0.8836534444908588	0.37381241242065	0.42	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	24	3	rwr	21.0	0.8883951187862736	0.28109503193249086	0.36	0.26	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	24	4	rwr	21.0	0.8812137264138367	0.3244618758340179	0.38	0.26	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	25	0	rwr	21.0	0.8653088976384951	0.22822518746735632	0.32	0.19	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	25	1	rwr	21.0	0.8885773199541387	0.42728368850160864	0.46	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	25	2	rwr	21.0	0.897149662705643	0.3317046004456984	0.4	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	25	3	rwr	21.0	0.8793561632877978	0.3101613195675978	0.34	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	25	4	rwr	21.0	0.9136544221556621	0.3474006307085777	0.44	0.31	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	26	0	rwr	21.0	0.8862975833903638	0.3970210839578361	0.44	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	26	1	rwr	21.0	0.8826624478949099	0.2880203018378458	0.36	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	26	2	rwr	21.0	0.840729515700408	0.24977071435266027	0.34	0.23	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	26	3	rwr	21.0	0.8776496938131593	0.3620174009426736	0.44	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	26	4	rwr	21.0	0.8713881951418947	0.2887327697062181	0.34	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	27	0	rwr	21.0	0.8885106609902855	0.3514842590326743	0.38	0.33	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	27	1	rwr	21.0	0.9026956884982179	0.33113346875869976	0.38	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	27	2	rwr	21.0	0.8927768346768817	0.33652853506722324	0.44	0.32	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	27	3	rwr	21.0	0.8744545074791359	0.3186484607035644	0.42	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	27	4	rwr	21.0	0.8698105996640387	0.3322697734620077	0.36	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	28	0	rwr	21.0	0.91542310666323	0.3131381175815839	0.38	0.29	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	28	1	rwr	21.0	0.8718014807177837	0.29428055030106964	0.36	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	28	2	rwr	21.0	0.8513460666767396	0.2880537961025494	0.36	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	28	3	rwr	21.0	0.8871597059895302	0.3445747813990271	0.46	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	28	4	rwr	21.0	0.879960537893399	0.35281438657592046	0.38	0.28	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	29	0	rwr	21.0	0.888812848293086	0.2779829848444354	0.36	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	29	1	rwr	21.0	0.8496084896856362	0.22950636030421734	0.3	0.21	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	29	2	rwr	21.0	0.9226400504830554	0.467515310188445	0.48	0.36	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	29	3	rwr	21.0	0.8718281443033249	0.38686908157119604	0.42	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	29	4	rwr	21.0	0.9058819869703946	0.3063730898224364	0.36	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	30	0	rwr	21.0	0.8824935785198155	0.21816076719068697	0.28	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	30	1	rwr	21.0	0.9011314248131327	0.3618335325943473	0.4	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	30	2	rwr	21.0	0.8880084967959259	0.288034613708697	0.38	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	30	3	rwr	21.0	0.8978962431007972	0.36901817078124716	0.44	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	30	4	rwr	21.0	0.8544257108067512	0.3625244502659837	0.4	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	31	0	rwr	21.0	0.8794717054918099	0.25859363104160704	0.28	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	31	1	rwr	21.0	0.8863020273212874	0.39822578970590117	0.46	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	31	2	rwr	21.0	0.9152364615644414	0.386966866382067	0.44	0.31	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	31	3	rwr	21.0	0.8741789837618764	0.31498303291384067	0.36	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	31	4	rwr	21.0	0.8950121319314212	0.28510641276758136	0.38	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	32	0	rwr	21.0	0.8506261498671264	0.27156419659729836	0.32	0.26	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	32	1	rwr	21.0	0.8931945641836943	0.32955771264832767	0.38	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	32	2	rwr	21.0	0.8713170922471182	0.35021179283181936	0.38	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	32	3	rwr	21.0	0.8938789295459191	0.34167810803962756	0.36	0.25	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	32	4	rwr	21.0	0.8800583043737169	0.2488332490598697	0.28	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	33	0	rwr	21.0	0.9047132331375041	0.2838275012261419	0.28	0.28	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	33	1	rwr	21.0	0.8563632646894137	0.3520749346660501	0.46	0.28	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	33	2	rwr	21.0	0.8881906979637908	0.3481825569690794	0.48	0.32	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	33	3	rwr	21.0	0.8904037755637126	0.37589672498625487	0.44	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	33	4	rwr	21.0	0.8835512340796173	0.3189203979586816	0.32	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	34	0	rwr	21.0	0.8935145272101891	0.37319725352379945	0.44	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	34	1	rwr	21.0	0.9076328957542683	0.3037744459441585	0.42	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	34	2	rwr	21.0	0.8681041301894004	0.3197272305121992	0.38	0.28	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	34	3	rwr	21.0	0.8844577959880192	0.3468320963152386	0.36	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	34	4	rwr	21.0	0.8847555393598961	0.2975429382382263	0.34	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	35	0	rwr	21.0	0.8967497089225246	0.4153337351311545	0.44	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	35	1	rwr	21.0	0.8836490005599354	0.3576043916095503	0.42	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	35	2	rwr	21.0	0.8940389110591664	0.3303971929579405	0.4	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	35	3	rwr	21.0	0.8579541919600402	0.274564440095996	0.38	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	35	4	rwr	21.0	0.883266822500511	0.2957445206186751	0.42	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	36	0	rwr	21.0	0.8764942717730396	0.285610873731225	0.34	0.24	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	36	1	rwr	21.0	0.8659532676224081	0.27084696436262334	0.3	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	36	2	rwr	21.0	0.8896305315830171	0.3965072555516893	0.42	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	36	3	rwr	21.0	0.8908392807942193	0.34583345545921557	0.36	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	36	4	rwr	21.0	0.8986428234959516	0.2852924048533941	0.36	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	37	0	rwr	21.0	0.8491640965932825	0.2541500394858969	0.3	0.21	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	37	1	rwr	21.0	0.8943766498093554	0.38271714760045333	0.4	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	37	2	rwr	21.0	0.915192022255206	0.4147279988144694	0.5	0.34	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	37	3	rwr	21.0	0.8644245553847111	0.28949038866460314	0.36	0.26	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	37	4	rwr	21.0	0.8849021890803729	0.29992975084731055	0.38	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	38	0	rwr	21.0	0.872356972083226	0.3395008653427617	0.4	0.33	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	38	1	rwr	21.0	0.8820491854274618	0.35647073082764136	0.4	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	38	2	rwr	21.0	0.8968385875409953	0.3401478268078566	0.44	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	38	3	rwr	21.0	0.9035622550283079	0.3628760068465159	0.42	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	38	4	rwr	21.0	0.8929190404664349	0.26428443760573267	0.3	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	39	0	rwr	21.0	0.8639801622923573	0.36973886105925086	0.44	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	39	1	rwr	21.0	0.8816847830917316	0.3737716290733726	0.42	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	39	2	rwr	21.0	0.9121034902633474	0.2788938166408659	0.36	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	39	3	rwr	21.0	0.8846266653631136	0.30356946670219515	0.4	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.5	39	4	rwr	21.0	0.8917102912552327	0.3343723760764363	0.38	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	0	0	rwr	13.0	0.8876840898385076	0.3166409374366135	0.36	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	0	1	rwr	13.0	0.8760898740589975	0.2652859563935992	0.26	0.26	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	0	2	rwr	13.0	0.8862309244265106	0.37228578616081004	0.5	0.33	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	0	3	rwr	13.0	0.8741301005217175	0.3885169118916308	0.4	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	0	4	rwr	13.0	0.9045621394861038	0.29093274348455206	0.32	0.25	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	1	0	rwr	13.0	0.8764764960493454	0.3566008585234309	0.4	0.32	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	1	1	rwr	13.0	0.8764053931545688	0.2739882585405816	0.36	0.22	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	1	2	rwr	13.0	0.8872796921244657	0.3372440766127389	0.42	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	1	3	rwr	13.0	0.9022868468532524	0.33559800241462695	0.36	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	1	4	rwr	13.0	0.890034929297059	0.324344792061234	0.4	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	2	0	rwr	13.0	0.8727969212446562	0.3382922770670244	0.4	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	2	1	rwr	13.0	0.8764498324638041	0.332891597839889	0.42	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	2	2	rwr	13.0	0.866464319678615	0.2788368719256257	0.34	0.23	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	2	3	rwr	13.0	0.904184405357603	0.3123114323517869	0.38	0.33	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	2	4	rwr	13.0	0.8941544532631786	0.3203308131148636	0.36	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	3	0	rwr	13.0	0.9258219050243084	0.3526990626442341	0.44	0.33	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	3	1	rwr	13.0	0.8825513496218215	0.3912820636791512	0.48	0.34	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	3	2	rwr	13.0	0.8769519966581639	0.2336665177098424	0.3	0.25	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	3	3	rwr	13.0	0.8914792068472087	0.3816565591874043	0.38	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	3	4	rwr	13.0	0.8371032680668011	0.2712458535949403	0.3	0.27	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	4	0	rwr	13.0	0.8898882795765822	0.31524991241244027	0.38	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	4	1	rwr	13.0	0.8632602454827443	0.40661360002581654	0.38	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	4	2	rwr	13.0	0.8994693946477297	0.37671836171830514	0.44	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	4	3	rwr	13.0	0.8624470061237368	0.3006663905430573	0.38	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	4	4	rwr	13.0	0.9103925768577854	0.3001166751382544	0.38	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	5	0	rwr	13.0	0.8788628869552851	0.2706993372885156	0.3	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	5	1	rwr	13.0	0.8628780674233201	0.3425401125563083	0.38	0.31	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	5	2	rwr	13.0	0.9032022966235013	0.3790872119391251	0.46	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	5	3	rwr	13.0	0.9233288597762036	0.3348132942160714	0.36	0.34	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	5	4	rwr	13.0	0.8844222445406309	0.27547918229053664	0.36	0.26	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	6	0	rwr	13.0	0.8488885728760232	0.25981706474992644	0.34	0.24	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	6	1	rwr	13.0	0.8632158061735088	0.34772669462404965	0.44	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	6	2	rwr	13.0	0.8981717668180567	0.28842373001505645	0.3	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	6	3	rwr	13.0	0.9120323873685706	0.363783663132646	0.42	0.34	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	6	4	rwr	13.0	0.8981184396469741	0.3079893895160153	0.32	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	7	0	rwr	13.0	0.8848133104619021	0.34460097214486285	0.4	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	7	1	rwr	13.0	0.9053131638121817	0.3098254855384009	0.36	0.27	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	7	2	rwr	13.0	0.8739656750775466	0.30239256765529604	0.4	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	7	3	rwr	13.0	0.871837032165172	0.36132616059915135	0.4	0.26	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	7	4	rwr	13.0	0.8594562406121959	0.32200320132326965	0.38	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	8	0	rwr	13.0	0.8728191408992739	0.31489207736465463	0.38	0.35	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	8	1	rwr	13.0	0.9006825877898554	0.3404954167005982	0.36	0.32	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	8	2	rwr	13.0	0.8430847990898829	0.3297797426915194	0.38	0.26	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	8	3	rwr	13.0	0.8999226756019305	0.2823386317701117	0.34	0.26	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	8	4	rwr	13.0	0.9180139183916525	0.3395841964270823	0.4	0.31	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	9	0	rwr	13.0	0.9150142650182644	0.47582481580211683	0.48	0.36	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	9	1	rwr	13.0	0.8951721134446686	0.3196189987188418	0.32	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	9	2	rwr	13.0	0.9029623243536302	0.26827257741187127	0.34	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	9	3	rwr	13.0	0.8197897131886982	0.27004470640483746	0.38	0.27	0.086	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	9	4	rwr	13.0	0.9064996933687663	0.2908487920183195	0.36	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	10	0	rwr	13.0	0.8701972216543866	0.36911601651714226	0.38	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	10	1	rwr	13.0	0.903455600686143	0.33265404495682455	0.42	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	10	2	rwr	13.0	0.8929812554993646	0.32623583905538567	0.42	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	10	3	rwr	13.0	0.8963675308631003	0.30473396373971245	0.36	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	10	4	rwr	13.0	0.8574520277656804	0.3169169754807564	0.4	0.3	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	11	0	rwr	13.0	0.9184894190004711	0.30520877482722353	0.32	0.28	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	11	1	rwr	13.0	0.8487641428101642	0.2707513234167464	0.38	0.29	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	11	2	rwr	13.0	0.8349346297761149	0.24947555524964937	0.28	0.23	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	11	3	rwr	13.0	0.9170095900029329	0.400244991055185	0.5	0.34	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	11	4	rwr	13.0	0.911859074062553	0.37621139948591886	0.34	0.32	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	12	0	rwr	13.0	0.8915236461564442	0.324385393620171	0.38	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	12	1	rwr	13.0	0.8341302782789544	0.38025890053566264	0.38	0.3	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	12	2	rwr	13.0	0.8969719054687013	0.24033942887526324	0.28	0.24	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	12	3	rwr	13.0	0.8601094984579558	0.2849271860871773	0.36	0.28	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	12	4	rwr	13.0	0.8834090282900643	0.3401694869410434	0.44	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	13	0	rwr	13.0	0.8645400975887231	0.2893088917474756	0.46	0.32	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	13	1	rwr	13.0	0.8797383413472221	0.3119942278201731	0.36	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	13	2	rwr	13.0	0.8782007412476781	0.2689779820717469	0.3	0.23	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	13	3	rwr	13.0	0.8935500786575774	0.3371511617465979	0.42	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	13	4	rwr	13.0	0.8781962973167544	0.37473471332785313	0.4	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	14	0	rwr	13.0	0.9100148427292846	0.38943321215663174	0.44	0.36	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	14	1	rwr	13.0	0.8804760338805293	0.2100810688966848	0.28	0.23	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	14	2	rwr	13.0	0.8473598606383264	0.31512225595058146	0.36	0.3	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	14	3	rwr	13.0	0.8763965052927218	0.3341344192172144	0.38	0.32	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	14	4	rwr	13.0	0.8716992703065424	0.29467432768381596	0.38	0.27	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	15	0	rwr	13.0	0.8572609387359683	0.30021398283154993	0.38	0.31	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	15	1	rwr	13.0	0.9083661443566521	0.31418746701833	0.36	0.27	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	15	2	rwr	13.0	0.8574920231439923	0.21862239667324007	0.32	0.26	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	15	3	rwr	13.0	0.922728929101526	0.4161419496398615	0.48	0.32	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	15	4	rwr	13.0	0.8852265960377913	0.35917391538010623	0.4	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	16	0	rwr	13.0	0.9071040679743674	0.3942644049282897	0.38	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	16	1	rwr	13.0	0.872134775537049	0.31686090594396715	0.34	0.26	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	16	2	rwr	13.0	0.8947499400069324	0.2757992127659908	0.28	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	16	3	rwr	13.0	0.8842267115799953	0.35896812215468415	0.42	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	16	4	rwr	13.0	0.8747255872654714	0.25550896589030436	0.36	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	17	0	rwr	13.0	0.8891772506288163	0.37996446023411745	0.4	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	17	1	rwr	13.0	0.8831468363655754	0.32676765518687584	0.34	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	17	2	rwr	13.0	0.8692817718841379	0.2423894729375976	0.32	0.23	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	17	3	rwr	13.0	0.9015669300436393	0.2755771223054971	0.36	0.32	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	17	4	rwr	13.0	0.8696017349106324	0.3141024321795782	0.38	0.29	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	18	0	rwr	13.0	0.8778007874645597	0.32686787099319475	0.4	0.29	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	18	1	rwr	13.0	0.887612986943731	0.3855978557000981	0.46	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	18	2	rwr	13.0	0.8635624327855449	0.27641156430601777	0.36	0.25	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	18	3	rwr	13.0	0.8953143192342219	0.3361210857676198	0.4	0.34	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	18	4	rwr	13.0	0.8989983379698345	0.311715276167512	0.38	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	19	0	rwr	13.0	0.8653888883951187	0.32435379062604675	0.42	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	19	1	rwr	13.0	0.8630824882458026	0.3233155524686382	0.46	0.29	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	19	2	rwr	13.0	0.8994249553384942	0.31894622948468515	0.36	0.25	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	19	3	rwr	13.0	0.8995671611280474	0.304444344397884	0.3	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	19	4	rwr	13.0	0.8879818332103845	0.30535620467797864	0.3	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	20	0	rwr	13.0	0.9075840125141095	0.3730567415359478	0.34	0.3	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	20	1	rwr	13.0	0.8578742012034166	0.31113062107405365	0.38	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	20	2	rwr	13.0	0.9273506172620053	0.3986603532908432	0.42	0.35	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	20	3	rwr	13.0	0.8826091207238276	0.3506594264838346	0.4	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	20	4	rwr	13.0	0.8477064872503621	0.25746925328780473	0.36	0.27	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	21	0	rwr	13.0	0.8685129718343658	0.3396476324043528	0.46	0.33	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	21	1	rwr	13.0	0.9010780976420502	0.33755775373261754	0.36	0.29	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	21	2	rwr	13.0	0.9171295761378686	0.29077828736193023	0.26	0.25	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	21	3	rwr	13.0	0.9209602445939581	0.37882921286620996	0.4	0.37	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	21	4	rwr	13.0	0.8458578119861704	0.3307853595704403	0.4	0.26	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	22	0	rwr	13.0	0.8400229306835654	0.22548505415866563	0.32	0.22	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	22	1	rwr	13.0	0.8991183241047702	0.4508016960758283	0.52	0.36	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	22	2	rwr	13.0	0.8698150435949624	0.3148511228409356	0.3	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	22	3	rwr	13.0	0.8993360767200236	0.2761387813803062	0.28	0.3	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	22	4	rwr	13.0	0.9005270502075315	0.34233336574329326	0.38	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	23	0	rwr	13.0	0.8752366393216784	0.3926449126312278	0.42	0.31	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	23	1	rwr	13.0	0.9040644192226674	0.2976671556991453	0.34	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	23	2	rwr	13.0	0.859358474131878	0.29311632812362154	0.38	0.25	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	23	3	rwr	13.0	0.8954076417836161	0.3085982811995784	0.34	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	23	4	rwr	13.0	0.857936416236346	0.2904666532374433	0.3	0.24	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	24	0	rwr	13.0	0.9171295761378684	0.3348468278100469	0.38	0.32	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	24	1	rwr	13.0	0.8710149049443177	0.3347191902210371	0.42	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	24	2	rwr	13.0	0.8809159830419596	0.3689998771854464	0.42	0.3	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	24	3	rwr	13.0	0.886324246975905	0.2728093439774704	0.34	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	24	4	rwr	13.0	0.8800494165118697	0.3333661958487893	0.42	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	25	0	rwr	13.0	0.8648022895132119	0.22579034265993775	0.3	0.2	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	25	1	rwr	13.0	0.8877418609405135	0.4248347042284435	0.46	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	25	2	rwr	13.0	0.893861153822225	0.3159826823270388	0.38	0.3	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	25	3	rwr	13.0	0.8766631411481339	0.3018710988387719	0.34	0.27	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	25	4	rwr	13.0	0.9122856914312124	0.3381790123674565	0.4	0.31	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	26	0	rwr	13.0	0.8829735230595575	0.38428423418746194	0.42	0.32	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	26	1	rwr	13.0	0.8804049309857528	0.28417081438847136	0.38	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	26	2	rwr	13.0	0.8365966599415179	0.24454083605960425	0.32	0.24	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	26	3	rwr	13.0	0.8768497862469226	0.35833416120505424	0.4	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	26	4	rwr	13.0	0.8673797694488635	0.28569794422596423	0.32	0.26	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	27	0	rwr	13.0	0.8887417453983095	0.32979875765126715	0.38	0.32	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	27	1	rwr	13.0	0.8983761876405394	0.31626703112051113	0.4	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	27	2	rwr	13.0	0.8898527281291939	0.3396126339944458	0.46	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	27	3	rwr	13.0	0.8720281211948843	0.3106721525255477	0.4	0.26	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	27	4	rwr	13.0	0.8685929625909894	0.33334616907365966	0.38	0.28	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	28	0	rwr	13.0	0.909663772186325	0.29735648457727376	0.36	0.28	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	28	1	rwr	13.0	0.8688507105845548	0.27771579500368737	0.36	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	28	2	rwr	13.0	0.8501817567747728	0.29021322210979317	0.34	0.26	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	28	3	rwr	13.0	0.8850621705936204	0.32948105651872805	0.48	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	28	4	rwr	13.0	0.8788673308862087	0.3522314372278502	0.36	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	29	0	rwr	13.0	0.8861464897389636	0.2735105010721551	0.32	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	29	1	rwr	13.0	0.8420004799445397	0.2183495552801837	0.3	0.21	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	29	2	rwr	13.0	0.9217423764365007	0.4634081766215575	0.46	0.38	0.108	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	29	3	rwr	13.0	0.8707038297796699	0.3840010939620198	0.42	0.31	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	29	4	rwr	13.0	0.9058730991085475	0.3106234799096027	0.34	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	30	0	rwr	13.0	0.8803782674002116	0.20280315787842984	0.28	0.24	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	30	1	rwr	13.0	0.9011403126749797	0.36354394662797107	0.42	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	30	2	rwr	13.0	0.8853954654128856	0.2858202188662632	0.42	0.29	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	30	3	rwr	13.0	0.89846506625901	0.35919407513159246	0.42	0.31	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	30	4	rwr	13.0	0.8531547465626194	0.35588651142624156	0.4	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	31	0	rwr	13.0	0.8790895274323858	0.250561193092918	0.32	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	31	1	rwr	13.0	0.8836356687671647	0.3863953769196088	0.44	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	31	2	rwr	13.0	0.9121701492272004	0.37824557467411213	0.44	0.31	0.112	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	31	3	rwr	13.0	0.8747122554727009	0.3175239948582234	0.36	0.31	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	31	4	rwr	13.0	0.8933145503186297	0.27812666247479645	0.36	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	32	0	rwr	13.0	0.8446535067058918	0.2641690833279854	0.3	0.25	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	32	1	rwr	13.0	0.8893994471749931	0.32901619474042143	0.36	0.29	0.096	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	32	2	rwr	13.0	0.8709615777732351	0.33900952768743847	0.36	0.28	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	32	3	rwr	13.0	0.8918880484921742	0.32419618556909774	0.34	0.26	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	32	4	rwr	13.0	0.8768408983850755	0.23474418137908834	0.28	0.25	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	33	0	rwr	13.0	0.902464604090194	0.2879568837524909	0.28	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	33	1	rwr	13.0	0.8525192644405536	0.33363811997472276	0.38	0.26	0.092	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	33	2	rwr	13.0	0.8839956271719712	0.3422325987717427	0.42	0.32	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	33	3	rwr	13.0	0.8886084274706033	0.37043209788426346	0.4	0.26	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	33	4	rwr	13.0	0.883382364704523	0.31352604508750637	0.34	0.29	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	34	0	rwr	13.0	0.8908659443797605	0.36733626212739745	0.42	0.32	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	34	1	rwr	13.0	0.904522144107792	0.29138032412617104	0.4	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	34	2	rwr	13.0	0.8675797463404229	0.30342772469516893	0.36	0.29	0.094	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	34	3	rwr	13.0	0.8816225680588021	0.3493901492954423	0.36	0.27	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	34	4	rwr	13.0	0.8825424617599744	0.296005670312458	0.32	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	35	0	rwr	13.0	0.8935234150720361	0.4114754057606834	0.44	0.33	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	35	1	rwr	13.0	0.8813648200652369	0.3437866714749614	0.38	0.27	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	35	2	rwr	13.0	0.8916569640841503	0.32632899624476186	0.4	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	35	3	rwr	13.0	0.85628327393279	0.2559784221457669	0.34	0.27	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	35	4	rwr	13.0	0.8828402051318515	0.2913177965847296	0.4	0.28	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	36	0	rwr	13.0	0.8719881258165723	0.27683403737237844	0.32	0.24	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	36	1	rwr	13.0	0.8604250175535271	0.2645262517788031	0.34	0.28	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	36	2	rwr	13.0	0.8883506794770382	0.39028367000381314	0.44	0.32	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	36	3	rwr	13.0	0.888199585825638	0.32705903061567887	0.36	0.28	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	36	4	rwr	13.0	0.8970074569160897	0.28322292372247154	0.36	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	37	0	rwr	13.0	0.8457156061966173	0.2594213956110428	0.28	0.2	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	37	1	rwr	13.0	0.8925635259925521	0.37426467220459203	0.4	0.31	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	37	2	rwr	13.0	0.9133966741620967	0.41209029813602954	0.5	0.35	0.11	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	37	3	rwr	13.0	0.8632602454827443	0.2819645485158292	0.3	0.26	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	37	4	rwr	13.0	0.8832223831912757	0.293619656183704	0.36	0.3	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	38	0	rwr	13.0	0.8697883800094213	0.3343606780776586	0.36	0.33	0.098	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	38	1	rwr	13.0	0.8823602605921093	0.35934250584948096	0.38	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	38	2	rwr	13.0	0.8951143423426626	0.32804408498171855	0.46	0.3	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	38	3	rwr	13.0	0.9021401971327758	0.357442130325945	0.4	0.33	0.106	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	38	4	rwr	13.0	0.8910525894785492	0.2585426419671049	0.32	0.26	0.104	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	39	0	rwr	13.0	0.8617581968305885	0.36154814117540335	0.44	0.29	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	39	1	rwr	13.0	0.8773119550629705	0.3609792746217803	0.42	0.3	0.1	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	39	2	rwr	13.0	0.9129745007243607	0.26392830918255245	0.34	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	39	3	rwr	13.0	0.8843955809550896	0.30592172380783267	0.38	0.27	0.102	59	1966
+string_phys700	ot_all_pubcount_adjusted	native_string_phys700	0.7	39	4	rwr	13.0	0.8902082426030771	0.3278035179187518	0.36	0.27	0.102	59	1966

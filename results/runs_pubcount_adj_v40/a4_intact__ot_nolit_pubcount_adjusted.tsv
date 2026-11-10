@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+intact	ot_nolit_pubcount_adjusted	native_intact		0	0	degree		0.7436932463110102	0.06806371155166331	0.12	0.12	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		0	1	degree		0.7525113507377978	0.05446152783290417	0.08	0.06	0.058	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		0	2	degree		0.77597190692395	0.084684219342189	0.1	0.11	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		0	3	degree		0.6959853979491718	0.053993975539648104	0.12	0.11	0.056	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		0	4	degree		0.8050974548207019	0.07276691613050976	0.1	0.1	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		1	0	degree		0.7294811766931516	0.061125929243899924	0.08	0.07	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		1	1	degree		0.7427993757094211	0.06228983197002176	0.12	0.11	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		1	2	degree		0.77696273174423	0.09783241346095749	0.18	0.13	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		1	3	degree		0.7317642701860366	0.04723338932621872	0.1	0.08	0.054	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		1	4	degree		0.7935850127732046	0.06961212959009824	0.06	0.1	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		2	0	degree		0.6973373060915626	0.051742688279688795	0.08	0.09	0.054	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		2	1	degree		0.7624858115777526	0.08874118781870795	0.14	0.13	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		2	2	degree		0.7751678963299282	0.06799248208030362	0.08	0.1	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		2	3	degree		0.7454645145154774	0.06393680984360539	0.12	0.11	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		2	4	degree		0.7941432491247988	0.060451276979230355	0.1	0.08	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		3	0	degree		0.8429649073023079	0.10061279618790239	0.14	0.12	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		3	1	degree		0.7246783957623912	0.05425545533910562	0.08	0.08	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		3	2	degree		0.6860456867196368	0.03740270601567366	0.06	0.05	0.044	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		3	3	degree		0.7540857846437985	0.08578578367535994	0.16	0.13	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		3	4	degree		0.7665507616614629	0.06639839304094525	0.08	0.11	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		4	0	degree		0.7080282822550132	0.047629909828274176	0.04	0.06	0.052	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		4	1	degree		0.7921136019674611	0.08832200009170194	0.1	0.08	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		4	2	degree		0.7659359629209231	0.09544241984777249	0.22	0.17	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		4	3	degree		0.7430236249254507	0.05789801559949278	0.1	0.1	0.06	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		4	4	degree		0.7656637335604125	0.05756506427167367	0.08	0.11	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		5	0	degree		0.7134388006053727	0.05163758373500497	0.08	0.04	0.05	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		5	1	degree		0.771114737041241	0.06971348666200447	0.08	0.1	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		5	2	degree		0.7597923760877789	0.07705156828200461	0.12	0.12	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		5	3	degree		0.7418765270590046	0.06647556838904739	0.1	0.1	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		5	4	degree		0.7888423691929227	0.07934147035127893	0.12	0.13	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		6	0	degree		0.7396566401816117	0.05634445592380978	0.06	0.08	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		6	1	degree		0.7555334846765039	0.06095573757330246	0.1	0.07	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		6	2	degree		0.7567253121452894	0.06496726428163883	0.1	0.09	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		6	3	degree		0.7508128282575655	0.07986039578854554	0.14	0.12	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		6	4	degree		0.771709717097171	0.07499646276016526	0.14	0.14	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		7	0	degree		0.7483304956488839	0.0607729998165011	0.1	0.09	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		7	1	degree		0.7681730041619371	0.05920780876176562	0.06	0.09	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		7	2	degree		0.7647937949300038	0.09562285514573474	0.18	0.13	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		7	3	degree		0.7251389984416784	0.04884982989057987	0.08	0.08	0.056	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		7	4	degree		0.7681899895922036	0.07360561614816563	0.1	0.11	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		8	0	degree		0.7899356791524783	0.07771688441404102	0.12	0.11	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		8	1	degree		0.7724862845251608	0.06064883596501835	0.1	0.09	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		8	2	degree		0.7344873250094589	0.08106292457333959	0.12	0.12	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		8	3	degree		0.7618846072452337	0.07028111159501868	0.08	0.1	0.066	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		8	4	degree		0.7152568833380641	0.04909257017924985	0.08	0.07	0.054	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		9	0	degree		0.7972072455542945	0.07402095877173143	0.06	0.1	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		9	1	degree		0.7167399735149451	0.06645586374536719	0.12	0.1	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		9	2	degree		0.7612774309496783	0.05845682353415127	0.1	0.1	0.058	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		9	3	degree		0.7939239885338311	0.08139508866007683	0.16	0.11	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		9	4	degree		0.7069259154130002	0.05280647182541026	0.08	0.07	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		10	0	degree		0.723292659856224	0.06094472052552559	0.1	0.08	0.054	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		10	1	degree		0.7048997351494515	0.057332399062273734	0.1	0.1	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		10	2	degree		0.7746807604994325	0.09306530350931963	0.12	0.1	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		10	3	degree		0.7997195982993133	0.06495333269819768	0.08	0.09	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		10	4	degree		0.7727552275522755	0.06822001178701231	0.12	0.12	0.064	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		11	0	degree		0.7551503972758229	0.07737014772131129	0.14	0.12	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		11	1	degree		0.8117101778282255	0.08994180950318181	0.12	0.12	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		11	2	degree		0.6769107075293226	0.043195612830982937	0.08	0.09	0.05	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		11	3	degree		0.7713283249004406	0.06502430050051697	0.1	0.09	0.058	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		11	4	degree		0.7607531459929984	0.06852847363222882	0.1	0.1	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		12	0	degree		0.7205448354143018	0.04820655419574608	0.04	0.06	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		12	1	degree		0.7916926787741201	0.06267058656044848	0.08	0.07	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		12	2	degree		0.7548500756715855	0.0596386265635762	0.08	0.1	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		12	3	degree		0.7472969853209951	0.07257222803964217	0.1	0.11	0.054	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		12	4	degree		0.7611907465228499	0.09755688471708064	0.18	0.17	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		13	0	degree		0.7135144721906923	0.0498931513472788	0.06	0.08	0.054	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		13	1	degree		0.7570989405978055	0.07156478872642996	0.14	0.13	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		13	2	degree		0.8087140559969731	0.10329608240931021	0.2	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		13	3	degree		0.7219069239500568	0.05824220769525083	0.08	0.07	0.058	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		13	4	degree		0.7742880121108903	0.06237077450599471	0.06	0.09	0.064	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		14	0	degree		0.7497375141884223	0.07659212131498624	0.12	0.14	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		14	1	degree		0.7050581725312146	0.05284546475403214	0.08	0.06	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		14	2	degree		0.8275586454786228	0.11155544877909107	0.18	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		14	3	degree		0.790617364704977	0.0564600765175307	0.06	0.07	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		14	4	degree		0.7026965654271927	0.04897754989362458	0.08	0.08	0.048	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		15	0	degree		0.7460461596670451	0.060464619884758146	0.1	0.08	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		15	1	degree		0.727097521755581	0.05042230979150317	0.08	0.06	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		15	2	degree		0.7834184638668179	0.08349790189082662	0.1	0.09	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		15	3	degree		0.7238019200061564	0.05428044800122764	0.06	0.1	0.054	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		15	4	degree		0.7936985523701391	0.08659864221747779	0.18	0.15	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		16	0	degree		0.8207576617480135	0.07729201243422368	0.04	0.09	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		16	1	degree		0.7131219258418463	0.042875503225704076	0.06	0.07	0.052	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		16	2	degree		0.771083995459705	0.09140210807574645	0.14	0.13	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		16	3	degree		0.7390364377921854	0.06471085766831523	0.14	0.11	0.062	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		16	4	degree		0.7309442709811713	0.06548442181796163	0.14	0.1	0.062	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		17	0	degree		0.6978315361331819	0.05341675709327144	0.1	0.08	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		17	1	degree		0.7364193151721528	0.0584486793752607	0.06	0.11	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		17	2	degree		0.7715427544457057	0.08193489591939938	0.14	0.13	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		17	3	degree		0.7811616229631198	0.08191905803433647	0.14	0.1	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		17	4	degree		0.7868790803292647	0.06077838835817766	0.1	0.1	0.062	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		18	0	degree		0.7265252553916005	0.05922816703905085	0.1	0.08	0.052	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		18	1	degree		0.7405646992054483	0.05866012871886092	0.1	0.09	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		18	2	degree		0.7114027620128641	0.06187711681042281	0.12	0.09	0.05	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		18	3	degree		0.8062150099078473	0.09474529283832414	0.14	0.15	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		18	4	degree		0.7907110417258019	0.06434727689425175	0.06	0.07	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		19	0	degree		0.7265749148694665	0.06057955544299518	0.08	0.1	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		19	1	degree		0.7358825198637912	0.060904567899137965	0.16	0.09	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		19	2	degree		0.7783579265985623	0.06261048111759103	0.1	0.11	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		19	3	degree		0.7584721714538564	0.08481649944426303	0.14	0.11	0.066	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		19	4	degree		0.7751040779638565	0.066878442331552	0.08	0.08	0.064	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		20	0	degree		0.759272133938706	0.09102643796932007	0.18	0.17	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		20	1	degree		0.7480112561483164	0.05402244896273231	0.08	0.08	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		20	2	degree		0.7741818009837307	0.058811648163840935	0.06	0.06	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		20	3	degree		0.7876233671290328	0.0649792902500374	0.06	0.07	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		20	4	degree		0.7066373356041252	0.06909900294354722	0.16	0.11	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		21	0	degree		0.7427568104426787	0.05752483612011124	0.1	0.11	0.058	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		21	1	degree		0.781848278471434	0.07743192712390012	0.12	0.12	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		21	2	degree		0.8038166855845631	0.09348406106017179	0.14	0.13	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		21	3	degree		0.7531887877796803	0.05589217300593821	0.06	0.06	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		21	4	degree		0.695079950799508	0.0545930290345439	0.1	0.08	0.044	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		22	0	degree		0.7165839008702233	0.04669389327671329	0.06	0.07	0.05	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		22	1	degree		0.778904180855089	0.07138110158451516	0.12	0.08	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		22	2	degree		0.7500827657964434	0.0677241388695492	0.08	0.1	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		22	3	degree		0.7689860328209469	0.07115004392528235	0.12	0.1	0.066	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		22	4	degree		0.7618696186961869	0.07590866135377687	0.14	0.14	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		23	0	degree		0.7201641127506622	0.07164815265614025	0.16	0.12	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		23	1	degree		0.75823164964056	0.06317407169056721	0.08	0.08	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		23	2	degree		0.7476518161180477	0.05483300890434577	0.06	0.06	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		23	3	degree		0.7518300659881875	0.06304253517274677	0.1	0.09	0.06	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		23	4	degree		0.7971473176270224	0.07823347242256366	0.16	0.13	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		24	0	degree		0.720251608021188	0.049039324437973666	0.06	0.08	0.052	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		24	1	degree		0.7748652099886492	0.08401561632875579	0.12	0.11	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		24	2	degree		0.7783200908059023	0.08095166072898059	0.12	0.11	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		24	3	degree		0.7768233324996634	0.06139094757022465	0.1	0.08	0.062	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		24	4	degree		0.7261188381114579	0.05994876966956493	0.12	0.12	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		25	0	degree		0.7417234203556563	0.07049413645121769	0.14	0.11	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		25	1	degree		0.7629682179341657	0.05553828176485281	0.08	0.07	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		25	2	degree		0.7668321982595535	0.059170493912575055	0.08	0.1	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		25	3	degree		0.7159886685007406	0.058609765900429475	0.1	0.1	0.054	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		25	4	degree		0.7873308733087332	0.09212312053352656	0.12	0.12	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		26	0	degree		0.733153613318199	0.06286303485252435	0.08	0.09	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		26	1	degree		0.786920639424896	0.079132909056072	0.14	0.1	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		26	2	degree		0.7222710934544078	0.0575910989454296	0.08	0.09	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		26	3	degree		0.7728770272610094	0.05499158539250269	0.04	0.08	0.056	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		26	4	degree		0.7581251774056201	0.08991886966913121	0.18	0.15	0.062	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		27	0	degree		0.7583404275444571	0.0712554569130123	0.14	0.11	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		27	1	degree		0.7303206583427924	0.06006428843552829	0.12	0.1	0.054	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		27	2	degree		0.7777785660234582	0.079865336575825	0.14	0.11	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		27	3	degree		0.7727928586544567	0.06237550345130233	0.12	0.1	0.06	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		27	4	degree		0.7363184785694011	0.06037575402991449	0.08	0.07	0.054	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		28	0	degree		0.7408366439651911	0.07914530479868284	0.12	0.13	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		28	1	degree		0.7412764850548619	0.05399911065145322	0.06	0.05	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		28	2	degree		0.7881006432084752	0.0835532111872552	0.14	0.15	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		28	3	degree		0.7787519959983839	0.0768356804671536	0.14	0.1	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		28	4	degree		0.7257048916643012	0.0512301056011121	0.08	0.08	0.058	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		29	0	degree		0.701579644343549	0.049814208863123315	0.04	0.08	0.052	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		29	1	degree		0.7668723987892546	0.07028829582340014	0.12	0.12	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		29	2	degree		0.788422247446084	0.07737238960550094	0.1	0.11	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		29	3	degree		0.773249773947171	0.0749471748635622	0.12	0.11	0.066	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		29	4	degree		0.744457848424638	0.05851042387107626	0.12	0.08	0.056	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		30	0	degree		0.784094778660613	0.07859370866707047	0.12	0.12	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		30	1	degree		0.709674139235717	0.05711710130472441	0.08	0.05	0.058	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		30	2	degree		0.7475288497919033	0.08369847689961343	0.14	0.14	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		30	3	degree		0.767713884453337	0.06717973409836733	0.08	0.1	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		30	4	degree		0.7664182987983728	0.05436617009598915	0.1	0.07	0.058	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		31	0	degree		0.7482973893303065	0.071754913602226	0.14	0.12	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		31	1	degree		0.7668818577374195	0.07556058887166624	0.14	0.11	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		31	2	degree		0.7445303632236094	0.068119445307283	0.12	0.09	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		31	3	degree		0.7262331903268628	0.0585576008260859	0.08	0.07	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		31	4	degree		0.7866543665436656	0.06258231805626824	0.06	0.12	0.062	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		32	0	degree		0.7753145100264851	0.07144909242758868	0.14	0.12	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		32	1	degree		0.7660471055618616	0.08460351824757706	0.14	0.1	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		32	2	degree		0.8147465001891789	0.08464542529963087	0.08	0.14	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		32	3	degree		0.7180159295099945	0.046345652595813455	0.04	0.08	0.044	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		32	4	degree		0.7015540732330401	0.05494395607354138	0.1	0.09	0.058	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		33	0	degree		0.7586360196746122	0.061571713791101185	0.1	0.1	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		33	1	degree		0.7757969163828983	0.0907554567968783	0.14	0.13	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		33	2	degree		0.7560135262958759	0.04851512239984346	0.04	0.06	0.054	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		33	3	degree		0.7135237307374133	0.05886854708866955	0.12	0.1	0.058	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		33	4	degree		0.7696281578200398	0.08737369249351655	0.16	0.12	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		34	0	degree		0.7740209988649261	0.05522735979736982	0.06	0.07	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		34	1	degree		0.7338772228528188	0.07767134809033906	0.16	0.14	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		34	2	degree		0.7270194854332198	0.05278925387243903	0.08	0.07	0.054	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		34	3	degree		0.7914879085784644	0.08035217576663861	0.14	0.11	0.066	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		34	4	degree		0.7471875295676034	0.06763894989176274	0.1	0.1	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		35	0	degree		0.7483470488081726	0.06908088091419624	0.1	0.13	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		35	1	degree		0.7497091373439273	0.057544511361486826	0.1	0.07	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		35	2	degree		0.7544906356413167	0.07077973275226071	0.12	0.11	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		35	3	degree		0.7412801323611458	0.05663219445315128	0.08	0.07	0.062	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		35	4	degree		0.7811618885419623	0.07887859389570617	0.14	0.13	0.064	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		36	0	degree		0.8081370601589103	0.07934032573054989	0.14	0.13	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		36	1	degree		0.7407798902762014	0.06313627652006507	0.08	0.11	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		36	2	degree		0.7845559023836549	0.08235629097681245	0.16	0.12	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		36	3	degree		0.7776433752092192	0.07445081020662651	0.14	0.11	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		36	4	degree		0.6632864982495977	0.03808204495918484	0.06	0.05	0.048	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		37	0	degree		0.80099082482028	0.10694855062839076	0.16	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		37	1	degree		0.7569972569050321	0.05269022509877791	0.06	0.05	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		37	2	degree		0.7767120696178585	0.06434836939559285	0.08	0.11	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		37	3	degree		0.7467294484310971	0.062260303916311294	0.1	0.09	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		37	4	degree		0.69373876431072	0.0517176646008259	0.1	0.1	0.056	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		38	0	degree		0.7461123723041998	0.06882908464109078	0.1	0.1	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		38	1	degree		0.7667565266742338	0.06455698447616301	0.1	0.11	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		38	2	degree		0.6983730609156262	0.04776843157506197	0.04	0.11	0.048	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		38	3	degree		0.7796778506704631	0.08926322196791879	0.2	0.12	0.066	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		38	4	degree		0.7836479326331726	0.06643651418504114	0.1	0.07	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		39	0	degree		0.7217248391978812	0.051360696472203586	0.04	0.07	0.056	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		39	1	degree		0.8066638289822171	0.08456112934303964	0.14	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		39	2	degree		0.7713677639046538	0.05342911482637602	0.02	0.07	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact		39	3	degree		0.7317257931087554	0.09806358630567177	0.22	0.14	0.062	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact		39	4	degree		0.7430598921373829	0.06029024408087588	0.1	0.09	0.06	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	0	0	rwr	24.0	0.8053490351872872	0.12653664874630585	0.18	0.2	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	0	1	rwr	24.0	0.8121216420734014	0.10204539102757093	0.18	0.13	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	0	2	rwr	24.0	0.8368567915247825	0.13922272727806065	0.22	0.15	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	0	3	rwr	24.0	0.771503876565536	0.10010770180282971	0.18	0.17	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	0	4	rwr	24.0	0.8640434288958274	0.13454092389151195	0.2	0.16	0.09	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	1	0	rwr	24.0	0.79605561861521	0.11617566035579036	0.2	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	1	1	rwr	24.0	0.8073070374574348	0.11728175358344713	0.22	0.19	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	1	2	rwr	24.0	0.8316496405599697	0.1532732825684869	0.2	0.19	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	1	3	rwr	24.0	0.7979520575617076	0.08535531709849062	0.12	0.12	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	1	4	rwr	24.0	0.8558189043428897	0.1561249468432409	0.18	0.18	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	2	0	rwr	24.0	0.7570185395384033	0.10621027361836545	0.2	0.15	0.058	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	2	1	rwr	24.0	0.8159572455542943	0.13456872169819	0.2	0.18	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	2	2	rwr	24.0	0.8269485433219826	0.14685129957549115	0.26	0.21	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	2	3	rwr	24.0	0.8196002231670482	0.1281485579518088	0.2	0.18	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	2	4	rwr	24.0	0.8553079761566846	0.09848220065232689	0.12	0.12	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	3	0	rwr	24.0	0.8986331819901626	0.19783472812318073	0.2	0.22	0.096	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	3	1	rwr	24.0	0.7855987514188422	0.08810444752873287	0.14	0.11	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	3	2	rwr	24.0	0.757143870601589	0.07710978111290984	0.18	0.12	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	3	3	rwr	24.0	0.8360587929740858	0.1930160659918803	0.3	0.2	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	3	4	rwr	24.0	0.8194720408742548	0.10607873861232824	0.14	0.17	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	4	0	rwr	24.0	0.7764850548618994	0.08475179396787053	0.1	0.11	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	4	1	rwr	24.0	0.8495034052213394	0.15122593699280412	0.16	0.17	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	4	2	rwr	24.0	0.8317631479379493	0.1655315539897986	0.32	0.24	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	4	3	rwr	24.0	0.8353036803324418	0.12110435065177803	0.14	0.17	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	4	4	rwr	24.0	0.8114674992903775	0.09040730414829232	0.16	0.14	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	5	0	rwr	24.0	0.7866108588724935	0.08793396227523026	0.08	0.11	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	5	1	rwr	24.0	0.8334894059780552	0.1037975607965448	0.14	0.14	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	5	2	rwr	24.0	0.8178443057132048	0.15079523289390143	0.22	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	5	3	rwr	24.0	0.803944862348256	0.14323286681051117	0.16	0.17	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	5	4	rwr	24.0	0.8401504399659381	0.1526883273773335	0.24	0.24	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	6	0	rwr	24.0	0.8116486946651531	0.09469153259702033	0.16	0.13	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	6	1	rwr	24.0	0.823264283011729	0.11302975879157066	0.16	0.14	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	6	2	rwr	24.0	0.835371736662883	0.1441980945705383	0.24	0.16	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	6	3	rwr	24.0	0.8024418515169588	0.14372602742205565	0.3	0.2	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	6	4	rwr	24.0	0.8369571388021572	0.12492690966100825	0.12	0.19	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	7	0	rwr	24.0	0.8156167234203557	0.10222016177448215	0.24	0.16	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	7	1	rwr	24.0	0.8327941732879303	0.09803881680494354	0.14	0.13	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	7	2	rwr	24.0	0.8051125614831631	0.18429810906500355	0.24	0.19	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	7	3	rwr	24.0	0.7947440312433868	0.10109492836393497	0.14	0.12	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	7	4	rwr	24.0	0.8265209575172675	0.148044472735552	0.24	0.19	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	8	0	rwr	24.0	0.8381195611048051	0.1507073286937767	0.22	0.23	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	8	1	rwr	24.0	0.8411227771471811	0.09283770780791327	0.16	0.1	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	8	2	rwr	24.0	0.8039822171774499	0.1602503757166403	0.22	0.18	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	8	3	rwr	24.0	0.8123376748302199	0.12611764830516772	0.16	0.17	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	8	4	rwr	24.0	0.7731289620588514	0.09147818915550437	0.18	0.14	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	9	0	rwr	24.0	0.8316307226636398	0.11778466460723586	0.2	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	9	1	rwr	24.0	0.7809733257661748	0.12547944798523117	0.22	0.19	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	9	2	rwr	24.0	0.8429388951948542	0.13302732443300097	0.14	0.17	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	9	3	rwr	24.0	0.8626127859327806	0.12968728408399374	0.2	0.18	0.084	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	9	4	rwr	24.0	0.7730343457280728	0.1018531038259543	0.16	0.13	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	10	0	rwr	24.0	0.8048666288308741	0.11425107419791707	0.2	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	10	1	rwr	24.0	0.774489216799092	0.09409036402437228	0.18	0.15	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	10	2	rwr	24.0	0.8341751797200152	0.16694669810510132	0.24	0.21	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	10	3	rwr	24.0	0.8576107658862233	0.11788034431848206	0.18	0.16	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	10	4	rwr	24.0	0.8176790614059987	0.10870949331916964	0.16	0.16	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	11	0	rwr	24.0	0.8117480136208854	0.13621205183764118	0.24	0.16	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	11	1	rwr	24.0	0.8512249337873629	0.1453738875495049	0.22	0.19	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	11	2	rwr	24.0	0.7405505107832009	0.0809058595403211	0.14	0.16	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	11	3	rwr	24.0	0.8214182650685854	0.11586337607235285	0.18	0.15	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	11	4	rwr	24.0	0.8252625603179109	0.12133048680485922	0.14	0.14	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	12	0	rwr	24.0	0.7908011729095725	0.07401934914075393	0.08	0.11	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	12	1	rwr	24.0	0.845133371169126	0.11778706179764242	0.14	0.17	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	12	2	rwr	24.0	0.7991297767688232	0.12590178341192743	0.22	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	12	3	rwr	24.0	0.8244387156351604	0.1421291948697614	0.18	0.19	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	12	4	rwr	24.0	0.8180953732614249	0.16233970674300138	0.28	0.19	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	13	0	rwr	24.0	0.7968832765796443	0.09775516536531655	0.14	0.16	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	13	1	rwr	24.0	0.8331536133181989	0.13485108694243986	0.24	0.19	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	13	2	rwr	24.0	0.8487088535754825	0.15232857057699972	0.22	0.21	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	13	3	rwr	24.0	0.7697098828372997	0.11758580476241995	0.16	0.14	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	13	4	rwr	24.0	0.8493944554830165	0.10180584722588987	0.16	0.12	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	14	0	rwr	24.0	0.8042328793038215	0.1316920599673649	0.26	0.19	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	14	1	rwr	24.0	0.7563043889519485	0.07976212497493408	0.12	0.13	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	14	2	rwr	24.0	0.8706583427922815	0.1881097844901153	0.3	0.19	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	14	3	rwr	24.0	0.8418784509128687	0.104396065054084	0.18	0.12	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	14	4	rwr	24.0	0.7807928848519254	0.1047501701029034	0.1	0.13	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	15	0	rwr	24.0	0.8152856602345818	0.10794636206426227	0.16	0.15	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	15	1	rwr	24.0	0.8033011729095725	0.1137877935866434	0.12	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	15	2	rwr	24.0	0.8349271660991298	0.143334941066552	0.16	0.15	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	15	3	rwr	24.0	0.7845548202158563	0.08698096584902464	0.12	0.14	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	15	4	rwr	24.0	0.8468398145519916	0.15253205853759855	0.28	0.23	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	16	0	rwr	24.0	0.869357737419599	0.1369896806694101	0.18	0.17	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	16	1	rwr	24.0	0.7974886492622021	0.08105993959057903	0.16	0.13	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	16	2	rwr	24.0	0.850676314793795	0.15353394674045495	0.24	0.2	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	16	3	rwr	24.0	0.7915119567517651	0.1323965341005281	0.18	0.18	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	16	4	rwr	24.0	0.7852635064812186	0.11986522826840815	0.2	0.18	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	17	0	rwr	24.0	0.7756597616345063	0.08879611152334183	0.18	0.12	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	17	1	rwr	24.0	0.7852298524404087	0.12187637280008949	0.2	0.18	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	17	2	rwr	24.0	0.8298760877790389	0.15162379109138036	0.2	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	17	3	rwr	24.0	0.8459137343927354	0.14458904367651373	0.22	0.16	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	17	4	rwr	24.0	0.8302914182987984	0.10810160202622897	0.12	0.2	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	18	0	rwr	24.0	0.8040720771850169	0.14006853904104863	0.18	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	18	1	rwr	24.0	0.7784525160802118	0.09490450492680821	0.16	0.15	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	18	2	rwr	24.0	0.7962353386303443	0.11549062936584942	0.18	0.13	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	18	3	rwr	24.0	0.8625021643355971	0.1605328450308033	0.2	0.19	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	18	4	rwr	24.0	0.8439090737061217	0.11280303109475794	0.14	0.15	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	19	0	rwr	24.0	0.8006408437381761	0.11993588356856452	0.22	0.2	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	19	1	rwr	24.0	0.8127459326522891	0.12086565754749022	0.18	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	19	2	rwr	24.0	0.8391363980325387	0.09819079900710823	0.12	0.13	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	19	3	rwr	24.0	0.8136362761884607	0.16644278155662953	0.26	0.18	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	19	4	rwr	24.0	0.8185022234837733	0.11577174348423204	0.14	0.16	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	20	0	rwr	24.0	0.8079455164585698	0.16218932338326997	0.34	0.22	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	20	1	rwr	24.0	0.8116226825576996	0.10537038638567528	0.16	0.15	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	20	2	rwr	24.0	0.8307415815361332	0.10425063585312333	0.14	0.12	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	20	3	rwr	24.0	0.8569470363031224	0.11774859462541987	0.14	0.16	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	20	4	rwr	24.0	0.7719841044564292	0.1239604739440119	0.2	0.15	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	21	0	rwr	24.0	0.8164018161180477	0.10969879076253532	0.18	0.11	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	21	1	rwr	24.0	0.8396093454407869	0.15808068586552143	0.2	0.24	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	21	2	rwr	24.0	0.8607950245932653	0.16027413483081066	0.2	0.22	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	21	3	rwr	24.0	0.7955712884049327	0.10358356826027618	0.12	0.13	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	21	4	rwr	24.0	0.7887501182704135	0.10409005397621411	0.18	0.14	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	22	0	rwr	24.0	0.806015891032917	0.08370908355079588	0.1	0.11	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	22	1	rwr	24.0	0.8330874006810441	0.1293674618575486	0.22	0.16	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	22	2	rwr	24.0	0.8150775633749527	0.11400710519090403	0.18	0.15	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	22	3	rwr	24.0	0.8076049943246311	0.12682237994970888	0.2	0.17	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	22	4	rwr	24.0	0.8183271832718327	0.15283369356121798	0.24	0.21	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	23	0	rwr	24.0	0.7890370790768066	0.13109371097716394	0.2	0.19	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	23	1	rwr	24.0	0.8145667801740446	0.09219958751173148	0.12	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	23	2	rwr	24.0	0.8248060915626183	0.10917235329261449	0.18	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	23	3	rwr	24.0	0.7988322207045152	0.10473330510805731	0.18	0.16	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	23	4	rwr	24.0	0.8548822026681806	0.18553963127040263	0.26	0.2	0.088	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	24	0	rwr	24.0	0.7946415058645478	0.10145412610607805	0.18	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	24	1	rwr	24.0	0.8453603859250851	0.12885047050426715	0.2	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	24	2	rwr	24.0	0.826078320090806	0.1613278786373784	0.24	0.22	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	24	3	rwr	24.0	0.828498047288328	0.10406834200150529	0.12	0.14	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	24	4	rwr	24.0	0.7847596745198221	0.11189941398730438	0.22	0.17	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	25	0	rwr	24.0	0.7873486568293606	0.13073463465264656	0.26	0.17	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	25	1	rwr	24.0	0.830131479379493	0.10014590031354666	0.12	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	25	2	rwr	24.0	0.8294930003783578	0.1112472855042404	0.14	0.13	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	25	3	rwr	24.0	0.7878470151407299	0.09827170929072072	0.14	0.16	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	25	4	rwr	24.0	0.8288485192544234	0.18280123772074447	0.22	0.19	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	26	0	rwr	24.0	0.7706914491108589	0.10672410435814257	0.16	0.16	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	26	1	rwr	24.0	0.8436625047294741	0.13239692887599389	0.16	0.17	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	26	2	rwr	24.0	0.7969778660612941	0.09328448665372499	0.16	0.13	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	26	3	rwr	24.0	0.8314752111429616	0.10849992516268829	0.12	0.13	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	26	4	rwr	24.0	0.8122480840193017	0.1616093240584577	0.26	0.22	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	27	0	rwr	24.0	0.8441118047673098	0.11873928841422116	0.18	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	27	1	rwr	24.0	0.7940597805524027	0.12389676880550182	0.2	0.16	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	27	2	rwr	24.0	0.8141695043511162	0.15033464911364233	0.28	0.21	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	27	3	rwr	24.0	0.8386992824025087	0.1002356279575557	0.18	0.13	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	27	4	rwr	24.0	0.7971851641593339	0.11493981778597671	0.12	0.13	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	28	0	rwr	24.0	0.8075127695800227	0.14330857722661525	0.22	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	28	1	rwr	24.0	0.8096481271282633	0.09357236661685546	0.12	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	28	2	rwr	24.0	0.8370506999621642	0.1383176535140365	0.22	0.21	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	28	3	rwr	24.0	0.8377421651051385	0.16199289087181046	0.24	0.17	0.084	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	28	4	rwr	24.0	0.7878654555776328	0.09043513937658106	0.16	0.15	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	29	0	rwr	24.0	0.786695989405978	0.08489378410685379	0.14	0.14	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	29	1	rwr	24.0	0.8209515701853954	0.12977193344778168	0.22	0.21	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	29	2	rwr	24.0	0.8524404086265606	0.14284008037582244	0.24	0.18	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	29	3	rwr	24.0	0.818128474961042	0.13087032482487876	0.16	0.19	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	29	4	rwr	24.0	0.8067461443845207	0.14139524718923138	0.2	0.15	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	30	0	rwr	24.0	0.8361804767309876	0.17311453524407688	0.24	0.22	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	30	1	rwr	24.0	0.7895620506999622	0.1077638330093912	0.14	0.14	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	30	2	rwr	24.0	0.8183030646992054	0.1578062021392016	0.28	0.19	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	30	3	rwr	24.0	0.8141605263664173	0.09075910249576523	0.12	0.13	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	30	4	rwr	24.0	0.8338773772353107	0.11881661651504495	0.16	0.14	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	31	0	rwr	24.0	0.798046727203935	0.10733894631114659	0.2	0.17	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	31	1	rwr	24.0	0.8480136208853575	0.13884751526071387	0.22	0.18	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	31	2	rwr	24.0	0.8025964812712827	0.1616047109090083	0.24	0.16	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	31	3	rwr	24.0	0.7876353912156833	0.09985374641330827	0.12	0.12	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	31	4	rwr	24.0	0.845373261424922	0.1331948554876271	0.2	0.18	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	32	0	rwr	24.0	0.8423287930382141	0.13930119060123602	0.22	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	32	1	rwr	24.0	0.8233777903897087	0.1525283550992309	0.24	0.17	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	32	2	rwr	24.0	0.8640607264472191	0.155794769768538	0.18	0.22	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	32	3	rwr	24.0	0.8123713422728409	0.08387523722065504	0.12	0.13	0.064	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	32	4	rwr	24.0	0.7523228309206169	0.09852024696241334	0.16	0.15	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	33	0	rwr	24.0	0.8124905410518349	0.11614243577584706	0.16	0.15	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	33	1	rwr	24.0	0.8228291713961408	0.16339239154206617	0.22	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	33	2	rwr	24.0	0.8315030268634128	0.09893084181320458	0.16	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	33	3	rwr	24.0	0.7892418091921738	0.11036494565768121	0.14	0.13	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	33	4	rwr	24.0	0.82402308638471	0.165831293471238	0.24	0.17	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	34	0	rwr	24.0	0.8418038214150587	0.12133210106021876	0.16	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	34	1	rwr	24.0	0.7730561861520999	0.12299074853727175	0.2	0.18	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	34	2	rwr	24.0	0.8114595157018539	0.09599862755333224	0.16	0.13	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	34	3	rwr	24.0	0.8569326073991419	0.12180819060433465	0.18	0.17	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	34	4	rwr	24.0	0.8116661935850127	0.15420577194579324	0.18	0.17	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	35	0	rwr	24.0	0.8087069617858493	0.11064413355996762	0.2	0.16	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	35	1	rwr	24.0	0.8284903518728718	0.12022116839910142	0.22	0.15	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	35	2	rwr	24.0	0.825912788497919	0.14068472023712342	0.2	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	35	3	rwr	24.0	0.8049115989149463	0.1046921160686195	0.14	0.11	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	35	4	rwr	24.0	0.8159097360204371	0.13147717811879095	0.18	0.21	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	36	0	rwr	24.0	0.8642215285660234	0.14954446506882751	0.28	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	36	1	rwr	24.0	0.8008607642830118	0.12434899724915187	0.22	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	36	2	rwr	24.0	0.8437097994702989	0.1562046934313889	0.14	0.15	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	36	3	rwr	24.0	0.8295369283749205	0.11902848696231716	0.16	0.17	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	36	4	rwr	24.0	0.7424235973128961	0.08133565174151745	0.12	0.12	0.062	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	37	0	rwr	24.0	0.8378736284525161	0.17492924890748549	0.22	0.21	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	37	1	rwr	24.0	0.8237088535754824	0.09114753229476981	0.12	0.14	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	37	2	rwr	24.0	0.8373864926220204	0.12999805166727554	0.18	0.13	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	37	3	rwr	24.0	0.8013188018238135	0.09759608865861147	0.16	0.15	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	37	4	rwr	24.0	0.7557905194436559	0.0983722771203187	0.18	0.17	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	38	0	rwr	24.0	0.807250283768445	0.11142766745001002	0.16	0.16	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	38	1	rwr	24.0	0.8262060158910329	0.12313650721053651	0.16	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	38	2	rwr	24.0	0.7616676125614832	0.07053023427134691	0.14	0.14	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	38	3	rwr	24.0	0.8338078839531348	0.14114943066194988	0.26	0.19	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	38	4	rwr	24.0	0.8421279212792128	0.15431545427310628	0.2	0.18	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	39	0	rwr	24.0	0.7763999243284146	0.09631601715547221	0.1	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	39	1	rwr	24.0	0.8571320469163829	0.13504976573367863	0.2	0.17	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	39	2	rwr	24.0	0.8513668180098373	0.11849166716211401	0.12	0.2	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	39	3	rwr	24.0	0.796946843917736	0.18067877849790895	0.26	0.21	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.3	39	4	rwr	24.0	0.7970716245623994	0.09132915955484806	0.14	0.1	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	0	0	rwr	16.0	0.8174233825198638	0.133913255742523	0.22	0.19	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	0	1	rwr	16.0	0.824479757850927	0.1143840825634082	0.18	0.16	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	0	2	rwr	16.0	0.8452752553916004	0.14506867738846974	0.18	0.16	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	0	3	rwr	16.0	0.787375670944035	0.11193070980037467	0.22	0.18	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	0	4	rwr	16.0	0.8717215441385183	0.15267966123514895	0.24	0.17	0.09	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	1	0	rwr	16.0	0.8058503594400304	0.13341706100568393	0.22	0.2	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	1	1	rwr	16.0	0.822124479757851	0.1307569242952043	0.2	0.18	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	1	2	rwr	16.0	0.8430618615209988	0.16347733728496489	0.22	0.22	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	1	3	rwr	16.0	0.8080811481559861	0.09514207995447467	0.12	0.13	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	1	4	rwr	16.0	0.8650156116945784	0.16902450069376343	0.2	0.19	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	2	0	rwr	16.0	0.7733352251229664	0.11714762857464432	0.2	0.17	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	2	1	rwr	16.0	0.8259600832387438	0.1373986314658879	0.16	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	2	2	rwr	16.0	0.8348940597805524	0.1621121267694971	0.24	0.21	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	2	3	rwr	16.0	0.8301766097847207	0.14286097994124478	0.2	0.19	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	2	4	rwr	16.0	0.8651622670072856	0.10839411413749353	0.16	0.16	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	3	0	rwr	16.0	0.9052639046538025	0.19631713190984398	0.24	0.22	0.098	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	3	1	rwr	16.0	0.7968880060537268	0.09740309605299712	0.14	0.14	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	3	2	rwr	16.0	0.7665366061293984	0.09038542856913381	0.18	0.14	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	3	3	rwr	16.0	0.8528780853806344	0.20768047897274705	0.3	0.22	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	3	4	rwr	16.0	0.8305752672911345	0.11398472251176171	0.16	0.19	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	4	0	rwr	16.0	0.7864784335981839	0.0947601598757136	0.1	0.11	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	4	1	rwr	16.0	0.8584799470298904	0.18367658026887262	0.26	0.18	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	4	2	rwr	16.0	0.8495885357548241	0.17755915039074072	0.3	0.22	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	4	3	rwr	16.0	0.8534119548279112	0.13610719559548656	0.2	0.19	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	4	4	rwr	16.0	0.8185353391995459	0.09818182048827191	0.16	0.16	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	5	0	rwr	16.0	0.8003121452894438	0.09695754792177945	0.16	0.12	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	5	1	rwr	16.0	0.8473420355656451	0.11027236957917343	0.14	0.14	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	5	2	rwr	16.0	0.8258418463866819	0.16279185236502172	0.24	0.21	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	5	3	rwr	16.0	0.8156755612843648	0.15984671052896124	0.2	0.18	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	5	4	rwr	16.0	0.8465748888258113	0.166780542567589	0.28	0.23	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	6	0	rwr	16.0	0.82894438138479	0.10442456321938715	0.16	0.17	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	6	1	rwr	16.0	0.8379493000378359	0.12889495417665522	0.16	0.14	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	6	2	rwr	16.0	0.8489642451759365	0.1627228145385888	0.24	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	6	3	rwr	16.0	0.8122631254929875	0.15542880146545227	0.32	0.21	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	6	4	rwr	16.0	0.8480367111363422	0.13340578364418962	0.12	0.17	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	7	0	rwr	16.0	0.829336927733636	0.10762154810177144	0.22	0.17	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	7	1	rwr	16.0	0.8423855467272039	0.10541014470127082	0.16	0.15	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	7	2	rwr	16.0	0.8099460839954598	0.20133314757350274	0.26	0.22	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	7	3	rwr	16.0	0.8068450720483272	0.12144668105287432	0.16	0.14	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	7	4	rwr	16.0	0.8367300596082884	0.16436601383458574	0.26	0.21	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	8	0	rwr	16.0	0.8460508891411276	0.16086039768451169	0.26	0.21	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	8	1	rwr	16.0	0.8580401059402194	0.1010434831339208	0.16	0.14	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	8	2	rwr	16.0	0.8166430192962542	0.17444326847176927	0.26	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	8	3	rwr	16.0	0.8196098424363685	0.13650102050899787	0.18	0.19	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	8	4	rwr	16.0	0.7834137572144952	0.10312132869336123	0.16	0.15	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	9	0	rwr	16.0	0.8362466893681423	0.1283976526714068	0.2	0.19	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	9	1	rwr	16.0	0.7962400681044268	0.1370934830632171	0.26	0.21	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	9	2	rwr	16.0	0.8528140370790769	0.15370664377614388	0.18	0.18	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	9	3	rwr	16.0	0.8769647357586717	0.13737263571838507	0.24	0.19	0.086	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	9	4	rwr	16.0	0.7878465323114769	0.12395245441259961	0.14	0.14	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	10	0	rwr	16.0	0.8220109723798714	0.12835499138338533	0.2	0.16	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	10	1	rwr	16.0	0.7915247824441922	0.10404986866836557	0.22	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	10	2	rwr	16.0	0.8421301551267499	0.185312515379934	0.22	0.23	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	10	3	rwr	16.0	0.865234036822563	0.1328796111413484	0.18	0.18	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	10	4	rwr	16.0	0.8253808307313842	0.11465510451226718	0.14	0.17	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	11	0	rwr	16.0	0.8202232311766932	0.1427433203869675	0.18	0.19	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	11	1	rwr	16.0	0.856975974271661	0.15602971609115923	0.24	0.21	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	11	2	rwr	16.0	0.7596717744986758	0.09387030946266106	0.2	0.18	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	11	3	rwr	16.0	0.8309509609650051	0.12172374095732409	0.2	0.14	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	11	4	rwr	16.0	0.8347525782950138	0.13412245565062633	0.16	0.15	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	12	0	rwr	16.0	0.8049281119939463	0.07849791423071302	0.06	0.14	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	12	1	rwr	16.0	0.8554672720393492	0.13617016150809025	0.28	0.19	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	12	2	rwr	16.0	0.8037173666288309	0.13699680037535064	0.22	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	12	3	rwr	16.0	0.8396467804305585	0.16019830206120964	0.18	0.21	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	12	4	rwr	16.0	0.8276043145046835	0.16661635120400003	0.3	0.21	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	13	0	rwr	16.0	0.8130155126749905	0.11988076303026052	0.22	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	13	1	rwr	16.0	0.8474839197881195	0.15100782568514584	0.26	0.18	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	13	2	rwr	16.0	0.8541855845629964	0.15466298445995158	0.18	0.19	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	13	3	rwr	16.0	0.7793772485042036	0.13197462355798656	0.22	0.17	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	13	4	rwr	16.0	0.865483962531933	0.11250757879980774	0.16	0.15	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	14	0	rwr	16.0	0.8153707907680665	0.13936509279724008	0.28	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	14	1	rwr	16.0	0.7702043132803633	0.08668038456239043	0.1	0.15	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	14	2	rwr	16.0	0.8733446840711313	0.19914454432030296	0.24	0.21	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	14	3	rwr	16.0	0.8499730660459032	0.11831281973312242	0.16	0.14	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	14	4	rwr	16.0	0.797615668464377	0.12299504533767004	0.12	0.15	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	15	0	rwr	16.0	0.8308834657586077	0.11725733996132609	0.2	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	15	1	rwr	16.0	0.8182179341657206	0.12946161087322394	0.16	0.17	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	15	2	rwr	16.0	0.8437570942111237	0.15186369438303388	0.18	0.19	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	15	3	rwr	16.0	0.7950879201215876	0.0938831575416573	0.12	0.12	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	15	4	rwr	16.0	0.855568171066326	0.17254849121135907	0.3	0.23	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	16	0	rwr	16.0	0.8760168369277336	0.14339885582955686	0.18	0.16	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	16	1	rwr	16.0	0.8146802875520243	0.0962901644126586	0.12	0.17	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	16	2	rwr	16.0	0.8654842981460461	0.16420702206110557	0.24	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	16	3	rwr	16.0	0.8005877373554704	0.14167108807214793	0.18	0.19	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	16	4	rwr	16.0	0.7957469959314978	0.13369262542503718	0.26	0.18	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	17	0	rwr	16.0	0.7922223798713584	0.09983219999867468	0.18	0.14	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	17	1	rwr	16.0	0.7928159288687098	0.1321088550072465	0.18	0.19	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	17	2	rwr	16.0	0.8443246311010215	0.16711525795979967	0.2	0.19	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	17	3	rwr	16.0	0.8605302141249351	0.15779933172805122	0.22	0.18	0.092	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	17	4	rwr	16.0	0.8316349701958557	0.11426548858374071	0.12	0.2	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	18	0	rwr	16.0	0.818690881573969	0.1657170482278333	0.18	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	18	1	rwr	16.0	0.7851541808550889	0.0988807814348597	0.18	0.16	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	18	2	rwr	16.0	0.8140276201286416	0.1252916061092279	0.22	0.14	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	18	3	rwr	16.0	0.8707843552203776	0.16529991020443613	0.22	0.2	0.084	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	18	4	rwr	16.0	0.8556462295392185	0.12290108872207842	0.14	0.18	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	19	0	rwr	16.0	0.8160447408248203	0.13377180144665188	0.22	0.21	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	19	1	rwr	16.0	0.8241581536133181	0.1365099537000312	0.22	0.17	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	19	2	rwr	16.0	0.8497587968217934	0.10641071800246647	0.08	0.16	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	19	3	rwr	16.0	0.8216731757055734	0.18089253142533648	0.26	0.2	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	19	4	rwr	16.0	0.8267764216103699	0.12307813158588318	0.16	0.14	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	20	0	rwr	16.0	0.8204218690881575	0.1728664373947654	0.28	0.22	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	20	1	rwr	16.0	0.8235314982973893	0.11664732427785174	0.18	0.18	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	20	2	rwr	16.0	0.8398978433598183	0.12430521907155083	0.16	0.13	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	20	3	rwr	16.0	0.8686633063352507	0.12829439734135614	0.14	0.17	0.086	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	20	4	rwr	16.0	0.7842605733749646	0.13819306238351803	0.2	0.17	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	21	0	rwr	16.0	0.8311388573590617	0.10829964106316473	0.18	0.12	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	21	1	rwr	16.0	0.8467082860385924	0.17398227835985036	0.22	0.26	0.094	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	21	2	rwr	16.0	0.8728315361331819	0.17252008826103624	0.22	0.22	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	21	3	rwr	16.0	0.8033965639969987	0.11189845478475663	0.16	0.14	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	21	4	rwr	16.0	0.8071529946068691	0.12521284638577304	0.24	0.15	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	22	0	rwr	16.0	0.8239453272796065	0.09369808414210937	0.12	0.16	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	22	1	rwr	16.0	0.843180098373061	0.1467037261910959	0.22	0.18	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	22	2	rwr	16.0	0.8314510026485056	0.1224392653507818	0.2	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	22	3	rwr	16.0	0.80947594220743	0.1336242832527165	0.2	0.17	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	22	4	rwr	16.0	0.8257309111552655	0.16864487669805364	0.24	0.21	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	23	0	rwr	16.0	0.8046632614453273	0.14489540046407387	0.24	0.19	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	23	1	rwr	16.0	0.8249763526295876	0.09623436752780419	0.1	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	23	2	rwr	16.0	0.8380486189935679	0.12920941808321143	0.18	0.17	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	23	3	rwr	16.0	0.8096009927085939	0.11144602759930945	0.2	0.16	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	23	4	rwr	16.0	0.8639937553221685	0.21036432463779478	0.28	0.22	0.09	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	24	0	rwr	16.0	0.8052970109723798	0.11688784323496944	0.22	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	24	1	rwr	16.0	0.8576191827468785	0.13544653867647075	0.22	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	24	2	rwr	16.0	0.8328367385546727	0.1836997452954846	0.28	0.21	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	24	3	rwr	16.0	0.8370928644260182	0.10870797615839878	0.14	0.15	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	24	4	rwr	16.0	0.7985547355473555	0.12323697146762726	0.16	0.19	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	25	0	rwr	16.0	0.7986237230419977	0.13898101790669767	0.22	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	25	1	rwr	16.0	0.841051835035944	0.11295242917194949	0.14	0.17	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	25	2	rwr	16.0	0.8387485811577752	0.12313826500215913	0.2	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	25	3	rwr	16.0	0.801876719444391	0.10324324002949699	0.18	0.13	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	25	4	rwr	16.0	0.8346011921657677	0.19084402570149125	0.22	0.21	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	26	0	rwr	16.0	0.7745885357548241	0.11627037423439429	0.18	0.17	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	26	1	rwr	16.0	0.85131479379493	0.14097229823915955	0.18	0.18	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	26	2	rwr	16.0	0.8123959515701854	0.10145421829907851	0.16	0.13	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	26	3	rwr	16.0	0.8403489870909405	0.11667939917291244	0.12	0.14	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	26	4	rwr	16.0	0.8245150913047592	0.17083267336296706	0.28	0.23	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	27	0	rwr	16.0	0.8652714718123344	0.13292448785074934	0.18	0.15	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	27	1	rwr	16.0	0.8067536889897842	0.14770873883551122	0.2	0.16	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	27	2	rwr	16.0	0.8185300794551648	0.16466421987279006	0.28	0.22	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	27	3	rwr	16.0	0.8482993131841705	0.10833166167078981	0.18	0.13	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	27	4	rwr	16.0	0.8058520200586621	0.1306620550860723	0.14	0.17	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	28	0	rwr	16.0	0.8231862466893681	0.1532977201590785	0.18	0.19	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	28	1	rwr	16.0	0.8242196367763904	0.1087825487233252	0.12	0.14	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	28	2	rwr	16.0	0.8433645478622777	0.14713194519628903	0.22	0.21	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	28	3	rwr	16.0	0.8472315742896169	0.17037373045205575	0.26	0.2	0.084	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	28	4	rwr	16.0	0.8012016274008894	0.10097868300971402	0.2	0.17	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	29	0	rwr	16.0	0.8083049564888384	0.09375112089588636	0.18	0.15	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	29	1	rwr	16.0	0.824881763147938	0.1414686885306931	0.22	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	29	2	rwr	16.0	0.8622729852440408	0.15936826169502022	0.26	0.17	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	29	3	rwr	16.0	0.8271609688528059	0.1388879413483335	0.24	0.18	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	29	4	rwr	16.0	0.8219557195571955	0.16473597345704633	0.18	0.18	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	30	0	rwr	16.0	0.8422342035565644	0.18194432891431964	0.26	0.2	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	30	1	rwr	16.0	0.804199772985244	0.11781158758216881	0.14	0.15	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	30	2	rwr	16.0	0.8329880817253122	0.16711286136551332	0.3	0.2	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	30	3	rwr	16.0	0.8199272783239384	0.09002968833194205	0.12	0.14	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	30	4	rwr	16.0	0.8461916926861577	0.14623551931305695	0.16	0.17	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	31	0	rwr	16.0	0.8088914112750663	0.1125829288090934	0.2	0.16	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	31	1	rwr	16.0	0.8620696178584941	0.15094169004530522	0.22	0.22	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	31	2	rwr	16.0	0.8118284146802875	0.18004371435233477	0.24	0.2	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	31	3	rwr	16.0	0.8000250101002329	0.1068010700566358	0.12	0.15	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	31	4	rwr	16.0	0.8531034156495412	0.1438089143322909	0.24	0.19	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	32	0	rwr	16.0	0.8527620128641694	0.1533579238897987	0.22	0.19	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	32	1	rwr	16.0	0.8350170261066969	0.16414974270009441	0.24	0.22	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	32	2	rwr	16.0	0.8715332954975407	0.16530530947045508	0.2	0.24	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	32	3	rwr	16.0	0.8296715981454048	0.09381394098234994	0.12	0.12	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	32	4	rwr	16.0	0.7650156116945785	0.10813815796498218	0.16	0.15	0.064	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	33	0	rwr	16.0	0.8249385168369279	0.12867650042595608	0.2	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	33	1	rwr	16.0	0.832377979568672	0.1764832045592666	0.24	0.22	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	33	2	rwr	16.0	0.8435206205069996	0.11549591707612747	0.16	0.16	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	33	3	rwr	16.0	0.8059697185401796	0.12080894194962392	0.16	0.16	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	33	4	rwr	16.0	0.8341564954111079	0.16935156101186974	0.26	0.16	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	34	0	rwr	16.0	0.8535045402951191	0.14481560491998358	0.2	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	34	1	rwr	16.0	0.7817489595157018	0.13129188390346258	0.22	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	34	2	rwr	16.0	0.8260735906167235	0.1070139144346397	0.18	0.15	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	34	3	rwr	16.0	0.8703418688316437	0.12643222312232888	0.18	0.17	0.088	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	34	4	rwr	16.0	0.8206925915413001	0.16658303356886683	0.2	0.16	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	35	0	rwr	16.0	0.8226163450624291	0.11748918144499183	0.2	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	35	1	rwr	16.0	0.844026674233825	0.13928955335978185	0.24	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	35	2	rwr	16.0	0.8369561104805143	0.16168478984045775	0.24	0.17	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	35	3	rwr	16.0	0.8199561361318994	0.11811389429098879	0.12	0.15	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	35	4	rwr	16.0	0.8195571955719556	0.15183822608185266	0.24	0.2	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	36	0	rwr	16.0	0.8737845251608021	0.15709932092159443	0.28	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	36	1	rwr	16.0	0.811989216799092	0.13678138652729122	0.18	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	36	2	rwr	16.0	0.8528707907680666	0.17036763678568123	0.18	0.16	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	36	3	rwr	16.0	0.8359000750303007	0.12661494823821412	0.2	0.19	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	36	4	rwr	16.0	0.7605568171066326	0.09381250487222499	0.16	0.13	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	37	0	rwr	16.0	0.8444050321604237	0.1845288953139002	0.2	0.23	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	37	1	rwr	16.0	0.8374054105183504	0.1026286184593267	0.14	0.15	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	37	2	rwr	16.0	0.8455874006810442	0.1505759174611708	0.2	0.13	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	37	3	rwr	16.0	0.8123472940995402	0.1055431870357412	0.16	0.17	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	37	4	rwr	16.0	0.7682704134733653	0.11311827812012454	0.2	0.19	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	38	0	rwr	16.0	0.8214055996973136	0.12006006069236884	0.2	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	38	1	rwr	16.0	0.835419031403708	0.13674843085391702	0.18	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	38	2	rwr	16.0	0.7763289822171775	0.0731911805448584	0.12	0.13	0.062	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	38	3	rwr	16.0	0.8426479924584929	0.15109203427509715	0.24	0.21	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	38	4	rwr	16.0	0.8510313180054877	0.17703562916154633	0.24	0.19	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	39	0	rwr	16.0	0.7852251229663262	0.10941135804890494	0.16	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	39	1	rwr	16.0	0.8625614831630724	0.14564000258392723	0.22	0.15	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	39	2	rwr	16.0	0.8642924706772607	0.1369084744068926	0.22	0.23	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	39	3	rwr	16.0	0.812722445603032	0.19185016346718597	0.26	0.23	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.5	39	4	rwr	16.0	0.8076402687103793	0.09644669609202078	0.12	0.13	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	0	0	rwr	11.0	0.8226305334846765	0.13170477964978833	0.22	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	0	1	rwr	11.0	0.8293653045781308	0.12002667763472193	0.18	0.15	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	0	2	rwr	11.0	0.8479568671963679	0.144348158062435	0.18	0.17	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	0	3	rwr	11.0	0.7946815059928048	0.11485581669754412	0.24	0.18	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	0	4	rwr	11.0	0.8735334468729302	0.15811808701153415	0.28	0.17	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	1	0	rwr	11.0	0.8100028376844495	0.13839552950689002	0.24	0.19	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	1	1	rwr	11.0	0.8281451002648506	0.12922325604831764	0.22	0.19	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	1	2	rwr	11.0	0.8466089670828604	0.16131097511851147	0.22	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	1	3	rwr	11.0	0.8100579080013083	0.09681785076921451	0.14	0.13	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	1	4	rwr	11.0	0.8653278455861482	0.166684028539652	0.18	0.18	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	2	0	rwr	11.0	0.7823117669315172	0.11661919113117403	0.2	0.17	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	2	1	rwr	11.0	0.8291193719258418	0.13550440679938985	0.16	0.19	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	2	2	rwr	11.0	0.8369088157396897	0.16387567838698716	0.26	0.21	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	2	3	rwr	11.0	0.832985436426249	0.14391897099257747	0.22	0.19	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	2	4	rwr	11.0	0.8674472513955909	0.10951964890619459	0.14	0.17	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	3	0	rwr	11.0	0.9045402951191828	0.20069586425601385	0.22	0.21	0.096	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	3	1	rwr	11.0	0.8009553537646613	0.09810211520528553	0.14	0.13	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	3	2	rwr	11.0	0.7692087589860008	0.09590602669897011	0.18	0.14	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	3	3	rwr	11.0	0.8610448450335713	0.2103679961929621	0.3	0.27	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	3	4	rwr	11.0	0.8336834137572146	0.11141600612419002	0.12	0.17	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	4	0	rwr	11.0	0.7876702610669694	0.09656985786149548	0.12	0.14	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	4	1	rwr	11.0	0.8611899356791526	0.17457123931630572	0.26	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	4	2	rwr	11.0	0.8583522512296633	0.17156702176912503	0.3	0.22	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	4	3	rwr	11.0	0.8617181938859925	0.14239579679093683	0.2	0.19	0.086	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	4	4	rwr	11.0	0.8192402308638471	0.09829324262750148	0.16	0.15	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	5	0	rwr	11.0	0.8060395384033296	0.10006522685278839	0.16	0.13	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	5	1	rwr	11.0	0.8515323496027242	0.10785988705353501	0.12	0.16	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	5	2	rwr	11.0	0.8276674233825199	0.16039212371654782	0.26	0.2	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	5	3	rwr	11.0	0.8193212643567594	0.15760698804527243	0.24	0.18	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	5	4	rwr	11.0	0.8491626454726086	0.17397367913017375	0.24	0.23	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	6	0	rwr	11.0	0.8370223231176693	0.10604137878278236	0.16	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	6	1	rwr	11.0	0.8436483163072266	0.13037111633895362	0.2	0.15	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	6	2	rwr	11.0	0.8548571698827091	0.1756861032671654	0.24	0.18	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	6	3	rwr	11.0	0.8151489062890782	0.15443851611394277	0.28	0.21	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	6	4	rwr	11.0	0.8518923266155738	0.13594515407707528	0.14	0.16	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	7	0	rwr	11.0	0.835272417707151	0.10782200910979585	0.2	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	7	1	rwr	11.0	0.843955732122588	0.10631228696874243	0.12	0.15	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	7	2	rwr	11.0	0.8100122966326145	0.19802534843594943	0.24	0.22	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	7	3	rwr	11.0	0.8110871698185805	0.13822087529853241	0.16	0.15	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	7	4	rwr	11.0	0.8406424448859873	0.16701324367819279	0.3	0.22	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	8	0	rwr	11.0	0.8493662504729474	0.16269210237095913	0.28	0.21	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	8	1	rwr	11.0	0.8655836171017783	0.10198330791872742	0.14	0.15	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	8	2	rwr	11.0	0.8208948164964055	0.17449808436663125	0.26	0.16	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	8	3	rwr	11.0	0.8207449162161643	0.1401040941672638	0.18	0.2	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	8	4	rwr	11.0	0.7868435992052227	0.1041617417800061	0.12	0.18	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	9	0	rwr	11.0	0.8364547862277716	0.13074464870001182	0.18	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	9	1	rwr	11.0	0.8027714718123345	0.13841583818438055	0.26	0.19	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	9	2	rwr	11.0	0.855150397275823	0.16907210404021947	0.22	0.18	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	9	3	rwr	11.0	0.88040843417534	0.13152563639591267	0.22	0.18	0.086	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	9	4	rwr	11.0	0.794635254044848	0.11828754350616161	0.14	0.17	0.072	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	10	0	rwr	11.0	0.831181422625804	0.13446955189891618	0.2	0.15	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	10	1	rwr	11.0	0.7991392357169883	0.10459626323076339	0.22	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	10	2	rwr	11.0	0.8435348089292471	0.19366159736373104	0.22	0.23	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	10	3	rwr	11.0	0.8661622963119722	0.1392863598065767	0.22	0.19	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	10	4	rwr	11.0	0.8256504872741036	0.11574341843685886	0.16	0.18	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	11	0	rwr	11.0	0.8219258418463867	0.15212215914391417	0.18	0.2	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	11	1	rwr	11.0	0.8578793038214151	0.1540847324437832	0.2	0.2	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	11	2	rwr	11.0	0.770298902762013	0.09660847692443184	0.2	0.18	0.06	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	11	3	rwr	11.0	0.8343658015737124	0.12156192310261225	0.22	0.14	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	11	4	rwr	11.0	0.8373119500425774	0.13389220248228773	0.14	0.16	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	12	0	rwr	11.0	0.8090805902383654	0.07718896812470416	0.1	0.11	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	12	1	rwr	11.0	0.8594542186908816	0.13573809547461582	0.24	0.2	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	12	2	rwr	11.0	0.8030599697313658	0.15834417627192454	0.22	0.19	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	12	3	rwr	11.0	0.8467217530156409	0.15630144662833442	0.22	0.2	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	12	4	rwr	11.0	0.8301826095184028	0.1641006226797987	0.28	0.21	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	13	0	rwr	11.0	0.8209799470298902	0.12203479654178646	0.22	0.19	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	13	1	rwr	11.0	0.8530221339387061	0.1537847109490591	0.26	0.18	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	13	2	rwr	11.0	0.8551787741203178	0.14805857143545423	0.14	0.2	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	13	3	rwr	11.0	0.7839848785086284	0.1405060759618736	0.2	0.19	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	13	4	rwr	11.0	0.8732141167565521	0.11492425402638115	0.18	0.14	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	14	0	rwr	11.0	0.8192678774120318	0.13384149348094848	0.26	0.19	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	14	1	rwr	11.0	0.7777762012864169	0.08517227146035107	0.1	0.14	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	14	2	rwr	11.0	0.8692536889897843	0.1946801223218937	0.22	0.22	0.096	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	14	3	rwr	11.0	0.8520604474884089	0.12230917191009948	0.16	0.15	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	14	4	rwr	11.0	0.804125272021951	0.12199301601191606	0.14	0.14	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	15	0	rwr	11.0	0.8372162315550511	0.12036038166838278	0.18	0.18	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	15	1	rwr	11.0	0.8247587968217935	0.1384391899925273	0.18	0.16	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	15	2	rwr	11.0	0.8453556564510026	0.15457416875942526	0.18	0.19	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	15	3	rwr	11.0	0.7999600800323208	0.09360349996714173	0.14	0.13	0.078	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	15	4	rwr	11.0	0.8574888825811334	0.17731259219941137	0.32	0.24	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	16	0	rwr	11.0	0.8759979190314038	0.1440246194023447	0.18	0.16	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	16	1	rwr	11.0	0.8223089292470677	0.09980817980750609	0.12	0.19	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	16	2	rwr	11.0	0.8712684449489215	0.15678162645734905	0.2	0.19	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	16	3	rwr	11.0	0.8031705111679716	0.1422021567520799	0.2	0.17	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	16	4	rwr	11.0	0.8006717759485286	0.13748668411972625	0.3	0.2	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	17	0	rwr	11.0	0.7984038024971625	0.10192098444382094	0.16	0.14	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	17	1	rwr	11.0	0.7960461596670451	0.13390588804977452	0.2	0.17	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	17	2	rwr	11.0	0.8510026485054861	0.16423247440452782	0.22	0.19	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	17	3	rwr	11.0	0.8679178129629274	0.16246759452328322	0.24	0.18	0.088	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	17	4	rwr	11.0	0.8276137761377613	0.11173547374431797	0.14	0.21	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	18	0	rwr	11.0	0.8240493757094212	0.16765759740435435	0.2	0.19	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	18	1	rwr	11.0	0.7854710556186151	0.1011957933716856	0.18	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	18	2	rwr	11.0	0.8223514945138101	0.1187793988804613	0.22	0.13	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	18	3	rwr	11.0	0.8725783489486139	0.16133783834130144	0.22	0.19	0.084	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	18	4	rwr	11.0	0.8609825905951367	0.12030113374061131	0.16	0.18	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	19	0	rwr	11.0	0.8233565077563375	0.13863188321565803	0.24	0.19	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	19	1	rwr	11.0	0.8276248581157775	0.14443119187731368	0.18	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	19	2	rwr	11.0	0.852795119182747	0.10460234898299264	0.08	0.16	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	19	3	rwr	11.0	0.8239240847265241	0.1874469284606787	0.24	0.19	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	19	4	rwr	11.0	0.8285362853628536	0.1207544843693068	0.16	0.15	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	20	0	rwr	11.0	0.8270809685962921	0.16445699770509425	0.28	0.21	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	20	1	rwr	11.0	0.8272630533484676	0.11835707022376567	0.2	0.17	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	20	2	rwr	11.0	0.8415105940219447	0.1267132294144656	0.18	0.15	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	20	3	rwr	11.0	0.8733382712249177	0.1289250505553481	0.14	0.18	0.09	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	20	4	rwr	11.0	0.7901409783328603	0.14344398254620608	0.22	0.2	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	21	0	rwr	11.0	0.8351730987514189	0.11026327403242243	0.16	0.12	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	21	1	rwr	11.0	0.8484676503972759	0.1776284433608222	0.26	0.27	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	21	2	rwr	11.0	0.8779772039349224	0.16639067546581573	0.2	0.21	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	21	3	rwr	11.0	0.8060514823294023	0.11013855422679225	0.14	0.14	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	21	4	rwr	11.0	0.814604030655691	0.13399772823622055	0.24	0.17	0.076	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	22	0	rwr	11.0	0.8299328414680287	0.09528096336393777	0.1	0.15	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	22	1	rwr	11.0	0.8461029133560349	0.14970846001942556	0.24	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	22	2	rwr	11.0	0.8404606507756337	0.11975189555133428	0.18	0.15	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	22	3	rwr	11.0	0.8069220262028897	0.1315091776067698	0.2	0.15	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	22	4	rwr	11.0	0.8273157346958085	0.1728218713992893	0.24	0.22	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	23	0	rwr	11.0	0.8117716609912978	0.1455504555943271	0.24	0.2	0.066	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	23	1	rwr	11.0	0.8271944759742718	0.10186911196718587	0.1	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	23	2	rwr	11.0	0.8428679530836171	0.1379782602348747	0.18	0.18	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	23	3	rwr	11.0	0.8142519094249601	0.11195268672361972	0.22	0.16	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	23	4	rwr	11.0	0.866931592392847	0.2114948240412563	0.26	0.23	0.092	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	24	0	rwr	11.0	0.8071793416572078	0.12373153376229691	0.22	0.19	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	24	1	rwr	11.0	0.8625425652667422	0.14268623556185933	0.22	0.17	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	24	2	rwr	11.0	0.8336218312523649	0.18540882862091915	0.26	0.22	0.088	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	24	3	rwr	11.0	0.8394351565055118	0.10656267473241443	0.14	0.15	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	24	4	rwr	11.0	0.8046811429652758	0.12694338812283953	0.16	0.19	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	25	0	rwr	11.0	0.8035660234581914	0.1262360409263665	0.22	0.18	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	25	1	rwr	11.0	0.8449914869466514	0.11630737961129667	0.16	0.18	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	25	2	rwr	11.0	0.8407586076428301	0.1330187531173521	0.18	0.18	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	25	3	rwr	11.0	0.806681544469882	0.1011125195079212	0.18	0.12	0.07	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	25	4	rwr	11.0	0.8360772069259154	0.18738287536758827	0.2	0.19	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	26	0	rwr	11.0	0.7740209988649263	0.12913629846291552	0.2	0.16	0.068	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	26	1	rwr	11.0	0.8513289822171775	0.14745156729104614	0.2	0.19	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	26	2	rwr	11.0	0.8191212637154749	0.1025730792354074	0.14	0.12	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	26	3	rwr	11.0	0.8420035014140326	0.11831998901837326	0.14	0.17	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	26	4	rwr	11.0	0.8311713501750403	0.169514803389465	0.28	0.22	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	27	0	rwr	11.0	0.8758276579644344	0.15037905398143095	0.18	0.15	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	27	1	rwr	11.0	0.8123202799848658	0.16205948707163653	0.22	0.17	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	27	2	rwr	11.0	0.8179105183503594	0.16285141779397883	0.28	0.22	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	27	3	rwr	11.0	0.8484628407626157	0.10734634272928183	0.14	0.14	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	27	4	rwr	11.0	0.80954678777557	0.13524357425118538	0.14	0.19	0.082	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	28	0	rwr	11.0	0.8309898789254635	0.15282847835311653	0.18	0.2	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	28	1	rwr	11.0	0.8317584184638668	0.11187381092294255	0.18	0.15	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	28	2	rwr	11.0	0.8427544457056375	0.1481398462899207	0.24	0.21	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	28	3	rwr	11.0	0.8496412012543527	0.17177068936160667	0.22	0.19	0.084	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	28	4	rwr	11.0	0.8072239568549532	0.10176140879705782	0.22	0.17	0.07	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	29	0	rwr	11.0	0.8173855467272039	0.09688106576261772	0.18	0.15	0.07	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	29	1	rwr	11.0	0.8236142640938326	0.1404295251801796	0.2	0.22	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	29	2	rwr	11.0	0.8658011729095725	0.16040524435304948	0.26	0.18	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	29	3	rwr	11.0	0.8290800130822061	0.1367829619758286	0.24	0.17	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	29	4	rwr	11.0	0.8300738007380074	0.17248299313043258	0.18	0.18	0.08	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	30	0	rwr	11.0	0.8430003783579266	0.18622180248562317	0.3	0.19	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	30	1	rwr	11.0	0.80987041241014	0.11992845168230105	0.14	0.16	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	30	2	rwr	11.0	0.838412788497919	0.16179244593288367	0.28	0.21	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	30	3	rwr	11.0	0.8185084360991939	0.08588910777512629	0.12	0.13	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	30	4	rwr	11.0	0.8507805847289243	0.1510235902110769	0.2	0.17	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	31	0	rwr	11.0	0.812892546348846	0.10967587568976465	0.22	0.15	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	31	1	rwr	11.0	0.8663119561104806	0.15335461129300162	0.2	0.21	0.09	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	31	2	rwr	11.0	0.8152667423382519	0.18340723799064498	0.24	0.21	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	31	3	rwr	11.0	0.8030117932241866	0.10738814945858254	0.12	0.16	0.068	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	31	4	rwr	11.0	0.8547118932727789	0.14552608112051796	0.2	0.18	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	32	0	rwr	11.0	0.8560017026106697	0.15453984220500885	0.22	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	32	1	rwr	11.0	0.8390938327657965	0.16390899534063724	0.26	0.23	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	32	2	rwr	11.0	0.8741061293984109	0.17282375203236067	0.24	0.22	0.092	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	32	3	rwr	11.0	0.8344956617095366	0.09667341858248066	0.14	0.13	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	32	4	rwr	11.0	0.7732945406377141	0.10856012602176499	0.18	0.16	0.066	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	33	0	rwr	11.0	0.830415247824442	0.12919698650460096	0.22	0.17	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	33	1	rwr	11.0	0.8352771471812334	0.17505158717637423	0.24	0.2	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	33	2	rwr	11.0	0.8476305334846765	0.12096772231337995	0.16	0.17	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	33	3	rwr	11.0	0.8143769599261239	0.1223885692504974	0.16	0.16	0.074	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	33	4	rwr	11.0	0.8384473460119217	0.16493992530727206	0.22	0.17	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	34	0	rwr	11.0	0.8580164585698071	0.1473992941764413	0.2	0.2	0.082	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	34	1	rwr	11.0	0.7861237230419978	0.13032080293326834	0.22	0.19	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	34	2	rwr	11.0	0.8292565266742339	0.11369924472727033	0.16	0.15	0.072	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	34	3	rwr	11.0	0.8745695376979166	0.12494963531962963	0.18	0.17	0.086	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	34	4	rwr	11.0	0.8244630523228308	0.18069168801186167	0.22	0.17	0.086	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	35	0	rwr	11.0	0.8287173666288308	0.11563109499516876	0.16	0.2	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	35	1	rwr	11.0	0.8504351116155884	0.1414206174531695	0.2	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	35	2	rwr	11.0	0.8392120696178584	0.16526860072895425	0.22	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	35	3	rwr	11.0	0.827223494103388	0.12115173840588957	0.12	0.15	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	35	4	rwr	11.0	0.8208487084870848	0.14525166852939952	0.26	0.18	0.078	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	36	0	rwr	11.0	0.8762722285281878	0.15334397821484475	0.24	0.18	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	36	1	rwr	11.0	0.8170497540673477	0.14734014785035757	0.18	0.18	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	36	2	rwr	11.0	0.8547956867196368	0.17385487344064865	0.18	0.15	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	36	3	rwr	11.0	0.8354527790069066	0.12795269370717458	0.2	0.2	0.082	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	36	4	rwr	11.0	0.7689067082978522	0.1031080753295759	0.16	0.13	0.068	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	37	0	rwr	11.0	0.8462353386303443	0.17780103314650642	0.22	0.21	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	37	1	rwr	11.0	0.8422436625047295	0.1051828095831565	0.18	0.15	0.074	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	37	2	rwr	11.0	0.8461076428301173	0.1535183221306636	0.18	0.14	0.086	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	37	3	rwr	11.0	0.8162863848862041	0.10658369368706529	0.18	0.18	0.072	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	37	4	rwr	11.0	0.7741697416974171	0.11297360539626874	0.18	0.18	0.074	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	38	0	rwr	11.0	0.8282586076428301	0.11979251422737577	0.2	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	38	1	rwr	11.0	0.8370601589103291	0.1309596912401241	0.18	0.17	0.076	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	38	2	rwr	11.0	0.783025917517972	0.07117761190096206	0.12	0.12	0.064	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	38	3	rwr	11.0	0.8441534081071201	0.14781168906430714	0.22	0.23	0.08	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	38	4	rwr	11.0	0.8525688333806416	0.18632131689081458	0.24	0.18	0.084	60	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	39	0	rwr	11.0	0.7883654937570941	0.11596516886358024	0.18	0.2	0.08	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	39	1	rwr	11.0	0.860007567158532	0.14206124329821535	0.18	0.15	0.084	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	39	2	rwr	11.0	0.8694286795308361	0.14080806288092998	0.2	0.22	0.078	60	3584
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	39	3	rwr	11.0	0.8204948152138364	0.1931015477546805	0.28	0.24	0.076	59	3583
+intact	ot_nolit_pubcount_adjusted	native_intact	0.7	39	4	rwr	11.0	0.8113870754092156	0.09254507127758181	0.1	0.12	0.072	60	3583

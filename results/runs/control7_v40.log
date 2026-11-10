@@ -1,0 +1,92 @@
+=== step 1: the 40-repeat splits for the five pubcount-adjusted labels ===
+[intogen2024_pubcount_adjusted x native_funmap] 10,189 genes, 319 positives (of 319 full), 248 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen2024_pubcount_adjusted__native_funmap.tsv (407,560 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen2024_pubcount_adjusted x native_rna_coexp] 9,152 genes, 319 positives (of 319 full), 198 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen2024_pubcount_adjusted__native_rna_coexp.tsv (366,080 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen2024_pubcount_adjusted x native_string_phys700] 9,830 genes, 319 positives (of 319 full), 312 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen2024_pubcount_adjusted__native_string_phys700.tsv (393,200 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen2024_pubcount_adjusted x native_intact] 17,918 genes, 319 positives (of 319 full), 319 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen2024_pubcount_adjusted__native_intact.tsv (716,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen2024_pubcount_adjusted x native_string_full700] 15,882 genes, 319 positives (of 319 full), 319 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen2024_pubcount_adjusted__native_string_full700.tsv (635,280 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen2024_pubcount_adjusted x native_reactome] 3,953 genes, 319 positives (of 319 full), 242 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen2024_pubcount_adjusted__native_reactome.tsv (158,120 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_all_pubcount_adjusted x native_funmap] 10,189 genes, 300 positives (of 300 full), 221 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_all_pubcount_adjusted__native_funmap.tsv (407,560 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_all_pubcount_adjusted x native_rna_coexp] 9,152 genes, 300 positives (of 300 full), 194 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_all_pubcount_adjusted__native_rna_coexp.tsv (366,080 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_all_pubcount_adjusted x native_string_phys700] 9,830 genes, 300 positives (of 300 full), 295 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_all_pubcount_adjusted__native_string_phys700.tsv (393,200 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_all_pubcount_adjusted x native_intact] 17,918 genes, 300 positives (of 300 full), 299 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_all_pubcount_adjusted__native_intact.tsv (716,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_all_pubcount_adjusted x native_string_full700] 15,882 genes, 300 positives (of 300 full), 299 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_all_pubcount_adjusted__native_string_full700.tsv (635,280 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_all_pubcount_adjusted x native_reactome] 3,953 genes, 300 positives (of 300 full), 237 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_all_pubcount_adjusted__native_reactome.tsv (158,120 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_nolit_pubcount_adjusted x native_funmap] 10,189 genes, 300 positives (of 300 full), 222 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_nolit_pubcount_adjusted__native_funmap.tsv (407,560 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_nolit_pubcount_adjusted x native_rna_coexp] 9,152 genes, 300 positives (of 300 full), 193 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_nolit_pubcount_adjusted__native_rna_coexp.tsv (366,080 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_nolit_pubcount_adjusted x native_string_phys700] 9,830 genes, 300 positives (of 300 full), 293 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_nolit_pubcount_adjusted__native_string_phys700.tsv (393,200 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_nolit_pubcount_adjusted x native_intact] 17,918 genes, 300 positives (of 300 full), 299 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_nolit_pubcount_adjusted__native_intact.tsv (716,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_nolit_pubcount_adjusted x native_string_full700] 15,882 genes, 300 positives (of 300 full), 299 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_nolit_pubcount_adjusted__native_string_full700.tsv (635,280 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[ot_nolit_pubcount_adjusted x native_reactome] 3,953 genes, 300 positives (of 300 full), 230 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\ot_nolit_pubcount_adjusted__native_reactome.tsv (158,120 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen_temporal_new_pubcount_adjusted x native_funmap] 10,189 genes, 76 positives (of 76 full), 56 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen_temporal_new_pubcount_adjusted__native_funmap.tsv (407,560 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen_temporal_new_pubcount_adjusted x native_rna_coexp] 9,152 genes, 76 positives (of 76 full), 41 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen_temporal_new_pubcount_adjusted__native_rna_coexp.tsv (366,080 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen_temporal_new_pubcount_adjusted x native_string_phys700] 9,830 genes, 76 positives (of 76 full), 70 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen_temporal_new_pubcount_adjusted__native_string_phys700.tsv (393,200 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen_temporal_new_pubcount_adjusted x native_intact] 17,918 genes, 76 positives (of 76 full), 75 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen_temporal_new_pubcount_adjusted__native_intact.tsv (716,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen_temporal_new_pubcount_adjusted x native_string_full700] 15,882 genes, 76 positives (of 76 full), 76 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen_temporal_new_pubcount_adjusted__native_string_full700.tsv (635,280 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[intogen_temporal_new_pubcount_adjusted x native_reactome] 3,953 genes, 76 positives (of 76 full), 39 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\intogen_temporal_new_pubcount_adjusted__native_reactome.tsv (158,120 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[clingen_label_pubcount_adjusted x native_funmap] 10,189 genes, 42 positives (of 42 full), 24 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\clingen_label_pubcount_adjusted__native_funmap.tsv (407,560 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[clingen_label_pubcount_adjusted x native_rna_coexp] 9,152 genes, 42 positives (of 42 full), 26 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\clingen_label_pubcount_adjusted__native_rna_coexp.tsv (366,080 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[clingen_label_pubcount_adjusted x native_string_phys700] 9,830 genes, 42 positives (of 42 full), 42 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\clingen_label_pubcount_adjusted__native_string_phys700.tsv (393,200 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[clingen_label_pubcount_adjusted x native_intact] 17,918 genes, 42 positives (of 42 full), 42 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\clingen_label_pubcount_adjusted__native_intact.tsv (716,720 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[clingen_label_pubcount_adjusted x native_string_full700] 15,882 genes, 42 positives (of 42 full), 42 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\clingen_label_pubcount_adjusted__native_string_full700.tsv (635,280 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+[clingen_label_pubcount_adjusted x native_reactome] 3,953 genes, 42 positives (of 42 full), 37 positives in universe -> D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40\clingen_label_pubcount_adjusted__native_reactome.tsv (158,120 rows)
+
+Wrote 1 split files to D:\Grade3\swxxx\final\D1\d1-benchmark\data\processed\splits_v40 + audit log
+=== step 2: the 30 arms ===

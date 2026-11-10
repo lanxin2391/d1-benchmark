@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		0	0	degree		0.6296823658269443	0.00929373534141079	0.0	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		0	1	degree		0.5525570776255708	0.004302373583963818	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		0	2	degree		0.35841095890410957	0.002550306810845006	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		0	3	degree		0.5888767123287671	0.2029268968602337	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		0	4	degree		0.5019178082191781	0.005924837080747949	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		1	0	degree		0.49917853231106246	0.005354974864922325	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		1	1	degree		0.45123287671232876	0.00461512966244513	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		1	2	degree		0.6065205479452056	0.05317932647374422	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		1	3	degree		0.5456986301369864	0.005953577713655846	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		1	4	degree		0.548986301369863	0.0035327198480840597	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		2	0	degree		0.7481927710843373	0.0816690302263842	0.02	0.03	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		2	1	degree		0.42315068493150687	0.003039496573533469	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		2	2	degree		0.4351232876712329	0.0028602240305335633	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		2	3	degree		0.5677808219178082	0.003761217960324238	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		2	4	degree		0.491013698630137	0.004961498825812807	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		3	0	degree		0.2206462212486309	0.0022751745883133885	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		3	1	degree		0.47575342465753423	0.0035346778255598474	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		3	2	degree		0.5360547945205479	0.20260550722910092	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		3	3	degree		0.6353972602739726	0.006197912908705132	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		3	4	degree		0.7738630136986301	0.012547178437875662	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		4	0	degree		0.5933187294633079	0.005700486107226711	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		4	1	degree		0.44401826484018264	0.005341183925646226	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		4	2	degree		0.6145753424657534	0.2030587632338992	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		4	3	degree		0.4870684931506849	0.0029648100547889924	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		4	4	degree		0.5093150684931507	0.005724594411905991	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		5	0	degree		0.43932092004381157	0.004792995407790951	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		5	1	degree		0.5031050228310503	0.0038751636126651183	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		5	2	degree		0.5986301369863014	0.10306641719180562	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		5	3	degree		0.6836712328767123	0.010946638379071283	0.0	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		5	4	degree		0.40679452054794524	0.002706779499742263	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		6	0	degree		0.461500547645126	0.003077895434839831	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		6	1	degree		0.3931963470319635	0.003037259350116936	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		6	2	degree		0.6100821917808219	0.005767257787869745	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		6	3	degree		0.7014794520547946	0.10786064934144848	0.02	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		6	4	degree		0.5024657534246576	0.005753787831044325	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		7	0	degree		0.4000547645125958	0.002625920070586123	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		7	1	degree		0.6611415525114155	0.08762197503663863	0.02	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		7	2	degree		0.518958904109589	0.003214533711565254	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		7	3	degree		0.40372602739726027	0.005655162859787093	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		7	4	degree		0.6323287671232876	0.009492614623366657	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		8	0	degree		0.5484665936473165	0.06946983418342054	0.02	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		8	1	degree		0.4740182648401826	0.003376207208705987	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		8	2	degree		0.5251506849315069	0.005678708912345236	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		8	3	degree		0.4484931506849315	0.006063476605727945	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		8	4	degree		0.6362739726027397	0.005744082738833981	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		9	0	degree		0.6549288061336254	0.07008285399783769	0.02	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		9	1	degree		0.47360730593607303	0.0035222361520612522	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		9	2	degree		0.5175890410958903	0.009597423785940095	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		9	3	degree		0.3751232876712329	0.0028277777791757826	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		9	4	degree		0.6287123287671231	0.006372592507114338	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		10	0	degree		0.5491785323110624	0.005356796454543771	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		10	1	degree		0.6257534246575343	0.1744081737136348	0.02	0.02	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		10	2	degree		0.566958904109589	0.005766612824853384	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		10	3	degree		0.6243287671232877	0.0040605621768392995	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		10	4	degree		0.25315068493150683	0.0023752804483089802	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		11	0	degree		0.40240963855421685	0.002626896841257458	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		11	1	degree		0.5923287671232876	0.009310660566898658	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		11	2	degree		0.5905205479452055	0.10316084161293207	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		11	3	degree		0.47205479452054794	0.005126626191556077	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		11	4	degree		0.566027397260274	0.0037017249111495885	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		12	0	degree		0.5900876232201533	0.20304229214384617	0.02	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		12	1	degree		0.6106849315068493	0.006333368524610938	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		12	2	degree		0.45852054794520547	0.0029437181968445018	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		12	3	degree		0.49978082191780826	0.004528253612444072	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		12	4	degree		0.46361643835616434	0.005102289845155784	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		13	0	degree		0.6058050383351589	0.010828221788561023	0.0	0.02	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		13	1	degree		0.452054794520548	0.003322170374930017	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		13	2	degree		0.3833972602739726	0.002601907474768448	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		13	3	degree		0.6191232876712328	0.005865756976134326	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		13	4	degree		0.5822465753424658	0.20294248044669969	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		14	0	degree		0.6374589266155531	0.2037977837329745	0.02	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		14	1	degree		0.47141552511415524	0.0034661804617363203	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		14	2	degree		0.5894794520547946	0.005416558887355021	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		14	3	degree		0.48350684931506843	0.005150313288244323	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		14	4	degree		0.45775342465753427	0.005151282420008792	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		15	0	degree		0.33099671412924425	0.0024026574036233057	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		15	1	degree		0.5302739726027397	0.0055266237559700795	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		15	2	degree		0.5132054794520547	0.003145356892953633	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		15	3	degree		0.5927123287671233	0.005833951039450675	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		15	4	degree		0.6626849315068494	0.2075225167026364	0.02	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		16	0	degree		0.6414019715224535	0.10356404476301452	0.02	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		16	1	degree		0.5319634703196348	0.005762098709722914	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		16	2	degree		0.48005479452054794	0.00482030169589056	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		16	3	degree		0.4688219178082192	0.0048278799984837785	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		16	4	degree		0.5072328767123288	0.003448295656861876	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		17	0	degree		0.4708652792990142	0.004757607820862051	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		17	1	degree		0.6431506849315068	0.01076230450470238	0.0	0.02	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		17	2	degree		0.5295890410958904	0.2027058799990396	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		17	3	degree		0.5198356164383562	0.0033512709718743847	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		17	4	degree		0.4483287671232877	0.0032358015148335837	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		18	0	degree		0.6895947426067908	0.20823007141892724	0.02	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		18	1	degree		0.5387671232876713	0.003953096333472137	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		18	2	degree		0.45638356164383553	0.0048373400689337865	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		18	3	degree		0.5835616438356165	0.005978680675851002	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		18	4	degree		0.3614794520547945	0.002535164205848454	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		19	0	degree		0.5087623220153341	0.005504412932773239	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		19	1	degree		0.41150684931506853	0.005396015021303001	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		19	2	degree		0.6788493150684931	0.0537509320646722	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		19	3	degree		0.5665753424657534	0.0035216771525949956	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		19	4	degree		0.48668493150684927	0.005578358964940742	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		20	0	degree		0.4372398685651698	0.0051930327363528955	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		20	1	degree		0.5283561643835616	0.003793282793286255	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		20	2	degree		0.6232876712328766	0.005840256397370776	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		20	3	degree		0.6126575342465754	0.20332571468300914	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		20	4	degree		0.44334246575342473	0.004791694682426595	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		21	0	degree		0.5372946330777656	0.0034983786313133513	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		21	1	degree		0.5700456621004566	0.00637108628991471	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		21	2	degree		0.5184109589041096	0.004924949970575073	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		21	3	degree		0.49128767123287664	0.004738476225682138	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		21	4	degree		0.5058630136986302	0.20263270281178158	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		22	0	degree		0.428039430449069	0.0028276539318382436	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		22	1	degree		0.6863926940639269	0.09066224332327318	0.02	0.02	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		22	2	degree		0.5420273972602739	0.0055560772963651195	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		22	3	degree		0.3195068493150685	0.0023089030998266822	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		22	4	degree		0.6141369863013699	0.006519962584453721	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		23	0	degree		0.6731106243154437	0.006576197488565359	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		23	1	degree		0.602283105022831	0.006178022544136435	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		23	2	degree		0.4871232876712329	0.0029906755934012946	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		23	3	degree		0.4010958904109589	0.10216277948415932	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		23	4	degree		0.4601095890410959	0.005031336781176092	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		24	0	degree		0.6613362541073384	0.20351404937493303	0.02	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		24	1	degree		0.624337899543379	0.010378086095180736	0.0	0.02	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		24	2	degree		0.5527671232876712	0.003562275202677177	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		24	3	degree		0.41600000000000004	0.005048118832825648	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		24	4	degree		0.35939726027397256	0.00232939694968715	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		25	0	degree		0.6020810514786419	0.0056943357220635826	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		25	1	degree		0.48456621004566214	0.05843146757979652	0.02	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		25	2	degree		0.32394520547945205	0.002351548423881421	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		25	3	degree		0.5813150684931507	0.0036815774314537955	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		25	4	degree		0.6372602739726028	0.01051397832669037	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		26	0	degree		0.535487404162103	0.005492006695315349	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		26	1	degree		0.5127853881278539	0.1697403683843977	0.02	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		26	2	degree		0.5035616438356164	0.005374355411116026	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		26	3	degree		0.5943561643835616	0.0039778749134746	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		26	4	degree		0.4931506849315068	0.005299191677310298	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		27	0	degree		0.7642387732749178	0.010888642553198555	0.0	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		27	1	degree		0.4063926940639269	0.0031173541840529453	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		27	2	degree		0.587068493150685	0.00582156284689405	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		27	3	degree		0.49375342465753425	0.003009823748393673	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		27	4	degree		0.39643835616438355	0.10201653355751716	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		28	0	degree		0.5028477546549837	0.0031014189256803673	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		28	1	degree		0.45607305936073056	0.00338577892807333	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		28	2	degree		0.39775342465753427	0.004853011544938548	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		28	3	degree		0.8574794520547945	0.08192306915556416	0.02	0.03	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		28	4	degree		0.4294246575342466	0.00284288424604595	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		29	0	degree		0.5464950711938663	0.0053053768790789785	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		29	1	degree		0.43205479452054796	0.0032008792776534846	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		29	2	degree		0.6864657534246574	0.10805248041175525	0.02	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		29	3	degree		0.3655342465753425	0.002568148650600596	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		29	4	degree		0.6008219178082193	0.0055846105971534814	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		30	0	degree		0.4316538882803943	0.005528603955972074	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		30	1	degree		0.5804566210045663	0.0874520924834737	0.02	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		30	2	degree		0.5499178082191781	0.005256882239954962	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		30	3	degree		0.4915616438356165	0.004948073341377623	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		30	4	degree		0.5752876712328767	0.003590816408715425	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		31	0	degree		0.4927710843373494	0.005157103991474513	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		31	1	degree		0.6692237442922374	0.0917163251397061	0.02	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		31	2	degree		0.6201095890410959	0.004064150486910088	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		31	3	degree		0.4567123287671233	0.004736484412926876	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		31	4	degree		0.3715068493150685	0.0023838158872256645	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		32	0	degree		0.39737130339539983	0.0026762433762563187	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		32	1	degree		0.5262100456621004	0.005720701904511181	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		32	2	degree		0.5957808219178082	0.005859365422293386	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		32	3	degree		0.5066301369863013	0.10772264702052056	0.02	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		32	4	degree		0.6123835616438356	0.003926227105171319	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		33	0	degree		0.49052573932092003	0.0033064908852855285	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		33	1	degree		0.41657534246575345	0.005305538814814234	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		33	2	degree		0.49495890410958904	0.005359060562995552	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		33	3	degree		0.7404931506849314	0.007339163479718991	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		33	4	degree		0.5124931506849315	0.1026574017356589	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		34	0	degree		0.4155531215772179	0.002722272277612832	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		34	1	degree		0.4916894977168949	0.0055416688727613714	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		34	2	degree		0.5503013698630137	0.006095342204083351	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		34	3	degree		0.5312328767123288	0.06937843160095135	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		34	4	degree		0.6564383561643836	0.006579739888598906	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		35	0	degree		0.4638006571741512	0.003093740487456494	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		35	1	degree		0.5352968036529681	0.00544750200301305	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		35	2	degree		0.5453698630136986	0.0060271700962913136	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		35	3	degree		0.6345753424657535	0.20354820001843135	0.02	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		35	4	degree		0.45298630136986306	0.004891565467201579	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		36	0	degree		0.3730558598028478	0.002385570647195227	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		36	1	degree		0.4092694063926941	0.002976905051827048	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		36	2	degree		0.5604931506849316	0.003624012510282562	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		36	3	degree		0.45791780821917805	0.0030090716419558746	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		36	4	degree		0.855068493150685	0.22222004404331513	0.02	0.04	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		37	0	degree		0.2941401971522454	0.0022161222739985617	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		37	1	degree		0.713013698630137	0.06326432509234745	0.02	0.02	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		37	2	degree		0.4933150684931507	0.005135187683605347	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		37	3	degree		0.4586301369863014	0.0030137831642436585	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		37	4	degree		0.634027397260274	0.006606430099015775	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		38	0	degree		0.5222891566265061	0.0037161134787057513	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		38	1	degree		0.755662100456621	0.015477769790898595	0.0	0.03	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		38	2	degree		0.3290958904109589	0.002542377944448535	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		38	3	degree		0.6512876712328767	0.07040646081048828	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		38	4	degree		0.3267945205479452	0.002326866822282787	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		39	0	degree		0.482803943044907	0.0032499272808325192	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		39	1	degree		0.6920091324200914	0.016966260140175594	0.0	0.03	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		39	2	degree		0.4170958904109589	0.002734042146309827	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		39	3	degree		0.38060273972602743	0.002426815953934189	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp		39	4	degree		0.6295342465753424	0.20339886658641051	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	0	0	rwr	38.0	0.5951807228915663	0.008785947398691868	0.0	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	0	1	rwr	38.0	0.6096803652968037	0.005565382604500383	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	0	2	rwr	38.0	0.504986301369863	0.003260594783311635	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	0	3	rwr	38.0	0.555945205479452	0.0074968621498437285	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	0	4	rwr	38.0	0.46093150684931505	0.003355552209478165	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	1	0	rwr	38.0	0.527053669222344	0.00540466217722053	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	1	1	rwr	38.0	0.4329680365296804	0.004679504227532213	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	1	2	rwr	38.0	0.6691506849315069	0.006753122013092511	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	1	3	rwr	38.0	0.5734794520547944	0.006736105978423229	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	1	4	rwr	38.0	0.6256438356164384	0.004263558891627251	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	2	0	rwr	38.0	0.7209200438116101	0.011809168267305237	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	2	1	rwr	38.0	0.4337899543378996	0.0032348131936502287	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	2	2	rwr	38.0	0.47550684931506854	0.00326560669320899	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	2	3	rwr	38.0	0.6837260273972603	0.005472399780778057	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	2	4	rwr	38.0	0.5434520547945205	0.0056598258967990745	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	3	0	rwr	38.0	0.310460021905805	0.002248332642866392	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	3	1	rwr	38.0	0.5228310502283104	0.003893311761796527	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	3	2	rwr	38.0	0.4588493150684932	0.005264981080428973	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	3	3	rwr	38.0	0.6776986301369863	0.005914109676589397	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	3	4	rwr	38.0	0.8396712328767124	0.013167554004118858	0.0	0.01	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	4	0	rwr	38.0	0.5615553121577219	0.0038553816694284018	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	4	1	rwr	38.0	0.54	0.006758355116849099	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	4	2	rwr	38.0	0.584	0.005878086877492841	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	4	3	rwr	38.0	0.49884931506849317	0.0032795893262871603	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	4	4	rwr	38.0	0.6054794520547946	0.006428875303229244	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	5	0	rwr	38.0	0.49189485213581596	0.006153202461772038	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	5	1	rwr	38.0	0.5499543378995433	0.004721557873230342	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	5	2	rwr	38.0	0.6193972602739726	0.006802480894290501	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	5	3	rwr	38.0	0.7815890410958904	0.009460704397324117	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	5	4	rwr	38.0	0.39408219178082193	0.0029597804511364944	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	6	0	rwr	38.0	0.5005476451259584	0.003302877780437378	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	6	1	rwr	38.0	0.44538812785388127	0.0033794432557800545	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	6	2	rwr	38.0	0.6437260273972603	0.007770162256176277	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	6	3	rwr	38.0	0.7927671232876712	0.013775598397620083	0.02	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	6	4	rwr	38.0	0.47090410958904105	0.0037603180277201295	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	7	0	rwr	38.0	0.5175246440306681	0.0032220180998949605	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	7	1	rwr	38.0	0.6439269406392694	0.007225848250762926	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	7	2	rwr	38.0	0.6004383561643836	0.004102335762759224	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	7	3	rwr	38.0	0.4433972602739726	0.005519150529938475	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	7	4	rwr	38.0	0.6220273972602739	0.008148036476244645	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	8	0	rwr	38.0	0.5832420591456736	0.006298629528709769	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	8	1	rwr	38.0	0.5167123287671233	0.004136907168276629	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	8	2	rwr	38.0	0.5623013698630137	0.005687600057797566	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	8	3	rwr	38.0	0.5169315068493151	0.005254082179220411	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	8	4	rwr	38.0	0.617972602739726	0.004618189354881258	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	9	0	rwr	38.0	0.6751369112814897	0.01018144542311894	0.02	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	9	1	rwr	38.0	0.49041095890410963	0.004013375697597252	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	9	2	rwr	38.0	0.48558904109589046	0.006334838461296568	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	9	3	rwr	38.0	0.4012054794520548	0.0026797596873945977	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	9	4	rwr	38.0	0.5582465753424657	0.007279946024890197	0.02	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	10	0	rwr	38.0	0.5336254107338444	0.004185391350510613	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	10	1	rwr	38.0	0.6110502283105024	0.011180649704696184	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	10	2	rwr	38.0	0.5779726027397261	0.006206975961515364	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	10	3	rwr	38.0	0.7095890410958904	0.005614395085200627	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	10	4	rwr	38.0	0.38142465753424654	0.002497322769156713	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	11	0	rwr	38.0	0.49200438116100764	0.0031928804656864112	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	11	1	rwr	38.0	0.5972602739726027	0.006467118731912733	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	11	2	rwr	38.0	0.5995616438356165	0.008110744998843893	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	11	3	rwr	38.0	0.5528767123287672	0.005187079932809609	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	11	4	rwr	38.0	0.552986301369863	0.0036670465847515477	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	12	0	rwr	38.0	0.5690032858707558	0.006853247422094755	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	12	1	rwr	38.0	0.6474885844748859	0.007841195643328107	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	12	2	rwr	38.0	0.5000547945205479	0.0031500369058103384	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	12	3	rwr	38.0	0.48197260273972603	0.0033411729633533874	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	12	4	rwr	38.0	0.5797260273972602	0.0059364282698870195	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	13	0	rwr	38.0	0.70065717415115	0.008407407407502045	0.0	0.0	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	13	1	rwr	38.0	0.38662100456621007	0.002964106441712483	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	13	2	rwr	38.0	0.4521643835616439	0.0030851255509425817	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	13	3	rwr	38.0	0.5896986301369863	0.0053344440552379	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	13	4	rwr	38.0	0.5875068493150686	0.007536790918675649	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	14	0	rwr	38.0	0.6966046002190581	0.010868962088956154	0.02	0.01	0.008	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	14	1	rwr	38.0	0.4333333333333334	0.0032346385043490796	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	14	2	rwr	38.0	0.5627397260273972	0.005750367354818381	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	14	3	rwr	38.0	0.38953424657534247	0.0030420403109393587	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	14	4	rwr	38.0	0.5673424657534246	0.006350731731402444	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	15	0	rwr	38.0	0.3362541073384447	0.0023423117074406444	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	15	1	rwr	38.0	0.5410045662100457	0.005352416476453631	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	15	2	rwr	38.0	0.4161095890410959	0.0027699775651848207	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	15	3	rwr	38.0	0.6109589041095891	0.005050641116131173	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	15	4	rwr	38.0	0.6360547945205479	0.01257059917216283	0.02	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	16	0	rwr	38.0	0.6378970427163199	0.007093186493843074	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	16	1	rwr	38.0	0.5336073059360731	0.006346548798971325	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	16	2	rwr	38.0	0.4661917808219178	0.00368036470989811	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	16	3	rwr	38.0	0.41808219178082195	0.005250758102480446	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	16	4	rwr	38.0	0.5311780821917808	0.0033467981599924826	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	17	0	rwr	38.0	0.5163198247535596	0.005266278421320582	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	17	1	rwr	38.0	0.6140639269406393	0.008028281519315944	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	17	2	rwr	38.0	0.49073972602739724	0.005669729605775168	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	17	3	rwr	38.0	0.5412602739726027	0.004415638448285481	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	17	4	rwr	38.0	0.5689863013698631	0.0036151348842629214	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	18	0	rwr	38.0	0.7309967141292443	0.012830960782384087	0.0	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	18	1	rwr	38.0	0.5318721461187216	0.004257492450600642	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	18	2	rwr	38.0	0.5081643835616438	0.006897607094872405	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	18	3	rwr	38.0	0.5898082191780822	0.004370997275657023	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	18	4	rwr	38.0	0.4604931506849315	0.0029905018873403353	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	19	0	rwr	38.0	0.39441401971522455	0.004986805317842625	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	19	1	rwr	38.0	0.4463013698630137	0.003763086322083201	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	19	2	rwr	38.0	0.6505205479452054	0.008042137035860262	0.02	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	19	3	rwr	38.0	0.6256438356164383	0.004655176318539627	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	19	4	rwr	38.0	0.5267945205479452	0.006502439386722068	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	20	0	rwr	38.0	0.4806133625410734	0.005279549372849353	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	20	1	rwr	38.0	0.6046575342465753	0.004946059032627442	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	20	2	rwr	38.0	0.5753424657534247	0.004588117545094418	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	20	3	rwr	38.0	0.7288767123287672	0.008790002017991882	0.02	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	20	4	rwr	38.0	0.4185205479452055	0.004882953209549842	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	21	0	rwr	38.0	0.6031763417305587	0.0047419293405406215	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	21	1	rwr	38.0	0.6810045662100457	0.006988985709486042	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	21	2	rwr	38.0	0.49424657534246574	0.004956933395745625	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	21	3	rwr	38.0	0.4625753424657534	0.0033969598165398524	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	21	4	rwr	38.0	0.540931506849315	0.006454156141493379	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	22	0	rwr	38.0	0.3933187294633078	0.0025541951140301265	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	22	1	rwr	38.0	0.6394520547945206	0.0070384910089138775	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	22	2	rwr	38.0	0.648	0.005634206993000363	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	22	3	rwr	38.0	0.34476712328767123	0.0023500512899319605	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	22	4	rwr	38.0	0.7004931506849316	0.008421366318102644	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	23	0	rwr	38.0	0.7002190580503833	0.007622233445843761	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	23	1	rwr	38.0	0.6464840182648403	0.006595729819542269	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	23	2	rwr	38.0	0.544986301369863	0.0034157304273342384	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	23	3	rwr	38.0	0.43298630136986305	0.005669548074346331	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	23	4	rwr	38.0	0.45150684931506846	0.005284190400774193	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	24	0	rwr	38.0	0.6142387732749178	0.006566771458614135	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	24	1	rwr	38.0	0.6538812785388128	0.010123825287879622	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	24	2	rwr	38.0	0.5632876712328767	0.0036042277103268705	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	24	3	rwr	38.0	0.47243835616438357	0.005889004110698393	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	24	4	rwr	38.0	0.44054794520547946	0.0029411105711668775	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	25	0	rwr	38.0	0.6136911281489594	0.004873813176772098	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	25	1	rwr	38.0	0.38981735159817343	0.005006526286033244	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	25	2	rwr	38.0	0.40580821917808224	0.0026620262209617745	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	25	3	rwr	38.0	0.6756164383561644	0.004985679133362152	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	25	4	rwr	38.0	0.6078904109589041	0.007532847972794748	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	26	0	rwr	38.0	0.5695509309967142	0.006091849767604682	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	26	1	rwr	38.0	0.5927853881278539	0.0071116131125851505	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	26	2	rwr	38.0	0.4552328767123288	0.005230634035494567	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	26	3	rwr	38.0	0.559013698630137	0.003793945038005494	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	26	4	rwr	38.0	0.5955068493150685	0.004413825772950734	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	27	0	rwr	38.0	0.7608981380065718	0.008182652368698879	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	27	1	rwr	38.0	0.4835616438356164	0.004118281198818198	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	27	2	rwr	38.0	0.541917808219178	0.004430090297729228	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	27	3	rwr	38.0	0.5825753424657535	0.00374955952262848	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	27	4	rwr	38.0	0.44602739726027396	0.005582535486068717	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	28	0	rwr	38.0	0.5023001095290252	0.003337005373313006	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	28	1	rwr	38.0	0.4609132420091324	0.0034926222511619327	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	28	2	rwr	38.0	0.4965479452054794	0.006348841732552052	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	28	3	rwr	38.0	0.8122739726027397	0.012569651740858867	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	28	4	rwr	38.0	0.5230684931506849	0.0036104673484635827	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	29	0	rwr	38.0	0.5900328587075574	0.006529166906908591	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	29	1	rwr	38.0	0.44337899543378995	0.003243062546185835	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	29	2	rwr	38.0	0.6218082191780823	0.01114317238583589	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	29	3	rwr	38.0	0.3774246575342466	0.0025939735127847962	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	29	4	rwr	38.0	0.630027397260274	0.004959011807074807	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	30	0	rwr	38.0	0.427053669222344	0.006198318091561239	0.02	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	30	1	rwr	38.0	0.6624657534246575	0.008117669945087395	0.02	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	30	2	rwr	38.0	0.49019178082191783	0.00610162030462055	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	30	3	rwr	38.0	0.40920547945205477	0.003676249913626449	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	30	4	rwr	38.0	0.6078904109589042	0.00474569855892803	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	31	0	rwr	38.0	0.38302300109529025	0.004823898234381203	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	31	1	rwr	38.0	0.6933333333333334	0.014853185666983864	0.04	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	31	2	rwr	38.0	0.6487671232876712	0.004595599912245535	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	31	3	rwr	38.0	0.3963835616438356	0.002927625484444414	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	31	4	rwr	38.0	0.3770958904109589	0.0025334356121322244	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	32	0	rwr	38.0	0.3213581599123768	0.0023547205009227298	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	32	1	rwr	38.0	0.6337899543378994	0.006477342067086037	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	32	2	rwr	38.0	0.6073424657534248	0.006552323477168027	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	32	3	rwr	38.0	0.5282191780821919	0.006321865778019875	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	32	4	rwr	38.0	0.6966575342465754	0.005500397789074376	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	33	0	rwr	38.0	0.5409638554216868	0.003504418623518369	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	33	1	rwr	38.0	0.37305936073059365	0.004784709833683518	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	33	2	rwr	38.0	0.5196712328767124	0.0037125945701573628	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	33	3	rwr	38.0	0.8107397260273972	0.009227119144714004	0.0	0.01	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	33	4	rwr	38.0	0.5792876712328767	0.0063359527056912855	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	34	0	rwr	38.0	0.3101861993428258	0.002656420043303471	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	34	1	rwr	38.0	0.4595433789954338	0.00679218029675623	0.02	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	34	2	rwr	38.0	0.605041095890411	0.005560054597057648	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	34	3	rwr	38.0	0.4844931506849315	0.004843082048993339	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	34	4	rwr	38.0	0.7363287671232878	0.006180229123295639	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	35	0	rwr	38.0	0.4549835706462213	0.0028879124974618875	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	35	1	rwr	38.0	0.5378082191780822	0.005387766008321937	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	35	2	rwr	38.0	0.45539726027397265	0.005773049068067002	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	35	3	rwr	38.0	0.7229589041095891	0.010627181037160871	0.02	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	35	4	rwr	38.0	0.466958904109589	0.004721837424285901	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	36	0	rwr	38.0	0.4006571741511501	0.0025951834329766936	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	36	1	rwr	38.0	0.361324200913242	0.00287918208354279	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	36	2	rwr	38.0	0.5907945205479452	0.005051375783002629	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	36	3	rwr	38.0	0.46915068493150686	0.003246601035053828	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	36	4	rwr	38.0	0.7927671232876713	0.01989459420447242	0.0	0.03	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	37	0	rwr	38.0	0.3573932092004381	0.0024090075176044744	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	37	1	rwr	38.0	0.7164383561643836	0.010511715669685754	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	37	2	rwr	38.0	0.46728767123287673	0.003563288081117521	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	37	3	rwr	38.0	0.5353424657534247	0.0042575636900895235	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	37	4	rwr	38.0	0.6816438356164384	0.0066215381103182465	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	38	0	rwr	38.0	0.551369112814896	0.003635748488985249	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	38	1	rwr	38.0	0.7236529680365297	0.011546452901251145	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	38	2	rwr	38.0	0.3321643835616438	0.0023537048223621865	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	38	3	rwr	38.0	0.6873424657534246	0.009574597981706524	0.02	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	38	4	rwr	38.0	0.3482739726027398	0.002376502745265686	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	39	0	rwr	38.0	0.4371303395399781	0.0029848333645932316	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	39	1	rwr	38.0	0.7042922374429224	0.012598367765107832	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	39	2	rwr	38.0	0.520986301369863	0.003775961375842212	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	39	3	rwr	38.0	0.44427397260273976	0.002829238641794694	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.3	39	4	rwr	38.0	0.545095890410959	0.006401097906131633	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	0	0	rwr	21.0	0.5899233296823659	0.00724847584507296	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	0	1	rwr	21.0	0.6028310502283104	0.005212295978808465	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	0	2	rwr	21.0	0.5350136986301369	0.0034824596797392348	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	0	3	rwr	21.0	0.5483835616438356	0.006224954501685623	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	0	4	rwr	21.0	0.482958904109589	0.0035071587220144237	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	1	0	rwr	21.0	0.5392113910186199	0.005176385158260964	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	1	1	rwr	21.0	0.4318721461187215	0.004549705236753801	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	1	2	rwr	21.0	0.6776986301369863	0.006321259402518273	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	1	3	rwr	21.0	0.5952876712328767	0.006312890929811729	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	1	4	rwr	21.0	0.6372602739726028	0.004398136723554592	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	2	0	rwr	21.0	0.7232201533406353	0.010654227827789072	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	2	1	rwr	21.0	0.4255707762557077	0.0031841392715844835	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	2	2	rwr	21.0	0.5002739726027398	0.0033227695900288354	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	2	3	rwr	21.0	0.6883287671232876	0.005481593642670619	0.0	0.0	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	2	4	rwr	21.0	0.5677808219178083	0.0053397887838122025	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	3	0	rwr	21.0	0.34759036144578315	0.0023776839816180566	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	3	1	rwr	21.0	0.5331506849315069	0.003959611618081479	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	3	2	rwr	21.0	0.4547945205479452	0.0048247857499511635	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	3	3	rwr	21.0	0.6951232876712329	0.006355650372146336	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	3	4	rwr	21.0	0.8336438356164383	0.012703111642955418	0.0	0.01	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	4	0	rwr	21.0	0.5759036144578313	0.004070253512914566	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	4	1	rwr	21.0	0.5536073059360731	0.006504314917806292	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	4	2	rwr	21.0	0.5864109589041097	0.005491587291362256	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	4	3	rwr	21.0	0.5033424657534247	0.0033419076353140803	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	4	4	rwr	21.0	0.6040547945205479	0.0057989904347490115	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	5	0	rwr	21.0	0.5186199342825849	0.005306783310373902	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	5	1	rwr	21.0	0.5526027397260274	0.0047202920957657	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	5	2	rwr	21.0	0.6369315068493151	0.006674963817820961	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	5	3	rwr	21.0	0.7825753424657534	0.00980719078147032	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	5	4	rwr	21.0	0.3983561643835617	0.002824429666466525	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	6	0	rwr	21.0	0.5059145673603506	0.0033131547628064226	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	6	1	rwr	21.0	0.47214611872146117	0.003560282306798985	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	6	2	rwr	21.0	0.6393424657534247	0.006591439952447242	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	6	3	rwr	21.0	0.7946301369863014	0.012671733128278068	0.0	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	6	4	rwr	21.0	0.4871232876712329	0.003980088624479836	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	7	0	rwr	21.0	0.5394304490690033	0.0033813239449316983	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	7	1	rwr	21.0	0.647123287671233	0.006941492476410368	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	7	2	rwr	21.0	0.6111780821917808	0.004038234662246001	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	7	3	rwr	21.0	0.4557808219178083	0.005245522099265066	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	7	4	rwr	21.0	0.6212602739726028	0.00818165235690568	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	8	0	rwr	21.0	0.6050383351588171	0.006194213280846084	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	8	1	rwr	21.0	0.5145205479452055	0.0039661650445905715	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	8	2	rwr	21.0	0.5641643835616438	0.005578184666933661	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	8	3	rwr	21.0	0.5295342465753424	0.0051559251014821695	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	8	4	rwr	21.0	0.6231232876712328	0.004637778838526554	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	9	0	rwr	21.0	0.6706462212486308	0.007975444023956642	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	9	1	rwr	21.0	0.506027397260274	0.004049669080862801	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	9	2	rwr	21.0	0.4928219178082192	0.0063187755511114815	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	9	3	rwr	21.0	0.4177534246575342	0.002738842042936245	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	9	4	rwr	21.0	0.5755616438356164	0.006246715858733421	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	10	0	rwr	21.0	0.5462212486308872	0.004452511713198424	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	10	1	rwr	21.0	0.6195433789954338	0.01024283973349569	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	10	2	rwr	21.0	0.5875068493150686	0.005973546748765591	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	10	3	rwr	21.0	0.6946849315068493	0.005245532329341387	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	10	4	rwr	21.0	0.4043287671232877	0.002588328609493282	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	11	0	rwr	21.0	0.4996714129244251	0.0033025627081133472	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	11	1	rwr	21.0	0.6079452054794521	0.006253798932092217	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	11	2	rwr	21.0	0.589917808219178	0.006674908223814551	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	11	3	rwr	21.0	0.5656986301369863	0.004981085749337519	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	11	4	rwr	21.0	0.5644931506849314	0.003828621732961757	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	12	0	rwr	21.0	0.568236582694414	0.006389299884968509	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	12	1	rwr	21.0	0.6534246575342465	0.007517289574457119	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	12	2	rwr	21.0	0.5125479452054795	0.003202423555074058	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	12	3	rwr	21.0	0.4900821917808219	0.0034687240322713317	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	12	4	rwr	21.0	0.5969315068493151	0.005700590592168017	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	13	0	rwr	21.0	0.703723986856517	0.007913631765376409	0.0	0.0	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	13	1	rwr	21.0	0.39164383561643845	0.0029894811732857985	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	13	2	rwr	21.0	0.4776986301369863	0.0032445209919176534	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	13	3	rwr	21.0	0.5951780821917808	0.005297726127928889	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	13	4	rwr	21.0	0.5798356164383561	0.006307223988598083	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	14	0	rwr	21.0	0.6832420591456737	0.008599174215742172	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	14	1	rwr	21.0	0.4579908675799087	0.0034075970944701262	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	14	2	rwr	21.0	0.561972602739726	0.005476316997110553	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	14	3	rwr	21.0	0.39084931506849313	0.003072610155349464	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	14	4	rwr	21.0	0.5891506849315069	0.006257918620939665	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	15	0	rwr	21.0	0.33943044906900327	0.002338120140223822	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	15	1	rwr	21.0	0.547945205479452	0.005342128245396937	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	15	2	rwr	21.0	0.433972602739726	0.0028295462911928117	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	15	3	rwr	21.0	0.6292602739726028	0.005383829215519137	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	15	4	rwr	21.0	0.642958904109589	0.010620595753819162	0.0	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	16	0	rwr	21.0	0.6417305585980284	0.006462416612534423	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	16	1	rwr	21.0	0.5540639269406393	0.006020264651148656	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	16	2	rwr	21.0	0.4824109589041096	0.003847701578617306	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	16	3	rwr	21.0	0.4083287671232877	0.004468955956207765	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	16	4	rwr	21.0	0.5447671232876712	0.0034308084935619322	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	17	0	rwr	21.0	0.5396495071193866	0.005023157924345103	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	17	1	rwr	21.0	0.6302283105022831	0.008258969292675182	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	17	2	rwr	21.0	0.49654794520547946	0.005336588638588585	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	17	3	rwr	21.0	0.5356712328767124	0.0041151611091666766	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	17	4	rwr	21.0	0.5797260273972603	0.0036921519207093172	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	18	0	rwr	21.0	0.7285870755750274	0.011534391538409619	0.0	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	18	1	rwr	21.0	0.5375342465753424	0.004269325062870152	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	18	2	rwr	21.0	0.5101369863013699	0.005709517289999311	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	18	3	rwr	21.0	0.5960547945205479	0.0045434195889952084	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	18	4	rwr	21.0	0.49720547945205484	0.003262965199850104	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	19	0	rwr	21.0	0.3923329682365827	0.0046256192013464405	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	19	1	rwr	21.0	0.4464840182648402	0.0037847541865915486	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	19	2	rwr	21.0	0.6406575342465753	0.006970940635883702	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	19	3	rwr	21.0	0.6405479452054794	0.004621774368368779	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	19	4	rwr	21.0	0.5443287671232877	0.006068152046932532	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	20	0	rwr	21.0	0.4926615553121577	0.005134761655821993	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	20	1	rwr	21.0	0.6132420091324201	0.005006532692812473	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	20	2	rwr	21.0	0.5650410958904108	0.0045176429397956195	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	20	3	rwr	21.0	0.7375342465753424	0.008098586052789888	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	20	4	rwr	21.0	0.4227945205479452	0.0043860380146960665	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	21	0	rwr	21.0	0.5891566265060241	0.004326695462503979	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	21	1	rwr	21.0	0.6918721461187214	0.007126108597920916	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	21	2	rwr	21.0	0.5194520547945205	0.004878607944040523	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	21	3	rwr	21.0	0.47704109589041094	0.0036455964247997345	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	21	4	rwr	21.0	0.5586849315068494	0.005635075497252558	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	22	0	rwr	21.0	0.41423877327491787	0.0026406780927227544	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	22	1	rwr	21.0	0.6420091324200914	0.006932614928225955	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	22	2	rwr	21.0	0.6544657534246575	0.005836993915352257	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	22	3	rwr	21.0	0.34805479452054794	0.002365296076549439	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	22	4	rwr	21.0	0.7107945205479452	0.008007745440814453	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	23	0	rwr	21.0	0.704381161007667	0.007307369268356352	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	23	1	rwr	21.0	0.6488584474885845	0.006587838516002416	0.0	0.0	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	23	2	rwr	21.0	0.560986301369863	0.0035207282148218143	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	23	3	rwr	21.0	0.4433972602739726	0.005437417680310095	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	23	4	rwr	21.0	0.4702465753424657	0.0044462631360631345	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	24	0	rwr	21.0	0.6107338444687842	0.006161846912679047	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	24	1	rwr	21.0	0.654703196347032	0.008863176071491988	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	24	2	rwr	21.0	0.5822465753424658	0.0037303063588142917	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	24	3	rwr	21.0	0.4965479452054795	0.005358428623996339	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	24	4	rwr	21.0	0.4513972602739726	0.0030733707470801414	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	25	0	rwr	21.0	0.6193866374589266	0.004968829012715845	0.0	0.0	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	25	1	rwr	21.0	0.3924657534246575	0.0048314498711692876	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	25	2	rwr	21.0	0.41205479452054794	0.002685390482238023	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	25	3	rwr	21.0	0.6828493150684932	0.00493351141170751	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	25	4	rwr	21.0	0.5986849315068493	0.006704032462165946	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	26	0	rwr	21.0	0.572289156626506	0.005592380018445172	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	26	1	rwr	21.0	0.6086757990867581	0.006956305997727094	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	26	2	rwr	21.0	0.46345205479452056	0.0045855764217830365	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	26	3	rwr	21.0	0.5669041095890411	0.0038898763966774344	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	26	4	rwr	21.0	0.6087671232876712	0.004653662508090477	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	27	0	rwr	21.0	0.7579408543263965	0.007658967289552853	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	27	1	rwr	21.0	0.510958904109589	0.004182463228527852	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	27	2	rwr	21.0	0.5441095890410959	0.004564440721185923	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	27	3	rwr	21.0	0.608986301369863	0.003953525036678621	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	27	4	rwr	21.0	0.4523835616438356	0.004767785499512593	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	28	0	rwr	21.0	0.509090909090909	0.0034007191392976303	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	28	1	rwr	21.0	0.4735159817351598	0.0035541624771412397	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	28	2	rwr	21.0	0.4966575342465754	0.005478827142160829	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	28	3	rwr	21.0	0.8058082191780822	0.011596502427034517	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	28	4	rwr	21.0	0.5501369863013699	0.003598269294958549	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	29	0	rwr	21.0	0.6076670317634174	0.005793077806041406	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	29	1	rwr	21.0	0.44666666666666666	0.003268764557416982	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	29	2	rwr	21.0	0.6286027397260274	0.009609545717535412	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	29	3	rwr	21.0	0.36876712328767125	0.0025354170181172953	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	29	4	rwr	21.0	0.6467945205479452	0.005224015176483396	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	30	0	rwr	21.0	0.44205914567360355	0.004835130093042315	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	30	1	rwr	21.0	0.6712328767123288	0.007454621657827999	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	30	2	rwr	21.0	0.48953424657534245	0.005370084199275664	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	30	3	rwr	21.0	0.422904109589041	0.0037641464274942053	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	30	4	rwr	21.0	0.6176438356164384	0.004783466284899082	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	31	0	rwr	21.0	0.3696604600219058	0.00448176374684855	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	31	1	rwr	21.0	0.70675799086758	0.014095783746645565	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	31	2	rwr	21.0	0.6584109589041096	0.004712709607448521	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	31	3	rwr	21.0	0.4012054794520548	0.0030151723780128836	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	31	4	rwr	21.0	0.3861917808219178	0.0025637228928507604	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	32	0	rwr	21.0	0.3163198247535597	0.002344894983225884	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	32	1	rwr	21.0	0.651324200913242	0.0065531586145938705	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	32	2	rwr	21.0	0.6141369863013698	0.006130943093751543	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	32	3	rwr	21.0	0.5402739726027398	0.006089390558071558	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	32	4	rwr	21.0	0.7033424657534247	0.005478275330139828	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	33	0	rwr	21.0	0.5385542168674698	0.003499511609457052	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	33	1	rwr	21.0	0.38210045662100456	0.004371183541079685	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	33	2	rwr	21.0	0.5357808219178082	0.003919427423512997	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	33	3	rwr	21.0	0.8024109589041096	0.008686073168335872	0.0	0.01	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	33	4	rwr	21.0	0.5963835616438357	0.005659777086141621	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	34	0	rwr	21.0	0.3104052573932092	0.0025132820270848287	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	34	1	rwr	21.0	0.47132420091324195	0.006017658506705618	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	34	2	rwr	21.0	0.6360547945205479	0.005543823023312446	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	34	3	rwr	21.0	0.4938082191780822	0.00484695692418024	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	34	4	rwr	21.0	0.7362191780821917	0.006303270805727562	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	35	0	rwr	21.0	0.48882803943044917	0.0030488463612339924	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	35	1	rwr	21.0	0.5453881278538814	0.005452212088488577	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	35	2	rwr	21.0	0.444986301369863	0.005049769528626256	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	35	3	rwr	21.0	0.7149589041095891	0.008229455535968206	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	35	4	rwr	21.0	0.4606027397260274	0.004587486505985322	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	36	0	rwr	21.0	0.4311062431544359	0.002735438489954679	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	36	1	rwr	21.0	0.3682648401826484	0.0029224858843062587	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	36	2	rwr	21.0	0.5869589041095891	0.004627847261962888	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	36	3	rwr	21.0	0.48712328767123286	0.003410215947085903	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	36	4	rwr	21.0	0.7843287671232878	0.018297020465340697	0.0	0.02	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	37	0	rwr	21.0	0.367907995618839	0.0024422146244147467	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	37	1	rwr	21.0	0.7259360730593607	0.01022546578423732	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	37	2	rwr	21.0	0.4970958904109589	0.0039011316282997963	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	37	3	rwr	21.0	0.5242739726027397	0.00388810789802873	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	37	4	rwr	21.0	0.6875616438356165	0.006757859929658462	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	38	0	rwr	21.0	0.571960569550931	0.003787054821035503	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	38	1	rwr	21.0	0.734337899543379	0.011653234492791393	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	38	2	rwr	21.0	0.35506849315068495	0.0024167108479681214	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	38	3	rwr	21.0	0.6823013698630137	0.007790147537659298	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	38	4	rwr	21.0	0.34213698630136985	0.002364248247842492	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	39	0	rwr	21.0	0.4468784227820372	0.002973682246349247	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	39	1	rwr	21.0	0.7039269406392693	0.012539448272711699	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	39	2	rwr	21.0	0.5304109589041096	0.0036436895793709265	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	39	3	rwr	21.0	0.47364383561643836	0.0029803017065690995	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.5	39	4	rwr	21.0	0.5586849315068494	0.006194803565530423	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	0	0	rwr	13.0	0.5846659364731653	0.006032370513526635	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	0	1	rwr	13.0	0.5893150684931506	0.004861672057503452	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	0	2	rwr	13.0	0.5623013698630137	0.0036864641528240585	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	0	3	rwr	13.0	0.5438904109589041	0.006175791190784629	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	0	4	rwr	13.0	0.5151780821917809	0.0037208799908873096	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	1	0	rwr	13.0	0.548959474260679	0.0050991354017183525	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	1	1	rwr	13.0	0.4304109589041096	0.004343499267522783	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	1	2	rwr	13.0	0.6867945205479452	0.006266655646741557	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	1	3	rwr	13.0	0.6121643835616438	0.006259985226895687	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	1	4	rwr	13.0	0.648986301369863	0.004513711724837518	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	2	0	rwr	13.0	0.7276013143483023	0.010668885938264719	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	2	1	rwr	13.0	0.4172602739726027	0.003127480631826682	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	2	2	rwr	13.0	0.5244931506849315	0.003416246252516917	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	2	3	rwr	13.0	0.6855890410958905	0.0054586210174897756	0.0	0.0	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	2	4	rwr	13.0	0.5865205479452055	0.005146162922981673	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	3	0	rwr	13.0	0.3740963855421687	0.002483435534579642	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	3	1	rwr	13.0	0.5463013698630137	0.004070983879324398	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	3	2	rwr	13.0	0.45194520547945205	0.00470826886735223	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	3	3	rwr	13.0	0.7121095890410959	0.0064753064201058304	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	3	4	rwr	13.0	0.8242191780821918	0.012302867210224798	0.0	0.01	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	4	0	rwr	13.0	0.5968236582694414	0.00434711459234681	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	4	1	rwr	13.0	0.5637442922374429	0.006170165111810425	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	4	2	rwr	13.0	0.5912328767123288	0.005455995190282031	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	4	3	rwr	13.0	0.5092602739726027	0.0034236482172225313	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	4	4	rwr	13.0	0.5915616438356164	0.005416846580872027	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	5	0	rwr	13.0	0.5366922234392113	0.005349940277122442	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	5	1	rwr	13.0	0.548675799086758	0.004622635527429373	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	5	2	rwr	13.0	0.6576438356164384	0.006749426901923573	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	5	3	rwr	13.0	0.7792876712328767	0.01037891169497263	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	5	4	rwr	13.0	0.40471232876712326	0.0027181183726151933	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	6	0	rwr	13.0	0.5107338444687842	0.0033413946798615955	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	6	1	rwr	13.0	0.4976255707762557	0.003707875482666958	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	6	2	rwr	13.0	0.6380273972602739	0.006176331867888289	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	6	3	rwr	13.0	0.7961643835616439	0.012997937038010644	0.0	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	6	4	rwr	13.0	0.49567123287671233	0.004073241574075134	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	7	0	rwr	13.0	0.5564074479737131	0.003506376291327813	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	7	1	rwr	13.0	0.6507762557077625	0.006927657917307969	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	7	2	rwr	13.0	0.6231232876712328	0.0040960865742080774	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	7	3	rwr	13.0	0.4671780821917808	0.0052014576094097835	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	7	4	rwr	13.0	0.6219178082191781	0.008779127194580308	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	8	0	rwr	13.0	0.6142387732749179	0.006132335469652007	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	8	1	rwr	13.0	0.5089497716894977	0.0037693090756977876	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	8	2	rwr	13.0	0.5624109589041095	0.005424792970621314	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	8	3	rwr	13.0	0.5364383561643836	0.00516994116241294	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	8	4	rwr	13.0	0.6455890410958904	0.004858520208893699	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	9	0	rwr	13.0	0.6700985761226725	0.00754899447833715	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	9	1	rwr	13.0	0.5152511415525114	0.004098502740894589	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	9	2	rwr	13.0	0.5056438356164383	0.006629215753632267	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	9	3	rwr	13.0	0.4373698630136986	0.0028216732911908343	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	9	4	rwr	13.0	0.6093150684931508	0.006384706795082119	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	10	0	rwr	13.0	0.5538882803943045	0.004684890164663469	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	10	1	rwr	13.0	0.6324200913242009	0.01057101488260005	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	10	2	rwr	13.0	0.5962739726027397	0.005973631368055548	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	10	3	rwr	13.0	0.6735342465753424	0.004872173126194728	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	10	4	rwr	13.0	0.42909589041095886	0.00270210299943178	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	11	0	rwr	13.0	0.5010952902519168	0.0033217297597582505	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	11	1	rwr	13.0	0.6186301369863014	0.005956238801256135	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	11	2	rwr	13.0	0.5773150684931507	0.006357341024506034	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	11	3	rwr	13.0	0.572054794520548	0.0047109013331905454	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	11	4	rwr	13.0	0.576	0.003955959729515426	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	12	0	rwr	13.0	0.5686746987951807	0.006225919421215821	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	12	1	rwr	13.0	0.6607305936073059	0.0073419767271573995	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	12	2	rwr	13.0	0.5265753424657533	0.0032842665847395832	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	12	3	rwr	13.0	0.504986301369863	0.0035759209196467995	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	12	4	rwr	13.0	0.6065753424657534	0.0057476531149118805	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	13	0	rwr	13.0	0.6986856516976999	0.007225036710724549	0.0	0.0	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	13	1	rwr	13.0	0.39757990867579907	0.003036609336636023	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	13	2	rwr	13.0	0.5021369863013698	0.0034264757800737213	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	13	3	rwr	13.0	0.6036164383561644	0.005142796739009253	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	13	4	rwr	13.0	0.5790684931506849	0.005999063639869654	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	14	0	rwr	13.0	0.6683461117196057	0.007949889356136995	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	14	1	rwr	13.0	0.4823744292237443	0.0035962013625018023	0.0	0.0	0.0	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	14	2	rwr	13.0	0.5648219178082192	0.005446437376197332	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	14	3	rwr	13.0	0.40794520547945207	0.0031432637927117798	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	14	4	rwr	13.0	0.6108493150684932	0.006056881354051437	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	15	0	rwr	13.0	0.3384446878422782	0.0023302210567278923	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	15	1	rwr	13.0	0.5501369863013699	0.005248540879802657	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	15	2	rwr	13.0	0.46345205479452056	0.002997411959022305	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	15	3	rwr	13.0	0.645041095890411	0.00574454491454683	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	15	4	rwr	13.0	0.6557808219178082	0.01074797990794554	0.0	0.02	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	16	0	rwr	13.0	0.6384446878422781	0.006387097717484918	0.0	0.01	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	16	1	rwr	13.0	0.5741552511415525	0.006032062495545457	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	16	2	rwr	13.0	0.49830136986301365	0.003952690046861534	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	16	3	rwr	13.0	0.4007671232876713	0.004230516625696905	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	16	4	rwr	13.0	0.5587945205479452	0.003519297582550058	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	17	0	rwr	13.0	0.564184008762322	0.005006667507340482	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	17	1	rwr	13.0	0.652420091324201	0.009017089219756025	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	17	2	rwr	13.0	0.5037808219178082	0.005391626543549054	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	17	3	rwr	13.0	0.5298630136986301	0.0039036979507293627	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	17	4	rwr	13.0	0.5860821917808219	0.0037400424704797713	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	18	0	rwr	13.0	0.7293537787513691	0.011340203810559356	0.0	0.02	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	18	1	rwr	13.0	0.54337899543379	0.004280539856444962	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	18	2	rwr	13.0	0.5148493150684932	0.005327086520731057	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	18	3	rwr	13.0	0.6004383561643836	0.00484570592615789	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	18	4	rwr	13.0	0.5212054794520548	0.0034708066790749064	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	19	0	rwr	13.0	0.3971522453450165	0.004457615545575415	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	19	1	rwr	13.0	0.45680365296803654	0.0038674172166634126	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	19	2	rwr	13.0	0.6358356164383562	0.006786362041429045	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	19	3	rwr	13.0	0.6518356164383562	0.004606583946363473	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	19	4	rwr	13.0	0.5631780821917808	0.006157147444069587	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	20	0	rwr	13.0	0.5089813800657174	0.005144937537490634	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	20	1	rwr	13.0	0.6109589041095891	0.0049770387906431495	0.0	0.0	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	20	2	rwr	13.0	0.5675616438356165	0.004440718305176901	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	20	3	rwr	13.0	0.7370958904109588	0.007929464556379526	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	20	4	rwr	13.0	0.4361643835616439	0.0043469184739352296	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	21	0	rwr	13.0	0.5752464403066813	0.004074176001104813	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	21	1	rwr	13.0	0.6958904109589041	0.007160357059691931	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	21	2	rwr	13.0	0.5437808219178082	0.004789294573473522	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	21	3	rwr	13.0	0.4888767123287671	0.0039776145527121495	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	21	4	rwr	13.0	0.575013698630137	0.00541565198572843	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	22	0	rwr	13.0	0.44085432639649513	0.0027710998705136047	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	22	1	rwr	13.0	0.6438356164383561	0.0066737611977369165	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	22	2	rwr	13.0	0.6524931506849315	0.005786155806684359	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	22	3	rwr	13.0	0.3467397260273972	0.0023655042164218228	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	22	4	rwr	13.0	0.7157260273972603	0.00765034548403787	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	23	0	rwr	13.0	0.7053669222343921	0.007136208716087298	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	23	1	rwr	13.0	0.6511415525114156	0.006523812885921078	0.0	0.0	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	23	2	rwr	13.0	0.5766575342465754	0.003640926863266147	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	23	3	rwr	13.0	0.4596164383561644	0.005389533282725105	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	23	4	rwr	13.0	0.488	0.004344894265464468	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	24	0	rwr	13.0	0.6006571741511502	0.006012839523958079	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	24	1	rwr	13.0	0.6515068493150685	0.008484714747972348	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	24	2	rwr	13.0	0.6053698630136987	0.0039259359660881775	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	24	3	rwr	13.0	0.5156164383561644	0.005442812214703682	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	24	4	rwr	13.0	0.45742465753424655	0.0031498886117202955	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	25	0	rwr	13.0	0.6347207009857613	0.005128279163117645	0.0	0.0	0.006	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	25	1	rwr	13.0	0.39986301369863014	0.004902436930916883	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	25	2	rwr	13.0	0.4201643835616439	0.002717584866362951	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	25	3	rwr	13.0	0.6872328767123288	0.004931690854449872	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	25	4	rwr	13.0	0.5888219178082191	0.0059282924569062515	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	26	0	rwr	13.0	0.5693318729463308	0.005426272996560324	0.0	0.01	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	26	1	rwr	13.0	0.6165296803652968	0.00670064541051558	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	26	2	rwr	13.0	0.4752876712328767	0.004649015853553771	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	26	3	rwr	13.0	0.5822465753424657	0.00406406700809	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	26	4	rwr	13.0	0.6234520547945206	0.004945715695027721	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	27	0	rwr	13.0	0.7554216867469881	0.007172388148026743	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	27	1	rwr	13.0	0.5273972602739726	0.00420169727028019	0.0	0.0	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	27	2	rwr	13.0	0.5468493150684931	0.004813049784846723	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	27	3	rwr	13.0	0.634958904109589	0.0042174191408402345	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	27	4	rwr	13.0	0.4517260273972603	0.004674810130617874	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	28	0	rwr	13.0	0.5151150054764513	0.00346197831493931	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	28	1	rwr	13.0	0.4920547945205479	0.003657395370908252	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	28	2	rwr	13.0	0.4904109589041096	0.005163203427737999	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	28	3	rwr	13.0	0.8018630136986301	0.011360951560189056	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	28	4	rwr	13.0	0.5776438356164383	0.0037046179977149114	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	29	0	rwr	13.0	0.6227820372398686	0.005799816596907828	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	29	1	rwr	13.0	0.454703196347032	0.003322613751038278	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	29	2	rwr	13.0	0.6406575342465753	0.009577157884174943	0.0	0.02	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	29	3	rwr	13.0	0.35342465753424657	0.0024589189760912773	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	29	4	rwr	13.0	0.664	0.005448356102548792	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	30	0	rwr	13.0	0.45739320920043813	0.004688360558260183	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	30	1	rwr	13.0	0.6751598173515981	0.007171196583120101	0.0	0.01	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	30	2	rwr	13.0	0.4933698630136987	0.005140745129433005	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	30	3	rwr	13.0	0.44734246575342473	0.0039530724735898845	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	30	4	rwr	13.0	0.623013698630137	0.004815267392897324	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	31	0	rwr	13.0	0.3673603504928806	0.004382145294765086	0.0	0.01	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	31	1	rwr	13.0	0.7148858447488585	0.014108206194572188	0.02	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	31	2	rwr	13.0	0.6676164383561644	0.004800716758328474	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	31	3	rwr	13.0	0.4051506849315068	0.003064246068752129	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	31	4	rwr	13.0	0.39408219178082193	0.0026039619664012265	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	32	0	rwr	13.0	0.31916757940854323	0.002360692684812103	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	32	1	rwr	13.0	0.6627397260273972	0.0065902982826268	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	32	2	rwr	13.0	0.6224657534246575	0.005869235768865446	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	32	3	rwr	13.0	0.5465205479452054	0.005910739538682241	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	32	4	rwr	13.0	0.6979726027397261	0.005407012816521133	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	33	0	rwr	13.0	0.5389923329682366	0.0035080029971349498	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	33	1	rwr	13.0	0.3949771689497717	0.004473120538060002	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	33	2	rwr	13.0	0.5579178082191781	0.004161978732833576	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	33	3	rwr	13.0	0.7916712328767124	0.008233819696458079	0.0	0.01	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	33	4	rwr	13.0	0.6104109589041097	0.0057418838461558265	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	34	0	rwr	13.0	0.3178532311062432	0.002433625783480404	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	34	1	rwr	13.0	0.48210045662100454	0.005888525764518282	0.0	0.01	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	34	2	rwr	13.0	0.6706849315068493	0.005759817617418745	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	34	3	rwr	13.0	0.5031232876712328	0.004859653217575924	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	34	4	rwr	13.0	0.7378630136986302	0.0064517565257025174	0.0	0.0	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	35	0	rwr	13.0	0.528039430449069	0.003288483891319589	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	35	1	rwr	13.0	0.5541552511415525	0.0053671170275355826	0.0	0.01	0.004	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	35	2	rwr	13.0	0.44169863013698635	0.004787395324271222	0.0	0.01	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	35	3	rwr	13.0	0.7019178082191782	0.007506558562583056	0.0	0.01	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	35	4	rwr	13.0	0.44931506849315067	0.004315577761851413	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	36	0	rwr	13.0	0.45903614457831327	0.0028642289612122044	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	36	1	rwr	13.0	0.3748401826484018	0.0029961534708125345	0.0	0.0	0.002	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	36	2	rwr	13.0	0.5881643835616438	0.004420543153145056	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	36	3	rwr	13.0	0.5063013698630137	0.0035546318075210842	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	36	4	rwr	13.0	0.783123287671233	0.01839078280207815	0.0	0.02	0.008	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	37	0	rwr	13.0	0.38094194961664846	0.0024937297827741607	0.0	0.0	0.0	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	37	1	rwr	13.0	0.7327853881278539	0.010593535087660108	0.0	0.02	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	37	2	rwr	13.0	0.5278904109589041	0.004224377064270268	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	37	3	rwr	13.0	0.5107945205479452	0.003620890513440592	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	37	4	rwr	13.0	0.6884383561643835	0.00681612492845303	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	38	0	rwr	13.0	0.5897042716319825	0.0039112329447818055	0.0	0.0	0.004	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	38	1	rwr	13.0	0.7469406392694065	0.011772008105422255	0.0	0.01	0.008	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	38	2	rwr	13.0	0.3842191780821918	0.00251940871721926	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	38	3	rwr	13.0	0.6787945205479452	0.007385962615648899	0.0	0.01	0.006	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	38	4	rwr	13.0	0.3220821917808219	0.0023069948531395036	0.0	0.0	0.0	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	39	0	rwr	13.0	0.46232201533406353	0.003050853078273243	0.0	0.0	0.002	5	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	39	1	rwr	13.0	0.7065753424657535	0.012269836393605167	0.0	0.02	0.006	6	1831
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	39	2	rwr	13.0	0.5429041095890411	0.0036401362995768572	0.0	0.0	0.004	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	39	3	rwr	13.0	0.4962191780821918	0.0031258159464806774	0.0	0.0	0.002	5	1830
+rna_coexp	clingen_label_pubcount_adjusted	native_rna_coexp	0.7	39	4	rwr	13.0	0.5776438356164383	0.006174293911327345	0.0	0.01	0.006	5	1830

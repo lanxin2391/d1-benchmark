@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+intact	clingen_label_pubcount_adjusted	native_intact		0	0	degree		0.8803831096196868	0.014045582464552342	0.02	0.01	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		0	1	degree		0.6581196581196582	0.005974088984506	0.0	0.01	0.006	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		0	2	degree		0.8653302253302253	0.04882346059562971	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		0	3	degree		0.9127272727272727	0.019588809800371504	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		0	4	degree		0.8549825174825174	0.02099892155545737	0.04	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		1	0	degree		0.7844134507829977	0.014541998122181536	0.02	0.01	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		1	1	degree		0.7996270396270396	0.02526395599393553	0.02	0.02	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		1	2	degree		0.9195648795648796	0.026825114329220863	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		1	3	degree		0.8297902097902098	0.0327281524620051	0.02	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		1	4	degree		0.8065734265734266	0.01264546878055527	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		2	0	degree		0.9169463087248322	0.052604508651463065	0.06	0.03	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		2	1	degree		0.8397202797202797	0.011755637476261006	0.0	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		2	2	degree		0.7026728826728826	0.018179455653984586	0.02	0.01	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		2	3	degree		0.8234090909090909	0.0172251039654287	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		2	4	degree		0.8884265734265735	0.013912515713466706	0.0	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		3	0	degree		0.7953020134228188	0.00870327258131659	0.0	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		3	1	degree		0.8808236208236208	0.036501582720181204	0.06	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		3	2	degree		0.7606682206682207	0.01889287314497983	0.02	0.01	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		3	3	degree		0.8300699300699301	0.013647972910277747	0.0	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		3	4	degree		0.885472027972028	0.027589521378758322	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		4	0	degree		0.9106194071588367	0.022688279519298027	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		4	1	degree		0.7882517482517483	0.03899266338478587	0.02	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		4	2	degree		0.8587878787878787	0.015622832593508338	0.0	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		4	3	degree		0.7920104895104894	0.01096644721500937	0.02	0.02	0.004	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		4	4	degree		0.8054195804195805	0.022273230291222558	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		5	0	degree		0.8619616890380314	0.014799132501370365	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		5	1	degree		0.779005439005439	0.007391497467734201	0.0	0.01	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		5	2	degree		0.9087490287490287	0.07873599318324195	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		5	3	degree		0.7455594405594406	0.024540267494948267	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		5	4	degree		0.8576923076923076	0.017258254201366712	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		6	0	degree		0.7999860178970917	0.00785141980246915	0.0	0.0	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		6	1	degree		0.7144677544677545	0.02770836964021535	0.02	0.01	0.004	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		6	2	degree		0.906029526029526	0.039409819931401	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		6	3	degree		0.9187412587412588	0.016401153090957032	0.02	0.02	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		6	4	degree		0.8132517482517484	0.021752561617138108	0.04	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		7	0	degree		0.7522895693512304	0.012659053912663035	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		7	1	degree		0.8112509712509713	0.009145272063202642	0.0	0.01	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		7	2	degree		0.8687645687645688	0.07511798626704805	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		7	3	degree		0.9086363636363636	0.03504603040041252	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		7	4	degree		0.8073776223776223	0.010337734355823407	0.02	0.01	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		8	0	degree		0.6483850671140939	0.004242957482498835	0.0	0.0	0.004	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		8	1	degree		0.9332711732711733	0.033102243123340175	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		8	2	degree		0.9261383061383062	0.02344545538951038	0.02	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		8	3	degree		0.7857342657342656	0.009727723403381214	0.02	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		8	4	degree		0.8320104895104895	0.03962674837534105	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		9	0	degree		0.8055439038031321	0.025293274971254977	0.02	0.02	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		9	1	degree		0.8226107226107225	0.028418874927743136	0.06	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		9	2	degree		0.8816317016317016	0.011524367269893653	0.0	0.0	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		9	3	degree		0.7729195804195805	0.01613250972776589	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		9	4	degree		0.8676573426573426	0.03433994971714126	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		10	0	degree		0.812954418344519	0.00780884046090144	0.0	0.0	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		10	1	degree		0.8856099456099455	0.015450678800552042	0.0	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		10	2	degree		0.9184459984459984	0.04887691271929262	0.08	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		10	3	degree		0.7706118881118881	0.015561802425670353	0.02	0.03	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		10	4	degree		0.7496853146853146	0.031135059116187466	0.02	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		11	0	degree		0.7457005033557046	0.007430479314263822	0.0	0.0	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		11	1	degree		0.7897902097902099	0.011138232880950987	0.02	0.01	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		11	2	degree		0.8698368298368299	0.02046408421503965	0.02	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		11	3	degree		0.863548951048951	0.019550193621946467	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		11	4	degree		0.8846328671328673	0.10302626733010999	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		12	0	degree		0.815471196868009	0.020898683475214577	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		12	1	degree		0.8834654234654234	0.02075512781250826	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		12	2	degree		0.7980885780885781	0.009160612679068276	0.0	0.01	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		12	3	degree		0.861048951048951	0.04771106379022595	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		12	4	degree		0.7904545454545453	0.019482518130079916	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		13	0	degree		0.8937360178970917	0.014756916903530683	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		13	1	degree		0.7032944832944831	0.027122490265894847	0.04	0.02	0.006	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		13	2	degree		0.9455788655788655	0.03045061961711655	0.04	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		13	3	degree		0.8152272727272728	0.00907248577946014	0.0	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		13	4	degree		0.7991783216783216	0.051386243479980935	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		14	0	degree		0.8254159675615211	0.015253123308051664	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		14	1	degree		0.8183838383838383	0.02195076349416375	0.04	0.02	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		14	2	degree		0.7798912198912199	0.033772663425870264	0.04	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		14	3	degree		0.9255594405594406	0.018938740960161835	0.02	0.01	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		14	4	degree		0.816520979020979	0.012077080707772253	0.0	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		15	0	degree		0.7129998601789709	0.007492480437540217	0.0	0.0	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		15	1	degree		0.8576223776223777	0.022784440950311718	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		15	2	degree		0.9272571872571872	0.053400575473597306	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		15	3	degree		0.8372727272727273	0.028660175640020213	0.06	0.04	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		15	4	degree		0.8055944055944055	0.007668563116509702	0.0	0.0	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		16	0	degree		0.8567009228187918	0.011106237455549275	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		16	1	degree		0.7860606060606061	0.018827473397439013	0.02	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		16	2	degree		0.8699300699300699	0.045003720175166566	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		16	3	degree		0.7420629370629371	0.018900448946241266	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		16	4	degree		0.8984440559440561	0.016648821556637078	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		17	0	degree		0.8131991051454138	0.031341639793034656	0.02	0.02	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		17	1	degree		0.8467132867132867	0.06569990855567698	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		17	2	degree		0.9158974358974359	0.024460260875980598	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		17	3	degree		0.8385489510489511	0.01590368421925988	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		17	4	degree		0.7278146853146853	0.010784665068939048	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		18	0	degree		0.9114758109619686	0.05145552715634544	0.04	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		18	1	degree		0.8338150738150738	0.015487411650873351	0.02	0.01	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		18	2	degree		0.7766588966588968	0.0091859535583895	0.0	0.0	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		18	3	degree		0.8276223776223777	0.01825093024344102	0.04	0.02	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		18	4	degree		0.8096328671328672	0.13328373560084564	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		19	0	degree		0.9015834731543625	0.03818032179109236	0.02	0.01	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		19	1	degree		0.8213053613053612	0.02532293660698846	0.06	0.03	0.006	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		19	2	degree		0.8047863247863247	0.013446655665622073	0.0	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		19	3	degree		0.9326223776223775	0.04290557936490019	0.04	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		19	4	degree		0.6960489510489509	0.005618900905615471	0.0	0.0	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		20	0	degree		0.7948650727069351	0.01557337608845667	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		20	1	degree		0.8580419580419579	0.023025674232648466	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		20	2	degree		0.8903496503496503	0.017996723391200085	0.02	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		20	3	degree		0.7651573426573426	0.0385902412972194	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		20	4	degree		0.8314160839160839	0.01479463990507418	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		21	0	degree		0.9032962807606264	0.02395047404414649	0.04	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		21	1	degree		0.8008702408702408	0.05258743877270416	0.04	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		21	2	degree		0.8123076923076922	0.030692790274368324	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		21	3	degree		0.8088286713286714	0.007657929661004107	0.0	0.0	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		21	4	degree		0.8379020979020978	0.0101248756742622	0.0	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		22	0	degree		0.9446658277404921	0.08104480845747244	0.08	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		22	1	degree		0.7422688422688423	0.024247646027088163	0.02	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		22	2	degree		0.7886713286713286	0.010716384005381129	0.02	0.02	0.006	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		22	3	degree		0.785506993006993	0.007302818975206799	0.0	0.0	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		22	4	degree		0.9078846153846153	0.012741762111558775	0.0	0.0	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		23	0	degree		0.8299601510067114	0.016508977199917348	0.02	0.01	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		23	1	degree		0.8533333333333334	0.011096039204817764	0.0	0.0	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		23	2	degree		0.7863558663558665	0.06077019525182913	0.06	0.03	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		23	3	degree		0.7887762237762239	0.018169183311018765	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		23	4	degree		0.9000524475524476	0.020599223965654983	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		24	0	degree		0.7904432326621923	0.028839698509466383	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		24	1	degree		0.8785081585081584	0.05096698076957689	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		24	2	degree		0.9136752136752136	0.020813739080342068	0.02	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		24	3	degree		0.7254195804195804	0.004705347788273234	0.0	0.0	0.004	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		24	4	degree		0.8264510489510489	0.013059361017251313	0.02	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		25	0	degree		0.7014821029082773	0.006889499782064885	0.0	0.0	0.006	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		25	1	degree		0.7894327894327894	0.012716777792454385	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		25	2	degree		0.873006993006993	0.01854993281046775	0.02	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		25	3	degree		0.87243006993007	0.02739443077386238	0.04	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		25	4	degree		0.921013986013986	0.08502078990520787	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		26	0	degree		0.8165897651006712	0.026760869734844574	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		26	1	degree		0.8285159285159285	0.012480949100850406	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		26	2	degree		0.826899766899767	0.01591692790020468	0.02	0.03	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		26	3	degree		0.831993006993007	0.009244185900867959	0.0	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		26	4	degree		0.8473776223776224	0.1018813164193479	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		27	0	degree		0.8149468680089486	0.022806269568995927	0.02	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		27	1	degree		0.8061383061383062	0.020540284218880045	0.04	0.03	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		27	2	degree		0.8548562548562548	0.07184157410830362	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		27	3	degree		0.824527972027972	0.008825124444061243	0.0	0.0	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		27	4	degree		0.8508916083916084	0.014519401583642092	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		28	0	degree		0.8141428970917227	0.007067906804870731	0.0	0.0	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		28	1	degree		0.7985703185703186	0.023967111789033425	0.04	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		28	2	degree		0.8025330225330225	0.012269136875550354	0.02	0.02	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		28	3	degree		0.84743006993007	0.0741384149990299	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		28	4	degree		0.8978671328671328	0.020908487543184723	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		29	0	degree		0.8526286353467563	0.01746416845436069	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		29	1	degree		0.7759595959595961	0.01105705589267817	0.02	0.01	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		29	2	degree		0.8651592851592852	0.012872806277501692	0.0	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		29	3	degree		0.8542832167832167	0.019798094583642647	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		29	4	degree		0.8030594405594406	0.07663869583465845	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		30	0	degree		0.806854725950783	0.007107249472248114	0.0	0.0	0.006	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		30	1	degree		0.9235431235431235	0.14120715805741252	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		30	2	degree		0.8885625485625486	0.03777415665360908	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		30	3	degree		0.717534965034965	0.008907231826744447	0.02	0.01	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		30	4	degree		0.7981643356643355	0.01176321653230121	0.0	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		31	0	degree		0.8840534116331097	0.04363211303059212	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		31	1	degree		0.8732400932400932	0.015337496214043867	0.02	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		31	2	degree		0.7918725718725718	0.008403342778236676	0.0	0.0	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		31	3	degree		0.7407692307692308	0.014879577036700908	0.02	0.03	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		31	4	degree		0.860034965034965	0.025824744027084824	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		32	0	degree		0.6542225950782999	0.01038693120383825	0.02	0.02	0.006	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		32	1	degree		0.8557109557109558	0.026688673832350563	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		32	2	degree		0.8431857031857032	0.016915798061968516	0.02	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		32	3	degree		0.8829895104895106	0.03147227123899353	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		32	4	degree		0.9132167832167832	0.020172247951837727	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		33	0	degree		0.8823231263982102	0.16537589167839953	0.04	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		33	1	degree		0.7783061383061383	0.009959893743257474	0.0	0.02	0.006	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		33	2	degree		0.8516239316239315	0.019130817230523976	0.04	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		33	3	degree		0.87256993006993	0.017489036229617075	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		33	4	degree		0.7726923076923077	0.011049766015476546	0.0	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		34	0	degree		0.8195260067114094	0.010698300272740852	0.02	0.01	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		34	1	degree		0.8346076146076147	0.03029835996061326	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		34	2	degree		0.8913131313131314	0.021243907564296685	0.02	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		34	3	degree		0.832465034965035	0.05104174393928224	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		34	4	degree		0.7691958041958042	0.013061341241252411	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		35	0	degree		0.6994546979865772	0.007100937816658451	0.0	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		35	1	degree		0.8669153069153069	0.020537276307011715	0.04	0.02	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		35	2	degree		0.9504895104895105	0.03770117772243352	0.06	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		35	3	degree		0.8601923076923077	0.011956909275481072	0.0	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		35	4	degree		0.7548601398601399	0.03845407729711009	0.02	0.02	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		36	0	degree		0.713244546979866	0.0682147954182962	0.02	0.01	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		36	1	degree		0.8707381507381508	0.015298488358553197	0.0	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		36	2	degree		0.8514063714063714	0.03379392565916922	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		36	3	degree		0.8845104895104895	0.01079823134448253	0.0	0.0	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		36	4	degree		0.825104895104895	0.023785773577849573	0.04	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		37	0	degree		0.8476125559284117	0.02873181998744448	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		37	1	degree		0.901025641025641	0.064653689543569	0.06	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		37	2	degree		0.8237140637140636	0.012771799173653724	0.02	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		37	3	degree		0.7688636363636364	0.010390746475341021	0.0	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		37	4	degree		0.8036363636363636	0.007664267395060358	0.0	0.0	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		38	0	degree		0.8072392337807606	0.028314163444457807	0.02	0.01	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		38	1	degree		0.882051282051282	0.042708110864150786	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		38	2	degree		0.7666045066045066	0.01706124217952023	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		38	3	degree		0.8276573426573427	0.007053492351101757	0.0	0.0	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		38	4	degree		0.8747902097902097	0.025836679859243695	0.04	0.04	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		39	0	degree		0.8322147651006713	0.016118447522045498	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact		39	1	degree		0.8422843822843823	0.02114869218242468	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		39	2	degree		0.8023465423465422	0.0670789413330738	0.02	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact		39	3	degree		0.8984265734265735	0.018406517094869353	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact		39	4	degree		0.7762412587412587	0.012878658419745653	0.02	0.01	0.006	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	0	0	rwr	24.0	0.9226090604026845	0.054354135885408626	0.04	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	0	1	rwr	24.0	0.8051903651903651	0.01238192836409007	0.0	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	0	2	rwr	24.0	0.9446464646464646	0.125429219678992	0.06	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	0	3	rwr	24.0	0.9240559440559439	0.09661779413995238	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	0	4	rwr	24.0	0.9146153846153846	0.14885438790256414	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	1	0	rwr	24.0	0.7922609060402686	0.01992378106830495	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	1	1	rwr	24.0	0.9236985236985236	0.12939099438261983	0.02	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	1	2	rwr	24.0	0.9678010878010878	0.1868750282667826	0.08	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	1	3	rwr	24.0	0.8991258741258742	0.07761567004664977	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	1	4	rwr	24.0	0.9127272727272727	0.1446176710003842	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	2	0	rwr	24.0	0.9455746644295303	0.38420619265466033	0.1	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	2	1	rwr	24.0	0.9500543900543902	0.028030076098612078	0.0	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	2	2	rwr	24.0	0.7825641025641025	0.071154086432139	0.02	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	2	3	rwr	24.0	0.8917132867132869	0.0641658961557185	0.02	0.04	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	2	4	rwr	24.0	0.9136363636363637	0.023240384103131093	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	3	0	rwr	24.0	0.8834941275167786	0.019065234041481846	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	3	1	rwr	24.0	0.9360683760683761	0.3656694724481473	0.08	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	3	2	rwr	24.0	0.8221911421911421	0.07072536847762805	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	3	3	rwr	24.0	0.9477622377622378	0.0282482776051345	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	3	4	rwr	24.0	0.9458041958041957	0.06630457653739594	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	4	0	rwr	24.0	0.9387933445190157	0.26902995634052224	0.04	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	4	1	rwr	24.0	0.8617560217560217	0.14243345276812291	0.02	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	4	2	rwr	24.0	0.943900543900544	0.050776546194813685	0.06	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	4	3	rwr	24.0	0.8745454545454544	0.015070309758187536	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	4	4	rwr	24.0	0.9151048951048951	0.11560277063212128	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	5	0	rwr	24.0	0.9422539149888145	0.07388071176792128	0.04	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	5	1	rwr	24.0	0.8787257187257187	0.03979704287726839	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	5	2	rwr	24.0	0.9477855477855478	0.1575567613022891	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	5	3	rwr	24.0	0.8148601398601398	0.2672416516490457	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	5	4	rwr	24.0	0.9296153846153846	0.024145204914538483	0.0	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	6	0	rwr	24.0	0.9051314317673378	0.01993751544779908	0.02	0.01	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	6	1	rwr	24.0	0.7760372960372961	0.06547256680158298	0.02	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	6	2	rwr	24.0	0.9550271950271951	0.17756763822518382	0.06	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	6	3	rwr	24.0	0.9387762237762236	0.0860702101382387	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	6	4	rwr	24.0	0.8934965034965036	0.14907270651275442	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	7	0	rwr	24.0	0.7810752237136466	0.01680205744346303	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	7	1	rwr	24.0	0.8998601398601399	0.016424747792053603	0.0	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	7	2	rwr	24.0	0.9236674436674437	0.1563267238035468	0.06	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	7	3	rwr	24.0	0.966048951048951	0.2404520262138581	0.08	0.05	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	7	4	rwr	24.0	0.9221678321678322	0.14455384951468497	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	8	0	rwr	24.0	0.739373601789709	0.006980773475381525	0.0	0.0	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	8	1	rwr	24.0	0.9720279720279721	0.2328134344822187	0.06	0.06	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	8	2	rwr	24.0	0.9568919968919969	0.0852810741905814	0.02	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	8	3	rwr	24.0	0.8993706293706294	0.09268747467119462	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	8	4	rwr	24.0	0.9195804195804196	0.06552329323574577	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	9	0	rwr	24.0	0.9041526845637585	0.14281541014838725	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	9	1	rwr	24.0	0.907878787878788	0.15791818546809896	0.06	0.05	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	9	2	rwr	24.0	0.952975912975913	0.03920673313902408	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	9	3	rwr	24.0	0.8269580419580421	0.08154195038716854	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	9	4	rwr	24.0	0.9284265734265735	0.06391893693224011	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	10	0	rwr	24.0	0.8981403803131991	0.022393551190589518	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	10	1	rwr	24.0	0.9483760683760684	0.03718745665583617	0.0	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	10	2	rwr	24.0	0.9311266511266512	0.2153570857051924	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	10	3	rwr	24.0	0.8293006993006993	0.0604164474300714	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	10	4	rwr	24.0	0.8512237762237763	0.07519035123762416	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	11	0	rwr	24.0	0.8207494407158836	0.026033927217942378	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	11	1	rwr	24.0	0.8639316239316239	0.04317723166206415	0.02	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	11	2	rwr	24.0	0.9397358197358199	0.04846069779087393	0.06	0.06	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	11	3	rwr	24.0	0.9359790209790211	0.264351023134767	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	11	4	rwr	24.0	0.9573076923076924	0.15374039281574362	0.06	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	12	0	rwr	24.0	0.9026496085011184	0.1915064988011019	0.04	0.04	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	12	1	rwr	24.0	0.9401087801087801	0.0819869381884537	0.04	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	12	2	rwr	24.0	0.895975135975136	0.028373651117292113	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	12	3	rwr	24.0	0.9189160839160839	0.08470614576208373	0.04	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	12	4	rwr	24.0	0.8226573426573427	0.07735095431904024	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	13	0	rwr	24.0	0.9174007270693512	0.08902535397194064	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	13	1	rwr	24.0	0.7854234654234652	0.22904138796729556	0.04	0.02	0.008	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	13	2	rwr	24.0	0.9712820512820514	0.08842697353608528	0.08	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	13	3	rwr	24.0	0.9206293706293707	0.031772462111107416	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	13	4	rwr	24.0	0.906013986013986	0.060696455165144464	0.02	0.04	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	14	0	rwr	24.0	0.9155830536912752	0.027814868510679668	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	14	1	rwr	24.0	0.8971561771561772	0.24165629901602342	0.06	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	14	2	rwr	24.0	0.8126184926184926	0.09892942162787366	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	14	3	rwr	24.0	0.9366433566433566	0.08411507035466333	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	14	4	rwr	24.0	0.9397902097902098	0.035458603276806146	0.04	0.05	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	15	0	rwr	24.0	0.8264121923937361	0.027837921948425336	0.02	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	15	1	rwr	24.0	0.927987567987568	0.09202965876208748	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	15	2	rwr	24.0	0.9423776223776225	0.12658004607053752	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	15	3	rwr	24.0	0.9302447552447554	0.13927167447979302	0.08	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	15	4	rwr	24.0	0.8930069930069929	0.016640788802218715	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	16	0	rwr	24.0	0.891079418344519	0.13773571340524254	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	16	1	rwr	24.0	0.9171406371406371	0.047300764577256085	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	16	2	rwr	24.0	0.9246620046620048	0.15270609693907508	0.04	0.05	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	16	3	rwr	24.0	0.8281468531468532	0.1504608671212188	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	16	4	rwr	24.0	0.9447202797202797	0.02938019996404077	0.04	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	17	0	rwr	24.0	0.9463087248322147	0.15709438221940314	0.04	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	17	1	rwr	24.0	0.9274281274281274	0.07778430259132893	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	17	2	rwr	24.0	0.9415384615384615	0.0660214357290828	0.04	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	17	3	rwr	24.0	0.9155594405594405	0.14984658108068047	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	17	4	rwr	24.0	0.7918181818181819	0.08514720877311395	0.04	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	18	0	rwr	24.0	0.9636814876957495	0.20479127225936716	0.08	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	18	1	rwr	24.0	0.9373115773115773	0.03998017659123157	0.06	0.05	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	18	2	rwr	24.0	0.8195182595182594	0.015345061224899793	0.02	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	18	3	rwr	24.0	0.9117832167832168	0.12367605111315877	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	18	4	rwr	24.0	0.8805244755244754	0.14138174584009092	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	19	0	rwr	24.0	0.9206515659955258	0.09536920216492407	0.04	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	19	1	rwr	24.0	0.928919968919969	0.18713969752984366	0.06	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	19	2	rwr	24.0	0.9167055167055167	0.027025116281978474	0.02	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	19	3	rwr	24.0	0.9443006993006994	0.14403741850504018	0.06	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	19	4	rwr	24.0	0.7930419580419581	0.012584297133381134	0.0	0.0	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	20	0	rwr	24.0	0.802677572706935	0.08058780260155045	0.02	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	20	1	rwr	24.0	0.9412276612276612	0.08656357158936615	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	20	2	rwr	24.0	0.9046464646464646	0.1594406793850819	0.06	0.05	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	20	3	rwr	24.0	0.9120279720279719	0.13940927141710277	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	20	4	rwr	24.0	0.909020979020979	0.059877056152018174	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	21	0	rwr	24.0	0.9364862975391498	0.13137800942689892	0.06	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	21	1	rwr	24.0	0.8482672882672884	0.08797153188006383	0.06	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	21	2	rwr	24.0	0.8937684537684537	0.15208717272677788	0.04	0.05	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	21	3	rwr	24.0	0.9104895104895104	0.023513275173782912	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	21	4	rwr	24.0	0.9324475524475524	0.028135269148250295	0.0	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	22	0	rwr	24.0	0.9793064876957495	0.3966012040894117	0.1	0.05	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	22	1	rwr	24.0	0.8068065268065269	0.14279696295482877	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	22	2	rwr	24.0	0.896068376068376	0.08248462944272543	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	22	3	rwr	24.0	0.9086713286713286	0.01618211525524497	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	22	4	rwr	24.0	0.9459090909090909	0.02925427417397325	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	23	0	rwr	24.0	0.9237276286353469	0.07758448068888771	0.02	0.01	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	23	1	rwr	24.0	0.9447707847707848	0.04320971173292955	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	23	2	rwr	24.0	0.8672261072261073	0.34345510580968847	0.06	0.04	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	23	3	rwr	24.0	0.8343706293706293	0.03720669927302354	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	23	4	rwr	24.0	0.9604895104895105	0.07550311289783719	0.04	0.05	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	24	0	rwr	24.0	0.8190366331096197	0.12064680265855886	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	24	1	rwr	24.0	0.9135042735042734	0.1503613731498919	0.04	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	24	2	rwr	24.0	0.9472882672882672	0.0585103388399943	0.08	0.06	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	24	3	rwr	24.0	0.9136363636363638	0.015020380385852567	0.0	0.0	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	24	4	rwr	24.0	0.9244405594405595	0.1647126119844881	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	25	0	rwr	24.0	0.8197357382550333	0.020915527935319717	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	25	1	rwr	24.0	0.8904739704739705	0.07419100165606139	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	25	2	rwr	24.0	0.9214918414918414	0.06309557566114493	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	25	3	rwr	24.0	0.9094405594405593	0.15660651927238928	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	25	4	rwr	24.0	0.960034965034965	0.27507772412884	0.06	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	26	0	rwr	24.0	0.8513352908277404	0.23606834096759638	0.08	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	26	1	rwr	24.0	0.9141258741258741	0.07468395209000879	0.02	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	26	2	rwr	24.0	0.9305050505050506	0.040286423104859734	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	26	3	rwr	24.0	0.9101048951048951	0.015754350722901052	0.0	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	26	4	rwr	24.0	0.9163636363636364	0.1464522667941059	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	27	0	rwr	24.0	0.8318652125279641	0.08946428575623266	0.02	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	27	1	rwr	24.0	0.8628127428127429	0.14403861170418425	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	27	2	rwr	24.0	0.9247241647241646	0.23980627348934275	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	27	3	rwr	24.0	0.8618181818181818	0.01407444398682672	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	27	4	rwr	24.0	0.9163286713286714	0.018332081674575295	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	28	0	rwr	24.0	0.8748252237136465	0.010656983204630384	0.0	0.01	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	28	1	rwr	24.0	0.8441958041958042	0.14749978630983737	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	28	2	rwr	24.0	0.896161616161616	0.08521567422967617	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	28	3	rwr	24.0	0.9248951048951048	0.1609374204940095	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	28	4	rwr	24.0	0.9603146853146852	0.09597758953626054	0.04	0.05	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	29	0	rwr	24.0	0.8886675055928412	0.25894810162702137	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	29	1	rwr	24.0	0.8151670551670551	0.12998540236828532	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	29	2	rwr	24.0	0.9325874125874126	0.022933622206755135	0.02	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	29	3	rwr	24.0	0.9420629370629371	0.03403903348422251	0.02	0.05	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	29	4	rwr	24.0	0.9044755244755245	0.1466248323854684	0.06	0.04	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	30	0	rwr	24.0	0.8631501677852349	0.016790404569759155	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	30	1	rwr	24.0	0.9378399378399379	0.12675974486101058	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	30	2	rwr	24.0	0.9545920745920745	0.1576997414188034	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	30	3	rwr	24.0	0.880979020979021	0.05626328237498686	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	30	4	rwr	24.0	0.8419930069930069	0.038927960679956713	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	31	0	rwr	24.0	0.9446308724832215	0.1262314386105798	0.04	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	31	1	rwr	24.0	0.9328049728049728	0.02792991699088731	0.0	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	31	2	rwr	24.0	0.9178554778554779	0.032754122527044016	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	31	3	rwr	24.0	0.7853146853146853	0.07486339800332562	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	31	4	rwr	24.0	0.9388811188811189	0.2845155345462708	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	32	0	rwr	24.0	0.7692253914988815	0.07142374176155623	0.02	0.02	0.006	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	32	1	rwr	24.0	0.9437451437451436	0.14676406679309104	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	32	2	rwr	24.0	0.92	0.14538869701639504	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	32	3	rwr	24.0	0.9246853146853147	0.076924754737959	0.06	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	32	4	rwr	24.0	0.9617832167832167	0.09354330781341715	0.04	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	33	0	rwr	24.0	0.9248112416107382	0.17822232930475054	0.06	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	33	1	rwr	24.0	0.9273038073038072	0.022227758922185543	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	33	2	rwr	24.0	0.9166744366744366	0.09173369971129972	0.06	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	33	3	rwr	24.0	0.927902097902098	0.133155616312281	0.06	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	33	4	rwr	24.0	0.8418181818181819	0.028423122731283782	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	34	0	rwr	24.0	0.8815715883668903	0.141383229733803	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	34	1	rwr	24.0	0.9054856254856256	0.07682414629035679	0.02	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	34	2	rwr	24.0	0.9528515928515929	0.07201827274219004	0.02	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	34	3	rwr	24.0	0.9504195804195805	0.10021252280800746	0.06	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	34	4	rwr	24.0	0.8044755244755246	0.0884322603387553	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	35	0	rwr	24.0	0.8163450782997763	0.023124573318111335	0.02	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	35	1	rwr	24.0	0.9415073815073814	0.07904475105229367	0.04	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	35	2	rwr	24.0	0.9783682983682983	0.24430697180104086	0.08	0.06	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	35	3	rwr	24.0	0.9305594405594405	0.022614868956914457	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	35	4	rwr	24.0	0.806083916083916	0.1360141615048855	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	36	0	rwr	24.0	0.8134787472035794	0.07867002421083212	0.02	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	36	1	rwr	24.0	0.9496503496503497	0.040145178501424086	0.02	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	36	2	rwr	24.0	0.9167055167055167	0.21973831667958765	0.08	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	36	3	rwr	24.0	0.9192657342657343	0.01896114267436108	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	36	4	rwr	24.0	0.9103496503496503	0.09732338559662734	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	37	0	rwr	24.0	0.9120525727069352	0.17261429673832557	0.06	0.04	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	37	1	rwr	24.0	0.9532867132867133	0.1669647210574617	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	37	2	rwr	24.0	0.8824242424242423	0.06964644434289428	0.02	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	37	3	rwr	24.0	0.8148251748251749	0.024544445986189274	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	37	4	rwr	24.0	0.9103496503496504	0.02178303801331838	0.0	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	38	0	rwr	24.0	0.9327810402684564	0.09496043617255821	0.04	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	38	1	rwr	24.0	0.9307226107226108	0.153668772159777	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	38	2	rwr	24.0	0.8401554001554	0.09351738020518531	0.04	0.05	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	38	3	rwr	24.0	0.8940559440559441	0.01928489048544278	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	38	4	rwr	24.0	0.9416433566433566	0.09390583677348573	0.04	0.05	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	39	0	rwr	24.0	0.9026146532438479	0.15977919653405567	0.04	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	39	1	rwr	24.0	0.9187567987567987	0.1374093544603844	0.06	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	39	2	rwr	24.0	0.8559751359751359	0.14461407079294683	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	39	3	rwr	24.0	0.9541258741258741	0.09821357386887859	0.02	0.05	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.3	39	4	rwr	24.0	0.8776223776223777	0.041704410876290204	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	0	0	rwr	16.0	0.9207564317673379	0.06675354311111309	0.04	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	0	1	rwr	16.0	0.8170629370629371	0.013518509143374718	0.0	0.0	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	0	2	rwr	16.0	0.950986790986791	0.1500377027340743	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	0	3	rwr	16.0	0.9216083916083917	0.0996015764550737	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	0	4	rwr	16.0	0.9213286713286712	0.14698542093471328	0.02	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	1	0	rwr	16.0	0.7907578299776288	0.018791299124269682	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	1	1	rwr	16.0	0.9348873348873349	0.1301944207921221	0.02	0.01	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	1	2	rwr	16.0	0.9665268065268064	0.19584710706409822	0.08	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	1	3	rwr	16.0	0.9022727272727273	0.07829819765538411	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	1	4	rwr	16.0	0.9225874125874127	0.14757640050604107	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	2	0	rwr	16.0	0.9476370246085011	0.41675607174688056	0.1	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	2	1	rwr	16.0	0.9553069153069154	0.02998873252345045	0.02	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	2	2	rwr	16.0	0.7907070707070707	0.07255908804022941	0.02	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	2	3	rwr	16.0	0.9067132867132868	0.06490247131493439	0.02	0.04	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	2	4	rwr	16.0	0.9114685314685315	0.02188997138160083	0.0	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	3	0	rwr	16.0	0.8913241051454138	0.01849062873053445	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	3	1	rwr	16.0	0.9386480186480187	0.37725869300041903	0.08	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	3	2	rwr	16.0	0.8280341880341879	0.09359937378306189	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	3	3	rwr	16.0	0.9548601398601398	0.02892290060330817	0.0	0.02	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	3	4	rwr	16.0	0.9477622377622377	0.06393240373107026	0.02	0.02	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	4	0	rwr	16.0	0.9327460850111858	0.26786536786083615	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	4	1	rwr	16.0	0.8659207459207457	0.14799168685416944	0.04	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	4	2	rwr	16.0	0.9532556332556333	0.05495077930231522	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	4	3	rwr	16.0	0.8791608391608391	0.013198368479438748	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	4	4	rwr	16.0	0.9254545454545455	0.19951076965629044	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	5	0	rwr	16.0	0.9491401006711409	0.07808868501518271	0.04	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	5	1	rwr	16.0	0.8847552447552448	0.05536484276460997	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	5	2	rwr	16.0	0.9497435897435897	0.1576965591838648	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	5	3	rwr	16.0	0.8253846153846156	0.22543057531844782	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	5	4	rwr	16.0	0.9306293706293707	0.0214390737962293	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	6	0	rwr	16.0	0.9164219798657718	0.022359103512461193	0.02	0.01	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	6	1	rwr	16.0	0.7813519813519814	0.12130684173072183	0.02	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	6	2	rwr	16.0	0.9593473193473192	0.18535644975541973	0.06	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	6	3	rwr	16.0	0.9347552447552447	0.0851489680489796	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	6	4	rwr	16.0	0.8974475524475525	0.1459227450587357	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	7	0	rwr	16.0	0.7820539709172261	0.0145155817737155	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	7	1	rwr	16.0	0.9041491841491841	0.017863126346774963	0.0	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	7	2	rwr	16.0	0.928888888888889	0.15883933399332886	0.06	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	7	3	rwr	16.0	0.9653146853146855	0.2707647907233336	0.08	0.05	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	7	4	rwr	16.0	0.938006993006993	0.14722745967094647	0.02	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	8	0	rwr	16.0	0.7457005033557047	0.007529810295803331	0.0	0.0	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	8	1	rwr	16.0	0.9721833721833723	0.26637844565354846	0.06	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	8	2	rwr	16.0	0.9550582750582751	0.08355528873619401	0.02	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	8	3	rwr	16.0	0.9128321678321677	0.10329049389078523	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	8	4	rwr	16.0	0.9286013986013986	0.052339821335812164	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	9	0	rwr	16.0	0.9120176174496645	0.14307468325163952	0.04	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	9	1	rwr	16.0	0.9192540792540792	0.15168328880101017	0.04	0.05	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	9	2	rwr	16.0	0.9563947163947164	0.04709289663474189	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	9	3	rwr	16.0	0.8284615384615385	0.1426541464375477	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	9	4	rwr	16.0	0.9307342657342657	0.06427523121001544	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	10	0	rwr	16.0	0.9071238814317674	0.02666638115083041	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	10	1	rwr	16.0	0.9483139083139083	0.03708770551302005	0.02	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	10	2	rwr	16.0	0.9295415695415694	0.21366624275129026	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	10	3	rwr	16.0	0.8311188811188811	0.08011430406335494	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	10	4	rwr	16.0	0.8662237762237762	0.13887903060105078	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	11	0	rwr	16.0	0.8244546979865774	0.02935018798691061	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	11	1	rwr	16.0	0.8764257964257964	0.07200851669703921	0.02	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	11	2	rwr	16.0	0.9470396270396271	0.05478143272928414	0.04	0.06	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	11	3	rwr	16.0	0.9409440559440558	0.26536595265045715	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	11	4	rwr	16.0	0.956993006993007	0.15087638667387046	0.06	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	12	0	rwr	16.0	0.907613255033557	0.19258025133904408	0.04	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	12	1	rwr	16.0	0.9438383838383838	0.08159586796210674	0.04	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	12	2	rwr	16.0	0.9041491841491841	0.03687248909218489	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	12	3	rwr	16.0	0.9174825174825175	0.1437428192154836	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	12	4	rwr	16.0	0.8227972027972029	0.07655180196343751	0.02	0.01	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	13	0	rwr	16.0	0.9170162192393736	0.15486458967472272	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	13	1	rwr	16.0	0.7965190365190364	0.22975834136985254	0.04	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	13	2	rwr	16.0	0.968982128982129	0.1039248268799791	0.04	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	13	3	rwr	16.0	0.927867132867133	0.04520930327221206	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	13	4	rwr	16.0	0.9183216783216782	0.0600095191544848	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	14	0	rwr	16.0	0.9247063758389262	0.026884775984174564	0.02	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	14	1	rwr	16.0	0.9012898212898214	0.24486735480750624	0.06	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	14	2	rwr	16.0	0.8166278166278165	0.1254817160534236	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	14	3	rwr	16.0	0.9284965034965036	0.08208213912330382	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	14	4	rwr	16.0	0.9497202797202796	0.03694757720142201	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	15	0	rwr	16.0	0.8343819910514542	0.035313380596388694	0.02	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	15	1	rwr	16.0	0.9334265734265734	0.09628841924588462	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	15	2	rwr	16.0	0.935073815073815	0.1683604926826112	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	15	3	rwr	16.0	0.9405594405594404	0.1687137686208652	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	15	4	rwr	16.0	0.9031818181818181	0.01929080998809108	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	16	0	rwr	16.0	0.8895413870246085	0.13899421720709948	0.02	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	16	1	rwr	16.0	0.9299766899766899	0.059661058694220254	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	16	2	rwr	16.0	0.9249106449106449	0.15066047852120384	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	16	3	rwr	16.0	0.8339860139860139	0.15647427389257196	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	16	4	rwr	16.0	0.9432167832167833	0.02726356413616962	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	17	0	rwr	16.0	0.9573196308724832	0.15827192752690672	0.04	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	17	1	rwr	16.0	0.9361926961926961	0.07769108000155656	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	17	2	rwr	16.0	0.9411033411033412	0.07550544354275801	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	17	3	rwr	16.0	0.9203146853146853	0.1516968245974507	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	17	4	rwr	16.0	0.7969930069930069	0.09564780630555378	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	18	0	rwr	16.0	0.9623881431767337	0.2048339214210352	0.06	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	18	1	rwr	16.0	0.9490598290598291	0.04284967320293201	0.04	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	18	2	rwr	16.0	0.8174980574980575	0.015143846411622936	0.02	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	18	3	rwr	16.0	0.9172727272727271	0.1375388027590976	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	18	4	rwr	16.0	0.8897202797202797	0.07969556486841624	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	19	0	rwr	16.0	0.9214555369127516	0.09766560884285996	0.04	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	19	1	rwr	16.0	0.9392074592074592	0.24275915631539807	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	19	2	rwr	16.0	0.9283605283605283	0.03236023623167872	0.02	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	19	3	rwr	16.0	0.9366433566433566	0.19773879555597385	0.06	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	19	4	rwr	16.0	0.7956293706293706	0.012752748844037692	0.0	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	20	0	rwr	16.0	0.7971895973154363	0.0785634198459161	0.02	0.03	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	20	1	rwr	16.0	0.9425019425019425	0.1481989980588658	0.04	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	20	2	rwr	16.0	0.9029059829059829	0.17117800856667348	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	20	3	rwr	16.0	0.9267132867132868	0.14028027426741949	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	20	4	rwr	16.0	0.9159090909090909	0.05964306742903237	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	21	0	rwr	16.0	0.9341442953020134	0.15486251902212037	0.06	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	21	1	rwr	16.0	0.8491996891996892	0.09083585878544746	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	21	2	rwr	16.0	0.9105205905205905	0.1527815534367713	0.04	0.05	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	21	3	rwr	16.0	0.9182167832167832	0.03226501785512781	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	21	4	rwr	16.0	0.9367832167832169	0.029907216405956633	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	22	0	rwr	16.0	0.9776635906040269	0.424633643645438	0.08	0.05	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	22	1	rwr	16.0	0.8156021756021755	0.14214255992567137	0.06	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	22	2	rwr	16.0	0.9059829059829059	0.09080916258584411	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	22	3	rwr	16.0	0.9271328671328671	0.020366114003789956	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	22	4	rwr	16.0	0.9443706293706293	0.030040567725331795	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	23	0	rwr	16.0	0.9328509507829976	0.0785200307044731	0.02	0.01	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	23	1	rwr	16.0	0.9454856254856254	0.05398357974711624	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	23	2	rwr	16.0	0.8787567987567987	0.34379474868095466	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	23	3	rwr	16.0	0.8359790209790209	0.03969342605732795	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	23	4	rwr	16.0	0.9630769230769229	0.09542374171792227	0.04	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	24	0	rwr	16.0	0.8180578859060403	0.14032338156672933	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	24	1	rwr	16.0	0.9141258741258741	0.1483217712393871	0.04	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	24	2	rwr	16.0	0.9478787878787879	0.07395392238876546	0.06	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	24	3	rwr	16.0	0.9313986013986013	0.01794279176907144	0.0	0.01	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	24	4	rwr	16.0	0.931958041958042	0.16927442990557587	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	25	0	rwr	16.0	0.8302922259507828	0.025558020964879427	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	25	1	rwr	16.0	0.9048018648018648	0.07574433441912695	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	25	2	rwr	16.0	0.9199999999999999	0.0704369490463386	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	25	3	rwr	16.0	0.9142657342657343	0.1587361380753033	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	25	4	rwr	16.0	0.9602797202797203	0.2733288603899254	0.04	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	26	0	rwr	16.0	0.8530830536912751	0.3025139704479996	0.08	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	26	1	rwr	16.0	0.925936285936286	0.07631680246603141	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	26	2	rwr	16.0	0.9342035742035741	0.055902779613008026	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	26	3	rwr	16.0	0.9151398601398602	0.015732422999810095	0.0	0.01	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	26	4	rwr	16.0	0.9219580419580419	0.14697795990393897	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	27	0	rwr	16.0	0.8296280760626397	0.08823733433111508	0.02	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	27	1	rwr	16.0	0.8718259518259517	0.14349455135664313	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	27	2	rwr	16.0	0.9273659673659674	0.24147376245831914	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	27	3	rwr	16.0	0.8661888111888112	0.014250438148560775	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	27	4	rwr	16.0	0.9144055944055943	0.016050831644843173	0.0	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	28	0	rwr	16.0	0.8768526286353467	0.010778306357761605	0.0	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	28	1	rwr	16.0	0.8449106449106448	0.14945305427345182	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	28	2	rwr	16.0	0.9026884226884226	0.09444520927801431	0.06	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	28	3	rwr	16.0	0.9297202797202797	0.16259097010072002	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	28	4	rwr	16.0	0.9624825174825175	0.09675116546424557	0.02	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	29	0	rwr	16.0	0.8891219239373602	0.2589645537569103	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	29	1	rwr	16.0	0.8117482517482516	0.13154563868059924	0.04	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	29	2	rwr	16.0	0.9266511266511267	0.020326986465563177	0.02	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	29	3	rwr	16.0	0.9491258741258742	0.03099000972017397	0.0	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	29	4	rwr	16.0	0.9208391608391608	0.19336856018722032	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	30	0	rwr	16.0	0.8697916666666666	0.01825623892645948	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	30	1	rwr	16.0	0.9337373737373736	0.12332257584827669	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	30	2	rwr	16.0	0.9573271173271174	0.21167629447829484	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	30	3	rwr	16.0	0.9041958041958041	0.14317158191753163	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	30	4	rwr	16.0	0.8429370629370629	0.056838226113429015	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	31	0	rwr	16.0	0.9496644295302014	0.12714595726063294	0.04	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	31	1	rwr	16.0	0.935881895881896	0.026977595129916106	0.0	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	31	2	rwr	16.0	0.9263403263403264	0.04074305827739533	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	31	3	rwr	16.0	0.7870629370629371	0.07331262472816179	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	31	4	rwr	16.0	0.9436013986013985	0.29543208380030256	0.06	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	32	0	rwr	16.0	0.7824035234899327	0.1340827784521697	0.02	0.02	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	32	1	rwr	16.0	0.9496503496503497	0.095592620349816	0.04	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	32	2	rwr	16.0	0.9254700854700855	0.14825105742978356	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	32	3	rwr	16.0	0.9267132867132868	0.10431644980356819	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	32	4	rwr	16.0	0.9638111888111888	0.09379532792166093	0.02	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	33	0	rwr	16.0	0.9287961409395973	0.18386222734413718	0.06	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	33	1	rwr	16.0	0.9387101787101788	0.023992890551664627	0.02	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	33	2	rwr	16.0	0.9224553224553225	0.10354750217461617	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	33	3	rwr	16.0	0.9317482517482518	0.18249374165384602	0.06	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	33	4	rwr	16.0	0.8427622377622378	0.026714921166837345	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	34	0	rwr	16.0	0.886640100671141	0.1427112812544759	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	34	1	rwr	16.0	0.90999222999223	0.1281379177900249	0.02	0.01	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	34	2	rwr	16.0	0.9566122766122767	0.07290160073279907	0.02	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	34	3	rwr	16.0	0.9564335664335665	0.12403883846318076	0.04	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	34	4	rwr	16.0	0.8056293706293707	0.1520551957369747	0.04	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	35	0	rwr	16.0	0.8283696868008947	0.030855431495098704	0.02	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	35	1	rwr	16.0	0.9442424242424242	0.07932074090598397	0.02	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	35	2	rwr	16.0	0.9765967365967365	0.23418005018334317	0.08	0.06	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	35	3	rwr	16.0	0.9312937062937062	0.021565924936819067	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	35	4	rwr	16.0	0.8167132867132867	0.13619064669177514	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	36	0	rwr	16.0	0.8234060402684563	0.08152991908021946	0.02	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	36	1	rwr	16.0	0.9548407148407149	0.0426941036296409	0.02	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	36	2	rwr	16.0	0.922144522144522	0.21287406513300647	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	36	3	rwr	16.0	0.9152797202797204	0.019017294563611665	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	36	4	rwr	16.0	0.9170629370629371	0.09987170428682478	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	37	0	rwr	16.0	0.9225041946308725	0.1739104869254826	0.06	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	37	1	rwr	16.0	0.9533177933177933	0.1771157486117816	0.06	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	37	2	rwr	16.0	0.887987567987568	0.06961326876047266	0.02	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	37	3	rwr	16.0	0.8171328671328671	0.025203452422484347	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	37	4	rwr	16.0	0.918041958041958	0.02418406721114681	0.0	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	38	0	rwr	16.0	0.9472175615212528	0.17247483341457243	0.04	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	38	1	rwr	16.0	0.9287024087024086	0.1505539282445427	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	38	2	rwr	16.0	0.8480808080808081	0.09504998749487081	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	38	3	rwr	16.0	0.8991258741258742	0.025892251378418715	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	38	4	rwr	16.0	0.9465034965034965	0.15435887572404522	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	39	0	rwr	16.0	0.9171210850111858	0.16280828138025846	0.04	0.05	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	39	1	rwr	16.0	0.9211188811188811	0.13769193305326294	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	39	2	rwr	16.0	0.8546386946386946	0.15039370029766702	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	39	3	rwr	16.0	0.9588111888111889	0.09946891644078923	0.04	0.05	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.5	39	4	rwr	16.0	0.8924125874125874	0.054322362822009536	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	0	0	rwr	11.0	0.9142897091722595	0.06522062632436286	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	0	1	rwr	11.0	0.8157264957264957	0.012867183456309758	0.0	0.0	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	0	2	rwr	11.0	0.9447707847707849	0.16940346017399593	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	0	3	rwr	11.0	0.9189860139860139	0.0984811259569563	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	0	4	rwr	11.0	0.9213986013986013	0.14440939943384673	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	1	0	rwr	11.0	0.7869826621923937	0.015926033487279057	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	1	1	rwr	11.0	0.9337995337995338	0.12923730860187843	0.02	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	1	2	rwr	11.0	0.9559285159285159	0.20672236797487464	0.08	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	1	3	rwr	11.0	0.8982167832167832	0.0768739880046059	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	1	4	rwr	11.0	0.9226223776223775	0.1480161191290146	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	2	0	rwr	11.0	0.9471476510067114	0.415676353161576	0.08	0.05	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	2	1	rwr	11.0	0.9508313908313908	0.027867252119932323	0.02	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	2	2	rwr	11.0	0.792043512043512	0.07210613890599334	0.02	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	2	3	rwr	11.0	0.9097552447552447	0.0611440593687402	0.02	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	2	4	rwr	11.0	0.9071328671328671	0.01900244593935599	0.0	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	3	0	rwr	11.0	0.892547539149888	0.017060236374768015	0.02	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	3	1	rwr	11.0	0.9383372183372182	0.3868220880883989	0.08	0.05	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	3	2	rwr	11.0	0.8294949494949495	0.09475438126663836	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	3	3	rwr	11.0	0.9482167832167832	0.024764044911617225	0.02	0.02	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	3	4	rwr	11.0	0.9403146853146853	0.059734522482012734	0.02	0.01	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	4	0	rwr	11.0	0.9260696308724833	0.26496527750129095	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	4	1	rwr	11.0	0.8647397047397046	0.14576448828692037	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	4	2	rwr	11.0	0.9536596736596737	0.05226742359210649	0.06	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	4	3	rwr	11.0	0.8716783216783216	0.011160976335095305	0.0	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	4	4	rwr	11.0	0.9206993006993007	0.26107569577061535	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	5	0	rwr	11.0	0.9467631431767338	0.07899820772758355	0.04	0.03	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	5	1	rwr	11.0	0.885097125097125	0.09174989919414583	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	5	2	rwr	11.0	0.9466045066045067	0.15430943400033603	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	5	3	rwr	11.0	0.8266433566433566	0.22324054952529548	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	5	4	rwr	11.0	0.9237412587412587	0.01731123725328011	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	6	0	rwr	11.0	0.9178901006711411	0.02401704516289789	0.02	0.01	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	6	1	rwr	11.0	0.780916860916861	0.12061464433761994	0.02	0.01	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	6	2	rwr	11.0	0.957917637917638	0.16536148775098408	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	6	3	rwr	11.0	0.9301748251748252	0.08384834497209458	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	6	4	rwr	11.0	0.8932167832167832	0.14254143402349653	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	7	0	rwr	11.0	0.7771602348993288	0.012660300619906644	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	7	1	rwr	11.0	0.9033721833721834	0.017540167939595452	0.0	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	7	2	rwr	11.0	0.9254079254079254	0.13945912322596252	0.06	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	7	3	rwr	11.0	0.9564685314685314	0.2739440401299187	0.06	0.05	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	7	4	rwr	11.0	0.9394405594405595	0.1459544030223203	0.02	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	8	0	rwr	11.0	0.7449314876957494	0.007527346766119095	0.0	0.0	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	8	1	rwr	11.0	0.9650971250971252	0.2607163392817022	0.06	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	8	2	rwr	11.0	0.9502408702408702	0.08007109522461656	0.02	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	8	3	rwr	11.0	0.9155594405594405	0.10657615412604866	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	8	4	rwr	11.0	0.9256293706293707	0.0492281297541543	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	9	0	rwr	11.0	0.9081375838926175	0.14115743502643494	0.04	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	9	1	rwr	11.0	0.9233877233877232	0.14767182620158997	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	9	2	rwr	11.0	0.9545609945609945	0.05224537339899095	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	9	3	rwr	11.0	0.8240909090909091	0.13972587850688034	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	9	4	rwr	11.0	0.9275524475524476	0.06227292745099534	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	10	0	rwr	11.0	0.9086968680089486	0.02879330940090608	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	10	1	rwr	11.0	0.9436519036519037	0.030888395807251473	0.0	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	10	2	rwr	11.0	0.925936285936286	0.21186484081572565	0.06	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	10	3	rwr	11.0	0.8252797202797203	0.07723533109640755	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	10	4	rwr	11.0	0.8690909090909091	0.1371711946137777	0.02	0.02	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	11	0	rwr	11.0	0.8184773489932886	0.032043935456320255	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	11	1	rwr	11.0	0.8770784770784771	0.07072599138052944	0.02	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	11	2	rwr	11.0	0.9486868686868687	0.05197355960764212	0.04	0.06	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	11	3	rwr	11.0	0.9391958041958043	0.2650857160808984	0.04	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	11	4	rwr	11.0	0.9473776223776222	0.16577613216064993	0.04	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	12	0	rwr	11.0	0.9067044183445191	0.2234191501305118	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	12	1	rwr	11.0	0.9391142191142191	0.08015502808268414	0.04	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	12	2	rwr	11.0	0.8944832944832944	0.03473542427339129	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	12	3	rwr	11.0	0.9082167832167831	0.13909120771800548	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	12	4	rwr	11.0	0.8185314685314684	0.07512187347363115	0.02	0.01	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	13	0	rwr	11.0	0.9147441275167785	0.1524294307151132	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	13	1	rwr	11.0	0.7983527583527584	0.22986454728790456	0.04	0.02	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	13	2	rwr	11.0	0.9633566433566433	0.09996740587712104	0.04	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	13	3	rwr	11.0	0.9267832167832167	0.04631687712893773	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	13	4	rwr	11.0	0.9173776223776224	0.05830248572495876	0.02	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	14	0	rwr	11.0	0.9239723154362417	0.0236676252982224	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	14	1	rwr	11.0	0.8997979797979798	0.24473890261783612	0.06	0.03	0.01	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	14	2	rwr	11.0	0.8175912975912976	0.13001538771624913	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	14	3	rwr	11.0	0.918916083916084	0.0780613537885155	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	14	4	rwr	11.0	0.9465384615384616	0.031011385975281698	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	15	0	rwr	11.0	0.834976230425056	0.030569919296823986	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	15	1	rwr	11.0	0.931033411033411	0.0964852919320668	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	15	2	rwr	11.0	0.9259673659673661	0.1685614741615579	0.06	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	15	3	rwr	11.0	0.9405594405594405	0.16438729948932182	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	15	4	rwr	11.0	0.9015384615384615	0.019493184432446537	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	16	0	rwr	11.0	0.8862905480984341	0.13857995136772044	0.02	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	16	1	rwr	11.0	0.9237917637917639	0.07301215694543553	0.02	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	16	2	rwr	11.0	0.9200621600621601	0.14690184272125614	0.04	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	16	3	rwr	11.0	0.830664335664336	0.16382988699964482	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	16	4	rwr	11.0	0.939020979020979	0.025190365620543043	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	17	0	rwr	11.0	0.957809004474273	0.15465442417360423	0.04	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	17	1	rwr	11.0	0.935011655011655	0.05693040640411679	0.02	0.01	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	17	2	rwr	11.0	0.9361926961926962	0.07389983727179945	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	17	3	rwr	11.0	0.9194055944055944	0.15357202344026438	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	17	4	rwr	11.0	0.790979020979021	0.10087163732111297	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	18	0	rwr	11.0	0.9496993847874721	0.20208644561858252	0.06	0.03	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	18	1	rwr	11.0	0.950955710955711	0.040648834378910155	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	18	2	rwr	11.0	0.8123698523698523	0.013818406551806342	0.0	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	18	3	rwr	11.0	0.9158391608391608	0.13728316484024863	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	18	4	rwr	11.0	0.8917832167832167	0.07896686348394438	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	19	0	rwr	11.0	0.9203369686800895	0.09482966303962201	0.04	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	19	1	rwr	11.0	0.9403885003885003	0.24269678058263225	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	19	2	rwr	11.0	0.9252525252525253	0.029256663392585112	0.02	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	19	3	rwr	11.0	0.9276923076923078	0.19469536208170574	0.06	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	19	4	rwr	11.0	0.7925874125874127	0.011967570288668345	0.0	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	20	0	rwr	11.0	0.790583053691275	0.0756398219930397	0.02	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	20	1	rwr	11.0	0.933954933954934	0.15258098641021878	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	20	2	rwr	11.0	0.8987723387723389	0.1686890432444741	0.06	0.04	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	20	3	rwr	11.0	0.9258041958041958	0.1394888543734113	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	20	4	rwr	11.0	0.9132867132867132	0.05824167017628502	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	21	0	rwr	11.0	0.923482941834452	0.17156621316976656	0.06	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	21	1	rwr	11.0	0.845128205128205	0.08869034813633075	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	21	2	rwr	11.0	0.9147785547785547	0.150160104750236	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	21	3	rwr	11.0	0.9201398601398602	0.03574463866002987	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	21	4	rwr	11.0	0.9335314685314685	0.0269420382598725	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	22	0	rwr	11.0	0.9739233780760627	0.42531315733665653	0.08	0.05	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	22	1	rwr	11.0	0.8137062937062938	0.14045223658865047	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	22	2	rwr	11.0	0.9053302253302252	0.09148683841018984	0.04	0.02	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	22	3	rwr	11.0	0.9315734265734267	0.020639229735264438	0.0	0.02	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	22	4	rwr	11.0	0.9415384615384615	0.027306053076291227	0.0	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	23	0	rwr	11.0	0.9330606823266219	0.07790498311513286	0.02	0.01	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	23	1	rwr	11.0	0.9425641025641026	0.06552634899580924	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	23	2	rwr	11.0	0.8818958818958819	0.34334111563763375	0.06	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	23	3	rwr	11.0	0.8320279720279722	0.03293217427363693	0.02	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	23	4	rwr	11.0	0.9555944055944056	0.08954966541573774	0.02	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	24	0	rwr	11.0	0.8096686241610738	0.15897303715871805	0.04	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	24	1	rwr	11.0	0.9105516705516705	0.14459346203827367	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	24	2	rwr	11.0	0.9456410256410256	0.07306804265826385	0.04	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	24	3	rwr	11.0	0.933986013986014	0.018042061136481838	0.0	0.01	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	24	4	rwr	11.0	0.9311188811188812	0.1651848550527248	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	25	0	rwr	11.0	0.8317603467561522	0.025812726524321455	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	25	1	rwr	11.0	0.9062937062937064	0.07376037863305604	0.04	0.02	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	25	2	rwr	11.0	0.9107692307692308	0.07089596177145975	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	25	3	rwr	11.0	0.9091608391608391	0.16174880187434615	0.04	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	25	4	rwr	11.0	0.9583216783216784	0.27130522641716953	0.04	0.02	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	26	0	rwr	11.0	0.8498322147651006	0.2984906613901607	0.08	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	26	1	rwr	11.0	0.9262781662781663	0.07515776096852636	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	26	2	rwr	11.0	0.9303496503496503	0.0616617025579333	0.02	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	26	3	rwr	11.0	0.913951048951049	0.015292095277893268	0.0	0.01	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	26	4	rwr	11.0	0.921958041958042	0.12358033572717747	0.06	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	27	0	rwr	11.0	0.82560822147651	0.14732135918958048	0.02	0.03	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	27	1	rwr	11.0	0.8697125097125097	0.1422596091381046	0.04	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	27	2	rwr	11.0	0.9246620046620048	0.2403708663909173	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	27	3	rwr	11.0	0.865034965034965	0.013260529315185642	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	27	4	rwr	11.0	0.9063986013986014	0.013524609241790223	0.0	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	28	0	rwr	11.0	0.872028803131991	0.010256162032933867	0.0	0.0	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	28	1	rwr	11.0	0.84009324009324	0.144855081484363	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	28	2	rwr	11.0	0.8958197358197357	0.1507709755392545	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	28	3	rwr	11.0	0.9293356643356643	0.16250674271230356	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	28	4	rwr	11.0	0.957972027972028	0.09228747642266932	0.04	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	29	0	rwr	11.0	0.888457774049217	0.25860354891093384	0.04	0.02	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	29	1	rwr	11.0	0.807117327117327	0.13168355259061737	0.06	0.03	0.012	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	29	2	rwr	11.0	0.9135042735042734	0.016660041519325593	0.0	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	29	3	rwr	11.0	0.9436713286713286	0.023856287528621838	0.0	0.03	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	29	4	rwr	11.0	0.9236713286713285	0.20546637238136148	0.06	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	30	0	rwr	11.0	0.8709451901565995	0.018660809058591826	0.02	0.01	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	30	1	rwr	11.0	0.9284537684537686	0.12028172501534101	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	30	2	rwr	11.0	0.9502408702408702	0.24500678454321292	0.04	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	30	3	rwr	11.0	0.9113636363636365	0.14365119594812395	0.04	0.03	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	30	4	rwr	11.0	0.8394405594405595	0.0591278607937676	0.04	0.03	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	31	0	rwr	11.0	0.9483011744966443	0.12572136935279055	0.04	0.04	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	31	1	rwr	11.0	0.931965811965812	0.02341562950412523	0.0	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	31	2	rwr	11.0	0.9243822843822844	0.04486907559903774	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	31	3	rwr	11.0	0.7802097902097902	0.07140010408538955	0.02	0.01	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	31	4	rwr	11.0	0.9424825174825175	0.29524422648462795	0.06	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	32	0	rwr	11.0	0.7857242729306488	0.1337666949283789	0.02	0.01	0.008	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	32	1	rwr	11.0	0.9469463869463869	0.0957668307707095	0.04	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	32	2	rwr	11.0	0.9225485625485625	0.14658938390754236	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	32	3	rwr	11.0	0.9256993006993007	0.10550865626804291	0.04	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	32	4	rwr	11.0	0.9626573426573426	0.09172427148382813	0.02	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	33	0	rwr	11.0	0.9276775727069352	0.18376176418190146	0.06	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	33	1	rwr	11.0	0.9369075369075369	0.022062136005828334	0.02	0.02	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	33	2	rwr	11.0	0.9201864801864802	0.10998287979941064	0.04	0.03	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	33	3	rwr	11.0	0.9317832167832167	0.18589629623099324	0.06	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	33	4	rwr	11.0	0.8372027972027974	0.022153733696092276	0.02	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	34	0	rwr	11.0	0.8851020693512305	0.14286851878851148	0.04	0.02	0.01	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	34	1	rwr	11.0	0.9033100233100233	0.12544207437839913	0.02	0.01	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	34	2	rwr	11.0	0.9529448329448329	0.06839441965128053	0.02	0.05	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	34	3	rwr	11.0	0.9572727272727273	0.12342957850044071	0.04	0.04	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	34	4	rwr	11.0	0.8028321678321678	0.15384819304329994	0.04	0.03	0.01	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	35	0	rwr	11.0	0.8297678970917226	0.028628453502893662	0.02	0.02	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	35	1	rwr	11.0	0.9408857808857808	0.0773659316497009	0.02	0.03	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	35	2	rwr	11.0	0.9709090909090909	0.23298783298783296	0.08	0.05	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	35	3	rwr	11.0	0.9264685314685316	0.0191279959726099	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	35	4	rwr	11.0	0.8195104895104894	0.1354640523586882	0.02	0.02	0.008	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	36	0	rwr	11.0	0.8235808165548097	0.08022427543601253	0.04	0.03	0.014	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	36	1	rwr	11.0	0.9496192696192695	0.04295844838753949	0.02	0.04	0.018	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	36	2	rwr	11.0	0.919129759129759	0.20627629671797687	0.04	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	36	3	rwr	11.0	0.9111188811188811	0.017766995711742388	0.02	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	36	4	rwr	11.0	0.917167832167832	0.12253925482970614	0.04	0.04	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	37	0	rwr	11.0	0.9268036912751677	0.17623559843029635	0.06	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	37	1	rwr	11.0	0.9468220668220668	0.1838354886530886	0.06	0.04	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	37	2	rwr	11.0	0.8845376845376846	0.06828413503744982	0.02	0.01	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	37	3	rwr	11.0	0.8146853146853147	0.024663987165270112	0.02	0.01	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	37	4	rwr	11.0	0.9162587412587413	0.021868462030483635	0.0	0.02	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	38	0	rwr	11.0	0.9511675055928412	0.18130757376106493	0.04	0.04	0.016	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	38	1	rwr	11.0	0.9237296037296037	0.14723827060854366	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	38	2	rwr	11.0	0.8485159285159284	0.09637824812858972	0.04	0.04	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	38	3	rwr	11.0	0.9000699300699301	0.03136509219264198	0.04	0.02	0.012	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	38	4	rwr	11.0	0.9418181818181818	0.1488295291126406	0.02	0.04	0.014	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	39	0	rwr	11.0	0.9219099552572706	0.16296690924452287	0.04	0.04	0.012	8	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	39	1	rwr	11.0	0.9208391608391608	0.13613638248602455	0.04	0.03	0.014	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	39	2	rwr	11.0	0.8433877233877233	0.1574839293638394	0.04	0.02	0.016	9	3584
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	39	3	rwr	11.0	0.9571678321678323	0.09588678283587117	0.04	0.05	0.016	8	3583
+intact	clingen_label_pubcount_adjusted	native_intact	0.7	39	4	rwr	11.0	0.8944405594405594	0.05471295117789194	0.02	0.02	0.014	8	3583

@@ -47,7 +47,11 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 LABELS_DIR = REPO_ROOT / "data" / "processed" / "labels"
 
-CANONICAL_LABELS = ("intogen2024", "ot_all", "ot_nolit", "clingen_label")
+# The temporal label was missing here, which is why Control 7 covered
+# only 23 of the 24 primary arms (the plan's P1-4): the control had no
+# pubcount-adjusted version of intogen_temporal_new.
+CANONICAL_LABELS = ("intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new",
+                    "clingen_label")
 
 
 def build_adjusted(label: str, pubcount_path: Path, label_path: Path,

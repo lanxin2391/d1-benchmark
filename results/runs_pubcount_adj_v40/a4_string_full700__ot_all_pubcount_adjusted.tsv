@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_full700	ot_all_pubcount_adjusted	native_string_full700		0	0	degree		0.9054379210779595	0.12720815968428414	0.1	0.11	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		0	1	degree		0.9088332798631162	0.13232893450180283	0.12	0.15	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		0	2	degree		0.8792325301925472	0.13490660923059267	0.12	0.11	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		0	3	degree		0.8993741976893452	0.14702923823536757	0.16	0.15	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		0	4	degree		0.8785488874625589	0.10748764836802285	0.08	0.08	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		1	0	degree		0.8633675542722704	0.09079810771087715	0.1	0.1	0.084	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		1	1	degree		0.9084509678109294	0.1412617763422289	0.16	0.15	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		1	2	degree		0.8938108676856822	0.12408441260769273	0.18	0.17	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		1	3	degree		0.8994169875909285	0.13640263840217579	0.1	0.06	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		1	4	degree		0.905645592640137	0.15696686315056332	0.12	0.12	0.102	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		2	0	degree		0.9053069190460914	0.1767018449283217	0.24	0.2	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		2	1	degree		0.8845257191744199	0.11216161893467272	0.04	0.08	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		2	2	degree		0.9120623372103772	0.11849826935141032	0.08	0.11	0.098	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		2	3	degree		0.8883531236628155	0.14496396468346823	0.14	0.12	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		2	4	degree		0.8816030166880617	0.1108281205162185	0.1	0.12	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		3	0	degree		0.8768848251523901	0.1463709004313918	0.18	0.11	0.086	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		3	1	degree		0.8810314404876484	0.10659313319840617	0.1	0.07	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		3	2	degree		0.9109856826696682	0.12290797594890537	0.14	0.14	0.096	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		3	3	degree		0.9167789901583226	0.15663769076490197	0.14	0.18	0.102	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		3	4	degree		0.8837451861360719	0.10755371758740473	0.1	0.12	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		4	0	degree		0.9257699711260828	0.15307798896102953	0.14	0.16	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		4	1	degree		0.9022216875200513	0.14147960343061866	0.16	0.14	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		4	2	degree		0.8918587516244978	0.11776382647228967	0.12	0.13	0.092	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		4	3	degree		0.8996282627299957	0.10826259111747608	0.08	0.12	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		4	4	degree		0.8516795036371415	0.13231924190149463	0.08	0.08	0.076	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		5	0	degree		0.8992193348304993	0.10778859567694449	0.1	0.11	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		5	1	degree		0.8957063415677468	0.1449029953867939	0.06	0.14	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		5	2	degree		0.8889224210589277	0.1611752862901936	0.16	0.11	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		5	3	degree		0.8967265725288832	0.12809604530822963	0.18	0.16	0.1	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		5	4	degree		0.8881258023106546	0.12136860798446736	0.12	0.09	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		6	0	degree		0.9188642925890279	0.12684423587853638	0.14	0.12	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		6	1	degree		0.8774810180729334	0.10832887834893268	0.1	0.1	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		6	2	degree		0.8714131906494185	0.08748981103067094	0.06	0.07	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		6	3	degree		0.8902358793324776	0.15304164553017166	0.1	0.14	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		6	4	degree		0.9122325631151048	0.19387628933102313	0.16	0.17	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		7	0	degree		0.9120896160838412	0.11936503576411958	0.08	0.06	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		7	1	degree		0.8995668912415784	0.18004402731181904	0.2	0.18	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		7	2	degree		0.9159964764033214	0.13245287615780624	0.1	0.14	0.1	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		7	3	degree		0.8670597988874625	0.11511684679647953	0.06	0.14	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		7	4	degree		0.8748662815575524	0.09636738096018942	0.14	0.09	0.084	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		8	0	degree		0.9224735322425409	0.19303708515427276	0.22	0.18	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		8	1	degree		0.8907122232916266	0.11101132978883954	0.1	0.11	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		8	2	degree		0.8816577217337401	0.10968702830246838	0.12	0.14	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		8	3	degree		0.8808327984595635	0.08593803740652085	0.04	0.08	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		8	4	degree		0.8951888104407361	0.146133177016317	0.14	0.13	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		9	0	degree		0.8845310661961288	0.12292512800773027	0.06	0.11	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		9	1	degree		0.8790129397925355	0.11476987961511272	0.18	0.1	0.084	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		9	2	degree		0.9236010288032277	0.1469722604412902	0.14	0.15	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		9	3	degree		0.8982750320924262	0.11082141852755834	0.1	0.13	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		9	4	degree		0.882683461703038	0.1436201681053394	0.14	0.13	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		10	0	degree		0.8980456635653941	0.10116462186614816	0.14	0.12	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		10	1	degree		0.9041305742701314	0.1874050706125667	0.12	0.13	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		10	2	degree		0.8936749264557946	0.1471921529683478	0.16	0.15	0.096	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		10	3	degree		0.8850422550278135	0.09742713995768118	0.12	0.12	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		10	4	degree		0.8893854300385109	0.12671906545101497	0.12	0.1	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		11	0	degree		0.8961875735215485	0.11659439287398335	0.1	0.1	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		11	1	degree		0.9080713292695969	0.1513381034936116	0.14	0.15	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		11	2	degree		0.8872367498083229	0.16374062941050413	0.18	0.17	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		11	3	degree		0.8794929396662388	0.1049191945985111	0.1	0.13	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		11	4	degree		0.8997272143774068	0.11001449940824352	0.08	0.1	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		12	0	degree		0.8846941503582504	0.09644994846446527	0.06	0.08	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		12	1	degree		0.9036065661426586	0.1277929176940839	0.12	0.14	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		12	2	degree		0.8880687101352344	0.15010296046734334	0.14	0.14	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		12	3	degree		0.886892918271288	0.13724692109645695	0.12	0.08	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		12	4	degree		0.9076700898587934	0.12618421518926107	0.14	0.16	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		13	0	degree		0.9166292375147044	0.12638471604519863	0.1	0.11	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		13	1	degree		0.899422521655438	0.1251263740565939	0.1	0.1	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		13	2	degree		0.8950370575792672	0.12155374001742378	0.14	0.12	0.094	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		13	3	degree		0.8891741548994437	0.12893867063702857	0.1	0.15	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		13	4	degree		0.8699026529738981	0.13667392558214805	0.18	0.13	0.082	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		14	0	degree		0.904069083520479	0.12191581969077085	0.1	0.1	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		14	1	degree		0.9002486365094642	0.1668009634032015	0.16	0.17	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		14	2	degree		0.9013773565412201	0.11408747841867153	0.14	0.11	0.098	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		14	3	degree		0.8791185280273857	0.12549673805838085	0.14	0.12	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		14	4	degree		0.886114676936243	0.11998680638474066	0.08	0.11	0.09	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		15	0	degree		0.8980723986739385	0.10060068550615095	0.08	0.11	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		15	1	degree		0.8877740348625816	0.12280193806873198	0.14	0.15	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		15	2	degree		0.898726502558414	0.14215959559789282	0.12	0.14	0.094	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		15	3	degree		0.8933943089430895	0.12203112160637303	0.08	0.09	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		15	4	degree		0.8911264441591784	0.13600468535445598	0.16	0.11	0.09	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		16	0	degree		0.8925462517377821	0.10041604786588852	0.08	0.11	0.086	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		16	1	degree		0.9190968880333653	0.14849469261187104	0.14	0.15	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		16	2	degree		0.8689934367574211	0.08735302325896073	0.06	0.07	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		16	3	degree		0.8698518399657681	0.1602555441224136	0.14	0.12	0.082	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		16	4	degree		0.916482135216089	0.15892706661852907	0.18	0.15	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		17	0	degree		0.9155518126403593	0.12598057076024122	0.12	0.12	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		17	1	degree		0.872957437707197	0.10461004813149163	0.12	0.11	0.084	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		17	2	degree		0.8810622991468328	0.11196598137068142	0.08	0.1	0.094	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		17	3	degree		0.9069801026957638	0.14941556504898756	0.12	0.15	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		17	4	degree		0.8934718656397089	0.14490569076860055	0.18	0.12	0.102	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		18	0	degree		0.8735429365843225	0.10422351096241741	0.12	0.14	0.086	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		18	1	degree		0.9142631804085124	0.14177879800242427	0.1	0.13	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		18	2	degree		0.8881937760667308	0.16774870510251916	0.24	0.13	0.086	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		18	3	degree		0.9182659392383398	0.1602351074884339	0.1	0.15	0.1	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		18	4	degree		0.8767543859649122	0.10084458546418451	0.02	0.08	0.09	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		19	0	degree		0.900989199016148	0.12084350823553397	0.1	0.11	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		19	1	degree		0.8786199336969307	0.12038784403343909	0.1	0.1	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		19	2	degree		0.8816359711369581	0.09520235424903065	0.1	0.1	0.092	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		19	3	degree		0.8996737270004278	0.13493401933746982	0.14	0.14	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		19	4	degree		0.9075497432605905	0.17066063374587953	0.16	0.18	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		20	0	degree		0.904951342102449	0.12143146807309436	0.1	0.12	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		20	1	degree		0.9045048657897552	0.15014866797556342	0.12	0.11	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		20	2	degree		0.906173363131651	0.13357448421010515	0.12	0.11	0.094	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		20	3	degree		0.8760242832691485	0.12504232137854615	0.1	0.12	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		20	4	degree		0.8790650406504066	0.11853249722515835	0.1	0.13	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		21	0	degree		0.8740161480055609	0.12220622699412073	0.14	0.13	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		21	1	degree		0.9186049620361457	0.1662216539552445	0.16	0.16	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		21	2	degree		0.8982833341489808	0.12142181608505673	0.06	0.12	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		21	3	degree		0.8955338040222507	0.15330530772478185	0.14	0.13	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		21	4	degree		0.8840741335044929	0.09637825434238431	0.08	0.08	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		22	0	degree		0.8865763019997861	0.13424572719475597	0.16	0.15	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		22	1	degree		0.8927654796278474	0.13093131671979186	0.1	0.1	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		22	2	degree		0.8806762260539523	0.0996178051400039	0.08	0.12	0.086	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		22	3	degree		0.8921293324775353	0.09762415644498068	0.08	0.09	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		22	4	degree		0.9174609542148053	0.18798168616150324	0.18	0.15	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		23	0	degree		0.9096139450326167	0.10700460923293302	0.08	0.09	0.102	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		23	1	degree		0.9058737033472356	0.13016046278617105	0.08	0.11	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		23	2	degree		0.8923318271045063	0.11982504486128104	0.14	0.15	0.092	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		23	3	degree		0.8857161959777492	0.15083073013574783	0.14	0.13	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		23	4	degree		0.8770432178005991	0.16790316726816634	0.2	0.15	0.09	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		24	0	degree		0.8945139557266601	0.1438879869080908	0.18	0.15	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		24	1	degree		0.9015506362955833	0.11322920612688907	0.06	0.11	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		24	2	degree		0.889256836484451	0.13235953686568724	0.18	0.15	0.088	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		24	3	degree		0.9046346812152332	0.11242220611460874	0.08	0.13	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		24	4	degree		0.8801909499358151	0.12337037416683087	0.08	0.08	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		25	0	degree		0.8702732328093252	0.11987404833138741	0.14	0.1	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		25	1	degree		0.9013795316008982	0.14537055155934644	0.14	0.16	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		25	2	degree		0.8952681576700762	0.12680065543512187	0.12	0.13	0.092	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		25	3	degree		0.9095287762088146	0.1261586523788569	0.1	0.13	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		25	4	degree		0.894908001711596	0.1293983792973598	0.1	0.11	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		26	0	degree		0.8905865682814672	0.1253937056544473	0.14	0.14	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		26	1	degree		0.8956956475243288	0.10496757396607338	0.1	0.1	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		26	2	degree		0.8823945231997303	0.08998138771185268	0.02	0.06	0.092	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		26	3	degree		0.8977134146341463	0.13789346491251542	0.18	0.15	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		26	4	degree		0.9044367779204108	0.20003840745840928	0.16	0.16	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		27	0	degree		0.8855657148968025	0.12236447681915182	0.1	0.13	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		27	1	degree		0.8830339001176345	0.10492739892825577	0.08	0.08	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		27	2	degree		0.9054963758068113	0.11775755214538586	0.1	0.08	0.096	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		27	3	degree		0.9117271074026531	0.14785529098278194	0.12	0.15	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		27	4	degree		0.8851652759948653	0.15204485755927033	0.16	0.15	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		28	0	degree		0.8935220831996578	0.1284871434646656	0.1	0.13	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		28	1	degree		0.9021869318789434	0.13003866229350203	0.12	0.13	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		28	2	degree		0.9055181264035932	0.1273897563020121	0.14	0.15	0.094	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		28	3	degree		0.8920972400513478	0.1426891959436144	0.14	0.08	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		28	4	degree		0.8772919341035516	0.11945314346136657	0.14	0.12	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		29	0	degree		0.885656614265854	0.09023504261963852	0.04	0.11	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		29	1	degree		0.891856485937333	0.12254631063630549	0.14	0.12	0.092	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		29	2	degree		0.911738797083245	0.17980943325115997	0.16	0.15	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		29	3	degree		0.8937981386392811	0.12268310627535534	0.08	0.12	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		29	4	degree		0.8878904578519469	0.1388492386819729	0.18	0.13	0.092	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		30	0	degree		0.8824751363490535	0.14547674226706275	0.14	0.13	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		30	1	degree		0.8991792321676827	0.10979340597423567	0.06	0.15	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		30	2	degree		0.9083810487050239	0.15119870737306493	0.16	0.14	0.098	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		30	3	degree		0.8907359863072315	0.1019281119892842	0.1	0.07	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		30	4	degree		0.8894121737270003	0.12787575300475693	0.14	0.12	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		31	0	degree		0.8627526467757459	0.11091502345823388	0.2	0.15	0.08	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		31	1	degree		0.8942439311303604	0.1217262384159331	0.1	0.09	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		31	2	degree		0.9004855820731582	0.10865656731402483	0.06	0.11	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		31	3	degree		0.90923459563543	0.13530668505248744	0.12	0.13	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		31	4	degree		0.9054048994437313	0.19281971155120872	0.18	0.14	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		32	0	degree		0.8827104053042455	0.19282498667336417	0.22	0.15	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		32	1	degree		0.9032456421773073	0.12675750562037685	0.14	0.13	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		32	2	degree		0.896681946460906	0.10962163063857468	0.08	0.11	0.096	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		32	3	degree		0.8841597133076594	0.10932836126519024	0.1	0.13	0.086	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		32	4	degree		0.9040142276422763	0.11682109316974928	0.08	0.1	0.1	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		33	0	degree		0.8824724628381991	0.1372948942279239	0.12	0.14	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		33	1	degree		0.9042081060849108	0.16246402664321224	0.18	0.16	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		33	2	degree		0.8899773250028548	0.12644071107063998	0.1	0.12	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		33	3	degree		0.8852374839537868	0.09466883587478966	0.08	0.08	0.09	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		33	4	degree		0.9085446084724005	0.1352133805840744	0.16	0.12	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		34	0	degree		0.8883060635226179	0.20278606721919917	0.2	0.17	0.094	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		34	1	degree		0.900812747299754	0.1082762450529659	0.1	0.09	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		34	2	degree		0.8893139318010037	0.10665096935591759	0.1	0.12	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		34	3	degree		0.9157038938810441	0.12881792074151927	0.1	0.17	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		34	4	degree		0.8773908857509627	0.11030799180491359	0.1	0.09	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		35	0	degree		0.913423698000214	0.19214875976845064	0.2	0.14	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		35	1	degree		0.8785958720992407	0.10390202955190753	0.06	0.11	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		35	2	degree		0.891627651533689	0.12912770882228122	0.14	0.12	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		35	3	degree		0.9065976679503637	0.12228328502683651	0.12	0.16	0.098	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		35	4	degree		0.88025513478819	0.10380388869785367	0.08	0.08	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		36	0	degree		0.8959950807400278	0.13612708647077712	0.14	0.13	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		36	1	degree		0.8755614372794354	0.10523067561760266	0.06	0.09	0.086	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		36	2	degree		0.920240561600409	0.15151429424222107	0.18	0.19	0.1	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		36	3	degree		0.9034098202824133	0.15978254178594553	0.14	0.1	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		36	4	degree		0.875550919982884	0.09110682897380817	0.06	0.09	0.084	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		37	0	degree		0.8853144048764838	0.11720887407214792	0.1	0.1	0.098	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		37	1	degree		0.8962089616083841	0.14788120569592858	0.08	0.09	0.09	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		37	2	degree		0.9022664121846844	0.11246093493319262	0.08	0.12	0.092	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		37	3	degree		0.8947823063756952	0.1586937389427637	0.24	0.2	0.096	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		37	4	degree		0.8906637783483098	0.11632846788477463	0.1	0.11	0.088	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		38	0	degree		0.8838466474173884	0.160093968271407	0.14	0.12	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		38	1	degree		0.9078467543578227	0.15410682867982028	0.12	0.16	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		38	2	degree		0.8817855064898343	0.12360703931189826	0.1	0.11	0.086	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		38	3	degree		0.907239516474112	0.1276606678514231	0.1	0.12	0.1	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		38	4	degree		0.8905621523320496	0.09686780265744441	0.08	0.12	0.09	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		39	0	degree		0.9018153138701744	0.13884854119639586	0.14	0.1	0.096	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		39	1	degree		0.8746390760346486	0.1204280094252856	0.08	0.11	0.088	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700		39	2	degree		0.8795125691261153	0.15462193582281591	0.16	0.15	0.09	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		39	3	degree		0.9059852374839539	0.1219423284411944	0.12	0.14	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700		39	4	degree		0.9081006632434745	0.11497804779425747	0.12	0.14	0.094	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	0	0	rwr	36.0	0.953202866003636	0.3300446512719214	0.4	0.29	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	0	1	rwr	36.0	0.9616672013688375	0.49334533573377637	0.46	0.36	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	0	2	rwr	36.0	0.9383316204738367	0.3211853472866515	0.34	0.31	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	0	3	rwr	36.0	0.9489356011981173	0.4174060410838568	0.46	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	0	4	rwr	36.0	0.9479835258878904	0.3220938936935315	0.34	0.24	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	1	0	rwr	36.0	0.9321035183402845	0.35802571824347706	0.52	0.29	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	1	1	rwr	36.0	0.9629077104053043	0.3866574016415584	0.36	0.32	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	1	2	rwr	36.0	0.9502400722119813	0.40030820927294114	0.42	0.32	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	1	3	rwr	36.0	0.9590179717586649	0.35541680165132905	0.36	0.3	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	1	4	rwr	36.0	0.952048566538297	0.40291853613412254	0.42	0.31	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	2	0	rwr	36.0	0.9555234734253022	0.45575168381872966	0.44	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	2	1	rwr	36.0	0.9500588172387979	0.30662473785078087	0.32	0.29	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	2	2	rwr	36.0	0.9696252915939381	0.393408190047	0.42	0.36	0.116	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	2	3	rwr	36.0	0.9446512623020967	0.4118325041785057	0.46	0.34	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	2	4	rwr	36.0	0.9508451005562686	0.3657545768480469	0.38	0.28	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	3	0	rwr	36.0	0.9373382525933056	0.35627603631817734	0.34	0.27	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	3	1	rwr	36.0	0.9505774783445621	0.33309373507838447	0.38	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	3	2	rwr	36.0	0.9535896641164092	0.38902076190685725	0.46	0.33	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	3	3	rwr	36.0	0.9675117672229355	0.4665210620608439	0.48	0.34	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	3	4	rwr	36.0	0.9427471116816432	0.35532758509036827	0.44	0.29	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	4	0	rwr	36.0	0.9661480055609026	0.40822541499032194	0.4	0.32	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	4	1	rwr	36.0	0.9621377392792215	0.44461391932865413	0.5	0.34	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	4	2	rwr	36.0	0.9490546646873623	0.41818836149379984	0.46	0.3	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	4	3	rwr	36.0	0.9503744116388532	0.3257513849169689	0.36	0.29	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	4	4	rwr	36.0	0.9187045357295678	0.31020957391692616	0.3	0.2	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	5	0	rwr	36.0	0.95494599508074	0.3800359798897272	0.38	0.34	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	5	1	rwr	36.0	0.9484707517912523	0.35675542832070745	0.46	0.28	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	5	2	rwr	36.0	0.9520725599908647	0.4177704746938113	0.34	0.29	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	5	3	rwr	36.0	0.9503262729995722	0.3394800656185477	0.36	0.28	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	5	4	rwr	36.0	0.9560547710740265	0.40789588931201876	0.46	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	6	0	rwr	36.0	0.9644743877660142	0.3374886789386377	0.4	0.3	0.118	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	6	1	rwr	36.0	0.933819912308844	0.32871182341249583	0.36	0.3	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	6	2	rwr	36.0	0.9329265971735099	0.28334263825727785	0.34	0.29	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	6	3	rwr	36.0	0.9545303808301241	0.44502535572986796	0.42	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	6	4	rwr	36.0	0.9598844672657253	0.5345303798147153	0.54	0.35	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	7	0	rwr	36.0	0.9620361458667522	0.34708796087694954	0.38	0.29	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	7	1	rwr	36.0	0.9523099133782483	0.44027526179192694	0.46	0.33	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	7	2	rwr	36.0	0.9616373849257489	0.45587145300842513	0.5	0.35	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	7	3	rwr	36.0	0.9294768934531451	0.326510007087051	0.4	0.27	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	7	4	rwr	36.0	0.9392704321780061	0.3429767265440748	0.38	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	8	0	rwr	36.0	0.9709335899903753	0.5052917028892473	0.5	0.37	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	8	1	rwr	36.0	0.953144048764838	0.40338996843521047	0.42	0.34	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	8	2	rwr	36.0	0.9477876924248109	0.3284805216303343	0.36	0.31	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	8	3	rwr	36.0	0.9506899871630295	0.3028978725938939	0.34	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	8	4	rwr	36.0	0.944351732991014	0.35833968316934506	0.4	0.28	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	9	0	rwr	36.0	0.946567212062881	0.4108983043970822	0.46	0.35	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	9	1	rwr	36.0	0.9408512458560581	0.3230770206694802	0.38	0.24	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	9	2	rwr	36.0	0.9713979652316711	0.4129718021498193	0.44	0.38	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	9	3	rwr	36.0	0.9524443731279418	0.3452431006287861	0.34	0.27	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	9	4	rwr	36.0	0.9479835258878905	0.44297577644505215	0.46	0.32	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	10	0	rwr	36.0	0.9568281467222757	0.3154747696653901	0.34	0.29	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	10	1	rwr	36.0	0.9574697893273446	0.4226044522728266	0.4	0.34	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	10	2	rwr	36.0	0.9458573269604085	0.4417054036507598	0.46	0.36	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	10	3	rwr	36.0	0.954257595207531	0.34223111310739435	0.42	0.27	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	10	4	rwr	36.0	0.9469512195121952	0.3930107313875423	0.44	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	11	0	rwr	36.0	0.9534862581542082	0.33409142451421237	0.32	0.26	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	11	1	rwr	36.0	0.9595176986418565	0.4693466765994591	0.5	0.35	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	11	2	rwr	36.0	0.9495277401673708	0.4238570591851018	0.44	0.35	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	11	3	rwr	36.0	0.9467479674796747	0.33954275947232726	0.36	0.31	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	11	4	rwr	36.0	0.9550224646983312	0.3766415028501366	0.34	0.3	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	12	0	rwr	36.0	0.946102021174206	0.3195216596149012	0.34	0.29	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	12	1	rwr	36.0	0.9547535022992193	0.38388616741913006	0.44	0.32	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	12	2	rwr	36.0	0.945025366633497	0.3882440611585801	0.42	0.3	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	12	3	rwr	36.0	0.9472079589216944	0.3566470984856501	0.38	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	12	4	rwr	36.0	0.9636874197689345	0.4797426549020464	0.46	0.34	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	13	0	rwr	36.0	0.9599828895305316	0.3290778425439733	0.4	0.29	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	13	1	rwr	36.0	0.9610950700459844	0.4028083795919262	0.44	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	13	2	rwr	36.0	0.9569338183716415	0.4385165920231173	0.46	0.32	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	13	3	rwr	36.0	0.9466249465126231	0.36913867845454806	0.38	0.29	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	13	4	rwr	36.0	0.93428540864356	0.3722309220455254	0.46	0.27	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	14	0	rwr	36.0	0.9611004170676932	0.3491769216280793	0.38	0.25	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	14	1	rwr	36.0	0.9495027269810716	0.42371732026327924	0.44	0.32	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	14	2	rwr	36.0	0.9551557070847132	0.41004710055193444	0.48	0.37	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	14	3	rwr	36.0	0.9436884895164742	0.3569965769556751	0.38	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	14	4	rwr	36.0	0.946844244758237	0.3606250517248001	0.34	0.34	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	15	0	rwr	36.0	0.9553470217089082	0.35382748213021764	0.38	0.28	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	15	1	rwr	36.0	0.9408672869211849	0.3845794770153768	0.44	0.31	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	15	2	rwr	36.0	0.9603867256107841	0.43538028379441407	0.48	0.34	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	15	3	rwr	36.0	0.9530273855370133	0.35969716209873837	0.4	0.29	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	15	4	rwr	36.0	0.9512088147197261	0.366815051374675	0.38	0.3	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	16	0	rwr	36.0	0.9545449684525719	0.36087200893636584	0.34	0.28	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	16	1	rwr	36.0	0.9713292695968345	0.437870582602074	0.48	0.37	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	16	2	rwr	36.0	0.9328994089275325	0.32216887043447107	0.42	0.27	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	16	3	rwr	36.0	0.9390618314077878	0.3742579056914233	0.38	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	16	4	rwr	36.0	0.9593923833975182	0.42331165100086315	0.48	0.31	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	17	0	rwr	36.0	0.9652176237835526	0.43781951615805625	0.44	0.34	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	17	1	rwr	36.0	0.9468452571917442	0.33401267534832557	0.38	0.27	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	17	2	rwr	36.0	0.9441281545162395	0.3622263391563595	0.44	0.32	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	17	3	rwr	36.0	0.9519255455712452	0.39543235441872654	0.4	0.31	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	17	4	rwr	36.0	0.9435815147625161	0.39605234766093556	0.42	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	18	0	rwr	36.0	0.9378141375253982	0.3902439612078897	0.48	0.29	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	18	1	rwr	36.0	0.9627526467757459	0.40049852424055854	0.44	0.36	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	18	2	rwr	36.0	0.9463847789323719	0.35210815992627265	0.38	0.25	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	18	3	rwr	36.0	0.9662387676508344	0.4810628597094293	0.5	0.36	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	18	4	rwr	36.0	0.941206675224647	0.2805777383120049	0.32	0.29	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	19	0	rwr	36.0	0.9573093786760773	0.3892355322579171	0.42	0.33	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	19	1	rwr	36.0	0.9434712864934232	0.31315063375190216	0.32	0.28	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	19	2	rwr	36.0	0.9490437893889714	0.3365595587041208	0.34	0.26	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	19	3	rwr	36.0	0.9580658964484382	0.41174318071317945	0.46	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	19	4	rwr	36.0	0.9491174582798458	0.44341450341370464	0.48	0.31	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	20	0	rwr	36.0	0.964554593091648	0.39096109958280956	0.44	0.33	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	20	1	rwr	36.0	0.9607368195914875	0.4077438182408225	0.46	0.33	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	20	2	rwr	36.0	0.9568305030369271	0.3864898446892214	0.42	0.29	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	20	3	rwr	36.0	0.9481600342319213	0.41884631396491967	0.46	0.32	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	20	4	rwr	36.0	0.9314559264013692	0.32860524102343514	0.26	0.28	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	21	0	rwr	36.0	0.9397978825794033	0.4239422177229907	0.42	0.34	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	21	1	rwr	36.0	0.9633461661854347	0.4506717058375785	0.46	0.34	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	21	2	rwr	36.0	0.9512297243655622	0.3516175913101622	0.4	0.3	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	21	3	rwr	36.0	0.9614035087719298	0.4150138239319045	0.42	0.29	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	21	4	rwr	36.0	0.9400834403080873	0.2887463849315943	0.36	0.27	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	22	0	rwr	36.0	0.9535343813495882	0.45852519111654727	0.54	0.35	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	22	1	rwr	36.0	0.9521334616618544	0.36188701830389464	0.34	0.27	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	22	2	rwr	36.0	0.9464772189686955	0.3494226741310341	0.46	0.32	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	22	3	rwr	36.0	0.9508664955070604	0.36112100823370363	0.36	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	22	4	rwr	36.0	0.9533429610611895	0.38965706468977906	0.36	0.3	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	23	0	rwr	36.0	0.960068441877874	0.3709896452790621	0.4	0.34	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	23	1	rwr	36.0	0.960875842155919	0.3869393653142564	0.4	0.3	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	23	2	rwr	36.0	0.9404577413092772	0.3894486241029841	0.44	0.3	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	23	3	rwr	36.0	0.9567928968763372	0.37389105426067787	0.42	0.29	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	23	4	rwr	36.0	0.9329749679075738	0.3888664503744403	0.4	0.29	0.102	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	24	0	rwr	36.0	0.9466367233450969	0.4274187860957598	0.44	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	24	1	rwr	36.0	0.9592450005347023	0.36942554813434036	0.44	0.33	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	24	2	rwr	36.0	0.9416594617814827	0.38756509422565083	0.4	0.26	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	24	3	rwr	36.0	0.9643934531450576	0.3376790156240495	0.38	0.36	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	24	4	rwr	36.0	0.9438436029097133	0.38735464106475886	0.44	0.27	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	25	0	rwr	36.0	0.9317559619292055	0.3836064783096846	0.44	0.31	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	25	1	rwr	36.0	0.9587637685809004	0.4298286207970771	0.46	0.35	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	25	2	rwr	36.0	0.9490655399857534	0.3835965618237173	0.42	0.29	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	25	3	rwr	36.0	0.9607402652973899	0.34709029092649174	0.38	0.33	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	25	4	rwr	36.0	0.9531076166024819	0.3694706142045983	0.36	0.3	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	26	0	rwr	36.0	0.9500427761736712	0.381921357838738	0.42	0.32	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	26	1	rwr	36.0	0.9463907603464868	0.3705021920432651	0.4	0.31	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	26	2	rwr	36.0	0.9409634426844588	0.2714439070908713	0.32	0.28	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	26	3	rwr	36.0	0.9485718870346598	0.4189853797501886	0.48	0.3	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	26	4	rwr	36.0	0.9608365425759521	0.4448219808766348	0.42	0.35	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	27	0	rwr	36.0	0.9478932734466902	0.4243538036566849	0.46	0.33	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	27	1	rwr	36.0	0.9478611913164369	0.32011268424390776	0.32	0.26	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	27	2	rwr	36.0	0.961941893280697	0.34476599142369263	0.36	0.3	0.116	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	27	3	rwr	36.0	0.9631899871630295	0.4127091968794125	0.44	0.33	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	27	4	rwr	36.0	0.9428968763371843	0.42102533973579226	0.48	0.31	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	28	0	rwr	36.0	0.9565073254197413	0.3985465331012819	0.44	0.34	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	28	1	rwr	36.0	0.9555020853384665	0.3740501104102231	0.42	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	28	2	rwr	36.0	0.9547859469394192	0.4399912831727207	0.5	0.33	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	28	3	rwr	36.0	0.9452503209242619	0.33134695323120666	0.3	0.26	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	28	4	rwr	36.0	0.9434584937954642	0.384249903431621	0.38	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	29	0	rwr	36.0	0.9530371083306599	0.2806324049606662	0.28	0.26	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	29	1	rwr	36.0	0.9444497914661534	0.423626503114995	0.5	0.31	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	29	2	rwr	36.0	0.9540736148948086	0.4163297476003368	0.42	0.33	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	29	3	rwr	36.0	0.9474700470688917	0.3676155418729452	0.44	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	29	4	rwr	36.0	0.9485504920838682	0.41240339310182716	0.46	0.32	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	30	0	rwr	36.0	0.9503956796064591	0.3877322201961547	0.44	0.35	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	30	1	rwr	36.0	0.9499518768046197	0.34376104400778723	0.34	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	30	2	rwr	36.0	0.9581301011946516	0.4282890216776717	0.44	0.3	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	30	3	rwr	36.0	0.953428540864356	0.352324420904504	0.34	0.3	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	30	4	rwr	36.0	0.9401797175866495	0.3727568918294081	0.42	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	31	0	rwr	36.0	0.9228050475884932	0.33304840778156897	0.34	0.26	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	31	1	rwr	36.0	0.9592931237300822	0.3670144798979967	0.4	0.35	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	31	2	rwr	36.0	0.949266733005987	0.3491752512395013	0.44	0.29	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	31	3	rwr	36.0	0.9572261446298673	0.3811603881800045	0.36	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	31	4	rwr	36.0	0.9611414206247325	0.4668112258878021	0.42	0.34	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	32	0	rwr	36.0	0.9440434178162764	0.4283070564428607	0.5	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	32	1	rwr	36.0	0.9603250989199016	0.4109660644456121	0.48	0.35	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	32	2	rwr	36.0	0.9492341071108138	0.30797825402837864	0.26	0.3	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	32	3	rwr	36.0	0.9458065896448439	0.3919637666019874	0.5	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	32	4	rwr	36.0	0.9605851519041506	0.3578872556398189	0.34	0.29	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	33	0	rwr	36.0	0.9457223826328736	0.34650669919088484	0.38	0.27	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	33	1	rwr	36.0	0.9575981178483586	0.4860726999840836	0.56	0.35	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	33	2	rwr	36.0	0.9500660674377254	0.391908287292994	0.4	0.3	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	33	3	rwr	36.0	0.947175866495507	0.2923432646080334	0.3	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	33	4	rwr	36.0	0.9621523320496362	0.4130607612437879	0.4	0.37	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	34	0	rwr	36.0	0.9510961394503262	0.4362746251416324	0.44	0.31	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	34	1	rwr	36.0	0.9535076462410438	0.33998635316619685	0.38	0.31	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	34	2	rwr	36.0	0.9453733761820089	0.32212904605035764	0.36	0.27	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	34	3	rwr	36.0	0.969966837826273	0.45102398856835946	0.5	0.37	0.118	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	34	4	rwr	36.0	0.9410836542575951	0.3704048202025467	0.4	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	35	0	rwr	36.0	0.9638862153780344	0.47767137107392665	0.48	0.34	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	35	1	rwr	36.0	0.9331194524649771	0.3362297233465178	0.4	0.28	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	35	2	rwr	36.0	0.9418008406605657	0.3639461209065324	0.4	0.27	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	35	3	rwr	36.0	0.9663457424047925	0.42366704823403123	0.48	0.37	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	35	4	rwr	36.0	0.9502032520325203	0.30403105841825356	0.3	0.28	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	36	0	rwr	36.0	0.9479413966420702	0.39691563716729145	0.42	0.28	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	36	1	rwr	36.0	0.9458132820019249	0.32312064204466806	0.34	0.27	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	36	2	rwr	36.0	0.9629913595754284	0.465536737249081	0.42	0.34	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	36	3	rwr	36.0	0.9648267008985879	0.4094585393644878	0.4	0.31	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	36	4	rwr	36.0	0.9407787762088147	0.3381865791124664	0.46	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	37	0	rwr	36.0	0.9427120094107582	0.300861265808206	0.36	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	37	1	rwr	36.0	0.9545342744091541	0.38389351821235657	0.36	0.31	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	37	2	rwr	36.0	0.957276390270958	0.39900516600834485	0.46	0.37	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	37	3	rwr	36.0	0.9476144629867351	0.4760157821417	0.52	0.33	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	37	4	rwr	36.0	0.9514762516046213	0.3382173543977952	0.34	0.23	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	38	0	rwr	36.0	0.9478237621644744	0.41098678613239414	0.46	0.29	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	38	1	rwr	36.0	0.9591166720136883	0.45774451284705203	0.46	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	38	2	rwr	36.0	0.9420346595759721	0.317238137063928	0.38	0.27	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	38	3	rwr	36.0	0.9671106118955926	0.4094782182763433	0.44	0.33	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	38	4	rwr	36.0	0.9470421480530594	0.333488242778959	0.38	0.3	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	39	0	rwr	36.0	0.9526360817024917	0.37221792004365734	0.4	0.31	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	39	1	rwr	36.0	0.942145225109614	0.3719123811535728	0.38	0.33	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	39	2	rwr	36.0	0.9504738911273878	0.4381175241677356	0.46	0.3	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	39	3	rwr	36.0	0.9528348309798889	0.36024035853066727	0.4	0.29	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.3	39	4	rwr	36.0	0.9568570817287121	0.37637297471872877	0.42	0.33	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	0	0	rwr	20.0	0.9527323280932519	0.32455594992613285	0.34	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	0	1	rwr	20.0	0.9619719816062452	0.5124919204833495	0.46	0.37	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	0	2	rwr	20.0	0.9392995220306357	0.34561742721901895	0.38	0.29	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	0	3	rwr	20.0	0.9497111681643133	0.44181237702778425	0.48	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	0	4	rwr	20.0	0.9494009413778348	0.33975566924032885	0.36	0.27	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	1	0	rwr	20.0	0.934466901935622	0.3819572492485074	0.48	0.33	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	1	1	rwr	20.0	0.9641054432680997	0.3994282499862921	0.4	0.33	0.118	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	1	2	rwr	20.0	0.9486794668928729	0.4225885191827273	0.46	0.32	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	1	3	rwr	20.0	0.9602588789045785	0.3730870354579981	0.36	0.31	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	1	4	rwr	20.0	0.9531931964056484	0.42160524324556226	0.44	0.31	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	2	0	rwr	20.0	0.9562399743342958	0.4588348118372451	0.44	0.34	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	2	1	rwr	20.0	0.9540904716073149	0.32963589847005215	0.34	0.32	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	2	2	rwr	20.0	0.9700983670739466	0.41200597053074905	0.44	0.34	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	2	3	rwr	20.0	0.946341463414634	0.43632370619495964	0.46	0.34	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	2	4	rwr	20.0	0.9516527599486522	0.3945045282827974	0.42	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	3	0	rwr	20.0	0.938937012084269	0.36751532145530513	0.4	0.3	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	3	1	rwr	20.0	0.952438241899262	0.35970649927149434	0.36	0.32	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	3	2	rwr	20.0	0.9523172542046623	0.39215799740329144	0.46	0.35	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	3	3	rwr	20.0	0.9679503637141634	0.4917834043870947	0.52	0.34	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	3	4	rwr	20.0	0.9469405220367992	0.376297403970249	0.44	0.3	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	4	0	rwr	20.0	0.9643460592450004	0.42153877845077514	0.4	0.35	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	4	1	rwr	20.0	0.964094749224682	0.4625844783416689	0.52	0.34	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	4	2	rwr	20.0	0.9508654018694638	0.43903682698177926	0.48	0.32	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	4	3	rwr	20.0	0.9505616174582798	0.3424141753278669	0.4	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	4	4	rwr	20.0	0.9214805305947797	0.33257448675454143	0.32	0.22	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	5	0	rwr	20.0	0.9551064057320073	0.4027761554902648	0.4	0.33	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	5	1	rwr	20.0	0.9482461768794781	0.3609334403727804	0.44	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	5	2	rwr	20.0	0.9545412527256216	0.4272977860347535	0.36	0.32	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	5	3	rwr	20.0	0.9526904150620454	0.35321997752290984	0.36	0.29	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	5	4	rwr	20.0	0.9560761660248182	0.43624439232568846	0.5	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	6	0	rwr	20.0	0.9636081702491713	0.3431414736411097	0.38	0.3	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	6	1	rwr	20.0	0.935156667736071	0.34608440829488407	0.34	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	6	2	rwr	20.0	0.9352375980815972	0.30079396476027603	0.36	0.31	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	6	3	rwr	20.0	0.9567073170731707	0.46916093503376327	0.42	0.32	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	6	4	rwr	20.0	0.9587986735130508	0.5591379038321317	0.56	0.37	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	7	0	rwr	20.0	0.9622446797133994	0.3635339632309887	0.42	0.28	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	7	1	rwr	20.0	0.9517965992941931	0.45329466268180496	0.48	0.32	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	7	2	rwr	20.0	0.9615775707845984	0.4707072596053169	0.5	0.35	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	7	3	rwr	20.0	0.9325845100556268	0.34948730789312066	0.4	0.28	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	7	4	rwr	20.0	0.9409445870774497	0.36521967579808295	0.38	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	8	0	rwr	20.0	0.9698053684097957	0.5261862766734824	0.52	0.37	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	8	1	rwr	20.0	0.9531761308950916	0.43076670325676264	0.46	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	8	2	rwr	20.0	0.9529099579669716	0.3551187752929233	0.4	0.31	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	8	3	rwr	20.0	0.9535729567821994	0.3154256175690924	0.34	0.31	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	8	4	rwr	20.0	0.94479567821994	0.3782728094931103	0.44	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	9	0	rwr	20.0	0.9488610843760026	0.45074121753309887	0.48	0.35	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	9	1	rwr	20.0	0.9407336113784621	0.33767675393455016	0.38	0.25	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	9	2	rwr	20.0	0.9713599016873026	0.44089655614252926	0.48	0.38	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	9	3	rwr	20.0	0.9543003851091143	0.36431438983024755	0.34	0.26	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	9	4	rwr	20.0	0.951829268292683	0.4616826734335227	0.48	0.33	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	10	0	rwr	20.0	0.9572933376109507	0.33914477708713386	0.36	0.31	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	10	1	rwr	20.0	0.9581435140626671	0.4472921368521031	0.4	0.36	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	10	2	rwr	20.0	0.9465152825130639	0.4640110944582688	0.46	0.36	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	10	3	rwr	20.0	0.9568784766795038	0.3646338134304558	0.4	0.27	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	10	4	rwr	20.0	0.9499090714591357	0.40667636448166833	0.46	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	11	0	rwr	20.0	0.9542134531066195	0.34691623621740997	0.34	0.29	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	11	1	rwr	20.0	0.9612180515452892	0.4994852726403779	0.5	0.37	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	11	2	rwr	20.0	0.9527359531927158	0.45000348023025466	0.44	0.36	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	11	3	rwr	20.0	0.9478765511339324	0.36300694662745914	0.36	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	11	4	rwr	20.0	0.9561243046640993	0.3962193876288943	0.46	0.33	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	12	0	rwr	20.0	0.9468506042134531	0.34524961399151105	0.38	0.31	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	12	1	rwr	20.0	0.95494599508074	0.39745883352695427	0.48	0.32	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	12	2	rwr	20.0	0.946591409601801	0.4200319904319831	0.4	0.32	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	12	3	rwr	20.0	0.9482456140350878	0.3675731424080695	0.38	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	12	4	rwr	20.0	0.9652278562259307	0.49512808732926783	0.44	0.36	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	13	0	rwr	20.0	0.9577692225430435	0.32673971074550423	0.4	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	13	1	rwr	20.0	0.9640519730510105	0.4168764490728166	0.48	0.37	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	13	2	rwr	20.0	0.95849442369075	0.4700461401131977	0.46	0.37	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	13	3	rwr	20.0	0.9483846812152332	0.3920730418155124	0.38	0.29	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	13	4	rwr	20.0	0.9364142062473255	0.3833439174932944	0.46	0.28	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	14	0	rwr	20.0	0.9622500267351086	0.36523251057174716	0.4	0.27	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	14	1	rwr	20.0	0.9505774783445621	0.4410226888674181	0.46	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	14	2	rwr	20.0	0.9539702995600942	0.42566247890597264	0.46	0.37	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	14	3	rwr	20.0	0.9465340179717586	0.37774476303614857	0.44	0.31	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	14	4	rwr	20.0	0.9473095849379547	0.3797876786783703	0.4	0.33	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	15	0	rwr	20.0	0.9572238263287349	0.3642117504549104	0.36	0.32	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	15	1	rwr	20.0	0.9406534060528285	0.4151534585981015	0.46	0.31	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	15	2	rwr	20.0	0.9622355263372538	0.46508465890249207	0.5	0.35	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	15	3	rwr	20.0	0.9541024818142918	0.38423587444348345	0.38	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	15	4	rwr	20.0	0.953096919127086	0.37365711807051033	0.38	0.3	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	16	0	rwr	20.0	0.9561918511389156	0.3839697689324849	0.36	0.29	0.118	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	16	1	rwr	20.0	0.9723505507432361	0.45977568256508716	0.48	0.38	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	16	2	rwr	20.0	0.9341120046981288	0.3468872405113264	0.42	0.32	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	16	3	rwr	20.0	0.9413189987163029	0.38454927586572285	0.38	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	16	4	rwr	20.0	0.9598630723149336	0.4521045573111228	0.5	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	17	0	rwr	20.0	0.9657951021281145	0.4666796878471579	0.46	0.37	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	17	1	rwr	20.0	0.9500427761736713	0.3568361279933236	0.38	0.3	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	17	2	rwr	20.0	0.9462814635976574	0.3738245307074177	0.42	0.31	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	17	3	rwr	20.0	0.9493153615746683	0.41669270299438793	0.4	0.32	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	17	4	rwr	20.0	0.9456407787762088	0.42957838539260096	0.48	0.31	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	18	0	rwr	20.0	0.9418083627419527	0.40736815639323415	0.48	0.3	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	18	1	rwr	20.0	0.9635065768367019	0.4140321805291315	0.46	0.36	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	18	2	rwr	20.0	0.948570713908963	0.36887108358699694	0.36	0.28	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	18	3	rwr	20.0	0.9665489944373128	0.5087315194436599	0.46	0.37	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	18	4	rwr	20.0	0.9412655113393239	0.30369496895860454	0.32	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	19	0	rwr	20.0	0.9569832103518341	0.4112889196143344	0.44	0.33	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	19	1	rwr	20.0	0.9463159020425622	0.3301775149272305	0.34	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	19	2	rwr	20.0	0.9511155337324568	0.3506258048982449	0.34	0.29	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	19	3	rwr	20.0	0.9608365425759521	0.43062687472005007	0.46	0.33	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	19	4	rwr	20.0	0.9489356011981173	0.45801320591759187	0.52	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	20	0	rwr	20.0	0.9654475457170356	0.41767321939910745	0.44	0.34	0.118	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	20	1	rwr	20.0	0.9626082771896054	0.4152370967520375	0.44	0.33	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	20	2	rwr	20.0	0.9567924394925587	0.4026651947371176	0.42	0.33	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	20	3	rwr	20.0	0.9521876337184423	0.44253217827938085	0.46	0.33	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	20	4	rwr	20.0	0.9315094137783484	0.34654624611314044	0.32	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	21	0	rwr	20.0	0.9423002887391724	0.4369715061801936	0.44	0.35	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	21	1	rwr	20.0	0.9628863223184686	0.45736324523392363	0.46	0.36	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	21	2	rwr	20.0	0.9512351620147578	0.3729044348060577	0.46	0.29	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	21	3	rwr	20.0	0.9638478818998716	0.4387644014277117	0.42	0.3	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	21	4	rwr	20.0	0.9430252460419342	0.31795961521354293	0.38	0.29	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	22	0	rwr	20.0	0.9557747834456207	0.4713119767579646	0.54	0.37	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	22	1	rwr	20.0	0.9547641963426372	0.3823091645135727	0.36	0.28	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	22	2	rwr	20.0	0.9492721706551824	0.40024083964813667	0.5	0.32	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	22	3	rwr	20.0	0.9498983739837398	0.3789648958849963	0.38	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	22	4	rwr	20.0	0.9509306803594352	0.3966239203393298	0.34	0.3	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	23	0	rwr	20.0	0.9601165650732542	0.39800126261676805	0.38	0.38	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	23	1	rwr	20.0	0.9608972302427548	0.4004605040634733	0.4	0.31	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	23	2	rwr	20.0	0.9412788263377977	0.4029500534816885	0.44	0.3	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	23	3	rwr	20.0	0.9585258878904578	0.39070379180915216	0.42	0.3	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	23	4	rwr	20.0	0.9366388532306376	0.4086937405920639	0.38	0.3	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	24	0	rwr	20.0	0.9473478772323816	0.44377239863149853	0.46	0.3	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	24	1	rwr	20.0	0.9589616083841299	0.38504457040178536	0.4	0.32	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	24	2	rwr	20.0	0.9428992457980566	0.4038023115152345	0.38	0.3	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	24	3	rwr	20.0	0.9637302096705178	0.3588568466353388	0.42	0.33	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	24	4	rwr	20.0	0.9477535301668807	0.4182380393836545	0.44	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	25	0	rwr	20.0	0.9325687092289594	0.4029308598659371	0.46	0.31	0.102	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	25	1	rwr	20.0	0.9598171318575552	0.42246645386205756	0.44	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	25	2	rwr	20.0	0.9501313192280713	0.40249346055315316	0.42	0.29	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	25	3	rwr	20.0	0.9611360718870346	0.3686053516529266	0.38	0.34	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	25	4	rwr	20.0	0.9531664527171588	0.39153116697521456	0.38	0.31	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	26	0	rwr	20.0	0.9522457491177414	0.3971843322804524	0.42	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	26	1	rwr	20.0	0.947315795102128	0.40191474376816405	0.42	0.32	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	26	2	rwr	20.0	0.9423500432293112	0.2932522286149847	0.32	0.3	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	26	3	rwr	20.0	0.9482242190842962	0.4350809105826511	0.48	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	26	4	rwr	20.0	0.9627834830979889	0.47130206603171354	0.42	0.39	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	27	0	rwr	20.0	0.9517591701422309	0.45488449106458395	0.44	0.37	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	27	1	rwr	20.0	0.9506844187787402	0.3519572148910549	0.32	0.29	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	27	2	rwr	20.0	0.960941365828725	0.35897732349210126	0.42	0.31	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	27	3	rwr	20.0	0.9621897732135215	0.4218353940335719	0.44	0.35	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	27	4	rwr	20.0	0.9446726572528884	0.44400167495638243	0.48	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	28	0	rwr	20.0	0.9579349802160196	0.42210039604973	0.5	0.36	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	28	1	rwr	20.0	0.9575125655010158	0.3893277847759145	0.44	0.33	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	28	2	rwr	20.0	0.9560039803592112	0.4636412355234275	0.5	0.32	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	28	3	rwr	20.0	0.9453465982028242	0.3386496366454428	0.34	0.29	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	28	4	rwr	20.0	0.9461275139067179	0.4034162706285591	0.42	0.31	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	29	0	rwr	20.0	0.9538070794567426	0.2915499963166525	0.32	0.29	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	29	1	rwr	20.0	0.9456582183723665	0.4445933740533606	0.5	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	29	2	rwr	20.0	0.9546771939555092	0.43974273806012537	0.46	0.34	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	29	3	rwr	20.0	0.9492511767222935	0.38326422906389457	0.46	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	29	4	rwr	20.0	0.9511125374411639	0.43222070513144156	0.46	0.35	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	30	0	rwr	20.0	0.9539300609560475	0.40838315173753	0.44	0.37	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	30	1	rwr	20.0	0.9496150144369586	0.3557171558434188	0.38	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	30	2	rwr	20.0	0.958548800182705	0.452501317114458	0.44	0.31	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	30	3	rwr	20.0	0.9554289687633718	0.3835098487233926	0.4	0.34	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	30	4	rwr	20.0	0.9420731707317074	0.3878848608271495	0.4	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	31	0	rwr	20.0	0.9240509036466688	0.3466263287065052	0.36	0.31	0.102	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	31	1	rwr	20.0	0.9622714148219441	0.3928525435752239	0.42	0.35	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	31	2	rwr	20.0	0.9499518768046198	0.3696303119524904	0.4	0.3	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	31	3	rwr	20.0	0.9566966195977747	0.39633434869175477	0.36	0.32	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	31	4	rwr	20.0	0.9618848951647411	0.49030972408485535	0.46	0.36	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	32	0	rwr	20.0	0.9469521976259224	0.44950485544352164	0.52	0.33	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	32	1	rwr	20.0	0.9613570741097208	0.4358176704454187	0.48	0.36	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	32	2	rwr	20.0	0.9483695208887294	0.3205433192448426	0.28	0.3	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	32	3	rwr	20.0	0.9498234916559691	0.42366444074561455	0.48	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	32	4	rwr	20.0	0.9611360718870346	0.37087569259536524	0.34	0.29	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	33	0	rwr	20.0	0.9466581114319325	0.35154737286657134	0.34	0.26	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	33	1	rwr	20.0	0.9603839161586997	0.5009636942145231	0.56	0.36	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	33	2	rwr	20.0	0.9528882073701896	0.4187403676297054	0.44	0.3	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	33	3	rwr	20.0	0.9491228070175439	0.31808720343223734	0.34	0.28	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	33	4	rwr	20.0	0.9625320924261873	0.4494772122529627	0.42	0.39	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	34	0	rwr	20.0	0.9526681638327451	0.4533519171259277	0.46	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	34	1	rwr	20.0	0.9537536092396535	0.3600072607449802	0.4	0.34	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	34	2	rwr	20.0	0.9466512237429514	0.3413697940773648	0.38	0.31	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	34	3	rwr	20.0	0.9701540436456995	0.48128517417267186	0.5	0.37	0.118	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	34	4	rwr	20.0	0.9431322207958921	0.39575010898267	0.4	0.32	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	35	0	rwr	20.0	0.9644904288311411	0.5003189409202583	0.48	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	35	1	rwr	20.0	0.935910597797027	0.34997318250052567	0.38	0.28	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	35	2	rwr	20.0	0.9403979271681266	0.3691277419951309	0.42	0.28	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	35	3	rwr	20.0	0.9676347881899872	0.4313278839773089	0.5	0.38	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	35	4	rwr	20.0	0.952037869062901	0.32052606861159216	0.34	0.31	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	36	0	rwr	20.0	0.9472248957330766	0.42331703138272087	0.44	0.3	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	36	1	rwr	20.0	0.9504598438669661	0.3481301026911051	0.34	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	36	2	rwr	20.0	0.963268679684399	0.469798630815244	0.42	0.35	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	36	3	rwr	20.0	0.9658215661103979	0.4129297236067287	0.42	0.33	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	36	4	rwr	20.0	0.9414848095849381	0.3645609404219067	0.48	0.32	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	37	0	rwr	20.0	0.9432734466901935	0.3100251270063672	0.4	0.3	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	37	1	rwr	20.0	0.9551277938188429	0.41321824291284714	0.4	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	37	2	rwr	20.0	0.9594623252475489	0.42974046351844414	0.48	0.37	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	37	3	rwr	20.0	0.9484916559691912	0.5043435359714113	0.52	0.33	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	37	4	rwr	20.0	0.9534285408643559	0.3522703057194211	0.34	0.24	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	38	0	rwr	20.0	0.949074965244359	0.4263898487055901	0.44	0.32	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	38	1	rwr	20.0	0.9614265853919367	0.47604657130268213	0.46	0.36	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	38	2	rwr	20.0	0.9425838621447176	0.350461489105818	0.4	0.3	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	38	3	rwr	20.0	0.9688168592212236	0.4299767811109122	0.52	0.34	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	38	4	rwr	20.0	0.9484167736414206	0.35021607716079484	0.4	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	39	0	rwr	20.0	0.9525131002031868	0.38321183345353266	0.4	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	39	1	rwr	20.0	0.946503047802374	0.3869438369906812	0.38	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	39	2	rwr	20.0	0.9534428475881307	0.466528448279616	0.46	0.34	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	39	3	rwr	20.0	0.9522197261446299	0.3825391530154765	0.42	0.33	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.5	39	4	rwr	20.0	0.9572368421052633	0.3969399243922956	0.4	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	0	0	rwr	13.0	0.9508341353865897	0.3138169357376386	0.36	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	0	1	rwr	13.0	0.9601112180515452	0.5123240641390527	0.48	0.37	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	0	2	rwr	13.0	0.9377226037639408	0.3625270341027859	0.42	0.29	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	0	3	rwr	13.0	0.9483579375267436	0.44775034477844367	0.5	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	0	4	rwr	13.0	0.9471170303808302	0.3385644757413736	0.36	0.27	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	1	0	rwr	13.0	0.9337610950700459	0.3908050580081403	0.48	0.33	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	1	1	rwr	13.0	0.9628916693401774	0.39656864705947836	0.38	0.32	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	1	2	rwr	13.0	0.9462107741581159	0.42669380636957654	0.42	0.31	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	1	3	rwr	13.0	0.9593442447582371	0.37856951033621705	0.38	0.3	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	1	4	rwr	13.0	0.9515350877192982	0.4196368596684301	0.42	0.29	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	2	0	rwr	13.0	0.9553149395786547	0.4594202797717399	0.46	0.35	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	2	1	rwr	13.0	0.9548978718853599	0.3370427192290829	0.34	0.31	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	2	2	rwr	13.0	0.9687607053718537	0.4234044363458919	0.44	0.35	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	2	3	rwr	13.0	0.9459296106118956	0.4369420117268697	0.46	0.32	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	2	4	rwr	13.0	0.9495400085579803	0.40312475463684194	0.42	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	3	0	rwr	13.0	0.9376965030478024	0.36777761715614127	0.38	0.32	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	3	1	rwr	13.0	0.9512512030798846	0.36680701940664656	0.36	0.31	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	3	2	rwr	13.0	0.9506370206032527	0.38830142016469843	0.4	0.35	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	3	3	rwr	13.0	0.9668003851091143	0.5043326653803101	0.5	0.35	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	3	4	rwr	13.0	0.9483418913136499	0.39345081890753864	0.42	0.3	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	4	0	rwr	13.0	0.9620682279970056	0.4231600437704017	0.42	0.36	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	4	1	rwr	13.0	0.9629504865789755	0.4683091309694117	0.5	0.34	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	4	2	rwr	13.0	0.9503270745991094	0.44624930957805675	0.44	0.31	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	4	3	rwr	13.0	0.9485558408215661	0.3380000677272278	0.36	0.3	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	4	4	rwr	13.0	0.9211489088575097	0.3398672260695094	0.34	0.23	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	5	0	rwr	13.0	0.9531493957865469	0.41200926249184744	0.4	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	5	1	rwr	13.0	0.9462410437386375	0.3570711430865164	0.44	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	5	2	rwr	13.0	0.9546119421651632	0.42583870795940276	0.36	0.31	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	5	3	rwr	13.0	0.9522197261446298	0.35625968046691847	0.36	0.29	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	5	4	rwr	13.0	0.9541559691912709	0.4545068681704269	0.5	0.35	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	6	0	rwr	13.0	0.9613303390011763	0.33473533311723186	0.38	0.31	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	6	1	rwr	13.0	0.9349000106940434	0.3519926908390766	0.34	0.31	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	6	2	rwr	13.0	0.9346612072668744	0.3042585018051224	0.36	0.31	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	6	3	rwr	13.0	0.9555680359435174	0.47501952495501615	0.44	0.33	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	6	4	rwr	13.0	0.9554503637141634	0.5600584189487728	0.56	0.37	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	7	0	rwr	13.0	0.9609025772644637	0.36248084602622327	0.4	0.28	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	7	1	rwr	13.0	0.9493904395251844	0.4538430186963484	0.48	0.34	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	7	2	rwr	13.0	0.9602507843808965	0.4948623020076387	0.5	0.35	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	7	3	rwr	13.0	0.9327877620881472	0.35597341517897985	0.44	0.28	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	7	4	rwr	13.0	0.9396394950791613	0.3761110669915923	0.34	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	8	0	rwr	13.0	0.9665222970805261	0.5253055407443904	0.5	0.36	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	8	1	rwr	13.0	0.9514223077745695	0.43296021710471194	0.48	0.36	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	8	2	rwr	13.0	0.9546282551127496	0.35742056867339994	0.4	0.31	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	8	3	rwr	13.0	0.9542682926829269	0.32000126844489996	0.34	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	8	4	rwr	13.0	0.9429343175010698	0.37980085875640557	0.44	0.3	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	9	0	rwr	13.0	0.9480162549459951	0.4606648871159581	0.48	0.36	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	9	1	rwr	13.0	0.939065340605283	0.33880109193926267	0.38	0.25	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	9	2	rwr	13.0	0.9696959810334796	0.450366016520582	0.46	0.39	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	9	3	rwr	13.0	0.9539473684210527	0.3693597052600005	0.36	0.28	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	9	4	rwr	13.0	0.9521608900299529	0.4599835696213913	0.44	0.33	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	10	0	rwr	13.0	0.9563843439204364	0.3469347772154595	0.36	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	10	1	rwr	13.0	0.9562987915730937	0.4565878758474005	0.42	0.35	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	10	2	rwr	13.0	0.9449220512987825	0.4682939521687653	0.44	0.36	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	10	3	rwr	13.0	0.956471972614463	0.3708751530120233	0.4	0.27	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	10	4	rwr	13.0	0.9498769790329482	0.40515940459294486	0.44	0.33	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	11	0	rwr	13.0	0.9525024061597691	0.3499726345491884	0.34	0.32	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	11	1	rwr	13.0	0.9608491070473747	0.5129187739099923	0.5	0.38	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	11	2	rwr	13.0	0.9525293225232867	0.45020283702351277	0.44	0.35	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	11	3	rwr	13.0	0.9461435601198117	0.3633787195973997	0.36	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	11	4	rwr	13.0	0.9548994437312793	0.40342476603125754	0.48	0.31	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	12	0	rwr	13.0	0.9454871136776815	0.345859440712016	0.36	0.33	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	12	1	rwr	13.0	0.9534488290022457	0.4228482927670186	0.52	0.33	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	12	2	rwr	13.0	0.9460748329282284	0.43049782872087505	0.46	0.32	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	12	3	rwr	13.0	0.9464216944801026	0.3725406111118681	0.36	0.33	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	12	4	rwr	13.0	0.9650941377834831	0.504221692961247	0.46	0.36	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	13	0	rwr	13.0	0.9538605496738316	0.3101315642724376	0.34	0.28	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	13	1	rwr	13.0	0.9644048764837986	0.4100329752695943	0.48	0.36	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	13	2	rwr	13.0	0.957646150416252	0.482180020339872	0.48	0.36	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	13	3	rwr	13.0	0.9473791185280274	0.4071995980957514	0.4	0.28	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	13	4	rwr	13.0	0.9349112109542148	0.38964056122189544	0.46	0.28	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	14	0	rwr	13.0	0.9611111111111112	0.3663911375908693	0.4	0.27	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	14	1	rwr	13.0	0.9498502833921506	0.44997241665278453	0.46	0.32	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	14	2	rwr	13.0	0.9517191127931572	0.4231647668942204	0.46	0.37	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	14	3	rwr	13.0	0.9457531022678647	0.38283347535175566	0.4	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	14	4	rwr	13.0	0.9457210098416774	0.38466187299259164	0.46	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	15	0	rwr	13.0	0.9569136990696182	0.3619046065899264	0.34	0.31	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	15	1	rwr	13.0	0.939407549994653	0.4270858748422964	0.48	0.33	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	15	2	rwr	13.0	0.9610446811634396	0.46734895620965267	0.5	0.35	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	15	3	rwr	13.0	0.9533804022250748	0.40151223451898094	0.4	0.33	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	15	4	rwr	13.0	0.9511660248181428	0.3766665484004599	0.38	0.3	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	16	0	rwr	13.0	0.9553309806437813	0.3937254709416267	0.38	0.29	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	16	1	rwr	13.0	0.9712544112929098	0.46995777699764024	0.48	0.37	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	16	2	rwr	13.0	0.9328776583307504	0.35586823895430353	0.42	0.33	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	16	3	rwr	13.0	0.9404418057338467	0.379973599835537	0.36	0.28	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	16	4	rwr	13.0	0.9593281985451434	0.46294955508151364	0.5	0.32	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	17	0	rwr	13.0	0.964725697786333	0.47906396532122814	0.46	0.36	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	17	1	rwr	13.0	0.9504117206715859	0.363867087213556	0.4	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	17	2	rwr	13.0	0.9470536097834183	0.36945146508360055	0.4	0.32	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	17	3	rwr	13.0	0.9461328626444159	0.4199803802649216	0.4	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	17	4	rwr	13.0	0.945849379546427	0.4373904196043503	0.5	0.33	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	18	0	rwr	13.0	0.9428242968666453	0.41060533014696776	0.46	0.31	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	18	1	rwr	13.0	0.9626350122981499	0.416793919507063	0.46	0.35	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	18	2	rwr	13.0	0.9479671348482624	0.37301966089745403	0.38	0.29	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	18	3	rwr	13.0	0.9658269148480958	0.5187738280020529	0.48	0.38	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	18	4	rwr	13.0	0.9379599914420196	0.3101385777174083	0.3	0.3	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	19	0	rwr	13.0	0.9549513421024489	0.41399448423225277	0.44	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	19	1	rwr	13.0	0.9465565180194632	0.3314328806251072	0.36	0.3	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	19	2	rwr	13.0	0.9505445805669294	0.3590344792349592	0.34	0.32	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	19	3	rwr	13.0	0.9610077021822849	0.4366155305290808	0.46	0.34	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	19	4	rwr	13.0	0.9466944801026957	0.45774872239167214	0.5	0.31	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	20	0	rwr	13.0	0.9636349053577158	0.4255803794844487	0.44	0.34	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	20	1	rwr	13.0	0.9622607207785263	0.4192332053297821	0.46	0.34	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	20	2	rwr	13.0	0.9544760009352757	0.4077942835906437	0.44	0.33	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	20	3	rwr	13.0	0.9522678647839109	0.4469433204982727	0.44	0.35	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	20	4	rwr	13.0	0.9295785194694053	0.3539812257023989	0.32	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	21	0	rwr	13.0	0.94260506897658	0.42803481441650565	0.44	0.35	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	21	1	rwr	13.0	0.9606084910704737	0.4567811382583196	0.44	0.36	0.116	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	21	2	rwr	13.0	0.9498811873650783	0.37285467551573315	0.44	0.31	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	21	3	rwr	13.0	0.9638585793752674	0.4439497899934586	0.42	0.3	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	21	4	rwr	13.0	0.9422282841249466	0.33311947166018235	0.38	0.29	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	22	0	rwr	13.0	0.9552721634049834	0.47459544140975723	0.52	0.36	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	22	1	rwr	13.0	0.9550743236017538	0.387070504189729	0.38	0.29	0.118	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	22	2	rwr	13.0	0.9489078481590838	0.41322363394069056	0.52	0.31	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	22	3	rwr	13.0	0.9470047068891742	0.3887114062897915	0.4	0.29	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	22	4	rwr	13.0	0.9477428326914848	0.39320698922305797	0.34	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	23	0	rwr	13.0	0.9585605817559618	0.4112615431520479	0.38	0.36	0.114	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	23	1	rwr	13.0	0.9598812961180623	0.4032460518418928	0.4	0.32	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	23	2	rwr	13.0	0.9398215363534037	0.40657451643744824	0.46	0.29	0.1	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	23	3	rwr	13.0	0.9578198545143346	0.3934557568397189	0.36	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	23	4	rwr	13.0	0.9365532734274711	0.4128321443332794	0.38	0.31	0.104	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	24	0	rwr	13.0	0.9450326168324242	0.43951963325698434	0.42	0.31	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	24	1	rwr	13.0	0.9561597690086623	0.39071476234512326	0.4	0.32	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	24	2	rwr	13.0	0.9420074713299945	0.4039013741507099	0.4	0.3	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	24	3	rwr	13.0	0.9609702610183997	0.3571533092682027	0.42	0.32	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	24	4	rwr	13.0	0.9491121095421481	0.4311402036311467	0.46	0.31	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	25	0	rwr	13.0	0.9308897444123623	0.4142906194538904	0.48	0.32	0.102	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	25	1	rwr	13.0	0.9575232595444337	0.4185054806989949	0.42	0.36	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	25	2	rwr	13.0	0.9494298624818519	0.4072786544658209	0.42	0.29	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	25	3	rwr	13.0	0.9594137783483099	0.37756180023046026	0.4	0.34	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	25	4	rwr	13.0	0.9520699614890886	0.40199696809540464	0.38	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	26	0	rwr	13.0	0.9520799914447652	0.40127426038498526	0.42	0.33	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	26	1	rwr	13.0	0.9474655117099776	0.4148101651425226	0.42	0.32	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	26	2	rwr	13.0	0.9408166261561801	0.301293615740711	0.32	0.3	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	26	3	rwr	13.0	0.944801026957638	0.4399127478696918	0.48	0.32	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	26	4	rwr	13.0	0.9630509199828841	0.4864500521567847	0.44	0.37	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	27	0	rwr	13.0	0.9524061597690087	0.46198917700438374	0.46	0.37	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	27	1	rwr	13.0	0.9507165009089937	0.3642813541073169	0.3	0.3	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	27	2	rwr	13.0	0.958396546005231	0.36198966351751316	0.42	0.29	0.114	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	27	3	rwr	13.0	0.9597133076593924	0.41728120812517056	0.42	0.36	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	27	4	rwr	13.0	0.9438275566966197	0.44467131236870444	0.46	0.3	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	28	0	rwr	13.0	0.9567319003315153	0.42931371441410693	0.48	0.35	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	28	1	rwr	13.0	0.956630306919046	0.3932937706380526	0.46	0.32	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	28	2	rwr	13.0	0.9544161867941252	0.4702171407862767	0.5	0.32	0.108	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	28	3	rwr	13.0	0.9439131364997861	0.33916866372004184	0.36	0.28	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	28	4	rwr	13.0	0.9467800599058622	0.4169483094144141	0.44	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	29	0	rwr	13.0	0.9518019463159022	0.30443842872550847	0.32	0.3	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	29	1	rwr	13.0	0.944294727836595	0.45181133577456833	0.48	0.32	0.104	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	29	2	rwr	13.0	0.9536277276607777	0.4529819911228291	0.46	0.35	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	29	3	rwr	13.0	0.9485772357723578	0.38360034203925575	0.42	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	29	4	rwr	13.0	0.9511553273427471	0.43620028299226454	0.46	0.34	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	30	0	rwr	13.0	0.9551438348839696	0.4192501405754071	0.46	0.36	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	30	1	rwr	13.0	0.9466634584536412	0.3532741243404062	0.36	0.29	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	30	2	rwr	13.0	0.9567489382989945	0.4581428490169228	0.48	0.33	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	30	3	rwr	13.0	0.9555787334189132	0.39655803165233017	0.42	0.35	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	30	4	rwr	13.0	0.9424582798459563	0.3894541411668675	0.4	0.3	0.11	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	31	0	rwr	13.0	0.9220938937012084	0.3522704251359813	0.32	0.31	0.1	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	31	1	rwr	13.0	0.9616511603037108	0.39883688549062474	0.38	0.34	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	31	2	rwr	13.0	0.9493537353931149	0.38216707774801867	0.4	0.3	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	31	3	rwr	13.0	0.9541559691912708	0.39925963656465396	0.36	0.32	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	31	4	rwr	13.0	0.9608525887890458	0.4901438109766328	0.5	0.35	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	32	0	rwr	13.0	0.9463854133247781	0.4583678997990142	0.5	0.34	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	32	1	rwr	13.0	0.9606084910704737	0.4439605415297918	0.46	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	32	2	rwr	13.0	0.9458083881176489	0.3239204905955949	0.28	0.28	0.11	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	32	3	rwr	13.0	0.9504653401797176	0.42230508064700006	0.48	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	32	4	rwr	13.0	0.9590447154471544	0.37099399709753117	0.36	0.29	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	33	0	rwr	13.0	0.9457651588065448	0.3476833422986816	0.32	0.27	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	33	1	rwr	13.0	0.9608491070473746	0.5094983127697742	0.56	0.35	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	33	2	rwr	13.0	0.9529969603540998	0.42908513535338627	0.46	0.3	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	33	3	rwr	13.0	0.9481386392811297	0.32670737298644	0.36	0.29	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	33	4	rwr	13.0	0.9611467693624305	0.47047149032910146	0.44	0.41	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	34	0	rwr	13.0	0.952096032509892	0.45571833388314564	0.44	0.34	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	34	1	rwr	13.0	0.9516522297080526	0.365452970057904	0.38	0.35	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	34	2	rwr	13.0	0.9457376986781074	0.3519369853308911	0.36	0.32	0.106	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	34	3	rwr	13.0	0.9688917415489943	0.4912539740043238	0.5	0.37	0.118	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	34	4	rwr	13.0	0.9426347881899871	0.4071013361376039	0.4	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	35	0	rwr	13.0	0.9623195380173243	0.5074029375409812	0.5	0.34	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	35	1	rwr	13.0	0.9363383595337397	0.34949823835513955	0.36	0.28	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	35	2	rwr	13.0	0.9375703495864667	0.3722627503543128	0.42	0.29	0.104	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	35	3	rwr	13.0	0.966650620453573	0.4366686755858665	0.52	0.37	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	35	4	rwr	13.0	0.9518132220795893	0.3221044872437394	0.34	0.3	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	36	0	rwr	13.0	0.9443107689017217	0.4313434577397378	0.44	0.3	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	36	1	rwr	13.0	0.951973051010587	0.37106359314232235	0.36	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	36	2	rwr	13.0	0.9613709401151694	0.4677245092418193	0.44	0.34	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	36	3	rwr	13.0	0.9650834403080873	0.4195215601999208	0.4	0.32	0.116	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	36	4	rwr	13.0	0.9401690201112538	0.3687512636454521	0.42	0.32	0.106	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	37	0	rwr	13.0	0.9415463586782162	0.30429796751825	0.38	0.29	0.108	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	37	1	rwr	13.0	0.9538658966955406	0.4196413574170315	0.44	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	37	2	rwr	13.0	0.9589620615215632	0.43327616017492854	0.5	0.37	0.112	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	37	3	rwr	13.0	0.9464805305947797	0.5080550098137444	0.54	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	37	4	rwr	13.0	0.9527439024390243	0.356195609901369	0.34	0.25	0.112	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	38	0	rwr	13.0	0.9469254625173779	0.43668012901775366	0.44	0.33	0.106	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	38	1	rwr	13.0	0.961292909849214	0.4700577825545666	0.48	0.33	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	38	2	rwr	13.0	0.9409090661925036	0.35947139960166535	0.4	0.3	0.1	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	38	3	rwr	13.0	0.9679824561403508	0.43768980969825366	0.54	0.34	0.114	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	38	4	rwr	13.0	0.9477053915275995	0.36154110124112987	0.38	0.34	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	39	0	rwr	13.0	0.950518661105764	0.3936107062719034	0.4	0.31	0.112	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	39	1	rwr	13.0	0.9473853063843439	0.3954515830138294	0.38	0.33	0.11	60	3177
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	39	2	rwr	13.0	0.9523444424506398	0.4761698105128184	0.48	0.33	0.102	59	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	39	3	rwr	13.0	0.9497218656397091	0.39239204046400367	0.4	0.33	0.108	60	3176
+string_full700	ot_all_pubcount_adjusted	native_string_full700	0.7	39	4	rwr	13.0	0.9558568677792041	0.4030529991837198	0.4	0.32	0.112	60	3176
