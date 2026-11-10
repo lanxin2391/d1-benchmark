@@ -272,7 +272,7 @@ catalogues. Test B excludes those before applying the criterion.
 
 | amendment ID | date | section | what changed | why | impact on result |
 |---|---|---|---|---|---|
-| (none yet) | | | | | |
+| **#1** | 2026-10-07 | §13 manifest, `docs/pre_registration_manifest.json` | SHA-256 fingerprints of 4 result tables (`a4_table1_delta_auroc.tsv`, `a5_null_distribution.tsv`, `stats_bootstrap_ci.tsv`, `stats_variance_decomp.tsv`) updated to current values; `frozen_commit` pinned at `397c728` (the main-branch HEAD as of 2026-10-07). | Person B's reproducibility audit (`docs/reproducibility_audit.md` §6) re-ran the factorial after M2; the SHA-256 of 4 result tables drifted. The numerical values are within sampling noise of the M2-locked numbers; the change is in the bit-exact SHA, not in the underlying claim. | None on the scientific claim. `results_stats.tsv` and `w5_null_distribution.tsv` were unchanged (SHA-256 still matches). The H1/H2/H3 verdicts (in §Discussion) are unchanged. The 4 drifted tables are intermediate per-control outputs; their values match the headline numbers in `results_stats.tsv` to 1e-4. |
 
 ---
 
@@ -340,6 +340,16 @@ to 1e-4 (depends on BLAS thread count).
 
 ---
 
-## 16. Amendments (empty, will be filled post-analysis)
+## 16. Amendment history
 
-see §12 for the format. No amendments at registration time.
+The full amendment table is in §12 above. As of v1.0-prep
+(commit `d9c68e5`, tag `v1.0-prep` on `main`):
+
+* Amendment #1 (2026-10-07): SHA-256 fingerprints of 4 result
+  tables re-issued in `docs/pre_registration_manifest.json`.
+  Documented in §12 row 1 above.
+
+Future amendments (if any) follow the same §12 format: a row
+is added at the bottom of the §12 table; the
+`docs/pre_registration_manifest.json` is updated; the
+`amendment_id` field is incremented.

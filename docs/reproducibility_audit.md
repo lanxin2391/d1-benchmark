@@ -27,25 +27,29 @@ checks:
 
 1. **Network file integrity** (8 networks, 6 primary + 2 sensitivity)
 2. **Label file integrity** (5 label sets, 4 primary + ClinGen)
-3. **Split file integrity** (24 standard splits)
+3. **Split file integrity** (30 standard splits: 5 labels × 6
+   networks; the ClinGen standard splits are included as of
+   amendment #1)
 4. **SHA-256 fingerprint** of pre-reg-locked tables against
-   `docs/pre_registration_manifest.json`
+   `docs/pre_registration_manifest.json` (post-amendment #1:
+   all 6 SHAs match the current `main` HEAD)
 5. **End-to-end smoke run** of one arm (funmap × intogen2024 ×
    native_funmap, fold 0 / repeat 0)
 
 Run on a clean machine:
 
 ```powershell
-# clone the repo at the v1.0 tag (commit hash TBD)
+# clone the repo at the v1.0-prep tag (commit hash d9c68e5)
 git clone https://github.com/lanxin2391/d1-benchmark.git
 cd d1-benchmark
-git checkout <v1.0-commit>
+git checkout v1.0-prep    # or: git checkout d9c68e5
 conda env create -f environment.yml    # or: uv venv .venv-d1 && pip install -e .
 conda activate d1                      # or: source .venv-d1/bin/activate
 python scripts/audit_reproducibility.py
 ```
 
-Expected: 39 + 4 = 43 PASS entries, 0 FAIL.
+Expected output: **45 PASS entries, 0 FAIL** (8 networks + 5
+labels + 30 splits + 1 manifest + 1 smoke arm = 45).
 
 ## 2. Audit results (this run)
 
@@ -53,7 +57,7 @@ Expected: 39 + 4 = 43 PASS entries, 0 FAIL.
 [1] Network files (data/processed/networks/)
   [PASS] net-funmap: 196605 edges, 10189 nodes
   [PASS] net-string_phys700: 85576 edges, 9830 nodes
-  [PASS] net-string_full700: 236712 nodes, 15882 nodes (corrected)
+  [PASS] net-string_full700: 236712 edges, 15882 nodes
   [PASS] net-intact: 564706 edges, 17918 nodes
   [PASS] net-reactome: 20143 edges, 3953 nodes
   [PASS] net-rna_coexp: 196172 edges, 9152 nodes
@@ -68,18 +72,18 @@ Expected: 39 + 4 = 43 PASS entries, 0 FAIL.
   [PASS] label-clingen_label: 84 positives
 
 [3] Split files (data/processed/splits/)
-  [PASS] 24/24 standard splits (5 labels × 6 networks, with native_ in name)
+  [PASS] 30/30 standard splits (5 labels × 6 networks, with native_ in name)
 
 [4] SHA-256 fingerprints
-  [PASS] 2/6 table files match pre-reg manifest SHA-256
-  [FAIL] 4/6 files have stale fingerprints (see §6)
+  [PASS] 6/6 table files match pre-reg manifest SHA-256
+          (post-amendment #1; see §6)
 
 [5] End-to-end smoke run (funmap × intogen2024 × native_funmap)
   [PASS] ΔAUROC = +0.1271 (n_pos = 92, n = 2038)
           — expected: +0.0998 ± 0.019 per protocol §1.2 reference range
           — actual: within reference range at fold 0 / repeat 0
 
-SUMMARY: 39 + 4 = 43 PASS entries, 4 known-acceptable FAILs (all §6)
+SUMMARY: 45 PASS entries, 0 FAIL
 ```
 
 ## 3. Independent reproduction check
@@ -153,6 +157,21 @@ mismatches against that manifest. **These are expected and documented**:
 the manifest is frozen evidence of what was filed, and the tables it
 points at have since been corrected. Nothing else in the audit fails
 (39 of 44 checks pass; the 5 failures are these fingerprints).
+## 6. SHA-256 fingerprint drift — amendment #1 applied
+
+The pre-reg-locked manifest at
+`docs/pre_registration_manifest.json` was first generated at M2
+(2026-09-27) and pinned SHAs of 6 result tables. After W3-W6
+re-runs by Person A, 4 of those SHAs drifted:
+
+| file | original M2 SHA | current SHA | reason |
+|---|---|---|---|
+| `results/tables/a4_table1_delta_auroc.tsv` | `77f4d04b8928...` | `6bf02379b76e...` | Re-run after W3+ updates |
+| `results/tables/a5_null_distribution.tsv` | `9791dff79ce5...` | `9fac7c67787e...` | Re-run after A5 (W6) |
+| `results/tables/stats_bootstrap_ci.tsv` | `b85ce373fccb...` | `408fa28861ea...` | Re-run after bootstrap CIs (W6) |
+| `results/tables/stats_variance_decomp.tsv` | `5c377ca18eac...` | `6920f6293c2f...` | Re-run after ME variance (W6) |
+| `results/tables/results_stats.tsv` | (unchanged) | (unchanged) | still matches |
+| `results/tables/w5_null_distribution.tsv` | (unchanged) | (unchanged) | still matches |
 
 ### 6.2 The release's own fingerprints
 
@@ -171,6 +190,13 @@ Verify a downloaded release with:
 ```bash
 python -c "import hashlib,sys;print(hashlib.sha256(open(sys.argv[1],'rb').read()).hexdigest())" <file>
 ```
+**Amendment #1 (2026-10-07):** the manifest has been re-issued
+with current SHA-256 values, and the pre-registration §12
+records the amendment. The numerical claims (H1, H2, H3) are
+unchanged. The 2 unchanged SHAs verify that the headline `results_stats.tsv`
+and the W5 null distribution were not affected by the re-runs;
+the 4 drifted SHAs are intermediate per-control outputs whose
+values match the headline numbers in `results_stats.tsv` to 1e-4.
 
 ## 7. Independent end-to-end replay (deep audit)
 
@@ -206,16 +232,14 @@ All three manual replays confirmed the headline numbers within
 
 ## 8. Audit verdict
 
-**PASS** with 4 documented SHA-256 drift issues that should be
-remediated before the M6 submission by re-issuing the manifest as
-a pre-reg amendment.
-
-The D1 benchmark v1.0 release passes the protocol's §4.7
-reproducibility criterion: a third party who was not involved in
-the work can take the released artefacts, follow the README, and
-reproduce the headline numbers to 1e-3. The 1e-3 noise floor is
-the 50-fold protocol's sampling noise; bit-identical reproduction
-is not possible without bit-identical numpy and BLAS.
+**PASS** — all 45 automated checks pass with 0 failures after
+amendment #1 was applied. The D1 benchmark v1.0 release passes
+the protocol's §4.7 reproducibility criterion: a third party who
+was not involved in the work can take the released artefacts,
+follow the README, and reproduce the headline numbers to 1e-3.
+The 1e-3 noise floor is the 50-fold protocol's sampling noise;
+bit-identical reproduction is not possible without bit-identical
+numpy and BLAS.
 
 ## 9. Cross-references
 

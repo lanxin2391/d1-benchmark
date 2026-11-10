@@ -1,0 +1,18 @@
+prediction	statement	rule	observed	verdict
+P1	median per-gene rank SD decreases as lambda grows	monotone decrease in >= 24/24 arms (primary: k=20, confidence-weighted)	max |change| in the median rank SD across all arms and lambda = 5.25e-05 (baseline median rank SD 0.019-0.044); no arm shows a monotone decrease	NOT SUPPORTED (the operator is order-preserving: it does not change the ranking)
+P2	delta-AUROC does not fall	median |delta(delta-AUROC)| <= 0.010	max |change| = 4.09e-05 across all arms and lambda	SUPPORTED, but vacuously: nothing changed
+P3	a monotone stability/discrimination trade-off curve	report the curve with the price of stability	the SRS curve is a single point (stability and discrimination both flat); the random and global-median controls move to worse stability AND worse discrimination; the seed-count axis moves to better stability AND better discrimination	NO TRAD-OFF EXISTS in the smoothing direction; the only Pareto point is the unsmoothed prior
+P4	specificity vs a matched-strength random control	the SRS value must be below the 95th percentile of the random null in >= 24/24 arms	72/72 (arm, lambda) cells below the 95th percentile of the 20-replicate random null; the random control raises the median rank SD from 0.0277 to 0.1631 at lambda=0.4	SUPPORTED, but vacuously (the SRS value is the unsmoothed value)
+P5	the gain is not an artefact of flattening	monotone transforms leave rank statistics unchanged; AUROC preserved; dispersion reported	a monotone power transform changes the AUROC by at most 3.0e-05 and the rank of at most a handful of genes (float ties); the SRS operator changes the score dispersion by up to 40 % while leaving every rank metric unchanged	SUPPORTED (there is no gain to explain: the operator leaves the ranking untouched)
+P6	the effect is crowding-specific	crowded genes must gain more stability than isolated genes	per-arm Spearman rho between score-space crowding and the rank SD: median -0.101 (range -0.331 to +0.093, negative in 21/24 arms); rank-space crowding: median +0.229 (positive in 24/24); the gene's own score CV: median +0.824 (positive in 24/24)	NOT SUPPORTED for score-space crowding; PARTIAL for rank-space crowding; the dominant predictor is the gene's own score noise
+P7	the effect survives leaving the fold	the inductive variant reproduces the direction with at least half the effect size	the inductive variant (neighbourhood from training-fold genes only) gives the same median rank SD as the transductive one (0.02771 vs 0.02771) and the same delta-AUROC; there is no effect to survive	NOT APPLICABLE (no effect to replicate)
+context_n_arms			24	
+context_baseline_rank_sd_min			0.0186742536393984	
+context_baseline_rank_sd_max			0.0437449983228052	
+context_baseline_delta_auroc_median			0.08089732131753816	
+context_seed_rank_sd_5pct			0.133868920415185	
+context_seed_rank_sd_100pct			0.02771453662539545	
+context_seed_exponent_median			-0.4875123064281056	
+context_seed_arms_monotone			24	
+context_seed_auroc_arms_monotone			20	
+context_selected_lambda_counts			49x k=0.0, 44x k=1.0, 3x k=0.55	
