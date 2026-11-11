@@ -66,6 +66,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from d1.engine.evaluate import evaluate  # noqa: E402
+from d1.engine.guard import write_table  # noqa: E402
 from d1.engine.rwr import transition_T, seed_matrix, rwr  # noqa: E402
 from d1.networks.io import load_network  # noqa: E402
 
@@ -173,7 +174,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  [{net} x {lab}] {len(rows)} rows in {time.time() - t0:.1f}s")
 
     df = pd.DataFrame(all_rows)
-    df.to_csv(TABLE_DIR / "control8_seed_degree.tsv", sep="\t", index=False, lineterminator="\n")
+    write_table(df, TABLE_DIR / "control8_seed_degree.tsv",
+                nets=args.only_net, labels=args.only_label)
 
     # ---- per-arm summary: the three stratum means and their gaps ----
     g = df.groupby(["network", "label", "stratum"]).delta_auroc
@@ -182,8 +184,9 @@ def main(argv: list[str] | None = None) -> int:
     summary["low_positive"] = summary["low"] > 0
     summary["n_folds"] = df.groupby(["network", "label"]).size()
     summary = summary.reset_index()
-    summary.to_csv(TABLE_DIR / "control8_seed_degree_summary.tsv",
-                   sep="\t", index=False, float_format="%.6f", lineterminator="\n")
+    write_table(summary, TABLE_DIR / "control8_seed_degree_summary.tsv",
+                nets=args.only_net, labels=args.only_label,
+                float_format="%.6f")
 
     print("\n=== Control 8: DeltaAUROC by seed-degree stratum (alpha=0.5) ===")
     print(summary.round(4).to_string(index=False))

@@ -81,6 +81,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from d1.engine.rwr import transition_T, seed_matrix, rwr  # noqa: E402
+from d1.engine.guard import write_table  # noqa: E402
 from d1.networks.io import load_network  # noqa: E402
 
 NETWORKS = ["funmap", "rna_coexp", "string_phys700",
@@ -250,8 +251,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"  [{net} x {lab}] {time.time() - t0:.1f}s")
 
     df = pd.DataFrame(all_rows)
-    df.to_csv(TABLE_DIR / "control10_random_input.tsv", sep="\t",
-              index=False, float_format="%.6f", lineterminator="\n")
+    write_table(df, TABLE_DIR / "control10_random_input.tsv",
+                nets=args.only_net, labels=args.only_label,
+                extra=f"nrandom{args.n_random}", float_format="%.6f")
 
     real = df[df.regime == "real_input"].set_index(["network", "label"])
     rnd = df[df.regime.str.startswith("random_input_rep")].groupby(
@@ -276,8 +278,9 @@ def main(argv: list[str] | None = None) -> int:
     summary["input_sensitivity_topk_jaccard_real_vs_random"] = \
         sens["mean_hub_overlap_topk"]
     summary = summary.reset_index()
-    summary.to_csv(TABLE_DIR / "control10_random_input_summary.tsv", sep="\t",
-                   index=False, float_format="%.6f", lineterminator="\n")
+    write_table(summary, TABLE_DIR / "control10_random_input_summary.tsv",
+                nets=args.only_net, labels=args.only_label,
+                extra=f"nrandom{args.n_random}", float_format="%.6f")
 
     print("\n=== Control 10: does the learner use its input? (Hill et al. 2019) ===")
     cols = ["network", "label",

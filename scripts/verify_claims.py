@@ -12,9 +12,19 @@ What it does
 1. Runs ``scripts/recompute_ground_truth.py``'s computation (imported, not
    re-implemented) to get the authoritative value of every headline
    quantity.
-2. For each entry in the CLAIMS table below, searches the named
-   manuscript file for the stated string and reports PASS / FAIL.
-3. Writes ``review/verification_report.txt``.
+2. Section 1 -- for each entry in the CLAIMS table, searches the named
+   manuscript file for the stated string. These are *textual* checks: they
+   assert that a claim is present and that a superseded one is absent.
+3. Section 2 -- the FORBIDDEN table, the same idea for strings that must
+   no longer appear.
+4. Section 3 -- the NUMERIC checks, which are the ones that matter. Each
+   entry names a manuscript file, a REGULAR EXPRESSION that CAPTURES the
+   number the manuscript states, and the ground-truth key that number must
+   equal. The captured number is compared NUMERICALLY against the value
+   recomputed from the released tables, with a stated tolerance. A
+   hardcoded literal is never compared against the table; if the table
+   changes, these checks change verdict with it.
+5. Writes ``review/verification_report.txt``.
 
 A FAIL means the manuscript states something the released tables do not
 support. Fix the manuscript, not the table.
@@ -252,44 +262,86 @@ def main(argv: list[str] | None = None) -> int:
 
     lines.append("")
     lines.append("-" * 72)
-    lines.append("3. CROSS-CHECK -- the manuscript's own numbers vs the tables")
+    lines.append("3. NUMERIC CROSS-CHECK -- the manuscript's captured "
+                 "numbers vs the recomputed table values")
     lines.append("-" * 72)
+    # Each entry is (claim id, file, REGEX capturing the number the
+    # manuscript states, ground-truth key, tolerance). The captured number
+    # is compared NUMERICALLY with the value recomputed from the released
+    # tables -- the literal in the manuscript is never the thing being
+    # tested, so a change in the tables changes the verdict.
+    #
+    # The regexes are written to match the MINUS SIGN the manuscript uses
+    # (U+2212) as well as the ASCII hyphen.
+    NUM = r"[+−-]?\d+(?:\.\d+)?"
     cross = [
         ("abstract negative cell", "manuscript_intro_abstract.md",
-         "−0.013", ("delta_auroc", "reactome x intogen_temporal_new"),
-         lambda v: f"−{abs(v):.3f}".replace("-", "−")),
+         r"(−0\.01\d)", ("delta_auroc", "reactome x intogen_temporal_new"),
+         0.0006),
         ("abstract panel max", "manuscript_intro_abstract.md",
-         "+0.171", ("delta_auroc", "panel range (max)"),
-         lambda v: f"+{v:.3f}".replace("-", "−")),
+         r"(\+0\.17\d)", ("delta_auroc", "panel range (max)"),
+         0.0006),
         ("manuscript_a GNN margin", "manuscript_a_sections.md",
-         "+0.028", ("gnn_arm", "mean GNN delta"),
-         lambda v: f"+{v:.3f}".replace("-", "−")),
-        ("manuscript_b transfer count", "manuscript_b_sections.md",
-         "59 cells positive", ("control5_cross_catalogue", "n positive cells"),
-         lambda v: f"{int(v)} cells positive"),
-        ("manuscript_b transfer negatives", "manuscript_b_sections.md",
-         "7 cells negative", ("control5_cross_catalogue", "n negative cells"),
-         lambda v: f"{int(v)} cells negative"),
+         r"\| \*\*embedding baseline\*\*\s*\| (\+0\.\d\d\d) \|",
+         ("gnn_arm", "mean GNN delta"), 0.0006),
         ("control 8 low stratum", "manuscript_a_sections.md",
-         "+0.0527", ("control8_seed_degree", "mean low"), None),
+         r"\| low \(lowest third\) \| \*\*(\+0\.\d{4})\*\*",
+         ("control8_seed_degree", "mean low"), 0.0002),
+        ("control 8 high stratum", "manuscript_a_sections.md",
+         r"\| high \(highest third\) \| \*\*(\+0\.\d{4})\*\*",
+         ("control8_seed_degree", "mean high"), 0.0002),
         ("control 9 permutation p", "manuscript_a_sections.md",
-         "p = 0.93", ("control9_size", "permutation p"), None),
+         r"permutation p = (0\.\d+)", ("control9_size", "permutation p"),
+         0.005),
+        ("control 10 Jaccard", "manuscript_a_sections.md",
+         r"top-100 Jaccard overlap \| \*\*(\d\.\d+)\*\*",
+         ("control10_random_input", "input sensitivity Jaccard"),
+         0.001),
+        ("manuscript_b per-label mean", "manuscript_b_sections.md",
+         r"\| intogen2024\s+\| 633 \| (\+\d\.\d{4})",
+         ("label_mean", "intogen2024"), 0.0002),
+        ("manuscript_b overlap row", "manuscript_b_sections.md",
+         r"\| ot_all\s+\| 205 \|\s+24 \| 600 \| (\d+) \| 83 \|",
+         ("label_overlap", "ot_all x ot_nolit"), 0.5),
+        ("manuscript_b transfer mean", "manuscript_b_sections.md",
+         r"retention of \*\*(\d+\.\d) %\*\*",
+         ("control5_cross_catalogue", "retention percent"), 0.05),
+        ("control 7 matched difference", "manuscript_intro_abstract.md",
+         r"difference (\+\d\.\d{3,4})",
+         ("control7_publication_count", "mean matched-minus-standard"),
+         0.0002),
     ]
-    for cid, fname, needle, key, fmt in cross:
+    for cid, fname, pattern, key, tol in cross:
         val = gt.get(key)
         if val is None:
-            lines.append(f"  [SKIP] {cid:<28} (no ground truth for {key})")
+            lines.append(f"  [SKIP] {cid:<30} (no ground truth for {key})")
             continue
-        expect = fmt(val) if fmt else str(val)
         path = ROOT / "docs" / fname
         text = path.read_text(encoding="utf-8") if path.exists() else ""
-        ok = needle in text
+        m = re.search(pattern, text)
+        if not m:
+            n_fail += 1
+            lines.append(f"  [FAIL] {cid:<30} table={val}")
+            lines.append(f"         the pattern {pattern!r} did not match; "
+                         f"the manuscript may have reworded the claim")
+            failures.append(f"{cid}: {fname} does not match {pattern!r}")
+            continue
+        try:
+            # the manuscript uses the MINUS SIGN (U+2212); normalise it
+            stated = float(m.group(1).replace("−", "-"))
+        except ValueError:
+            stated = float(m.group(0).replace("−", "-"))
+        ok = abs(stated - float(val)) <= tol
         n_pass += ok
         n_fail += (not ok)
-        lines.append(f"  [{'PASS' if ok else 'FAIL'}] {cid:<28} table={expect}")
+        lines.append(f"  [{'PASS' if ok else 'FAIL'}] {cid:<30} "
+                     f"manuscript={stated:+.4f}  table={float(val):+.4f}  "
+                     f"tol={tol}")
         if not ok:
-            lines.append(f"         manuscript does not contain {needle!r}")
-            failures.append(f"{cid}: {fname} does not contain {needle!r}")
+            lines.append(f"         the manuscript states {stated}, the table "
+                         f"says {float(val)}")
+            failures.append(f"{cid}: {fname} states {stated}, the table says "
+                            f"{float(val)}")
 
     lines.append("")
     lines.append("=" * 72)

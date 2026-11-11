@@ -224,6 +224,48 @@
   "note": ""
  },
  {
+  "quantity": "label_mean",
+  "scope": "intogen2024",
+  "value": 0.082067,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "intogen_temporal_new",
+  "value": 0.02085,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "ot_all",
+  "value": 0.1058,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "ot_nolit",
+  "value": 0.1062,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "panel median cell",
+  "value": 0.0809,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "panel mean cell",
+  "value": 0.078729,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
   "quantity": "n_primary_cells",
   "scope": "results_stats.tsv",
   "value": 24,
@@ -565,6 +607,13 @@
   "value": 0.0313,
   "source": "results_stats_transfer.tsv",
   "note": ""
+ },
+ {
+  "quantity": "control5_cross_catalogue",
+  "scope": "retention percent",
+  "value": 39.81,
+  "source": "results_stats_transfer.tsv",
+  "note": "cross-catalogue mean / within-label mean; within-label mean = 0.0787"
  },
  {
   "quantity": "control6_temporal_split",

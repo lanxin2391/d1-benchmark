@@ -83,7 +83,8 @@ def finalize_edges(df, net_id, meta=None, out_dir="data/processed/networks", wri
     })
     if write:
         os.makedirs(out_dir, exist_ok=True)
-        df.to_csv(os.path.join(out_dir, f"{net_id}.tsv"), sep="\t", index=False)
+        df.to_csv(os.path.join(out_dir, f"{net_id}.tsv"), sep="\t", index=False,
+                  lineterminator="\n")
         with open(os.path.join(out_dir, f"{net_id}.meta.json"), "w", encoding="utf-8") as f:
             json.dump(meta, f, indent=2)
     return df, meta

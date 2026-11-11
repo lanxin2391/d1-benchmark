@@ -23,7 +23,10 @@ from pathlib import Path
 from typing import Iterable
 
 REPO = Path(__file__).resolve().parent.parent
-TAG = "v1.0-rc1"      # the release commit; override with --tag
+TAG = "v1.0-rc3"      # the release tag; override with --tag
+# NOTE: the tag must EXIST in the repository. The script checks this
+# before it does anything, so a stale default cannot silently build
+# a release from the wrong tree.
 PREFIX = "d1-benchmark-v1.0/"   # top-level folder inside each zip
 RELEASE_DIR = REPO / "release"
 
@@ -49,6 +52,12 @@ SPLIT_PREFIXES = (
     "data/processed/splits_v40_cx/",
     "data/processed/splits_v40_clingen/",
 )
+
+
+def _git_tags() -> list[str]:
+    """The tags that exist in this repository."""
+    out = subprocess.check_output(["git", "tag", "-l"], cwd=str(REPO), text=True)
+    return [ln.strip() for ln in out.splitlines() if ln.strip()]
 
 
 def tracked_files(tag: str) -> list[str]:
@@ -169,7 +178,7 @@ RESULTS_README = """D1 benchmark v1.0 - primary results (Zenodo subset zip)
 
 What is in this zip
 -------------------
-results/tables/ -- 32 TSV tables (all locked at v1.0-prep tag)
+results/tables/ -- every released TSV table
 figures/        -- 4 PNG figures (3 panels of Figure 2 + Figure 1)
 
 Primary endpoint (Table 1)
@@ -229,7 +238,7 @@ Figures
 
 Reproducibility note
 --------------------
-All tables in this zip are byte-identical to the v1.0-prep tag at
+All tables in this zip are byte-identical to the release tag at
 commit 397c728 in the lanxin2391/d1-benchmark repository. The
 gnn_courtesy_arm.tsv currently contains only the alpha=0.5 cells
 (24/72); the remaining 48 alpha=0.3 + alpha=0.7 cells exist as raw
@@ -244,6 +253,20 @@ def main() -> int:
                     help="the git tag / commit the release is built from")
     args = ap.parse_args()
     tag = args.tag
+
+    # The tag must exist. A stale default (the previous one, v1.0-rc1, was
+    # a tag that had been deleted) would otherwise build a release from
+    # whatever git resolves the name to, or fail deep inside the script.
+    try:
+        subprocess.check_output(["git", "rev-parse", "--verify", f"{tag}^{{commit}}"],
+                                cwd=str(REPO), stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError:
+        raise SystemExit(
+            f"the tag {tag!r} does not exist in this repository.\n"
+            f"Available tags: "
+            f"{' '.join(sorted(_git_tags())) or '(none)'}\n"
+            f"Create it first, e.g.:\n"
+            f"    git tag -a {tag} -m 'D1 benchmark {tag}' <commit>")
 
     RELEASE_DIR.mkdir(exist_ok=True)
     files = tracked_files(tag)
@@ -289,7 +312,7 @@ def main() -> int:
     # ---- the release's own tamper-evidence record --------------------
     # It goes INTO the source zip (the verifier needs it) and, with the
     # hashes of the three zips added, into the repository as
-    # docs/release_manifest_v1.0rc1.json (written by
+    # docs/release_manifest_{tag}.json (written by
     # scripts/build_release_manifest.py, which runs after this script
     # because a zip cannot contain its own hash).
     import hashlib
@@ -302,28 +325,20 @@ def main() -> int:
                 h.update(chunk)
         return h.hexdigest()
 
-    key_tables = [
-        "results/tables/a4_table1_delta_auroc_v40.tsv",
-        "results/tables/stats_bootstrap_ci.tsv",
-        "results/tables/stats_equivalence.tsv",
-        "results/tables/stats_h1_verdict_v40.tsv",
-        "results/tables/stats_variance_decomp.tsv",
-        "results/tables/results_stats.tsv",
-        "results/tables/a5_p_values.tsv",
-        "results/tables/w5_p_values.tsv",
-        "results/tables/d09_table.tsv",
-        "results/tables/d11_table.tsv",
-        "results/tables/d12_table.tsv",
-        "results/tables/d1_leakage_summary.tsv",
-        "results/tables/d3_split_invariants.tsv",
-        "results/tables/d4_v1_vs_v2_comparison.tsv",
-        "results/tables/hub_capped_rwr.tsv",
-        "results/tables/stability_by_arm.tsv",
-        "results/tables/stability_attribution.tsv",
-        "results/tables/network_stability.tsv",
-        "results/tables/consensus_table.tsv",
-        "results/tables/consensus_robustness.tsv",
-    ]
+    # ONE SOURCE OF TRUTH for the list of key tables: the release manifest
+    # that scripts/build_release_manifest.py writes. The list used to be a
+    # second, hand-maintained copy here, and it had already drifted (it
+    # lacked the three new control tables).
+    manifest_path = REPO / "docs" / f"release_manifest_{tag}.json"
+    if not manifest_path.is_file():
+        raise SystemExit(
+            f"{manifest_path.name} does not exist. Build it first:\n"
+            f"    python scripts/build_release_manifest.py --release {tag}\n"
+            f"(then re-run this script, so that the zips' hashes can be "
+            f"added to it.)")
+    _manifest = _json.loads(manifest_path.read_text(encoding="utf-8"))
+    key_tables = list(_manifest.get("sha256_tables", {}).keys())
+    print(f"  key tables read from {manifest_path.name}: {len(key_tables)}")
     figures = sorted(str(f.relative_to(REPO)).replace("\\", "/")
                      for f in (REPO / "figures").glob("*.png"))
     manifest = {

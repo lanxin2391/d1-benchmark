@@ -46,7 +46,7 @@ endpoint ΔAUROC = AUROC(RWR) − AUROC(degree-only) over 5-fold ×
 40-repeat cross-validation. We pre-registered three hypotheses
 (H1: prior contributes beyond degree; H2: contribution is
 provenance-invariant; H3: between-network differences reflect
-literature attention) and ten controls, including a degree-matched
+literature attention) and seven protocol controls: a degree-matched
 seed null (A5), a configuration-model rewiring null (W5), a
 cross-catalogue label transfer grid (Control 5), a publication-
 bias adjustment with a literature-matched null (Control 7), and
@@ -141,7 +141,8 @@ The field has converged on three empirical observations:
 The D1 benchmark closes this gap. We assembled a six-network
 panel stratified by molecular provenance, a four-label panel
 spanning independent curation philosophies, a fixed RWR learner
-(α = 0.5, no hyperparameter tuning), and a ten-control stack
+(α = 0.5, no hyperparameter tuning), and a control stack of ten
+controls
 that measures the network's contribution against three distinct
 nulls: a degree baseline (Control 1), a degree-matched seed null
 (Control 2), an edge-rewiring null (Control 3), and four further
@@ -151,9 +152,9 @@ a cross-catalogue label transfer (Control 5), a temporal split
 literature-matched null (Control 7) — plus three controls added
 after a systematic read of the benchmark literature: complex-aware
 cross-validation (Picart-Armada et al. 2019), seed-degree
-stratification (Zhang et al. 2021), network size and coverage
-adjustment (Wright et al. 2025) and random-input degeneracy
-(Hill et al. 2019).
+stratification (Zhang et al. 2021, Control 8), network size and
+coverage adjustment (Wright et al. 2025, Control 9) and random-input
+degeneracy (Hill et al. 2019, Control 10).
 
 The headline question is: **does the specific topology of a
 cancer-related gene network contribute to driver-gene

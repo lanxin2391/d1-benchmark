@@ -342,9 +342,7 @@ reported as such rather than folded into the H1 verdict.
 
 Zhang et al. (2021, *Brief Bioinform* 22(5):bbab006) showed that the
 LOOCV performance of RWR-family methods on their panel tracked the
-**degree centrality of the seed nodes**, and warned that "RWR's LOOCV
-performance may look better simply because its seed nodes have higher
-degree centrality". Their random-seed experiment (1,000 trials × 10
+**degree centrality of the seed nodes**, and warned that "performance of RWR-like algorithms would appear to be better in LOOCV just by having higher degree centralities for the seed nodes, which does not necessarily reflect true ability for the algorithm to predict new candidate genes". Their random-seed experiment (1,000 trials × 10
 random seeds) correlated a method's median rank with the degree of its
 seeds.
 
@@ -804,10 +802,7 @@ temporal label are not the same. We report both rather than choosing.
 ### F.9 Control 8: does the margin depend on the degree of the seeds?
 
 Zhang et al. (2021, *Brief Bioinform* 22(5):bbab006) reported the
-sharpest published warning against the RWR family: *"RWR's LOOCV
-performance may look better simply because its seed nodes have higher
-degree centrality, which need not reflect a real ability to predict new
-candidate genes."* Their random-seed experiment (1,000 trials × 10
+sharpest published warning against the RWR family: *performance of RWR-like algorithms would appear to be better in LOOCV just by having higher degree centralities for the seed nodes, which does not necessarily reflect true ability for the algorithm to predict new candidate genes.* Their random-seed experiment (1,000 trials × 10
 random seeds) correlated a method's median rank with the degree
 centrality of its seeds.
 

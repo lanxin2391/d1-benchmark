@@ -31,6 +31,12 @@ delta_auroc	n negative cells	1	a4_table1_delta_auroc_v40.tsv	reactome x intogen_
 delta_auroc	n positive cells	23	a4_table1_delta_auroc_v40.tsv	
 delta_auroc_alpha	alpha=0.3 panel mean	0.072933	a4_table1_delta_auroc_v40.tsv	
 delta_auroc_alpha	alpha=0.7 panel mean	0.080483	a4_table1_delta_auroc_v40.tsv	
+label_mean	intogen2024	0.082067	a4_table1_delta_auroc_v40.tsv	
+label_mean	intogen_temporal_new	0.02085	a4_table1_delta_auroc_v40.tsv	
+label_mean	ot_all	0.1058	a4_table1_delta_auroc_v40.tsv	
+label_mean	ot_nolit	0.1062	a4_table1_delta_auroc_v40.tsv	
+label_mean	panel median cell	0.0809	a4_table1_delta_auroc_v40.tsv	
+label_mean	panel mean cell	0.078729	a4_table1_delta_auroc_v40.tsv	
 n_primary_cells	results_stats.tsv	24	results_stats.tsv	
 BH_FDR	cells rejecting at q<0.05 (fold unit)	23	results_stats.tsv	
 BH_FDR	cells rejecting at q<0.05 (repeat unit)	23	results_stats.tsv	
@@ -80,6 +86,7 @@ control5_cross_catalogue	n transfer cells	66	results_stats_transfer.tsv
 control5_cross_catalogue	n positive cells	59	results_stats_transfer.tsv	
 control5_cross_catalogue	n negative cells	7	results_stats_transfer.tsv	funmap ot_all->intogen_temporal_new; funmap intogen_temporal_new->ot_all; intact intogen_temporal_new->ot_nolit; reactome ot_nolit->intogen_temporal_new; reactome intogen_temporal_new->ot_nolit; reactome intogen_temporal_new->ot_all; reactome ot_all->intogen_temporal_new
 control5_cross_catalogue	mean delta	0.0313	results_stats_transfer.tsv	
+control5_cross_catalogue	retention percent	39.81	results_stats_transfer.tsv	cross-catalogue mean / within-label mean; within-label mean = 0.0787
 control6_temporal_split	delta range	-0.0095 to 0.0923	d09_table.tsv	
 control6_temporal_split	n positive cells	5	d09_table.tsv	
 control6_temporal_split	n effective seed sets (min)	50	d09_table.tsv	

@@ -95,6 +95,14 @@ def primary() -> None:
     for a in ("0.3", "0.7"):
         record("delta_auroc_alpha", f"alpha={a} panel mean",
                r6(a4[f"a{a}_mean"].mean()), "a4_table1_delta_auroc_v40.tsv")
+    # per-label means (the numbers the manuscript's label table quotes)
+    for lab, g in a4.groupby(level="label_set"):
+        record("label_mean", lab, r6(g["a0.5_mean"].mean()),
+               "a4_table1_delta_auroc_v40.tsv")
+    record("label_mean", "panel median cell", r6(vals.median()),
+           "a4_table1_delta_auroc_v40.tsv")
+    record("label_mean", "panel mean cell", r6(vals.mean()),
+           "a4_table1_delta_auroc_v40.tsv")
 
 
 # ----------------------------------------------------------------- statistics
@@ -149,6 +157,7 @@ def statistics() -> None:
 
 # ----------------------------------------------------------------- controls
 def controls() -> None:
+    a4 = t("a4_table1_delta_auroc_v40.tsv")
     a5 = t("a5_p_values.tsv")
     record("control2_degree_matched_seed_null", "z range",
            f"{r4(a5.z_score.min())} to {r4(a5.z_score.max())}", "a5_p_values.tsv")
@@ -196,6 +205,12 @@ def controls() -> None:
                      for r in tr[tr.mean_delta_auroc < 0].itertuples()))
     record("control5_cross_catalogue", "mean delta",
            r4(tr.mean_delta_auroc.mean()), "results_stats_transfer.tsv")
+    within = a4["a0.5_mean"].mean()
+    retention = 100.0 * tr.mean_delta_auroc.mean() / within
+    record("control5_cross_catalogue", "retention percent",
+           round(float(retention), 2), "results_stats_transfer.tsv",
+           f"cross-catalogue mean / within-label mean; within-label mean = "
+           f"{r4(within)}")
 
     d09 = t("d09_table.tsv")
     d09 = d09[d09.alpha == 0.5]

@@ -131,9 +131,22 @@ def build(release: str, commit: str) -> dict:
             figures[rel] = sha256(p)
         else:
             missing.append(rel)
+    # Does the named commit actually CONTAIN these artefacts? A manifest
+    # that names a commit from which the artefacts are absent is not
+    # verifiable: a reader who checks out that commit finds a different
+    # tree. The check below is what caught the previous manifest, which
+    # named the pre-work HEAD while fingerprinting four tables that were
+    # added after it.
+    not_in_commit: list[str] = []
+    if commit and len(commit) == 40 and git("cat-file", "-e", commit):
+        tracked = set(git("ls-tree", "-r", "--name-only", commit).splitlines())
+        for rel in list(tables) + list(figures):
+            if rel not in tracked:
+                not_in_commit.append(rel)
     return {
         "release": release,
         "commit": commit,
+        "artefacts_absent_from_that_commit": not_in_commit,
         "built_by": "scripts/build_release_manifest.py",
         "note": ("The pre-registration manifest "
                  "(docs/pre_registration_manifest.json) is frozen and "
@@ -183,6 +196,19 @@ def main() -> int:
                 bad.append(f"{rel}: MISSING")
             elif sha256(p) != want:
                 bad.append(f"{rel}: hash differs")
+        # the manifest must name a commit that actually CONTAINS the
+        # artefacts it fingerprints
+        named = manifest.get("commit", "")
+        absent = manifest.get("artefacts_absent_from_that_commit", [])
+        if absent:
+            bad.append(f"the named commit {named[:12]}... does not contain "
+                       f"{len(absent)} of the fingerprinted artefacts")
+        elif named and len(named) == 40 and git("cat-file", "-e", named):
+            tracked = set(git("ls-tree", "-r", "--name-only", named).splitlines())
+            for rel in list(manifest.get("sha256_tables", {})) + \
+                    list(manifest.get("sha256_figures", {})):
+                if rel not in tracked:
+                    bad.append(f"{rel}: absent from the named commit {named[:12]}...")
         print(f"checked {out.name}: "
               f"{len(manifest.get('sha256_tables', {}))} tables, "
               f"{len(manifest.get('sha256_figures', {}))} figures")
@@ -191,7 +217,8 @@ def main() -> int:
             for b in bad:
                 print(f"  {b}")
             return 1
-        print("PASS -- every fingerprint matches the working tree")
+        print("PASS -- every fingerprint matches the working tree, and the "
+              "named commit contains every fingerprinted artefact")
         return 0
 
     manifest = build(args.release, commit)
@@ -205,6 +232,11 @@ def main() -> int:
         print("  MISSING at build time:")
         for m in manifest["missing_at_build_time"]:
             print(f"    {m}")
+    if manifest["artefacts_absent_from_that_commit"]:
+        print(f"  WARNING: {len(manifest['artefacts_absent_from_that_commit'])} "
+              f"fingerprinted artefacts are NOT in commit {commit[:12]}...")
+        print("           Commit the new artefacts, then rebuild the "
+              "manifest, so that it names a commit that contains them.")
     print(f"  commit: {commit}")
     return 0
 

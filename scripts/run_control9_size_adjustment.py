@@ -62,6 +62,8 @@ from scipy import stats
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from d1.engine.guard import write_table  # noqa: E402
+
 TABLE_DIR = ROOT / "results" / "tables"
 NET_DIR = ROOT / "data" / "processed" / "networks"
 
@@ -130,14 +132,14 @@ def main(argv: list[str] | None = None) -> int:
     model = pd.DataFrame({"term": names, "coef": beta, "se": se, "t": tval,
                           "p": pval, "r2_partial": r2_partial,
                           "dof": dof, "sigma2": sigma2})
-    model.to_csv(TABLE_DIR / "control9_size_model.tsv", sep="\t",
-                 index=False, float_format="%.6f", lineterminator="\n")
+    write_table(model, TABLE_DIR / "control9_size_model.tsv",
+                nets=None, labels=None, float_format="%.6f")
 
     df["fitted_delta_auroc"] = X @ beta
     df["residual_delta_auroc"] = resid
     df["adjusted_delta_auroc"] = df["fitted_delta_auroc"]
-    df.to_csv(TABLE_DIR / "control9_size_adjustment.tsv", sep="\t",
-              index=False, float_format="%.6f", lineterminator="\n")
+    write_table(df, TABLE_DIR / "control9_size_adjustment.tsv",
+                nets=None, labels=None, float_format="%.6f")
 
     # ---- permutation null for the size correlation (Wright-style robustness) ----
     rng = np.random.default_rng(20261111)

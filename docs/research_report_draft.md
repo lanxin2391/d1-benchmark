@@ -32,7 +32,8 @@ The primary endpoint was ΔAUROC = AUROC(RWR) − AUROC(degree-only) over
 cells). Three hypotheses were pre-registered (H1: the prior contributes
 beyond degree; H2: the contribution is provenance-invariant; H3:
 between-network differences reflect literature attention) together with
-seven controls. A systematic read of a 41-paper reference corpus then
+seven protocol controls and three added after a systematic read of the
+reference corpus. A systematic read of a 41-paper reference corpus then
 motivated three further controls — seed-degree stratification, network
 size and coverage adjustment, and random-input degeneracy — which were
 run and reported without being allowed to alter the pre-registered
@@ -254,39 +255,46 @@ as artefacts, not regenerated from seeds.
 
 ### 2.5 Controls
 
-| # | control | what it removes | implementation |
-|---|---|---|---|
-| 1 | degree-only baseline | the degree sequence itself | `d1/engine/baselines.py` |
-| 2 | degree-matched random-seed null | "the seeds are just hubs" | `scripts/run_a5.py` |
-| 3 | configuration-model rewiring null | "any edge set of this degree sequence would do" | `scripts/run_rewiring.py` |
-| 4 | shared gene universe | "the networks differ because they cover different genes" | `scripts/run_d12_shared.py` |
-| 5 | cross-catalogue label transfer | "the catalogue is the answer, not the network" | `scripts/run_transfer_all.py` |
-| 6 | temporal split | "the prior only knows the drivers of 2020" | `scripts/run_d09.py` |
-| 7 | publication-count adjustment with a literature-matched null | "popular genes are popular drivers" | `scripts/build_pubcount_adjusted.py`, `scripts/run_control7_matched_null.py` |
-| 8 | complex-aware cross-validation | "held-out drivers inherit their complex partners' signal" | `scripts/run_d3_generate_cx_splits.py` |
-| 9 | hub-capped and degree-penalised RWR | "the prior is degree plus a hub effect" | `scripts/run_hub_capped_rwr.py` |
-| 10 | seed-degree stratification (Zhang et al. 2021) | "the real seeds are hubs" | `scripts/run_control8_seed_degree.py` |
-| 11 | network size and coverage adjustment (Wright et al. 2025) | "bigger networks and better coverage win" | `scripts/run_control9_size_adjustment.py` |
-| 12 | random-input degeneracy (Hill et al. 2019) | "the learner ignores its input and returns the hubs" | `scripts/run_control10_random_input.py` |
+| # | control | manuscript label | what it removes | implementation |
+|---|---|---|---|---|
+| 1 | degree-only baseline | Control 1 | the degree sequence itself | `d1/engine/baselines.py` |
+| 2 | degree-matched random-seed null | Control 2 | "the seeds are just hubs" | `scripts/run_a5.py` |
+| 3 | configuration-model rewiring null | Control 3 | "any edge set of this degree sequence would do" | `scripts/run_rewiring.py` |
+| 4 | shared gene universe | Control 4 | "the networks differ because they cover different genes" | `scripts/run_d12_shared.py` |
+| 5 | cross-catalogue label transfer | Control 5 | "the catalogue is the answer, not the network" | `scripts/run_transfer_all.py` |
+| 6 | temporal split | Control 6 | "the prior only knows the drivers of 2020" | `scripts/run_d09.py` |
+| 7 | publication-count adjustment with a literature-matched null | Control 7 | "popular genes are popular drivers" | `scripts/build_pubcount_adjusted.py`, `scripts/run_control7_matched_null.py` |
+| 8 | complex-aware cross-validation | Phase D | "held-out drivers inherit their complex partners' signal" | `scripts/run_d3_generate_cx_splits.py` |
+| 9 | hub-capped and degree-penalised RWR | E3 | "the prior is degree plus a hub effect" | `scripts/run_hub_capped_rwr.py` |
+| 10 | seed-degree stratification (Zhang et al. 2021) | **Control 8** | "the real seeds are hubs" | `scripts/run_control8_seed_degree.py` |
+| 11 | network size and coverage adjustment (Wright et al. 2025) | **Control 9** | "bigger networks and better coverage win" | `scripts/run_control9_size_adjustment.py` |
+| 12 | random-input degeneracy (Hill et al. 2019) | **Control 10** | "the learner ignores its input and returns the hubs" | `scripts/run_control10_random_input.py` |
 
-Controls 10–12 were specified **after** the confirmatory runs existed,
-in response to a systematic read of the 41-paper reference corpus. They
-are registered in the exploratory family (amendment 5) and cannot alter
-the pre-registered verdict, but they are reported whatever they show.
+(The two numbering systems are kept apart deliberately: the table's first
+column is the *position* in the control stack, and the "manuscript label"
+column is the name the manuscript, the abstract and the amendment log use.
+The three literature-mandated controls are **Controls 8, 9 and 10**
+everywhere except this table's position column.)
 
-**Control 10 (seed-degree stratification)** splits the training-fold
+Controls 8–10 (the three shaded in bold) were specified **after** the
+confirmatory runs existed, in response to a systematic read of the
+41-paper reference corpus. They are registered in the exploratory family
+(amendment 5) and cannot alter the pre-registered verdict, but they are
+reported whatever they show.
+
+**Control 8 (seed-degree stratification)** splits the training-fold
 positives of every arm into three equal degree terciles and recomputes
 the primary endpoint with the seeds drawn from one tercile only. The
 test set, the degree baseline and the fold structure are identical
 across the three strata, so the three numbers are directly comparable.
 
-**Control 11 (size and coverage adjustment)** regresses the per-cell
+**Control 9 (size and coverage adjustment)** regresses the per-cell
 endpoint on the label set (a fixed effect), log₁₀(LCC edges) and the
 label coverage, and reports the fitted value as the size- and
 coverage-adjusted endpoint; the size correlation is additionally tested
 against a 10,000-permutation null.
 
-**Control 12 (random-input degeneracy)** runs the learner twice on the
+**Control 10 (random-input degeneracy)** runs the learner twice on the
 same fold universe — once with the real training-fold positives, once
 with a random seed set of the same size drawn from the network's genes
 **excluding** the fold's own test genes — and reports Hill et al.'s
@@ -371,7 +379,7 @@ degree sequence, nor by any edge set with that degree sequence.
 
 ### 3.3 The margin is not a hub effect, and not a seed-degree effect
 
-**Hub-capped RWR (Control 9).** Removing the hubs from the propagation
+**Hub-capped RWR (E3).** Removing the hubs from the propagation
 while keeping the degree baseline untouched left the median margin
 unchanged (+0.0849 against a baseline of +0.0809); the degree-penalised
 walk *increased* it (+0.0979). But silencing the hubs rather than
@@ -379,7 +387,7 @@ removing them took the median effect to 31 % of its size, so roughly
 two thirds of the raw margin sits in the hubs' own ranking position.
 Both numbers are reported and the smaller one is quoted.
 
-**Seed-degree stratification (Control 10).** Recomputing the endpoint
+**Seed-degree stratification (Control 8).** Recomputing the endpoint
 with the seeds drawn from the low, mid or high degree tercile of the
 training positives gave mean ΔAUROC of **+0.0527, +0.0609 and +0.0537**
 respectively — a mean high-minus-low gap of **+0.0010**, one fiftieth of
@@ -389,7 +397,7 @@ degree of the seeds. This is the direct answer to Zhang et al.'s
 warning, and it is the opposite of what a degree-driven artefact would
 look like.
 
-**Random-input degeneracy (Control 12).** Under a random input the
+**Random-input degeneracy (Control 10).** Under a random input the
 learner's ranking collapsed onto an almost unrelated gene list: the
 top-100 sets of the real-input and random-input rankings of the same
 fold overlapped by **1.9 %**, and only **0.6 genes** persisted in the
@@ -400,7 +408,7 @@ uses its input.
 
 ### 3.4 The margin is not a network-size effect — but coverage matters
 
-**Size and coverage adjustment (Control 11).** A bigger network does
+**Size and coverage adjustment (Control 9).** A bigger network does
 not give a bigger margin: the pooled Spearman correlation between ΔAUROC
 and log₁₀(LCC edges) was **−0.021** (10,000-permutation p = 0.93), and
 within a label set the six networks gave correlations of +0.26, +0.26,
@@ -426,7 +434,7 @@ panel (§3.8).
 | Shared gene universe (Control 4) | the evaluation universe, across all six networks | 1,605 shared genes, 321 test genes per fold; ΔAUROC −0.036 to +0.130, 22/24 positive |
 | Cross-catalogue transfer (Control 5) | the catalogue the prior was trained on | mean ΔAUROC +0.0313, **39.8 %** of the within-label magnitude; 59 of 66 cells positive |
 | Temporal split (Control 6) | the recency of the drivers | ΔAUROC −0.0095 to +0.0923; 5 of 6 networks positive, on 50 independent training-seed draws per arm |
-| Complex-aware CV (Control 8) | the protein-complex leakage channel | 0 of 24 arms change sign; median absolute relative change 0.142; the prior *loses* ground (median signed change −12.3 %) |
+| Complex-aware CV (Phase D) | the protein-complex leakage channel | 0 of 24 arms change sign; median absolute relative change 0.142; the prior *loses* ground (median signed change −12.3 %) |
 | Common-size cap (D-11) | the number of positives per arm | 22 of 24 arms positive after capping every network to its per-network minimum |
 | Publication-count adjustment (Control 7) | the literature volume of the positives and of the background | the literature-matched null leaves the margin essentially unchanged (mean difference **+0.0010**); the matched endpoint is positive in 28 of 30 arms |
 

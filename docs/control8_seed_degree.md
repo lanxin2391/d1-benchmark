@@ -8,9 +8,7 @@ AUROC(degree)) depends on the **degree of the seed genes**.
 methods for cerebral small vessel disease and reported the sharpest
 published warning against the RWR family:
 
-> "RWR's LOOCV performance may look better simply because its seed
-> nodes have higher degree centrality, which need not reflect a real
-> ability to predict new candidate genes."
+> "performance of RWR-like algorithms would appear to be better in LOOCV just by having higher degree centralities for the seed nodes, which does not necessarily reflect true ability for the algorithm to predict new candidate genes."
 
 Their random-seed experiment (1,000 trials × 10 random seeds)
 correlated a method's median rank with the degree centrality of its

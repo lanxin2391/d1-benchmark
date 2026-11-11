@@ -115,16 +115,20 @@ states something the tables do not support.
          the curator-lag reading is a hypothesis, not a finding
 
 ------------------------------------------------------------------------
-3. CROSS-CHECK -- the manuscript's own numbers vs the tables
+3. NUMERIC CROSS-CHECK -- the manuscript's captured numbers vs the recomputed table values
 ------------------------------------------------------------------------
-  [PASS] abstract negative cell       table=−0.013
-  [PASS] abstract panel max           table=+0.171
-  [PASS] manuscript_a GNN margin      table=+0.028
-  [PASS] manuscript_b transfer count  table=59 cells positive
-  [PASS] manuscript_b transfer negatives table=7 cells negative
-  [PASS] control 8 low stratum        table=0.0527
-  [PASS] control 9 permutation p      table=0.93
+  [PASS] abstract negative cell         manuscript=-0.0130  table=-0.0125  tol=0.0006
+  [PASS] abstract panel max             manuscript=+0.1710  table=+0.1711  tol=0.0006
+  [PASS] manuscript_a GNN margin        manuscript=+0.0280  table=+0.0282  tol=0.0006
+  [PASS] control 8 low stratum          manuscript=+0.0527  table=+0.0527  tol=0.0002
+  [PASS] control 8 high stratum         manuscript=+0.0537  table=+0.0537  tol=0.0002
+  [PASS] control 9 permutation p        manuscript=+0.9300  table=+0.9300  tol=0.005
+  [PASS] control 10 Jaccard             manuscript=+0.0190  table=+0.0185  tol=0.001
+  [PASS] manuscript_b per-label mean    manuscript=+0.0821  table=+0.0821  tol=0.0002
+  [PASS] manuscript_b overlap row       manuscript=+430.0000  table=+430.0000  tol=0.5
+  [PASS] manuscript_b transfer mean     manuscript=+39.8000  table=+39.8100  tol=0.05
+  [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
 
 ========================================================================
-RESULT: 57 PASS / 0 FAIL
+RESULT: 61 PASS / 0 FAIL
 ========================================================================
