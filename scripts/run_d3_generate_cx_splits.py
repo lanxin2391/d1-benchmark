@@ -159,9 +159,9 @@ def main() -> int:
                 f"{per_fold.max():.0f}")
 
     inv_df = pd.DataFrame(rows)
-    inv_df.to_csv(TABLES / "d3_split_invariants.tsv", sep="\t", index=False)
+    inv_df.to_csv(TABLES / "d3_split_invariants.tsv", sep="\t", index=False, lineterminator="\n")
     pd.DataFrame(log_rows).to_csv(OUT_DIR / "build_log.tsv", sep="\t",
-                                  index=False)
+                                  index=False, lineterminator="\n")
     log(f"wrote {TABLES/'d3_split_invariants.tsv'} ({len(inv_df)} arms)")
 
     write_doc(inv_df)

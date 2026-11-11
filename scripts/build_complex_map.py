@@ -206,7 +206,7 @@ def main() -> int:
     df["source"] = "ComplexPortal (via UniProtKB cross-reference)"
     df["n_members"] = df.groupby("complex_id")["gene"].transform("size")
     out_path = OUT / "complex_map.tsv"
-    df.to_csv(out_path, sep="\t", index=False)
+    df.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
     n_complex = df["complex_id"].nunique()
     n_genes = df["gene"].nunique()
     log(f"wrote {out_path.name}: {n_complex:,} complexes, {n_genes:,} genes")

@@ -126,7 +126,7 @@ def run_one(label_a: str, label_b: str, network: str,
     a_deg_full = float(roc_auc_score(y_full, deg))
 
     out_df = pd.DataFrame(rows)
-    out_df.to_csv(out, sep="\t", index=False)
+    out_df.to_csv(out, sep="\t", index=False, lineterminator="\n")
 
     boot = out_df
     rwr_aurocs = boot[boot.method == "rwr"].auroc.values
@@ -193,7 +193,7 @@ def main(argv: list[str] | None = None) -> int:
         return 1
     table = pd.DataFrame(rows)
     table = table.sort_values("mean_delta_auroc", ascending=False)
-    table.to_csv(args.out_table, sep="\t", index=False, float_format="%.6f")
+    table.to_csv(args.out_table, sep="\t", index=False, float_format="%.6f", lineterminator="\n")
     print(f"Wrote {args.out_table} ({len(table)} rows)")
     return 0
 

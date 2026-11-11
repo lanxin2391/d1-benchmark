@@ -425,10 +425,10 @@ def main():
 
     print("\n--- 1. fine-mode z-score (per-fold paired) ---")
     fz = _fine_z_all(a4_path=a4_path, trace_dir=trace_dir)
-    fz.to_csv(TABLE_DIR / "stats_fine_z.tsv", sep="\t", index=False)
+    fz.to_csv(TABLE_DIR / "stats_fine_z.tsv", sep="\t", index=False, lineterminator="\n")
     fz_summary = _summarize_fine_z(fz)
     fz_summary.to_csv(TABLE_DIR / "stats_fine_z_summary.tsv", sep="\t",
-                        index=False)
+                        index=False, lineterminator="\n")
     print(fz_summary.round(4).to_string(index=False))
 
     if args.only == "fine-z":
@@ -442,17 +442,17 @@ def main():
 
     print("\n--- 2. mixed-effects variance decomposition ---")
     vd = _variance_decomp()
-    vd.to_csv(TABLE_DIR / "stats_variance_decomp.tsv", sep="\t", index=False)
+    vd.to_csv(TABLE_DIR / "stats_variance_decomp.tsv", sep="\t", index=False, lineterminator="\n")
     print(vd.round(6).to_string(index=False))
 
     print("\n--- 3. cluster bootstrap CIs (genes as cluster) ---")
     bc = _bootstrap_all()
-    bc.to_csv(TABLE_DIR / "stats_bootstrap_ci.tsv", sep="\t", index=False)
+    bc.to_csv(TABLE_DIR / "stats_bootstrap_ci.tsv", sep="\t", index=False, lineterminator="\n")
     print(bc.round(4).to_string(index=False))
 
     print("\n--- 4. equivalence tests (TOST, margin=0.05) ---")
     eq = _equivalence_all()
-    eq.to_csv(TABLE_DIR / "stats_equivalence.tsv", sep="\t", index=False)
+    eq.to_csv(TABLE_DIR / "stats_equivalence.tsv", sep="\t", index=False, lineterminator="\n")
     print(eq.round(4).to_string(index=False))
 
 

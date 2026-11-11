@@ -34,7 +34,7 @@ def main():
     res = run_arm(a.network, a.splits, a.network_id, a.label_id, a.universe_id,
                   alphas=tuple(a.alpha))
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
-    res.to_csv(a.out, sep="\t", index=False)
+    res.to_csv(a.out, sep="\t", index=False, lineterminator="\n")
     print(summarize(res).round(4).to_string(index=False))
     print(f"\n{len(res)} rows written to {a.out} in {time.time() - t:.1f} s")
 

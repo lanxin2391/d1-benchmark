@@ -80,7 +80,7 @@ def main():
     pd.DataFrame(
         {"gene": sorted(train_seeds_global), "rank": range(1, len(train_seeds_global) + 1),
          "source": "intogen2024", "release": "minus_temporal_new"}
-    ).to_csv(LABELS_DIR / "intogen2024_minus_temporal.tsv", sep="\t", index=False)
+    ).to_csv(LABELS_DIR / "intogen2024_minus_temporal.tsv", sep="\t", index=False, lineterminator="\n")
     print(f"  wrote {LABELS_DIR / 'intogen2024_minus_temporal.tsv'}")
 
     summary_rows = []
@@ -163,7 +163,7 @@ def main():
         joined["delta_auroc"] = joined["auroc"] - joined["degree_auroc"]
         # Per-arm C5 file
         out_path = RUNS_DIR / f"d09_{net_id}.tsv"
-        joined.to_csv(out_path, sep="\t", index=False)
+        joined.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
 
         # Summary row
         # `n_eff_seed_sets` is the number of DISTINCT training seed sets
@@ -190,7 +190,7 @@ def main():
                       f"across {len(sub)} repeats -- the replication is fake")
 
     summary = pd.DataFrame(summary_rows)
-    summary.to_csv(TABLE_DIR / "d09_table.tsv", sep="\t", index=False)
+    summary.to_csv(TABLE_DIR / "d09_table.tsv", sep="\t", index=False, lineterminator="\n")
     print("\nD-09 Table:")
     pivot = summary.pivot_table(
         index="network", columns="alpha", values="delta_auroc_mean"

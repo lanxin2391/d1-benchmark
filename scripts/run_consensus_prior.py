@@ -276,9 +276,9 @@ def main() -> int:
 
     cons = pd.DataFrame(cons_rows)
     members = pd.DataFrame(member_rows)
-    cons.to_csv(TABLES / "consensus_table.tsv", sep="\t", index=False)
+    cons.to_csv(TABLES / "consensus_table.tsv", sep="\t", index=False, lineterminator="\n")
     members.to_csv(TABLES / "consensus_member_table.tsv", sep="\t",
-                   index=False)
+                   index=False, lineterminator="\n")
 
     # ---- Q1: consensus vs the members --------------------------------
     log("\n=== Q1/Q2/Q3 ===")

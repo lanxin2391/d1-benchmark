@@ -145,7 +145,7 @@ def build_ot_all(target_ids: pd.Series, cancer_ids: set[str], top_n: int = TOP_N
     label = _to_label_table(df, top_n=top_n, label_id="ot_all",
                             release="26.06 (overall)")
     out = PROCESSED / "ot_all.tsv"
-    label.to_csv(out, sep="\t", index=False)
+    label.to_csv(out, sep="\t", index=False, lineterminator="\n")
     print(f"[ot_all] wrote {out.relative_to(REPO_ROOT)} (top {top_n} genes)")
     return out
 
@@ -204,7 +204,7 @@ def build_ot_nolit(target_ids: pd.Series, cancer_ids: set[str],
                              release="26.06 (no-literature harmonic sum)",
                              source_tag="open_targets_26.06_no_lit")
     out = PROCESSED / "ot_nolit.tsv"
-    out_df.to_csv(out, sep="\t", index=False)
+    out_df.to_csv(out, sep="\t", index=False, lineterminator="\n")
     print(f"[ot_nolit] wrote {out.relative_to(REPO_ROOT)} (top {top_n} genes)")
     return out
 

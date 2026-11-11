@@ -26,6 +26,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 RUNS_DIR = REPO_ROOT / "results" / "runs"
 # the 40-repeat primary design (work plan A2) takes precedence
 RUNS_DIR_V40 = REPO_ROOT / "results" / "runs_v40"
+# the 40-repeat ClinGen design (the 5th label)
+RUNS_DIR_V40_CLINGEN = REPO_ROOT / "results" / "runs_v40_clingen"
 TABLES_DIR = REPO_ROOT / "results" / "tables"
 DOCS_DIR = REPO_ROOT / "docs"
 
@@ -41,18 +43,18 @@ ARMS = [(net, lbl) for net in PRIMARY_NETWORKS for lbl in PRIMARY_LABELS]
 
 D09_ARMS = [
     ("funmap", "intogen_temporal_new"),
+    ("rna_coexp", "intogen_temporal_new"),
+    ("string_phys700", "intogen_temporal_new"),
+    ("intact", "intogen_temporal_new"),
     ("string_full700", "intogen_temporal_new"),
+    ("reactome", "intogen_temporal_new"),
 ]
 
 D11_ARMS = [
-    ("funmap", "intogen2024"),
-    ("string_full700", "intogen2024"),
-    ("funmap", "ot_all"),
-    ("string_full700", "ot_all"),
-    ("funmap", "ot_nolit"),
-    ("string_full700", "ot_nolit"),
-    ("funmap", "intogen_temporal_new"),
-    ("string_full700", "intogen_temporal_new"),
+    (net, lab)
+    for net in ["funmap", "rna_coexp", "string_phys700", "intact",
+                "string_full700", "reactome"]
+    for lab in ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
 ]
 
 CLINGEN_ARMS = [
@@ -101,27 +103,72 @@ def load_arm_by_unit(network: str, label: str,
 
 
 def load_arm_d11(network: str, label: str) -> tuple[np.ndarray, np.ndarray]:
-    """Same as load_arm but for the D-11-capped results in results/runs/d11/."""
-    path = RUNS_DIR / "d11" / f"end_to_end_{label}_{network}.tsv"
+    """Same as load_arm but for the D-11-capped results.
+
+    FIX (2026-11-11): the loader used to read
+    ``results/runs/d11/end_to_end_{label}_{network}.tsv``, which is the
+    SUPERSEDED 10-repeat run: the released D-11 design is the 40-repeat
+    one and its per-arm files are
+    ``results/runs/d11_{network}__{label}_cap_{network}.tsv``. The
+    released ``results/tables/d11_table.tsv`` was computed from the new
+    files, so the stats table and the arm table disagreed (4 of 8 arms
+    differed). The loader now reads the same files the arm table was
+    built from.
+    """
+    path = RUNS_DIR / f"d11_{network}__{label}_cap_{network}.tsv"
     df = pd.read_csv(path, sep="\t")
-    pivot = df.pivot_table(index=["repeat", "fold"], columns="method",
-                           values="auroc").reset_index()
+    df = df[(df.method == "degree") | (df.alpha == 0.5)]
+    pivot = (df.pivot_table(index=["repeat", "fold"], values="auroc",
+                            columns="method").reset_index()
+               .dropna(subset=["rwr", "degree"]))
     return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
 
 
 def load_d09(network: str) -> tuple[np.ndarray, np.ndarray]:
-    """Return (rwr, degree) for the temporal-drift arm (100 bootstrap iterations)."""
-    df = pd.read_csv(RUNS_DIR / "d09_temporal.tsv", sep="\t")
-    df = df[df.network == network]
-    rwr = df[df.method == "rwr"].sort_values(by="repeat").auroc.to_numpy()
-    deg = df[df.method == "degree"].sort_values(by="repeat").auroc.to_numpy()
-    assert rwr.size == deg.size
-    return rwr, deg
+    """Return (rwr, degree) for the temporal-drift arm.
+
+    FIX (2026-11-11): the loader used to read
+    ``results/runs/d09_temporal.tsv``, which is the SUPERSEDED design
+    (a 304-gene restricted background, 100 bootstrap draws). The
+    released temporal control is ``results/runs/d09_{network}.tsv``:
+    the full-LCC background, 50 bootstrap training-seed draws, and it
+    is the file the released ``results/tables/d09_table.tsv`` was
+    computed from. Reading the superseded file made the stats table
+    disagree with the arm table for every network.
+    """
+    path = RUNS_DIR / f"d09_{network}.tsv"
+    df = pd.read_csv(path, sep="\t")
+    df = df[(df.method == "degree") | (df.alpha == 0.5)]
+    if "degree_auroc" in df.columns:
+        # the per-network file stores the degree AUROC as a column
+        rwr = df[df.method == "rwr"].sort_values(by="repeat")
+        return rwr.auroc.to_numpy(), rwr.degree_auroc.to_numpy()
+    pivot = (df.pivot_table(index=["repeat"], values="auroc",
+                            columns="method").reset_index()
+               .dropna(subset=["rwr", "degree"]))
+    return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
 
 
 def load_clingen(network: str, label: str = "clingen_label"
                  ) -> tuple[np.ndarray, np.ndarray]:
-    """Return (rwr, degree) for one clingen_label x network arm (n=50 folds)."""
+    """Return (rwr, degree) for one clingen_label x network arm.
+
+    FIX (2026-11-11): the loader read
+    ``results/runs/clingen/end_to_end_{label}_{network}.tsv``, which is the
+    SUPERSEDED 10-repeat run. The released ClinGen design is the
+    40-repeat one (``results/runs_v40_clingen/a4_{network}__{label}.tsv``,
+    built from ``data/processed/splits_v40_clingen/``), and that is the
+    file the released ``results/tables/a4_table1_delta_auroc_v40_clingen.tsv``
+    was computed from.
+    """
+    v40 = RUNS_DIR_V40_CLINGEN / f"a4_{network}__{label}.tsv"
+    if v40.exists():
+        df = pd.read_csv(v40, sep="\t")
+        df = df[(df.method == "degree") | (df.alpha == 0.5)]
+        pivot = (df.pivot_table(index=["repeat", "fold"], values="auroc",
+                                columns="method").reset_index()
+                   .dropna(subset=["rwr", "degree"]))
+        return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
     path = RUNS_DIR / "clingen" / f"end_to_end_{label}_{network}.tsv"
     df = pd.read_csv(path, sep="\t")
     pivot = df.pivot_table(index=["repeat", "fold"], columns="method",
@@ -317,14 +364,14 @@ def main() -> int:
 
     # Persist per-arm tables
     out_tsv = TABLES_DIR / "results_stats.tsv"
-    df.to_csv(out_tsv, sep="\t", index=False, float_format="%.6f")
+    df.to_csv(out_tsv, sep="\t", index=False, float_format="%.6f", lineterminator="\n")
     print(f"Wrote {out_tsv}")
     df_d09.to_csv(TABLES_DIR / "results_stats_d09.tsv", sep="\t",
-                  index=False, float_format="%.6f")
+                  index=False, float_format="%.6f", lineterminator="\n")
     print(f"Wrote {TABLES_DIR / 'results_stats_d09.tsv'}")
     if len(df_d11):
         df_d11.to_csv(TABLES_DIR / "results_stats_d11.tsv", sep="\t",
-                      index=False, float_format="%.6f")
+                      index=False, float_format="%.6f", lineterminator="\n")
         print(f"Wrote {TABLES_DIR / 'results_stats_d11.tsv'}")
 
     # -------- clingen_label arms (5th label, W3) --------
@@ -357,7 +404,7 @@ def main() -> int:
         df_clingen["p_FDR_BH"], df_clingen["reject_H0_at_q_0.05"] = bh_fdr(
             df_clingen["p_one_sided"].tolist())
         df_clingen.to_csv(TABLES_DIR / "results_stats_clingen.tsv", sep="\t",
-                          index=False, float_format="%.6f")
+                          index=False, float_format="%.6f", lineterminator="\n")
         print(f"Wrote {TABLES_DIR / 'results_stats_clingen.tsv'}")
 
     # -------- markdown report --------

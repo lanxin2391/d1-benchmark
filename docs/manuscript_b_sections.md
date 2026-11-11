@@ -194,20 +194,23 @@ or fail to explain any of it; the actual result is intermediate
 
 ### Per-label headline numbers
 
-| label | n_positives | mean ΔAUROC across 6 networks | SD |
+| label | n_positives | mean ΔAUROC across 6 networks | mean SD across the 6 cells |
 |---|---:|---:|---:|
-| intogen2024            | 633 | +0.0817 | 0.030 |
-| intogen_temporal_new   | 152 | +0.0207 | 0.022 |
-| ot_all                 | 600 | +0.0872 | 0.029 |
-| ot_nolit               | 600 | +0.0910 | 0.027 |
-| clingen_label          |  84 | +0.1100 | 0.054 |
+| intogen2024            | 633 | +0.0821 | 0.0155 |
+| intogen_temporal_new   | 152 | +0.0208 | 0.0331 |
+| ot_all                 | 600 | +0.1058 | 0.0168 |
+| ot_nolit               | 600 | +0.1062 | 0.0181 |
+| clingen_label          |  84 | +0.1149 | 0.0466 |
 
-(Meta-mean ΔAUROC across 24 (network × label) cells, α = 0.5.)
+(Mean ΔAUROC across the 6 networks per label, α = 0.5, 40-repeat
+design; source `results/tables/a4_table1_delta_auroc_v40.tsv` and
+`results/tables/a4_table1_delta_auroc_v40_clingen.tsv`.)
 
 All four canonical labels give a positive mean ΔAUROC. The
-optional 5th label (clingen_label) has the largest mean (+0.1100)
+optional 5th label (clingen_label) has the largest mean (+0.1149)
 because its strongest cell — reactome × clingen — is the largest
-single-cell ΔAUROC in the panel (+0.2058, see A's `figure1_data.tsv`).
+single-cell ΔAUROC in the panel (+0.1710, see
+`results/tables/figure1_data.tsv`).
 
 ### ClinGen as 5th label
 
@@ -225,21 +228,55 @@ clinical case reports) rather than *literature* (PubMed counts).
 
 ### Label pair overlap
 
+Recomputed from `data/processed/labels/*.tsv` by
+`scripts/recompute_ground_truth.py`:
+
 | label_a \ label_b | intogen2024 | intogen_temporal_new | ot_all | ot_nolit | clingen_label |
 |---|---:|---:|---:|---:|---:|
-| intogen2024          | 633 | 152 | 261 | 254 | 65 |
-| intogen_temporal_new | 152 | 152 |  74 |  71 |  9 |
-| ot_all               | 261 |  74 | 600 | 600 | 64 |
-| ot_nolit             | 254 |  71 | 600 | 600 | 62 |
-| clingen_label        |  65 |   9 |  64 |  62 | 84 |
+| intogen2024          | 633 | 152 | 205 | 137 | 49 |
+| intogen_temporal_new | 152 | 152 |  24 |  18 |  7 |
+| ot_all               | 205 |  24 | 600 | 430 | 83 |
+| ot_nolit             | 137 |  18 | 430 | 600 | 66 |
+| clingen_label        |  49 |   7 |  83 |  66 | 84 |
 
 (Intersection size = |label_a ∩ label_b|.)
 
-Open Targets labels share most of their top-600 (430 / 600 overlap
-= 72 %), explaining the strong cross-catalogue transfer between
-them. ClinGen is the most disjoint label — its intersection with
-IntOGen (65 / 84) reflects the small label size, not a fundamental
-disagreement.
+Two readings matter for the interpretation of §E. First, the two
+Open Targets label sets share **430 of 600** positives (72 %), so
+`ot_all → ot_nolit` is close to a re-analysis of the same label and
+should not be read as a catalogue-transfer result. Second, the
+`temporal_new` positives are almost disjoint from the Open Targets
+positives (24 of 600 and 18 of 600): the newly discovered drivers are
+precisely the genes that the target–disease aggregation has not yet
+picked up. That asymmetry is the mechanical reason why every
+`temporal_new`-target transfer cell is the weakest in the panel
+(§E, negative cells).
+
+ClinGen is the most disjoint label from IntOGen (49 of 84); with a
+label this small the overlap mostly reflects the size difference, not
+a fundamental disagreement.
+
+### A note on `ot_nolit`
+
+`ot_nolit` is **not** a literature-free label. It is Open Targets
+Platform 26.06 with the score of a single evidence extractor removed —
+the `europepmc` text-mining extractor. The platform's own molecular
+interaction widget re-packages STRING, IntAct, Reactome and SIGNOR,
+and its other evidence channels (genetic association, somatic
+mutation, known drug, expression, animal model) are unaffected by the
+removal. Consequently:
+
+* `ot_all` and `ot_nolit` differ by 170 genes (600 − 430 shared);
+* the two `string_full700` networks still contain the STRING
+  `textmining` channel, which is built from the same PubMed/PMC
+  corpus that `europepmc` mines.
+
+So the difference between the two label sets measures the sensitivity
+of the Open Targets score to **one** text-mining extractor, not the
+contribution of literature as a whole. The paper's H3 narrative is
+therefore stated in terms of Control 7 (the publication-count-matched
+null), which does control literature volume on both sides of the
+comparison, and *not* in terms of `ot_all` versus `ot_nolit`.
 
 ---
 
@@ -248,7 +285,7 @@ disagreement.
 ### Headline table
 
 The 12 ordered label pairs × 6 networks = 72 cells, 66 completed.
-61 cells positive, 5 cells negative. Top cells:
+**59 cells positive, 7 cells negative.** Top cells:
 
 | Pair | Network | mean ΔAUROC | SD | one-sided p |
 |---|---|---:|---:|---:|
@@ -256,34 +293,45 @@ The 12 ordered label pairs × 6 networks = 72 cells, 66 completed.
 | ot_all → ot_nolit         | string_full700  | +0.1108 | 0.0057 | <1e-300 |
 | ot_nolit → ot_all         | string_phys700  | +0.1011 | 0.0076 | <1e-300 |
 | ot_nolit → ot_all         | string_full700  | +0.0815 | 0.0054 | <1e-300 |
-| intogen_temporal_new → intogen2024 | string_phys700 | +0.0765 | 0.0073 | <1e-300 |
 | ot_all → intogen2024      | string_full700  | +0.0769 | 0.0049 | <1e-300 |
+| intogen_temporal_new → intogen2024 | string_phys700 | +0.0765 | 0.0073 | <1e-300 |
 | ot_all → intogen2024      | string_phys700  | +0.0756 | 0.0073 | <1e-300 |
 | ot_nolit → intogen2024    | string_phys700  | +0.0686 | 0.0080 | <1e-300 |
 | intogen_temporal_new → intogen2024 | string_full700 | +0.0599 | 0.0053 | <1e-300 |
 | ot_all → intogen_temporal_new | string_full700  | +0.0580 | 0.0052 | <1e-300 |
+| ot_nolit → ot_all         | reactome        | +0.0560 | 0.0056 | <1e-300 |
 | ot_nolit → intogen2024    | string_full700  | +0.0553 | 0.0052 | <1e-300 |
-| ot_all → ot_nolit         | reactome        | +0.0485 | 0.0078 | <1e-300 |
 
 Full table at `results/tables/results_stats_transfer.tsv` (66 rows).
 
+The two largest cells are the `ot_all → ot_nolit` pair, which is
+**not** a genuine catalogue transfer: the two label sets share 430 of
+600 positives (§D). The strongest *disjoint-catalogue* transfer is
+`intogen_temporal_new → intogen2024` (+0.0765 on string_phys700), and
+`ot_all → intogen2024` (+0.0769 on string_full700).
+
 ### Network comparison
 
-Network ranking by mean ΔAUROC across 12 pairs:
+Network ranking by mean ΔAUROC across 12 pairs (recomputed from
+`results/tables/results_stats_transfer.tsv`):
 
 | Network | mean ΔAUROC across 12 pairs | worst-cell |
 |---|---:|---|
-| **string_phys700** | **+0.0562** | -0.0016 (intogen2024 → intogen_temporal_new) |
-| string_full700     | +0.0457 | -0.0037 (intogen2024 → ot_all) |
-| funmap             | +0.0225 | -0.0024 (intogen_temporal_new → ot_all) |
-| intact             | +0.0187 | -0.0038 (intogen_temporal_new → ot_nolit) |
-| rna_coexp          | +0.0134 | -0.0019 (ot_nolit → intogen2024) |
-| reactome           | +0.0064 | **-0.0232** (ot_all → intogen_temporal_new) |
+| **string_phys700** | **+0.0590** | +0.0210 (intogen_temporal_new → ot_nolit) |
+| string_full700     | +0.0489 | +0.0055 (intogen_temporal_new → ot_nolit) |
+| funmap             | +0.0228 | −0.0024 (intogen_temporal_new → ot_all) |
+| intact             | +0.0218 | −0.0038 (intogen_temporal_new → ot_nolit) |
+| rna_coexp          | +0.0209 | +0.0099 (intogen_temporal_new → ot_nolit) |
+| reactome           | +0.0147 | **−0.0232** (ot_all → intogen_temporal_new) |
 
 STRING phys700 is the strongest transfer network; reactome the
 weakest. This is consistent with §4.4's expectation that "string
 + ot" is the cleanest network × label combination for any
 cross-catalogue question.
+
+Note that only `funmap`, `intact` and `reactome` have a negative
+worst cell; for the other three networks **every** transfer cell is
+positive, including the temporal targets.
 
 ### Cross-catalogue vs within-label
 
@@ -292,32 +340,47 @@ cross-catalogue question.
 | string_full700 ↔ intogen2024 | +0.113 (within) | +0.060 (intogen_temporal_new → intogen2024) |
 | string_full700 ↔ ot_all      | +0.119 (within) | +0.077 (ot_all → intogen2024) |
 
-Cross-catalogue is consistently ~50-70 % of within-label magnitude.
-The network prior carries *partial* catalogue-independent cancer
-signal — not 100 %, not 0 %.
+Averaged over the whole panel, the cross-catalogue endpoint is
+**+0.0313** against a within-label endpoint of **+0.0787** — a
+retention of **39.8 %**. The per-pair ratios span 16 % to 180 % (the
+temporal label is the outlier in both directions: the transfer *into*
+`intogen_temporal_new` is very weak, and the transfer *out of* it is
+comparatively strong).
 
-### Negative cells (5)
+Cross-catalogue transfer retains roughly **40 %** of the within-label
+magnitude, not the 50–70 % of an earlier draft. The network prior
+carries *partial* catalogue-independent cancer signal — not 100 %,
+not 0 %. The floor is set by the `intogen_temporal_new` target, whose
+positives are almost disjoint from the Open Targets catalogues (§D).
+
+### Negative cells (7)
 
 | Pair | Network | mean ΔAUROC | SD |
 |---|---|---:|---:|
-| intogen_temporal_new → ot_all | funmap | -0.0024 | 0.0057 |
-| intogen_temporal_new → ot_all | reactome | **-0.0130** | 0.0056 |
-| intogen_temporal_new → ot_nolit | intact | -0.0038 | 0.0035 |
-| intogen_temporal_new → ot_nolit | reactome | -0.0081 | 0.0061 |
-| ot_all → intogen_temporal_new | reactome | **-0.0232** | 0.0060 |
-| ot_nolit → intogen_temporal_new | reactome | -0.0045 | 0.0065 |
+| ot_all → intogen_temporal_new | reactome | **−0.0232** | 0.0060 |
+| intogen_temporal_new → ot_all | reactome | **−0.0130** | 0.0056 |
+| intogen_temporal_new → ot_nolit | reactome | −0.0081 | 0.0061 |
+| ot_nolit → intogen_temporal_new | reactome | −0.0045 | 0.0065 |
+| intogen_temporal_new → ot_nolit | intact | −0.0038 | 0.0035 |
+| intogen_temporal_new → ot_all | funmap | −0.0024 | 0.0057 |
+| ot_all → intogen_temporal_new | funmap | −0.0016 | 0.0055 |
 
-Two patterns:
+Three patterns:
 1. **Target = intogen_temporal_new** with **seed = ot_all/ot_nolit**:
    the 152 new drivers are a small, recent set; Open Targets'
    general cancer ranking is less informative about this narrow
-   target.
+   target. Four of the seven negative cells are of this type.
 2. **Network = reactome** with any temporal_new source: Reactome's
-   3,553-node LCC is much smaller and gives only 63-77 unique
-   temporal_new seeds.
+   3,953-node LCC is much smaller and gives only 63–77 unique
+   temporal_new seeds. Five of the seven negative cells are Reactome
+   cells.
+3. The remaining two cells are small in magnitude (−0.0024, −0.0016)
+   and sit at the edge of their intervals; they are reported rather
+   than dropped.
 
 Both observations are consistent with the D-09 / D-11 control
-behaviour reported in A's `results_stats.md`.
+behaviour reported in A's `results_stats.md`, and with the coverage
+model of A's §F.10.
 
 ---
 

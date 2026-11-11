@@ -1,0 +1,60 @@
+  [funmap x intogen2024] 22.5s
+  [funmap x ot_all] 22.7s
+  [funmap x ot_nolit] 22.5s
+  [funmap x intogen_temporal_new] 22.7s
+  [rna_coexp x intogen2024] 21.4s
+  [rna_coexp x ot_all] 21.3s
+  [rna_coexp x ot_nolit] 21.4s
+  [rna_coexp x intogen_temporal_new] 22.1s
+  [string_phys700 x intogen2024] 14.9s
+  [string_phys700 x ot_all] 15.1s
+  [string_phys700 x ot_nolit] 15.2s
+  [string_phys700 x intogen_temporal_new] 15.3s
+  [intact x intogen2024] 57.0s
+  [intact x ot_all] 55.2s
+  [intact x ot_nolit] 55.7s
+  [intact x intogen_temporal_new] 57.2s
+  [string_full700 x intogen2024] 31.1s
+  [string_full700 x ot_all] 31.0s
+  [string_full700 x ot_nolit] 30.7s
+  [string_full700 x intogen_temporal_new] 31.7s
+  [reactome x intogen2024] 5.5s
+  [reactome x ot_all] 5.4s
+  [reactome x ot_nolit] 5.5s
+  [reactome x intogen_temporal_new] 5.5s
+
+=== Control 10: does the learner use its input? (Hill et al. 2019) ===
+       network                label  n_persistent_topk_genes__real  n_persistent_topk_genes__random  input_sensitivity_spearman_real_vs_random  input_sensitivity_topk_jaccard_real_vs_random  mean_degree_percentile_of_topk__real  mean_degree_percentile_of_topk__random
+        funmap          intogen2024                            129                              0.0                                     0.5380                                         0.0134                                0.6778                                  0.5521
+        funmap               ot_all                            127                              0.0                                     0.5908                                         0.0109                                0.6776                                  0.5371
+        funmap             ot_nolit                            130                              0.0                                     0.5928                                         0.0117                                0.6666                                  0.5348
+        funmap intogen_temporal_new                            125                              0.0                                     0.6630                                         0.0072                                0.5451                                  0.5009
+     rna_coexp          intogen2024                            126                              0.0                                     0.6001                                         0.0171                                0.7503                                  0.5553
+     rna_coexp               ot_all                            132                              0.0                                     0.5900                                         0.0148                                0.6078                                  0.5525
+     rna_coexp             ot_nolit                            129                              0.0                                     0.5938                                         0.0147                                0.6013                                  0.5488
+     rna_coexp intogen_temporal_new                            124                              0.0                                     0.7009                                         0.0071                                0.5373                                  0.5148
+string_phys700          intogen2024                            125                              1.0                                     0.4661                                         0.0221                                0.8483                                  0.5846
+string_phys700               ot_all                            122                              1.0                                     0.4783                                         0.0175                                0.8389                                  0.5833
+string_phys700             ot_nolit                            116                              1.0                                     0.4841                                         0.0160                                0.8077                                  0.5745
+string_phys700 intogen_temporal_new                            124                              0.0                                     0.5786                                         0.0064                                0.5729                                  0.5071
+        intact          intogen2024                            118                              2.0                                     0.7801                                         0.0225                                0.9496                                  0.8303
+        intact               ot_all                            122                              1.8                                     0.7852                                         0.0207                                0.9317                                  0.8222
+        intact             ot_nolit                            122                              1.4                                     0.7809                                         0.0193                                0.9230                                  0.8229
+        intact intogen_temporal_new                            126                              0.0                                     0.8119                                         0.0044                                0.7115                                  0.5668
+string_full700          intogen2024                            118                              1.0                                     0.5915                                         0.0165                                0.9374                                  0.6191
+string_full700               ot_all                            120                              1.0                                     0.6185                                         0.0139                                0.9345                                  0.6118
+string_full700             ot_nolit                            119                              1.0                                     0.6238                                         0.0129                                0.9139                                  0.6131
+string_full700 intogen_temporal_new                            126                              0.0                                     0.6711                                         0.0045                                0.6684                                  0.5256
+      reactome          intogen2024                            124                              1.0                                     0.4016                                         0.0484                                0.8674                                  0.6577
+      reactome               ot_all                            118                              1.0                                     0.3822                                         0.0471                                0.8903                                  0.6565
+      reactome             ot_nolit                            123                              0.4                                     0.3947                                         0.0401                                0.8663                                  0.6444
+      reactome intogen_temporal_new                            121                              0.0                                     0.5006                                         0.0345                                0.6572                                  0.5966
+
+  Hill degeneracy statistic (genes in the top-100 of >50 % of runs):
+    real input    123.6
+    random input  0.6   (Hill et al.: ToppNet-HITS 239, SigNet 200, Random Walk 4, Network Propagation 0)
+  INPUT SENSITIVITY (Spearman between the real-input and the random-input ranking of the same fold):
+    0.5924   (1.0 would mean the input is ignored)
+  INPUT SENSITIVITY (top-100 Jaccard):
+    0.0185
+  mean degree percentile of the top-100: real 0.7659  random 0.6047

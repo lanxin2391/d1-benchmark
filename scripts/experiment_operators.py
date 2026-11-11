@@ -190,7 +190,7 @@ def main(argv=None):
             print(df.pivot_table(index="method", columns="lam", values="auroc")
                   .round(4).to_string())
     pd.concat(out, ignore_index=True).to_csv(
-        REPO_ROOT / "scratch" / "experiment_operators.tsv", sep="\t", index=False)
+        REPO_ROOT / "scratch" / "experiment_operators.tsv", sep="\t", index=False, lineterminator="\n")
     return 0
 
 

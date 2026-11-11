@@ -44,7 +44,7 @@ def main():
         splits = make_toy_splits(genes, pos & set(genes))
         os.makedirs(os.path.join(OUT, "splits"), exist_ok=True)
         split_path = os.path.join(OUT, "splits", f"toy__native_{net_id}.tsv")
-        splits.to_csv(split_path, sep="\t", index=False)
+        splits.to_csv(split_path, sep="\t", index=False, lineterminator="\n")
 
         res = run_arm(net_path, split_path, net_id, "toy_labels", f"native_{net_id}",
                       alphas=(0.3, 0.5, 0.7))
@@ -53,9 +53,9 @@ def main():
               f"{len(pos)} positives")
 
     res = pd.concat(all_res, ignore_index=True)
-    res.to_csv(os.path.join(OUT, "toy_runs.tsv"), sep="\t", index=False)
+    res.to_csv(os.path.join(OUT, "toy_runs.tsv"), sep="\t", index=False, lineterminator="\n")
     summ = summarize(res)
-    summ.to_csv(os.path.join(OUT, "toy_summary.tsv"), sep="\t", index=False)
+    summ.to_csv(os.path.join(OUT, "toy_summary.tsv"), sep="\t", index=False, lineterminator="\n")
 
     pd.set_option("display.width", 160)
     print("\nMean over 5 folds x 10 repeats:")

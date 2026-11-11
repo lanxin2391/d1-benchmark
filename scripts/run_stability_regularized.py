@@ -509,11 +509,11 @@ def main(argv: list[str] | None = None) -> int:
     sel = pd.concat(sel_all, ignore_index=True)
     sfx = args.out_suffix
 
-    grid.to_csv(TABLE_DIR / f"stability_regularization_grid{sfx}.tsv", sep="\t", index=False)
-    genes_df.to_csv(TABLE_DIR / f"stability_per_gene{sfx}.tsv", sep="\t", index=False)
-    arms.to_csv(TABLE_DIR / f"stability_by_arm{sfx}.tsv", sep="\t", index=False)
-    c3.to_csv(TABLE_DIR / f"stability_control_c3_flattening{sfx}.tsv", sep="\t", index=False)
-    sel.to_csv(TABLE_DIR / f"stability_selected_scorer{sfx}.tsv", sep="\t", index=False)
+    grid.to_csv(TABLE_DIR / f"stability_regularization_grid{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
+    genes_df.to_csv(TABLE_DIR / f"stability_per_gene{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
+    arms.to_csv(TABLE_DIR / f"stability_by_arm{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
+    c3.to_csv(TABLE_DIR / f"stability_control_c3_flattening{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
+    sel.to_csv(TABLE_DIR / f"stability_selected_scorer{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
     print(f"\ngrid rows: {len(grid):,}  gene rows: {len(genes_df):,}  arms: {len(arms)} "
           f"selected: {len(sel)}")
     return 0

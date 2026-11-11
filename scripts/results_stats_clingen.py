@@ -72,7 +72,7 @@ def main() -> int:
     df["p_FDR_BH"], df["reject_H0_at_q_0.05"] = bh_fdr(df["p_one_sided"].tolist())
 
     out_tsv = TABLES_DIR / "results_stats_clingen.tsv"
-    df.to_csv(out_tsv, sep="\t", index=False, float_format="%.6f")
+    df.to_csv(out_tsv, sep="\t", index=False, float_format="%.6f", lineterminator="\n")
     print(f"Wrote {out_tsv}")
 
     # Console summary

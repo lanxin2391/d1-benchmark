@@ -354,7 +354,7 @@ def main():
     ap.add_argument("--aggregate-only", action="store_true",
                     help="skip the simulation and rebuild the null "
                          "distribution tables from the per-arm trace files "
-                         "already on disk (results/runs/a5/a5/)")
+                         "already on disk (results/runs/a5/)")
     ap.add_argument("--force", action="store_true",
                     help="recompute arms even if a checkpoint exists")
     args = ap.parse_args()
@@ -376,7 +376,17 @@ def main():
     # Parallel call returned, so a multi-hour run gave no visibility into
     # progress and a crash lost everything. Each arm now writes its
     # per-resample trace as soon as it finishes, and the driver logs it.
-    trace_dir = RUNS_DIR / "a5"
+    #
+    # FIX (2026-11-11): the trace directory was `results/runs/a5/a5/`, a
+    # subdirectory that `.gitignore` excludes, while the RELEASED trace
+    # files live one level up at `results/runs/a5/`. A re-run therefore
+    # wrote its checkpoints into a directory nobody reads, and
+    # `scripts/verify_a5_fix.py` -- which reads the released location --
+    # could not find them, so the verification script failed on a clean
+    # clone. The trace directory is now the released location itself, so
+    # a re-run overwrites the released artefact in place and the verifier
+    # finds it.
+    trace_dir = RUNS_DIR
     trace_dir.mkdir(parents=True, exist_ok=True)
     done_files = {}
     pending = []
@@ -393,7 +403,7 @@ def main():
         all_df, mean_resamples = _run_one_arm(net, lab, args.n_resamples)
         safe = lab.replace("/", "_")
         fp = trace_dir / f"{net}__{safe}__seed_resamples.tsv"
-        all_df.to_csv(fp, sep="\t", index=False)
+        all_df.to_csv(fp, sep="\t", index=False, lineterminator="\n")
         _log(f"  [{net} x {lab}] done in {(time.time()-t0)/60:.1f} min "
              f"-> {fp.name}")
         return (net, lab), (all_df, mean_resamples)
@@ -476,15 +486,15 @@ def main():
             "z_score": z, "p_one_sided_observed_gt_null": p_one,
         })
         trace_path = RUNS_DIR / f"{net}__{lab}__seed_resamples.tsv"
-        all_df.to_csv(trace_path, sep="\t", index=False)
+        all_df.to_csv(trace_path, sep="\t", index=False, lineterminator="\n")
         _log(f"  [{net} x {lab}] n_resamples={len(mean_resamples)}  "
              f"null={null_mean:+.4f}  obs={obs_delta:+.4f}  z={z:+.1f}  p={p_one:.4f}")
 
     null_df = pd.DataFrame(null_summary)
     p_df = pd.DataFrame(p_summary)
     null_df.to_csv(TABLE_DIR / "a5_null_distribution.tsv", sep="\t",
-                   index=False)
-    p_df.to_csv(TABLE_DIR / "a5_p_values.tsv", sep="\t", index=False)
+                   index=False, lineterminator="\n")
+    p_df.to_csv(TABLE_DIR / "a5_p_values.tsv", sep="\t", index=False, lineterminator="\n")
 
     _log(f"all {len(cells)} cells done in {(time.time()-t_overall)/60:.1f} min")
     print("\nNull distribution summary:")

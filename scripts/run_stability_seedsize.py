@@ -137,7 +137,7 @@ def main(argv=None):
     path = Path(args.out) if args.out else (REPO_ROOT / "results" / "tables" /
                                             "stability_seed_size_scaling.tsv")
     path.parent.mkdir(parents=True, exist_ok=True)
-    res.to_csv(path, sep="\t", index=False)
+    res.to_csv(path, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {path}")
     return 0
 

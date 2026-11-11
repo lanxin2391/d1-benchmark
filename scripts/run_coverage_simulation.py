@@ -291,7 +291,7 @@ def main() -> int:
             "effective_independent_units": n_rep,
         })
     rho_df = pd.DataFrame(rho_rows)
-    rho_df.to_csv(TABLES / f"stats_intra_repeat_rho{args.tag}.tsv", sep="\t", index=False)
+    rho_df.to_csv(TABLES / f"stats_intra_repeat_rho{args.tag}.tsv", sep="\t", index=False, lineterminator="\n")
 
     print("=== intra-repeat dependence ===")
     print(f"  ratio (indep-expected / observed) : median "
@@ -346,7 +346,7 @@ def main() -> int:
         print(f"  [{nw} x {lb}] done")
 
     cov_df = pd.DataFrame(cov_rows)
-    cov_df.to_csv(TABLES / f"stats_coverage_simulation{args.tag}.tsv", sep="\t", index=False)
+    cov_df.to_csv(TABLES / f"stats_coverage_simulation{args.tag}.tsv", sep="\t", index=False, lineterminator="\n")
 
     print("\n=== coverage of nominal 95% CI ===")
     for sim in cov_df.simulator.unique():
@@ -373,7 +373,7 @@ def main() -> int:
                   "standard DE formula is not meaningful for negative ICC; "
                   "the correct independent resampling unit is the REPEAT "
                   "(10 of them), which is what the corrected CI uses.")
-    de.to_csv(TABLES / f"stats_resampling_unit_design_effect{args.tag}.tsv", sep="\t", index=False)
+    de.to_csv(TABLES / f"stats_resampling_unit_design_effect{args.tag}.tsv", sep="\t", index=False, lineterminator="\n")
 
     # ---------------- 4. doc ----------------
     med_ratio = rho_df.ratio_indep_expected_over_observed.median()

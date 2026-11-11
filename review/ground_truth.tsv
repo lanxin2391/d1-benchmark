@@ -1,0 +1,226 @@
+quantity	scope	value	source	note
+cv_design	primary factorial	40 repeats x 5 folds	results/runs_v40/a4_combined.tsv	
+cv_design	folds per arm	200	results/runs_v40/a4_combined.tsv	one alpha; the released design has 40 repeats, not the 10 of the pre-registration
+delta_auroc	funmap x intogen2024	0.1001	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	funmap x intogen_temporal_new	0.0196	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	funmap x ot_all	0.0853	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	funmap x ot_nolit	0.078	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	intact x intogen2024	0.0651	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	intact x intogen_temporal_new	0.0071	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	intact x ot_all	0.0842	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	intact x ot_nolit	0.0784	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	reactome x intogen2024	0.0429	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	reactome x intogen_temporal_new	-0.0125	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	reactome x ot_all	0.1103	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	reactome x ot_nolit	0.0996	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	rna_coexp x intogen2024	0.0521	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	rna_coexp x intogen_temporal_new	0.0127	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	rna_coexp x ot_all	0.0767	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	rna_coexp x ot_nolit	0.0834	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_full700 x intogen2024	0.1133	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_full700 x intogen_temporal_new	0.0604	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_full700 x ot_all	0.1201	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_full700 x ot_nolit	0.1267	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_phys700 x intogen2024	0.1189	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_phys700 x intogen_temporal_new	0.0378	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_phys700 x ot_all	0.1582	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	string_phys700 x ot_nolit	0.1711	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	panel range (min)	-0.0125	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	panel range (max)	0.1711	a4_table1_delta_auroc_v40.tsv	
+delta_auroc	n negative cells	1	a4_table1_delta_auroc_v40.tsv	reactome x intogen_temporal_new
+delta_auroc	n positive cells	23	a4_table1_delta_auroc_v40.tsv	
+delta_auroc_alpha	alpha=0.3 panel mean	0.072933	a4_table1_delta_auroc_v40.tsv	
+delta_auroc_alpha	alpha=0.7 panel mean	0.080483	a4_table1_delta_auroc_v40.tsv	
+n_primary_cells	results_stats.tsv	24	results_stats.tsv	
+BH_FDR	cells rejecting at q<0.05 (fold unit)	23	results_stats.tsv	
+BH_FDR	cells rejecting at q<0.05 (repeat unit)	23	results_stats.tsv	
+BH_FDR	failing cell(s)	reactome x intogen_temporal_new	results_stats.tsv	
+variance_fraction_between_arm	network (between)	0.248192	stats_variance_decomp.tsv	
+variance_fraction_total	network (between)	0.148445	stats_variance_decomp.tsv	
+variance_fraction_between_arm	label (between)	0.34778	stats_variance_decomp.tsv	
+variance_fraction_total	label (between)	0.208008	stats_variance_decomp.tsv	
+variance_fraction_between_arm	network x label (interaction)	0.400651	stats_variance_decomp.tsv	
+variance_fraction_total	network x label (interaction)	0.23963	stats_variance_decomp.tsv	
+variance_fraction_between_arm	fold (within cell)	0.003377	stats_variance_decomp.tsv	
+variance_fraction_total	fold (within cell)	0.403917	stats_variance_decomp.tsv	
+H1_CI_excludes_zero	fold_pct unit	24/24	stats_bootstrap_ci.tsv	
+H1_CI_excludes_zero	repeat_pct unit	24/24	stats_bootstrap_ci.tsv	
+H1_CI_excludes_zero	repeat_t unit	24/24	stats_bootstrap_ci.tsv	
+H1_CI_excludes_zero	repeat_bca unit	24/24	stats_bootstrap_ci.tsv	
+H1_CI_excludes_zero	gene unit	20/24	stats_bootstrap_ci.tsv	funmap x intogen_temporal_new; intact x intogen_temporal_new; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new
+negative_cell_CI	reactome x intogen_temporal_new (fold_pct)	[-0.019519, -0.005442]	stats_bootstrap_ci.tsv	excludes zero: True
+negative_cell_CI	reactome x intogen_temporal_new (repeat_pct)	[-0.01531, -0.009604]	stats_bootstrap_ci.tsv	excludes zero: True
+negative_cell_CI	reactome x intogen_temporal_new (gene)	[-0.0589, 0.037459]	stats_bootstrap_ci.tsv	excludes zero: False
+TOST	cells equivalent to zero	6	stats_equivalence.tsv	funmap x intogen_temporal_new; intact x intogen_temporal_new; reactome x intogen2024; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new; string_phys700 x intogen_temporal_new
+TOST	cells not equivalent to zero	18	stats_equivalence.tsv	
+H1_rule	fold_pct	24/24	stats_h1_verdict_v40.tsv	rule met
+H1_rule	repeat_pct	24/24	stats_h1_verdict_v40.tsv	rule met
+H1_rule	repeat_t	24/24	stats_h1_verdict_v40.tsv	rule met
+H1_rule	repeat_bca	24/24	stats_h1_verdict_v40.tsv	rule met
+H1_rule	gene	20/24	stats_h1_verdict_v40.tsv	NOT met: funmap x intogen_temporal_new; intact x intogen_temporal_new; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new
+control2_degree_matched_seed_null	z range	3.0893 to 226.9074	a5_p_values.tsv	
+control2_degree_matched_seed_null	n cells with z>5	23	a5_p_values.tsv	
+control2_degree_matched_seed_null	n null means <= 0	23	a5_p_values.tsv	
+control2_degree_matched_seed_null	null mean range	-0.0517 to 0.005	a5_p_values.tsv	
+control3_rewiring_null	z range	-3.529 to 205.2488	w5_p_values.tsv	
+control3_rewiring_null	n cells with z>5	23	w5_p_values.tsv	
+control3_rewiring_null	n cells with z<=5	1	w5_p_values.tsv	
+control3_rewiring_null	funmap: n rewirings	100	w5_p_values.tsv	
+control3_rewiring_null	intact: n rewirings	100	w5_p_values.tsv	
+control3_rewiring_null	reactome: n rewirings	98	w5_p_values.tsv	
+control3_rewiring_null	rna_coexp: n rewirings	100	w5_p_values.tsv	
+control3_rewiring_null	string_full700: n rewirings	100	w5_p_values.tsv	
+control3_rewiring_null	string_phys700: n rewirings	100	w5_p_values.tsv	
+control3_rewiring_null	total rewired-network runs	2392	w5_p_values.tsv	
+control4_shared_universe	shared genes	1605	d12_table.tsv	
+control4_shared_universe	n_test	321	d12_table.tsv	
+control4_shared_universe	delta range	-0.036 to 0.1304	d12_table.tsv	
+control4_shared_universe	n positive cells	22	d12_table.tsv	
+control5_cross_catalogue	n transfer cells	66	results_stats_transfer.tsv	
+control5_cross_catalogue	n positive cells	59	results_stats_transfer.tsv	
+control5_cross_catalogue	n negative cells	7	results_stats_transfer.tsv	funmap ot_all->intogen_temporal_new; funmap intogen_temporal_new->ot_all; intact intogen_temporal_new->ot_nolit; reactome ot_nolit->intogen_temporal_new; reactome intogen_temporal_new->ot_nolit; reactome intogen_temporal_new->ot_all; reactome ot_all->intogen_temporal_new
+control5_cross_catalogue	mean delta	0.0313	results_stats_transfer.tsv	
+control6_temporal_split	delta range	-0.0095 to 0.0923	d09_table.tsv	
+control6_temporal_split	n positive cells	5	d09_table.tsv	
+control6_temporal_split	n effective seed sets (min)	50	d09_table.tsv	
+control6_temporal_split	funmap delta	0.024724	d09_table.tsv	
+control6_temporal_split	rna_coexp delta	0.038202	d09_table.tsv	
+control6_temporal_split	string_phys700 delta	0.076152	d09_table.tsv	
+control6_temporal_split	intact delta	0.030176	d09_table.tsv	
+control6_temporal_split	string_full700 delta	0.092285	d09_table.tsv	
+control6_temporal_split	reactome delta	-0.009506	d09_table.tsv	
+control_d11_cap	N per network	funmap=104; funmap=104; funmap=104; funmap=104; rna_coexp=89; rna_coexp=89; rna_coexp=89; rna_coexp=89; string_phys700=116; string_phys700=116; string_phys700=116; string_phys700=116; intact=150; intact=150; intact=150; intact=150; string_full700=145; string_full700=145; string_full700=145; string_full700=145; reactome=63; reactome=63; reactome=63; reactome=63	d11_table.tsv	
+control7_publication_count	n cells	30	control7_matched_null.tsv	
+control7_publication_count	n labels	5	control7_matched_null.tsv	
+control7_publication_count	mean matched-minus-standard	0.001	control7_matched_null.tsv	
+control_complex_aware_cv	median |relative change|	0.1423	d4_v1_vs_v2_comparison.tsv	
+control_complex_aware_cv	n sign flips	0	d4_v1_vs_v2_comparison.tsv	
+control8_seed_degree	mean low	0.0527	control8_seed_degree_summary.tsv	
+control8_seed_degree	n positive low	22	control8_seed_degree_summary.tsv	
+control8_seed_degree	mean mid	0.0609	control8_seed_degree_summary.tsv	
+control8_seed_degree	n positive mid	24	control8_seed_degree_summary.tsv	
+control8_seed_degree	mean high	0.0537	control8_seed_degree_summary.tsv	
+control8_seed_degree	n positive high	23	control8_seed_degree_summary.tsv	
+control8_seed_degree	mean high-minus-low	0.001	control8_seed_degree_summary.tsv	
+control9_size	log10_edges coef	-0.0393	control9_size_model.tsv	
+control9_size	log10_edges p	0.0129	control9_size_model.tsv	
+control9_size	log10_edges partial R2	0.2973	control9_size_model.tsv	
+control9_size	coverage coef	0.1449	control9_size_model.tsv	
+control9_size	coverage p	0.000864	control9_size_model.tsv	
+control9_size	coverage partial R2	0.469	control9_size_model.tsv	
+control9_size	pooled Spearman rho	-0.0211	control9_size_adjustment.tsv	
+control9_size	permutation p	0.93	control9_size_adjustment.tsv	
+control9_size	adjusted positive cells	23	control9_size_adjustment.tsv	
+control9_size	raw positive cells	23	control9_size_adjustment.tsv	
+control9_size	sign preserved	22	control9_size_adjustment.tsv	
+control9_size	mean abs residual	0.0168	control9_size_adjustment.tsv	
+control10_random_input	persistent genes, real input	123.5833	control10_random_input_summary.tsv	
+control10_random_input	persistent genes, random input	0.5667	control10_random_input_summary.tsv	
+control10_random_input	degree percentile, real	0.7659	control10_random_input_summary.tsv	
+control10_random_input	degree percentile, random	0.6047	control10_random_input_summary.tsv	
+control10_random_input	hub overlap, real	0.1087	control10_random_input_summary.tsv	
+control10_random_input	hub overlap, random	0.0448	control10_random_input_summary.tsv	
+control10_random_input	input sensitivity Spearman	0.5924	control10_random_input_summary.tsv	
+control10_random_input	input sensitivity Jaccard	0.0185	control10_random_input_summary.tsv	
+provenance_eta2	intogen2024	0.210672	provenance_summary.tsv	
+provenance_kruskal_p	intogen2024	0.501337	provenance_summary.tsv	
+provenance_eta2	intogen_temporal_new	0.022916	provenance_summary.tsv	
+provenance_kruskal_p	intogen_temporal_new	0.953497	provenance_summary.tsv	
+provenance_eta2	ot_all	0.179962	provenance_summary.tsv	
+provenance_kruskal_p	ot_all	0.304076	provenance_summary.tsv	
+provenance_eta2	ot_nolit	0.076395	provenance_summary.tsv	
+provenance_kruskal_p	ot_nolit	0.651439	provenance_summary.tsv	
+gnn_arm	n cells	24	gnn_courtesy_arm.tsv	
+gnn_arm	mean GNN delta	0.0282	gnn_courtesy_arm.tsv	
+gnn_arm	n GNN cells positive	19	gnn_courtesy_arm.tsv	
+gnn_arm	mean RWR delta (same 24 cells)	0.0787	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	funmap x intogen2024: GNN delta	0.148028	gnn_courtesy_arm.tsv	
+gnn_arm	funmap x intogen2024: RWR delta	0.1001	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	funmap x intogen_temporal_new: GNN delta	0.02584	gnn_courtesy_arm.tsv	
+gnn_arm	funmap x intogen_temporal_new: RWR delta	0.0196	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	funmap x ot_all: GNN delta	0.052139	gnn_courtesy_arm.tsv	
+gnn_arm	funmap x ot_all: RWR delta	0.0853	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	funmap x ot_nolit: GNN delta	0.032785	gnn_courtesy_arm.tsv	
+gnn_arm	funmap x ot_nolit: RWR delta	0.078	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	intact x intogen2024: GNN delta	0.076698	gnn_courtesy_arm.tsv	
+gnn_arm	intact x intogen2024: RWR delta	0.0651	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	intact x intogen_temporal_new: GNN delta	0.003174	gnn_courtesy_arm.tsv	
+gnn_arm	intact x intogen_temporal_new: RWR delta	0.0071	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	intact x ot_all: GNN delta	0.050379	gnn_courtesy_arm.tsv	
+gnn_arm	intact x ot_all: RWR delta	0.0842	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	intact x ot_nolit: GNN delta	0.061814	gnn_courtesy_arm.tsv	
+gnn_arm	intact x ot_nolit: RWR delta	0.0784	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	reactome x intogen2024: GNN delta	-0.049719	gnn_courtesy_arm.tsv	
+gnn_arm	reactome x intogen2024: RWR delta	0.0429	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	reactome x intogen_temporal_new: GNN delta	-0.092198	gnn_courtesy_arm.tsv	
+gnn_arm	reactome x intogen_temporal_new: RWR delta	-0.0125	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	reactome x ot_all: GNN delta	-0.005912	gnn_courtesy_arm.tsv	
+gnn_arm	reactome x ot_all: RWR delta	0.1103	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	reactome x ot_nolit: GNN delta	0.006478	gnn_courtesy_arm.tsv	
+gnn_arm	reactome x ot_nolit: RWR delta	0.0996	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	rna_coexp x intogen2024: GNN delta	0.062964	gnn_courtesy_arm.tsv	
+gnn_arm	rna_coexp x intogen2024: RWR delta	0.0521	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	rna_coexp x intogen_temporal_new: GNN delta	-0.023036	gnn_courtesy_arm.tsv	
+gnn_arm	rna_coexp x intogen_temporal_new: RWR delta	0.0127	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	rna_coexp x ot_all: GNN delta	0.015364	gnn_courtesy_arm.tsv	
+gnn_arm	rna_coexp x ot_all: RWR delta	0.0767	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	rna_coexp x ot_nolit: GNN delta	0.010774	gnn_courtesy_arm.tsv	
+gnn_arm	rna_coexp x ot_nolit: RWR delta	0.0834	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_full700 x intogen2024: GNN delta	0.108378	gnn_courtesy_arm.tsv	
+gnn_arm	string_full700 x intogen2024: RWR delta	0.1133	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_full700 x intogen_temporal_new: GNN delta	0.061689	gnn_courtesy_arm.tsv	
+gnn_arm	string_full700 x intogen_temporal_new: RWR delta	0.0604	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_full700 x ot_all: GNN delta	0.030807	gnn_courtesy_arm.tsv	
+gnn_arm	string_full700 x ot_all: RWR delta	0.1201	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_full700 x ot_nolit: GNN delta	0.025819	gnn_courtesy_arm.tsv	
+gnn_arm	string_full700 x ot_nolit: RWR delta	0.1267	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_phys700 x intogen2024: GNN delta	0.084689	gnn_courtesy_arm.tsv	
+gnn_arm	string_phys700 x intogen2024: RWR delta	0.1189	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_phys700 x intogen_temporal_new: GNN delta	-0.066161	gnn_courtesy_arm.tsv	
+gnn_arm	string_phys700 x intogen_temporal_new: RWR delta	0.0378	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_phys700 x ot_all: GNN delta	0.032052	gnn_courtesy_arm.tsv	
+gnn_arm	string_phys700 x ot_all: RWR delta	0.1582	a4_table1_delta_auroc_v40.tsv	
+gnn_arm	string_phys700 x ot_nolit: GNN delta	0.024381	gnn_courtesy_arm.tsv	
+gnn_arm	string_phys700 x ot_nolit: RWR delta	0.1711	a4_table1_delta_auroc_v40.tsv	
+network_nodes	funmap	10525	data/processed/networks/funmap.meta.json	nodes before the LCC restriction
+network_lcc_nodes	funmap	10189	data/processed/networks/funmap.meta.json	
+network_lcc_edges	funmap	196605	data/processed/networks/funmap.meta.json	
+network_nodes	intact	17918	data/processed/networks/intact.meta.json	nodes before the LCC restriction
+network_lcc_nodes	intact	17918	data/processed/networks/intact.meta.json	
+network_lcc_edges	intact	564706	data/processed/networks/intact.meta.json	
+network_nodes	intact_miscore045	14902	data/processed/networks/intact_miscore045.meta.json	nodes before the LCC restriction
+network_lcc_nodes	intact_miscore045	14851	data/processed/networks/intact_miscore045.meta.json	
+network_lcc_edges	intact_miscore045	126992	data/processed/networks/intact_miscore045.meta.json	
+network_nodes	reactome	4993	data/processed/networks/reactome.meta.json	nodes before the LCC restriction
+network_lcc_nodes	reactome	3953	data/processed/networks/reactome.meta.json	
+network_lcc_edges	reactome	20143	data/processed/networks/reactome.meta.json	
+network_nodes	rna_coexp	9928	data/processed/networks/rna_coexp.meta.json	nodes before the LCC restriction
+network_lcc_nodes	rna_coexp	9152	data/processed/networks/rna_coexp.meta.json	
+network_lcc_edges	rna_coexp	196172	data/processed/networks/rna_coexp.meta.json	
+network_nodes	string_full400	19488	data/processed/networks/string_full400.meta.json	nodes before the LCC restriction
+network_lcc_nodes	string_full400	19486	data/processed/networks/string_full400.meta.json	
+network_lcc_edges	string_full400	929471	data/processed/networks/string_full400.meta.json	
+network_nodes	string_full700	16201	data/processed/networks/string_full700.meta.json	nodes before the LCC restriction
+network_lcc_nodes	string_full700	15882	data/processed/networks/string_full700.meta.json	
+network_lcc_edges	string_full700	236712	data/processed/networks/string_full700.meta.json	
+network_nodes	string_full900	12323	data/processed/networks/string_full900.meta.json	nodes before the LCC restriction
+network_lcc_nodes	string_full900	11693	data/processed/networks/string_full900.meta.json	
+network_lcc_edges	string_full900	100383	data/processed/networks/string_full900.meta.json	
+network_nodes	string_phys700	10746	data/processed/networks/string_phys700.meta.json	nodes before the LCC restriction
+network_lcc_nodes	string_phys700	9830	data/processed/networks/string_phys700.meta.json	
+network_lcc_edges	string_phys700	85576	data/processed/networks/string_phys700.meta.json	
+label_positives	intogen2024	633	data/processed/labels/intogen2024.tsv	
+label_positives	ot_all	600	data/processed/labels/ot_all.tsv	
+label_positives	ot_nolit	600	data/processed/labels/ot_nolit.tsv	
+label_positives	intogen_temporal_new	152	data/processed/labels/intogen_temporal_new.tsv	
+label_positives	clingen_label	84	data/processed/labels/clingen_label.tsv	
+label_overlap	intogen2024 x ot_all	205	data/processed/labels/*.tsv	
+label_overlap	intogen2024 x ot_nolit	137	data/processed/labels/*.tsv	
+label_overlap	intogen2024 x intogen_temporal_new	152	data/processed/labels/*.tsv	
+label_overlap	ot_all x ot_nolit	430	data/processed/labels/*.tsv	
+label_overlap	intogen_temporal_new x ot_all	24	data/processed/labels/*.tsv	
+label_overlap	intogen_temporal_new x ot_nolit	18	data/processed/labels/*.tsv	
+label_overlap	clingen_label x intogen2024	49	data/processed/labels/*.tsv	
+label_overlap	clingen_label x ot_all	83	data/processed/labels/*.tsv	
+label_overlap	clingen_label x ot_nolit	66	data/processed/labels/*.tsv	
+label_overlap	clingen_label x intogen_temporal_new	7	data/processed/labels/*.tsv	

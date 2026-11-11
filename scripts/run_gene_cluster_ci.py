@@ -80,7 +80,7 @@ def main(argv: list[str] | None = None) -> int:
 
     out = pd.DataFrame(rows).sort_values(["network", "label"])
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-    out.to_csv(args.out, sep="\t", index=False)
+    out.to_csv(args.out, sep="\t", index=False, lineterminator="\n")
     n_ok = int(out.excl0.sum())
     print()
     print(f"gene-cluster CI: {n_ok}/{len(out)} arms whose CI excludes 0")

@@ -106,7 +106,7 @@ def main(argv: list[str] | None = None) -> int:
             })
     overlap_df = pd.DataFrame(rows)
     out_csv = RESULTS_DIR / "label_network_overlap.tsv"
-    overlap_df.to_csv(out_csv, sep="\t", index=False)
+    overlap_df.to_csv(out_csv, sep="\t", index=False, lineterminator="\n")
     print(f"Wrote {out_csv}")
 
     # common-size cap using the shared universe, if available
@@ -127,7 +127,7 @@ def main(argv: list[str] | None = None) -> int:
             df_capped = df_full[df_full.gene.isin(head_set)].copy()
             df_capped["rank"] = range(1, len(df_capped) + 1)
             out = LABELS_DIR / f"{lid}.capped.tsv"
-            df_capped[["gene", "rank", "source", "release"]].to_csv(out, sep="\t", index=False)
+            df_capped[["gene", "rank", "source", "release"]].to_csv(out, sep="\t", index=False, lineterminator="\n")
             print(f"  {lid:25s} -> {out.relative_to(REPO_ROOT)} ({len(df_capped)} genes)")
     else:
         print("\nNo universe_shared.txt yet; overlap table written without capping.")

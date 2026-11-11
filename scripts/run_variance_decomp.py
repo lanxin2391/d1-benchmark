@@ -224,7 +224,7 @@ def main() -> int:
         })
     df_out = pd.DataFrame(rows)
     OUT_TABLE.parent.mkdir(parents=True, exist_ok=True)
-    df_out.to_csv(OUT_TABLE, sep="\t", index=False)
+    df_out.to_csv(OUT_TABLE, sep="\t", index=False, lineterminator="\n")
     print(f"\nwrote {OUT_TABLE}")
 
     pd.DataFrame([{
@@ -239,7 +239,7 @@ def main() -> int:
         "F_label": v["F_label"], "p_label": v["p_label"],
         "F_interaction": v["F_interaction"], "p_interaction": v["p_interaction"],
         "df_within": v["df_within"],
-    }]).to_csv(OUT_COMP, sep="\t", index=False)
+    }]).to_csv(OUT_COMP, sep="\t", index=False, lineterminator="\n")
     print(f"wrote {OUT_COMP}")
 
     # ---- write the doc ----

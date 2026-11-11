@@ -171,7 +171,7 @@ def main() -> int:
                                       "lo": "ci95_low",
                                       "hi": "ci95_high",
                                       "p": "p_one_sided"})
-    fig_data.to_csv(TABLES / "figure1_data.tsv", sep="\t", index=False)
+    fig_data.to_csv(TABLES / "figure1_data.tsv", sep="\t", index=False, lineterminator="\n")
     print(f"Saved {TABLES / 'figure1_data.tsv'}")
     return 0
 

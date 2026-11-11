@@ -185,7 +185,7 @@ def main() -> int:
         log(f"  {net} done")
 
     df = pd.DataFrame(rows)
-    df.to_csv(TABLES / "hub_capped_rwr.tsv", sep="\t", index=False)
+    df.to_csv(TABLES / "hub_capped_rwr.tsv", sep="\t", index=False, lineterminator="\n")
     log(f"wrote hub_capped_rwr.tsv ({len(df)} rows)")
 
     write_doc(df)

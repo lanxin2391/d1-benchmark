@@ -749,6 +749,10 @@ pre-registration (DOI 10.5281/zenodo.23121762) is unchanged.
 | 12 | the ClinGen arm and the transfer arms | exploratory | no | `stability_by_arm_clingen.tsv`, `results_stats_transfer.tsv` |
 | 13 | the provenance ablation (H2) and the GNN courtesy arm | exploratory | no | `provenance_ablation.tsv`, `gnn_courtesy_arm.tsv` |
 | 14 | the rewiring mixing measurement (P1-1) | exploratory | no | `rewiring_mixing_check.tsv` |
+| 15 | the seed-degree stratification (Control 8, after Zhang et al. 2021) | exploratory | no | `control8_seed_degree_summary.tsv` |
+| 16 | the network size and coverage adjustment (Control 9, after Wright et al. 2025) | exploratory | no | `control9_size_adjustment.tsv` |
+| 17 | the random-input degeneracy test (Control 10, after Hill et al. 2019) | exploratory | no | `control10_random_input_summary.tsv` |
+| 18 | the ground-truth recomputation and the manuscript claim verification | verification of the *manuscript*, not of the endpoint | no | `review/ground_truth.tsv`, `review/verification_report.txt` |
 
 **The two facts a reader needs.**
 
@@ -764,10 +768,93 @@ pre-registration (DOI 10.5281/zenodo.23121762) is unchanged.
    in the first paper anyway, with its direction and its consequences
    stated, because the shrinkage is itself the finding: the standard CV
    inflates the effect, and the verdict survives without it.
+3. **Rows 15–17 are the controls the literature demanded after the
+   design was frozen.** They are registered here for the same reason as
+   row 8: the confounds they test (seed degree, network size and
+   coverage, and input-independence of the learner) are ones the
+   published benchmark literature treats as decisive, and a reader who
+   knows that literature will ask about them. None of them can change
+   the verification verdict; all three are reported whatever they show.
+   Row 18 is new in kind: it is not an analysis of the data but a
+   **check of the manuscript against the data**. It recomputes every
+   headline number from the released tables and fails if the prose
+   disagrees with them.
 
 **Amendment 4 does not modify the pre-registration.** It records where
 the new analyses live, so that the verification family can be read off
 the paper without hunting through the amendment history.
+
+---
+
+## Amendment 5 — the three literature-mandated controls, and the manuscript-text audit
+
+**Date:** 2026-11-11 · **Who:** review pass · **Status:** accepted,
+**adds three exploratory controls and a verification of the manuscript
+text**
+
+### A5.1 Why this amendment exists
+
+The seven protocol controls were specified before the benchmark's
+reference corpus was read end to end. A systematic read of that corpus
+(41 papers) identified three confounds that the protocol does not
+cover and that the published literature treats as decisive:
+
+| confound | the literature | the control |
+|---|---|---|
+| the margin may be produced by the seeds being **hubs** | Zhang et al. 2021, *Brief Bioinform* 22(5):bbab006 (RWR's LOOCV performance tracks the degree centrality of its seed nodes) | **Control 8** — seed-degree stratification |
+| the margin may be produced by the network being **big** or by covering more of the label | Wright et al. 2025, *Mol Syst Biol* 21:e10077 (performance tracks network size; the effect collapses once gene-set coverage is controlled) | **Control 9** — size and coverage adjustment |
+| the learner may **ignore its input** and return a fixed structural set | Hill et al. 2019, *PLoS Comput Biol* 15(12):e1007403 (algorithms differ sharply in their behaviour under meaningless input) | **Control 10** — random-input degeneracy |
+
+Each is registered in the **exploratory** family (amendment 4, rows
+15–17). None changes the learner, the endpoint, the splits, the
+pre-registered decision rule or the H1 verdict. All three are reported
+in the paper whatever they show.
+
+### A5.2 What the controls found
+
+| control | result | reading |
+|---|---|---|
+| Control 8 | mean ΔAUROC +0.053 / +0.061 / +0.054 for low / mid / high seed degree; mean(high − low) = +0.0010 | the margin does **not** depend on the degree of the seeds |
+| Control 9 | adjusted endpoint positive in 23/24 cells; pooled ρ(ΔAUROC, log₁₀ edges) = −0.02, permutation p = 0.93; **coverage** is the strongest covariate (partial R² = 0.47) | the headline is **not** a size artefact, but coverage is what moves the endpoint — which is why H2 is not testable with this panel |
+| Control 10 | top-100 Jaccard between the real-input and the random-input ranking = 0.019; Hill degeneracy statistic 0.6 genes under random input vs 123.6 under real input | the learner **uses** its input |
+
+### A5.3 The manuscript-text audit
+
+The same pass found that the manuscript prose had drifted from the
+released tables in eleven places, all of them inherited from earlier
+designs (the 10-repeat factorial, the pre-fix D-09 / D-11 / ClinGen
+runs, the pre-fix GNN arm, a superseded network table). The defects
+were:
+
+| # | defect | fix |
+|---|---|---|
+| 1 | the abstract stated 10 repeats, the superseded variance decomposition (33 / 15 / 52 %), "H1 holds in 23 of 24 cells" and "H2 holds for IntOGen 2024" | all four corrected to the released values |
+| 2 | the abstract and the discussion still described the Reactome temporal cell as "a publishable finding on curator-lag" | restated as a **coverage failure**; the curator-lag reading is demoted to a hypothesis and marked as such |
+| 3 | `results/tables/results_stats_d09.tsv` was computed from a **superseded D-09 design** (a 304-gene restricted background, 100 bootstrap draws) | the loader now reads `results/runs/d09_{network}.tsv`, the file the released `d09_table.tsv` was built from; the table is regenerated |
+| 4 | `results/tables/results_stats_d11.tsv` was computed from the **superseded 10-repeat D-11 runs** | the loader now reads `results/runs/d11_{network}__{label}_cap_{network}.tsv`; the table is regenerated and now has 24 rows |
+| 5 | `results/tables/results_stats_clingen.tsv` was computed from the **superseded 10-repeat ClinGen runs** | the loader now reads `results/runs_v40_clingen/`; the table is regenerated |
+| 6 | `results/tables/figure1_data.tsv` (and therefore Figure 1) plotted the stale D-09 and D-11 numbers | regenerated |
+| 7 | the network table in §A gave the wrong node and edge counts for 6 of 8 networks (it was a copy of one row) | rebuilt from `data/processed/networks/*.meta.json` |
+| 8 | FunMap was cited as "Mei et al., Nat Commun 2021" | corrected to Shi Z, Lei JT, Elizarraras JM, Zhang B. 2025, *Nat Cancer* 6:205-222 |
+| 9 | Reactome was cited as "Jassal et al., Nucleic Acids Res 2020" | corrected to Milacic et al. 2024, *NAR* 52:D672-D678 (content version 86) |
+| 10 | the label-pair overlap table in §D was wrong in 9 of 10 off-diagonal cells, and the transfer summary said "61 positive, 5 negative" | recomputed from the label files; the true counts are 59 positive, 7 negative |
+| 11 | the decision log recorded D-11 N values that match nothing on disk | corrected to the released values, with the old row marked superseded |
+
+Two mechanisms are added so that this class of defect cannot recur
+silently:
+
+* `scripts/recompute_ground_truth.py` recomputes every headline number
+  from the released tables into `review/ground_truth.tsv`;
+* `scripts/verify_claims.py` checks the manuscript against that table
+  and writes `review/verification_report.txt`. It currently reports
+  **57 PASS / 0 FAIL**.
+
+### A5.4 What is NOT changed
+
+The pre-registration (DOI 10.5281/zenodo.23121762) is unchanged. The
+H1 decision rule, the TOST margin, the FDR family, the learner, the
+splits and the endpoint are unchanged. The three new controls are
+exploratory and cannot alter the verification verdict.
 
 ---
 

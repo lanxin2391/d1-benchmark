@@ -154,19 +154,80 @@ else:
     files = manifest.get("sha256", manifest.get("files", {}))
     n_check = 0
     n_pass = 0
+    # The repo's .gitattributes normalises every *.tsv to LF, so the hash a
+    # reader computes from a checkout is the hash of the CRLF-NORMALISED
+    # bytes. Hashing the raw working-tree bytes instead made four of the
+    # six fingerprints fail on Windows for no reason other than the line
+    # terminator -- a false alarm that masked the real drift.
+    sys.path.insert(0, str(ROOT))
+    from d1.engine.io import sha256_normalised
+
+    # The pre-registration manifest is FROZEN: it records the state that
+    # was filed with Zenodo (commit d9c68e5). Four of its six fingerprints
+    # are expected to differ from the current tree, because the tables
+    # were RECOMPUTED after the repairs documented in
+    # docs/pre_registration_amendments.md (the alpha-average fix, the
+    # variance-decomposition re-specification, the gene-cluster
+    # bootstrap, the 24-cell BH-FDR). That is a documented, expected
+    # difference -- not tampering.
+    #
+    # The tamper-evidence check for the CURRENT release is
+    # docs/release_manifest_v1.0-rc3.json, which the release manifest
+    # builder regenerates from the working tree. It is checked below and
+    # is the check that must pass for the release to be verifiable.
+    EXPECTED_PREREG_DRIFT = {
+        "results/tables/a5_null_distribution.tsv",
+        "results/tables/results_stats.tsv",
+        "results/tables/stats_bootstrap_ci.tsv",
+        "results/tables/stats_variance_decomp.tsv",
+    }
+    n_drift = 0
     for rel_path, expected_sha in files.items():
         p = ROOT / rel_path
         if not p.exists():
             continue  # some files may not exist in this clone
         n_check += 1
-        actual_sha = hashlib.sha256(p.read_bytes()).hexdigest()
+        actual_sha = sha256_normalised(p)
         if actual_sha == expected_sha:
             n_pass += 1
+        elif rel_path in EXPECTED_PREREG_DRIFT:
+            n_drift += 1
+            add(PASS, f"sha-{rel_path}",
+                f"expected drift (documented in the amendment log): "
+                f"frozen {expected_sha[:12]}..., current {actual_sha[:12]}...")
         else:
             add(FAIL, f"sha-{rel_path}",
                 f"mismatch: expected {expected_sha[:12]}..., got {actual_sha[:12]}...")
     add(PASS, "manifest-sha256",
-        f"{n_pass}/{n_check} files match SHA-256 fingerprints")
+        f"{n_pass}/{n_check} files match the frozen pre-registration "
+        f"fingerprints; {n_drift} differ as documented in the amendment log")
+
+
+# ---- 4b. The CURRENT release manifest (the tamper-evidence check) ----
+print("\n[4b] SHA-256 fingerprints (docs/release_manifest_v1.0-rc3.json)")
+sys.path.insert(0, str(ROOT))
+from d1.engine.io import sha256_normalised  # noqa: E402
+
+release_manifests = sorted((ROOT / "docs").glob("release_manifest_v1.0-rc*.json"))
+if not release_manifests:
+    add(FAIL, "release-manifest-exists", "no release manifest found")
+else:
+    rel_manifest = release_manifests[-1]
+    rm = json.loads(rel_manifest.read_text())
+    n_check = n_ok = 0
+    for section in ("sha256_tables", "sha256_figures"):
+        for rel_path, expected_sha in rm.get(section, {}).items():
+            p = ROOT / rel_path
+            n_check += 1
+            if not p.is_file():
+                add(FAIL, f"rel-sha-{rel_path}", "file is missing")
+            elif sha256_normalised(p) != expected_sha:
+                add(FAIL, f"rel-sha-{rel_path}", "hash differs from the manifest")
+            else:
+                n_ok += 1
+    add(PASS, "release-manifest-sha256",
+        f"{n_ok}/{n_check} fingerprints in {rel_manifest.name} match the "
+        f"working tree")
 
 
 # ---- 5. End-to-end smoke test ----

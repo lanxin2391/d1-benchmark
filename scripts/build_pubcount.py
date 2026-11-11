@@ -99,7 +99,7 @@ def main(argv: list[str] | None = None) -> int:
     df["log10"] = np.log10(df["n_pubmed"].to_numpy() + 1)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(args.out, sep="\t", index=False)
+    df.to_csv(args.out, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {args.out} ({len(df):,} approved-symbol rows)")
     print(f"  median publications: {int(df['n_pubmed'].median())}")
     print(f"  top 10 by publications:")

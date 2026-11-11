@@ -2,20 +2,29 @@
 
 **Task:** §7 control; rebuttal of the "RWR is too weak" reviewer objection.
 **Author:** lanxin2391 (A)
-**Date:** 2026-10-03 / 2026-10-04
-**Status:** ✅ **all 72/72 (network, label, alpha) cells complete.**
+**Date:** 2026-10-03 / 2026-10-04; **recomputed 2026-10-29**;
+**this log rewritten 2026-11-11** against the released table.
+**Status:** ✅ 24/24 (network, label) cells complete, on the
+40-repeat design.
 
-This log covers:
-1. the **method** (Node2Vec via gensim),
-2. **results** (all 72 cells at α=0.3 / 0.5 / 0.7),
-3. **§7 reviewer-objection rebuttal** — RWR is conservative, GNN
-   agrees.
+> **Why this log was rewritten (2026-11-11).** The previous version of
+> this file reported the PRE-FIX numbers of the arm. Amendment 3 fixed
+> four defects (the evaluation ranked the whole universe against the
+> *training* positives instead of the test fold; the random walk
+> appended each step twice; the alpha dimension did not exist for
+> node2vec, so the three "alpha" arms were the same computation
+> repeated; gensim's Hogwild threading made the learner
+> non-reproducible). The numbers below are recomputed from
+> `results/tables/gnn_courtesy_arm.tsv`, which is the authoritative
+> released table. The old JSONs are archived under
+> `results/runs/gnn_courtesy_OLD_BUGGY/` and are not used.
 
 ---
 
-## 1. Method
+## 1. Method, and what this arm actually is
 
-Node2Vec (Grover & Leskovec 2016), implemented in pure Python + gensim Word2Vec:
+A **node2vec-style unsupervised embedding** (Grover & Leskovec 2016),
+implemented in pure Python + gensim Word2Vec:
 
 | hyperparameter | value |
 |---|---|
@@ -27,112 +36,119 @@ Node2Vec (Grover & Leskovec 2016), implemented in pure Python + gensim Word2Vec:
 | min_count       | 1 |
 | epochs           | 1 |
 | seed             = 0 |
+| alpha            | **not applicable** (`alpha_applies: false` in the released table) |
 
-Per fold (5-fold × 10-repeat = 50 per cell):
-1. take train-fold positives
-2. compute mean of their Node2Vec embeddings
-3. score every gene by cosine similarity to that mean
-4. compute AUROC on the test fold's positives vs all other genes
-5. delta = GNN_AUROC − degree_AUROC
+Per fold (5-fold × 40-repeat = 200 per cell):
+1. take the train-fold positives;
+2. compute the mean of their embeddings;
+3. score every gene by its cosine similarity to that mean;
+4. compute AUROC on the test fold's positives vs all other genes;
+5. delta = embedding_AUROC − degree_AUROC.
 
-This mirrors the existing A4 / D-09 / W5 / A5 pipeline so the same
+This mirrors the existing A4 / D-09 / W5 / A5 pipeline, so the same
 **ΔAUROC vs degree** axis is comparable.
+
+### The naming caveat (stated because the name would otherwise mislead)
+
+The walk uses **p = q = 1.0**, i.e. the uniform first-order walk.
+Per the appendix of Hamilton et al. (2017, *NIPS*, Appendix C), node2vec
+with p = q = 1 is **equivalent to DeepWalk** (Perozzi et al. 2014,
+*KDD*): the second-order bias is inert, and the only difference from
+DeepWalk is the embedding dimension and the corpus sampler. This arm is
+therefore a **DeepWalk-style unsupervised embedding**, and the paper
+names it that way rather than claiming a node2vec implementation it did
+not make.
+
+Two consequences are stated plainly:
+
+1. This is a **no-feature** embedding. The graph neural networks that
+   *do* use node features (GCN, GAT, GraphSAGE) are **not** implemented
+   here and are **not** represented by this arm. Their published
+   behaviour on featureless graphs is untested by this study.
+2. The node2vec original (Grover & Leskovec 2016) is **not in the local
+   reference library** this study was built from; the equivalence above
+   rests on the GraphSAGE appendix and on the descriptions of node2vec
+   in the other papers of that corpus, not on the original text. This is
+   a limitation of the citation base, not of the measurement.
 
 ---
 
-## 2. Results — all 72 cells at α=0.3 / 0.5 / 0.7
+## 2. Results — 24 (network, label) cells at α = 0.5
 
-The script caches each (network, label, alpha) triple at
-`results/runs/gnn_courtesy/{net}__{label}__alpha{A}.json`, so
-re-runs are idempotent and the full 72 cells finished in ~6 h of
-wall-clock time (parallel runs, 4 cores effectively).
+The script caches each (network, label) cell at
+`results/runs/gnn_courtesy/{net}__{label}__alpha0.5.json`, so re-runs
+are idempotent. The aggregate
+`results/tables/gnn_courtesy_arm.tsv` reports the α = 0.5 results, one
+row per (network, label).
 
-The aggregate `results/tables/gnn_courtesy_arm.tsv` reports the
-**α=0.5** results — one row per (network, label).
-
-### 2.1 Test arm (funmap × intogen2024 × α=0.5)
-
-```
-network     label         alpha  mean_gnn_auc  mean_deg_auc  mean_delta  std_delta
-funmap       intogen2024   0.5    0.673        0.520         +0.153       0.011
-```
-
-### 2.2 Aggregate at α=0.5 (24 rows)
-
-For each (network, label), Node2Vec mean delta-AUROC + standard
-deviation across 50 folds:
-
-(see `results/tables/gnn_courtesy_arm.tsv` for the full table; a
-representative subset reproduced from the saved TSV:)
-
-| network    | label               | mean_gnn | mean_deg | delta  | std   |
-|---|---|---|---|---|---|
-| funmap           | intogen2024            | 0.673 | 0.520 | +0.153 | 0.011 |
-| funmap           | intogen_temporal_new   | 0.634 | 0.536 | +0.098 | 0.034 |
-| funmap           | ot_all                 | 0.594 | 0.576 | +0.018 | 0.010 |
-| funmap           | ot_nolit               | 0.591 | 0.570 | +0.021 | 0.013 |
-| ... | ... | ... | ... | ... | ... |
-| (all 24 rows in `gnn_courtesy_arm.tsv`) ||||||
+**24/24 cells complete.** (The "72 cells" of the pre-fix log counted
+the three alpha arms, but node2vec has no alpha parameter: the three
+"alpha" arms were the same computation repeated. That defect was fixed
+in amendment 3, and the arm is a 24-cell design.)
 
 ---
 
 ## 3. Comparison with A4 (RWR) — the §7 rebuttal table
 
-The single table that goes into the discussion section:
+The single table that goes into the discussion section (mean over the
+same 24 cells, α = 0.5; source `results/tables/gnn_courtesy_arm.tsv`
+and `results/tables/a4_table1_delta_auroc_v40.tsv`):
 
-| method (at α=0.5) | mean ΔAUROC | SD |
+| method (at α=0.5) | mean ΔAUROC | positive cells |
 |---|---|---|
-| **RWR** (the benchmark's chosen learner) | +0.10 | 0.02 |
-| **GNN** (Node2Vec, baseline) | **+0.15** | 0.01 |
-| **degree baseline** (no propagation) | 0 | 0 |
+| **RWR** (the benchmark's chosen learner) | **+0.079** | 24/24 |
+| **embedding baseline** (node2vec p=q=1) | **+0.028** | 19/24 |
+| **degree baseline** (no propagation) | 0 | — |
 
-→ Both non-trivial learners beat the degree baseline. The more
-expressive learner (GNN) wins by **more**, but the more conservative
-learner (RWR) still provides a robust positive signal. The
-benchmark's claim "the prior contributes beyond degree" holds across
-both learners, refuting the §7 reviewer objection.
+→ Both non-trivial learners beat the degree baseline in most cells, so
+the benchmark's claim "the prior contributes beyond degree" holds across
+learner families. The **more expressive** learner does *not* win: the
+embedding reaches roughly a third of RWR's margin, and its per-cell
+estimate is far less precise (mean SD of ΔAUROC 0.051 against RWR's
+0.019).
 
-### 3.1 Per-network comparison (averaged over the 3 alphas)
+### 3.1 Per-network comparison (α = 0.5, mean over the 4 labels)
 
-| network            | GNN delta | RWR delta | GNN − RWR |
-|---|---|---|---|
-| intact             | **+0.089** | +0.065   | **+0.024** ← GNN > RWR |
-| funmap             | +0.074 | +0.100   | −0.026      |
-| string_full700     | +0.064 | +0.113   | −0.049      |
-| rna_coexp          | +0.027 | +0.050   | −0.023      |
-| string_phys700    | −0.021 | +0.119   | **−0.140** ← biggest RWR lead |
-| reactome           | −0.055 | −0.011   | both fail    |
+| network            | embedding ΔAUROC | RWR ΔAUROC |
+|---|---|---|
+| string_phys700     | +0.019 | **+0.122** |
+| string_full700     | +0.057 | **+0.105** |
+| intact             | +0.048 | +0.059 |
+| funmap             | +0.065 | +0.071 |
+| rna_coexp          | +0.017 | +0.056 |
+| reactome           | −0.035 | +0.060 |
 
 **Reading the table**
 
-- **GNN > degree in 5/6 networks** (i.e., +0.027 to +0.089). The
-  exception is `reactome`, which neither RWR nor GNN can lift above
-  degree — consistent with the W5 / A5 finding that reactome's
-  curated pathways don't carry driver information.
-- **RWR > GNN on string_phys700** by 14 pp. The most striking
-  contrast: when the network is physical-binding only, the degree-aware
-  propagation in RWR extracts substantially more signal than the
-  generic random-walk-based embeddings of Node2Vec. This is the
-  cleanest evidence that *which* learner you use matters — and the
-  benchmark's results are not specific to a lucky RWR choice.
-- **alpha sensitivity is small.** For every cell the SD across
-  α ∈ {0.3, 0.5, 0.7} is ≤ 0.025 in 5/6 networks and ≤ 0.05 in the
-  6th, consistent with the fact that Node2Vec has no α parameter to
-  begin with and the alpha-mixing only changes the random seed for
-  walk sampling.
+- **The embedding beats degree in 5 of 6 networks** (+0.017 to +0.065).
+  The exception is `reactome`, where the embedding is negative
+  (−0.035) while RWR is positive (+0.060) — the same Reactome weakness
+  on the newest drivers that the W5 / A5 controls localise.
+- **RWR leads the embedding on every network**, and by 10.3 pp on
+  `string_phys700` (0.122 vs 0.019). When the network carries intact
+  protein-binding edges only, degree-aware propagation extracts
+  substantially more signal than a generic walk-based embedding.
+- **The embedding's estimate is noisier**: mean SD 0.051 against RWR's
+  0.019, and 5 of its 24 cells are negative (against 0 for RWR).
+
+The conclusion for the paper is therefore *stronger* than the
+pre-registered §7 wording anticipated: RWR is not merely a
+conservative baseline that is hard to beat, it is the better-performing
+learner on this task, at a fraction of the cost and with full
+reproducibility.
 
 ---
 
 ## 4. Why the single test arm matters
 
-The test arm (funmap × intogen2024 × α=0.5) shows that **GNN gets
-+0.153** vs RWR's +0.0998 in the same cell. A 5 pp gap in favor of
-the more expressive learner. If a reviewer argues that RWR's
-+0.0998 is artificial, they must explain why **a published, standard
-GNN method that we did not tune for this task also produces a positive
-margin** — and a larger one.
-
-This is the strongest pre-empt to the §7 objection.
+The test arm (funmap × intogen2024) shows the embedding at
+**+0.148** against RWR's **+0.100** in that cell — the embedding is
+ahead in this one cell. If a reviewer argues that RWR's +0.100 is
+artificial, the arm shows that an *unsupervised embedding* also
+produces a positive margin, i.e. the benchmark's conclusion does not
+depend on RWR. The panel-level comparison then shows that the margin is
+*larger* with RWR, so the benchmark's choice of learner is conservative
+in both directions.
 
 ---
 
@@ -140,46 +156,43 @@ This is the strongest pre-empt to the §7 objection.
 
 ```bash
 conda activate d1
-cd D:\Grade3\swxxx\final\D1\d1-benchmark
+cd <repo root>
 
 # full re-run (uses checkpointing; will skip already-saved cells)
 python -u scripts/run_gnn_courtesy.py --n-jobs 4
+
+# aggregate
+python scripts/aggregate_gnn_courtesy.py
 ```
 
 Outputs:
-- `results/runs/gnn_courtesy/{net}__{label}__alpha{A}.json` — per-cell
+- `results/runs/gnn_courtesy/{net}__{label}__alpha0.5.json` — per-cell
   per-fold AUROCs (idempotent)
-- `results/tables/gnn_courtesy_arm.tsv` — aggregate α=0.5 table
-- `results/runs/gnn_courtesy/status.json` — live progress
-- `scratch/gnn_courtesy.log` — live log
+- `results/tables/gnn_courtesy_arm.tsv` — aggregate α = 0.5 table
+  (24 rows) — **the authoritative table**
+- `results/runs/gnn_courtesy/status.json` — progress JSON
 
 ---
 
 ## 6. Outputs committed
 
 ```
-scripts/run_gnn_courtesy.py            (368 lines, gensim Word2Vec-based)
-results/runs/gnn_courtesy/*.json      (72 cells, per-fold per-cell)
-results/runs/gnn_courtesy/status.json (live progress JSON)
-results/tables/gnn_courtesy_arm.tsv    (24 rows, α=0.5 aggregate)
-docs/gnn_courtesy_log.md              (this file)
+scripts/run_gnn_courtesy.py             (the learner and the evaluation)
+scripts/aggregate_gnn_courtesy.py        (the aggregate table)
+results/runs/gnn_courtesy/*.json         (24 cells, per-fold)
+results/runs/gnn_courtesy/status.json    (progress JSON)
+results/tables/gnn_courtesy_arm.tsv      (24 rows, α=0.5 aggregate)
+docs/gnn_courtesy_log.md                 (this file)
 ```
 
 ---
 
-## 7. Status of W6 prep
+## 7. Cross-references
 
-A-side §4.6 items, now with §7:
-
-| item | Status |
-|---|------|
-| Pre-registration (§M2 + Zenodo DOI) | ✅ |
-| Mixed-effects variance decomposition | ✅ |
-| Cluster bootstrap CIs | ✅ |
-| Equivalence tests | ✅ |
-| Provenance ablation | ✅ |
-| **GNN courtesy arm (§7)** | ✅ (this log) |
-
-The A-side is now fully delivered. Remaining work: B-side (§M2 + public
-release + reproducibility audit + label-side manuscript sections)
-and the manuscript text itself.
+* Manuscript §J.4 (discussion of the §7 objection) — the numbers in
+  §3 above.
+* `docs/pre_registration_amendments.md` amendment 3 — the four defects
+  and their fixes.
+* `results/tables/gnn_courtesy_arm.tsv` — the `params` column records
+  `p: 1.0, q: 1.0, alpha_applies: false` for every row, so the
+  equivalence above is auditable from the released table itself.

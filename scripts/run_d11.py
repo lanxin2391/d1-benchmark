@@ -130,7 +130,7 @@ def main():
             df_cap["release"] = f"{df_cap['release'].iloc[0]}_cap_{net_id}"
             cap_label = f"{label}_cap_{net_id}"
             cap_labels[(net_id, label)] = cap_label
-            df_cap.to_csv(LABELS_DIR / f"{cap_label}.tsv", sep="\t", index=False)
+            df_cap.to_csv(LABELS_DIR / f"{cap_label}.tsv", sep="\t", index=False, lineterminator="\n")
 
     # Step 3: regenerate splits for every (capped_label, native_<net>) pair.
     #
@@ -185,7 +185,7 @@ def main():
                           label_id=cap_label,
                           universe_id=f"native_{net_id}",
                           alphas=(0.5,))
-            res.to_csv(out_path, sep="\t", index=False)
+            res.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
             # Extract delta_AUROC for this arm (alpha=0.5 row)
             from d1.engine.evaluate import margins
             m = margins(res)
@@ -214,7 +214,7 @@ def main():
             print(f"  [{net_id} x {cap_label}] {len(res)} rows -> delta={d.delta_auroc.mean():.4f} +- {d.delta_auroc.std():.4f}")
 
     summary = pd.DataFrame(summary_rows)
-    summary.to_csv(TABLE_DIR / "d11_table.tsv", sep="\t", index=False)
+    summary.to_csv(TABLE_DIR / "d11_table.tsv", sep="\t", index=False, lineterminator="\n")
     print("\nD-11 Table (delta_AUROC at alpha=0.5):")
     pivot = summary.pivot_table(index="network", columns="label_base",
                                  values="delta_auroc").round(4)

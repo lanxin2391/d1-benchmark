@@ -123,7 +123,7 @@ def main(argv: list[str] | None = None) -> int:
 
     out_df = df[["gene", "rank", "source", "release"]]
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    out_df.to_csv(args.out, sep="\t", index=False)
+    out_df.to_csv(args.out, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {args.out.relative_to(REPO_ROOT)} ({len(out_df):,} rows)")
     print(f"  top 10 by score:")
     print(out_df.head(10).to_string(index=False))

@@ -163,7 +163,7 @@ def main() -> int:
             for r in rows if r["label"] == label))
 
     df = pd.DataFrame(rows)
-    df.to_csv(TABLES / "consensus_robustness.tsv", sep="\t", index=False)
+    df.to_csv(TABLES / "consensus_robustness.tsv", sep="\t", index=False, lineterminator="\n")
     write_doc(df)
     log(f"wrote consensus_robustness.tsv ({len(df)} rows)")
     return 0

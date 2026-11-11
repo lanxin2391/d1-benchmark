@@ -1,0 +1,130 @@
+D1 benchmark -- manuscript claim verification
+========================================================================
+
+Every check below compares a string in the manuscript against a
+value recomputed from the released result tables by
+scripts/recompute_ground_truth.py. A FAIL means the manuscript
+states something the tables do not support.
+
+------------------------------------------------------------------------
+1. POSITIVE CLAIMS -- the manuscript must contain these strings
+------------------------------------------------------------------------
+  [PASS] design.repeats           manuscript_intro_abstract.md
+         the abstract must state the 40-repeat design
+  [PASS] design.repeats.a         manuscript_a_sections.md
+         §A must state the 40-repeat design
+  [PASS] endpoint.range           manuscript_intro_abstract.md
+         the abstract must give the negative cell's ΔAUROC
+  [PASS] endpoint.range.max       manuscript_intro_abstract.md
+         the abstract must give the panel maximum
+  [PASS] endpoint.cells           manuscript_intro_abstract.md
+         the abstract must give the positive-cell count
+  [PASS] h1.rule                  manuscript_intro_abstract.md
+         the abstract must state the H1 result
+  [PASS] h1.gene                  manuscript_intro_abstract.md
+         the abstract must disclose the gene-cluster result
+  [PASS] h1.gene.a                manuscript_a_sections.md
+         §J must disclose the gene-cluster result
+  [PASS] h2.nottested             manuscript_intro_abstract.md
+         the abstract must say H2 is not testable
+  [PASS] h2.nottested.a           manuscript_a_sections.md
+         §J.2 must say H2 is not testable
+  [PASS] var.interaction          manuscript_intro_abstract.md
+         the abstract must give the interaction share
+  [PASS] var.label                manuscript_intro_abstract.md
+         the abstract must give the label share
+  [PASS] var.network              manuscript_intro_abstract.md
+         the abstract must give the network share
+  [PASS] var.fold                 manuscript_intro_abstract.md
+         the abstract must give the fold share
+  [PASS] c2.z                     manuscript_intro_abstract.md
+         the abstract must state the null rejection
+  [PASS] c3.runs                  manuscript_a_sections.md
+         §F.1 must state the true number of rewiring runs
+  [PASS] c4.universe              manuscript_intro_abstract.md
+         the abstract must state the shared universe
+  [PASS] c5.ratio                 manuscript_intro_abstract.md
+         the abstract must give the cross-catalogue retention
+  [PASS] c5.cells                 manuscript_intro_abstract.md
+         the abstract must give the transfer-cell counts
+  [PASS] c7.matched               manuscript_intro_abstract.md
+         the abstract must give the Control-7 matched-null difference
+  [PASS] c8.low                   manuscript_intro_abstract.md
+         the abstract must give the low-stratum margin
+  [PASS] c8.high                  manuscript_intro_abstract.md
+         the abstract must give the high-stratum margin
+  [PASS] c8.a                     manuscript_a_sections.md
+         §F must document Control 8
+  [PASS] c9.rho                   manuscript_intro_abstract.md
+         the abstract must give the size correlation
+  [PASS] c9.a                     manuscript_a_sections.md
+         §F must document Control 9
+  [PASS] c10.jaccard              manuscript_intro_abstract.md
+         the abstract must give the input-sensitivity overlap
+  [PASS] c10.a                    manuscript_a_sections.md
+         §F must document Control 10
+  [PASS] neg.reading              manuscript_intro_abstract.md
+         the abstract must not call the negative cell a negative effect
+  [PASS] neg.reading.a            manuscript_a_sections.md
+         §J.3 must not call the negative cell a negative effect
+  [PASS] net.funmap.nodes         manuscript_a_sections.md
+         §A must give FunMap's node count from the meta file
+  [PASS] net.reactome.nodes       manuscript_a_sections.md
+         §A must give Reactome's node count from the meta file
+  [PASS] net.citation             manuscript_a_sections.md
+         §A must cite the correct FunMap paper
+  [PASS] label.overlap            manuscript_b_sections.md
+         §D must give the recomputed label overlap
+  [PASS] label.transfer           manuscript_b_sections.md
+         §E must give the transfer-cell counts
+  [PASS] label.nolit              manuscript_b_sections.md
+         §D must qualify ot_nolit
+  [PASS] gnn.naming               manuscript_a_sections.md
+         §J.4 must name the arm honestly
+  [PASS] gnn.naming.log           gnn_courtesy_log.md
+         the GNN log must name the arm honestly
+  [PASS] gnn.number               manuscript_a_sections.md
+         §J.4 must give the released embedding margin
+  [PASS] gnn.oldnumber            manuscript_a_sections.md
+         the superseded embedding margin must be GONE
+  [PASS] dec.d11                  decisions.md
+         the decision log must carry the released D-11 N values
+  [PASS] dec.d11.old              decisions.md
+         the superseded D-11 N values must be marked superseded
+
+------------------------------------------------------------------------
+2. FORBIDDEN STRINGS -- the manuscript must NOT contain these
+------------------------------------------------------------------------
+  [PASS] forbidden.10repeat       manuscript_intro_abstract.md
+         the 10-repeat design is superseded
+  [PASS] forbidden.vandisp        manuscript_intro_abstract.md
+         the superseded variance numbers must be GONE
+  [PASS] forbidden.h2holds        manuscript_intro_abstract.md
+         H2 is not testable
+  [PASS] forbidden.600            manuscript_a_sections.md
+         there are 598 rewiring runs
+  [PASS] forbidden.gnnlog         gnn_courtesy_log.md
+         the embedding arm has 24 cells, not 72
+  [PASS] forbidden.vandisp        manuscript_intro_abstract.md
+         the superseded variance numbers must be GONE
+  [PASS] forbidden.oldcitation    manuscript_a_sections.md
+         the wrong FunMap citation must be GONE
+  [PASS] forbidden.oldcount       manuscript_b_sections.md
+         the superseded transfer counts must be GONE
+  [PASS] forbidden.negclaim       manuscript_intro_abstract.md
+         the curator-lag reading is a hypothesis, not a finding
+
+------------------------------------------------------------------------
+3. CROSS-CHECK -- the manuscript's own numbers vs the tables
+------------------------------------------------------------------------
+  [PASS] abstract negative cell       table=−0.013
+  [PASS] abstract panel max           table=+0.171
+  [PASS] manuscript_a GNN margin      table=+0.028
+  [PASS] manuscript_b transfer count  table=59 cells positive
+  [PASS] manuscript_b transfer negatives table=7 cells negative
+  [PASS] control 8 low stratum        table=0.0527
+  [PASS] control 9 permutation p      table=0.93
+
+========================================================================
+RESULT: 57 PASS / 0 FAIL
+========================================================================

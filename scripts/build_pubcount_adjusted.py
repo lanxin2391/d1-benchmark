@@ -100,7 +100,7 @@ def build_adjusted(label: str, pubcount_path: Path, label_path: Path,
         "release": "2026.06",
     })
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out.to_csv(out_path, sep="\t", index=False)
+    out.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
 
     return {
         "label": label,
@@ -144,7 +144,7 @@ def main(argv: list[str] | None = None) -> int:
     if summaries:
         idx = pd.DataFrame(summaries)
         idx_path = LABELS_DIR / "pubcount_adjusted_index.tsv"
-        idx.to_csv(idx_path, sep="\t", index=False, float_format="%.4f")
+        idx.to_csv(idx_path, sep="\t", index=False, float_format="%.4f", lineterminator="\n")
         print(f"\nWrote {idx_path.relative_to(REPO_ROOT)}")
     return 0
 

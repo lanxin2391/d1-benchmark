@@ -103,7 +103,7 @@ def main() -> int:
                 f"({time.time()-t0:.0f}s)")
     df = pd.DataFrame(rows)
     out = TABLES / args.out
-    df.to_csv(out, sep="\t", index=False)
+    df.to_csv(out, sep="\t", index=False, lineterminator="\n")
     log(f"wrote {out.name} ({len(df)} rows)")
     return 0
 

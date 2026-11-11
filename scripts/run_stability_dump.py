@@ -187,7 +187,7 @@ def main(argv: list[str] | None = None) -> int:
 
     man = pd.DataFrame(manifest)
     man_path = TABLE_DIR / "stability_per_gene_scores_manifest.tsv"
-    man.to_csv(man_path, sep="\t", index=False)
+    man.to_csv(man_path, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {len(man)} score dumps; manifest -> {man_path.relative_to(REPO_ROOT)}")
     return 0
 

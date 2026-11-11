@@ -118,7 +118,7 @@ def _run_arm(net_id: str, label: str, alphas: tuple[float, ...]) -> Path:
         alphas=alphas,
         dump_scores=dump,
     )
-    res.to_csv(out_path, sep="\t", index=False)
+    res.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
     dt = time.time() - t0
     n = len(res)
     print(f"  [{net_id} x {label}] {n} rows in {dt:.1f}s -> {out_path.name}")
@@ -186,7 +186,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"\nStep 3: concatenate {len(arm_paths)} arm tables into results/runs/a4_combined.tsv")
     combined = pd.concat([pd.read_csv(p, sep="\t") for p in arm_paths],
                          ignore_index=True)
-    combined.to_csv(OUT_RUNS_DIR / "a4_combined.tsv", sep="\t", index=False)
+    combined.to_csv(OUT_RUNS_DIR / "a4_combined.tsv", sep="\t", index=False, lineterminator="\n")
     print(f"  combined rows: {len(combined):,}")
 
     # Build Table 1 (paper Table 1): mean +- SD of delta_AUROC per (net, label, alpha).
@@ -212,7 +212,7 @@ def main(argv: list[str] | None = None) -> int:
         "a0.5_mean", "a0.5_std", "a0.5_n",
         "a0.7_mean", "a0.7_std", "a0.7_n",
     ])
-    table1.to_csv(TABLE_DIR / f"a4_table1_delta_auroc{TABLE_SUFFIX}.tsv", sep="\t")
+    table1.to_csv(TABLE_DIR / f"a4_table1_delta_auroc{TABLE_SUFFIX}.tsv", sep="\t", lineterminator="\n")
     print(f"  Table 1 (delta_AUROC, mean +- SD across {len(m) // max(1, len(m))} folds):")
     print(table1.to_string())
 
@@ -224,14 +224,14 @@ def main(argv: list[str] | None = None) -> int:
         index=["network", "label_set"], columns="alpha", values=["mean", "std"]
     )
     table1_rwr.columns = [f"a{alpha}_{stat}" for stat, alpha in table1_rwr.columns]
-    table1_rwr.to_csv(TABLE_DIR / f"a4_table1_rwr_auroc{TABLE_SUFFIX}.tsv", sep="\t")
+    table1_rwr.to_csv(TABLE_DIR / f"a4_table1_rwr_auroc{TABLE_SUFFIX}.tsv", sep="\t", lineterminator="\n")
 
     deg_df = combined[combined["method"] == "degree"]
     table1_deg = deg_df.groupby(["network", "label_set"])["auroc"].agg(
         ["mean", "std"]
     ).round(4)
     table1_deg.columns = [f"degree_{stat}" for stat in table1_deg.columns]
-    table1_deg.to_csv(TABLE_DIR / f"a4_table1_degree_auroc{TABLE_SUFFIX}.tsv", sep="\t")
+    table1_deg.to_csv(TABLE_DIR / f"a4_table1_degree_auroc{TABLE_SUFFIX}.tsv", sep="\t", lineterminator="\n")
 
     print(f"\nDone. {len(arm_paths)} arms; combined file {len(combined):,} rows.")
     return 0
