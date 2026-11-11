@@ -5,7 +5,7 @@
 **Release:** v1.0-rc3 (tag `v1.0-rc3`) · Zenodo DOI pending ·
 pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762)
 **Audit:** 50 PASS / 0 FAIL on `python scripts/audit_reproducibility.py`
-**Manuscript verification:** 57 PASS / 0 FAIL on `python scripts/verify_claims.py`
+**Manuscript verification:** 63 PASS / 0 FAIL on `python scripts/verify_claims.py`
 
 A fixed learner (random walk with restart, RWR), a panel of six gene
 networks and four driver-gene label sets. The primary endpoint is the
@@ -32,8 +32,8 @@ Three mechanisms, all of which must pass before a release:
 ```bash
 python -m pytest                                  # 131 passed, 3 skipped
 python scripts/audit_reproducibility.py            # 50 PASS / 0 FAIL
-python scripts/verify_claims.py                    # 57 PASS / 0 FAIL
-python scripts/verify_report.py                    # 67 PASS / 0 FAIL
+python scripts/verify_claims.py                    # 63 PASS / 0 FAIL
+python scripts/verify_report.py                    # 71 PASS / 0 FAIL
 python scripts/build_release_manifest.py --release v1.0-rc3 --check
 ```
 
@@ -60,7 +60,7 @@ verifier (`scripts/verify_report.py`).
 | `docs/control10_random_input.md` | A | Control 10 (Hill et al. 2019): random-input degeneracy |
 | `docs/pre_registration_amendments.md` | A+B | Amendments 1–5: every deviation from the frozen pre-registration |
 | `review/ground_truth.tsv` | A | Every headline number, recomputed from the released tables |
-| `review/verification_report.txt` | A | The manuscript-vs-tables check (57 PASS / 0 FAIL) |
+| `review/verification_report.txt` | A | The manuscript-vs-tables check (63 PASS / 0 FAIL) |
 | `docs/public_release_protocol.md` | B | Release protocol v1.0 — leaderboard, Zenodo DOI, citation, reproducibility contract |
 | `docs/reproducibility_audit.md` | B | Independent reproducibility audit (M4.3-M5.5) |
 | `results/tables/a4_table1_delta_auroc.tsv` | A | Primary endpoint Table 1: 6 nets × 4 labels × 3 alphas = 72 cells |

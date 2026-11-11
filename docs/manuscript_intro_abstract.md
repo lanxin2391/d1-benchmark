@@ -437,7 +437,7 @@ cd d1-benchmark
 git checkout v1.0-prep
 conda env create -f environment.yml
 conda activate d1
-python scripts/audit_reproducibility.py    # 45 PASS, 0 FAIL
+python scripts/audit_reproducibility.py    # 50 PASS, 0 FAIL
 ```
 
 The audit script takes ~10 minutes and verifies that all 30

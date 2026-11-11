@@ -47,7 +47,7 @@ CHECKS: list[tuple[str, str, str]] = [
     ("c10", "123.6", "the real-input degeneracy statistic"),
     ("c9", "−0.021", "the size correlation"),
     ("c9", "p = 0.93", "the permutation p"),
-    ("c9", "**Coverage** was the", "the coverage reading"),
+    ("c9", "Coverage was the", "the coverage reading"),
     ("c9", "+0.1449", "the coverage coefficient"),
     ("c9", "8.6 × 10⁻⁴", "the coverage p-value"),
     ("c9", "23 of 24 cells", "the adjusted endpoint count"),
@@ -77,9 +77,9 @@ CHECKS: list[tuple[str, str, str]] = [
     ("overlap", "430 of 600", "the Open Targets overlap"),
     ("overlap", "24 of 600 and 18 of 600", "the temporal overlap"),
     ("audit", "50 PASS / 0 FAIL", "the audit result"),
-    ("audit", "57 PASS / 0 FAIL", "the claim-verification result"),
+    ("audit", "63 PASS / 0 FAIL", "the claim-verification result"),
     ("audit", "131 passed, 3 skipped", "the test suite"),
-    ("manifest", "33 tables and 8 figures", "the release manifest"),
+    ("manifest", "35 tables and 9 figures", "the release manifest"),
     ("groundtruth", "242 recomputed quantities", "the ground-truth table"),
     ("pauc.median", "+0.0308", "the partial-AUC median margin"),
     ("pauc.p10", "+0.0412", "the top-10 % median margin"),
@@ -97,15 +97,6 @@ def main() -> int:
     print("=" * 72)
     print("research_report_draft.md -- number verification")
     print("=" * 72)
-    for label, needle, what in CHECKS:
-        n_c = re.sub(r"\s+", " ", needle)
-        ok = n_c in collapsed
-        n_pass += ok
-        n_fail += (not ok)
-        print(f"  [{'PASS' if ok else 'FAIL'}] {label:<16} {what}")
-        if not ok:
-            print(f"         NOT FOUND: {needle!r}")
-            failures.append(f"{label}: {needle!r}")
 
     # numbers that must NOT appear
     forbidden = [
@@ -130,6 +121,55 @@ def main() -> int:
         print(f"  [{'PASS' if not present else 'FAIL'}] {needle:<26} {what}")
         if present:
             failures.append(f"forbidden {needle!r}")
+
+    # ---- the DOCX must carry the same numbers as the Markdown ----
+    print()
+    print("-" * 72)
+    print("the .docx deliverable")
+    print("-" * 72)
+    docx_path = REPORT.with_suffix(".docx")
+    if not docx_path.is_file():
+        print(f"  [FAIL] {docx_path.name} does not exist -- run "
+              f"scripts/markdown_to_docx.py")
+        n_fail += 1
+        failures.append(f"{docx_path.name} does not exist")
+    else:
+        try:
+            import docx as _docx
+            d = _docx.Document(str(docx_path))
+            dtext = " ".join(p.text for p in d.paragraphs)
+            for t in d.tables:
+                for row in t.rows:
+                    for c in row.cells:
+                        dtext += " " + c.text
+            dtext = re.sub(r"\s+", " ", dtext)
+            n_para = len(d.paragraphs)
+            n_tab = len(d.tables)
+            n_img = sum(1 for r in d.part.rels.values() if "image" in r.reltype)
+            print(f"  [INFO] {docx_path.name}: {n_para} paragraphs, "
+                  f"{n_tab} tables, {n_img} images")
+            # every headline number must survive the conversion
+            for label, needle, what in CHECKS:
+                # the DOCX carries the rendered text, so the Markdown
+                # emphasis markers must be stripped before comparing
+                n_c = re.sub(r"\s+", " ", needle.replace("**", ""))
+                if n_c in dtext:
+                    n_pass += 1
+                    print(f"  [PASS] {label:<16} {what}")
+                else:
+                    n_fail += 1
+                    print(f"  [FAIL] {label:<16} {what}")
+                    failures.append(f"docx: {label} ({needle!r}) is missing")
+            for needle, what in forbidden:
+                n_c = re.sub(r"\s+", " ", needle)
+                if n_c in dtext:
+                    n_fail += 1
+                    print(f"  [FAIL] {needle:<26} {what} (in the docx)")
+                    failures.append(f"docx: forbidden {needle!r}")
+        except Exception as e:
+            n_fail += 1
+            print(f"  [FAIL] the docx could not be read: {type(e).__name__}: {e}")
+            failures.append(f"docx unreadable: {e}")
 
     print()
     print("=" * 72)

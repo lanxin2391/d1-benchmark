@@ -5,7 +5,7 @@
 **Authors:** lanxin2391 (Networks & Engine), kakamiku (Labels & Data)
 **Pre-registration:** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762) (frozen 2026-09-27; amendments 1–5 in `docs/pre_registration_amendments.md`)
 **Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc3`
-**Reproducibility:** `python scripts/audit_reproducibility.py` → 50 PASS / 0 FAIL; `python scripts/verify_claims.py` → 57 PASS / 0 FAIL
+**Reproducibility:** `python scripts/audit_reproducibility.py` → 50 PASS / 0 FAIL; `python scripts/verify_claims.py` → 63 PASS / 0 FAIL
 **Date:** 2026-11-11
 
 ---
@@ -356,7 +356,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (57 PASS / 0 FAIL). The second mechanism
+manuscript against that table (63 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -369,8 +369,7 @@ against that class of error recurring.
 
 Across the 24 (network × label) cells at α = 0.5, ΔAUROC ranged from
 **−0.0125** (Reactome × `intogen_temporal_new`) to **+0.1711** (STRING
-physical × `ot_nolit`); **23 of 24 cells were positive** (Fig. 2,
-Table 1). The median cell was +0.0809 and the mean +0.0787.
+physical × `ot_nolit`); **23 of 24 cells were positive** (Fig. 1, Table 1). The median cell was +0.0809 and the mean +0.0787.
 
 Per label, the mean ΔAUROC over the six networks was +0.0821
 (`intogen2024`), +0.1058 (`ot_all`), +0.1062 (`ot_nolit`) and +0.0208
@@ -728,8 +727,8 @@ from size and coverage.
 ## Data and code availability
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–5 in `docs/pre_registration_amendments.md`.
-* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc3`. Release manifest with SHA-256 of 33 tables and 8 figures: `docs/release_manifest_v1.0-rc3.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc3 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (131 passed, 3 skipped); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (57 PASS / 0 FAIL).
+* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc3`. Release manifest with SHA-256 of 35 tables and 9 figures: `docs/release_manifest_v1.0-rc3.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc3 --check`.
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (131 passed, 3 skipped); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (63 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
 * **Ground truth and manuscript verification.** `review/ground_truth.tsv` (242 recomputed quantities) and `review/verification_report.txt`.
