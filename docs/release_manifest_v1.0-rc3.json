@@ -1,6 +1,7 @@
 {
   "release": "v1.0-rc3",
-  "commit": "420906489de6770da4b4ad7a21bb57d967a51c85",
+  "commit": "f48ec5aaaaef5eedc63292a7ea918f2c64bbdab1",
+  "artefacts_absent_from_that_commit": [],
   "built_by": "scripts/build_release_manifest.py",
   "note": "The pre-registration manifest (docs/pre_registration_manifest.json) is frozen and records the state filed with Zenodo; the fingerprint mismatches the audit reports are the expected consequence of the repairs that recomputed those tables. This file is the release's own record. The hashes below describe the files in the working tree at the commit named above; a reader can check them with scripts/check_release_manifest.py.",
   "n_tables": 33,
