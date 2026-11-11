@@ -79,6 +79,9 @@ KEY_TABLES = [
     "results/tables/results_stats_transfer.tsv",
     "results/tables/provenance_summary.tsv",
     "results/tables/gnn_courtesy_arm.tsv",
+    # the two co-primary endpoints
+    "results/tables/pauc_top10.tsv",
+    "results/tables/pauc_top10_summary.tsv",
     # the figure data
     "results/tables/figure1_data.tsv",
 ]
@@ -92,6 +95,7 @@ FIGURES = [
     "figures/figure6_network_stability.png",
     "figures/figure7_consensus_prior.png",
     "figures/figure8_stability_tradeoff.png",
+    "figures/figure9_pauc_top10.png",
 ]
 
 

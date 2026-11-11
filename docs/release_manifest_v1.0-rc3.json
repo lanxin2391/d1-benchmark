@@ -1,11 +1,11 @@
 {
   "release": "v1.0-rc3",
-  "commit": "f48ec5aaaaef5eedc63292a7ea918f2c64bbdab1",
+  "commit": "33d0841c92621dcd267f72f5bbc8a9a26130e387",
   "artefacts_absent_from_that_commit": [],
   "built_by": "scripts/build_release_manifest.py",
   "note": "The pre-registration manifest (docs/pre_registration_manifest.json) is frozen and records the state filed with Zenodo; the fingerprint mismatches the audit reports are the expected consequence of the repairs that recomputed those tables. This file is the release's own record. The hashes below describe the files in the working tree at the commit named above; a reader can check them with scripts/check_release_manifest.py.",
-  "n_tables": 33,
-  "n_figures": 8,
+  "n_tables": 35,
+  "n_figures": 9,
   "missing_at_build_time": [],
   "sha256_tables": {
     "results/tables/a4_table1_delta_auroc_v40.tsv": "6001756c43b67096c70193c85fabba498a831ddc851c6488b3eebb5750e02ec1",
@@ -40,6 +40,8 @@
     "results/tables/results_stats_transfer.tsv": "a7939cd82de54e0b432dbe03a9e04527465b696fb8df1037d2ef27dcfcfe5639",
     "results/tables/provenance_summary.tsv": "5c664505822ce3b47c8c967607207d49415c9d4c5371baa4b08c4cd205d3bd67",
     "results/tables/gnn_courtesy_arm.tsv": "37b7ed4ef24864ef165ff1df8970383f115826bccc4a5ef30746f3a2bbd9fb9a",
+    "results/tables/pauc_top10.tsv": "696efc582089d6a7e9c4e2ca12fb0c92d158b9877b94e1427312392c2dbacb1d",
+    "results/tables/pauc_top10_summary.tsv": "4a7c10a583c8b57a777e5101baa3938214a3b09bf3359ee1c5a0184031a211d8",
     "results/tables/figure1_data.tsv": "900e2ede50e96ac5b831dee0e3d42787cb4adae32289fb8324d1fbb7d57c1448"
   },
   "sha256_figures": {
@@ -50,6 +52,7 @@
     "figures/figure5b_stability_attribution.png": "5246c8d4460de316254bf1bcc4ef2138ddbf8894d304d7fcb24aa4b093ea6837",
     "figures/figure6_network_stability.png": "cc45e08b8f0a9b21354059923f5ba3ab604cfc1300e41c3c3d121564f9cb1bf6",
     "figures/figure7_consensus_prior.png": "c66b248fa50a16ae6645ef4c3fc9b391d13bcad10b7b9126948a72a9222f0ed9",
-    "figures/figure8_stability_tradeoff.png": "5aedbce15d30f7418795b1e296d5826bc5fb5f63aaac4b20f91f097fa220b157"
+    "figures/figure8_stability_tradeoff.png": "5aedbce15d30f7418795b1e296d5826bc5fb5f63aaac4b20f91f097fa220b157",
+    "figures/figure9_pauc_top10.png": "c097deb4c98d456e2dfd0cf6eb9c01167fe19c60268194a66b8f66be50f65f7b"
   }
 }
