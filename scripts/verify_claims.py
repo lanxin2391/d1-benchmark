@@ -310,6 +310,14 @@ def main(argv: list[str] | None = None) -> int:
          r"difference (\+\d\.\d{3,4})",
          ("control7_publication_count", "mean matched-minus-standard"),
          0.0002),
+        ("co-primary partial AUC median", "manuscript_a_sections.md",
+         r"\| partial AUC, FPR . 0\.02 \| (\+0\.\d{4}) \|",
+         ("co_primary_endpoint", "partial AUC FPR<=0.02: median margin"),
+         0.0002),
+        ("co-primary top-10 % median", "manuscript_a_sections.md",
+         r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
+         ("co_primary_endpoint", "precision in the top 10 %: median margin"),
+         0.0002),
     ]
     for cid, fname, pattern, key, tol in cross:
         val = gt.get(key)

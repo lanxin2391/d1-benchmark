@@ -315,6 +315,39 @@ def control10() -> None:
 
 
 # ----------------------------------------------------------------- provenance
+def co_primary_endpoints() -> None:
+    """The two co-primary endpoints of the upstream commit 9b628e4."""
+    p = TABLES / "pauc_top10_summary.tsv"
+    if not p.exists():
+        return
+    d = pd.read_csv(p, sep="\t")
+    for ep, name in (("auroc", "full AUROC"),
+                     ("pauc", "partial AUC FPR<=0.02"),
+                     ("p10", "precision in the top 10 %")):
+        sub = d[d.endpoint == ep]
+        if not len(sub):
+            continue
+        record("co_primary_endpoint", f"{name}: median margin",
+               r4(sub.delta_mean.median()), "pauc_top10_summary.tsv")
+        record("co_primary_endpoint", f"{name}: arms positive",
+               f"{int((sub.delta_mean > 0).sum())}/{len(sub)}",
+               "pauc_top10_summary.tsv")
+    piv = d.pivot_table(index=["network", "label"], columns="endpoint",
+                         values="delta_mean")
+    if {"auroc", "pauc", "p10"} <= set(piv.columns):
+        from scipy import stats as _st
+        record("co_primary_endpoint", "Spearman rho AUROC vs partial AUC",
+               round(float(_st.spearmanr(piv["auroc"], piv["pauc"]).statistic), 3),
+               "pauc_top10_summary.tsv")
+        record("co_primary_endpoint", "Spearman rho AUROC vs top-10 %",
+               round(float(_st.spearmanr(piv["auroc"], piv["p10"]).statistic), 3),
+               "pauc_top10_summary.tsv")
+        record("co_primary_endpoint", "arms negative on partial AUC",
+               int((piv["pauc"] < 0).sum()), "pauc_top10_summary.tsv")
+        record("co_primary_endpoint", "arms negative on top-10 %",
+               int((piv["p10"] < 0).sum()), "pauc_top10_summary.tsv")
+
+
 def provenance() -> None:
     ps = t("provenance_summary.tsv")
     ps = ps[ps.alpha == 0.5]
@@ -395,6 +428,7 @@ def main() -> int:
     control8()
     control9()
     control10()
+    co_primary_endpoints()
     provenance()
     gnn()
     networks()

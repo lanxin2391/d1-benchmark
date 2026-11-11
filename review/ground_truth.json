@@ -910,6 +910,76 @@
   "note": ""
  },
  {
+  "quantity": "co_primary_endpoint",
+  "scope": "full AUROC: median margin",
+  "value": 0.0809,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "full AUROC: arms positive",
+  "value": "23/24",
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "partial AUC FPR<=0.02: median margin",
+  "value": 0.0308,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "partial AUC FPR<=0.02: arms positive",
+  "value": "20/24",
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "precision in the top 10 %: median margin",
+  "value": 0.0412,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "precision in the top 10 %: arms positive",
+  "value": "20/24",
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "Spearman rho AUROC vs partial AUC",
+  "value": 0.804,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "Spearman rho AUROC vs top-10 %",
+  "value": 0.897,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "arms negative on partial AUC",
+  "value": 4,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "arms negative on top-10 %",
+  "value": 4,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
   "quantity": "provenance_eta2",
   "scope": "intogen2024",
   "value": 0.210672,

@@ -129,6 +129,16 @@ control10_random_input	hub overlap, real	0.1087	control10_random_input_summary.t
 control10_random_input	hub overlap, random	0.0448	control10_random_input_summary.tsv	
 control10_random_input	input sensitivity Spearman	0.5924	control10_random_input_summary.tsv	
 control10_random_input	input sensitivity Jaccard	0.0185	control10_random_input_summary.tsv	
+co_primary_endpoint	full AUROC: median margin	0.0809	pauc_top10_summary.tsv	
+co_primary_endpoint	full AUROC: arms positive	23/24	pauc_top10_summary.tsv	
+co_primary_endpoint	partial AUC FPR<=0.02: median margin	0.0308	pauc_top10_summary.tsv	
+co_primary_endpoint	partial AUC FPR<=0.02: arms positive	20/24	pauc_top10_summary.tsv	
+co_primary_endpoint	precision in the top 10 %: median margin	0.0412	pauc_top10_summary.tsv	
+co_primary_endpoint	precision in the top 10 %: arms positive	20/24	pauc_top10_summary.tsv	
+co_primary_endpoint	Spearman rho AUROC vs partial AUC	0.804	pauc_top10_summary.tsv	
+co_primary_endpoint	Spearman rho AUROC vs top-10 %	0.897	pauc_top10_summary.tsv	
+co_primary_endpoint	arms negative on partial AUC	4	pauc_top10_summary.tsv	
+co_primary_endpoint	arms negative on top-10 %	4	pauc_top10_summary.tsv	
 provenance_eta2	intogen2024	0.210672	provenance_summary.tsv	
 provenance_kruskal_p	intogen2024	0.501337	provenance_summary.tsv	
 provenance_eta2	intogen_temporal_new	0.022916	provenance_summary.tsv	

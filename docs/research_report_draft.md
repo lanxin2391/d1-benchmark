@@ -44,7 +44,13 @@ ranged from −0.0125 (Reactome × newly-discovered IntOGen drivers) to
 +0.1711 (STRING physical × Open Targets no-literature); 23 of 24 cells
 were positive. Both null models were rejected overwhelmingly: 23 of 24
 cells beat the degree-matched random-seed null and 23 of 24 beat the
-rewired-network null at z > 5. The 95 % confidence interval on ΔAUROC
+rewired-network null at z > 5. On the two endpoints the published
+evidence actually uses — partial AUC below 2 % FPR (Guala & Sonnhammer
+2017) and precision in the top 10 % — the margin is smaller but still
+positive in 20 of 24 arms (median +0.031 and +0.041 against +0.081 for
+the full AUROC), and the ordering of the arms is unchanged
+(Spearman ρ = 0.80 and 0.90): the prior's advantage is a
+global-ranking advantage, not a top-of-list artefact. The 95 % confidence interval on ΔAUROC
 excluded zero in 24 of 24 arms under four of the five interval
 constructions and in 20 of 24 under the pre-registered gene-cluster
 bootstrap. The margin was flat across the degree tercile of the seeds
@@ -302,6 +308,21 @@ degeneracy statistic, the hub concentration of the top-K under both
 regimes, and the input sensitivity (Spearman and top-K Jaccard between
 the two rankings of the same fold).
 
+### 2.5b Co-primary endpoints
+
+The published evidence does not use the full AUROC. Guala & Sonnhammer
+(2017) compare AUCs only up to an FPR of 0.02 and report that the
+diffusion methods win only in the **top 10 %** of the ranking; Picart-
+Armada et al. (2019) find that AUROC and top-k order the methods
+differently. We therefore compute two further endpoints on the same
+folds, the same seeds and the same degree baseline — the partial AUC
+below 2 % FPR, normalised so that a random scorer gives 0 and a perfect
+one 1, and the precision in the top 10 % — and report them as
+**co-primary**. The pre-registered endpoint remains the full AUROC and
+the H1 verdict is unchanged; the repeat is the unit of record
+throughout (`scripts/run_pauc_top10.py`,
+`results/tables/pauc_top10_summary.tsv`).
+
 ### 2.6 Statistics
 
 The primary endpoint is ΔAUROC at α = 0.5 over the 200 (repeat, fold)
@@ -376,6 +397,32 @@ exception was the Reactome temporal cell, where the observed value fell
 
 Both nulls say the same thing: the margin cannot be produced by the
 degree sequence, nor by any edge set with that degree sequence.
+
+### 3.2b The margin on the endpoints the literature uses
+
+The full AUROC is the metric on which propagation methods look worst, so
+the same 24 arms were re-analysed on the partial AUC below 2 % FPR and
+on the precision in the top 10 % (`results/tables/pauc_top10_summary.tsv`):
+
+| endpoint | median margin over degree | arms positive |
+|---|---:|---|
+| full AUROC (pre-registered primary) | **+0.0809** | 23/24 |
+| partial AUC, FPR ≤ 0.02 | **+0.0308** | 20/24 |
+| precision in the top 10 % | **+0.0412** | 20/24 |
+
+The prior's advantage is a **global-ranking advantage**: it is 38 % (partial
+AUC) to 51 % (top-10 % precision) smaller in those regions than in the
+full AUROC, and 4 of the 24 arms turn negative on each. The *ordering* of
+the arms is nevertheless stable — Spearman ρ = 0.80 (AUROC vs partial AUC)
+and 0.90 (AUROC vs top-10 % precision) — so the endpoint choice changes
+how large the margin is, not which networks look best.
+
+The sharpest single statement is `rna_coexp × intogen2024`: ΔAUROC
++0.0521 [+0.0504, +0.0538] but Δpartial-AUC −0.0072 [−0.0088, −0.0055],
+i.e. the prior is *worse* than degree below 2 % FPR while being clearly
+better over the whole ranking. The negative cell (Reactome ×
+newly-discovered drivers) is negative under all three endpoints, so that
+finding does not depend on the metric.
 
 ### 3.3 The margin is not a hub effect, and not a seed-degree effect
 
@@ -571,15 +618,21 @@ This is a property of the *label*, and it competes with the coverage
 reading of the Reactome cell; the two explanations are not the same, and
 we report both.
 
-**The endpoint is the one the literature warns about.** AUROC is the
-metric on which the effect is smallest. Guala & Sonnhammer (2017)
-found that a degree-controlled local method beat RWR on a full ranking
-while RWR won only in the top 1–10 %, and Picart-Armada et al. (2019)
-found that AUROC and top-k order methods differently. D1 reports
-ΔAUPRC and Δprecision-at-k as secondary endpoints, but the headline is
-ΔAUROC, and the secondary endpoints should be given equal weight by a
-reader who cares about the top of the list. We did not pre-register a
-top-k primary endpoint, and we do not now introduce one.
+**The advantage is global, and it is smaller where the literature
+looks.** On the endpoints Guala & Sonnhammer (2017) actually use — the
+partial AUC below 2 % FPR — and on the top-10 % precision, the margin
+is 38–51 % smaller than the full-AUROC margin, and 4 of the 24 arms
+turn negative (§3.2b). This is the most important qualification on the
+headline number, and it is quantified rather than asserted. Two things
+follow. The claim survives: the median margin is still +0.031 (partial
+AUC) and +0.041 (top 10 %) against 20 of 24 arms positive, and the
+ordering of the arms is unchanged (ρ = 0.80 and 0.90), so a reader who
+cares about the top of the list still gets the same answer about which
+network to use. And the claim is narrower than "the prior helps most
+where it matters": it helps *globally*, and it helps least in the
+extreme tail of the ranking, where degree is already a strong baseline
+and a handful of hubs carry most of the signal. A reader who needs the
+top of the list should know that before quoting +0.08.
 
 **One learner family.** The design fixes RWR and measures the network's
 contribution under it. The GNN courtesy arm (§J.4) shows that an
@@ -645,7 +698,9 @@ better than they are.
 6. **The cross-catalogue transfer grid has 66 of 72 cells**; the six
    missing cells are reported as missing.
 7. **The primary endpoint is ΔAUROC**, and the literature warns that
-   this is the metric on which the effect is smallest (§4.2).
+   this is the metric on which the effect is smallest (§4.2). The
+   co-primary low-FPR and top-10 % endpoints quantify the gap (§3.2b):
+   the margin is 38–51 % smaller there and 4 of 24 arms turn negative.
 8. **No external prospective validation.** Boutros et al. (2014) argue
    that the gold standard must be held out from the developers of the
    methods being assessed. We pre-registered the analysis and released
@@ -675,8 +730,9 @@ from size and coverage.
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–5 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc3`. Release manifest with SHA-256 of 33 tables and 8 figures: `docs/release_manifest_v1.0-rc3.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc3 --check`.
 * **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (131 passed, 3 skipped); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (57 PASS / 0 FAIL).
+* **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (225 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (242 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

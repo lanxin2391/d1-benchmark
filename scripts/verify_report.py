@@ -80,7 +80,11 @@ CHECKS: list[tuple[str, str, str]] = [
     ("audit", "57 PASS / 0 FAIL", "the claim-verification result"),
     ("audit", "131 passed, 3 skipped", "the test suite"),
     ("manifest", "33 tables and 8 figures", "the release manifest"),
-    ("groundtruth", "225 recomputed quantities", "the ground-truth table"),
+    ("groundtruth", "242 recomputed quantities", "the ground-truth table"),
+    ("pauc.median", "+0.0308", "the partial-AUC median margin"),
+    ("pauc.p10", "+0.0412", "the top-10 % median margin"),
+    ("pauc.cells", "20 of 24 arms", "the co-primary positive-arm count"),
+    ("pauc.rho", "ρ = 0.80", "the endpoint-ordering correlation"),
 ]
 
 

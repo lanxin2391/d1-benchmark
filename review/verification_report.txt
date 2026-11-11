@@ -128,7 +128,9 @@ states something the tables do not support.
   [PASS] manuscript_b overlap row       manuscript=+430.0000  table=+430.0000  tol=0.5
   [PASS] manuscript_b transfer mean     manuscript=+39.8000  table=+39.8100  tol=0.05
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
+  [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
+  [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
 
 ========================================================================
-RESULT: 61 PASS / 0 FAIL
+RESULT: 63 PASS / 0 FAIL
 ========================================================================
