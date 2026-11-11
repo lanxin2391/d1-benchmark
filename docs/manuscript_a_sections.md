@@ -16,7 +16,7 @@ to the D1 benchmark paper. It covers:
 * §E — Results §Network provenance ablation (RNA / protein / curated)
 * §F — Results §Robustness controls (W5 rewiring, D-09 temporal drift, D-11 common-size cap, D-12 shared universe, complex-aware CV, hub-capped RWR)
 * §G — Results §A5 degree-matched seed null (control 2, fine mode)
-* §H — Results §Table 1 (24 arms × 3 alphas = 72 cells)
+* §H — Results §Table 1 (24 arms × 3 alphas = 72 cells) + §H.1 the two co-primary endpoints (low-FPR pAUC, top-10 %)
 * §I — Results §Where the stability of the prior comes from (stability atlas, attribution, consensus prior)
 * §J — Discussion §H1 verdict + provenance + §7 GNN rebuttal
 * §K — Conclusion
@@ -716,6 +716,49 @@ rna_coexp       mean δAUROC       +0.0521    +0.0767   +0.0834   +0.0127
 informative Discussion paragraph, and the three robustness controls in
 §F.2–§F.4 are what make it a finding rather than an accident.
 
+### H.1 Two co-primary endpoints: the low-FPR partial AUC and the top-10 % precision
+
+The full AUROC is the metric on which propagation methods look worst:
+Guala & Sonnhammer (2017) compare AUCs only up to an FPR of 0.02 (partial
+AUCs) and report that diffusion methods win only in the **top 10 %** of the
+ranking. If our result only existed in the full AUROC, the published
+effect sizes would be invisible to it. We therefore computed both
+endpoints on exactly the same folds, seeds and degree baseline
+(`scripts/run_pauc_top10.py`; the AUROC implementation agrees with
+scikit-learn to 2e-16, and the partial AUC is normalised so that a random
+scorer gives 0 and a perfect one 1).
+
+| endpoint | median margin over degree | arms positive |
+|---|---|---|
+| full AUROC (primary) | **+0.0809** | 23/24 |
+| partial AUC, FPR ≤ 0.02 | +0.0308 | 20/24 |
+| precision in the top 10 % of the test set | +0.0412 | 20/24 |
+
+Two things follow. First, **the margin is smaller where the literature
+looks**: the prior's advantage over degree is a *global*-ranking
+advantage, and it is roughly 40–60 % smaller in the low-FPR and
+top-10 % regions than in the full AUROC. Second, **the ordering of the
+arms is stable** (Spearman ρ = 0.80 between the AUROC and the partial
+AUC, ρ = 0.90 between the AUROC and the top-10 % metric), so the choice
+of endpoint does not change which networks look best — it changes how
+big the margin is.
+
+One arm deserves a mention because it is the sharpest statement of the
+point: `rna_coexp × intogen2024` has ΔAUROC = **+0.0521** [+0.0504,
++0.0538] but ΔpAUC = **−0.0072** [−0.0088, −0.0055] — the prior is
+*worse* than degree below 2 % FPR while being clearly better overall.
+The negative cell, `reactome × intogen_temporal_new`, is negative under
+all three endpoints (−0.0125 / −0.0031 / −0.0091), so that finding does
+not depend on the metric.
+
+These are **exploratory** co-primary endpoints (amendment 4): the
+pre-registered endpoint stays the full AUROC, and the H1 verdict is
+unchanged. The partial AUC at FPR ≤ 0.02 is noisy by construction (a
+fold holds 30–120 positives, so the truncated ROC rests on very few
+points), and the top-10 % precision contains 1–2 positives in the
+temporal arms; the per-arm intervals are in
+`results/tables/pauc_top10_summary.tsv`.
+
 ## §I. Results §Where the stability of the prior comes from
 
 The pre-registration fixes *what* we measure (the effect of the prior
@@ -1343,7 +1386,8 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
 * A's logs: `docs/a0_log.md` ... `docs/a5_log.md`, `docs/w5_log.md`,
   `docs/stats_analysis_log.md`, `docs/gnn_courtesy_log.md`,
   `docs/s2_log.md`.
-* A's new tables: `results/tables/stability_per_gene.tsv`,
+* A's new tables: `results/tables/pauc_top10.tsv`,
+  `pauc_top10_summary.tsv`, `stability_per_gene.tsv`,
   `stability_by_arm.tsv`, `stability_features_per_gene.tsv`,
   `stability_attribution.tsv`, `network_stability.tsv`,
   `network_stability_vs_topology.tsv`, `consensus_table.tsv`,
