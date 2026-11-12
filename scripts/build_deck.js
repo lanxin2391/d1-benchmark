@@ -42,6 +42,8 @@ const SECTION = {
   7: AQUA, 8: BLUE, 9: BLUE, 10: BLUE, 11: ORANGE, 12: ORANGE,
   13: ORANGE, 14: GREEN, 15: GREEN, 16: GREEN,
 };
+// the appendix slides are grey: they are evidence, not narrative
+const APPENDIX_GREY = "6B675E";
 
 function pngSize(file) {
   const b = fs.readFileSync(file);
@@ -61,7 +63,8 @@ function readJSON(p) {
 
 const part1 = readJSON(path.join(ROOT, "docs/deck/slides_01_08.json"));
 const part2 = readJSON(path.join(ROOT, "docs/deck/slides_09_16.json"));
-const slides = part1.slides.concat(part2.slides);
+const appx = readJSON(path.join(ROOT, "docs/deck/slides_appendix.json"));
+const slides = part1.slides.concat(part2.slides).concat(appx.slides);
 const meta = part1.meta;
 
 const pptx = new PptxGenJS();
@@ -73,7 +76,7 @@ pptx.author = meta.author;
 pptx.company = meta.company;
 
 function chrome(s, sl) {
-  const colour = SECTION[sl.n] || BLUE;
+  const colour = sl.kind === "appendix" ? APPENDIX_GREY : (SECTION[sl.n] || BLUE);
   s.background = { color: "FFFFFF" };
   if (sl.tag) {
     s.addText(sl.tag, {
@@ -422,6 +425,43 @@ slides.forEach((sl) => {
       x: M, y: 1.5, w: CW, colW: [3.9, 3.3, 5.03], fontFace: FONT,
       fontSize: 14, border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.82, valign: "middle", margin: [0.03, 0.08, 0.03, 0.08],
+    });
+    return;
+  }
+
+  if (sl.kind === "appendix") {
+    sl.footer = sl.footer || ("Appendix: the evidence behind the claims -- "
+      + "every full table is in the repository "
+      + "(results/tables/, with SHA-256 manifests).");
+    chrome(s, sl);
+    if (sl.note) {
+      s.addText(sl.note, {
+        x: M, y: 1.38, w: CW, h: 0.5, fontFace: FONT, fontSize: 12,
+        italic: true, color: MUTED, align: "left", valign: "top", margin: 0,
+      });
+    }
+    const tb = sl.table;
+    const head = tb.head.map((h) => ({
+      text: h, options: { bold: true, color: "FFFFFF", fill: { color: APPENDIX_GREY } },
+    }));
+    const body = tb.rows.map((r, i) => r.map((c, j) => ({
+      text: String(c),
+      options: {
+        color: INK, bold: j === 0, fill: { color: i % 2 ? "FFFFFF" : "F5F3EE" },
+      },
+    })));
+    const ncol = tb.head.length;
+    const first = ncol >= 4 ? 3.1 : 3.9;
+    const rest = (CW - first) / (ncol - 1);
+    const colW = tb.head.map((_, j) => (j === 0 ? first : rest));
+    // fit the table into the space between the note and the footer
+    const avail = 4.55;
+    const rowH = Math.min(tb.rowh || 0.42, avail / (tb.rows.length + 1));
+    const fs = Math.min(tb.fontsize || 12, Math.max(8.5, (rowH * 72) / 2.7));
+    s.addTable([head].concat(body), {
+      x: M, y: 1.95, w: CW, colW, fontFace: FONT, fontSize: fs,
+      border: { type: "solid", color: HAIR, pt: 0.75 },
+      rowH, valign: "middle", margin: [0.02, 0.06, 0.02, 0.06],
     });
     return;
   }
