@@ -485,6 +485,29 @@ so the D-11 control panel covers five labels (30 arms).
 (plan item C5 pre-dates the analysis); the 24-arm pre-registered
 endpoint is untouched.
 
+### C15 — Label quality tiers
+
+Every catalogue carries its own evidence, and that evidence is not
+equally strong inside a catalogue. Each positive gene is therefore given
+a tier from its own catalogue's notion of confidence:
+
+* **ClinGen** — the review status of the gene's best-curated disease
+  (Definitive/Strong = high, Moderate = mid, Limited/Disputed = low).
+* **IntOGen** — the number of *distinct detecting methods* that flagged
+  the gene (IntOGen combines seven complementary methods and votes;
+  four or more votes = high, two or three = mid, one = low).
+* **Open Targets** — whether the gene's cancer associations are carried
+  by a non-literature source. (The number of sources cannot be used:
+  88,510 of 89,111 (target, cancer-disease) pairs in the datasource
+  table carry exactly one source, so a source-count tier would be
+  constant across the whole label.)
+* **NCG** — the number of publications the catalogue cites for the gene
+  (NCG 6.0's own confidence level is unavailable because the portal is
+  down).
+
+The tiers are in `results/tables/label_quality_tiers.tsv`, built by
+`scripts/run_c7_build_tiers.py`.
+
 ---
 
 ## §D. Methods §4.6 — Statistical analysis
@@ -1262,6 +1285,70 @@ across five catalogues of quite different provenance, a quarter of the
 between-arm spread is the network and a third is the label, and the
 largest single piece is the interaction — which network you use depends
 on which catalogue you are trying to predict.
+
+### F.18 What the label quality does to the margin
+
+**The margin is recomputed with only one tier's positives counted as
+positives** (the other tiers' positives fall into the background). The
+seeds, and therefore the prior, do not change, so the comparison
+isolates the evaluation noise. The medians over the six networks:
+
+| label | high tier | mid tier | low tier |
+|---|---|---|---|
+| intogen2024 | +0.0892 | +0.0633 | +0.0653 |
+| intogen_temporal_new | +0.0743 | +0.0123 | +0.0232 |
+| ot_all | +0.1120 | +0.0908 | — |
+| ot_nolit | +0.1097 | +0.0775 | — |
+| ncg_known | +0.0666 | +0.0874 | +0.0650 |
+| clingen_label | +0.1042 | +0.1207 | — |
+
+For the four IntOGen- and Open-Target-derived labels the **high tier
+carries the larger margin** (IntOGen 2024: +0.0892 against +0.0633 and
++0.0653; the temporal label +0.0743 against +0.0123 and +0.0232;
+`ot_all` +0.1120 against +0.0908; `ot_nolit` +0.1097 against +0.0775).
+The NCG label is the exception and inverts the order (+0.0666 high,
++0.0874 mid, +0.0650 low), and that is not a contradiction: the NCG tier
+*is* a publication count, so its "high" tier is exactly the set of genes
+the degree baseline already ranks well, and the prior adds most where
+the catalogue's own evidence is thinnest. The two orderings are the same
+statement seen from two sides.
+
+**Label noise at the ClinGen rate costs almost nothing.** ClinGen's
+expert panels disagree on 17 % of multi-laboratory variants, and the
+literature review nominates that rate as the external anchor for label
+noise. Simulating exactly that rate — a random 17 % of the positives
+demoted to background in every fold — barely moves the margin:
+
+| network | n positives | clean | 17 % misassigned | change |
+|---|---|---|---|---|
+| funmap | 61 | +0.0735 | +0.0733 | -0.0002 |
+| intact | 83 | +0.1124 | +0.1134 | +0.0010 |
+| reactome | 61 | +0.1710 | +0.1736 | +0.0026 |
+| rna_coexp | 49 | +0.0665 | +0.0647 | -0.0018 |
+| string_full700 | 84 | +0.0974 | +0.0970 | -0.0005 |
+| string_phys700 | 80 | +0.1686 | +0.1685 | -0.0001 |
+
+The margin changes by between −0.0018 and +0.0026. A perfect scorer
+would lose 8.5 AUROC points under the same misassignment (the ceiling
+falls from 1 to 1 − f/2 = 0.915), so the prior's margin is **not** an
+artefact of the label noise that ClinGen's own curation process
+documents.
+
+**The wide intervals are a small-positive-set phenomenon, not a label
+quality phenomenon.** The width of the gene-cluster bootstrap interval
+correlates with the arm's positive-set size at Spearman ρ = −0.966
+(p = 2.0e-14, 24 arms) and with the share of high-tier positives at
+ρ = −0.475 (p = 0.019). The first term dominates: the cells whose
+interval is wide are the cells with few positives, which is what the
+variance decomposition already says (the within-cell noise is 40 % of
+the total variance). The second term says that, all else equal, a
+label whose positives are well-cured gives a tighter interval.
+
+Two caveats on the tier table itself: the small tiers are small (the
+temporal label's high tier is 11 genes, the ClinGen mid tier is 4), so
+their entries are noisy; and the ClinGen label is almost entirely
+Definitive or Strong (80 high, 4 mid, 0 low), so it cannot separate
+tiers at all.
 
 ---
 
