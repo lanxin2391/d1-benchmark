@@ -5,8 +5,12 @@ Why this label exists: it is an INDEPENDENT arbitration catalogue.
 None of the project's four label sets contains it, so it can be used
 (a) to measure how much of our "negative" set is actually curated
     driver genes we happen not to label (Bailey et al. 2018; Repana et
-    al. 2019, and B's review item G8), and (b) as an external check on
-    the ranking (B's review item G7).
+    al. 2019) and (b) as an external check on the ranking (Boutros et
+    al. 2014). These two uses are ours: the literature review
+    (prior_benchmark_literature.md) lists Repana's NCG as the concrete
+    case of the "the label sets overlap and leak into each other"
+    worry, and the work plan's Phase C item C2 is what first put the
+    NCG catalogue on the table.
 
 It also supplies a literature count per gene -- the number of
 publications NCG cites for it -- which is the closest thing we have to

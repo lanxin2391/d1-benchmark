@@ -1,7 +1,7 @@
 """G3 -- the bait-matched null: is the prior's discrimination a
 study-bias artefact?
 
-B's project review (section 7.1, G3) points at Schaefer et al. 2015
+The literature review points at Schaefer et al. 2015
 ("Correcting for the study bias"): the number of publications that
 mention a gene (the "bait" count) correlates with its degree
 (r = 0.520), and a null that ignores this "introduces circularity into

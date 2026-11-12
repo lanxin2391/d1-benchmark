@@ -1,6 +1,6 @@
 """G8 -- the negative set is not clean, and how much does it matter?
 
-B's project review (section 7.2, G8) points at Bailey et al. 2018 (the
+The literature review points at Bailey et al. 2018 (the
 LDA filter that removes 45 curated false positives from 127 true
 positives) and Repana et al. 2019 (NCG flags 201 possible false
 positives and 49 known genes it does not label). Our negative set is

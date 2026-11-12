@@ -1,7 +1,8 @@
 """GR-9 -- the arbitration test, stratified by cancer type.
 
-B's review (section 7.2, GR-9) asks whether the prior's advantage
-depends on the cancer type. The NCG catalogue annotates each known
+The literature review (papers_methods_review.md) asks for the
+margin to be reported per cancer type / cohort, because the cohorts
+differ in power. This script answers that with the NCG catalogue. The NCG catalogue annotates each known
 driver with the cancer types it was curated for (426 of the 708 known
 drivers carry at least one), so the GR-7 arbitration test can be run
 separately per cancer type: the arbitration positives are the NCG-known
