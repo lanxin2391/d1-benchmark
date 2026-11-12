@@ -406,6 +406,26 @@ between the real-input and the random-input ranking of the same fold.
 Implemented in `scripts/run_control10_random_input.py`; aggregate in
 `results/tables/control10_random_input_summary.tsv`.
 
+### C12 — Bait-matched null (Control 11; after Schaefer et al. 2015)
+
+Schaefer et al. (2015, *Nat Commun* 6:7889) showed that the number of
+publications that mention a gene (the "bait" count) correlates with its
+degree (r = 0.520), and that a null model which ignores this
+"introduces circularity into network-based disease gene prediction". The
+degree baseline removes the symptom (the degree) but not the common
+cause (how much the gene has been studied), and the project's label sets
+are degree-enriched — which we measure directly (F.12, part A).
+
+Control 11 therefore compares every held-out positive against
+**literature-matched** random negatives: for each positive, 20 negatives
+drawn by nearest neighbour on log10(n_pubmed + 1) — the project's own
+publication count, the bait-count proxy — and the fraction of them that
+the prior scores above it. The unmatched version (random negatives) is
+computed alongside, so the difference between the two says whether the
+matching matters. Implemented in `scripts/run_g3_bait_matched_null.py`;
+aggregates in `results/tables/g3_bait_matched_null.tsv` and
+`results/tables/g3_label_degree_enrichment.tsv`.
+
 ---
 
 ## §D. Methods §4.6 — Statistical analysis
@@ -934,6 +954,49 @@ different, more hub-enriched set than a meaningless input would, which
 is exactly what a genuine, input-driven signal looks like. And because
 the degree baseline is the comparator, the margin is the part of that
 signal that degree does not already explain.
+
+### F.12 The bait-matched null: how much of the advantage is study visibility?
+
+**A. The label sets are degree-enriched.** Inside each network's LCC,
+the positives' mean degree exceeds the negatives' by 1.0–2.7× (e.g.
+string_full700 × ot_all 74.6 against 28.1; reactome × ot_all 22.7
+against 8.9; intact × ot_all 139.3 against 60.4). The temporal label is
+the least enriched of the four (ratios 1.03–1.54). Full table in
+`results/tables/g3_label_degree_enrichment.tsv`.
+
+**B. Against a literature-matched null, part of the advantage survives —
+except on the temporal label.** The fraction of held-out positives that
+the prior scores above 20 random negatives, before and after matching
+the negatives on the publication count (chance level = 5 %):
+
+| label | vs the unmatched null | vs the literature-matched null |
+|---|---|---|
+| intogen2024 | 20.7 % | 10.9 % |
+| ot_all | 31.0 % | 20.2 % |
+| ot_nolit | 27.1 % | 18.9 % |
+| **intogen_temporal_new** | 6.8 % | **4.7 % (chance)** |
+
+**On the three curated label systems a real part of the advantage
+survives** (ot_all: 20.2 % against a 5 % chance level, four times
+chance). **On the temporal label it does not**: the positives are
+scored above their literature-matched non-drivers at exactly the chance
+rate, so the prior's advantage there is a **study-visibility effect, not
+a topological one**.
+
+Three independent measurements now agree on this: the Control-7 matched
+null (F.8: the temporal margin collapses to +0.0022 against +0.0162),
+the low-FPR endpoint (H.1: the margin is 40–60 % smaller where the
+literature measures the ranking) and the DepMap validation (the top 30
+candidates carry no functional signal). This is the paper's most
+consequential limitation and it belongs in the abstract, not in a
+footnote: **the prior's contribution is a global-ranking contribution
+on the curated label systems, and it is largely a literature effect on
+newly discovered drivers.**
+
+The reader should also note what this does *not* say: the positive arms
+on the three curated labels still beat a degree-matched, literature-
+matched null by four times chance, so the prior is doing something that
+the degree baseline and the publication count do not.
 
 ---
 
