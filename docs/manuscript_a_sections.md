@@ -426,6 +426,27 @@ matching matters. Implemented in `scripts/run_g3_bait_matched_null.py`;
 aggregates in `results/tables/g3_bait_matched_null.tsv` and
 `results/tables/g3_label_degree_enrichment.tsv`.
 
+### C13 — The NCG arbitration catalogue (an independent driver catalogue)
+
+The NCG catalogue (Repana et al. 2019, *Genome Biology* 20:1,
+doi:10.1186/s13059-018-1612-0) is a manually curated repository of 2,372
+cancer genes with known or predicted driver roles, collected from 275
+publications. **None of the project's four label sets contains it**, which
+makes it an independent arbitration catalogue (Boutros et al. 2014: the
+gold standard dominates the ranking, so the evaluator should be blind to
+the algorithm). It also supplies, per gene, the number of publications
+NCG cites for it — the closest available proxy for Schaefer et al.'s
+"bait" count, i.e. the study-visibility covariate their degree-matched
+null model is built on.
+
+Built by `scripts/build_ncg.py` into `data/processed/labels/ncg.tsv`
+(708 known tumour suppressors / oncogenes, 104 multi-screen candidates,
+1,560 screening-level genes, with the cancer type, the literature count,
+the fraction of cell lines in which the gene is essential and the PPI
+degree). It is used twice: to measure and correct the composition of our
+negative set (Control 12, F.13) and as the external comparison of
+§F.14.
+
 ---
 
 ## §D. Methods §4.6 — Statistical analysis
@@ -997,6 +1018,52 @@ The reader should also note what this does *not* say: the positive arms
 on the three curated labels still beat a degree-matched, literature-
 matched null by four times chance, so the prior is doing something that
 the degree baseline and the publication count do not.
+
+### F.13 The negative set is not clean, and it matters
+
+Bailey et al. (2018) removed 45 curated false positives from 127 true
+positives with an LDA filter; Repana et al. (2019) flag 201 possible
+false positives. Our negative set is "everything else in the universe",
+so every curated driver we happen not to label is treated as a
+*confident* negative. With the NCG catalogue in hand this becomes
+measurable.
+
+**How contaminated are the negatives?** Between **10 % and 22 %** of the
+held-out negatives are in the NCG catalogue, and **1.3 % to 9.5 %** are
+NCG-known high-confidence drivers. Reactome's arms are the worst
+(15–22 %), the dense protein networks the least (10 %).
+
+**Does it change the result?** Yes, and in both directions — so this is
+not a small correction:
+
+| network | label | ΔAUROC, standard background | ΔAUROC, NCG-cleaned background |
+|---|---|---|---|
+| intact | intogen2024 | +0.0651 | **+0.0304** |
+| funmap | intogen2024 | +0.1001 | **+0.0247** |
+| string_phys700 | intogen2024 | +0.1189 | **+0.0768** |
+| funmap | ot_all | +0.0853 | **+0.1030** |
+| string_phys700 | ot_nolit | +0.1711 | **+0.1979** |
+| reactome | intogen_temporal_new | −0.0125 | **+0.0073** |
+
+On the IntOGen label the margin roughly **halves**; on the Open Targets
+labels it **grows**, because removing curated drivers from the
+background removes false negatives that the degree baseline was getting
+right; and Reactome's temporal cell flips sign. Under the cleaned
+background the low-FPR advantage also disappears on the IntOGen label
+(several arms go negative in ΔpAUC).
+
+**The IntOGen label is a good proxy for an independent gold standard; the
+Open Targets labels are not.** 70–79 % of the NCG-known drivers are in
+`intogen2024` (52–59 % in the temporal label), against 27–37 % in
+`ot_nolit` — the Open Targets panels are much broader, which is also why
+they carry the largest false-positive contamination.
+
+The honest conclusion is uncomfortable and belongs in the abstract:
+**the benchmark's numbers depend on how the negative set is composed**,
+and the cleanest negative set (no curated driver left in it) roughly
+halves the advantage on the strictest label. The exploratory family
+carries the correction (Control 12); the pre-registered endpoint is
+unchanged.
 
 ---
 
