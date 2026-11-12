@@ -58,16 +58,23 @@ def main() -> int:
     lit["pubmed_id"] = lit["pubmed_id"].astype(str)
     n_pub = (lit.groupby("symbol")["pubmed_id"]
              .agg(lambda s: s.nunique()).rename("n_publications"))
-    # the curated evidence rows (type == "Known Cancer") give the
-    # primary site and the cancer type
-    known_rows = lit[lit["type"].astype(str) == "Known Cancer"]
-    site = known_rows.groupby("symbol")["primary_site"].agg(
-        lambda s: ";".join(sorted({str(x) for x in s if str(x) not in ("-", "nan")})))
-    ctype = known_rows.groupby("symbol")["cancer_type"].agg(
-        lambda s: ";".join(sorted({str(x) for x in s if str(x) not in ("-", "nan")})))
-    screening_type = lit[lit["type"].astype(str) != "Known Cancer"].groupby(
-        "symbol")["cancer_type"].agg(
-        lambda s: ";".join(sorted({str(x) for x in s if str(x) not in ("-", "nan")})))
+    # The cancer type of a gene is spread over ALL of its literature
+    # rows: the "Known Cancer" rows carry primary_site "multiple" and
+    # an empty cancer_type for exactly the genes whose type we want,
+    # so restricting to them loses the information. Aggregate over all
+    # rows instead, and treat "multiple" as "pan-cancer" only when no
+    # specific site is available for that gene.
+    def _join(values) -> str:
+        keep = {str(x) for x in values if str(x) not in ("-", "nan", "")}
+        return ";".join(sorted(keep))
+
+    def _site(values) -> str:
+        keep = {str(x) for x in values if str(x) not in ("-", "nan", "")}
+        specific = sorted(keep - {"multiple"})
+        return ";".join(specific) if specific else ("multiple" if keep else "")
+
+    site = lit.groupby("symbol")["primary_site"].agg(_site)
+    ctype = lit.groupby("symbol")["cancer_type"].agg(_join)
 
     # ---- the tiers and the roles -------------------------------------
     known_set = set(known["symbol"])
@@ -85,8 +92,7 @@ def main() -> int:
                    right_index=True, how="left")
     df = df.merge(ctype.rename("cancer_type"), left_on="symbol",
                    right_index=True, how="left")
-    df["cancer_type"] = df["cancer_type"].fillna(
-        df["symbol"].map(screening_type)).fillna("")
+    df["cancer_type"] = df["cancer_type"].fillna("")
     df["primary_site"] = df["primary_site"].fillna("")
     df = df.merge(role, left_on="symbol", right_index=True, how="left")
     df["is_oncogene"] = df["is_oncogene"].fillna(0).astype(int)
