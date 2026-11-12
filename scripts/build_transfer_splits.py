@@ -168,7 +168,7 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  [skip] {la}->{lb} on {net}: {e}")
                 continue
             out_path = OUT_DIR / f"{la}__to__{lb}__{net}.tsv"
-            df.to_csv(out_path, sep="\t", index=False)
+            df.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
             summaries.append(summ)
             written.append(out_path)
             print(f"  {la:>22} -> {lb:<22} on {net:<16}: "
@@ -180,7 +180,7 @@ def main(argv: list[str] | None = None) -> int:
 
     # index file
     idx = pd.DataFrame(summaries)
-    idx.to_csv(OUT_DIR / "transfer_index.tsv", sep="\t", index=False)
+    idx.to_csv(OUT_DIR / "transfer_index.tsv", sep="\t", index=False, lineterminator="\n")
     print(f"Wrote {OUT_DIR.relative_to(REPO_ROOT) / 'transfer_index.tsv'}")
     return 0
 

@@ -94,7 +94,7 @@ def main() -> int:
 
     out = pd.DataFrame(rows).sort_values(["alpha", "network", "label"]).reset_index(drop=True)
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    out.to_csv(OUT, sep="\t", index=False)
+    out.to_csv(OUT, sep="\t", index=False, lineterminator="\n")
 
     print(f"Wrote {OUT} ({len(out)} rows, {len(missing)} missing)")
     if missing:

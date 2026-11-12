@@ -191,17 +191,16 @@ def main() -> int:
                                      - df["delta_auroc_standard"])
     df["adjusted_minus_matched"] = (df["delta_auroc_standard"]
                                     - df["delta_auroc_matched"])
-    df.to_csv(TABLES / "control7_matched_null.tsv", sep="\t", index=False)
+    df.to_csv(TABLES / "control7_matched_null.tsv", sep="\t", index=False, lineterminator="\n")
     log(f"wrote control7_matched_null.tsv ({len(df)} arms)")
 
-    # ---- extend the existing comparison table with the new label ----
-    old_p = TABLES / "pubcount_adj_comparison.tsv"
-    if old_p.exists():
-        old = pd.read_csv(old_p, sep="\t")
-        # the old table is on the 10-repeat design; keep it as the
-        # historical record and write the new comparison separately
-        old.to_csv(TABLES / "pubcount_adj_comparison_10rep.tsv", sep="\t",
-                   index=False)
+    # NOTE (2026-11-11): this script no longer writes
+    # `pubcount_adj_comparison_10rep.tsv`. That file was a byte-identical
+    # copy of the 10-repeat `pubcount_adj_comparison.tsv` and was
+    # therefore not a distinct artefact at all. The comparison table is
+    # now regenerated on the 40-repeat design by
+    # `scripts/compare_pubcount_adj.py`, which covers all 30 arms
+    # (6 networks x 5 label sets).
     write_doc(df)
     return 0
 
@@ -224,9 +223,10 @@ def write_doc(df: pd.DataFrame) -> None:
         "`intogen_temporal_new`. It is built now (152 → 76 positives, "
         "label effect β = +1.045), and **all five labels are re-run on "
         "the 40-repeat design** so the control is comparable with the "
-        "result it is a control for (the earlier arms were on the "
-        "10-repeat design; that table is kept as "
-        "`pubcount_adj_comparison_10rep.tsv`).",
+        "result it is a control for. The comparison table "
+        "(`results/tables/pubcount_adj_comparison.tsv`) is regenerated "
+        "on that design by `scripts/compare_pubcount_adj.py` and covers "
+        "all 30 arms (6 networks x 5 label sets).",
         "",
         "## The matched null",
         "",

@@ -112,7 +112,7 @@ def main(argv=None):
                 for k, v in out.items() if k.startswith("rho_")))
     res = pd.DataFrame(rows)
     path = TABLE_DIR / "stability_crowding_attribution.tsv"
-    res.to_csv(path, sep="\t", index=False)
+    res.to_csv(path, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {path}")
     print(res[[c for c in res.columns if c.startswith("rho_")]].describe().round(3).to_string())
     return 0

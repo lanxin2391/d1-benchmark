@@ -141,11 +141,11 @@ def main(argv: list[str] | None = None) -> int:
 
     sfx = args.suffix
     pd.DataFrame(ci_rows).to_csv(tables / f"stats_bootstrap_ci{sfx}.tsv",
-                                  sep="\t", index=False)
+                                  sep="\t", index=False, lineterminator="\n")
     pd.DataFrame(eq_rows).to_csv(tables / f"stats_equivalence{sfx}.tsv",
-                                 sep="\t", index=False)
+                                 sep="\t", index=False, lineterminator="\n")
     all_df = pd.DataFrame(all_rows).sort_values(["network", "label"])
-    all_df.to_csv(tables / f"stats_ci_all_units{sfx}.tsv", sep="\t", index=False)
+    all_df.to_csv(tables / f"stats_ci_all_units{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
 
     # ---- H1 verdict per unit ----
     verdict_rows = []
@@ -162,7 +162,7 @@ def main(argv: list[str] | None = None) -> int:
                 f"{r.network} x {r.label}" for r in all_df[~all_df[col]].itertuples()),
         })
     vdf = pd.DataFrame(verdict_rows)
-    vdf.to_csv(tables / f"stats_h1_verdict{sfx}.tsv", sep="\t", index=False)
+    vdf.to_csv(tables / f"stats_h1_verdict{sfx}.tsv", sep="\t", index=False, lineterminator="\n")
 
     print("=== H1 verdict per interval construction (40-repeat design) ===")
     for r in verdict_rows:

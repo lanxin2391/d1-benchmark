@@ -144,7 +144,7 @@ def main(argv=None):
             print(f"[{net} x {label}] {time.time() - t0:.1f}s "
                   f"c1 median rank SD = {df.c1_rank_sd_median.median():.4f}")
     null = pd.concat(nulls, ignore_index=True)
-    null.to_csv(TABLE_DIR / "stability_control_c1_null.tsv", sep="\t", index=False)
+    null.to_csv(TABLE_DIR / "stability_control_c1_null.tsv", sep="\t", index=False, lineterminator="\n")
 
     grid = pd.read_csv(TABLE_DIR / "stability_regularization_grid.tsv", sep="\t")
     srs = grid[(grid.control == "srs") & (grid.variant == "global")
@@ -171,7 +171,7 @@ def main(argv=None):
     merged["rank_sd_change_vs_c1_median"] = merged.median_rank_sd - merged.c1_rank_sd_median
 
     out = TABLE_DIR / "stability_control_comparison.tsv"
-    merged.to_csv(out, sep="\t", index=False)
+    merged.to_csv(out, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {out}")
     print(f"arms where the SRS value is below the C1 95th percentile: "
           f"{int(merged.srs_below_c1_p95.sum())}/{len(merged)}")

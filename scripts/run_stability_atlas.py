@@ -404,9 +404,9 @@ def main() -> int:
     arm_stab = arm_level_stability()
     by_arm = by_arm.merge(arm_stab, on=["network", "label"], how="left")
     per_gene.to_csv(TABLES / f"stability_per_gene{prefix}.tsv", sep="\t",
-                    index=False)
+                    index=False, lineterminator="\n")
     by_arm.to_csv(TABLES / f"stability_by_arm{prefix}.tsv", sep="\t",
-                  index=False)
+                  index=False, lineterminator="\n")
     print(f"\nwrote {TABLES/f'stability_per_gene{prefix}.tsv'} "
           f"({len(per_gene)} rows)")
     print(f"wrote {TABLES/f'stability_by_arm{prefix}.tsv'} ({len(by_arm)} rows)")

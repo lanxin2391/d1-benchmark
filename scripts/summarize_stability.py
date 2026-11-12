@@ -189,9 +189,9 @@ def _scorecard():
 
 def main() -> int:
     curve = _tradeoff()
-    curve.to_csv(TABLE_DIR / "stability_tradeoff_curve.tsv", sep="\t", index=False)
+    curve.to_csv(TABLE_DIR / "stability_tradeoff_curve.tsv", sep="\t", index=False, lineterminator="\n")
     card = _scorecard()
-    card.to_csv(TABLE_DIR / "stability_prediction_scorecard.tsv", sep="\t", index=False)
+    card.to_csv(TABLE_DIR / "stability_prediction_scorecard.tsv", sep="\t", index=False, lineterminator="\n")
     print(curve.to_string(index=False))
     print()
     for _, r in card.iterrows():

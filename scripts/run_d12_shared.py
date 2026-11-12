@@ -86,8 +86,7 @@ def main():
         print(f"  {net_id}: {len(s):,} genes; shared fraction = {len(shared)/len(s):.1%}")
     # Save shared universe
     pd.Series(sorted(shared), name="gene").to_csv(
-        PROCESSED_NET / "universe_shared.txt", index=False, header=False
-    )
+        PROCESSED_NET / "universe_shared.txt", index=False, header=False, lineterminator="\n")
 
     # Step 2: write shared-universe-capped label files
     print("\nStep 2: cap labels to shared universe")
@@ -96,7 +95,7 @@ def main():
         df_shared = df[df.gene.isin(shared)].copy()
         df_shared["source"] = f"{df_shared['source'].iloc[0]}_shared"
         df_shared["release"] = f"{df_shared['release'].iloc[0]}_shared"
-        df_shared.to_csv(LABELS_DIR / f"{label}_shared.tsv", sep="\t", index=False)
+        df_shared.to_csv(LABELS_DIR / f"{label}_shared.tsv", sep="\t", index=False, lineterminator="\n")
         print(f"  {label}_shared: {len(df_shared)} positives")
 
     # Step 3: build the splits over the SHARED UNIVERSE itself.
@@ -143,7 +142,7 @@ def main():
                           network_id=net_id, label_id=shared_label,
                           universe_id=f"native_{net_id}",
                           alphas=(0.5,))
-            res.to_csv(out_path, sep="\t", index=False)
+            res.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
             m = margins(res)
             d = m[m.alpha == 0.5]
             n_test_pos = int(res[(res.alpha == 0.5) & (res.method == "rwr")].n_test_pos.iloc[0])
@@ -179,7 +178,7 @@ def main():
             print(f"  [{net_id} x {shared_label}] {len(res)} rows -> delta={d.delta_auroc.mean():.4f}")
 
     summary = pd.DataFrame(summary_rows)
-    summary.to_csv(TABLE_DIR / "d12_table.tsv", sep="\t", index=False)
+    summary.to_csv(TABLE_DIR / "d12_table.tsv", sep="\t", index=False, lineterminator="\n")
     print("\nD-12 Table (delta_AUROC at alpha=0.5):")
     pivot = summary.pivot_table(index="network", columns="label",
                                  values="delta_auroc").round(4)

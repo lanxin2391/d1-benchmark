@@ -129,7 +129,7 @@ def main(argv: list[str] | None = None) -> int:
 
     log = pd.DataFrame(rows)
     log_path = V40_DIR / "build_log_v40.tsv"
-    log.to_csv(log_path, sep="\t", index=False)
+    log.to_csv(log_path, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {len(rows)} split files + {log_path.relative_to(REPO_ROOT)}")
     return 0
 

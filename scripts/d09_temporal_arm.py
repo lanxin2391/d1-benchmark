@@ -157,7 +157,7 @@ def main() -> int:
               f"(k={len(delta)} bootstraps)")
         print(f"  time       = {time.time()-t:.1f}s")
     out = pd.concat(all_rows, ignore_index=True)
-    out.to_csv(args.out, sep="\t", index=False)
+    out.to_csv(args.out, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {args.out}")
     return 0
 

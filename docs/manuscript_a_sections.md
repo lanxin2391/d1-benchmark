@@ -51,12 +51,15 @@ We assembled six canonical cancer-related gene networks spanning
 three provenance classes (RNA-derived, protein-derived,
 curated/literature), plus two sensitivity arms:
 
-* **`funmap` (protein-derived)**: 196,605 edges among 17,257
+* **`funmap` (protein-derived)**: 196,605 edges among 10,525
   genes. FunMap is built from CPTAC human proteogenomics; we
   downloaded the published edge list at FunMap v1.0 from
-  linkedomics.org (CC BY 4.0; Mei et al., Nat Commun 2021).
+  linkedomics.org (CC BY 4.0; Shi Z, Lei JT, Elizarraras JM,
+  Zhang B. 2025. *Mapping the functional network of human cancer
+  through machine learning and pan-cancer proteogenomics.* Nat
+  Cancer 6:205-222. doi:10.1038/s43018-024-00869-z).
 
-* **`rna_coexp` (RNA-derived)**: 196,172 edges among 17,000 genes.
+* **`rna_coexp` (RNA-derived)**: 196,172 edges among 9,152 genes.
   Built from FunMap's own published CPTAC mRNA matrices (Zenodo
   7948944). Pearson correlation per cohort; Fisher z averaged across
   cohorts; top 196,800 pairs by mean z to density-match `funmap`.
@@ -78,12 +81,14 @@ curated/literature), plus two sensitivity arms:
 
 * **`reactome` (curated/literature)**: 20,143 edges among 3,953
   genes. Human-only Reactome interactions from
-  reactome.org/download (CC BY 4.0; Jassal et al., Nucleic Acids Res
-  2020).
+  reactome.org/download (CC BY 4.0; Milacic M, Beavers D, Conley
+  P, et al. 2024. *The Reactome Pathway Knowledgebase 2024.*
+  Nucleic Acids Res 52:D672-D678. doi:10.1093/nar/gkad1025;
+  content version 86, September 2023).
 
 * **Two STRING sensitivity arms**: `string_full400` (combined_score
-  ≥ 400; 929k edges, 19,486 genes) and `string_full900` (≥ 900;
-  100k edges, 11,693 genes). These probe the threshold choice in
+  ≥ 400; 929,471 edges, 19,486 genes) and `string_full900` (≥ 900;
+  100,383 edges, 11,693 genes). These probe the threshold choice in
   the curated class.
 
 ### Harmonisation pipeline
@@ -95,18 +100,38 @@ duplicate edges, and (v) restricts to the largest connected
 component (LCC). The `weight` column is kept in C2 files but
 ignored by the learner (Decision D-01: unweighted analysis).
 
-The final LCC sizes are:
+The final sizes are (the authoritative copy is
+`data/processed/networks/{net_id}.meta.json`; the table is
+regenerated from those files by `scripts/recompute_ground_truth.py`):
 
-| network            | nodes  | edges    | LCC nodes | LCC edges |
+| network            | nodes before LCC | edges before LCC | LCC nodes | LCC edges |
 |---|---|---|---|---|
-| funmap             | 17,257 | 196,605  | 10,189    | 196,605   |
-| rna_coexp          | 17,000 | 196,800  | 17,000    | 196,172   |
-| string_phys700     | 16,201 | 236,930  | 9,830     | 85,576    |
-| intact             | 17,918 | 564,706  | 17,918    | 564,706   |
-| string_full700     | 16,201 | 236,930  | 15,882    | 236,712   |
-| string_full400     | 16,201 | 236,930  | 19,486    | 929,471   |
-| string_full900     | 16,201 | 236,930  | 11,693    | 100,383   |
-| reactome           | 17,000 | 124,865  | 3,953     | 20,143    |
+| funmap             | 10,525 | 196,800 | 10,189 | 196,605 |
+| rna_coexp          | 9,928  | 196,800 | 9,152  | 196,172 |
+| string_phys700     | 10,746 | 173,038 | 9,830  | 85,576  |
+| intact             | 17,918 | 1,006,295 | 17,918 | 564,706 |
+| string_full700     | 16,201 | 473,860 | 15,882 | 236,712 |
+| string_full400     | 19,488 | 1,858,944 | 19,486 | 929,471 |
+| string_full900     | 12,323 | 201,712 | 11,693 | 100,383 |
+| reactome           | 4,993  | 74,895 | 3,953  | 20,143  |
+
+**A note on the network panel's provenance classes.** Two overlaps
+between the classes must be stated, because they bound how far H2
+can be pushed:
+
+* FunMap's own gold standard is **Reactome-derived**: a gene pair is
+  labelled functionally associated when the two genes share a
+  "detailed" Reactome pathway of ≤ 200 proteins (Shi et al. 2025).
+  FunMap therefore inherits Reactome's curation, and the two are
+  **not independent** draws of pathway knowledge.
+* STRING's `database` channel is itself fed by Reactome, so
+  `string_full700` and `reactome` share an upstream source as well.
+
+Consequently the "curated/literature" class is one upstream
+knowledge base (Reactome) reaching the panel by two routes, and
+the "protein-derived" class contains a network built on that same
+knowledge base. Control 9 (Results §F.9) quantifies what this does
+to the endpoint; §J.2 explains why it prevents a provenance test.
 
 ### Network provenance stratification
 
@@ -271,12 +296,115 @@ Implemented in `scripts/build_pubcount_adjusted.py` and
 
 ### W6 sensitivity arm — GNN courtesy (protocol §7)
 
-Implemented in `scripts/run_gnn_courtesy.py`. Run Node2Vec on every
-network, evaluate the same protocol-§4.3 scoring rule
-(`score = cosine(node2vec(gene), mean(node2vec(train positives))`).
-For each (network, label) cell, average ΔAUROC over the three
-alphas. Headline: see Results §H; comparison with RWR in
-Discussion §I.
+Implemented in `scripts/run_gnn_courtesy.py`. Run a node2vec-style
+embedding on every network, evaluate the same protocol-§4.3 scoring
+rule (`score = cosine(embedding(gene), mean(embedding(train positives)))`).
+For each (network, label) cell, average ΔAUROC over the 40 repeats.
+Headline: see Results §J.4.
+
+**What this arm is, stated because the name would otherwise mislead.**
+The walk uses **p = q = 1.0**, i.e. the uniform first-order walk.
+Per the appendix of Hamilton et al. (2017, *NIPS*), node2vec with
+p = q = 1 is **equivalent to DeepWalk** (Perozzi et al. 2014, *KDD*):
+the second-order bias is inert, and the only difference from DeepWalk
+is the embedding dimension and the corpus sampler. This arm is
+therefore a **DeepWalk-style unsupervised embedding**, and we name it
+that way rather than claiming a node2vec implementation we did not
+make. Two consequences are stated plainly: (i) it is a *no-feature*
+embedding, and the feature-using graph neural networks (GCN, GAT,
+GraphSAGE) are **not** implemented here and are **not** represented by
+this arm — their published behaviour on featureless graphs is untested
+by this study; and (ii) the node2vec original (Grover & Leskovec 2016)
+is not in the local reference library this study was built from, so
+the equivalence above rests on the GraphSAGE appendix and on the
+descriptions of node2vec in the other papers of that corpus, not on
+the original text.
+
+---
+
+## §C2. Methods §4.4b — The literature-mandated control stack
+
+The seven protocol controls (§C1–§C8 above) were specified before the
+benchmark literature was read end to end. A systematic read of the
+41-paper reference corpus (`D:\papers`) identified three confounds
+that the protocol does not cover and that the published literature
+treats as decisive. Each is now a control in the same family as the
+original seven: it recomputes the primary endpoint under a changed
+condition and reports the result whatever it is. **None of them
+changes the learner, the endpoint, the splits or the pre-registered
+decision rule.** They are registered in the *exploratory* family
+(`docs/pre_registration_amendments.md`, amendment 5), because they were
+specified after the confirmatory runs existed; they are reported
+because the literature says the confound matters, and they are
+reported as such rather than folded into the H1 verdict.
+
+### C9 — Seed-degree stratification (Control 8; after Zhang et al. 2021)
+
+Zhang et al. (2021, *Brief Bioinform* 22(5):bbab006) showed that the
+LOOCV performance of RWR-family methods on their panel tracked the
+**degree centrality of the seed nodes**, and warned that "performance of RWR-like algorithms would appear to be better in LOOCV just by having higher degree centralities for the seed nodes, which does not necessarily reflect true ability for the algorithm to predict new candidate genes". Their random-seed experiment (1,000 trials × 10
+random seeds) correlated a method's median rank with the degree of its
+seeds.
+
+Control 2 (§G) asks whether the margin exceeds what *degree-matched
+random* seeds give; it does not ask whether the **real** seeds being
+hubs is what produces the margin. Control 8 asks that directly. In
+every (network, label) arm the training-fold positives are split into
+three equal **degree terciles**, and the primary endpoint is recomputed
+with the seeds drawn from one tercile only. The test set, the degree
+baseline and the fold structure are identical across the three strata,
+so the three numbers are directly comparable. Because RWR is linear in
+the seed weights, the three strata are propagated in one batched call
+(`d1/engine/rwr.py`), so the control costs about as much as the primary
+factorial. Implemented in `scripts/run_control8_seed_degree.py`;
+aggregate in `results/tables/control8_seed_degree_summary.tsv`.
+
+### C10 — Network size and coverage adjustment (Control 9; after Wright et al. 2025)
+
+Wright et al. (2025, *Mol Syst Biol* 21:e10077) evaluated 45 human
+interactomes and found that the leading predictor of a network's
+disease-gene prioritisation performance is its **size**, and that the
+effect largely collapses once the **coverage** of the gene set in the
+network is controlled for (p = 8.8e-34 for literature-derived gene
+sets, 4.1e-6 for genetic ones). They adjust by regressing on log₁₀ of
+the interaction count and taking the residual ("size-adjusted
+performance").
+
+This is the most dangerous confound in D1's design: the six networks
+span 3,953 to 17,918 LCC nodes (4.5×) and 41 % to 99 % label coverage
+(2.4×), and provenance is correlated with both. Control 9 regresses the
+per-cell endpoint on the label set (a fixed effect, because the label
+sets are not comparable across rows), log₁₀(LCC edges) and the label
+coverage, and reports the fitted value as the **size- and
+coverage-adjusted endpoint**. The size correlation is additionally
+tested against a 10,000-permutation null. Implemented in
+`scripts/run_control9_size_adjustment.py`; aggregate in
+`results/tables/control9_size_adjustment.tsv` and
+`results/tables/control9_size_model.tsv`.
+
+### C11 — Random-input degeneracy (Control 10; after Hill et al. 2019)
+
+Hill et al. (2019, *PLoS Comput Biol* 15(12):e1007403) showed that
+network-contextualisation algorithms differ sharply in their behaviour
+when the input is meaningless. They fed 10,000 random gene lists of
+length 200 and counted, for every node, how often it was ranked into
+the top 200: ToppNet-HITS put 239 nodes in the top 200 of more than
+half of the random runs, SigNet 200, Random Walk 4, Network
+Propagation 0. The reading is the one a reviewer will apply to D1: *an
+algorithm that returns the same nodes whatever the input is not using
+the input at all*.
+
+Control 10 runs the locked learner twice on the same fold universe —
+once with the real training-fold positives, once with a random seed set
+of the same size drawn from the network's genes **excluding** the
+fold's own test genes (the same exclusion that applies to the real
+seeds) — and compares the two rankings. It reports Hill et al.'s
+degeneracy statistic, the hub concentration of the top-K under both
+regimes, the rank stability within each regime, and the **input
+sensitivity**: the Spearman correlation and the top-K Jaccard overlap
+between the real-input and the random-input ranking of the same fold.
+Implemented in `scripts/run_control10_random_input.py`; aggregate in
+`results/tables/control10_random_input_summary.tsv`.
 
 ---
 
@@ -428,27 +556,28 @@ say together.
 
 ### F.1 W5 rewiring null (control 3)
 
-100 rewirings × 6 networks = 600 random-network edge-permuted runs.
-For each (network, label) cell at α = 0.5, observed ΔAUROC vs null
+**598** random-network edge-permuted runs (100 rewirings for each of five
+networks and 98 for `reactome`; see the caveat below). For each
+(network, label) cell at α = 0.5, observed ΔAUROC vs null
 distribution (`results/tables/w5_p_values.tsv`):
 
 * 23/24 cells have z > 8.9 (up to z = 205.2), i.e. observed exceeds
   the rewired null by 9–205 standard errors **of the null mean** (the rewiring z divides by the null mean's standard error, null_sd / sqrt(n_rewirings), not by the null spread)
 * The single exception: `reactome × intogen_temporal_new`, observed
-  = −0.0112, rewired null mean = +0.0050, z = −3.53 → observed is
+  = −0.0125, rewired null mean = +0.0050, z = −3.53 → observed is
   significantly **below** the rewired null. The rewiring null says the
   signal is not produced by the degree sequence; for this one cell the
   network performs *worse* than the rewired null. Whether that reflects
-  a genuine negative effect or a curator lag (the Reactome release
-  cycle trailing the IntOGen driver catalogue) is tested in §F.5 and
-  discussed in §J.3.
+  a genuine negative effect or a coverage failure (the Reactome LCC
+  contains only 41 % of the newly-discovered drivers) is tested in
+  §F.5 and discussed in §J.3.
 
 The W5 result means: **observed ΔAUROC cannot be explained by the
 network's degree sequence**. The specific topology matters.
 
-One caveat is stated rather than buried: the rewiring performs **2 x |E|**
-double-edge swaps per rewiring, where the pre-registration asks for
-10 x |E|. The mixing was measured directly
+Two caveats are stated rather than buried. First, the rewiring performs
+**2 x |E|** double-edge swaps per rewiring, where the pre-registration asks
+for 10 x |E|. The mixing was measured directly
 (`results/tables/rewiring_mixing_check.tsv`): 4-11 % of the original
 edges survive the rewiring and 21-54 % of the nodes keep at least one
 original neighbour, so the rewired network is a *partial* null -- but
@@ -457,7 +586,12 @@ residual edge sharing), and the residual bias is **conservative**, because
 a rewired network that keeps a few original edges sits slightly above
 the fully-mixed null mean and therefore yields a slightly SMALLER z. The
 z-scores are 8.9-205, so no conclusion of this paper depends on the
-mixing level (amendment 2, A2.3k).
+mixing level (amendment 2, A2.3k). Second, `reactome` has **98**
+rewirings rather than 100 (seeds 98 and 99 were never generated); the
+released table records `n_rewire = 98` for that network and every other
+network has 100, so the total is 598 rather than 600. The cell's
+conclusion is unchanged, because the z is a standardised statistic
+computed from the 98 draws that exist.
 
 ### F.2 D-09 temporal-drift control
 
@@ -636,25 +770,170 @@ six networks:
 | label | original label | publication-adjusted | adjusted + matched background |
 |---|---|---|---|
 | intogen2024 | +0.0826 | +0.0804 | **+0.0587** |
-| ot_all | +0.0767 | +0.0636 | +0.0530 |
-| ot_nolit | +0.0834 | +0.0608 | +0.0433 |
+| ot_all | +0.0978 | +0.0690 | +0.0703 |
+| ot_nolit | +0.0915 | +0.0674 | +0.0688 |
 | **intogen_temporal_new** | +0.0162 | +0.0308 | **+0.0022** |
-| clingen_label | – | +0.0751 | +0.0844 |
+| clingen_label | – | +0.0954 | +0.1192 |
+
+(Medians over the six networks; source
+`results/tables/control7_matched_null.tsv`, all 30 arms on the
+40-repeat design. The "original label" column is empty for ClinGen
+because that label was added to the panel after the primary factorial
+and has no entry in `results_stats.tsv`.)
 
 **On the IntOGen and Open Targets labels the prior's contribution is not
 a literature effect**: it survives both the trimming and the matched
-background (e.g. intogen2024 keeps 71 % of its original margin). **On the
-temporal label it is not.** Trimming the publication-heavy positives
-*raises* the effect (those positives were the hard ones) and the
-literature-matched background then removes it. The matched comparison on
-that label is small — 76 positives against 76 matched negatives — so the
-right reading is that the advantage on newly discovered drivers **is no
-longer clearly positive once literature volume is controlled on both
-sides**, not that it is exactly zero.
+background (e.g. intogen2024 keeps 71 % of its original margin; the
+matched endpoint is positive in 28 of the 30 arms and its mean
+difference from the standard-background endpoint is **+0.0010**, i.e.
+indistinguishable from zero). **On the temporal label it is not.**
+Trimming the publication-heavy positives *raises* the effect (those
+positives were the hard ones) and the literature-matched background
+then removes it. The matched comparison on that label is small — 76
+positives against 76 matched negatives — so the right reading is that
+the advantage on newly discovered drivers **is no longer clearly
+positive once literature volume is controlled on both sides**, not that
+it is exactly zero.
 
 This is a property of the *label*, not of the method, and it competes
-with the curator-lag reading of §J.3: the two explanations of the
+with the coverage reading of §J.3: the two explanations of the
 temporal label are not the same. We report both rather than choosing.
+
+### F.9 Control 8: does the margin depend on the degree of the seeds?
+
+Zhang et al. (2021, *Brief Bioinform* 22(5):bbab006) reported the
+sharpest published warning against the RWR family: *performance of RWR-like algorithms would appear to be better in LOOCV just by having higher degree centralities for the seed nodes, which does not necessarily reflect true ability for the algorithm to predict new candidate genes.* Their random-seed experiment (1,000 trials × 10
+random seeds) correlated a method's median rank with the degree
+centrality of its seeds.
+
+Control 2 (A5) answers a weaker version of that question — it asks
+whether the margin exceeds what *degree-matched random* seeds would give.
+It does not ask whether the **real** seeds being hubs is what produces
+the margin. Control 8 asks that directly. In every (network, label) arm
+the training-fold positives are split into three equal degree terciles and
+the primary endpoint is recomputed with the seeds drawn from one tercile
+only. The test set, the degree baseline and the fold structure are
+identical across the three strata, so the three numbers are directly
+comparable (`results/tables/control8_seed_degree_summary.tsv`).
+
+| seed-degree stratum | mean ΔAUROC over the 24 arms | arms with a positive margin |
+|---|---|---|
+| low (lowest third) | **+0.0527** | 22/24 |
+| mid | **+0.0609** | 24/24 |
+| high (highest third) | **+0.0537** | 23/24 |
+
+The mean gap between the high and the low stratum is **+0.0010**, i.e.
+one fiftieth of the margin itself, and the sign of the gap is not
+consistent across the panel (it is negative in 11 of 24 arms). **The
+margin does not depend on the degree of the seeds.** A driver catalogue
+that happened to be degree-enriched would not produce this pattern: the
+high-degree stratum would have carried a much larger margin.
+
+The two exceptions are informative. `funmap × intogen_temporal_new`
+and `reactome × intogen_temporal_new` have a *negative* low-stratum
+margin (−0.0037 and −0.0044) with a positive high-stratum margin
+(+0.0159 and +0.0008). Those are the two arms whose full-catalogue
+margin is small to begin with, so the stratum-level estimate is noisy;
+the pattern is consistent with "these labels carry little signal in
+these networks", not with a systematic hub dependence.
+
+### F.10 Control 9: network size and coverage adjustment
+
+Wright et al. (2025, *Mol Syst Biol* 21:e10077) evaluated 45 human
+interactomes and found that the leading predictor of a network's
+disease-gene prioritisation performance is its **size**, and that the
+effect largely collapses once the coverage of the gene set in the network
+is controlled for (p = 8.8e-34 for literature-derived gene sets,
+4.1e-6 for genetic ones). They adjust by regressing on log₁₀ of the
+interaction count and taking the residual.
+
+This is the most dangerous confound in D1's design: the six networks
+span 3,953 to 17,918 LCC nodes (a 4.5-fold range) and 41 % to 99 %
+label coverage (a 2.4-fold range), and provenance is correlated with
+both. We therefore regress the per-cell endpoint on the label set (a
+fixed effect, because the label sets are not comparable across rows),
+log₁₀(LCC edges) and the label coverage, and report the fitted value as
+the **size- and coverage-adjusted endpoint**
+(`results/tables/control9_size_adjustment.tsv`,
+`results/tables/control9_size_model.tsv`).
+
+| term | coefficient | SE | p | partial R² |
+|---|---|---|---|---|
+| log₁₀(LCC edges) | **−0.0393** | 0.0142 | 0.0129 | 0.297 |
+| label coverage | **+0.1449** | 0.0363 | 0.00086 | 0.469 |
+| label = intogen_temporal_new | −0.0528 | 0.0142 | 0.0016 | 0.435 |
+| label = ot_all | +0.0235 | 0.0140 | 0.111 | 0.135 |
+| label = ot_nolit | +0.0273 | 0.0140 | 0.068 | 0.173 |
+
+The pooled Spearman correlation between ΔAUROC and log₁₀ network size is
+**ρ = −0.021** (10,000-permutation p = 0.93); within a label set, over
+the six networks, the correlations are +0.26, +0.26, −0.31 and −0.43
+(all p > 0.39). After the adjustment the endpoint is **positive in
+23/24 cells** — the same count as the raw endpoint — and the sign is
+preserved in 22/24 cells; the mean absolute residual is 0.017 against a
+raw SD of 0.046.
+
+Two things follow, and they point in opposite directions, so both are
+reported:
+
+* **The headline result is not a size artefact.** Wright et al.'s
+  concern does not materialise here: a bigger network does not give a
+  bigger margin, and the adjusted endpoint keeps 23/24 cells positive.
+* **But the size and coverage terms are individually significant**, and
+  coverage is the *strongest* single covariate (partial R² = 0.47).
+  Coverage, not size, is what moves the endpoint: an arm is easier when
+  more of its positives are present in the network. This is the
+  mechanism behind the Reactome temporal cell (§J.3), and it is also
+  why H2 cannot be settled by this panel (§J.2).
+
+### F.11 Control 10: does the learner actually use its input?
+
+Hill et al. (2019, *PLoS Comput Biol* 15(12):e1007403) showed that
+network-contextualisation algorithms differ sharply in their behaviour
+when the input is meaningless. They fed 10,000 random gene lists and
+counted how often each node landed in the top 200: ToppNet-HITS put 239
+nodes in the top 200 of more than half of the random runs, SigNet 200,
+Random Walk 4, Network Propagation 0. The reading is the one a reviewer
+will apply to D1: *an algorithm that returns the same nodes whatever the
+input is not using the input at all.*
+
+Control 10 runs the locked learner twice on the same fold universe —
+once with the real training-fold positives, once with a random seed set
+of the same size drawn from the network's genes **excluding** the fold's
+own test genes — and compares the two rankings
+(`results/tables/control10_random_input_summary.tsv`).
+
+| statistic | real input | random input |
+|---|---|---|
+| Hill degeneracy: genes in the top 100 of > 50 % of the 200 runs | 123.6 | **0.6** |
+| mean degree percentile of the top 100 | 0.766 | 0.605 |
+| mean overlap of the top 100 with the network's degree top 100 | 0.109 | 0.045 |
+| mean pairwise rank Spearman between two runs of the same regime | 0.936 | 0.592 |
+
+and, the decisive one:
+
+| input sensitivity (real-input ranking vs random-input ranking of the same fold) | value |
+|---|---|
+| mean Spearman | 0.592 |
+| mean top-100 Jaccard overlap | **0.019** |
+
+**The learner uses its input.** Under a random input the RWR ranking
+collapses onto almost an unrelated gene list: the top-100 sets overlap
+by 1.9 %, and only 0.6 genes persist in the top 100 across independent
+random runs — a degeneracy statistic in the range of the algorithms
+Hill et al. found to be well-behaved (Random Walk 4, Network
+Propagation 0) and three orders of magnitude below the degenerate ones
+(ToppNet-HITS 239). The RWR ranking under the real input is instead
+highly reproducible (Spearman 0.94 between folds).
+
+The hub-concentration numbers make the point sharply: the real-input
+top-100 sits at degree percentile 0.766 and overlaps the network's own
+degree top-100 by 10.9 %, against 0.605 and 4.5 % under a random
+input. **The prior does not simply return the hubs** — it returns a
+different, more hub-enriched set than a meaningless input would, which
+is exactly what a genuine, input-driven signal looks like. And because
+the degree baseline is the comparator, the margin is the part of that
+signal that degree does not already explain.
 
 ---
 
@@ -1153,51 +1432,69 @@ a panel in which the provenance classes are separated from the network
 size and coverage** — more networks per class than we have. That is a
 follow-up, not a result of this paper.
 
-### J.3 Reactome's collapse on the newest drivers — a supported explanation
+### J.3 Reactome's collapse on the newest drivers — a coverage failure
 
 `reactome × intogen_temporal_new` is the one negative cell of the
 primary factorial (ΔAUROC = −0.0125) and the only cell where the
-rewired-network null is positive while observed is below zero. The
-interpretation we advance is:
+rewired-network null is positive while observed is below zero.
 
-**Reactome's curated pathway annotations lag behind the 2020–2024
-driver discoveries.** The curators update their knowledge base on a
-multi-year cycle; the drivers discovered in the 4-year window are
-systematically absent from the curated network, so a prior built on
-Reactome cannot rank them.
+**It is not a demonstration of a negative effect.** The equivalence test
+(§J.5) places the cell in the same category as five other cells whose
+margin is bounded: the data are consistent with "no effect", and the
+pre-registered gene-cluster interval contains zero. The question the
+cell poses is therefore not "is the prior harmful?" but "why does this
+network fail to show the prior's advantage where every other network
+shows it?"
 
-This was a hypothesis in the first draft of this manuscript. It is now
-a **supported explanation**, because the anomaly survives three
-independent controls that each remove a competing explanation
-(§F.2–§F.5):
+The interpretation we advance is a **coverage failure**:
+
+> Reactome's LCC contains only 63 of the 152 newly-discovered drivers
+> (41 %), the lowest coverage in the panel (the other networks contain
+> 76–99 % of them). The arm is therefore measured on a gene universe
+> that largely lacks the genes it is asked to find, and a prior built on
+> a network that does not contain the targets cannot rank them above
+> chance. The remaining 89 genes that are present are, by construction,
+> the *better-studied* half of a catalogue that is defined by recency.
+
+This is now a **supported explanation**, because it survives the
+controls and is quantitatively predicted by the size model:
+
+* **The coverage term is the strongest single covariate in the panel.**
+  In the size/coverage regression of §F.10, coverage has partial
+  R² = 0.47 (p = 8.6e-4) — larger than network size (0.30) and than
+  any label effect except the temporal label itself. Reactome ×
+  intogen_temporal_new is the panel's lowest-coverage cell (41 %),
+  and its size- and coverage-adjusted endpoint is one of the two cells
+  whose sign the adjustment changes.
+* **The anomaly survives three controls that each remove a competing
+  explanation** (§F.2–§F.5):
 
 | competing explanation | control that removes it | Reactome × temporal after the control |
 |---|---|---|
 | the training partition was unlucky | D-09: seed set redrawn 50× | −0.0095 (still negative) |
 | the positive set was too large / too uneven | D-11: every network capped to N = 63 | −0.0125 (still negative) |
-| Reactome simply covers fewer genes | D-12: all arms evaluated on the same 1,605 genes | −0.0360 (still negative) |
+| the universe was too large | D-12: all arms evaluated on the same 1,605 genes | −0.0360 (still negative) |
+
+* **A fourth control closes the last channel we could think of.** Under
+  the **complex-aware cross-validation** (§F.6) — the splits that keep
+  every protein complex in one fold, so a held-out driver's complex
+  partners are held out with it — Reactome's temporal arm is **not less
+  negative but more negative** (−0.0178 against −0.0125), and no arm of
+  the panel changes sign. The failure is therefore not produced by the
+  complex-partner leak either.
+* **The failure is not a seed-degree artefact** (Control 8, §F.9): on
+  the low-degree third of the seeds Reactome's temporal margin is
+  −0.0044, on the high-degree third +0.0008. The cell is null in every
+  stratum, which is what a coverage failure predicts and what a
+  hub-driven artefact does not.
 
 What the controls add is *localisation*. D-11 shows that Reactome's
 apparent advantage on the broad IntOGen label is partly a coverage
 advantage (capped to 63 positives, `reactome × intogen2024` flips from
-+0.0429 to −0.0110), and D-09 and D-12 show that the temporal failure
-is not a coverage artefact at all. The failure is specific to
-Reactome's coverage of *newly discovered* drivers.
-
-A fourth control closes the last channel we could think of. Under the
-**complex-aware cross-validation** (§F.6) — the splits that keep every
-protein complex in one fold, so a held-out driver's complex partners
-are held out with it — Reactome's temporal arm is **not less negative
-but more negative** (−0.0178 against −0.0125), and no arm of the panel
-changes sign. The failure is therefore not produced by the
-complex-partner leak either.
-
-What the controls add is *localisation*. D-11 shows that Reactome's
-apparent advantage on the broad IntOGen label is partly a coverage
-advantage (capped to 63 positives, `reactome × intogen2024` flips from
-+0.0429 to −0.0110), and D-09 and D-12 show that the temporal failure
-is not a coverage artefact at all. The failure is specific to
-Reactome's coverage of *newly discovered* drivers.
++0.0429 to −0.0110), and D-09, D-12 and Control 8 show that the
+temporal failure survives every attempt to equalise the other moving
+parts. The failure is specific to Reactome's coverage of *newly
+discovered* drivers.
 
 If the failure is a coverage failure, then the remedy is not a better
 learner but a better *ensemble*: a stale network can only be out-voted.
@@ -1208,60 +1505,81 @@ the median single network is negative (−0.0110) while the consensus is
 the first quantitative statement of the price of curation lag at the
 level of an ensemble.
 
-Two caveats are stated plainly. First, Reactome's temporal arm has only
-63 held-out positives, so its interval is wide; the point estimate is
-negative under all four controls, but the *magnitude* is not
-precisely estimated. Second, **the temporal label has a second,
-competing explanation**: Control 7 with a literature-matched background
-(§F.8) shows that the prior's advantage on newly discovered drivers is
-largely a literature-volume effect — the genes that are both new and
-well studied are the ones the prior ranks well. The curator-lag reading
-above concerns Reactome's *negative* cell; this one concerns why the
-temporal label looks positive at all. They are not the same claim, and
-the paper states both. Second, this is one network out of six, and the
-control that isolates it most sharply (D-12) makes it negative for
-`intact` as well (−0.0150), so the phenomenon may be "small curated
-networks" rather than "Reactome" specifically. The publication claim
-we make is therefore about **curated networks and temporal
-extrapolation**, with Reactome as the clearest case — not a universal
-claim about Reactome.
+Four caveats are stated plainly. First, Reactome's temporal arm has only
+63 held-out positives (5 in the shared universe of D-12), so its
+interval is wide; the point estimate is negative under all four
+controls, but the *magnitude* is not precisely estimated. Second, the
+D-12 cell rests on **5** test positives and its −0.0360 estimate is
+correspondingly unstable; it localises the failure but does not measure
+it. Third, **the temporal label has a second, competing explanation**:
+Control 7 with a literature-matched background (§F.8) shows that the
+prior's advantage on newly discovered drivers is largely a
+literature-volume effect — the genes that are both new and well studied
+are the ones the prior ranks well. The coverage reading above concerns
+Reactome's *negative* cell; this one concerns why the temporal label
+looks positive at all. They are not the same claim, and the paper states
+both. Fourth, this is one network out of six, and the control that
+isolates it most sharply (D-12) makes it negative for `intact` as well
+(−0.0150), so the phenomenon may be "small curated networks" rather
+than "Reactome" specifically. The publication claim we make is
+therefore about **curated networks and temporal extrapolation**, with
+Reactome as the clearest case — not a universal claim about Reactome.
 
 ### J.4 §7 GNN courtesy rebuttal
 
 A pre-registered concern is "RWR is too weak; a modern GNN would
-show a larger prior contribution." As a control arm we ran
-Node2Vec (Grover & Leskovec 2016) with identical hyperparameters
-across all (network, label) cells. Headline:
+show a larger prior contribution." As a control arm we ran a
+node2vec-style embedding with identical hyperparameters across all
+(network, label) cells. Headline:
 
 | method (mean over 24 cells, α=0.5) | mean ΔAUROC | positive cells |
 |---|---|---|
 | **RWR** (chosen learner)            | +0.079 | 24/24 |
-| **GNN** (Node2Vec baseline)          | +0.028 | 19/24 |
+| **embedding baseline**              | +0.028 | 19/24 |
 | degree baseline (no propagation)   | 0     | —     |
 
-→ The published GNN baseline also beats the degree baseline in 19 of
+→ The embedding baseline also beats the degree baseline in 19 of
 24 cells, so the benchmark's "prior contributes beyond degree" claim
 is **robust to the choice of learner**: it is not an artefact of
 choosing a weak RWR.
 
 But the corrected numbers sharpen the conclusion rather than blur it.
-Node2Vec reaches only about a third of RWR's margin (+0.028 vs
+The embedding reaches only about a third of RWR's margin (+0.028 vs
 +0.079), and its per-cell estimate is far less precise (mean SD of
 delta-AUROC 0.051, against RWR's 0.019). The cheapest, fully
 transparent diffusion beats a trained embedding by roughly three to
 one on this task. The per-network detail points the same way: in
 `string_phys700` (intact protein-binding edges only) RWR outperforms
-the GNN by 3.4 pp (0.119 vs 0.085).
+the embedding by 10.3 pp (0.122 vs 0.019).
 
 **RWR is a conservative baseline, not an artificially weak one** --
 and on this benchmark it is also the better-performing one, at a
 fraction of the cost and with full reproducibility.
 
+**What this arm actually is (stated because the name would otherwise
+mislead).** The walk uses **p = q = 1.0**, i.e. the uniform second-order
+walk. Per the appendix of Hamilton et al. (2017, *NIPS*), node2vec with
+p = q = 1 is **equivalent to DeepWalk** (Perozzi et al. 2014, *KDD*): the
+first-order walk is recovered, so the "second-order" machinery is inert
+and the only difference from DeepWalk is the embedding dimension. This
+arm is therefore a **DeepWalk-style unsupervised embedding**, and we
+name it that way rather than claiming a node2vec implementation we did
+not make. Two consequences are stated plainly: (i) the arm is a
+*no-feature* embedding, and the graph-neural-network methods that do
+use node features (GCN, GAT, GraphSAGE) are **not** implemented here
+and are **not** represented by this arm — their published performance
+on featureless graphs is untested; and (ii) the node2vec original
+(Grover & Leskovec 2016, *KDD*) is not in the local reference library
+that this study was built from, so the equivalence above rests on the
+GraphSAGE appendix and on the descriptions of node2vec in the other
+papers of that corpus, not on the original text. That is a limitation
+of the citation base, not of the measurement.
+
 (These numbers were recomputed on 2026-10-29 after fixing four
-defects in the GNN arm: the evaluation ranked the whole universe
+defects in the embedding arm: the evaluation ranked the whole universe
 against the *training* positives instead of the test fold; the random
 walk appended each step twice; the alpha dimension did not exist for
-Node2Vec, so the three "alpha" arms were the same computation
+node2vec, so the three "alpha" arms were the same computation
 repeated; and gensim's Hogwild threading made the learner
 non-reproducible. The old JSONs are archived under
 `results/runs/gnn_courtesy_OLD_BUGGY/` and are not used. See
@@ -1288,19 +1606,22 @@ estimate is negative, but its margin is bounded, which places it in the
 same category as the other five.
 
 The 95 % confidence interval of that cell depends on the resampling
-unit and is reported for all three:
+unit and is reported for all of them:
 
 | unit | 95 % CI | contains 0? |
 |---|---|---|
-| fold | [−0.0254, +0.0030] | yes |
-| **repeat (primary)** | **[−0.0155, −0.0094]** | **no** |
-| gene | [−0.0589, +0.0375] | yes (and it reaches past ±0.05) |
+| fold | [−0.0195, −0.0054] | no |
+| **repeat (primary)** | **[−0.0153, −0.0096]** | **no** |
+| repeat t | [−0.0156, −0.0093] | no |
+| repeat BCa | [−0.0157, −0.0096] | no |
+| gene (the pre-registered unit) | [−0.0589, +0.0375] | yes (and it reaches past ±0.05) |
 
-So the interval is entirely below zero under the primary unit and
-contains zero under the other two; **no unit supports reading this cell
-as evidence of a negative effect.** The curator-lag explanation is why
-the cell is null; it is supported by the three robustness controls in
-§F.2–§F.5 and argued in §J.3.
+So the interval excludes zero under four of the five constructions and
+contains zero under the **pre-registered** gene-cluster bootstrap; **no
+unit supports reading this cell as evidence of a negative effect.** The
+coverage-failure explanation is why the cell is null; it is supported by
+the three robustness controls in §F.2–§F.5 and by the coverage term of
+the size model (§F.10), and argued in §J.3.
 
 The pre-registered H1 rule — the 95 % CI excludes 0 in **every** arm —
 is met under four of the five interval constructions (fold, repeat

@@ -84,7 +84,7 @@ def _write_edge_list(G: nx.Graph, path: Path, meta: dict):
     """Save the graph back as a C2 .tsv edge list."""
     edges = pd.DataFrame(sorted(G.edges()), columns=["gene_a", "gene_b"])
     edges["weight"] = 1.0
-    edges.to_csv(path, sep="\t", index=False)
+    edges.to_csv(path, sep="\t", index=False, lineterminator="\n")
     finalize_edges(edges, net_id=meta["net_id"], meta=meta, out_dir=path.parent)
 
 
@@ -178,7 +178,7 @@ def _step2_evaluate(net_id: str, n_rewire: int):
                               label_id=label,
                               universe_id=f"native_{net_id}",
                               alphas=(0.5,))
-                df.to_csv(out_path, sep="\t", index=False)
+                df.to_csv(out_path, sep="\t", index=False, lineterminator="\n")
                 _log(f"[{net_id}]   seed {s + 1}/{n_rewire} "
                      f"x {label}: {len(df)} rows ({time.time() - t_arm:.1f}s)")
             # Append to summary rows
@@ -192,7 +192,7 @@ def _step2_evaluate(net_id: str, n_rewire: int):
                     "delta_auroc": float(d.delta_auroc.iloc[0]),
                 })
     summary = pd.DataFrame(rows)
-    summary.to_csv(TABLE_DIR / f"w5_rewired_{net_id}.tsv", sep="\t", index=False)
+    summary.to_csv(TABLE_DIR / f"w5_rewired_{net_id}.tsv", sep="\t", index=False, lineterminator="\n")
     return summary
 
 
@@ -218,7 +218,7 @@ def _step3_aggregate(observed: pd.DataFrame, n_rewire: int) -> pd.DataFrame:
                 "null_delta_q95": float(sub.delta_auroc.quantile(0.95)),
             })
     null = pd.DataFrame(null_rows)
-    null.to_csv(TABLE_DIR / "w5_null_distribution.tsv", sep="\t", index=False)
+    null.to_csv(TABLE_DIR / "w5_null_distribution.tsv", sep="\t", index=False, lineterminator="\n")
 
     # p-values: observed vs null (one-sided: observed > null)
     obs = observed.set_index(["network", "label_set"])["a0.5_mean"]
@@ -248,7 +248,7 @@ def _step3_aggregate(observed: pd.DataFrame, n_rewire: int) -> pd.DataFrame:
             "p_one_sided_observed_gt_null": p_val,
         })
     pv = pd.DataFrame(p_rows)
-    pv.to_csv(TABLE_DIR / "w5_p_values.tsv", sep="\t", index=False)
+    pv.to_csv(TABLE_DIR / "w5_p_values.tsv", sep="\t", index=False, lineterminator="\n")
     return pv
 
 

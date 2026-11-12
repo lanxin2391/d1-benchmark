@@ -181,7 +181,7 @@ def main() -> int:
             f.insert(0, "network", net)
             cache_rows.append(f)
         pd.concat(cache_rows, ignore_index=True).to_csv(
-            feat_cache, sep="\t", index=False)
+            feat_cache, sep="\t", index=False, lineterminator="\n")
         log(f"wrote {feat_cache.name}")
 
     # ---- attach the features and the seed distance --------------------
@@ -237,7 +237,7 @@ def main() -> int:
              "clustering", "betweenness", "pagerank", "community_size",
              "local_score_density", "score_mean", "score_cv", "rank_sd",
              "dist_to_seed"] + [f"dist_to_seed__{l}" for l in LABELS])
-    df[keep].to_csv(out_feat, sep="\t", index=False)
+    df[keep].to_csv(out_feat, sep="\t", index=False, lineterminator="\n")
     log(f"wrote {out_feat.name} ({len(df):,} rows)")
 
     # ---- the attribution model ----------------------------------------
@@ -376,9 +376,9 @@ def main() -> int:
     res = res.merge(sign_stab, on=["outcome", "feature"], how="left")
 
     res = res.merge(marg, on=["outcome", "feature"], how="left")
-    res.to_csv(TABLES / "stability_attribution.tsv", sep="\t", index=False)
-    loo_df.to_csv(TABLES / "stability_attribution_loo.csv", sep="\t", index=False)
-    corr.to_csv(TABLES / "stability_attribution_predictor_corr.tsv", sep="\t")
+    res.to_csv(TABLES / "stability_attribution.tsv", sep="\t", index=False, lineterminator="\n")
+    loo_df.to_csv(TABLES / "stability_attribution_loo.csv", sep="\t", index=False, lineterminator="\n")
+    corr.to_csv(TABLES / "stability_attribution_predictor_corr.tsv", sep="\t", lineterminator="\n")
     log(f"wrote stability_attribution.tsv ({len(res)} rows) and "
         f"stability_attribution_loo.csv ({len(loo_df)} rows)")
 

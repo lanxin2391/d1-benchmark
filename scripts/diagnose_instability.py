@@ -144,9 +144,9 @@ def main(argv=None):
                 if k.startswith("spearman")))
     res = pd.DataFrame(rows)
     if args.save:
-        res.to_csv(args.save, sep="\t", index=False)
+        res.to_csv(args.save, sep="\t", index=False, lineterminator="\n")
         pd.concat(dfs, ignore_index=True).to_csv(
-            args.save.replace(".tsv", "_genes.tsv"), sep="\t", index=False)
+            args.save.replace(".tsv", "_genes.tsv"), sep="\t", index=False, lineterminator="\n")
     return 0
 
 

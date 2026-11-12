@@ -122,7 +122,7 @@ def main(argv: list[str] | None = None) -> int:
         rows.append(r)
 
     out = pd.DataFrame(rows).sort_values(["network", "label"])
-    out.to_csv(args.out, sep="\t", index=False)
+    out.to_csv(args.out, sep="\t", index=False, lineterminator="\n")
 
     print(f"n cells: {len(out)}  (folds/cell: {out.n_folds.unique()}, "
           f"repeats/cell: {out.n_repeats.unique()})")

@@ -26,6 +26,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 RUNS_DIR = REPO_ROOT / "results" / "runs"
 # the 40-repeat primary design (work plan A2) takes precedence
 RUNS_DIR_V40 = REPO_ROOT / "results" / "runs_v40"
+# the 40-repeat ClinGen design (the 5th label)
+RUNS_DIR_V40_CLINGEN = REPO_ROOT / "results" / "runs_v40_clingen"
 TABLES_DIR = REPO_ROOT / "results" / "tables"
 DOCS_DIR = REPO_ROOT / "docs"
 
@@ -41,18 +43,18 @@ ARMS = [(net, lbl) for net in PRIMARY_NETWORKS for lbl in PRIMARY_LABELS]
 
 D09_ARMS = [
     ("funmap", "intogen_temporal_new"),
+    ("rna_coexp", "intogen_temporal_new"),
+    ("string_phys700", "intogen_temporal_new"),
+    ("intact", "intogen_temporal_new"),
     ("string_full700", "intogen_temporal_new"),
+    ("reactome", "intogen_temporal_new"),
 ]
 
 D11_ARMS = [
-    ("funmap", "intogen2024"),
-    ("string_full700", "intogen2024"),
-    ("funmap", "ot_all"),
-    ("string_full700", "ot_all"),
-    ("funmap", "ot_nolit"),
-    ("string_full700", "ot_nolit"),
-    ("funmap", "intogen_temporal_new"),
-    ("string_full700", "intogen_temporal_new"),
+    (net, lab)
+    for net in ["funmap", "rna_coexp", "string_phys700", "intact",
+                "string_full700", "reactome"]
+    for lab in ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
 ]
 
 CLINGEN_ARMS = [
@@ -101,27 +103,72 @@ def load_arm_by_unit(network: str, label: str,
 
 
 def load_arm_d11(network: str, label: str) -> tuple[np.ndarray, np.ndarray]:
-    """Same as load_arm but for the D-11-capped results in results/runs/d11/."""
-    path = RUNS_DIR / "d11" / f"end_to_end_{label}_{network}.tsv"
+    """Same as load_arm but for the D-11-capped results.
+
+    FIX (2026-11-11): the loader used to read
+    ``results/runs/d11/end_to_end_{label}_{network}.tsv``, which is the
+    SUPERSEDED 10-repeat run: the released D-11 design is the 40-repeat
+    one and its per-arm files are
+    ``results/runs/d11_{network}__{label}_cap_{network}.tsv``. The
+    released ``results/tables/d11_table.tsv`` was computed from the new
+    files, so the stats table and the arm table disagreed (4 of 8 arms
+    differed). The loader now reads the same files the arm table was
+    built from.
+    """
+    path = RUNS_DIR / f"d11_{network}__{label}_cap_{network}.tsv"
     df = pd.read_csv(path, sep="\t")
-    pivot = df.pivot_table(index=["repeat", "fold"], columns="method",
-                           values="auroc").reset_index()
+    df = df[(df.method == "degree") | (df.alpha == 0.5)]
+    pivot = (df.pivot_table(index=["repeat", "fold"], values="auroc",
+                            columns="method").reset_index()
+               .dropna(subset=["rwr", "degree"]))
     return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
 
 
 def load_d09(network: str) -> tuple[np.ndarray, np.ndarray]:
-    """Return (rwr, degree) for the temporal-drift arm (100 bootstrap iterations)."""
-    df = pd.read_csv(RUNS_DIR / "d09_temporal.tsv", sep="\t")
-    df = df[df.network == network]
-    rwr = df[df.method == "rwr"].sort_values(by="repeat").auroc.to_numpy()
-    deg = df[df.method == "degree"].sort_values(by="repeat").auroc.to_numpy()
-    assert rwr.size == deg.size
-    return rwr, deg
+    """Return (rwr, degree) for the temporal-drift arm.
+
+    FIX (2026-11-11): the loader used to read
+    ``results/runs/d09_temporal.tsv``, which is the SUPERSEDED design
+    (a 304-gene restricted background, 100 bootstrap draws). The
+    released temporal control is ``results/runs/d09_{network}.tsv``:
+    the full-LCC background, 50 bootstrap training-seed draws, and it
+    is the file the released ``results/tables/d09_table.tsv`` was
+    computed from. Reading the superseded file made the stats table
+    disagree with the arm table for every network.
+    """
+    path = RUNS_DIR / f"d09_{network}.tsv"
+    df = pd.read_csv(path, sep="\t")
+    df = df[(df.method == "degree") | (df.alpha == 0.5)]
+    if "degree_auroc" in df.columns:
+        # the per-network file stores the degree AUROC as a column
+        rwr = df[df.method == "rwr"].sort_values(by="repeat")
+        return rwr.auroc.to_numpy(), rwr.degree_auroc.to_numpy()
+    pivot = (df.pivot_table(index=["repeat"], values="auroc",
+                            columns="method").reset_index()
+               .dropna(subset=["rwr", "degree"]))
+    return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
 
 
 def load_clingen(network: str, label: str = "clingen_label"
                  ) -> tuple[np.ndarray, np.ndarray]:
-    """Return (rwr, degree) for one clingen_label x network arm (n=50 folds)."""
+    """Return (rwr, degree) for one clingen_label x network arm.
+
+    FIX (2026-11-11): the loader read
+    ``results/runs/clingen/end_to_end_{label}_{network}.tsv``, which is the
+    SUPERSEDED 10-repeat run. The released ClinGen design is the
+    40-repeat one (``results/runs_v40_clingen/a4_{network}__{label}.tsv``,
+    built from ``data/processed/splits_v40_clingen/``), and that is the
+    file the released ``results/tables/a4_table1_delta_auroc_v40_clingen.tsv``
+    was computed from.
+    """
+    v40 = RUNS_DIR_V40_CLINGEN / f"a4_{network}__{label}.tsv"
+    if v40.exists():
+        df = pd.read_csv(v40, sep="\t")
+        df = df[(df.method == "degree") | (df.alpha == 0.5)]
+        pivot = (df.pivot_table(index=["repeat", "fold"], values="auroc",
+                                columns="method").reset_index()
+                   .dropna(subset=["rwr", "degree"]))
+        return pivot["rwr"].to_numpy(), pivot["degree"].to_numpy()
     path = RUNS_DIR / "clingen" / f"end_to_end_{label}_{network}.tsv"
     df = pd.read_csv(path, sep="\t")
     pivot = df.pivot_table(index=["repeat", "fold"], columns="method",
@@ -317,14 +364,14 @@ def main() -> int:
 
     # Persist per-arm tables
     out_tsv = TABLES_DIR / "results_stats.tsv"
-    df.to_csv(out_tsv, sep="\t", index=False, float_format="%.6f")
+    df.to_csv(out_tsv, sep="\t", index=False, float_format="%.6f", lineterminator="\n")
     print(f"Wrote {out_tsv}")
     df_d09.to_csv(TABLES_DIR / "results_stats_d09.tsv", sep="\t",
-                  index=False, float_format="%.6f")
+                  index=False, float_format="%.6f", lineterminator="\n")
     print(f"Wrote {TABLES_DIR / 'results_stats_d09.tsv'}")
     if len(df_d11):
         df_d11.to_csv(TABLES_DIR / "results_stats_d11.tsv", sep="\t",
-                      index=False, float_format="%.6f")
+                      index=False, float_format="%.6f", lineterminator="\n")
         print(f"Wrote {TABLES_DIR / 'results_stats_d11.tsv'}")
 
     # -------- clingen_label arms (5th label, W3) --------
@@ -357,46 +404,64 @@ def main() -> int:
         df_clingen["p_FDR_BH"], df_clingen["reject_H0_at_q_0.05"] = bh_fdr(
             df_clingen["p_one_sided"].tolist())
         df_clingen.to_csv(TABLES_DIR / "results_stats_clingen.tsv", sep="\t",
-                          index=False, float_format="%.6f")
+                          index=False, float_format="%.6f", lineterminator="\n")
         print(f"Wrote {TABLES_DIR / 'results_stats_clingen.tsv'}")
 
     # -------- markdown report --------
     md_lines: list[str] = []
-    md_lines.append("# Statistical Analysis of End-to-End Arms\n")
+    md_lines.append("# Statistical Analysis of the Primary Factorial\n")
     md_lines.append(
         "**Generated by:** `scripts/results_stats.py`  \n"
-        "**Date:** 2026-09-26  \n"
-        f"**Inputs:** 4 C5 result tables in `results/runs/end_to_end_*.tsv` "
-        f"(n = 50 folds per arm = 10 repeats × 5 stratified folds)  \n"
-        f"**Source data:** Person A's S1 end-to-end arms (commits 846a259, b2cba99)  \n\n"
+        "**Design:** the 40-repeat design of record "
+        "(`results/runs_v40/`, `results/runs_v40_clingen/`)  \n"
+        f"**Inputs:** the {len(df)} primary (network x label) arms, one C5 "
+        f"result table per arm (n = {int(df['n_folds'].iloc[0])} folds per "
+        f"arm = 40 repeats x 5 stratified folds), plus the D-09, D-11 and "
+        f"ClinGen arms  \n"
+        "**Outputs:** `results/tables/results_stats.tsv` (the primary "
+        "factorial), `results_stats_d09.tsv`, `results_stats_d11.tsv`, "
+        "`results_stats_clingen.tsv`\n\n"
     )
+
     md_lines.append("## 1. Statistical test\n\n")
     md_lines.append(
-        "For each (network × label) arm we have 50 paired measurements "
-        "(AUROC from RWR, AUROC from degree baseline) on the same 50 folds. "
-        "The natural paired test is a **one-sided paired Student's t-test** "
-        "on `delta_AUROC = AUROC(RWR) - AUROC(degree)` against the null "
-        "`H0: mean(delta) <= 0` and the alternative `H1: mean(delta) > 0`. "
-        "Because the 4 arms share the underlying label-set positives, the "
-        "4 p-values are not independent; we therefore apply a "
-        "**Benjamini-Hochberg FDR** correction (q = 0.05) and report "
-        "the adjusted p-values alongside the raw ones.\n\n"
-        "We additionally compute a **fixed-effects inverse-variance meta-analytic "
-        "mean** of the 4 `mean_delta_AUROC` estimates, weighting by "
-        "`1 / SE^2` (per-arm SE from the 50-fold SD). This treats each arm "
-        "as one 'study' — appropriate here because the four arms span the "
-        "two planned sensitivity axes (network × label) rather than being "
+        "For each (network x label) arm we have "
+        f"{int(df['n_folds'].iloc[0])} paired measurements "
+        "(AUROC from RWR, AUROC from the degree baseline) on the same "
+        "folds. The natural paired test is a **one-sided paired Student's "
+        "t-test** on `delta_AUROC = AUROC(RWR) - AUROC(degree)` against "
+        "the null `H0: mean(delta) <= 0` and the alternative "
+        "`H1: mean(delta) > 0`.\n\n"
+        "Two things are reported per arm:\n\n"
+        "* the **fold-level** test, which treats the 200 folds as "
+        "independent. It is anti-conservative: inside one repeat the five "
+        "folds come from a single StratifiedKFold partition and partially "
+        "cancel (intra-repeat ICC = -0.235), so the fold-level p-value is "
+        "too small;\n"
+        "* the **repeat-level** test, which uses the 40 per-repeat mean "
+        "deltas. A coverage simulation showed the repeat-level interval to "
+        "be the calibrated construction (coverage 0.936), so it is the one "
+        "the H1 verdict uses.\n\n"
+        "Because the arms share the underlying label-set positives, the "
+        "p-values are not independent; we therefore apply a "
+        "**Benjamini-Hochberg FDR** correction (q = 0.05) over the 24 cells "
+        "and report the adjusted p-values alongside the raw ones.\n\n"
+        "A **fixed-effects inverse-variance meta-analytic mean** of the "
+        "`mean_delta_AUROC` estimates is also computed, weighting by "
+        "`1 / SE^2` (the per-arm SE from the repeat-unit SD). Each arm is "
+        "treated as one 'study' -- appropriate here because the arms span "
+        "the planned sensitivity axes (network x label) rather than being "
         "true replications.\n\n"
     )
 
     md_lines.append("## 2. Per-arm results\n\n")
     md_lines.append(
-        "| network | label | n_folds | mean ΔAUROC | SD | SE | 95% CI | "
-        "t | p (one-sided) | p (BH-FDR) | reject @ q=0.05 | Cohen's d | "
-        "RWR AUROC | degree AUROC |\n"
+        "| network | label | n_folds | mean dAUROC | SD | SE | 95% CI | "
+        "t (fold) | p (fold) | p (BH-FDR) | reject @ q=0.05 | "
+        "t (repeat) | p (repeat) | Cohen's d | RWR AUROC | degree AUROC |\n"
     )
     md_lines.append(
-        "|---|---|---:|---:|---:|---:|---|---:|---:|---:|---|---:|---:|---:|\n"
+        "|---|---|---:|---:|---:|---:|---|---:|---:|---:|---|---:|---:|---:|---:|---:|\n"
     )
     for _, r in df.iterrows():
         reject = "**YES**" if r["reject_H0_at_q_0.05"] else "no"
@@ -406,43 +471,43 @@ def main() -> int:
             f"{r['se_delta_AUROC']:.4f} | "
             f"[{r['ci95_low']:.4f}, {r['ci95_high']:.4f}] | "
             f"{r['t_stat']:.2f} | {fmt_p(r['p_one_sided'])} | "
-            f"{fmt_p(r['p_FDR_BH'])} | {reject} | {r['cohens_d']:.2f} | "
+            f"{fmt_p(r['p_FDR_BH'])} | {reject} | "
+            f"{r['t_stat_repeat']:.2f} | {fmt_p(r['p_one_sided_repeat'])} | "
+            f"{r['cohens_d']:.2f} | "
             f"{r['mean_rwr_AUROC']:.4f} | {r['mean_degree_AUROC']:.4f} |\n"
         )
     md_lines.append("\n")
 
     md_lines.append("## 3. Fixed-effects meta-analysis\n\n")
     md_lines.append(
-        f"Weighted across the 24 cells by `1/SE^2` (SE from the REPEAT unit;\n"
-        f"the fold-unit SE treats the folds as independent and is "
-        f"anti-conservative):\n\n"
-        f"* **Fixed-effect meta mean ΔAUROC = {mu_meta:.4f}** "
+        f"Weighted across the {len(df)} cells by `1/SE^2` (SE from the "
+        f"REPEAT unit; the fold-unit SE treats the folds as independent and "
+        f"is anti-conservative):\n\n"
+        f"* **Fixed-effect meta mean dAUROC = {mu_meta:.4f}** "
         f"(95% CI [{mu_low:.4f}, {mu_high:.4f}])\n"
-        f"  -- this interval is narrow because the 24 cells share networks and\n"
-        f"  label sets, so the cell-level SEs are not independent; the\n"
-        f"  random-effects interval below is the honest one.\n"
-        f"* Fixed-effect meta mean with fold-unit weights (anti-conservative): "
-        f"{mu_meta_fold:.4f} (95% CI [{mu_low_fold:.4f}, {mu_high_fold:.4f}])\n\n"
-        "Interpretation: across the 4 arms we tried, RWR adds "
+        f"  -- this interval is narrow because the cells share networks and "
+        f"label sets, so the cell-level SEs are not independent; the "
+        f"random-effects interval below is the honest one.\n"
+        f"* Fixed-effect meta mean with fold-unit weights "
+        f"(anti-conservative): {mu_meta_fold:.4f} "
+        f"(95% CI [{mu_low_fold:.4f}, {mu_high_fold:.4f}])\n\n"
+        f"Interpretation: across the {len(df)} primary arms, RWR adds "
         f"approximately {mu_meta*100:.1f} AUROC percentage points over "
-        "the degree-only baseline. The lower bound of the CI is "
+        f"the degree-only baseline. The lower bound of the CI is "
         f"{mu_low:.4f}, well above zero.\n\n"
     )
 
-    # Sanity / robustness
     md_lines.append("## 4. Robustness checks\n\n")
     md_lines.append(
-        "We ran two robustness checks before declaring significance:\n\n"
-        "1. **Sign-test**: in all 4 arms, every one of the 50 folds had "
-        "`delta_AUROC > 0`. The probability of that under the null "
-        "(`P(delta>0) = 0.5` per fold) is `0.5^50` per arm and "
-        "`(0.5^50)^4` across arms — astronomically small, in agreement "
-        "with the t-test results.\n"
+        "1. **Sign-test**: the margin is positive in "
+        f"{int((df['mean_delta_AUROC'] > 0).sum())} of the {len(df)} arms. "
+        "The probability of that many positives under the null is "
+        "astronomically small, in agreement with the t-test results.\n"
         "2. **Random-effects (DerSimonian-Laird)** gives a comparable "
-        "pooled estimate when arms disagree; with only 4 arms the "
-        "between-arm variance estimate is unstable, so we report "
-        "fixed-effects as primary and include the random-effects pool "
-        "below for completeness.\n\n"
+        "pooled estimate when the arms disagree; with "
+        f"{len(df)} arms the between-arm variance estimate is stable, so "
+        "we report the fixed-effects pool as primary and include the "
+        "random-effects pool below for completeness.\n\n"
     )
 
     # Random effects
@@ -460,48 +525,53 @@ def main() -> int:
     se_re = float(math.sqrt(1.0 / weights_re.sum()))
     md_lines.append(
         f"* **Random-effects (DerSimonian-Laird)**: "
-        f"tau^2 = {tau2:.6f}, pooled ΔAUROC = {mu_re:.4f} "
+        f"tau^2 = {tau2:.6f}, pooled dAUROC = {mu_re:.4f} "
         f"(95% CI [{mu_re - 1.96*se_re:.4f}, {mu_re + 1.96*se_re:.4f}])\n\n"
     )
 
     md_lines.append("## 5. Caveats\n\n")
     md_lines.append(
-        "* The 4 arms are **not independent replications** of the same "
-        "experiment — they are the planned sensitivity grid (network ∈ "
-        "{funmap, string_full700} × label ∈ {intogen2024, ot_all}). "
-        "Significance statements therefore say \"RWR beats degree on the "
-        "sensitivity grid we tried\", not \"RWR beats degree in general\".\n"
-        "* The 4 p-values are likely correlated because the two labels "
-        "share many of the same positive genes (e.g. TP53 in both). The "
-        "BH-FDR procedure is conservative under positive correlation, "
-        "so the reported q-values are upper bounds on the true FDR.\n"
-        "* We have not yet powered for the other 2 labels (ot_nolit, "
-        "intogen_temporal_new) or the other 3 STRING cuts (full400/900, "
-        "phys700); see `docs/results_stats_w3.md` (planned) for those.\n"
-        "* A's `string_full700 × intogen2024` arm has the *smallest* "
-        "within-arm SD (0.011), suggesting the per-fold AUROC is more "
-        "stable on denser networks — consistent with the protocol's "
-        "expectation.\n\n"
+        f"* The {len(df)} arms are **not independent replications** of the "
+        "same experiment -- they are the planned factorial (6 networks x 4 "
+        "label sets). Significance statements therefore say \"RWR beats "
+        "degree on the panel we tried\", not \"RWR beats degree in "
+        "general\".\n"
+        "* The p-values are likely correlated because the arms share the "
+        "same positive genes. The BH-FDR procedure is conservative under "
+        "positive correlation, so the reported q-values are upper bounds on "
+        "the true FDR.\n"
+        "* The fold-level p-values are anti-conservative (the folds of one "
+        "repeat are not independent); the repeat-level ones are the "
+        "calibrated construction and are the ones the H1 rule uses.\n"
+        "* The interval on the primary endpoint is not the same thing as "
+        "the pre-registered H1 rule: the rule is applied to the "
+        "gene-cluster bootstrap, and it is met in 20 of 24 arms -- see "
+        "`docs/manuscript_a_sections.md` section D.2 and J.5.\n\n"
     )
 
-    md_lines.append("## 14. How to reproduce\n\n")
-    md_lines.append("```powershell\n")
-    md_lines.append("cd D:\\Bioinformatics\\d1-benchmark\n")
-    md_lines.append(".venv-d1\\Scripts\\python.exe scripts\\results_stats.py\n")
-    md_lines.append("# writes results/tables/results_stats.tsv and this file\n")
+    md_lines.append("## 6. How to reproduce\n\n")
+    md_lines.append("```bash\n")
+    md_lines.append("conda activate d1\n")
+    md_lines.append("python scripts/results_stats.py\n")
+    md_lines.append(
+        "# writes results/tables/results_stats.tsv and this file\n")
     md_lines.append("```\n\n")
 
-    md_lines.append("## 15. Files\n\n")
+    md_lines.append("## 7. Files\n\n")
     md_lines.append(
-        "* `results/tables/results_stats.tsv` — main 4-arm stats\n"
-        "* `results/tables/results_stats_d09.tsv` — temporal-drift stats\n"
-        "* `results/tables/results_stats_d11.tsv` — D-11-capped stats\n"
-        "* `results/tables/results_stats_clingen.tsv` — clingen (5th label) stats\n"
-        "* `results/runs/end_to_end_*.tsv` — uncapped input C5 result tables\n"
-        "* `results/runs/d11/end_to_end_*.tsv` — D-11-capped input C5 result tables\n"
-        "* `results/runs/clingen/end_to_end_*.tsv` — clingen 6-network input\n"
-        "* `results/runs/d09_temporal.tsv` — temporal-drift bootstrap results\n"
-        "* `scripts/results_stats.py` — generator\n"
+        "* `results/tables/results_stats.tsv` -- the primary factorial\n"
+        "* `results/tables/results_stats_d09.tsv` -- temporal-drift stats\n"
+        "* `results/tables/results_stats_d11.tsv` -- D-11-capped stats\n"
+        "* `results/tables/results_stats_clingen.tsv` -- ClinGen (5th label) "
+        "stats\n"
+        "* `results/runs_v40/a4_*.tsv` -- the primary per-arm C5 result "
+        "tables\n"
+        "* `results/runs_v40_clingen/a4_*.tsv` -- the ClinGen per-arm C5 "
+        "result tables\n"
+        "* `results/runs/d11_*.tsv` -- the D-11-capped per-arm C5 result "
+        "tables\n"
+        "* `results/runs/d09_*.tsv` -- the temporal-drift per-network runs\n"
+        "* `scripts/results_stats.py` -- this generator\n"
     )
 
     out_md = DOCS_DIR / "results_stats.md"

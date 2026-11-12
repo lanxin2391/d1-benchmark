@@ -95,7 +95,7 @@ def build_label_table(zip_path: Path, release_date: str, mapper,
 def write_label(df: pd.DataFrame, label_id: str, out_dir: Path = OUT_DIR) -> Path:
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"{label_id}.tsv"
-    df.to_csv(path, sep="\t", index=False)
+    df.to_csv(path, sep="\t", index=False, lineterminator="\n")
     return path
 
 

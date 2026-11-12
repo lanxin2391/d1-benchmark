@@ -159,7 +159,7 @@ def main() -> int:
         desc = pd.read_csv(desc_path, sep="\t")
     else:
         desc = pd.DataFrame([descriptors(n) for n in NETWORKS])
-        desc.to_csv(desc_path, sep="\t", index=False)
+        desc.to_csv(desc_path, sep="\t", index=False, lineterminator="\n")
         log(f"wrote {desc_path.name}")
 
     # ---- coverage ---------------------------------------------------
@@ -191,8 +191,8 @@ def main() -> int:
         columns={"held_out": "network", "r2_out": "s2_transfer_r2_scorecv"}),
         on="network", how="left")
 
-    net.to_csv(TABLES / "network_stability.tsv", sep="\t", index=False)
-    arms.to_csv(TABLES / "network_stability_by_arm.tsv", sep="\t", index=False)
+    net.to_csv(TABLES / "network_stability.tsv", sep="\t", index=False, lineterminator="\n")
+    arms.to_csv(TABLES / "network_stability_by_arm.tsv", sep="\t", index=False, lineterminator="\n")
     log(f"wrote network_stability.tsv ({len(net)} networks)")
 
     # ---- what does the stability depend on? (descriptive, n = 8) ----
@@ -250,9 +250,9 @@ def main() -> int:
                              "predicted": best[2] if best else np.nan,
                              "observed": float(te[target].iloc[0])})
     res.to_csv(TABLES / "network_stability_vs_topology.tsv", sep="\t",
-               index=False)
+               index=False, lineterminator="\n")
     pd.DataFrame(loo_pred).to_csv(
-        TABLES / "network_stability_loo.tsv", sep="\t", index=False)
+        TABLES / "network_stability_loo.tsv", sep="\t", index=False, lineterminator="\n")
 
     make_figure(net, res)
     print(net.round(4).to_string(index=False))

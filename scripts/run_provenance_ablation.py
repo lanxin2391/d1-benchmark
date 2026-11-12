@@ -103,7 +103,7 @@ def main():
                      .reset_index())
     grouped_class = grouped_class.rename(columns={"label_set": "label"})
     grouped_class.to_csv(TABLE_DIR / "provenance_ablation.tsv",
-                          sep="\t", index=False)
+                          sep="\t", index=False, lineterminator="\n")
 
     print("\nPer-(class, label, alpha=0.5) mean delta_AUROC:")
     pivot = grouped_class[grouped_class.alpha == 0.5].pivot_table(
@@ -159,7 +159,7 @@ def main():
         summary.append(row)
     summary_df = pd.DataFrame(summary)
     summary_df.to_csv(TABLE_DIR / "provenance_summary.tsv",
-                       sep="\t", index=False)
+                       sep="\t", index=False, lineterminator="\n")
     print("\nPer-(label, alpha=0.5) provenance class means + Kruskal effect size:")
     cls_cols = [f"{c}_mean" for c in CLASSES]
     keep = ["label", "alpha", "n_classes", "n_networks",

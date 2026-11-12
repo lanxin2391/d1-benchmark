@@ -48,7 +48,7 @@ print(f"recomputing {net} x {lab} fresh (100 resamples x 200 folds) ...")
 a5.PROCESSED_SPLIT = ROOT / "data/processed/splits_v40"
 fresh_df, fresh_means = a5._run_one_arm(net, lab, 100)
 
-trace = ROOT / "results/runs/a5/a5" / f"{net}__{lab}__seed_resamples.tsv"
+trace = ROOT / "results/runs/a5" / f"{net}__{lab}__seed_resamples.tsv"
 disk = pd.read_csv(trace, sep="\t")
 resume_means = disk.groupby("resample")["delta_auroc"].mean().to_numpy()
 
@@ -93,7 +93,7 @@ obs = piv.groupby(["network", "label_set"])["delta"].mean()
 bad_rows = []
 for _, row in p_tab.iterrows():
     n, l = row["network"], row["label"]
-    fp = ROOT / "results/runs/a5/a5" / f"{n}__{l}__seed_resamples.tsv"
+    fp = ROOT / "results/runs/a5" / f"{n}__{l}__seed_resamples.tsv"
     if not fp.exists():
         bad_rows.append((n, l, "missing trace"))
         continue

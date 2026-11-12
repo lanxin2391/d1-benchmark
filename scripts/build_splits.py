@@ -264,7 +264,7 @@ def main(argv: list[str] | None = None) -> int:
 
     log_df = pd.DataFrame(n_log)
     log_path = out_dir / "build_log.tsv"
-    log_df.to_csv(log_path, sep="\t", index=False)
+    log_df.to_csv(log_path, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {len(written)} split files to "
           f"{out_dir} + audit log")
     return 0

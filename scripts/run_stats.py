@@ -83,7 +83,7 @@ def main():
     df["q_FDR"] = _bh_q(df["p_one_sided"].to_numpy())
 
     out = ROOT / "results" / "tables" / "results_stats.tsv"
-    df.to_csv(out, sep="\t", index=False)
+    df.to_csv(out, sep="\t", index=False, lineterminator="\n")
     print(f"\nWrote {out}")
 
     # Print summary at alpha=0.5 (primary endpoint)

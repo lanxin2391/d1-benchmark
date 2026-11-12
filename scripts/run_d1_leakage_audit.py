@@ -145,7 +145,7 @@ def main() -> int:
     log(f"audited {len(rows):,} (arm, repeat, fold) rows")
 
     audit = pd.DataFrame(rows)
-    audit.to_csv(TABLES / "d1_leakage_audit.tsv", sep="\t", index=False)
+    audit.to_csv(TABLES / "d1_leakage_audit.tsv", sep="\t", index=False, lineterminator="\n")
 
     # ---- per-arm summary ----------------------------------------------
     summary = (audit.groupby(["family", "network", "label"])
@@ -169,7 +169,7 @@ def main() -> int:
     summary["excess_over_negatives"] = (
         summary["median_frac_test_pos_linked"]
         - summary["median_frac_test_neg_linked"])
-    summary.to_csv(TABLES / "d1_leakage_summary.tsv", sep="\t", index=False)
+    summary.to_csv(TABLES / "d1_leakage_summary.tsv", sep="\t", index=False, lineterminator="\n")
 
     log("\n=== the 24 primary arms (native) ===")
     nat = summary[summary.family == "native"].sort_values(

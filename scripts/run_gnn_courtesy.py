@@ -531,7 +531,7 @@ def main():
         out = pd.DataFrame(rows_05)
         out = out.sort_values(["network", "label"])
         out.to_csv(TABLE_DIR / "gnn_courtesy_arm.tsv", sep="\t",
-                     index=False)
+                     index=False, lineterminator="\n")
         _log(f"wrote gnn_courtesy_arm.tsv ({len(out)} rows)")
 
 

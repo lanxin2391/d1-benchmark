@@ -78,7 +78,7 @@ def write_splits(df: pd.DataFrame, label_id: str, universe_id: str,
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     path = out / f"{label_id}__{universe_id}.tsv"
-    df[SPLIT_COLUMNS].to_csv(path, sep="\t", index=False)
+    df[SPLIT_COLUMNS].to_csv(path, sep="\t", index=False, lineterminator="\n")
     return path
 
 

@@ -1,21 +1,61 @@
 regime	network	label	delta_AUROC_mean	ci95_low	ci95_high	p_one_sided
-original	funmap	intogen2024	0.09982	0.094554	0.105086	0.0
-original	string_full700	intogen2024	0.113328	0.1102	0.116456	0.0
-original	funmap	ot_all	0.084637	0.07915	0.090124	0.0
-original	string_full700	ot_all	0.119228	0.115521	0.122935	0.0
-D-09 temporal	funmap	intogen_temporal_new	0.041998	0.038768	0.045228	0.0
-D-09 temporal	string_full700	intogen_temporal_new	0.112206	0.109438	0.114974	0.0
-D-11 cap	funmap	intogen2024	0.11185	0.099052	0.124648	0.0
-D-11 cap	string_full700	intogen2024	0.101931	0.095132	0.10873	0.0
-D-11 cap	funmap	ot_all	0.01185	0.002298	0.021402	0.009371
-D-11 cap	string_full700	ot_all	0.078852	0.072774	0.084929	0.0
-D-11 cap	funmap	ot_nolit	0.088312	0.07784	0.098785	0.0
-D-11 cap	string_full700	ot_nolit	0.138409	0.128961	0.147857	0.0
-D-11 cap	funmap	intogen_temporal_new	0.028028	0.020283	0.035773	0.0
-D-11 cap	string_full700	intogen_temporal_new	0.062925	0.055583	0.070268	0.0
-clingen (5th label)	funmap	clingen_label	0.069072	0.054034	0.08411	0.0
-clingen (5th label)	intact	clingen_label	0.114029	0.104756	0.123301	0.0
-clingen (5th label)	reactome	clingen_label	0.205827	0.18417	0.227485	0.0
-clingen (5th label)	rna_coexp	clingen_label	0.064681	0.05272	0.076642	0.0
-clingen (5th label)	string_full700	clingen_label	0.096692	0.08831	0.105074	0.0
-clingen (5th label)	string_phys700	clingen_label	0.170148	0.157165	0.183131	0.0
+original	funmap	intogen2024	0.100083	0.097651	0.102514	0.0
+original	funmap	ot_all	0.085344	0.082438	0.08825	0.0
+original	funmap	ot_nolit	0.077965	0.075365	0.080565	0.0
+original	funmap	intogen_temporal_new	0.019642	0.015597	0.023687	0.0
+original	intact	intogen2024	0.065071	0.063876	0.066267	0.0
+original	intact	ot_all	0.084171	0.082664	0.085678	0.0
+original	intact	ot_nolit	0.078403	0.076722	0.080084	0.0
+original	intact	intogen_temporal_new	0.007134	0.004434	0.009834	0.0
+original	reactome	intogen2024	0.042859	0.039996	0.045721	0.0
+original	reactome	ot_all	0.110256	0.107376	0.113135	0.0
+original	reactome	ot_nolit	0.099589	0.096122	0.103056	0.0
+original	reactome	intogen_temporal_new	-0.012478	-0.019429	-0.005528	0.999732
+original	rna_coexp	intogen2024	0.052102	0.049838	0.054366	0.0
+original	rna_coexp	ot_all	0.076668	0.073823	0.079514	0.0
+original	rna_coexp	ot_nolit	0.083391	0.080493	0.08629	0.0
+original	rna_coexp	intogen_temporal_new	0.012691	0.007533	0.017849	1e-06
+original	string_full700	intogen2024	0.113313	0.111532	0.115093	0.0
+original	string_full700	ot_all	0.120138	0.118394	0.121883	0.0
+original	string_full700	ot_nolit	0.12667	0.124932	0.128407	0.0
+original	string_full700	intogen_temporal_new	0.060433	0.056651	0.064215	0.0
+original	string_phys700	intogen2024	0.118895	0.116535	0.121254	0.0
+original	string_phys700	ot_all	0.15819	0.156105	0.160274	0.0
+original	string_phys700	ot_nolit	0.171111	0.168463	0.173758	0.0
+original	string_phys700	intogen_temporal_new	0.037843	0.03297	0.042715	0.0
+D-09 temporal	funmap	intogen_temporal_new	0.024724	0.022621	0.026826	0.0
+D-09 temporal	rna_coexp	intogen_temporal_new	0.038202	0.03631	0.040093	0.0
+D-09 temporal	string_phys700	intogen_temporal_new	0.076152	0.073938	0.078367	0.0
+D-09 temporal	intact	intogen_temporal_new	0.030176	0.029336	0.031015	0.0
+D-09 temporal	string_full700	intogen_temporal_new	0.092285	0.090516	0.094054	0.0
+D-09 temporal	reactome	intogen_temporal_new	-0.009506	-0.012733	-0.006278	1.0
+D-11 cap	funmap	intogen2024	0.126777	0.120715	0.13284	0.0
+D-11 cap	funmap	ot_all	0.019138	0.014782	0.023494	0.0
+D-11 cap	funmap	ot_nolit	0.088454	0.083417	0.093492	0.0
+D-11 cap	funmap	intogen_temporal_new	0.019642	0.015597	0.023687	0.0
+D-11 cap	rna_coexp	intogen2024	0.082944	0.077935	0.087952	0.0
+D-11 cap	rna_coexp	ot_all	0.040252	0.035075	0.045428	0.0
+D-11 cap	rna_coexp	ot_nolit	0.095589	0.089309	0.10187	0.0
+D-11 cap	rna_coexp	intogen_temporal_new	0.012691	0.007533	0.017849	1e-06
+D-11 cap	string_phys700	intogen2024	0.09552	0.091276	0.099765	0.0
+D-11 cap	string_phys700	ot_all	0.093795	0.089962	0.097628	0.0
+D-11 cap	string_phys700	ot_nolit	0.181913	0.176219	0.187608	0.0
+D-11 cap	string_phys700	intogen_temporal_new	0.037843	0.03297	0.042715	0.0
+D-11 cap	intact	intogen2024	0.0681	0.065603	0.070596	0.0
+D-11 cap	intact	ot_all	0.06643	0.063542	0.069319	0.0
+D-11 cap	intact	ot_nolit	0.097338	0.093313	0.101362	0.0
+D-11 cap	intact	intogen_temporal_new	0.007134	0.004434	0.009834	0.0
+D-11 cap	string_full700	intogen2024	0.101974	0.098985	0.104962	0.0
+D-11 cap	string_full700	ot_all	0.078548	0.075689	0.081406	0.0
+D-11 cap	string_full700	ot_nolit	0.138795	0.134563	0.143027	0.0
+D-11 cap	string_full700	intogen_temporal_new	0.060433	0.056651	0.064215	0.0
+D-11 cap	reactome	intogen2024	-0.011044	-0.017057	-0.005031	0.999799
+D-11 cap	reactome	ot_all	0.062719	0.055903	0.069535	0.0
+D-11 cap	reactome	ot_nolit	0.164949	0.156251	0.173647	0.0
+D-11 cap	reactome	intogen_temporal_new	-0.012478	-0.019429	-0.005528	0.999732
+clingen (5th label)	funmap	clingen_label	0.073511	0.066294	0.080728	0.0
+clingen (5th label)	intact	clingen_label	0.112415	0.107591	0.11724	0.0
+clingen (5th label)	reactome	clingen_label	0.171017	0.161133	0.1809	0.0
+clingen (5th label)	rna_coexp	clingen_label	0.066492	0.059391	0.073593	0.0
+clingen (5th label)	string_full700	clingen_label	0.097427	0.093394	0.10146	0.0
+clingen (5th label)	string_phys700	clingen_label	0.168625	0.162941	0.17431	0.0

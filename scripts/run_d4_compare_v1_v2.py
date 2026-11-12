@@ -106,7 +106,7 @@ def main() -> int:
     log("computing the v2 statistics ...")
     v2 = arm_table(v2_combined, "v2_complex_aware")
     stats = pd.concat([v1, v2], ignore_index=True)
-    stats.to_csv(TABLES / "d4_v2_stats.tsv", sep="\t", index=False)
+    stats.to_csv(TABLES / "d4_v2_stats.tsv", sep="\t", index=False, lineterminator="\n")
 
     # ---- the comparison ------------------------------------------------
     cmp_rows = []
@@ -134,7 +134,7 @@ def main() -> int:
         })
     cmp_df = pd.DataFrame(cmp_rows)
     cmp_df.to_csv(TABLES / "d4_v1_vs_v2_comparison.tsv", sep="\t",
-                  index=False)
+                  index=False, lineterminator="\n")
 
     # ---- the Q3 decision ----------------------------------------------
     med_rel = float(cmp_df["abs_rel_change"].median())

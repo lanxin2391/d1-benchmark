@@ -1,0 +1,1696 @@
+[
+ {
+  "quantity": "cv_design",
+  "scope": "primary factorial",
+  "value": "40 repeats x 5 folds",
+  "source": "results/runs_v40/a4_combined.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "cv_design",
+  "scope": "folds per arm",
+  "value": 200,
+  "source": "results/runs_v40/a4_combined.tsv",
+  "note": "one alpha; the released design has 40 repeats, not the 10 of the pre-registration"
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "funmap x intogen2024",
+  "value": 0.1001,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "funmap x intogen_temporal_new",
+  "value": 0.0196,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "funmap x ot_all",
+  "value": 0.0853,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "funmap x ot_nolit",
+  "value": 0.078,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "intact x intogen2024",
+  "value": 0.0651,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "intact x intogen_temporal_new",
+  "value": 0.0071,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "intact x ot_all",
+  "value": 0.0842,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "intact x ot_nolit",
+  "value": 0.0784,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "reactome x intogen2024",
+  "value": 0.0429,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "reactome x intogen_temporal_new",
+  "value": -0.0125,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "reactome x ot_all",
+  "value": 0.1103,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "reactome x ot_nolit",
+  "value": 0.0996,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "rna_coexp x intogen2024",
+  "value": 0.0521,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "rna_coexp x intogen_temporal_new",
+  "value": 0.0127,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "rna_coexp x ot_all",
+  "value": 0.0767,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "rna_coexp x ot_nolit",
+  "value": 0.0834,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_full700 x intogen2024",
+  "value": 0.1133,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_full700 x intogen_temporal_new",
+  "value": 0.0604,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_full700 x ot_all",
+  "value": 0.1201,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_full700 x ot_nolit",
+  "value": 0.1267,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_phys700 x intogen2024",
+  "value": 0.1189,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_phys700 x intogen_temporal_new",
+  "value": 0.0378,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_phys700 x ot_all",
+  "value": 0.1582,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "string_phys700 x ot_nolit",
+  "value": 0.1711,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "panel range (min)",
+  "value": -0.0125,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "panel range (max)",
+  "value": 0.1711,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "n negative cells",
+  "value": 1,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": "reactome x intogen_temporal_new"
+ },
+ {
+  "quantity": "delta_auroc",
+  "scope": "n positive cells",
+  "value": 23,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc_alpha",
+  "scope": "alpha=0.3 panel mean",
+  "value": 0.072933,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "delta_auroc_alpha",
+  "scope": "alpha=0.7 panel mean",
+  "value": 0.080483,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "intogen2024",
+  "value": 0.082067,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "intogen_temporal_new",
+  "value": 0.02085,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "ot_all",
+  "value": 0.1058,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "ot_nolit",
+  "value": 0.1062,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "panel median cell",
+  "value": 0.0809,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_mean",
+  "scope": "panel mean cell",
+  "value": 0.078729,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "n_primary_cells",
+  "scope": "results_stats.tsv",
+  "value": 24,
+  "source": "results_stats.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "BH_FDR",
+  "scope": "cells rejecting at q<0.05 (fold unit)",
+  "value": 23,
+  "source": "results_stats.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "BH_FDR",
+  "scope": "cells rejecting at q<0.05 (repeat unit)",
+  "value": 23,
+  "source": "results_stats.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "BH_FDR",
+  "scope": "failing cell(s)",
+  "value": "reactome x intogen_temporal_new",
+  "source": "results_stats.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_between_arm",
+  "scope": "network (between)",
+  "value": 0.248192,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_total",
+  "scope": "network (between)",
+  "value": 0.148445,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_between_arm",
+  "scope": "label (between)",
+  "value": 0.34778,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_total",
+  "scope": "label (between)",
+  "value": 0.208008,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_between_arm",
+  "scope": "network x label (interaction)",
+  "value": 0.400651,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_total",
+  "scope": "network x label (interaction)",
+  "value": 0.23963,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_between_arm",
+  "scope": "fold (within cell)",
+  "value": 0.003377,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance_fraction_total",
+  "scope": "fold (within cell)",
+  "value": 0.403917,
+  "source": "stats_variance_decomp.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "H1_CI_excludes_zero",
+  "scope": "fold_pct unit",
+  "value": "24/24",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "H1_CI_excludes_zero",
+  "scope": "repeat_pct unit",
+  "value": "24/24",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "H1_CI_excludes_zero",
+  "scope": "repeat_t unit",
+  "value": "24/24",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "H1_CI_excludes_zero",
+  "scope": "repeat_bca unit",
+  "value": "24/24",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "H1_CI_excludes_zero",
+  "scope": "gene unit",
+  "value": "20/24",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": "funmap x intogen_temporal_new; intact x intogen_temporal_new; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new"
+ },
+ {
+  "quantity": "negative_cell_CI",
+  "scope": "reactome x intogen_temporal_new (fold_pct)",
+  "value": "[-0.019519, -0.005442]",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": "excludes zero: True"
+ },
+ {
+  "quantity": "negative_cell_CI",
+  "scope": "reactome x intogen_temporal_new (repeat_pct)",
+  "value": "[-0.01531, -0.009604]",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": "excludes zero: True"
+ },
+ {
+  "quantity": "negative_cell_CI",
+  "scope": "reactome x intogen_temporal_new (gene)",
+  "value": "[-0.0589, 0.037459]",
+  "source": "stats_bootstrap_ci.tsv",
+  "note": "excludes zero: False"
+ },
+ {
+  "quantity": "TOST",
+  "scope": "cells equivalent to zero",
+  "value": 6,
+  "source": "stats_equivalence.tsv",
+  "note": "funmap x intogen_temporal_new; intact x intogen_temporal_new; reactome x intogen2024; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new; string_phys700 x intogen_temporal_new"
+ },
+ {
+  "quantity": "TOST",
+  "scope": "cells not equivalent to zero",
+  "value": 18,
+  "source": "stats_equivalence.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "H1_rule",
+  "scope": "fold_pct",
+  "value": "24/24",
+  "source": "stats_h1_verdict_v40.tsv",
+  "note": "rule met"
+ },
+ {
+  "quantity": "H1_rule",
+  "scope": "repeat_pct",
+  "value": "24/24",
+  "source": "stats_h1_verdict_v40.tsv",
+  "note": "rule met"
+ },
+ {
+  "quantity": "H1_rule",
+  "scope": "repeat_t",
+  "value": "24/24",
+  "source": "stats_h1_verdict_v40.tsv",
+  "note": "rule met"
+ },
+ {
+  "quantity": "H1_rule",
+  "scope": "repeat_bca",
+  "value": "24/24",
+  "source": "stats_h1_verdict_v40.tsv",
+  "note": "rule met"
+ },
+ {
+  "quantity": "H1_rule",
+  "scope": "gene",
+  "value": "20/24",
+  "source": "stats_h1_verdict_v40.tsv",
+  "note": "NOT met: funmap x intogen_temporal_new; intact x intogen_temporal_new; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new"
+ },
+ {
+  "quantity": "control2_degree_matched_seed_null",
+  "scope": "z range",
+  "value": "3.0893 to 226.9074",
+  "source": "a5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control2_degree_matched_seed_null",
+  "scope": "n cells with z>5",
+  "value": 23,
+  "source": "a5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control2_degree_matched_seed_null",
+  "scope": "n null means <= 0",
+  "value": 23,
+  "source": "a5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control2_degree_matched_seed_null",
+  "scope": "null mean range",
+  "value": "-0.0517 to 0.005",
+  "source": "a5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "z range",
+  "value": "-3.529 to 205.2488",
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "n cells with z>5",
+  "value": 23,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "n cells with z<=5",
+  "value": 1,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "funmap: n rewirings",
+  "value": 100,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "intact: n rewirings",
+  "value": 100,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "reactome: n rewirings",
+  "value": 98,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "rna_coexp: n rewirings",
+  "value": 100,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "string_full700: n rewirings",
+  "value": 100,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "string_phys700: n rewirings",
+  "value": 100,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control3_rewiring_null",
+  "scope": "total rewired-network runs",
+  "value": 2392,
+  "source": "w5_p_values.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control4_shared_universe",
+  "scope": "shared genes",
+  "value": 1605,
+  "source": "d12_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control4_shared_universe",
+  "scope": "n_test",
+  "value": 321,
+  "source": "d12_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control4_shared_universe",
+  "scope": "delta range",
+  "value": "-0.036 to 0.1304",
+  "source": "d12_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control4_shared_universe",
+  "scope": "n positive cells",
+  "value": 22,
+  "source": "d12_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control5_cross_catalogue",
+  "scope": "n transfer cells",
+  "value": 66,
+  "source": "results_stats_transfer.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control5_cross_catalogue",
+  "scope": "n positive cells",
+  "value": 59,
+  "source": "results_stats_transfer.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control5_cross_catalogue",
+  "scope": "n negative cells",
+  "value": 7,
+  "source": "results_stats_transfer.tsv",
+  "note": "funmap ot_all->intogen_temporal_new; funmap intogen_temporal_new->ot_all; intact intogen_temporal_new->ot_nolit; reactome ot_nolit->intogen_temporal_new; reactome intogen_temporal_new->ot_nolit; reactome intogen_temporal_new->ot_all; reactome ot_all->intogen_temporal_new"
+ },
+ {
+  "quantity": "control5_cross_catalogue",
+  "scope": "mean delta",
+  "value": 0.0313,
+  "source": "results_stats_transfer.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control5_cross_catalogue",
+  "scope": "retention percent",
+  "value": 39.81,
+  "source": "results_stats_transfer.tsv",
+  "note": "cross-catalogue mean / within-label mean; within-label mean = 0.0787"
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "delta range",
+  "value": "-0.0095 to 0.0923",
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "n positive cells",
+  "value": 5,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "n effective seed sets (min)",
+  "value": 50,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "funmap delta",
+  "value": 0.024724,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "rna_coexp delta",
+  "value": 0.038202,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "string_phys700 delta",
+  "value": 0.076152,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "intact delta",
+  "value": 0.030176,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "string_full700 delta",
+  "value": 0.092285,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control6_temporal_split",
+  "scope": "reactome delta",
+  "value": -0.009506,
+  "source": "d09_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control_d11_cap",
+  "scope": "N per network",
+  "value": "funmap=104; funmap=104; funmap=104; funmap=104; rna_coexp=89; rna_coexp=89; rna_coexp=89; rna_coexp=89; string_phys700=116; string_phys700=116; string_phys700=116; string_phys700=116; intact=150; intact=150; intact=150; intact=150; string_full700=145; string_full700=145; string_full700=145; string_full700=145; reactome=63; reactome=63; reactome=63; reactome=63",
+  "source": "d11_table.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control7_publication_count",
+  "scope": "n cells",
+  "value": 30,
+  "source": "control7_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control7_publication_count",
+  "scope": "n labels",
+  "value": 5,
+  "source": "control7_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control7_publication_count",
+  "scope": "mean matched-minus-standard",
+  "value": 0.001,
+  "source": "control7_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control_complex_aware_cv",
+  "scope": "median |relative change|",
+  "value": 0.1423,
+  "source": "d4_v1_vs_v2_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control_complex_aware_cv",
+  "scope": "n sign flips",
+  "value": 0,
+  "source": "d4_v1_vs_v2_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "mean low",
+  "value": 0.0527,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "n positive low",
+  "value": 22,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "mean mid",
+  "value": 0.0609,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "n positive mid",
+  "value": 24,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "mean high",
+  "value": 0.0537,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "n positive high",
+  "value": 23,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control8_seed_degree",
+  "scope": "mean high-minus-low",
+  "value": 0.001,
+  "source": "control8_seed_degree_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "log10_edges coef",
+  "value": -0.0393,
+  "source": "control9_size_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "log10_edges p",
+  "value": 0.0129,
+  "source": "control9_size_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "log10_edges partial R2",
+  "value": 0.2973,
+  "source": "control9_size_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "coverage coef",
+  "value": 0.1449,
+  "source": "control9_size_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "coverage p",
+  "value": 0.000864,
+  "source": "control9_size_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "coverage partial R2",
+  "value": 0.469,
+  "source": "control9_size_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "pooled Spearman rho",
+  "value": -0.0211,
+  "source": "control9_size_adjustment.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "permutation p",
+  "value": 0.93,
+  "source": "control9_size_adjustment.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "adjusted positive cells",
+  "value": 23,
+  "source": "control9_size_adjustment.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "raw positive cells",
+  "value": 23,
+  "source": "control9_size_adjustment.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "sign preserved",
+  "value": 22,
+  "source": "control9_size_adjustment.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control9_size",
+  "scope": "mean abs residual",
+  "value": 0.0168,
+  "source": "control9_size_adjustment.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "persistent genes, real input",
+  "value": 123.5833,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "persistent genes, random input",
+  "value": 0.5667,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "degree percentile, real",
+  "value": 0.7659,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "degree percentile, random",
+  "value": 0.6047,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "hub overlap, real",
+  "value": 0.1087,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "hub overlap, random",
+  "value": 0.0448,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "input sensitivity Spearman",
+  "value": 0.5924,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control10_random_input",
+  "scope": "input sensitivity Jaccard",
+  "value": 0.0185,
+  "source": "control10_random_input_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "full AUROC: median margin",
+  "value": 0.0809,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "full AUROC: arms positive",
+  "value": "23/24",
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "partial AUC FPR<=0.02: median margin",
+  "value": 0.0308,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "partial AUC FPR<=0.02: arms positive",
+  "value": "20/24",
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "precision in the top 10 %: median margin",
+  "value": 0.0412,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "precision in the top 10 %: arms positive",
+  "value": "20/24",
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "Spearman rho AUROC vs partial AUC",
+  "value": 0.804,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "Spearman rho AUROC vs top-10 %",
+  "value": 0.897,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "arms negative on partial AUC",
+  "value": 4,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "co_primary_endpoint",
+  "scope": "arms negative on top-10 %",
+  "value": 4,
+  "source": "pauc_top10_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_eta2",
+  "scope": "intogen2024",
+  "value": 0.210672,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_kruskal_p",
+  "scope": "intogen2024",
+  "value": 0.501337,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_eta2",
+  "scope": "intogen_temporal_new",
+  "value": 0.022916,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_kruskal_p",
+  "scope": "intogen_temporal_new",
+  "value": 0.953497,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_eta2",
+  "scope": "ot_all",
+  "value": 0.179962,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_kruskal_p",
+  "scope": "ot_all",
+  "value": 0.304076,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_eta2",
+  "scope": "ot_nolit",
+  "value": 0.076395,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "provenance_kruskal_p",
+  "scope": "ot_nolit",
+  "value": 0.651439,
+  "source": "provenance_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "n cells",
+  "value": 24,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "mean GNN delta",
+  "value": 0.0282,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "n GNN cells positive",
+  "value": 19,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "mean RWR delta (same 24 cells)",
+  "value": 0.0787,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x intogen2024: GNN delta",
+  "value": 0.148028,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x intogen2024: RWR delta",
+  "value": 0.1001,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x intogen_temporal_new: GNN delta",
+  "value": 0.02584,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x intogen_temporal_new: RWR delta",
+  "value": 0.0196,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x ot_all: GNN delta",
+  "value": 0.052139,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x ot_all: RWR delta",
+  "value": 0.0853,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x ot_nolit: GNN delta",
+  "value": 0.032785,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "funmap x ot_nolit: RWR delta",
+  "value": 0.078,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x intogen2024: GNN delta",
+  "value": 0.076698,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x intogen2024: RWR delta",
+  "value": 0.0651,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x intogen_temporal_new: GNN delta",
+  "value": 0.003174,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x intogen_temporal_new: RWR delta",
+  "value": 0.0071,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x ot_all: GNN delta",
+  "value": 0.050379,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x ot_all: RWR delta",
+  "value": 0.0842,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x ot_nolit: GNN delta",
+  "value": 0.061814,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "intact x ot_nolit: RWR delta",
+  "value": 0.0784,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x intogen2024: GNN delta",
+  "value": -0.049719,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x intogen2024: RWR delta",
+  "value": 0.0429,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x intogen_temporal_new: GNN delta",
+  "value": -0.092198,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x intogen_temporal_new: RWR delta",
+  "value": -0.0125,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x ot_all: GNN delta",
+  "value": -0.005912,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x ot_all: RWR delta",
+  "value": 0.1103,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x ot_nolit: GNN delta",
+  "value": 0.006478,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "reactome x ot_nolit: RWR delta",
+  "value": 0.0996,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x intogen2024: GNN delta",
+  "value": 0.062964,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x intogen2024: RWR delta",
+  "value": 0.0521,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x intogen_temporal_new: GNN delta",
+  "value": -0.023036,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x intogen_temporal_new: RWR delta",
+  "value": 0.0127,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x ot_all: GNN delta",
+  "value": 0.015364,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x ot_all: RWR delta",
+  "value": 0.0767,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x ot_nolit: GNN delta",
+  "value": 0.010774,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "rna_coexp x ot_nolit: RWR delta",
+  "value": 0.0834,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x intogen2024: GNN delta",
+  "value": 0.108378,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x intogen2024: RWR delta",
+  "value": 0.1133,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x intogen_temporal_new: GNN delta",
+  "value": 0.061689,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x intogen_temporal_new: RWR delta",
+  "value": 0.0604,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x ot_all: GNN delta",
+  "value": 0.030807,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x ot_all: RWR delta",
+  "value": 0.1201,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x ot_nolit: GNN delta",
+  "value": 0.025819,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_full700 x ot_nolit: RWR delta",
+  "value": 0.1267,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x intogen2024: GNN delta",
+  "value": 0.084689,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x intogen2024: RWR delta",
+  "value": 0.1189,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x intogen_temporal_new: GNN delta",
+  "value": -0.066161,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x intogen_temporal_new: RWR delta",
+  "value": 0.0378,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x ot_all: GNN delta",
+  "value": 0.032052,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x ot_all: RWR delta",
+  "value": 0.1582,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x ot_nolit: GNN delta",
+  "value": 0.024381,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "gnn_arm",
+  "scope": "string_phys700 x ot_nolit: RWR delta",
+  "value": 0.1711,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "funmap",
+  "value": 10525,
+  "source": "data/processed/networks/funmap.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "funmap",
+  "value": 10189,
+  "source": "data/processed/networks/funmap.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "funmap",
+  "value": 196605,
+  "source": "data/processed/networks/funmap.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "intact",
+  "value": 17918,
+  "source": "data/processed/networks/intact.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "intact",
+  "value": 17918,
+  "source": "data/processed/networks/intact.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "intact",
+  "value": 564706,
+  "source": "data/processed/networks/intact.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "intact_miscore045",
+  "value": 14902,
+  "source": "data/processed/networks/intact_miscore045.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "intact_miscore045",
+  "value": 14851,
+  "source": "data/processed/networks/intact_miscore045.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "intact_miscore045",
+  "value": 126992,
+  "source": "data/processed/networks/intact_miscore045.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "reactome",
+  "value": 4993,
+  "source": "data/processed/networks/reactome.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "reactome",
+  "value": 3953,
+  "source": "data/processed/networks/reactome.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "reactome",
+  "value": 20143,
+  "source": "data/processed/networks/reactome.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "rna_coexp",
+  "value": 9928,
+  "source": "data/processed/networks/rna_coexp.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "rna_coexp",
+  "value": 9152,
+  "source": "data/processed/networks/rna_coexp.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "rna_coexp",
+  "value": 196172,
+  "source": "data/processed/networks/rna_coexp.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "string_full400",
+  "value": 19488,
+  "source": "data/processed/networks/string_full400.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "string_full400",
+  "value": 19486,
+  "source": "data/processed/networks/string_full400.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "string_full400",
+  "value": 929471,
+  "source": "data/processed/networks/string_full400.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "string_full700",
+  "value": 16201,
+  "source": "data/processed/networks/string_full700.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "string_full700",
+  "value": 15882,
+  "source": "data/processed/networks/string_full700.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "string_full700",
+  "value": 236712,
+  "source": "data/processed/networks/string_full700.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "string_full900",
+  "value": 12323,
+  "source": "data/processed/networks/string_full900.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "string_full900",
+  "value": 11693,
+  "source": "data/processed/networks/string_full900.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "string_full900",
+  "value": 100383,
+  "source": "data/processed/networks/string_full900.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
+  "scope": "string_phys700",
+  "value": 10746,
+  "source": "data/processed/networks/string_phys700.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "string_phys700",
+  "value": 9830,
+  "source": "data/processed/networks/string_phys700.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "string_phys700",
+  "value": 85576,
+  "source": "data/processed/networks/string_phys700.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "label_positives",
+  "scope": "intogen2024",
+  "value": 633,
+  "source": "data/processed/labels/intogen2024.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_positives",
+  "scope": "ot_all",
+  "value": 600,
+  "source": "data/processed/labels/ot_all.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_positives",
+  "scope": "ot_nolit",
+  "value": 600,
+  "source": "data/processed/labels/ot_nolit.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_positives",
+  "scope": "intogen_temporal_new",
+  "value": 152,
+  "source": "data/processed/labels/intogen_temporal_new.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_positives",
+  "scope": "clingen_label",
+  "value": 84,
+  "source": "data/processed/labels/clingen_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "intogen2024 x ot_all",
+  "value": 205,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "intogen2024 x ot_nolit",
+  "value": 137,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "intogen2024 x intogen_temporal_new",
+  "value": 152,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "ot_all x ot_nolit",
+  "value": 430,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "intogen_temporal_new x ot_all",
+  "value": 24,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "intogen_temporal_new x ot_nolit",
+  "value": 18,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "clingen_label x intogen2024",
+  "value": 49,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "clingen_label x ot_all",
+  "value": 83,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "clingen_label x ot_nolit",
+  "value": 66,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_overlap",
+  "scope": "clingen_label x intogen_temporal_new",
+  "value": 7,
+  "source": "data/processed/labels/*.tsv",
+  "note": ""
+ }
+]

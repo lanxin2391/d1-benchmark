@@ -91,7 +91,7 @@ def transfer_part() -> pd.DataFrame:
             "n_negative_cells": int((per_label["mean"] < 0).sum()),
         })
     df = pd.DataFrame(rows)
-    df.to_csv(TABLES / "s5_transfer_stability.tsv", sep="\t", index=False)
+    df.to_csv(TABLES / "s5_transfer_stability.tsv", sep="\t", index=False, lineterminator="\n")
     return df
 
 

@@ -150,7 +150,7 @@ def main(argv: list[str] | None = None) -> int:
 
     out_df = pd.DataFrame(rows)
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    out_df.to_csv(args.out, sep="\t", index=False)
+    out_df.to_csv(args.out, sep="\t", index=False, lineterminator="\n")
     print(f"Wrote {args.out} ({len(out_df)} rows)")
 
     # quick bootstrap summary

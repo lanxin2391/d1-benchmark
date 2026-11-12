@@ -43,36 +43,52 @@ curated/literature) and a four-label panel spanning mutation-based
 and clinical-evidence curation philosophies. We held the learner
 fixed: random walk with restart at α = 0.5. We measured the primary
 endpoint ΔAUROC = AUROC(RWR) − AUROC(degree-only) over 5-fold ×
-10-repeat cross-validation. We pre-registered three hypotheses
+40-repeat cross-validation. We pre-registered three hypotheses
 (H1: prior contributes beyond degree; H2: contribution is
 provenance-invariant; H3: between-network differences reflect
-literature attention) and seven controls, including a degree-matched
+literature attention) and seven protocol controls: a degree-matched
 seed null (A5), a configuration-model rewiring null (W5), a
-cross-catalogue label transfer grid (Control 5), and a
-publication-bias adjustment (Control 7).
+cross-catalogue label transfer grid (Control 5), a publication-
+bias adjustment with a literature-matched null (Control 7), and
+three controls added after a systematic read of the benchmark
+literature: seed-degree stratification (Control 8, after Zhang et
+al. 2021), network size and coverage adjustment (Control 9, after
+Wright et al. 2025), and random-input degeneracy (Control 10,
+after Hill et al. 2019).
 
 **Results.** Across 24 (network × label) cells at α = 0.5, ΔAUROC
-ranges from −0.011 (Reactome × IntOGen temporal_new) to +0.170
-(STRING physical × Open Targets no-literature). 23 of 24 cells
-reject both the degree-matched seed null and the edge-rewiring
-null at z > 5. Mixed-effects variance decomposition partitions
-the between-arm variance as 33 % from label choice, 15 % from
-network choice, and 52 % residual. Provenance class does not
-significantly explain the residual for mutation-based labels (H2
-holds for IntOGen 2024). Cross-catalogue transfer retains
-50-70 % of within-label magnitude. Publication-bias adjustment
-reduces ΔAUROC by 39 % on average across 23 cells, but 22 of 23
-cells remain significantly positive (H3 partial: RWR carries
-non-bibliometric signal, but literature volume is a meaningful
-confound).
+ranges from −0.013 (Reactome × IntOGen temporal_new) to +0.171
+(STRING physical × Open Targets no-literature); 23 of 24 cells are
+positive. 23 of 24 cells reject the degree-matched seed null and
+23 of 24 reject the edge-rewiring null at z > 5. Mixed-effects
+variance decomposition partitions the between-arm variance as
+40.1 % from the network × label interaction, 34.8 % from label
+choice and 24.8 % from network choice, with 0.3 % fold noise. The
+95 % CI on ΔAUROC excludes zero in 24/24 arms under four of the five
+interval constructions and in 20/24 under the pre-registered
+gene-cluster bootstrap; the four exceptions are the smallest-effect
+`intogen_temporal_new` arms. The margin is flat across the degree
+tercile of the seeds (mean ΔAUROC +0.053 / +0.061 / +0.054 for
+low / mid / high seed degree), so it is not a hub artefact; and it
+survives adjustment for network size and label coverage (23/24 cells
+positive after adjustment, pooled Spearman ρ between ΔAUROC and
+log₁₀ network size −0.02, permutation p = 0.93). H2 is **not
+testable** with this panel: provenance is confounded with network
+size and coverage (3 / 1 / 2 networks per class). Cross-catalogue
+transfer retains 39.8 % of the within-label magnitude (59 of 66
+transfer cells positive). Publication-bias adjustment leaves the
+margin essentially unchanged in the literature-matched null
+(mean difference +0.001).
 
-**Conclusions.** A network prior contributes robustly to cancer-
-driver prioritisation beyond node degree, and this contribution
-is largely provenance-invariant. Curated networks' literature
-channels are a real but partial confound; the residual signal is
-catalogue-independent biology. A single negative result — Reactome's
-failure on the 2020-2024 newly-discovered drivers — is itself a
-publishable finding on curator-lag in pathway knowledge bases.
+**Conclusions.** A network prior contributes to cancer-driver
+prioritisation beyond node degree, and the contribution is not
+explained by seed degree, by network size, or by the degree
+distribution of the labels. The one negative cell — Reactome's
+failure on the 2020-2024 newly-discovered drivers — is a coverage
+failure rather than evidence of a negative effect, and is reported
+as such. The provenance question (H2) remains open: separating
+provenance from size and coverage requires a larger network panel
+than this design supports.
 
 ---
 
@@ -125,22 +141,32 @@ The field has converged on three empirical observations:
 The D1 benchmark closes this gap. We assembled a six-network
 panel stratified by molecular provenance, a four-label panel
 spanning independent curation philosophies, a fixed RWR learner
-(α = 0.5, no hyperparameter tuning), and a seven-control stack
+(α = 0.5, no hyperparameter tuning), and a control stack of ten
+controls
 that measures the network's contribution against three distinct
 nulls: a degree baseline (Control 1), a degree-matched seed null
-(Control 2), an edge-rewiring null (Control 3), a shared-gene-
-universe restriction (Control 4), a cross-catalogue label transfer
-(Control 5), a temporal split (Control 6), and a publication-
-bias adjustment (Control 7).
+(Control 2), an edge-rewiring null (Control 3), and four further
+confound controls — a shared-gene-universe restriction (Control 4),
+a cross-catalogue label transfer (Control 5), a temporal split
+(Control 6), a publication-bias adjustment with a
+literature-matched null (Control 7) — plus three controls added
+after a systematic read of the benchmark literature: complex-aware
+cross-validation (Picart-Armada et al. 2019), seed-degree
+stratification (Zhang et al. 2021, Control 8), network size and
+coverage adjustment (Wright et al. 2025, Control 9) and random-input
+degeneracy (Hill et al. 2019, Control 10).
 
 The headline question is: **does the specific topology of a
 cancer-related gene network contribute to driver-gene
 prioritisation, beyond what node degree alone explains?** The
 protocol's H1-H3 pre-register three concrete answers to that
-question: H1 holds in 23 of 24 cells (the single negative cell
-is a publishable finding in its own right); H2 holds for
-mutation-based labels (provenance is largely irrelevant);
-H3 partially holds (literature is a real but partial confound).
+question. H1 holds in 24/24 arms under four of the five interval
+constructions and in 20/24 under the pre-registered gene-cluster
+bootstrap (the four exceptions are the smallest-effect
+`intogen_temporal_new` arms); H2 is **not testable** with this
+panel, because provenance is confounded with network size and
+coverage; H3 holds in the sense that the margin survives a
+literature-matched null.
 
 This paper reports the v1.0 release of the benchmark: the
 release tag, the leaderboard protocol, the public Zenodo
@@ -233,17 +259,21 @@ The D1 benchmark's central contribution is a **quantitative
 answer** to the question that has been open in the field for a
 decade:
 
-> A network prior contributes robustly to cancer-driver
-> prioritisation beyond node degree, and this contribution is
-> largely provenance-invariant. Curated networks' literature
-> channels are a real but partial confound; the residual signal
-> is catalogue-independent biology.
+> A network prior contributes to cancer-driver prioritisation
+> beyond node degree. The contribution is not explained by the
+> degree of the seed genes, by network size, or by the degree
+> distribution of the labels. Whether it depends on the network's
+> molecular provenance is **not testable** with a panel of this
+> size, because provenance is confounded with network size and
+> coverage.
 
 The answer has three concrete corollaries:
 
 1. **Methodological**: a network prior should not be evaluated
    in absolute terms; the margin over a degree baseline is the
-   only meaningful measure.
+   only meaningful measure — and it must be reported against the
+   *pre-registered* resampling unit, not only against a
+   post-hoc choice of it.
 
 2. **Practical**: the choice between FunMap, STRING physical,
    STRING full, IntAct, Reactome, and an RNA co-expression
@@ -253,16 +283,18 @@ The answer has three concrete corollaries:
 
 3. **Bibliometric**: the apparent advantage of curated networks
    on Open Targets labels (which weight clinical evidence) is
-   partly a literature-attention effect, but the residual
-   signal is real biology that survives publication-count
-   adjustment.
+   not a literature-attention artefact — the margin survives a
+   literature-matched null (Control 7) and a size- and
+   coverage-adjusted analysis (Control 9).
 
-The single negative result — Reactome's failure on the
-2020-2024 newly-discovered IntOGen drivers — is a
-publishable finding on its own: it tells us that **pathway
-knowledge bases lag behind the literature** by a measurable
-amount, and that any downstream method using Reactome for
-temporal prediction should be aware of this lag.
+The single negative cell — Reactome's failure on the
+2020-2024 newly-discovered IntOGen drivers — is **not** a
+demonstration of a negative effect. Its 95 % CI contains zero
+under the pre-registered gene-cluster bootstrap, and the
+equivalence test finds it statistically indistinguishable from
+zero. It is a *coverage* failure: Reactome's LCC contains only
+41 % of the newly-discovered drivers, so the arm is measured on a
+gene universe that largely lacks the genes it is asked to find.
 
 ---
 
@@ -311,22 +343,28 @@ temporal-drift estimate.
 ## Figure 3 (B-side, new) — All-controls schematic
 
 `figures/figure3_all_controls.png` (to be generated at the
-assembly step). Schematic of the seven controls in §4.4 with
-the headline finding of each:
+assembly step). Schematic of the controls in §4.4 with the
+headline finding of each. Every range below is recomputed from
+the released tables by `scripts/recompute_ground_truth.py`; the
+authoritative copy of this table is `review/ground_truth.tsv`.
 
 | # | control | headline | file |
 |---|---|---|---|
-| 1 | degree-only baseline | ΔAUROC = 0.07-0.17 across cells | `results/tables/a4_table1_delta_auroc.tsv` |
-| 2 | degree-matched seed null | z = 2-100 across 24 cells | `results/tables/a5_p_values.tsv` |
-| 3 | edge-rewiring null | z = 8-205 across 24 cells | `results/tables/w5_p_values.tsv` |
-| 4 | shared gene universe | ΔAUROC still 0.05-0.14 in shared | `results/tables/d12_table.tsv` |
-| 5 | cross-catalogue transfer | 50-70 % of within-label | `results/tables/results_stats_transfer.tsv` |
-| 6 | temporal split | ΔAUROC = 0.02-0.10 on new drivers | `results/tables/d09_table.tsv` |
-| 7 | publication-bias adjustment | −0.039 mean diff; 22/23 survive | `results/tables/pubcount_adj_comparison.tsv` |
+| 1 | degree-only baseline | ΔAUROC = −0.0125 to +0.1711; 23/24 cells positive | `results/tables/a4_table1_delta_auroc_v40.tsv` |
+| 2 | degree-matched seed null | z = 3.09 to 226.91; 23/24 cells with z > 5; the null mean is ≤ 0 in 23/24 cells | `results/tables/a5_p_values.tsv` |
+| 3 | edge-rewiring null | z = −3.53 to +205.25; 23/24 cells with z > 5 (598 rewirings, not 600 — Reactome has 98) | `results/tables/w5_p_values.tsv` |
+| 4 | shared gene universe | ΔAUROC = −0.0360 to +0.1304; 22/24 cells positive, all on the same 1,605-gene universe | `results/tables/d12_table.tsv` |
+| 5 | cross-catalogue transfer | mean ΔAUROC = +0.0313, 39.8 % of the within-label magnitude; 59/66 cells positive | `results/tables/results_stats_transfer.tsv` |
+| 6 | temporal split | ΔAUROC = −0.0095 to +0.0923; 5/6 networks positive, 50 distinct seed sets per arm | `results/tables/d09_table.tsv` |
+| 7 | publication-bias adjustment | literature-matched null: mean matched − standard = +0.0010; 30/30 cells | `results/tables/control7_matched_null.tsv` |
+| 8 | complex-aware cross-validation | median absolute relative change 0.142; 0/24 sign flips | `results/tables/d4_v1_vs_v2_comparison.tsv` |
+| 9 | seed-degree stratification | ΔAUROC by seed-degree tercile: low +0.053, mid +0.061, high +0.054 (low stratum positive in 22/24 arms) | `results/tables/control8_seed_degree_summary.tsv` |
+| 10 | network size / coverage adjustment | adjusted endpoint positive in 23/24 cells; pooled Spearman ρ(ΔAUROC, log₁₀ edges) = −0.02, permutation p = 0.93 | `results/tables/control9_size_adjustment.tsv` |
+| 11 | random-input degeneracy | top-100 Jaccard between the real-input and the random-input ranking = 0.019 (almost disjoint gene lists); Hill degeneracy statistic 0.6 genes under random input vs 123.6 under real input | `results/tables/control10_random_input_summary.tsv` |
 
-Together, the seven controls rule out seven alternative
-explanations for the headline finding. The figure is a single
-panel with each control as a small-multiples subplot.
+Together, the controls rule out the alternative explanations for
+the headline finding. The figure is a single panel with each
+control as a small-multiples subplot.
 
 ---
 
@@ -399,7 +437,7 @@ cd d1-benchmark
 git checkout v1.0-prep
 conda env create -f environment.yml
 conda activate d1
-python scripts/audit_reproducibility.py    # 45 PASS, 0 FAIL
+python scripts/audit_reproducibility.py    # 50 PASS, 0 FAIL
 ```
 
 The audit script takes ~10 minutes and verifies that all 30
