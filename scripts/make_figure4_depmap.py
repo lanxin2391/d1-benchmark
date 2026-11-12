@@ -65,7 +65,7 @@ def main() -> int:
 
     fig = plt.figure(figsize=(9.6, 5.2))
     gs = fig.add_gridspec(1, 4, width_ratios=[1.0, 1, 1, 1], wspace=0.95,
-                          left=0.105, right=0.925, top=0.795, bottom=0.215)
+                          left=0.105, right=0.925, top=0.86, bottom=0.215)
 
     # ---- panel A: the scale dependence ---------------------------
     ax = fig.add_subplot(gs[0, 0])
@@ -131,10 +131,6 @@ def main() -> int:
     cb.ax.tick_params(labelsize=11)
     cb.outline.set_visible(False)
 
-    fig.text(0.012, 0.965,
-             "DepMap external validation: set-level signal, "
-             "not gene-level calls",
-             fontsize=19, color=INK, ha="left", va="top")
     fig.text(0.012, 0.035,
              "Essential = CERES < -0.5 and log2(TPM+1) > 1; hypergeometric "
              "test per cell line; 1,361 DepMap cell lines; median over the "

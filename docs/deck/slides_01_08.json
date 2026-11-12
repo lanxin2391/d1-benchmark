@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "How much of a network prior's advantage is topology?",
+    "subject": "A leakage-controlled benchmark of network priors for cancer-driver gene prioritisation",
+    "author": "Group members: [Name 1] (presenter), [Name 2] (Q&A A), [Name 3] (Q&A B), [Name 4] (Q&A C)",
+    "company": "Bioinformatics: From Multi-Omics Data to Discovery, 2026 Fall"
+  },
+  "slides": [
+    {
+      "n": 1,
+      "kind": "title",
+      "tag": "GROUP PROJECT · FINAL DEFENCE",
+      "title": "How much of a network prior's advantage is topology?",
+      "subtitle": "A leakage-controlled benchmark of network priors for cancer-driver gene prioritisation",
+      "members": [
+        "[Name 1] — Presenter: networks panel, RWR engine, benchmark analysis",
+        "[Name 2] — Q&A A: literature, evidence and knowledge gaps",
+        "[Name 3] — Q&A B: data, pipeline, parameters and quality control",
+        "[Name 4] — Q&A C: results, limitations and validation plans"
+      ],
+      "meta": "Pre-registration frozen at Zenodo DOI 10.5281/zenodo.23121762 · code, tables and figures: github.com/lanxin2391/d1-benchmark",
+      "footer": "Take-home: the topology prior does help — but far less than the field reports, and the difference matters."
+    },
+    {
+      "n": 2,
+      "kind": "image",
+      "tag": "RESEARCH MAP",
+      "title": "One question, three hypotheses, one pre-registered benchmark",
+      "image": "figures/deck_research_map.png",
+      "imagew": 12.3,
+      "footer": "Take-home: we did not ask 'does the prior work?' — we asked how much of the gain is topology."
+    },
+    {
+      "n": 3,
+      "kind": "papers",
+      "tag": "SOURCE PAPER 1 OF 3",
+      "title": "Bailey et al. 2018, Cell: the recurrence consensus",
+      "paper": {
+        "cite": "Bailey MH et al. Comprehensive Characterization of Cancer Driver Genes and Mutations. Cell 173:371-385.",
+        "rows": [
+          ["Question", "Which genes are mutated recurrently enough across tumour types to be drivers?"],
+          ["Data / omics", "9,423 TCGA tumour-normal pairs, 26 tissue types; MC3 consensus of 26 mutation-calling methods; matched CCLE cell lines"],
+          ["Key result", "A pan-cancer driver catalogue (later the Cancer Gene Census) that became the field's default gold standard"],
+          ["What it left open", "Purely recurrence-based; no network, no prior, and no way to separate a network contribution from the catalogue's own degree bias"]
+        ]
+      },
+      "footer": "Take-home: our label panel is built on this consensus — so we inherit its curation choices and its blind spots."
+    },
+    {
+      "n": 4,
+      "kind": "papers",
+      "tag": "SOURCE PAPER 2 OF 3",
+      "title": "Shi et al. 2025, Nat Cancer: FunMap",
+      "paper": {
+        "cite": "Shi Z et al. Mapping the functional network of human cancer through machine learning and pan-cancer proteogenomics. Nat Cancer 6:205-222.",
+        "rows": [
+          ["Question", "Can a pan-cancer proteogenomic functional network prioritise cancer genes better than existing interactomes?"],
+          ["Data / omics", "CPTAC pan-cancer proteogenomics and transcriptomics (published matrices, Zenodo 7948944); machine-learned functional associations"],
+          ["Key result", "FunMap outperforms STRING for cancer-gene prioritisation; the network is released with a gold standard"],
+          ["What it left open", "Its gold standard is Reactome-derived (>200-protein pathways), and Reactome also feeds STRING's database channel — the paper's own benchmark is partly circular"]
+        ]
+      },
+      "footer": "Take-home: FunMap is both our strongest network and the warning that network benchmarks can be circular."
+    },
+    {
+      "n": 5,
+      "kind": "papers",
+      "tag": "SOURCE PAPER 3 OF 3",
+      "title": "Repana et al. 2019, Genome Biology: the NCG catalogue",
+      "paper": {
+        "cite": "Repana D et al. The Network of Cancer Genes (NCG): a comprehensive catalogue of known and candidate cancer genes from cancer sequencing screens. Genome Biol 20:1.",
+        "rows": [
+          ["Question", "Which genes have been called drivers across published cancer sequencing screens, and how confident is each call?"],
+          ["Data / omics", "Curated from the published cancer sequencing literature; confidence levels built on curated PPI channels (HuRI, GTRD, Reactome, STRING experiments)"],
+          ["Key result", "2,372 cancer genes in three tiers (708 known, 104 candidates, 1,560 screening) with a per-gene confidence level"],
+          ["What it left open", "The confidence level is itself network-derived, and the unlabelled genes are treated as negatives — so it can arbitrate, but not measure"]
+        ]
+      },
+      "footer": "Take-home: NCG is the one catalogue that shares no curation with our labels — which makes it an arbiter, not a metric."
+    },
+    {
+      "n": 6,
+      "kind": "hypotheses",
+      "tag": "THE GAP AND OUR HYPOTHESES",
+      "title": "What was never measured — and what we predicted",
+      "gap": "Network-based prioritisation reports large gains, yet no published study separates the topology contribution from node degree and from study visibility (how often a gene has been published about). Standard cross-validation is optimistic when the same protein complexes appear on both sides (Bornigen 2012; Picart-Armada 2019).",
+      "hyp": [
+        ["H-vis", "Much of the reported margin is study visibility, not topology.", "Falsified if the margin survives a null model that matches positives and negatives on their publication count."],
+        ["H-stable", "The prior's instability is a property of the gene's own score variance, not of topology, and cannot be smoothed away.", "Falsified if any topology descriptor predicts instability, or if a regularised scorer restores the ranking."],
+        ["H-lag", "Curated networks fail specifically on recently discovered drivers.", "Falsified if the failure appears equally on older catalogues."]
+      ],
+      "footer": "Take-home: every hypothesis has a prediction that can fail — that is what makes the design worth running."
+    },
+    {
+      "n": 7,
+      "kind": "table",
+      "tag": "DATA AND DESIGN",
+      "title": "Six networks, five catalogues, one frozen learner",
+      "lead": "Provenance is an experimental factor, not a nuisance: three protein-derived networks, one RNA-derived, two curated/literature.",
+      "table": {
+        "head": ["Network", "Provenance", "LCC genes", "LCC edges"],
+        "rows": [
+          ["funmap", "protein (CPTAC proteogenomics)", "10,189", "196,605"],
+          ["intact", "protein (IntAct)", "17,918", "564,706"],
+          ["string_phys700", "protein (STRING physical >= 700)", "9,830", "85,576"],
+          ["rna_coexp", "RNA-derived (CPTAC mRNA, density-matched)", "9,152", "196,172"],
+          ["string_full700", "curated (STRING all >= 700)", "15,882", "236,712"],
+          ["reactome", "curated (Reactome v86)", "3,953", "20,143"]
+        ],
+        "rowlabels": ["Labels", "intogen2024 (MC3 recurrence) 633 | ot_all / ot_nolit (Open Targets 26.06, with / without the literature channel) 600 each | intogen_temporal_new (the 152 newest drivers) | clingen_label (ClinGen validity) 84 | ncg_known (NCG 2019) 708", "Design", "RWR frozen at alpha = 0.5 (no tuning) | 5 folds x 40 repeats = 200 evaluations per arm | positive sets capped per network (D-11) | splits fixed and released"]
+      },
+      "footer": "Take-home: nothing was tuned after the pre-registration — the design is frozen, and the deviations are written down."
+    },
+    {
+      "n": 8,
+      "kind": "pipeline",
+      "tag": "PIPELINE AND REPRODUCIBILITY",
+      "title": "From raw public files to a frozen verdict",
+      "steps": [
+        ["Build", "6 network edge lists from public releases (FunMap, IntAct, STRING v12, Reactome v86, CPTAC mRNA); harmonise: drop unmapped genes, self-loops, duplicates, keep the largest connected component"],
+        ["Label", "5 catalogues mapped to HGNC (D-02: approved symbol wins; aliases only when 1-to-1; ambiguous dropped and counted)"],
+        ["Split", "5 folds x 40 repeats per (network, label); positives capped to a common size per network; split files released with SHA-256 manifests"],
+        ["Run", "One locked learner (RWR, alpha = 0.5) scored against a degree-only baseline on identical folds; per-gene scores dumped for the gene-cluster bootstrap"],
+        ["Test", "Mixed-effects variance decomposition, gene-cluster bootstrap CIs, TOST equivalence, BH-FDR within a pre-declared family"],
+        ["Audit", "Pre-registration frozen at Zenodo; every departure is an amendment (A2.3a-k, 14 analysis families registered); 50/50 reproducibility checks and 63/63 claim checks pass"]
+      ],
+      "footer": "Take-home: every number in this talk is re-computable from the public repository."
+    }
+  ]
+}

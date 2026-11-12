@@ -1,0 +1,127 @@
+{
+  "slides": [
+    {
+      "n": 9,
+      "kind": "params",
+      "tag": "PARAMETERS AND ROBUSTNESS",
+      "title": "What we chose, why, and how we checked it",
+      "params": [
+        ["alpha = 0.5", "RWR restart probability", "Locked in the pre-registration; the same value in all 24 arms and all controls", "alpha = 0.3 / 0.7 reported as a sensitivity"],
+        ["5 folds x 40 repeats", "cross-validation", "The repeat is the resampling unit for inference; folds are not independent", "fold-level intervals reported as a conservative variant"],
+        ["unweighted edges", "network weighting", "Keeps the comparison about topology, not about the weight scale", "weighting is a declared decision (D-01)"],
+        ["common-size cap", "positive-set size", "Equal prevalence across labels inside an arm (D-11)", "the uncapped primary design is also reported"],
+        ["HGNC mapping (D-02)", "symbol resolution", "Approved symbol wins; previous symbols mapped only when unambiguous", "ambiguous symbols are dropped and counted (83 for NCG)"]
+      ],
+      "honesty": "We never picked a parameter to make a result significant. The parameters were frozen before the analysis; every later change is an amendment in docs/pre_registration_amendments.md, and robustness is shown with hub-capped RWR, the alpha sweep, the per-network cap, complex-aware cross-validation and a per-cancer-type split.",
+      "footer": "Take-home: the frozen design plus five sensitivity analyses is the robustness argument — not a favourable p-value."
+    },
+    {
+      "n": 10,
+      "kind": "controls",
+      "tag": "THE CONTROL STACK",
+      "title": "Eleven controls, one artefact each",
+      "controls": [
+        ["Degree-matched random seeds", "the prior only re-ranks hubs", "23/24 arms beat the null at z > 5; the null is worse than the real seeds"],
+        ["Degree-preserving rewiring", "the signal is carried by the wiring", "23/24 arms beat the rewired null at z > 5"],
+        ["Shared gene universe (1,605 genes)", "gene-set size differences", "-0.0360"],
+        ["Temporal split (D-09)", "the effect is only in the past", "-0.0095 +/- 0.0116"],
+        ["Common-size cap per network (D-11)", "unequal positive-set sizes", "-0.0125; the Reactome cell flips sign"],
+        ["Complex-aware cross-validation", "protein-complex leakage", "leakage 0.87-0.96 -> 0.02-0.18; no sign flips; H1 unchanged"],
+        ["Hub-capped RWR", "the gain is a hub effect", "+0.0849 -> +0.0809 (clean); +0.0252 in the harshest cap"],
+        ["Publication-count adjusted label", "study visibility", "IntOGen survives (+0.0587); the temporal label collapses (+0.0022)"],
+        ["Bait-matched null (G3)", "the gain tracks publication count", "top-1000 enrichment 17.6 % -> 11.6 %; temporal 6.8 % -> 4.7 % (chance 5 %)"],
+        ["Label-quality tiers (C7)", "the gain lives in the weak positives", "the high-confidence tier carries the larger margin in 4 of 5 labels"],
+        ["ClinGen 17 % noise anchor", "the gain is an artefact of label noise", "the margin moves by -0.0018 .. +0.0026"]
+      ],
+      "footer": "Take-home: each published objection is a control with a number attached."
+    },
+    {
+      "n": 11,
+      "kind": "heatmap",
+      "tag": "RESULT 1 OF 3",
+      "title": "The primary endpoint: 23 of 24 arms positive",
+      "image": "figures/deck_main_heatmap.png",
+      "imagew": 9.4,
+      "stats": [
+        ["+0.081", "median margin over degree (24 arms)"],
+        ["+0.171", "best arm: STRING physical x OT no-lit"],
+        ["-0.013", "only negative arm: Reactome x newest drivers"]
+      ],
+      "note": "The pre-registered H1 rule (95 % CI excludes 0 in every arm) is met under four of five interval constructions (24/24) and NOT met under the conservative gene-cluster interval (20/24) — the four exceptions are all the newest-driver label.",
+      "footer": "Take-home: the prior clearly beats degree — the interesting question is how much of that survives the next three slides."
+    },
+    {
+      "n": 12,
+      "kind": "stability",
+      "tag": "RESULT 2 OF 3",
+      "title": "Where the prior's stability comes from — and where it does not",
+      "image": "figures/deck_stability.png",
+      "imagew": 9.4,
+      "bullets": [
+        "Per-gene scores are unstable (median CV 18 %; a median gene moves ~270 ranks) while the arm-level mean is stable (SD 0.0047).",
+        "The instability is the gene's own score variance (rho = 1.00, q = 2e-137); no classical topology descriptor predicts it.",
+        "Network-level stability is predicted by coverage and the 2-core fraction (rho = -0.905, q = 0.012) — not by size, density or modularity.",
+        "The mechanism is the seed-count law: RWR weights seeds linearly, so bagging the prior is a provable no-op. Regularising it cannot restore the ranking."
+      ],
+      "footer": "Take-home: the prior's instability is not a topology effect — it is the gene's own score variance, and it cannot be smoothed away."
+    },
+    {
+      "n": 13,
+      "kind": "external",
+      "tag": "RESULT 3 OF 3",
+      "title": "External evidence, and the fragility of our own numbers",
+      "image": "figures/figure4_depmap_validation.png",
+      "imagew": 6.3,
+      "bullets": [
+        "DepMap (1,361 cell lines): at K = 30 candidates the prior shows no enrichment beyond chance (6 % of cell lines, p < 0.05); at K = 100 it does (48 %). The prior carries set-level signal, not gene-level calls.",
+        "NCG arbitration: the prior ranks drivers that our labels do not contain above the rest in 24/24 arms (median +0.041) — but in only 13/24 on the low-FPR endpoint, and the protein networks are the only ones that pass.",
+        "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers. Removing them halves the IntOGen margin (0.065 -> 0.030) and raises the Open Targets margin (0.085 -> 0.103).",
+        "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific."
+      ],
+      "footer": "Take-home: the prior really transfers to drivers we never labelled — but the absolute numbers depend on how the negative set is built."
+    },
+    {
+      "n": 14,
+      "kind": "conclusions",
+      "tag": "CONCLUSIONS",
+      "title": "What the benchmark says about network priors",
+      "points": [
+        ["1", "A network prior contributes signal beyond node degree", "23/24 arms positive; the pre-registered rule met under four of five interval constructions"],
+        ["2", "The contribution is real but modest and label-dependent", "median +0.081; 10-22 % of the 'negatives' are curated drivers; cleaning them halves the strictest-label margin"],
+        ["3", "Much of the published margin is study visibility", "a bait-matched null removes most of the enrichment, and the temporal label's advantage collapses to +0.002"],
+        ["4", "The prior's instability is intrinsic", "gene-level CV is explained by the gene's own score variance (rho = 1.00); bagging the prior is a provable no-op"],
+        ["5", "Curated networks fail on recently discovered drivers", "Reactome is +0.089 on the 2019 catalogue and negative on the two newest ones — a coverage and curator-lag effect"]
+      ],
+      "footer": "Take-home: network priors help, modestly and unevenly — the honest number is more useful than the headline one."
+    },
+    {
+      "n": 15,
+      "kind": "limits",
+      "tag": "LIMITATIONS AND VALIDATION",
+      "title": "What would change our mind",
+      "limits": [
+        ["The gene-cluster interval fails in 4 of 24 arms", "all temporal-label arms", "run the benchmark on an independent cell-line-derived label (DepMap essential genes) with the same protocol"],
+        ["Our negative set contains curated drivers", "10-22 % of negatives", "re-derive the background from NCG and ClinGen with explicit exclusion, then re-run the factorial"],
+        ["The prior is evaluated on its own ranking", "self-referential", "a blind challenge: a held-out expert panel ranks the same genes, as in Boutros et al. 2014"],
+        ["We did not test causality", "the margin is associative", "perturbation experiment: edit the seed set of a driver and measure the effect on the predicted neighbourhood"],
+        ["One learner", "RWR only", "re-run the locked protocol with a second fixed learner (closeness centrality) to show the conclusion is not learner-specific"]
+      ],
+      "footer": "Take-home: every limitation we know of has a named experiment attached to it."
+    },
+    {
+      "n": 16,
+      "kind": "closing",
+      "tag": "DELIVERABLES, ROLES AND AI USE",
+      "title": "Everything here is public and re-runnable",
+      "links": [
+        ["Code, tables, figures", "github.com/lanxin2391/d1-benchmark (release v1.0-rc3)"],
+        ["Pre-registration", "Zenodo DOI 10.5281/zenodo.23121762 (frozen 2026-09-27; amendments A2.3a-k)"],
+        ["Reproducibility", "scripts/audit_reproducibility.py: 50 PASS / 0 FAIL · scripts/verify_claims.py: 63 PASS / 0 FAIL"],
+        ["Data sources", "FunMap (Nat Cancer 2025) · IntAct · STRING v12 · Reactome v86 · IntOGen 2020/2023/2024 · ClinGen · Open Targets 26.06 · NCG (Genome Biol 2019) · DepMap CRISPR"]
+      ],
+      "ai": "AI statement: AI tools assisted with code drafting, debugging, literature triage and figure layout. Every number in this talk comes from our own scripts and tables (audited by two independent check scripts); every figure is generated from a released table, and no simulated result is presented as measured. The scientific decisions — the panel, the learner, the endpoint, the decision rule, and the interpretation of every negative cell — were made by the group, and each is recorded in docs/decisions.md.",
+      "roles": "[Name 1] networks, engine and analysis · [Name 2] literature and evidence · [Name 3] data, pipeline and QC · [Name 4] results, limitations and validation",
+      "footer": "Take-home: the benchmark is public, pre-registered and reproducible — please re-run it and check us."
+    }
+  ]
+}
