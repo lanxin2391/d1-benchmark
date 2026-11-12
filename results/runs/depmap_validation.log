@@ -1,0 +1,14 @@
+[10:17:39] the candidates touch 5374 genes
+[10:17:48] loading the DepMap matrices once ...
+[10:17:48]   reading the CERES matrix ...
+[10:19:29]     1361 cell lines x 18434 genes
+[10:19:29]   reading the expression matrix ...
+[10:20:55]   5240 of the candidate genes are in both matrices
+[10:20:55]   extracting the wanted columns ...
+[10:21:10] === threshold CERES < -0.3 ===
+[10:35:21]   wrote depmap_validation_thr-0.3.tsv (72 rows)
+[10:35:21] === threshold CERES < -0.5 ===
+[10:41:16]   wrote depmap_validation_thr-0.5.tsv (72 rows)
+[10:41:16] === threshold CERES < -0.8 ===
+[10:46:25]   wrote depmap_validation_thr-0.8.tsv (72 rows)
+[10:46:25] wrote depmap_validation.tsv
