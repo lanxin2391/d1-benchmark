@@ -1,0 +1,401 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		0	0	degree		0.5639823496966353	0.08379768742407931	0.06	0.04	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		0	1	degree		0.6332046332046332	0.023873768949659528	0.04	0.02	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		0	2	degree		0.6540508095129944	0.027002727022728462	0.06	0.05	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		0	3	degree		0.5946927888153053	0.028163829243127984	0.06	0.03	0.008	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		0	4	degree		0.5814784155015943	0.016659711402535565	0.02	0.02	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		1	0	degree		0.5285744928602072	0.017733273459923815	0.02	0.02	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		1	1	degree		0.588420052705767	0.04364737935026719	0.06	0.04	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		1	2	degree		0.5914149443561209	0.03292387183092175	0.04	0.04	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		1	3	degree		0.6442850134903115	0.022290596477510857	0.04	0.03	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		1	4	degree		0.6724460387539858	0.036229200159864396	0.06	0.03	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		2	0	degree		0.5162407305264448	0.020388220215772815	0.06	0.03	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		2	1	degree		0.5591254519825949	0.016046014867630045	0.04	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		2	2	degree		0.6787904350929562	0.03827501558466493	0.04	0.04	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		2	3	degree		0.6769376992886926	0.03429175394097264	0.06	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		2	4	degree		0.6056843267108167	0.07429422593051133	0.06	0.03	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		3	0	degree		0.5883434454863027	0.03412199234074161	0.04	0.06	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		3	1	degree		0.631672488815346	0.019855742676049795	0.04	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		3	2	degree		0.6046040037636676	0.019590161750914905	0.04	0.02	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		3	3	degree		0.5915961491292617	0.03337190030884586	0.04	0.02	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		3	4	degree		0.6108045131223939	0.0313353902106359	0.08	0.04	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		4	0	degree		0.5854323711466569	0.015522443375576418	0.04	0.02	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		4	1	degree		0.6028222099650672	0.01653581347419163	0.02	0.02	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		4	2	degree		0.5616300574283768	0.02421943378720537	0.06	0.03	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		4	3	degree		0.5690305371596762	0.030884042659347986	0.04	0.03	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		4	4	degree		0.7011129506990433	0.06575571796823584	0.06	0.05	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		5	0	degree		0.6935404792547651	0.02656155825330908	0.04	0.03	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		5	1	degree		0.6492615064043635	0.03992594747348519	0.04	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		5	2	degree		0.45897277830050937	0.011020084034747326	0.02	0.02	0.004	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		5	3	degree		0.5654280107922491	0.044394141470929294	0.06	0.03	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		5	4	degree		0.6468297767966642	0.0373798902298266	0.08	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		6	0	degree		0.5705705705705706	0.029047705744613	0.08	0.04	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		6	1	degree		0.657611693325979	0.055079183728604424	0.08	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		6	2	degree		0.5464293825638364	0.014961521091632634	0.02	0.02	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		6	3	degree		0.6317298258523425	0.036754154337481984	0.04	0.03	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		6	4	degree		0.61626195732156	0.016475605865269624	0.02	0.02	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		7	0	degree		0.5865508365508365	0.02593053203327957	0.06	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		7	1	degree		0.5882055524912668	0.02118906137884885	0.04	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		7	2	degree		0.7089484442425619	0.057783605753515335	0.08	0.06	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		7	3	degree		0.5574104733872945	0.014895432719534528	0.02	0.02	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		7	4	degree		0.5919334069168507	0.031345192546779935	0.04	0.02	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		8	0	degree		0.6068364282649997	0.07158461614958316	0.06	0.05	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		8	1	degree		0.6225715511429797	0.022130075218011865	0.06	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		8	2	degree		0.556081892216346	0.01388319128047135	0.02	0.01	0.008	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		8	3	degree		0.6917463821437331	0.03142804060757924	0.04	0.04	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		8	4	degree		0.5488870493009567	0.020915103667412515	0.06	0.03	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		9	0	degree		0.5997885640742785	0.028004592706126444	0.04	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		9	1	degree		0.6493687565116136	0.02916764184699116	0.06	0.04	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		9	2	degree		0.508890042503488	0.01249780818866134	0.02	0.01	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		9	3	degree		0.702691930340937	0.04016127497839348	0.08	0.06	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		9	4	degree		0.560200515084621	0.05652666496545174	0.04	0.02	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		10	0	degree		0.6210853710853711	0.02702340268856206	0.04	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		10	1	degree		0.5559232702089845	0.019579384817410596	0.04	0.03	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		10	2	degree		0.6150676486810941	0.030114196816926266	0.02	0.03	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		10	3	degree		0.6670345842531273	0.053147960335462055	0.08	0.04	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		10	4	degree		0.5698583517292126	0.020580940510089928	0.06	0.04	0.008	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		11	0	degree		0.6340473126187411	0.025080535988992445	0.04	0.03	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		11	1	degree		0.620978120978121	0.03775099416519135	0.08	0.04	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		11	2	degree		0.5353817202556698	0.01362331842153832	0.02	0.02	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		11	3	degree		0.6022350993377483	0.051884524936592194	0.06	0.05	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		11	4	degree		0.6317758155506499	0.023318427515434954	0.04	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		12	0	degree		0.6788012502298216	0.040992932072046066	0.08	0.06	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		12	1	degree		0.5566893424036281	0.020589004076117447	0.06	0.03	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		12	2	degree		0.6329612926251582	0.06542060745510954	0.06	0.03	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		12	3	degree		0.6005641402992397	0.02047632618426639	0.02	0.03	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		12	4	degree		0.561641525631592	0.014894470829055284	0.02	0.02	0.008	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		13	0	degree		0.5679965679965681	0.02651415134992466	0.04	0.03	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		13	1	degree		0.6221119078261935	0.074951366974044	0.04	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		13	2	degree		0.6663638428344311	0.03197036269408271	0.06	0.05	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		13	3	degree		0.5461276674025018	0.014825493757451867	0.04	0.02	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		13	4	degree		0.6271308560215845	0.03210024530500042	0.06	0.04	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		14	0	degree		0.6688269902555617	0.03076349248684146	0.06	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		14	1	degree		0.4496996996996997	0.01952543048121766	0.02	0.02	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		14	2	degree		0.5873268226209403	0.028833249520949032	0.06	0.03	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		14	3	degree		0.5681107431935246	0.041548784653796404	0.04	0.02	0.006	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		14	4	degree		0.7553041452048074	0.03740821071265284	0.08	0.04	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		15	0	degree		0.6696543482257769	0.02910937123873498	0.08	0.05	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		15	1	degree		0.4602102102102102	0.014801094210026601	0.02	0.01	0.006	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		15	2	degree		0.6624541708575322	0.016699712287564988	0.0	0.02	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		15	3	degree		0.5362552121658082	0.02994527927139145	0.04	0.02	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		15	4	degree		0.700055187637969	0.05864030848550235	0.1	0.07	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		16	0	degree		0.5601060243917386	0.025280061290019928	0.02	0.01	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		16	1	degree		0.6769779984065698	0.035393773526594285	0.08	0.05	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		16	2	degree		0.656938451056098	0.04504240411959423	0.04	0.03	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		16	3	degree		0.6336460632818248	0.026129751155611315	0.06	0.05	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		16	4	degree		0.5021921756193279	0.01898729464596284	0.04	0.02	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		17	0	degree		0.5966323466323465	0.034345049341290054	0.08	0.05	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		17	1	degree		0.6543635472206901	0.03798105455050152	0.06	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		17	2	degree		0.5762142694915804	0.03308003093329799	0.04	0.02	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		17	3	degree		0.5527501839587933	0.013207902444545007	0.0	0.01	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		17	4	degree		0.6452507971547706	0.032396769633159614	0.06	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		18	0	degree		0.584696941839799	0.033132271322446	0.08	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		18	1	degree		0.6998375926947356	0.08256764084444852	0.06	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		18	2	degree		0.5544920670971091	0.01723976901345072	0.02	0.03	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		18	3	degree		0.6674331616384596	0.03472253966184957	0.04	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		18	4	degree		0.5210632818248712	0.01796272761468268	0.04	0.02	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		19	0	degree		0.638888888888889	0.022013737136399095	0.06	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		19	1	degree		0.6906140834712263	0.1203176677778296	0.1	0.06	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		19	2	degree		0.5304986859608708	0.01144556243622788	0.0	0.01	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		19	3	degree		0.6000275938189846	0.025039755763589928	0.04	0.02	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		19	4	degree		0.5599245768947756	0.022028756975803802	0.04	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		20	0	degree		0.5415057915057915	0.028660759414078606	0.06	0.04	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		20	1	degree		0.5814334742906172	0.012542935154193812	0.0	0.01	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		20	2	degree		0.6442360728075014	0.03888623740046452	0.08	0.04	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		20	3	degree		0.6180402256561196	0.03541426551571579	0.06	0.04	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		20	4	degree		0.6471363747853814	0.032485379577559356	0.04	0.03	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		21	0	degree		0.7045872403015261	0.07971880177733294	0.06	0.06	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		21	1	degree		0.6308604522890238	0.026091086902559076	0.08	0.04	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		21	2	degree		0.5618733980078517	0.02544280651189015	0.02	0.01	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		21	3	degree		0.5471087809663968	0.020912037784055947	0.06	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		21	4	degree		0.5822295805739514	0.017481357633199253	0.02	0.02	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		22	0	degree		0.6040632469203898	0.07671703435313906	0.1	0.05	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		22	1	degree		0.6131335417049703	0.024953304933884524	0.06	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		22	2	degree		0.5527400149248889	0.02300750087745156	0.02	0.02	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		22	3	degree		0.6176723080696591	0.021308441693660096	0.06	0.03	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		22	4	degree		0.6361601667893059	0.01767648199931162	0.0	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		23	0	degree		0.5123337623337623	0.017199793772084984	0.02	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		23	1	degree		0.6754305325733896	0.05881084251690719	0.06	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		23	2	degree		0.6124395704227636	0.024597804809214127	0.06	0.04	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		23	3	degree		0.5895112828059849	0.030757207377592535	0.06	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		23	4	degree		0.6324809909246994	0.019328909169797584	0.02	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		24	0	degree		0.5256787399644542	0.013741809955816758	0.02	0.01	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		24	1	degree		0.6473616473616474	0.10788866850239157	0.12	0.07	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		24	2	degree		0.5400863047921871	0.02115356745291093	0.04	0.02	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		24	3	degree		0.7273270787343635	0.025488531518960487	0.02	0.03	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		24	4	degree		0.5825515084621045	0.02530586902421926	0.04	0.03	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		25	0	degree		0.635150456579028	0.035039330352297976	0.06	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		25	1	degree		0.5294631366059939	0.027495260935755036	0.04	0.03	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		25	2	degree		0.6919308263846079	0.0262568870204823	0.02	0.03	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		25	3	degree		0.5936656855531027	0.02031652075867213	0.06	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		25	4	degree		0.5810185185185185	0.03395408213318286	0.06	0.03	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		26	0	degree		0.5639976711405283	0.016345457681964312	0.04	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		26	1	degree		0.6769013911871056	0.02163753312851644	0.02	0.02	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		26	2	degree		0.5333863275039746	0.024682925100401633	0.02	0.01	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		26	3	degree		0.6510608290409614	0.043788908498584106	0.1	0.07	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		26	4	degree		0.5948307579102281	0.05083675867601664	0.06	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		27	0	degree		0.5600447386161671	0.053053060808112604	0.1	0.05	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		27	1	degree		0.6395630324201753	0.02091174907091152	0.04	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		27	2	degree		0.5826871289056164	0.05366169524332367	0.06	0.05	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		27	3	degree		0.6028789551140544	0.012460647316382092	0.0	0.0	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		27	4	degree		0.6342592592592593	0.028537879222429435	0.04	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		28	0	degree		0.6413556413556414	0.03971649296418642	0.08	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		28	1	degree		0.6788931788931788	0.04442192703483565	0.08	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		28	2	degree		0.6053502482073911	0.017284271966210525	0.02	0.02	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		28	3	degree		0.6358995584988962	0.018911604459797476	0.04	0.02	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		28	4	degree		0.46437331371106205	0.04058057347699297	0.02	0.03	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		29	0	degree		0.5366029294600723	0.02383739077902692	0.04	0.05	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		29	1	degree		0.679123000551572	0.036318282686106006	0.06	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		29	2	degree		0.5229389052918466	0.011234694921895634	0.02	0.01	0.006	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		29	3	degree		0.7027839097375521	0.03269942117525892	0.08	0.05	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		29	4	degree		0.5781058376257051	0.04400500041141116	0.04	0.02	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		30	0	degree		0.5574247717104859	0.021834487405962517	0.04	0.02	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		30	1	degree		0.6197983697983698	0.02126140241121571	0.04	0.02	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		30	2	degree		0.5791505791505791	0.0504467580578534	0.06	0.03	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		30	3	degree		0.6115863379936227	0.022298952755325438	0.04	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		30	4	degree		0.6623129752268825	0.03171113821600385	0.06	0.05	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		31	0	degree		0.6119997548568977	0.03560779192275507	0.1	0.05	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		31	1	degree		0.6548997977569406	0.020260287642436106	0.02	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		31	2	degree		0.5962330878297264	0.03599757769753256	0.04	0.03	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		31	3	degree		0.5613195977434389	0.04157063075388881	0.06	0.04	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		31	4	degree		0.6035381407897964	0.01609389190378235	0.02	0.02	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		32	0	degree		0.6303548446405589	0.03874775536845455	0.04	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		32	1	degree		0.5228442728442729	0.024348220054280494	0.04	0.02	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		32	2	degree		0.6583660491223516	0.041300377242512155	0.06	0.03	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		32	3	degree		0.6856450821682609	0.036994381304349164	0.06	0.04	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		32	4	degree		0.5361325729703214	0.015717634558688527	0.04	0.03	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		33	0	degree		0.5611019182447753	0.048255329169914825	0.04	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		33	1	degree		0.6433014647300361	0.02480769502743542	0.06	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		33	2	degree		0.6825703254274683	0.029623945603571317	0.06	0.04	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		33	3	degree		0.5352281089036055	0.07931444823965009	0.06	0.05	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		33	4	degree		0.603032254108413	0.014500321504379429	0.02	0.02	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		34	0	degree		0.7478243549672121	0.056849854635565106	0.1	0.09	0.024	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		34	1	degree		0.5712753569896428	0.012340120877036731	0.0	0.01	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		34	2	degree		0.5466402777327146	0.0129654521914095	0.02	0.01	0.008	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		34	3	degree		0.5502054206524405	0.023828032262858487	0.02	0.01	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		34	4	degree		0.6128127299484915	0.07703492653472346	0.1	0.05	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		35	0	degree		0.5205460562603419	0.01134389829972268	0.0	0.01	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		35	1	degree		0.7309707666850523	0.05046980433276131	0.1	0.06	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		35	2	degree		0.47199961065507284	0.029223079554257705	0.02	0.01	0.008	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		35	3	degree		0.6515820456217807	0.04506522210338718	0.06	0.04	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		35	4	degree		0.6382450331125827	0.025936933669182642	0.06	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		36	0	degree		0.6170558313415456	0.038706214127956814	0.08	0.05	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		36	1	degree		0.6710026352883496	0.04370800322086353	0.1	0.06	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		36	2	degree		0.6645306771357192	0.03629098704772816	0.02	0.03	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		36	3	degree		0.5144867549668874	0.01717777953524784	0.04	0.02	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		36	4	degree		0.5556168751532989	0.012304395029396438	0.0	0.0	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		37	0	degree		0.473815652387081	0.014372315123356294	0.02	0.01	0.006	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		37	1	degree		0.6841331127045412	0.02778357500032045	0.06	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		37	2	degree		0.675594562149184	0.12638177516950555	0.08	0.04	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		37	3	degree		0.6012999754721609	0.02442172925594352	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		37	4	degree		0.5952599950944322	0.018271383427954875	0.04	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		38	0	degree		0.6264785193356621	0.018957778611935226	0.02	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		38	1	degree		0.5971839186124901	0.038485868396371206	0.04	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		38	2	degree		0.49586321014892437	0.0168842020956438	0.04	0.03	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		38	3	degree		0.62696222712779	0.08261385415151093	0.06	0.04	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		38	4	degree		0.6743469462840325	0.038196119536932416	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		39	0	degree		0.6459673959673959	0.03332759465344151	0.08	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		39	1	degree		0.5194888766317338	0.022882749411987625	0.02	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		39	2	degree		0.619123325005678	0.029534514720165165	0.06	0.05	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		39	3	degree		0.5691838361540349	0.019000201535505714	0.04	0.03	0.01	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp		39	4	degree		0.6735344616139318	0.037495311333104256	0.04	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	0	0	rwr	21.0	0.6698535269963841	0.032231391491285226	0.04	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	0	1	rwr	21.0	0.6473616473616474	0.025663885076110685	0.04	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	0	2	rwr	21.0	0.7473475876837221	0.04612830421408171	0.04	0.05	0.022	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	0	3	rwr	21.0	0.6763858229090018	0.042133319690335354	0.08	0.05	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	0	4	rwr	21.0	0.6671572234486143	0.03872757821356864	0.06	0.04	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	1	0	rwr	21.0	0.6293129864558435	0.030289267481738977	0.06	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	1	1	rwr	21.0	0.6733161733161733	0.03454796554965886	0.08	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	1	2	rwr	21.0	0.6913143635832711	0.025478318021762075	0.04	0.03	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	1	3	rwr	21.0	0.6977557027225902	0.03474553759028965	0.08	0.04	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	1	4	rwr	21.0	0.7405261221486387	0.04537515957034209	0.04	0.05	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	2	0	rwr	21.0	0.5623889195317767	0.03378639161349812	0.04	0.03	0.01	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	2	1	rwr	21.0	0.6470552184837899	0.02260160679529518	0.02	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	2	2	rwr	21.0	0.7411667369650563	0.0302699649967334	0.02	0.03	0.026	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	2	3	rwr	21.0	0.7666482707873437	0.0555079245711686	0.1	0.06	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	2	4	rwr	21.0	0.7125030659798871	0.04545132408590927	0.08	0.05	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	3	0	rwr	21.0	0.6038487467058895	0.02810431999193076	0.06	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	3	1	rwr	21.0	0.709260280688852	0.038982358763809746	0.08	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	3	2	rwr	21.0	0.6565977742448331	0.03656026873587628	0.04	0.02	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	3	3	rwr	21.0	0.7033664459161147	0.03277014033006114	0.08	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	3	4	rwr	21.0	0.7039183222958058	0.03759324884490199	0.02	0.06	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	4	0	rwr	21.0	0.6771465342893914	0.02820668602523193	0.04	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	4	1	rwr	21.0	0.7512716798431084	0.038786566334605234	0.04	0.03	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	4	2	rwr	21.0	0.675935238960449	0.029298048268017043	0.06	0.05	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	4	3	rwr	21.0	0.6050711307333824	0.016504186319195924	0.04	0.02	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	4	4	rwr	21.0	0.7496014226146676	0.09973927143124017	0.1	0.08	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	5	0	rwr	21.0	0.7068701354415641	0.059564884786085	0.06	0.04	0.024	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	5	1	rwr	21.0	0.739075810504382	0.024005120253148028	0.02	0.03	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	5	2	rwr	21.0	0.5323318516595827	0.035281899290780676	0.04	0.03	0.008	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	5	3	rwr	21.0	0.6493438803041452	0.020180417093403447	0.04	0.03	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	5	4	rwr	21.0	0.7155997056659307	0.04254293088966234	0.1	0.05	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	6	0	rwr	21.0	0.6150946865232579	0.027537049154799396	0.06	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	6	1	rwr	21.0	0.7157259300116443	0.04741637905968581	0.06	0.07	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	6	2	rwr	21.0	0.670614191622595	0.02053076298817732	0.02	0.02	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	6	3	rwr	21.0	0.7390237920039245	0.03255565038955536	0.04	0.04	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	6	4	rwr	21.0	0.6378464557272504	0.022269429309720635	0.04	0.02	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	7	0	rwr	21.0	0.6496905068333639	0.02567804028637794	0.06	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	7	1	rwr	21.0	0.6617944475087332	0.027007657777200808	0.04	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	7	2	rwr	21.0	0.7719574316212972	0.06718263923108335	0.12	0.08	0.026	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	7	3	rwr	21.0	0.6783173902379201	0.023127751047512704	0.02	0.03	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	7	4	rwr	21.0	0.6481174883492765	0.05545497840467999	0.08	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	8	0	rwr	21.0	0.6697309554452412	0.02903250688109013	0.02	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	8	1	rwr	21.0	0.7081571367285653	0.03345341379223877	0.06	0.04	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	8	2	rwr	21.0	0.641023977158431	0.01600223524197583	0.02	0.02	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	8	3	rwr	21.0	0.7612214863870493	0.04276210399515893	0.06	0.05	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	8	4	rwr	21.0	0.614943585970076	0.03758002198417708	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	9	0	rwr	21.0	0.5896917325488754	0.032029247495209426	0.04	0.03	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	9	1	rwr	21.0	0.7682171967886253	0.031300100188214657	0.02	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	9	2	rwr	21.0	0.5548165212030758	0.015310754104061283	0.04	0.02	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	9	3	rwr	21.0	0.7380120186411577	0.08511522098298141	0.1	0.06	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	9	4	rwr	21.0	0.6496811380917341	0.017713237629371176	0.04	0.02	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	10	0	rwr	21.0	0.6865079365079365	0.03221326702033001	0.04	0.05	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	10	1	rwr	21.0	0.6749402463688178	0.027349938153546773	0.06	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	10	2	rwr	21.0	0.7152266311930178	0.030436278867226312	0.04	0.03	0.02	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	10	3	rwr	21.0	0.6965599705665931	0.0867471483139789	0.04	0.06	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	10	4	rwr	21.0	0.6321130733382389	0.02574579390824609	0.02	0.04	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	11	0	rwr	21.0	0.6662376662376662	0.02569880832161	0.04	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	11	1	rwr	21.0	0.719249862107005	0.027081354332615718	0.06	0.04	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	11	2	rwr	21.0	0.5982284805814218	0.032117359927825356	0.02	0.01	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	11	3	rwr	21.0	0.6477035810645081	0.05508491766423425	0.1	0.05	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	11	4	rwr	21.0	0.6915011037527593	0.021513301931784745	0.0	0.03	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	12	0	rwr	21.0	0.7529263957835386	0.06373379683463719	0.1	0.08	0.026	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	12	1	rwr	21.0	0.6221425507139793	0.03187382932982805	0.04	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	12	2	rwr	21.0	0.7076668505239933	0.026633510547978155	0.06	0.03	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	12	3	rwr	21.0	0.7121658081922982	0.0266765513007106	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	12	4	rwr	21.0	0.6339679911699779	0.030771477702377176	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	13	0	rwr	21.0	0.6824477538763253	0.04357406581896712	0.08	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	13	1	rwr	21.0	0.6772691058405345	0.029721048120116427	0.04	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	13	2	rwr	21.0	0.711560299795594	0.028877271190242824	0.04	0.04	0.02	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	13	3	rwr	21.0	0.6526857983811626	0.01761107639175347	0.02	0.02	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	13	4	rwr	21.0	0.6531150355653668	0.03490294481966994	0.06	0.05	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	14	0	rwr	21.0	0.7476558190843905	0.04723997755267985	0.08	0.06	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	14	1	rwr	21.0	0.5193663050805908	0.011278655290965701	0.02	0.01	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	14	2	rwr	21.0	0.616754810032121	0.042472342329067735	0.04	0.03	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	14	3	rwr	21.0	0.6819045867059113	0.030090754271496246	0.04	0.04	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	14	4	rwr	21.0	0.8060461123375031	0.044667560248661094	0.1	0.06	0.028	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	15	0	rwr	21.0	0.735827664399093	0.0367840308511029	0.04	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	15	1	rwr	21.0	0.5871177299748729	0.015716845884212044	0.02	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	15	2	rwr	21.0	0.775283086207456	0.0510608689113351	0.06	0.05	0.022	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	15	3	rwr	21.0	0.6133492764287466	0.04551541203760496	0.06	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	15	4	rwr	21.0	0.752728722099583	0.04136298611500469	0.08	0.06	0.026	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	16	0	rwr	21.0	0.6089661089661089	0.02075057393133471	0.04	0.03	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	16	1	rwr	21.0	0.815223386651958	0.11835582464086646	0.12	0.08	0.03	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	16	2	rwr	21.0	0.6500113558937088	0.04313178680278602	0.06	0.04	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	16	3	rwr	21.0	0.6842653912190336	0.030128754004809584	0.06	0.04	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	16	4	rwr	21.0	0.6433958793230317	0.016667091521237683	0.0	0.02	0.012	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	17	0	rwr	21.0	0.6636943065514495	0.05159332189099488	0.02	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	17	1	rwr	21.0	0.7266654409511553	0.0351153181422014	0.08	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	17	2	rwr	21.0	0.6546510496090328	0.01937327661375991	0.02	0.03	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	17	3	rwr	21.0	0.6261344125582536	0.01621555023507694	0.02	0.02	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	17	4	rwr	21.0	0.6522872209958303	0.022597592067433364	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	18	0	rwr	21.0	0.6522032236317951	0.024702891607249984	0.04	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	18	1	rwr	21.0	0.7646932646932647	0.06640530810558179	0.08	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	18	2	rwr	21.0	0.6638979916290841	0.044010776256326066	0.06	0.04	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	18	3	rwr	21.0	0.7776551385822909	0.03827242080666344	0.06	0.05	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	18	4	rwr	21.0	0.5485344616139317	0.015659540518003	0.02	0.03	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	19	0	rwr	21.0	0.6504412575841146	0.023779994030147647	0.06	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	19	1	rwr	21.0	0.7611386897101183	0.04744556270949501	0.08	0.07	0.024	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	19	2	rwr	21.0	0.6058207066610428	0.033280012631484494	0.04	0.02	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	19	3	rwr	21.0	0.6865035565366691	0.022596037804355654	0.04	0.03	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	19	4	rwr	21.0	0.6458180034338974	0.03856676225136143	0.04	0.05	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	20	0	rwr	21.0	0.6953177667463382	0.036311402832712156	0.04	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	20	1	rwr	21.0	0.6382453882453882	0.015694197073441843	0.0	0.01	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	20	2	rwr	21.0	0.6578306998475065	0.04252169201840152	0.06	0.06	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	20	3	rwr	21.0	0.7112766740250185	0.03930938227218743	0.06	0.05	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	20	4	rwr	21.0	0.7071989207750797	0.09366613536011267	0.08	0.04	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	21	0	rwr	21.0	0.7795857081571367	0.04907972708468512	0.08	0.06	0.028	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	21	1	rwr	21.0	0.6776981062695349	0.09840985662826598	0.1	0.06	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	21	2	rwr	21.0	0.712728334577074	0.02260612066019525	0.04	0.03	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	21	3	rwr	21.0	0.6329715477066471	0.022389796255747708	0.04	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	21	4	rwr	21.0	0.6510914888398333	0.028908077402353245	0.04	0.03	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	22	0	rwr	21.0	0.630232273089416	0.025679266045996844	0.02	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	22	1	rwr	21.0	0.694735551878409	0.050205063806094026	0.02	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	22	2	rwr	21.0	0.6257097433568022	0.015525324882999457	0.02	0.02	0.014	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	22	3	rwr	21.0	0.6417402501839587	0.030752142212379797	0.06	0.04	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	22	4	rwr	21.0	0.6985528574932548	0.04414223567917626	0.06	0.04	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	23	0	rwr	21.0	0.6577189434332291	0.035884429684997936	0.06	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	23	1	rwr	21.0	0.7212722927008642	0.044967525870143014	0.1	0.06	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	23	2	rwr	21.0	0.6737613964504721	0.03530342888978453	0.06	0.05	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	23	3	rwr	21.0	0.6451128280598479	0.028503189977987387	0.04	0.05	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	23	4	rwr	21.0	0.723019376992887	0.04133813593048814	0.04	0.02	0.028	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	24	0	rwr	21.0	0.6047067475638904	0.013884112616925983	0.02	0.01	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	24	1	rwr	21.0	0.728626585769443	0.10859392588249742	0.08	0.07	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	24	2	rwr	21.0	0.6322961617079265	0.02133431817082336	0.04	0.04	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	24	3	rwr	21.0	0.7747731174883493	0.048804058242833515	0.08	0.05	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	24	4	rwr	21.0	0.6826710816777042	0.03157058435932357	0.06	0.04	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	25	0	rwr	21.0	0.6857571857571858	0.04349072388647662	0.06	0.05	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	25	1	rwr	21.0	0.6489550775265062	0.029937257603511916	0.06	0.04	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	25	2	rwr	21.0	0.7235002108951688	0.0229022214035435	0.02	0.02	0.02	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	25	3	rwr	21.0	0.6323276919303409	0.07542913921561038	0.06	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	25	4	rwr	21.0	0.6653482953151827	0.023833474535579234	0.02	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	26	0	rwr	21.0	0.6220812649384078	0.04088778000622751	0.08	0.05	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	26	1	rwr	21.0	0.7384323098608812	0.020486735319902017	0.0	0.01	0.026	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	26	2	rwr	21.0	0.5718179163557315	0.012288451524229416	0.02	0.01	0.01	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	26	3	rwr	21.0	0.7162282315428011	0.05715267753614331	0.08	0.06	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	26	4	rwr	21.0	0.6670039244542556	0.046434212150782396	0.08	0.06	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	27	0	rwr	21.0	0.6091499662928235	0.032641745587062135	0.06	0.06	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	27	1	rwr	21.0	0.7232947232947231	0.025587686062821514	0.04	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	27	2	rwr	21.0	0.6067616235683463	0.019325271228788153	0.02	0.03	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	27	3	rwr	21.0	0.6812300711307334	0.016115918552924	0.0	0.0	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	27	4	rwr	21.0	0.707168260976208	0.056336455266096	0.06	0.06	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	28	0	rwr	21.0	0.7392290249433107	0.11862917926337425	0.1	0.07	0.024	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	28	1	rwr	21.0	0.7046332046332047	0.029430865614127708	0.04	0.05	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	28	2	rwr	21.0	0.6551701761785795	0.018438325622415486	0.04	0.02	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	28	3	rwr	21.0	0.6841427520235467	0.03156157437564448	0.06	0.03	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	28	4	rwr	21.0	0.6102219769438311	0.02231062944214174	0.04	0.03	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	29	0	rwr	21.0	0.5708157136728566	0.028212859985473286	0.04	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	29	1	rwr	21.0	0.7699331985046272	0.03311623557398969	0.04	0.04	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	29	2	rwr	21.0	0.656013756854093	0.04230763457024163	0.08	0.05	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	29	3	rwr	21.0	0.7627851361295069	0.054659777080662414	0.06	0.06	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	29	4	rwr	21.0	0.7041942604856513	0.030111022149029148	0.04	0.04	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	30	0	rwr	21.0	0.5672611386897102	0.013883498493392786	0.0	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	30	1	rwr	21.0	0.6814365385793957	0.02643174942576586	0.06	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	30	2	rwr	21.0	0.6716524447616885	0.05266653659826893	0.1	0.07	0.018	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	30	3	rwr	21.0	0.7785749325484425	0.045521607727836186	0.08	0.06	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	30	4	rwr	21.0	0.7041329408879077	0.027795359916210936	0.02	0.04	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	31	0	rwr	21.0	0.7318134460991603	0.07390560413547262	0.12	0.08	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	31	1	rwr	21.0	0.6915486915486915	0.020119013978534325	0.02	0.01	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	31	2	rwr	21.0	0.6461827974433016	0.021083724750888298	0.04	0.04	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	31	3	rwr	21.0	0.6127054206524405	0.031121383910767447	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	31	4	rwr	21.0	0.6840814324258033	0.019511841337281094	0.0	0.03	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	32	0	rwr	21.0	0.6803946803946803	0.09474679615211837	0.1	0.06	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	32	1	rwr	21.0	0.5680272108843538	0.014930106507238819	0.02	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	32	2	rwr	21.0	0.672982706596152	0.026582059191445774	0.02	0.05	0.02	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	32	3	rwr	21.0	0.7942727495707629	0.033109593879558634	0.06	0.04	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	32	4	rwr	21.0	0.6594002943340691	0.052382480470179876	0.06	0.05	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	33	0	rwr	21.0	0.652448366734081	0.024423506878042314	0.04	0.03	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	33	1	rwr	21.0	0.7327020898449469	0.04464605649531116	0.08	0.05	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	33	2	rwr	21.0	0.789494176048798	0.040675515473480806	0.02	0.07	0.022	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	33	3	rwr	21.0	0.576588177581555	0.03682214311410969	0.06	0.05	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	33	4	rwr	21.0	0.6513980868285504	0.044315970773935245	0.02	0.02	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	34	0	rwr	21.0	0.7572164000735429	0.09467575022093068	0.1	0.07	0.024	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	34	1	rwr	21.0	0.6352577066862781	0.020087920623879957	0.02	0.02	0.018	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	34	2	rwr	21.0	0.692806852470718	0.0276519864387786	0.04	0.03	0.016	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	34	3	rwr	21.0	0.6911025263674271	0.023459893598169967	0.02	0.03	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	34	4	rwr	21.0	0.6742702967868531	0.0360893757422625	0.06	0.06	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	35	0	rwr	21.0	0.6001409572838143	0.014124573632908912	0.0	0.0	0.014	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	35	1	rwr	21.0	0.7263590120732978	0.0560975325783306	0.06	0.06	0.022	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	35	2	rwr	21.0	0.5857694429123002	0.015451356601025734	0.02	0.02	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	35	3	rwr	21.0	0.6802182977679667	0.028509378307220456	0.04	0.04	0.016	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	35	4	rwr	21.0	0.7339649251900907	0.04879394196482604	0.08	0.06	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	36	0	rwr	21.0	0.6482809339952197	0.03832957169084942	0.04	0.06	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	36	1	rwr	21.0	0.708678065820923	0.04961134473612372	0.08	0.07	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	36	2	rwr	21.0	0.7420914311670613	0.04112227918381717	0.06	0.04	0.022	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	36	3	rwr	21.0	0.6139011528084375	0.02327184066995123	0.06	0.03	0.014	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	36	4	rwr	21.0	0.6485773853323522	0.015494693941297787	0.0	0.0	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	37	0	rwr	21.0	0.4792854078568364	0.010058009192248061	0.0	0.01	0.008	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	37	1	rwr	21.0	0.711681068823926	0.03272265338684127	0.08	0.04	0.02	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	37	2	rwr	21.0	0.7543557963726031	0.07182372255760458	0.1	0.06	0.024	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	37	3	rwr	21.0	0.731849399067942	0.03705902586970195	0.06	0.05	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	37	4	rwr	21.0	0.6878525876870248	0.02972437548054116	0.04	0.04	0.02	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	38	0	rwr	21.0	0.6851749708892566	0.03292132989533671	0.06	0.03	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	38	1	rwr	21.0	0.6582705154133726	0.030858023048090977	0.06	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	38	2	rwr	21.0	0.5809350767333961	0.02178749818861015	0.04	0.03	0.012	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	38	3	rwr	21.0	0.7350993377483444	0.035064094674803724	0.04	0.05	0.024	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	38	4	rwr	21.0	0.7217623252391464	0.059356076165905554	0.04	0.06	0.022	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	39	0	rwr	21.0	0.6826928969786111	0.03510788319888191	0.04	0.04	0.016	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	39	1	rwr	21.0	0.5830728687871544	0.021162999505387477	0.04	0.02	0.012	18	1831
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	39	2	rwr	21.0	0.7069530514908666	0.026837417361703638	0.04	0.04	0.02	17	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	39	3	rwr	21.0	0.664888398332107	0.027159278666665135	0.02	0.05	0.018	18	1830
+rna_coexp	ncg_known_cap_rna_coexp	native_rna_coexp	0.5	39	4	rwr	21.0	0.7234179543782192	0.030604528109653674	0.08	0.04	0.022	18	1830

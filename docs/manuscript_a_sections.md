@@ -447,6 +447,44 @@ degree). It is used twice: to measure and correct the composition of our
 negative set (Control 12, F.13) and as the external comparison of
 §F.14.
 
+### C14 — The NCG catalogue as a fifth label set
+
+The NCG catalogue (Repana et al. 2019) is used twice. As an **external
+arbitration set** it is §C13/§F.14. As a **label set** it enters the
+main factorial as a fifth label, which is what this section describes.
+
+*Which tier is the label?* The `known` tier (708 high-confidence tumour
+suppressors and oncogenes). The 104 `candidate` genes are multi-screen
+candidates and are kept aside for the label-quality tiering (§C15); the
+1,560 `screening` genes are not drivers and are never positives.
+
+*Symbols.* The HGNC approved symbol, with the previous symbol mapped to
+its current one where the catalogue carries one (9 of the 708: CARS →
+CARS1, MKL1 → MRTFA, FGFR1OP → CEP43, …), following decision D-02.
+
+*Rank.* NCG 6.0's own confidence level is not available (the portal is
+down for maintenance), so the rank is the number of publications NCG
+cites for the gene, descending, ties broken by the symbol ascending
+(D-13, adapted). This is not cosmetic: the D-11 cap keeps the top-N by
+rank, so the capped NCG set is the most-studied NCG drivers.
+
+*The cap does not move.* The D-11 common-size cap N is the minimum
+over the four canonical labels of the positives inside a network's
+largest connected component, and the NCG label has 407–694 positives
+per network, always above the temporal label's 63–150, which is the
+minimum. N is therefore unchanged and **the 24 released arms are not
+re-run**; six new arms (18 cells at three alphas) are added.
+
+*Two conventions.* The released primary factorial runs each label with
+its own positive set (the D-11 cap is a **control** arm, not the primary
+design), so the NCG arm is built the same way — the full NCG positive
+set in the network (407–694 positives). A capped NCG arm is also run,
+so the D-11 control panel covers five labels (30 arms).
+
+*Family.* The 30-arm extension is a **pre-planned exploratory** family
+(plan item C5 pre-dates the analysis); the 24-arm pre-registered
+endpoint is untouched.
+
 ---
 
 ## §D. Methods §4.6 — Statistical analysis
@@ -1158,6 +1196,72 @@ zero. The advantage of the prior over the degree baseline therefore does
 of one tumour class. (The background is sub-sampled to 20,000 genes for
 tractability; re-computing one arm with 200,000 and with the full
 background gives the same +0.1269, so the sub-sampling is immaterial.)
+
+### F.16 A fifth label: the same picture, and one important exception
+
+The NCG arms land where the other labels land. On the primary
+convention (α = 0.5, 5 folds × 40 repeats):
+
+| network | ΔAUROC (NCG) | SD |
+|---|---|---|
+| funmap | +0.0771 | 0.0176 |
+| rna_coexp | +0.0426 | 0.0169 |
+| string_phys700 | +0.1352 | 0.0163 |
+| intact | +0.0673 | 0.0089 |
+| string_full700 | +0.1387 | 0.0133 |
+| reactome | +0.0647 | 0.0216 |
+
+All six are positive (+0.0426 to +0.1387) and the network order is the
+one the other labels produce (the protein networks above the
+co-expression networks). The NCG label's margins sit between
+`intogen2024` and `ot_all` on most networks, which is what its 65 %
+overlap with IntOGen predicts.
+
+**The exception is Reactome.** On the D-11 capped panel, where all five
+labels have the same number of positives inside the arm:
+
+| network | intogen2024 | ot_all | ot_nolit | temporal | **NCG** |
+|---|---|---|---|---|---|
+| funmap | +0.1268 | +0.0191 | +0.0885 | +0.0196 | **+0.1127** |
+| intact | +0.0681 | +0.0664 | +0.0973 | +0.0071 | **+0.0858** |
+| reactome | -0.0110 | +0.0627 | +0.1649 | -0.0125 | **+0.0893** |
+| rna_coexp | +0.0829 | +0.0403 | +0.0956 | +0.0127 | **+0.0720** |
+| string_full700 | +0.1020 | +0.0785 | +0.1388 | +0.0604 | **+0.1177** |
+| string_phys700 | +0.0955 | +0.0938 | +0.1819 | +0.0378 | **+0.1222** |
+
+Reactome is negative on `intogen2024` (−0.0110) and on the temporal
+label (−0.0125) — the two most recent catalogues — but **positive on
+NCG (+0.0893)**, the 2019 catalogue. The "Reactome collapses" pattern
+is therefore **label-specific, not network-specific**: Reactome handles
+the drivers that existed when it was curated, and fails on the ones
+that arrived afterwards. That is precisely the prediction the curator-lag
+hypothesis makes (§J.3), and it is the first test of that hypothesis
+that does not rely on the temporal split.
+
+### F.17 What a fifth label does to the variance decomposition
+
+The plan's expectation was that adding a label would let the label main
+effect and the interaction take a larger share of the between-arm spread
+and the fold noise a larger share of the total. The same corrected
+decomposition on the 24-arm and the 30-arm grids:
+
+| variance source | % between-arm spread (24) | % between-arm spread (30) | change | % total (24) | % total (30) |
+|---|---|---|---|---|---|
+| network | 24.82 % | 26.95 % | +2.13 pp | 14.84 % | 15.80 % |
+| label | 34.78 % | 30.75 % | **−4.02 pp** | 20.80 % | 18.04 % |
+| network × label | 40.07 % | 41.95 % | +1.88 pp | 23.96 % | 24.60 % |
+| fold (within cell) | 0.34 % | 0.35 % | +0.02 pp | 40.39 % | 41.56 % |
+
+The label main effect **shrinks** (34.8 % → 30.8 % of the between-arm
+spread) and the interaction and the noise grow, which is the direction
+the plan expected. But NCG is 65 % identical to IntOGen, so this is the
+effect of adding a *redundant* label; a genuinely independent fifth
+label would be expected to shrink the label effect more. The honest
+statement is that **the label main effect is real but not dominant**:
+across five catalogues of quite different provenance, a quarter of the
+between-arm spread is the network and a third is the label, and the
+largest single piece is the interaction — which network you use depends
+on which catalogue you are trying to predict.
 
 ---
 
