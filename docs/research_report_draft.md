@@ -10,76 +10,105 @@
 
 ---
 
-## Abstract
+# Abstract
 
-**Background.** Cancer-driver gene prioritisation routinely uses a
-protein–protein interaction or co-expression network as a prior, on the
-guilt-by-association premise that two genes whose proteins interact are
-more likely to share driver status. Random walk with restart (RWR) is the
-canonical formalisation. Whether the *specific topology* of a network
-contributes to driver-gene prediction **beyond what node degree alone
-explains** is a question the field has asked for a decade and answered
-without a leakage-controlled design.
+**Background.** Cancer-driver gene prioritisation methods frequently
+use a protein-protein interaction or co-expression network as a
+prior. Whether — and how much — the **specific topology** of such
+a network contributes to prediction, beyond what node degree alone
+explains, is a decade-old question with no published leakage-
+controlled answer.
 
-**Methods.** We assembled a six-network panel stratified by molecular
-provenance (one RNA-derived, three protein-derived, two curated or
-literature-derived) and a four-label panel spanning mutation-based and
-clinical-evidence curation philosophies. We held the learner fixed —
-RWR at α = 0.5, no hyperparameter tuning — so that the quantity of
-interest is the network's contribution and not the learner's quality.
-The primary endpoint was ΔAUROC = AUROC(RWR) − AUROC(degree-only) over
-5-fold × 40-repeat cross-validation (200 folds per cell, 24 primary
-cells). Three hypotheses were pre-registered (H1: the prior contributes
-beyond degree; H2: the contribution is provenance-invariant; H3:
-between-network differences reflect literature attention) together with
-seven protocol controls and three added after a systematic read of the
-reference corpus. A systematic read of a 41-paper reference corpus then
-motivated three further controls — seed-degree stratification, network
-size and coverage adjustment, and random-input degeneracy — which were
-run and reported without being allowed to alter the pre-registered
-decision rule.
+**Methods.** We assembled a six-network panel stratified by
+molecular provenance (one RNA-derived, three protein-derived, two
+curated/literature) and a four-label panel spanning mutation-based
+and clinical-evidence curation philosophies. We held the learner
+fixed: random walk with restart at α = 0.5. We measured the primary
+endpoint ΔAUROC = AUROC(RWR) − AUROC(degree-only) over 5-fold × 40-repeat cross-validation (200 evaluations per cell, 24 primary cells). We pre-registered three hypotheses
+(H1: prior contributes beyond degree; H2: contribution is
+provenance-invariant; H3: between-network differences reflect
+literature attention) and seven protocol controls: a degree-matched
+seed null (A5), a configuration-model rewiring null (W5), a
+cross-catalogue label transfer grid (Control 5), a publication-
+bias adjustment with a literature-matched null (Control 7), and
+three controls added after a systematic read of the benchmark
+literature: seed-degree stratification (Control 8, after Zhang et
+al. 2021), network size and coverage adjustment (Control 9, after
+Wright et al. 2025), and random-input degeneracy (Control 10,
+after Hill et al. 2019).
 
-**Results.** Across the 24 (network × label) cells at α = 0.5, ΔAUROC
-ranged from −0.0125 (Reactome × newly-discovered IntOGen drivers) to
-+0.1711 (STRING physical × Open Targets no-literature); 23 of 24 cells
-were positive. Both null models were rejected overwhelmingly: 23 of 24
-cells beat the degree-matched random-seed null and 23 of 24 beat the
-rewired-network null at z > 5. On the two endpoints the published
-evidence actually uses — partial AUC below 2 % FPR (Guala & Sonnhammer
-2017) and precision in the top 10 % — the margin is smaller but still
-positive in 20 of 24 arms (median +0.031 and +0.041 against +0.081 for
-the full AUROC), and the ordering of the arms is unchanged
-(Spearman ρ = 0.80 and 0.90): the prior's advantage is a
-global-ranking advantage, not a top-of-list artefact. The 95 % confidence interval on ΔAUROC
-excluded zero in 24 of 24 arms under four of the five interval
-constructions and in 20 of 24 under the pre-registered gene-cluster
-bootstrap. The margin was flat across the degree tercile of the seeds
-(mean ΔAUROC +0.053, +0.061 and +0.054 for low, mid and high seed
-degree; mean high-minus-low +0.0010), so it is not a hub artefact; it
-survived adjustment for network size and label coverage (23 of 24 cells
-positive after adjustment; pooled Spearman ρ between ΔAUROC and log₁₀
-network size −0.021, permutation p = 0.93); and it survived a
-literature-matched null (mean difference +0.0010). The learner's
-ranking collapsed onto an almost unrelated gene list under a random
-input (top-100 Jaccard 0.019), confirming that it uses its input rather
-than returning a fixed hub set. H2, however, is **not testable** with
-this panel: provenance is confounded with network size and coverage, and
-the three provenance classes hold three, one and two networks.
+**Results.** Across 24 (network × label) cells at α = 0.5, ΔAUROC
+ranges from −0.013 (Reactome × IntOGen temporal_new) to +0.171
+(STRING physical × Open Targets no-literature); 23 of 24 cells are
+positive. 23 of 24 cells beat the degree-matched seed null and
+23 of 24 beat the edge-rewiring null at z > 5. Mixed-effects
+variance decomposition partitions the between-arm variance as
+40.1 % from the network × label interaction, 34.8 % from label
+choice and 24.8 % from network choice, with 0.3 % fold noise. The
+95 % CI on ΔAUROC excludes zero in 24/24 arms under four of the five
+interval constructions and in 20/24 under the pre-registered
+gene-cluster bootstrap; the four exceptions are the smallest-effect
+`intogen_temporal_new` arms. The margin is flat across the degree
+tercile of the seeds (mean ΔAUROC +0.053 / +0.061 / +0.054 for
+low / mid / high seed degree), so it is not a hub artefact; and it
+survives adjustment for network size and label coverage (23/24 cells
+positive after adjustment, pooled Spearman ρ between ΔAUROC and
+log₁₀ network size −0.02, permutation p = 0.93). H2 is **not
+testable** with this panel: provenance is confounded with network
+size and coverage (3 / 1 / 2 networks per class). Cross-catalogue
+transfer retains 39.8 % of the within-label magnitude (59 of 66
+transfer cells positive). Publication-bias adjustment leaves the
+margin essentially unchanged in the literature-matched null
+(mean difference +0.001).
+
+**Additional evidence from the expanded control stack.** Five further
+analyses, each registered as exploratory in the amendments, change what
+the headline can be taken to mean. A **bait-matched null**, in which
+each positive is paired with a negative carrying the same publication
+count, removes much of the apparent margin: the share of positives above
+the null falls from a median 17.6 % to 11.6 % and, on the
+newest-driver label, from 6.8 % to 4.7 %, which is chance (5 %). An
+**NCG arbitration test**, in which the positives are drivers that our own
+labels do not contain, shows that the prior nevertheless transfers: the
+margin is positive in 24/24 arms (median +0.041), and in 26/26 cancer
+types. **An audit of our own negative set** shows that 10-22 % of the
+held-out negatives are curated driver genes we do not label; removing
+them halves the margin on the strictest label (+0.065 to +0.030) and
+raises it on the Open Targets labels (+0.085 to +0.103), so the
+benchmark's numbers depend on how the background is built. **Label-
+quality tiering** shows the high-confidence tier carrying the larger
+margin in four of five labels, and a **ClinGen noise anchor** (a random
+17 % of the positives demoted to background, the disagreement rate
+ClinGen's own panels document) moves the margin by less than 0.003.
+External functional validation on **1,361 DepMap cell lines** shows the
+prior carries set-level but not gene-level signal: no enrichment beyond
+chance for the top 30 candidates (5.8 % of cell lines, p < 0.05) and a
+clear one for the top 100 (47.6 %). A **stability analysis** shows
+that the per-gene instability of the prior is the gene's own score
+variance (Spearman ρ = 1.00) and not any topology descriptor, which
+makes bagging the prior a provable no-op. Adding the NCG catalogue as
+a fifth label shrinks the label main effect from 34.8 % to 30.8 % of the
+between-arm spread.
 
 **Conclusions.** A network prior contributes to cancer-driver
-prioritisation beyond node degree, and that contribution is not
-explained by the degree of the seed genes, by network size, or by the
-degree distribution of the labels. The single negative cell is a
-*coverage failure* — Reactome's network contains only 41 % of the
-newly-discovered drivers — not evidence of a negative effect; the
-equivalence test places it in the same category as five cells with
-bounded positive margins. Whether the contribution depends on the
-network's molecular provenance remains open and requires a panel that
-separates provenance from size and coverage.
-
-**Keywords:** cancer driver genes; network prior; random walk with
-restart; degree baseline; leakage control; benchmark; pre-registration;
-gene prioritisation.
+prioritisation beyond node degree, and the contribution is not
+explained by seed degree, by network size, or by the degree
+distribution of the labels. It is also smaller and more fragile than
+the field's headline numbers suggest: the median margin is +0.081, it
+shrinks by half on the strictest label once curated driver genes are
+removed from the background, and a large part of it tracks how often a
+gene has been published rather than its topology. The prior does
+transfer, to drivers that none of our labels contain, in 24 of 24 arms
+and 26 of 26 cancer types — but its advantage in the top of the list is
+a property of the interaction network, and it carries no detectable
+gene-level functional signal at the scale a practitioner works at. The
+one negative cell — Reactome's failure on the 2020-2024 newly-discovered
+drivers — is a coverage failure (a curator-lag failure) rather than evidence of
+a negative effect, and is reported as such: the same network is
+positive on a 2019 catalogue (+0.089), which is the prediction the
+curator-lag explanation makes. The provenance question (H2) remains
+open: separating provenance from size and coverage requires a larger
+network panel than this design supports.
 
 ---
 

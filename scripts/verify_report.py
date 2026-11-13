@@ -23,7 +23,8 @@ REPORT = ROOT / "docs" / "research_report_draft.md"
 # (label, string that must appear, what it is)
 CHECKS: list[tuple[str, str, str]] = [
     ("design", "5-fold × 40-repeat", "the design"),
-    ("design", "200 folds per cell", "the folds per cell"),
+    ("design", "200 evaluations per cell",
+     "the evaluations per cell (40 repeats x 5 folds)"),
     ("endpoint.min", "−0.0125", "the negative cell"),
     ("endpoint.max", "+0.1711", "the panel maximum"),
     ("endpoint.cells", "23 of 24 cells were positive", "the positive-cell count"),
