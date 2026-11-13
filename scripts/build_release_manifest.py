@@ -86,17 +86,45 @@ KEY_TABLES = [
     "results/tables/figure1_data.tsv",
 ]
 
+
+def _tracked_under(prefix: str) -> list[str]:
+    """Every file under ``prefix`` that git tracks (the release zips ship
+    exactly the tracked files, so the manifest must describe exactly
+    those)."""
+    try:
+        out = subprocess.run(["git", "ls-files", prefix],
+                             capture_output=True, text=True,
+                             cwd=str(ROOT), check=True).stdout
+    except subprocess.CalledProcessError:
+        return []
+    return [ln.strip() for ln in out.splitlines()
+            if ln.strip() and (ROOT / ln.strip()).is_file()]
+
+
 FIGURES = [
     "figures/figure1_pilot_overview.png",
+    "figures/figure2_main_heatmap.png",
     "figures/figure2_d09_d11_d12.png",
     "figures/figure2_d09_temporal_strip.png",
+    "figures/figure4_depmap_validation.png",
     "figures/figure5_stability_atlas.png",
     "figures/figure5b_stability_attribution.png",
     "figures/figure6_network_stability.png",
     "figures/figure7_consensus_prior.png",
     "figures/figure8_stability_tradeoff.png",
     "figures/figure9_pauc_top10.png",
+    "figures/deck_research_map.png",
+    "figures/deck_main_heatmap.png",
+    "figures/deck_stability.png",
 ]
+
+
+# Every tracked table and figure, so that the manifest describes the
+# whole release and not a hand-kept subset (the G/C series and the
+# deck figures were added after the list was written).
+KEY_TABLES = sorted(set(KEY_TABLES) | set(_tracked_under("results/tables/")))
+FIGURES = sorted(set(FIGURES) | set(_tracked_under("figures/")))
+
 
 
 def sha256(path: Path) -> str:

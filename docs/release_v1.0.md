@@ -1,7 +1,7 @@
-# D1 benchmark — v1.0-rc1 release note
+# D1 benchmark — v1.0-rc4 release note
 
-**Release commit:** `3192cc5bdb5f7609e7e3862039c91fbb0857463e` (tag `v1.0-rc1`)
-**Built:** 2026-11-05
+**Release commit:** `d9408299b81d8114531ddf6316f4c5b6f714c95e` (tag `v1.0-rc4`)
+**Built:** 2026-11-12
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
 (DOI 10.5281/zenodo.23121762) is the frozen v1 and is unchanged.
@@ -17,13 +17,24 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
 
+## What changed since v1.0-rc3
+
+| area | change |
+|---|---|
+| the G/C series | the bait-matched null (G3), the NCG arbitration test (G7), the negative-set audit (G8), the cancer-type stratification (GR-9), the NCG circularity check (C2), the fifth label in the main factorial (C5), the variance decomposition on the 30-arm grid (C6), the label-quality tiers and the ClinGen noise anchor (C7) — all exploratory, all registered in amendment 4 |
+| the fifth label | the NCG known tier (708 genes) enters the factorial as a pre-planned exploratory extension (6 arms, 18 cells); the D-11 cap does not move, so the 24 released arms were **not** re-run |
+| the stability analysis | the Phase S attribution is now in the manuscript with the released table's numbers; two stale numbers in section I.2 (the crowding definitions) and one untraceable coefficient were corrected, and `docs/stability_attribution.md` now carries the released table |
+| the claim verification | `scripts/recompute_ground_truth.py` now records 296 quantities (was 55) and `scripts/verify_claims.py` runs 104 checks (was 63) — the Phase S and G/C numbers are machine-checked against the tables, and three inconsistencies were found and fixed in the process |
+| the release manifest | it now covers every tracked table and figure (144 + 14, was 35 + 9), so the tamper-evidence record describes the whole release |
+| the defence material | the 1118 deck (26 slides), the 40-minute speaker script, the Q&A bank and the public dataset list are in the repository under `docs/` |
+
 ## What is in the three zips
 
 | zip | size | content |
 |---|---|---|
-| `d1-benchmark-v1.0-source.zip` | 207.0 MB | the full repository at the release tag, minus `data/raw/`, `data/cache/`, `data/processed/networks/` and `data/processed/rewired/` (all regenerable from the build scripts) |
+| `d1-benchmark-v1.0-source.zip` | 210.7 MB | the full repository at the release tag, minus `data/raw/`, `data/cache/`, `data/processed/networks/` and `data/processed/rewired/` (all regenerable from the build scripts) |
 | `d1-benchmark-v1.0-splits.zip` | 142.1 MB | every split family: the v1 10-repeat set, the 40-repeat design of record, the complex-aware v2 and the ClinGen 40-repeat splits |
-| `d1-benchmark-v1.0-results.zip` | 45.2 MB | `results/tables/` and `figures/` |
+| `d1-benchmark-v1.0-results.zip` | 47.1 MB | `results/tables/` and `figures/` |
 
 ## Verifying the release
 
