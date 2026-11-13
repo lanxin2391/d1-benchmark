@@ -323,6 +323,91 @@ the H1 verdict is unchanged; the repeat is the unit of record
 throughout (`scripts/run_pauc_top10.py`,
 `results/tables/pauc_top10_summary.tsv`).
 
+### 2.5c The arbitration catalogue, the fifth label and the label-quality tiers
+
+*The section numbers in the blocks below refer to the repository's section files (`docs/manuscript_a_sections.md`); the text is identical to the audited version.*
+
+**An independent arbitration catalogue (C13).** C13 — The NCG arbitration catalogue (an independent driver catalogue)
+
+The NCG catalogue (Repana et al. 2019, *Genome Biology* 20:1,
+doi:10.1186/s13059-018-1612-0) is a manually curated repository of 2,372
+cancer genes with known or predicted driver roles, collected from 275
+publications. **None of the project's four label sets contains it**, which
+makes it an independent arbitration catalogue (Boutros et al. 2014: the
+gold standard dominates the ranking, so the evaluator should be blind to
+the algorithm). It also supplies, per gene, the number of publications
+NCG cites for it — the closest available proxy for Schaefer et al.'s
+"bait" count, i.e. the study-visibility covariate their degree-matched
+null model is built on.
+
+Built by `scripts/build_ncg.py` into `data/processed/labels/ncg.tsv`
+(708 known tumour suppressors / oncogenes, 104 multi-screen candidates,
+1,560 screening-level genes, with the cancer type, the literature count,
+the fraction of cell lines in which the gene is essential and the PPI
+degree). It is used twice: to measure and correct the composition of our
+negative set (Control 12, F.13) and as the external comparison of
+§F.14.
+**The NCG catalogue as a fifth label set (C14).** C14 — The NCG catalogue as a fifth label set
+
+The NCG catalogue (Repana et al. 2019) is used twice. As an **external
+arbitration set** it is §C13/§F.14. As a **label set** it enters the
+main factorial as a fifth label, which is what this section describes.
+
+*Which tier is the label?* The `known` tier (708 high-confidence tumour
+suppressors and oncogenes). The 104 `candidate` genes are multi-screen
+candidates and are kept aside for the label-quality tiering (§C15); the
+1,560 `screening` genes are not drivers and are never positives.
+
+*Symbols.* The HGNC approved symbol, with the previous symbol mapped to
+its current one where the catalogue carries one (9 of the 708: CARS →
+CARS1, MKL1 → MRTFA, FGFR1OP → CEP43, …), following decision D-02.
+
+*Rank.* NCG 6.0's own confidence level is not available (the portal is
+down for maintenance), so the rank is the number of publications NCG
+cites for the gene, descending, ties broken by the symbol ascending
+(D-13, adapted). This is not cosmetic: the D-11 cap keeps the top-N by
+rank, so the capped NCG set is the most-studied NCG drivers.
+
+*The cap does not move.* The D-11 common-size cap N is the minimum
+over the four canonical labels of the positives inside a network's
+largest connected component, and the NCG label has 407–694 positives
+per network, always above the temporal label's 63–150, which is the
+minimum. N is therefore unchanged and **the 24 released arms are not
+re-run**; six new arms (18 cells at three alphas) are added.
+
+*Two conventions.* The released primary factorial runs each label with
+its own positive set (the D-11 cap is a **control** arm, not the primary
+design), so the NCG arm is built the same way — the full NCG positive
+set in the network (407–694 positives). A capped NCG arm is also run,
+so the D-11 control panel covers five labels (30 arms).
+
+*Family.* The 30-arm extension is a **pre-planned exploratory** family
+(plan item C5 pre-dates the analysis); the 24-arm pre-registered
+endpoint is untouched.
+**Label quality tiers (C15).** C15 — Label quality tiers
+
+Every catalogue carries its own evidence, and that evidence is not
+equally strong inside a catalogue. Each positive gene is therefore given
+a tier from its own catalogue's notion of confidence:
+
+* **ClinGen** — the review status of the gene's best-curated disease
+  (Definitive/Strong = high, Moderate = mid, Limited/Disputed = low).
+* **IntOGen** — the number of *distinct detecting methods* that flagged
+  the gene (IntOGen combines seven complementary methods and votes;
+  four or more votes = high, two or three = mid, one = low).
+* **Open Targets** — whether the gene's cancer associations are carried
+  by a non-literature source. (The number of sources cannot be used:
+  88,510 of 89,111 (target, cancer-disease) pairs in the datasource
+  table carry exactly one source, so a source-count tier would be
+  constant across the whole label.)
+* **NCG** — the number of publications the catalogue cites for the gene
+  (NCG 6.0's own confidence level is unavailable because the portal is
+  down).
+
+The tiers are in `results/tables/label_quality_tiers.tsv`, built by
+`scripts/run_c7_build_tiers.py`.
+
+---
 ### 2.6 Statistics
 
 The primary endpoint is ΔAUROC at α = 0.5 over the 200 (repeat, fold)
@@ -563,6 +648,640 @@ label.
 
 ---
 
+### 3.9 Part of the margin is study visibility, not topology
+
+F.12 The bait-matched null: how much of the advantage is study visibility?
+
+**A. The label sets are degree-enriched.** Inside each network's LCC,
+the positives' mean degree exceeds the negatives' by 1.0–2.7× (e.g.
+string_full700 × ot_all 74.6 against 28.1; reactome × ot_all 22.7
+against 8.9; intact × ot_all 139.3 against 60.4). The temporal label is
+the least enriched of the four (ratios 1.03–1.54). Full table in
+`results/tables/g3_label_degree_enrichment.tsv`.
+
+**B. Against a literature-matched null, part of the advantage survives —
+except on the temporal label.** The fraction of held-out positives that
+the prior scores above 20 random negatives, before and after matching
+the negatives on the publication count (chance level = 5 %):
+
+| label | vs the unmatched null | vs the literature-matched null |
+|---|---|---|
+| intogen2024 | 20.7 % | 10.9 % |
+| ot_all | 31.0 % | 20.2 % |
+| ot_nolit | 27.1 % | 18.9 % |
+| **intogen_temporal_new** | 6.8 % | **4.7 % (chance)** |
+
+**On the three curated label systems a real part of the advantage
+survives** (ot_all: 20.2 % against a 5 % chance level, four times
+chance). **On the temporal label it does not**: the positives are
+scored above their literature-matched non-drivers at exactly the chance
+rate, so the prior's advantage there is a **study-visibility effect, not
+a topological one**.
+
+Three independent measurements now agree on this: the Control-7 matched
+null (F.8: the temporal margin collapses to +0.0022 against +0.0162),
+the low-FPR endpoint (H.1: the margin is 40–60 % smaller where the
+literature measures the ranking) and the DepMap validation (the top 30
+candidates carry no functional signal). This is the paper's most
+consequential limitation and it belongs in the abstract, not in a
+footnote: **the prior's contribution is a global-ranking contribution
+on the curated label systems, and it is largely a literature effect on
+newly discovered drivers.**
+
+The reader should also note what this does *not* say: the positive arms
+on the three curated labels still beat a degree-matched, literature-
+matched null by four times chance, so the prior is doing something that
+the degree baseline and the publication count do not.
+F.3 D-11 common-size cap control
+
+Each network's positive set is capped to N = min over the four labels of
+the positives inside that network's LCC, so every network is judged on
+the same number of positives: funmap 104, rna_coexp 89,
+string_phys700 116, intact 150, string_full700 145, reactome 63. All 24
+arms satisfy `N_in_split == N` exactly.
+
+At α = 0.5 (`results/tables/d11_table.tsv`), 22 of 24 arms are
+positive, from +0.0071 (intact × `intogen_temporal_new`) to +0.1819
+(string_phys700 × `ot_nolit`). The two negative arms are both Reactome:
+
+| cell | ΔAUROC |
+|---|---|
+| **reactome × intogen2024** | **−0.0110** ± 0.0434 |
+| **reactome × intogen_temporal_new** | **−0.0125** ± 0.0501 |
+
+Note what the cap does to the second column of Table 1: in the uncapped
+primary factorial, `reactome × intogen2024` is **+0.0429**; capping
+every network to Reactome's own minimum (63) flips that arm negative.
+Reactome's advantage on the broad IntOGen label is therefore partly a
+*coverage* advantage that disappears when the positive sets are
+equalised — while its temporal failure gets worse.
+### 3.10 The prior transfers to drivers we never labelled
+
+F.14 The NCG arbitration test: can the prior find drivers it was not seeded with?
+
+Boutros et al. (2014) insist that the gold standard dominates any
+ranking, so the evaluator should be blind to the algorithm. The NCG
+catalogue shares no curation with our four label sets, which makes it
+the arbitration set we do not control. The seeds here are still our own
+label's training-fold positives, so this is a **transfer** test: the
+arbitration positives are the NCG-known drivers (708) that are **not**
+in this label's positive set, and the background is the rest of the
+test fold.
+
+| network | label | arbitration positives per fold | ΔAUROC | ΔpAUC |
+|---|---|---|---|---|
+| funmap | intogen2024 | 33 | +0.0286 | -0.0042 |
+| funmap | ot_all | 64 | +0.0477 | -0.0159 |
+| funmap | ot_nolit | 73 | +0.0453 | -0.0158 |
+| funmap | intogen_temporal_new | 87 | +0.0207 | -0.0153 |
+| rna_coexp | intogen2024 | 26 | +0.0123 | -0.0018 |
+| rna_coexp | ot_all | 54 | +0.0093 | -0.0298 |
+| rna_coexp | ot_nolit | 61 | +0.0064 | -0.0252 |
+| rna_coexp | intogen_temporal_new | 72 | +0.0190 | -0.0177 |
+| string_phys700 | intogen2024 | 37 | +0.1269 | +0.0353 |
+| string_phys700 | ot_all | 76 | +0.0722 | +0.0119 |
+| string_phys700 | ot_nolit | 89 | +0.0590 | +0.0253 |
+| string_phys700 | intogen_temporal_new | 107 | +0.0763 | +0.0455 |
+| intact | intogen2024 | 46 | +0.0521 | +0.0199 |
+| intact | ot_all | 92 | +0.0374 | +0.0028 |
+| intact | ot_nolit | 105 | +0.0293 | +0.0069 |
+| intact | intogen_temporal_new | 121 | +0.0193 | +0.0152 |
+| string_full700 | intogen2024 | 47 | +0.1183 | +0.0451 |
+| string_full700 | ot_all | 91 | +0.0758 | +0.0252 |
+| string_full700 | ot_nolit | 106 | +0.0521 | +0.0352 |
+| string_full700 | intogen_temporal_new | 121 | +0.0679 | +0.0632 |
+| reactome | intogen2024 | 22 | +0.0470 | +0.0044 |
+| reactome | ot_all | 45 | +0.0344 | -0.0073 |
+| reactome | ot_nolit | 56 | +0.0361 | -0.0135 |
+| reactome | intogen_temporal_new | 74 | +0.0089 | -0.0346 |
+
+**The prior ranks drivers it was never seeded with above the degree
+baseline in 24/24 arms** (median +0.0413; the low-FPR endpoint agrees in
+only 13/24, and the split is systematic: the four protein networks
+(STRING physical, STRING full, IntAct, Reactome) are positive in every
+label, while the two non-protein networks (funmap, RNA co-expression)
+are negative in all four). This is the cleanest positive statement the
+study can make about transfer: it is not the label we seeded the walk
+with, and the prior still finds the drivers the label misses -- but the
+advantage in the very top of the ranking is a property of the
+interaction network, not of the prior alone.
+F.15 The advantage is not cancer-type specific
+
+The arbitration test of §F.14 can be run separately per cancer type:
+the arbitration positives are the NCG-known drivers of one cancer type
+that our label does not contain (426 of the 708 known drivers carry a
+type; 26 types have at least 25 drivers), and the background is the
+rest of the test fold. Twenty-six types x 24 arms = 413 tests.
+
+| cancer type | drivers | median ΔAUROC | range | arms positive |
+|---|---|---|---|---|
+| ampullary_adenocarcinoma | 16 | +0.0708 | +0.0085 .. +0.1894 | 11/11 |
+| colorectal_adenocarcinoma | 20 | +0.0568 | -0.0278 .. +0.1782 | 17/18 |
+| breast_cancer | 35 | +0.0546 | -0.0540 .. +0.1232 | 20/23 |
+| nasopharyngeal_carcinoma | 16 | +0.0538 | -0.0202 .. +0.1408 | 16/18 |
+| diffuse_large_B-cell_lymphoma | 21 | +0.0493 | -0.0441 .. +0.1507 | 16/18 |
+| chronic_myelomonocytic_leukemia | 16 | +0.0421 | -0.0420 .. +0.1479 | 14/16 |
+| triple_negative_breast_cancer | 28 | +0.0415 | -0.0213 .. +0.1103 | 14/16 |
+| lung_cancer_(all_histologies) | 24 | +0.0379 | -0.0362 .. +0.1064 | 10/12 |
+| bladder_cancer | 22 | +0.0366 | -0.0233 .. +0.1117 | 14/18 |
+| melanoma | 20 | +0.0328 | -0.0442 .. +0.1199 | 14/17 |
+| prostate_cancer | 20 | +0.0323 | -0.0072 .. +0.2160 | 16/17 |
+| squamous_head_and_neck_cancer | 16 | +0.0284 | -0.0507 .. +0.0904 | 9/13 |
+| pancreatic_cancer_(all_histologies) | 13 | +0.0276 | -0.0134 .. +0.1710 | 13/14 |
+| acute_lymphoblastic_leukemia | 24 | +0.0266 | -0.0594 .. +0.0834 | 14/18 |
+| cholangiocarcinoma | 14 | +0.0265 | -0.0913 .. +0.1767 | 12/13 |
+| lung_adenocarcinoma | 18 | +0.0236 | -0.0733 .. +0.1209 | 11/16 |
+| chronic_lymphocytic_leukemia | 16 | +0.0229 | -0.0202 .. +0.1177 | 13/17 |
+| anaplastic_thyroid_carcinoma | 11 | +0.0220 | -0.0302 .. +0.2505 | 9/15 |
+| acute_myeloid_leukemia | 17 | +0.0211 | -0.1747 .. +0.0981 | 12/16 |
+| endometrial_cancer | 20 | +0.0172 | -0.1013 .. +0.1021 | 13/16 |
+| pancreatic_ductal_adenocarcinoma | 14 | +0.0170 | -0.2580 .. +0.1552 | 14/18 |
+| hepatocellular_carcinoma | 14 | +0.0151 | -0.0335 .. +0.1052 | 13/18 |
+| glioblastoma | 14 | +0.0143 | -0.0188 .. +0.0851 | 8/10 |
+| pan-glioma | 17 | +0.0131 | -0.1250 .. +0.0934 | 11/15 |
+| T-cell_leukemia/lymphoma | 18 | +0.0101 | -0.0976 .. +0.0904 | 11/18 |
+| biliary_tract_cancer | 14 | +0.0097 | -0.0480 .. +0.1193 | 9/12 |
+
+**All 26 cancer types have a positive median margin** (median over the
+types +0.0271), and the per-type ranges are wide but centred well above
+zero. The advantage of the prior over the degree baseline therefore does
+**not** depend on the cancer type: it is a property of the prior, not
+of one tumour class. (The background is sub-sampled to 20,000 genes for
+tractability; re-computing one arm with 200,000 and with the full
+background gives the same +0.1269, so the sub-sampling is immaterial.)
+### 3.11 Our own negative set is not clean, and it matters
+
+F.13 The negative set is not clean, and it matters
+
+Bailey et al. (2018) removed 45 curated false positives from 127 true
+positives with an LDA filter; Repana et al. (2019) flag 201 possible
+false positives. Our negative set is "everything else in the universe",
+so every curated driver we happen not to label is treated as a
+*confident* negative. With the NCG catalogue in hand this becomes
+measurable.
+
+**How contaminated are the negatives?** Between **10 % and 22 %** of the
+held-out negatives are in the NCG catalogue, and **1.3 % to 9.5 %** are
+NCG-known high-confidence drivers. Reactome's arms are the worst
+(15–22 %), the dense protein networks the least (10 %).
+
+**Does it change the result?** Yes, and in both directions — so this is
+not a small correction:
+
+| network | label | ΔAUROC, standard background | ΔAUROC, NCG-cleaned background |
+|---|---|---|---|
+| intact | intogen2024 | +0.0651 | **+0.0304** |
+| funmap | intogen2024 | +0.1001 | **+0.0247** |
+| string_phys700 | intogen2024 | +0.1189 | **+0.0768** |
+| funmap | ot_all | +0.0853 | **+0.1030** |
+| string_phys700 | ot_nolit | +0.1711 | **+0.1979** |
+| reactome | intogen_temporal_new | −0.0125 | **+0.0073** |
+
+On the IntOGen label the margin roughly **halves**; on the Open Targets
+labels it **grows**, because removing curated drivers from the
+background removes false negatives that the degree baseline was getting
+right; and Reactome's temporal cell flips sign. Under the cleaned
+background the low-FPR advantage also disappears on the IntOGen label
+(several arms go negative in ΔpAUC).
+
+**The IntOGen label is a good proxy for an independent gold standard; the
+Open Targets labels are not.** 70–79 % of the NCG-known drivers are in
+`intogen2024` (52–59 % in the temporal label), against 27–37 % in
+`ot_nolit` — the Open Targets panels are much broader, which is also why
+they carry the largest false-positive contamination.
+
+The honest conclusion is uncomfortable and belongs in the abstract:
+**the benchmark's numbers depend on how the negative set is composed**,
+and the cleanest negative set (no curated driver left in it) roughly
+halves the advantage on the strictest label. The exploratory family
+carries the correction (Control 12); the pre-registered endpoint is
+unchanged.
+### 3.12 Which positives carry the margin?
+
+F.18 What the label quality does to the margin
+
+**The margin is recomputed with only one tier's positives counted as
+positives** (the other tiers' positives fall into the background). The
+seeds, and therefore the prior, do not change, so the comparison
+isolates the evaluation noise. The medians over the six networks:
+
+| label | high tier | mid tier | low tier |
+|---|---|---|---|
+| intogen2024 | +0.0892 | +0.0633 | +0.0653 |
+| intogen_temporal_new | +0.0743 | +0.0123 | +0.0232 |
+| ot_all | +0.1120 | +0.0908 | — |
+| ot_nolit | +0.1097 | +0.0775 | — |
+| ncg_known | +0.0666 | +0.0874 | +0.0650 |
+| clingen_label | +0.1042 | +0.1207 | — |
+
+For the four IntOGen- and Open-Target-derived labels the **high tier
+carries the larger margin** (IntOGen 2024: +0.0892 against +0.0633 and
++0.0653; the temporal label +0.0743 against +0.0123 and +0.0232;
+`ot_all` +0.1120 against +0.0908; `ot_nolit` +0.1097 against +0.0775).
+The NCG label is the exception and inverts the order (+0.0666 high,
++0.0874 mid, +0.0650 low), and that is not a contradiction: the NCG tier
+*is* a publication count, so its "high" tier is exactly the set of genes
+the degree baseline already ranks well, and the prior adds most where
+the catalogue's own evidence is thinnest. The two orderings are the same
+statement seen from two sides.
+
+**Label noise at the ClinGen rate costs almost nothing.** ClinGen's
+expert panels disagree on 17 % of multi-laboratory variants, and the
+literature review nominates that rate as the external anchor for label
+noise. Simulating exactly that rate — a random 17 % of the positives
+demoted to background in every fold — barely moves the margin:
+
+| network | n positives | clean | 17 % misassigned | change |
+|---|---|---|---|---|
+| funmap | 61 | +0.0735 | +0.0733 | -0.0002 |
+| intact | 83 | +0.1124 | +0.1134 | +0.0010 |
+| reactome | 61 | +0.1710 | +0.1736 | +0.0026 |
+| rna_coexp | 49 | +0.0665 | +0.0647 | -0.0018 |
+| string_full700 | 84 | +0.0974 | +0.0970 | -0.0005 |
+| string_phys700 | 80 | +0.1686 | +0.1685 | -0.0001 |
+
+The margin changes by between −0.0018 and +0.0026. A perfect scorer
+would lose 8.5 AUROC points under the same misassignment (the ceiling
+falls from 1 to 1 − f/2 = 0.915), so the prior's margin is **not** an
+artefact of the label noise that ClinGen's own curation process
+documents.
+
+**The wide intervals are a small-positive-set phenomenon, not a label
+quality phenomenon.** The width of the gene-cluster bootstrap interval
+correlates with the arm's positive-set size at Spearman ρ = −0.966
+(p = 2.0e-14, 24 arms) and with the share of high-tier positives at
+ρ = −0.475 (p = 0.019). The first term dominates: the cells whose
+interval is wide are the cells with few positives, which is what the
+variance decomposition already says (the within-cell noise is 40 % of
+the total variance). The second term says that, all else equal, a
+label whose positives are well-cured gives a tighter interval.
+
+Two caveats on the tier table itself: the small tiers are small (the
+temporal label's high tier is 11 genes, the ClinGen mid tier is 4), so
+their entries are noisy; and the ClinGen label is almost entirely
+Definitive or Strong (80 high, 4 mid, 0 low), so it cannot separate
+tiers at all.
+
+---
+### 3.13 A fifth label, and what it does to the variance decomposition
+
+F.16 A fifth label: the same picture, and one important exception
+
+The NCG arms land where the other labels land. On the primary
+convention (α = 0.5, 5 folds × 40 repeats):
+
+| network | ΔAUROC (NCG) | SD |
+|---|---|---|
+| funmap | +0.0771 | 0.0176 |
+| rna_coexp | +0.0426 | 0.0169 |
+| string_phys700 | +0.1352 | 0.0163 |
+| intact | +0.0673 | 0.0089 |
+| string_full700 | +0.1387 | 0.0133 |
+| reactome | +0.0647 | 0.0216 |
+
+All six are positive (+0.0426 to +0.1387) and the network order is the
+one the other labels produce (the protein networks above the
+co-expression networks). The NCG label's margins sit between
+`intogen2024` and `ot_all` on most networks, which is what its 65 %
+overlap with IntOGen predicts.
+
+**The exception is Reactome.** On the D-11 capped panel, where all five
+labels have the same number of positives inside the arm:
+
+| network | intogen2024 | ot_all | ot_nolit | temporal | **NCG** |
+|---|---|---|---|---|---|
+| funmap | +0.1268 | +0.0191 | +0.0885 | +0.0196 | **+0.1127** |
+| intact | +0.0681 | +0.0664 | +0.0973 | +0.0071 | **+0.0858** |
+| reactome | -0.0110 | +0.0627 | +0.1649 | -0.0125 | **+0.0893** |
+| rna_coexp | +0.0829 | +0.0403 | +0.0956 | +0.0127 | **+0.0720** |
+| string_full700 | +0.1020 | +0.0785 | +0.1388 | +0.0604 | **+0.1177** |
+| string_phys700 | +0.0955 | +0.0938 | +0.1819 | +0.0378 | **+0.1222** |
+
+Reactome is negative on `intogen2024` (−0.0110) and on the temporal
+label (−0.0125) — the two most recent catalogues — but **positive on
+NCG (+0.0893)**, the 2019 catalogue. The "Reactome collapses" pattern
+is therefore **label-specific, not network-specific**: Reactome handles
+the drivers that existed when it was curated, and fails on the ones
+that arrived afterwards. That is precisely the prediction the curator-lag
+hypothesis makes (§J.3), and it is the first test of that hypothesis
+that does not rely on the temporal split.
+F.17 What a fifth label does to the variance decomposition
+
+The plan's expectation was that adding a label would let the label main
+effect and the interaction take a larger share of the between-arm spread
+and the fold noise a larger share of the total. The same corrected
+decomposition on the 24-arm and the 30-arm grids:
+
+| variance source | % between-arm spread (24) | % between-arm spread (30) | change | % total (24) | % total (30) |
+|---|---|---|---|---|---|
+| network | 24.82 % | 26.95 % | +2.13 pp | 14.84 % | 15.80 % |
+| label | 34.78 % | 30.75 % | **−4.02 pp** | 20.80 % | 18.04 % |
+| network × label | 40.07 % | 41.95 % | +1.88 pp | 23.96 % | 24.60 % |
+| fold (within cell) | 0.34 % | 0.35 % | +0.02 pp | 40.39 % | 41.56 % |
+
+The label main effect **shrinks** (34.8 % → 30.8 % of the between-arm
+spread) and the interaction and the noise grow, which is the direction
+the plan expected. But NCG is 65 % identical to IntOGen, so this is the
+effect of adding a *redundant* label; a genuinely independent fifth
+label would be expected to shrink the label effect more. The honest
+statement is that **the label main effect is real but not dominant**:
+across five catalogues of quite different provenance, a quarter of the
+between-arm spread is the network and a third is the label, and the
+largest single piece is the interaction — which network you use depends
+on which catalogue you are trying to predict.
+### 3.14 Where the stability of the prior comes from
+
+I.1 What is stable, and what is not
+
+**The endpoint is stable.** The repeat-level SD of ΔAUROC is 0.0047
+(range 0.0017–0.0129) against effects of 0.007–0.171: the effect is
+2–30 times larger than the noise it is measured against.
+
+**A single gene is not.** The per-gene relative error of the score
+across the 40 re-partitions is 0.185 (range 0.100–0.263) — an 18 %
+error on a gene's score. In rank terms a median gene moves 2.7
+percentile points, i.e. **~270 places out of ~10,000**, between two
+partitions of the *same* universe. A re-partition changes the answer
+for a gene far more than it changes the answer for the panel.
+
+That asymmetry is the result: **the benchmark's numbers are
+reproducible; the individual genes it ranks are not.** (Figure 5.)
+I.2 What drives the instability — and what does not
+
+Two things predict a gene's rank instability, and one thing we expected
+to be the explanation turns out not to be.
+
+**The gene's own score noise.** The per-gene relative error of the score
+across the 40 re-partitions is itself the strongest predictor of the
+rank instability: Spearman(rank SD, score CV) = **+0.844** (median over
+the 24 arms, positive in 23 of 24 arms; +0.82 in 24/24 when measured on
+the shared engine). A gene whose score is intrinsically noisy has an
+intrinsically noisy rank.
+
+**The crowding of the score distribution — but only under one
+definition.** The number of genes lying within ±10 % of a gene's score
+correlates with the instability at **+0.478** (positive in 24 of 24
+arms). The same quantity defined with a *Scott-bandwidth* window — the
+data-driven choice — correlates at **-0.175** (negative in 23 of 24
+arms). Two defensible definitions of "crowding" therefore give
+**opposite signs**, which means crowding is not a mechanism in itself:
+it is a window-dependent reparameterisation of the first effect. We
+report both and draw no mechanism from either.
+
+**Degree's large coefficient was a suppression artefact.** Degree's *marginal* within-arm association with rank SD is **+0.038** — that is, nothing —
+while in the model it carries a coefficient of **-0.083** (CI -0.124 to -0.043);
+degree correlates 0.72 with the RWR score, and the score's own
+coefficient was absorbing it. The same model gives the gene's
+own score CV the largest coefficient (**+0.778**, marginal ρ
+**+0.844** in 24/24 arms). The formal
+attribution (within-arm OLS with arm fixed effects, 267,696 gene-arm
+rows, standardised predictors):
+
+| predictor | joint β on log(rank SD) | marginal within-arm ρ |
+|---|---|---|
+| **log gene score CV** | **+0.778** | **+0.844 (23/24 arms)** |
+| log local score density (±10 % band) | +0.672 | +0.478 (24/24) |
+| log score magnitude | +0.238 | +0.340 (24/24) |
+| log crowding (Scott bandwidth) | +0.031 (q = 0.56) | −0.175 (1/24 positive) |
+| log degree | −0.083 | +0.038 (≈0) |
+| k-core number | −0.024 (q = 0.025) | +0.044 |
+| clustering coefficient | +0.009 | +0.088 |
+| log betweenness | −0.027 | +0.074 |
+| log community size | −0.026 | +0.019 |
+| log PageRank | −0.001 (q = 0.95) | +0.023 |
+| distance to the training seeds | +0.007 | −0.125 (3/24) |
+
+**What causes it: the sampling noise of the seed mean.** The correlation
+above says *which genes* are unstable, not *why*. Truncating the training
+seed set answers the why: as the seed count grows from 15 to 304 (5 % →
+100 % of the available positives), the median per-gene rank SD falls
+monotonically from 0.134 to **0.028** — in 24 of 24 arms — with a
+fitted exponent of **−0.488** against the seed count, i.e. the textbook
+1/sqrt(n) law for the sampling error of a mean. Along the same axis
+ΔAUROC *rises* (median +0.039 → +0.081), so on this axis stability and
+discrimination improve together: there is no trade-off to exploit.
+
+That has an exact corollary. RWR is **linear in the seed weights**
+(`P = α (I − (1−α) Wᵀ)^−1 P₀`), so the bootstrap mean of `P₀` is `P₀`
+itself and **bagging over seed resamples is provably a no-op for an RWR
+prior**. The instability of a network prior is the sampling noise of a
+mean over seeds, and the only stabiliser is more distinct seeds — that
+is, a larger training set.
+
+**No network descriptor predicts the size of the contribution.** Every
+correlation with the mean ΔAUROC has q ≥ 0.70 (§I.3). Which network
+contributes a lot and which network gives a reproducible estimate are two
+different questions, and only the second one has a topological answer.
+I.3 Which networks are stable
+
+At the network level (eight networks, four labels, 40 repeats) the
+stable ones are again not the ones with the best topology:
+
+| descriptor | Spearman with the arm-level stability |
+|---|---|
+| mean label coverage | **−0.905 (q = 0.012)** |
+| fraction of nodes in the 2-core | **−0.905 (q = 0.012)** |
+| number of nodes | −0.857 (q = 0.026) |
+| density, clustering, modularity, assortativity, max k-core, path length | all non-significant |
+
+**No descriptor predicts the size of the contribution** (every
+correlation with the mean ΔAUROC has q ≥ 0.70). Which network
+contributes a lot and which network gives a reproducible estimate are
+two different questions, and only the second one has a topological
+answer (Figure 6).
+
+The label matters too, in the direction the variance decomposition
+already indicated: the temporal label is the least stable label in
+*every* network (arm-level SD 0.0065–0.0129 against 0.0017–0.0063 for
+the other three), because its positive set is small (152 genes). The
+intra-repeat ICC is negative in **24 of 24** arms (median −0.178),
+which is the independent confirmation of the repeat-level resampling
+unit chosen in the pre-registration amendment.
+I.4 The picture replicates on two independent systems
+
+* **ClinGen** (clinical validity of cancer variants, 84 positives) — a
+  curation criterion that shares nothing with IntOGen or Open Targets.
+  The network-level stability ordering is the same: intact is the most
+  stable (background rank SD 0.0152, score CV 0.100) and funmap /
+  rna_coexp the least (0.0304 / 0.0289).
+* **Transfer arms** (train on one label system, evaluate on another, 66
+  cells) reproduce the *extremes* of the ordering (the two most stable
+  networks in the primary panel are the most stable here too) but not
+  the full ranking (Spearman +0.37). Their ΔAUROC is much smaller
+  (string_phys700 +0.059 against +0.122), because the model is
+  evaluated on a label system it never saw.
+I.5 A model built from these findings: a consensus prior
+
+The benchmark's one negative cell is a **coverage** failure, not a
+noise artefact: Reactome's curated annotations lag behind the
+2020–2024 driver discoveries, and the failure survives three controls
+that equalise the positive set. A stale network cannot be repaired by
+a better learner — it can only be out-voted. So we built the obvious
+model: a **consensus prior** over the six networks on the shared
+universe (1,605 genes), the mean of the six networks' percentile
+ranks.
+
+| label | median single network | consensus | consensus without Reactome |
+|---|---|---|---|
+| intogen2024 | +0.0486 | **+0.1128** | +0.1068 |
+| ot_all | +0.0826 | **+0.1421** | +0.1211 |
+| ot_nolit | +0.0845 | **+0.1384** | +0.1193 |
+| **intogen_temporal_new** | **−0.0110** | **+0.0358** [0.0301, 0.0416] | **+0.0514** [0.0457, 0.0570] |
+
+On the temporal label the *median single network is negative* and the
+consensus is clearly positive; and **Reactome's inclusion costs the
+consensus 0.016** — a stale network does not merely fail on its own,
+it degrades the aggregate. That is the first quantitative statement of
+the price of curation lag at the level of an ensemble.
+
+The result is robust to the aggregation rule (mean of ranks, median of
+ranks and reciprocal rank fusion agree to within 0.019 on every label)
+and improves when the networks are weighted by their measured
+reliability (+0.0388 on the temporal label). (Figure 7.)
+
+**And the stability axis shows the cost.** The consensus is *less*
+stable per gene than any of its members (rank SD 0.0364–0.0528 against
+0.0210–0.0439): averaging six networks' ranks does not cancel their
+noise, it adds the disagreement between networks as variance — and the
+disagreement is also where the signal is. The consensus trades
+per-gene variance for accuracy, a trade-off that AUROC alone cannot
+see. It is a robustness device for the panel-level estimate, not a
+better gene ranker.
+I.6 Can the instability be removed? No — and that is the result
+
+> **Family: EXPLORATORY.** This section reports an analysis that changes the
+> learner's output. It is therefore **not** part of the confirmatory analysis,
+> it does not enter the H1 decision rule, and every number in it is a
+> property of the *exploratory* arm, not of the benchmark's primary endpoint.
+> It was pre-registered in `docs/stability_regularization_plan.md` (committed
+> before any result existed) and is reported in full in
+> `docs/stability_regularization.md`.
+
+#### I.6.1 The question and the pre-registered operator
+
+If a prior's ranking is unstable, can the instability be removed? We
+pre-registered a **stability-regularised scorer (SRS)**: shrink each gene's
+score toward the *confidence-weighted median of its score neighbourhood*,
+
+    s'_g = s_g + lambda_g * (m_g - s_g),
+
+where `N(g)` is the `k` genes with the smallest `|s_j - s_g|` and the weights
+`c_j = 1/(1 + CV_j^2)` come from gene `j`'s own score coefficient of variation,
+estimated **leave-one-repeat-out** so that no evaluated repeat contributes to
+its own weights. The objective was our own stability metric: the per-gene SD of
+the within-fold percentile rank across the 40 cross-validation repeats.
+Pre-registered predictions: (P1) the rank SD falls; (P2) ΔAUROC does not;
+(P3) a stability-versus-discrimination trade-off curve exists; (P4) the effect
+is specific — it must beat a matched-strength random-neighbourhood control;
+(P5) it is not a flattening artefact; (P6) it is crowding-specific; (P7) it
+survives an inductive (no test gene in the neighbourhood) variant.
+
+#### I.6.2 The result: the prior's ranking cannot be smoothed into stability
+
+The operator **does not change the ranking**. Across all 24 arms and all eight
+shrinkage strengths the median per-gene rank SD moved by at most
+**5.3 x 10^-5** (baseline 0.019-0.044 percentile units) and ΔAUROC by at most
+**4.1 x 10^-5**. The score dispersion, in contrast, fell by up to 40 %: the
+operator compresses the scores and leaves every rank statistic untouched.
+
+The reason is structural. The `k` nearest genes *in score space* have nearly
+identical scores, so their weighted median **is** the gene's own score. Worse,
+for two genes in the same crowded block the shrinkage rescales the *signal* and
+the *noise* in their gap by the same factor `(1 - lambda)`, so the probability
+that the pair swaps order is unchanged: shrinking toward a neighbourhood cannot
+separate signal from noise in a gap.
+
+Both matched controls point the same way. **C1** (random neighbourhood of the
+same size) raises the median rank SD from 0.028 to 0.109 at λ = 0.4, 0.168 at
+λ = 0.7 and 0.287 at λ = 1, and drives ΔAUROC from +0.081 to −0.108. **C2**
+(shrinkage toward the fold's global median) is flat until λ = 1, where every
+score collapses onto one value, the D-07 symbol tie-break takes over and the
+rank SD jumps to 0.111 while ΔAUROC falls to −0.147. **C3** (a monotone
+flattening) changes the AUROC by at most 3.0 x 10^-5, confirming that rank
+statistics are invariant to monotone score transforms — so there is no
+"flattening" story to tell, because there is no ranking change to explain.
+
+**The unsmoothed prior is the Pareto point of the stability/discrimination
+plane.** The trade-off curve the exercise set out to draw does not exist in the
+smoothing direction: every operator that moves the ranking moves it to worse
+stability *and* worse discrimination.
+
+#### I.6.3 What drives the instability, and what buys it
+
+(This is the mechanism section of §I.2; it is repeated here because it is the conclusion of the exercise.)
+
+
+The pre-registered mechanism — crowding — is **not** supported in its
+score-space form. The per-arm Spearman correlation between score-space crowding
+and the per-gene rank SD has median **−0.10** (negative in 21/24 arms).
+Rank-space crowding (±1 % of ranks) is weakly and consistently positive
+(**+0.23**, positive in 24/24 arms). What dominates is the gene's **own score
+noise**: the correlation with the score coefficient of variation is **+0.82**
+(positive in 24/24 arms).
+
+That points at the seed set, and truncating the training seed set closes the
+argument. As the seed set grows from 15 to 304 seeds (5 % → 100 % of the
+available positives), the median per-gene rank SD falls from 0.134 to **0.028**
+— monotonically in **24/24 arms** — with a fitted exponent of
+**−0.488** (median; IQR −0.51 to −0.46) against the seed count, i.e. the
+textbook 1/sqrt(n) law for the sampling error of a mean. Along the same axis
+ΔAUROC *rises* (monotonically in 20/24 arms, median +0.039 → +0.081), so even
+here stability and discrimination improve together.
+
+This has an exact corollary. RWR is linear in the seed weights,
+`P = alpha (I - (1-alpha) W^T)^-1 P0`; the bootstrap mean of `P0` is `P0`, so
+**bagging over seed resamples is provably a no-op for an RWR prior**. The
+instability of a network prior is the sampling noise of a mean over seeds, and
+the only stabiliser is more distinct seeds — that is, a larger training set.
+
+#### I.6.4 Consequences for the benchmark
+
+1. Do not smooth the prior: there is no stability to buy and discrimination to
+   pay.
+2. Report the instability instead of hiding it. The per-gene rank SD (0.019 –
+   0.044 percentile units across the 24 arms) is a cheap, reproducible property
+   of a prior and belongs in the benchmark's output.
+3. The seed count is a design parameter, not a nuisance: the benchmark's ΔAUROC
+   and its ranking stability are both functions of the training-set size, and
+   the CV's training fraction (5 folds ⇒ 80 % of the positives) is the lever.
+4. The claim "crowding causes rank instability" should not be repeated in its
+   score-space form.
+
+**Artefacts:** `results/tables/stability_per_gene.tsv`,
+`results/tables/stability_by_arm.tsv`,
+`results/tables/stability_crowding_attribution.tsv`,
+`results/tables/stability_regularization_grid.tsv`,
+`results/tables/stability_control_comparison.tsv`,
+`results/tables/stability_selected_scorer.tsv`,
+`results/tables/stability_seed_size_scaling.tsv`,
+`results/tables/stability_tradeoff_curve.tsv`,
+`results/tables/stability_prediction_scorecard.tsv`,
+`figures/figure8_stability_tradeoff.png`,
+`docs/stability_regularization.md`.
+
+---
+I.7 What this section does and does not establish
+
+* It establishes that **the benchmark's numbers are reproducible while
+  its gene-level rankings are not**, and that the reason is the
+  sampling noise of the seed mean (a 1/sqrt(n) law), not the shape of
+  the network: the same 1/sqrt(n) behaviour appears when the seed set
+  is truncated, and RWR's linearity in the seed weights makes
+  bagging the prior a provable no-op.
+* It establishes that **there is no stability to buy**: the
+  pre-registered shrinkage operator is an identity on the ranking, and
+  every operator that does move the ranking is worse on both axes
+  (§I.6).
+* It establishes that **the effect size is not predictable from
+  topology**, which is a caution for anyone who reads a single
+  network's performance as a property of that network.
+* It does **not** establish a causal role for crowding (the two
+  definitions disagree in sign), and it does **not** establish that the
+  consensus prior is the best model — it is the one model that follows
+  from our own findings, and its per-gene stability is worse.
+
+---
+
 ## 4. Discussion
 
 ### 4.1 What the benchmark establishes
@@ -681,6 +1400,9 @@ move. Benchmark suites that use ordinary stratified k-fold on
 gene-level labels should expect their network-based methods to look
 better than they are.
 
+
+The two additions to the results above change what this study can claim. **First**, the negative set is not clean: 10-22 % of the held-out negatives are curated driver genes we do not label, and removing them halves the margin on the strictest label (0.065 -> 0.030) while raising it on the Open Targets labels (0.085 -> 0.103). **Second**, a large part of the remaining margin tracks study visibility: under a bait-matched null the temporal label's advantage collapses to chance (6.8 % -> 4.7 %, chance 5 %). Both are properties of the benchmark rather than of the method, and both mean the absolute numbers in this literature should be read with care. The validation plan that follows from them is in the next section.
+
 ### 4.4 Limitations
 
 1. **H2 is untested** (structural; §3.8).
@@ -708,6 +1430,11 @@ better than they are.
    that none of our four labels has been allowed to see.
 
 ---
+
+
+### 4.5 What would change the conclusion
+
+Four experiments, in order of how much they would move the paper. (i) **Re-derive the background** from NCG and ClinGen with explicit exclusion and re-run the factorial: this is the cheapest and the most likely to change the numbers. (ii) **A blind expert-panel challenge** on a held-out set of candidates, the way Boutros et al. recommend: our evaluation is still self-referential, and a hidden answer key is the only cure. (iii) **A seed-perturbation experiment**: delete 10 % and 30 % of the seed drivers and measure how the prediction changes, which tests the seed-count law directly and separates "topology" from "seed count". (iv) **A second fixed learner** (closeness centrality) under the same locked protocol, because our conclusion is currently about one learner and the literature contains a degree-filtered local method that beats RWR on a full list.
 
 ## 5. Conclusion
 
