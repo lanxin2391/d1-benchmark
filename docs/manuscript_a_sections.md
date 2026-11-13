@@ -1499,20 +1499,20 @@ intrinsically noisy rank.
 
 **The crowding of the score distribution — but only under one
 definition.** The number of genes lying within ±10 % of a gene's score
-correlates with the instability at **+0.468** (positive in 24 of 24
+correlates with the instability at **+0.478** (positive in 24 of 24
 arms). The same quantity defined with a *Scott-bandwidth* window — the
-data-driven choice — correlates at **−0.246** (negative in 24 of 24
+data-driven choice — correlates at **-0.175** (negative in 23 of 24
 arms). Two defensible definitions of "crowding" therefore give
 **opposite signs**, which means crowding is not a mechanism in itself:
 it is a window-dependent reparameterisation of the first effect. We
 report both and draw no mechanism from either.
 
-**Degree's large coefficient was a suppression artefact.** In a model
-without the gene's own noise, degree carries a coefficient of −1.00 on
-log(rank SD) while its *marginal* association is +0.04 (i.e. nothing):
+**Degree's large coefficient was a suppression artefact.** Degree's *marginal* within-arm association with rank SD is **+0.038** — that is, nothing —
+while in the model it carries a coefficient of **-0.083** (CI -0.124 to -0.043);
 degree correlates 0.72 with the RWR score, and the score's own
-coefficient was absorbing it. With the gene's own score noise in the
-model, degree's coefficient falls to **−0.083**. The formal
+coefficient was absorbing it. The same model gives the gene's
+own score CV the largest coefficient (**+0.778**, marginal ρ
+**+0.844** in 24/24 arms). The formal
 attribution (within-arm OLS with arm fixed effects, 267,696 gene-arm
 rows, standardised predictors):
 

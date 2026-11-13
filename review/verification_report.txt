@@ -91,6 +91,32 @@ states something the tables do not support.
          the decision log must carry the released D-11 N values
   [PASS] dec.d11.old              decisions.md
          the superseded D-11 N values must be marked superseded
+  [PASS] stability.sd             manuscript_a_sections.md
+         §I.1 must give the arm-level SD of the margin
+  [PASS] stability.cv             manuscript_a_sections.md
+         §I.1 must give the gene-level relative error
+  [PASS] stability.rank           manuscript_a_sections.md
+         §I.1 must give the rank movement
+  [PASS] g3.temporal              manuscript_a_sections.md
+         §F.12 must state that the temporal label falls to chance
+  [PASS] g7.arms                  manuscript_a_sections.md
+         §F.14 must state the arbitration result
+  [PASS] g7.lowfpr                manuscript_a_sections.md
+         §F.14 must disclose the low-FPR caveat
+  [PASS] g8.cleaned               manuscript_a_sections.md
+         §F.13 must give the IntOGen margin before and after cleaning
+  [PASS] g8.reactome              manuscript_a_sections.md
+         §F.16 must give the Reactome-on-NCG margin
+  [PASS] gr9.types                manuscript_a_sections.md
+         §F.15 must state the cancer-type result
+  [PASS] c6.label                 manuscript_a_sections.md
+         §F.17 must give the 24-arm label share
+  [PASS] c6.label30               manuscript_a_sections.md
+         §F.17 must give the 30-arm label share
+  [PASS] c7.tiers                 manuscript_a_sections.md
+         §F.18 must give the tier-restricted margins
+  [PASS] c7.anchor                manuscript_a_sections.md
+         §F.18 must give the ClinGen noise-anchor range
 
 ------------------------------------------------------------------------
 2. FORBIDDEN STRINGS -- the manuscript must NOT contain these
@@ -130,7 +156,35 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] stability repeat-level SD      manuscript=+0.0047  table=+0.0047  tol=0.0006
+  [PASS] stability gene-level error     manuscript=+0.1850  table=+0.1848  tol=0.0006
+  [PASS] stability rank movement        manuscript=+270.0000  table=+270.0000  tol=5.0
+  [PASS] g3 temporal unmatched          manuscript=+6.8000  table=+6.8389  tol=0.06
+  [PASS] g3 temporal matched            manuscript=+4.7000  table=+4.7056  tol=0.06
+  [PASS] g7 arms positive               manuscript=+24.0000  table=+24.0000  tol=0.5
+  [PASS] g7 median dAUROC               manuscript=+0.0413  table=+0.0413  tol=0.0006
+  [PASS] g7 low-FPR arms                manuscript=+13.0000  table=+13.0000  tol=0.5
+  [PASS] g8 intact intogen2024 standard manuscript=+0.0651  table=+0.0651  tol=0.0006
+  [PASS] g8 intact intogen2024 cleaned  manuscript=+0.0304  table=+0.0304  tol=0.0006
+  [PASS] g8 funmap ot_all standard      manuscript=+0.0853  table=+0.0853  tol=0.0006
+  [PASS] g8 funmap ot_all cleaned       manuscript=+0.1030  table=+0.1030  tol=0.0006
+  [PASS] g8 reactome temporal standard  manuscript=-0.0125  table=-0.0125  tol=0.0006
+  [PASS] g8 reactome temporal cleaned   manuscript=+0.0073  table=+0.0073  tol=0.0006
+  [PASS] gr9 types positive             manuscript=+26.0000  table=+26.0000  tol=0.5
+  [PASS] gr9 median                     manuscript=+0.0271  table=+0.0271  tol=0.0006
+  [PASS] c6 label share 24              manuscript=+34.7800  table=+34.7780  tol=0.006
+  [PASS] c6 label share 30              manuscript=+30.7500  table=+30.7546  tol=0.006
+  [PASS] c6 interaction share 30        manuscript=+41.9500  table=+41.9456  tol=0.006
+  [PASS] c7 intogen2024 high tier       manuscript=+0.0892  table=+0.0892  tol=0.0006
+  [PASS] c7 temporal high tier          manuscript=+0.0743  table=+0.0743  tol=0.0006
+  [PASS] c7 anchor min                  manuscript=-0.0018  table=-0.0018  tol=0.0006
+  [PASS] c7 anchor max                  manuscript=+0.0026  table=+0.0026  tol=0.0006
+  [PASS] attribution degree joint beta  manuscript=-0.0830  table=-0.0834  tol=0.002
+  [PASS] attribution degree marginal rho manuscript=+0.0380  table=+0.0380  tol=0.002
+  [PASS] attribution score CV joint beta manuscript=+0.7780  table=+0.7782  tol=0.002
+  [PASS] attribution band marginal rho  manuscript=+0.4780  table=+0.4782  tol=0.002
+  [PASS] attribution scott marginal rho manuscript=-0.1750  table=-0.1749  tol=0.002
 
 ========================================================================
-RESULT: 63 PASS / 0 FAIL
+RESULT: 104 PASS / 0 FAIL
 ========================================================================

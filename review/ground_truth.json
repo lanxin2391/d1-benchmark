@@ -1692,5 +1692,467 @@
   "value": 7,
   "source": "data/processed/labels/*.tsv",
   "note": ""
+ },
+ {
+  "quantity": "stability",
+  "scope": "repeat-level SD of dAUROC (median over arms)",
+  "value": 0.004698,
+  "source": "results/tables/stability_by_arm.tsv",
+  "note": "the endpoint is stable"
+ },
+ {
+  "quantity": "stability",
+  "scope": "gene-level relative error (median over arms)",
+  "value": 0.1848,
+  "source": "results/tables/stability_by_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability",
+  "scope": "gene-level relative error (min over arms)",
+  "value": 0.1001,
+  "source": "results/tables/stability_by_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability",
+  "scope": "gene-level relative error (max over arms)",
+  "value": 0.2634,
+  "source": "results/tables/stability_by_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability",
+  "scope": "median gene's rank movement (places)",
+  "value": 270,
+  "source": "results/tables/stability_by_arm.tsv",
+  "note": "a median gene moves this many places between two re-partitions of the same universe"
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log score CV, marginal rho (rank SD)",
+  "value": 0.8436,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log score CV, joint beta (rank SD)",
+  "value": 0.7782,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log score CV, arms positive (rank SD)",
+  "value": 24,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "the +/- 10 % band, marginal rho (rank SD)",
+  "value": 0.4782,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "the +/- 10 % band, joint beta (rank SD)",
+  "value": 0.6715,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "the +/- 10 % band, arms positive (rank SD)",
+  "value": 24,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "the Scott bandwidth, marginal rho (rank SD)",
+  "value": -0.1749,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "the Scott bandwidth, joint beta (rank SD)",
+  "value": 0.0313,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "the Scott bandwidth, arms positive (rank SD)",
+  "value": 1,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log degree, marginal rho (rank SD)",
+  "value": 0.038,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log degree, joint beta (rank SD)",
+  "value": -0.0834,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log degree, arms positive (rank SD)",
+  "value": 16,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log degree, marginal rho (rank SD)",
+  "value": 0.038,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log degree, joint beta (rank SD)",
+  "value": -0.0834,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": "after the gene's own score CV enters the model"
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log score CV, joint beta (rank SD)",
+  "value": 0.7782,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "stability_attribution",
+  "scope": "log score CV, marginal rho (score CV)",
+  "value": 1.0,
+  "source": "results/tables/stability_attribution.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "network_stability",
+  "scope": "mean label coverage, Spearman rho",
+  "value": -0.9048,
+  "source": "results/tables/network_stability_vs_topology.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "network_stability",
+  "scope": "mean label coverage, q (BH)",
+  "value": 0.01205,
+  "source": "results/tables/network_stability_vs_topology.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "bait_null",
+  "scope": "median share above the null, unmatched (%)",
+  "value": 17.6339,
+  "source": "results/tables/g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "bait_null",
+  "scope": "median share above the null, matched (%)",
+  "value": 11.5907,
+  "source": "results/tables/g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "bait_null",
+  "scope": "temporal label, unmatched (%)",
+  "value": 6.8389,
+  "source": "results/tables/g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "bait_null",
+  "scope": "temporal label, matched (%)",
+  "value": 4.7056,
+  "source": "results/tables/g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "bait_null",
+  "scope": "other labels, unmatched (%)",
+  "value": 24.8137,
+  "source": "results/tables/g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "bait_null",
+  "scope": "other labels, matched (%)",
+  "value": 13.7086,
+  "source": "results/tables/g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "arbitration",
+  "scope": "arms with a positive dAUROC",
+  "value": 24,
+  "source": "results/tables/g7_ncg_arbitration.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "arbitration",
+  "scope": "median dAUROC",
+  "value": 0.0413,
+  "source": "results/tables/g7_ncg_arbitration.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "arbitration",
+  "scope": "arms with a positive low-FPR dAUC",
+  "value": 13,
+  "source": "results/tables/g7_ncg_arbitration.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "min share of negatives that are NCG genes (%)",
+  "value": 9.575,
+  "source": "results/tables/g8_negative_contamination.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "max share of negatives that are NCG genes (%)",
+  "value": 22.0823,
+  "source": "results/tables/g8_negative_contamination.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "max share that are NCG-known (%)",
+  "value": 9.5116,
+  "source": "results/tables/g8_negative_contamination.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "intogen2024 intact, standard",
+  "value": 0.0651,
+  "source": "results/tables/g8_cleaned_background.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "intogen2024 intact, cleaned",
+  "value": 0.0304,
+  "source": "results/tables/g8_cleaned_background.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "ot_all funmap, standard",
+  "value": 0.0853,
+  "source": "results/tables/g8_cleaned_background.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "ot_all funmap, cleaned",
+  "value": 0.103,
+  "source": "results/tables/g8_cleaned_background.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "reactome temporal, standard",
+  "value": -0.0125,
+  "source": "results/tables/g8_cleaned_background.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "negative_set",
+  "scope": "reactome temporal, cleaned",
+  "value": 0.0073,
+  "source": "results/tables/g8_cleaned_background.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "cancer_types",
+  "scope": "types with a positive median margin",
+  "value": 26,
+  "source": "results/tables/gr9_cancer_type_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "cancer_types",
+  "scope": "median of the per-type medians",
+  "value": 0.0271,
+  "source": "results/tables/gr9_cancer_type_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "ncg_circularity",
+  "scope": "Jaccard with intogen2024",
+  "value": 0.522,
+  "source": "results/tables/c2_label_jaccard_matrix.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "ncg_circularity",
+  "scope": "intact mean degree percentile, ncg",
+  "value": 70.2409,
+  "source": "results/tables/c2_ncg_circularity.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "ncg_circularity",
+  "scope": "intact mean degree percentile, intogen2024",
+  "value": 70.1645,
+  "source": "results/tables/c2_ncg_circularity.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance30",
+  "scope": "network share of the between-arm spread (%)",
+  "value": 26.9455,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance24",
+  "scope": "network share of the between-arm spread (%)",
+  "value": 24.8192,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance30",
+  "scope": "label share of the between-arm spread (%)",
+  "value": 30.7546,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance24",
+  "scope": "label share of the between-arm spread (%)",
+  "value": 34.778,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance30",
+  "scope": "network x label share of the between-arm spread (%)",
+  "value": 41.9456,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance24",
+  "scope": "network x label share of the between-arm spread (%)",
+  "value": 40.0651,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance30",
+  "scope": "fold share of the between-arm spread (%)",
+  "value": 0.3543,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "variance24",
+  "scope": "fold share of the between-arm spread (%)",
+  "value": 0.3377,
+  "source": "results/tables/stats_variance_decomp_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_quality",
+  "scope": "intogen2024, high tier (median)",
+  "value": 0.0892,
+  "source": "results/tables/label_tier_delta_auroc.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_quality",
+  "scope": "intogen2024, mid tier (median)",
+  "value": 0.0633,
+  "source": "results/tables/label_tier_delta_auroc.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_quality",
+  "scope": "intogen2024, low tier (median)",
+  "value": 0.0653,
+  "source": "results/tables/label_tier_delta_auroc.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_quality",
+  "scope": "intogen_temporal_new, high tier (median)",
+  "value": 0.0743,
+  "source": "results/tables/label_tier_delta_auroc.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_quality",
+  "scope": "intogen_temporal_new, mid tier (median)",
+  "value": 0.0123,
+  "source": "results/tables/label_tier_delta_auroc.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_quality",
+  "scope": "intogen_temporal_new, low tier (median)",
+  "value": 0.0232,
+  "source": "results/tables/label_tier_delta_auroc.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "noise_anchor",
+  "scope": "min change under 17 % misassignment",
+  "value": -0.0018,
+  "source": "results/tables/clingen_noise_anchor.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "noise_anchor",
+  "scope": "max change under 17 % misassignment",
+  "value": 0.0026,
+  "source": "results/tables/clingen_noise_anchor.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap",
+  "scope": "K=30 median share of cell lines enriched (%)",
+  "value": 5.827,
+  "source": "results/tables/depmap_validation.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap",
+  "scope": "K=30 median p-value",
+  "value": 0.5228,
+  "source": "results/tables/depmap_validation.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap",
+  "scope": "K=100 median share of cell lines enriched (%)",
+  "value": 47.6436,
+  "source": "results/tables/depmap_validation.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap",
+  "scope": "K=100 median p-value",
+  "value": 0.058,
+  "source": "results/tables/depmap_validation.tsv",
+  "note": ""
  }
 ]

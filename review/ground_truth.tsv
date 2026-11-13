@@ -241,3 +241,69 @@ label_overlap	clingen_label x intogen2024	49	data/processed/labels/*.tsv
 label_overlap	clingen_label x ot_all	83	data/processed/labels/*.tsv	
 label_overlap	clingen_label x ot_nolit	66	data/processed/labels/*.tsv	
 label_overlap	clingen_label x intogen_temporal_new	7	data/processed/labels/*.tsv	
+stability	repeat-level SD of dAUROC (median over arms)	0.004698	results/tables/stability_by_arm.tsv	the endpoint is stable
+stability	gene-level relative error (median over arms)	0.1848	results/tables/stability_by_arm.tsv	
+stability	gene-level relative error (min over arms)	0.1001	results/tables/stability_by_arm.tsv	
+stability	gene-level relative error (max over arms)	0.2634	results/tables/stability_by_arm.tsv	
+stability	median gene's rank movement (places)	270	results/tables/stability_by_arm.tsv	a median gene moves this many places between two re-partitions of the same universe
+stability_attribution	log score CV, marginal rho (rank SD)	0.8436	results/tables/stability_attribution.tsv	
+stability_attribution	log score CV, joint beta (rank SD)	0.7782	results/tables/stability_attribution.tsv	
+stability_attribution	log score CV, arms positive (rank SD)	24	results/tables/stability_attribution.tsv	
+stability_attribution	the +/- 10 % band, marginal rho (rank SD)	0.4782	results/tables/stability_attribution.tsv	
+stability_attribution	the +/- 10 % band, joint beta (rank SD)	0.6715	results/tables/stability_attribution.tsv	
+stability_attribution	the +/- 10 % band, arms positive (rank SD)	24	results/tables/stability_attribution.tsv	
+stability_attribution	the Scott bandwidth, marginal rho (rank SD)	-0.1749	results/tables/stability_attribution.tsv	
+stability_attribution	the Scott bandwidth, joint beta (rank SD)	0.0313	results/tables/stability_attribution.tsv	
+stability_attribution	the Scott bandwidth, arms positive (rank SD)	1	results/tables/stability_attribution.tsv	
+stability_attribution	log degree, marginal rho (rank SD)	0.038	results/tables/stability_attribution.tsv	
+stability_attribution	log degree, joint beta (rank SD)	-0.0834	results/tables/stability_attribution.tsv	
+stability_attribution	log degree, arms positive (rank SD)	16	results/tables/stability_attribution.tsv	
+stability_attribution	log degree, marginal rho (rank SD)	0.038	results/tables/stability_attribution.tsv	
+stability_attribution	log degree, joint beta (rank SD)	-0.0834	results/tables/stability_attribution.tsv	after the gene's own score CV enters the model
+stability_attribution	log score CV, joint beta (rank SD)	0.7782	results/tables/stability_attribution.tsv	
+stability_attribution	log score CV, marginal rho (score CV)	1.0	results/tables/stability_attribution.tsv	
+network_stability	mean label coverage, Spearman rho	-0.9048	results/tables/network_stability_vs_topology.tsv	
+network_stability	mean label coverage, q (BH)	0.01205	results/tables/network_stability_vs_topology.tsv	
+bait_null	median share above the null, unmatched (%)	17.6339	results/tables/g3_bait_matched_null.tsv	
+bait_null	median share above the null, matched (%)	11.5907	results/tables/g3_bait_matched_null.tsv	
+bait_null	temporal label, unmatched (%)	6.8389	results/tables/g3_bait_matched_null.tsv	
+bait_null	temporal label, matched (%)	4.7056	results/tables/g3_bait_matched_null.tsv	
+bait_null	other labels, unmatched (%)	24.8137	results/tables/g3_bait_matched_null.tsv	
+bait_null	other labels, matched (%)	13.7086	results/tables/g3_bait_matched_null.tsv	
+arbitration	arms with a positive dAUROC	24	results/tables/g7_ncg_arbitration.tsv	
+arbitration	median dAUROC	0.0413	results/tables/g7_ncg_arbitration.tsv	
+arbitration	arms with a positive low-FPR dAUC	13	results/tables/g7_ncg_arbitration.tsv	
+negative_set	min share of negatives that are NCG genes (%)	9.575	results/tables/g8_negative_contamination.tsv	
+negative_set	max share of negatives that are NCG genes (%)	22.0823	results/tables/g8_negative_contamination.tsv	
+negative_set	max share that are NCG-known (%)	9.5116	results/tables/g8_negative_contamination.tsv	
+negative_set	intogen2024 intact, standard	0.0651	results/tables/g8_cleaned_background.tsv	
+negative_set	intogen2024 intact, cleaned	0.0304	results/tables/g8_cleaned_background.tsv	
+negative_set	ot_all funmap, standard	0.0853	results/tables/g8_cleaned_background.tsv	
+negative_set	ot_all funmap, cleaned	0.103	results/tables/g8_cleaned_background.tsv	
+negative_set	reactome temporal, standard	-0.0125	results/tables/g8_cleaned_background.tsv	
+negative_set	reactome temporal, cleaned	0.0073	results/tables/g8_cleaned_background.tsv	
+cancer_types	types with a positive median margin	26	results/tables/gr9_cancer_type_summary.tsv	
+cancer_types	median of the per-type medians	0.0271	results/tables/gr9_cancer_type_summary.tsv	
+ncg_circularity	Jaccard with intogen2024	0.522	results/tables/c2_label_jaccard_matrix.tsv	
+ncg_circularity	intact mean degree percentile, ncg	70.2409	results/tables/c2_ncg_circularity.tsv	
+ncg_circularity	intact mean degree percentile, intogen2024	70.1645	results/tables/c2_ncg_circularity.tsv	
+variance30	network share of the between-arm spread (%)	26.9455	results/tables/stats_variance_decomp_comparison.tsv	
+variance24	network share of the between-arm spread (%)	24.8192	results/tables/stats_variance_decomp_comparison.tsv	
+variance30	label share of the between-arm spread (%)	30.7546	results/tables/stats_variance_decomp_comparison.tsv	
+variance24	label share of the between-arm spread (%)	34.778	results/tables/stats_variance_decomp_comparison.tsv	
+variance30	network x label share of the between-arm spread (%)	41.9456	results/tables/stats_variance_decomp_comparison.tsv	
+variance24	network x label share of the between-arm spread (%)	40.0651	results/tables/stats_variance_decomp_comparison.tsv	
+variance30	fold share of the between-arm spread (%)	0.3543	results/tables/stats_variance_decomp_comparison.tsv	
+variance24	fold share of the between-arm spread (%)	0.3377	results/tables/stats_variance_decomp_comparison.tsv	
+label_quality	intogen2024, high tier (median)	0.0892	results/tables/label_tier_delta_auroc.tsv	
+label_quality	intogen2024, mid tier (median)	0.0633	results/tables/label_tier_delta_auroc.tsv	
+label_quality	intogen2024, low tier (median)	0.0653	results/tables/label_tier_delta_auroc.tsv	
+label_quality	intogen_temporal_new, high tier (median)	0.0743	results/tables/label_tier_delta_auroc.tsv	
+label_quality	intogen_temporal_new, mid tier (median)	0.0123	results/tables/label_tier_delta_auroc.tsv	
+label_quality	intogen_temporal_new, low tier (median)	0.0232	results/tables/label_tier_delta_auroc.tsv	
+noise_anchor	min change under 17 % misassignment	-0.0018	results/tables/clingen_noise_anchor.tsv	
+noise_anchor	max change under 17 % misassignment	0.0026	results/tables/clingen_noise_anchor.tsv	
+depmap	K=30 median share of cell lines enriched (%)	5.827	results/tables/depmap_validation.tsv	
+depmap	K=30 median p-value	0.5228	results/tables/depmap_validation.tsv	
+depmap	K=100 median share of cell lines enriched (%)	47.6436	results/tables/depmap_validation.tsv	
+depmap	K=100 median p-value	0.058	results/tables/depmap_validation.tsv	

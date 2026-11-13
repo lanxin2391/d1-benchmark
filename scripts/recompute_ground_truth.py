@@ -413,6 +413,209 @@ def labels() -> None:
                    "data/processed/labels/*.tsv")
 
 
+# ------------------------------------------------- Phase S and the G/C series
+def recent_series() -> None:
+    """The quantities added after the first release: the stability
+    analysis (Phase S) and the G/C series (G3, G7, G8, GR-9, C2, C5,
+    C6, C7) plus the DepMap external validation.
+
+    Every value is recomputed from a released table; nothing is a
+    literal, so a table change changes the verdict of the manuscript
+    check with it.
+    """
+    # ---- Phase S: the stability analysis -------------------------
+    # the primary (alpha = 0.5) stability lives in stability_by_arm.tsv;
+    # stability_by_arm_sens.tsv holds only the alpha 0.3 / 0.7 arms
+    arm = t("stability_by_arm.tsv")
+    record("stability", "repeat-level SD of dAUROC (median over arms)",
+           r6(arm.arm_delta_sd_repeat.median()),
+           "results/tables/stability_by_arm.tsv",
+           "the endpoint is stable")
+    record("stability", "gene-level relative error (median over arms)",
+           r4(arm.bg_score_cv_median.median()),
+           "results/tables/stability_by_arm.tsv")
+    record("stability", "gene-level relative error (min over arms)",
+           r4(arm.bg_score_cv_median.min()),
+           "results/tables/stability_by_arm.tsv")
+    record("stability", "gene-level relative error (max over arms)",
+           r4(arm.bg_score_cv_median.max()),
+           "results/tables/stability_by_arm.tsv")
+    record("stability", "median gene's rank movement (places)",
+           int(round((arm.bg_rank_sd_median * arm.n_genes).median() / 10.0)
+               * 10),
+           "results/tables/stability_by_arm.tsv",
+           "a median gene moves this many places between two "
+           "re-partitions of the same universe")
+
+    att = t("stability_attribution.tsv")
+    rank_sd = att[att.outcome == "rank SD"]
+    deg = rank_sd[rank_sd.feature == "log_degree"]
+    for feat, tag in (("log_score_cv", "log score CV"),
+                      ("log_local_score_density", "the +/- 10 % band"),
+                      ("log_crowding_scott", "the Scott bandwidth"),
+                      ("log_degree", "log degree")):
+        s = rank_sd[rank_sd.feature == feat]
+        if s.empty:
+            continue
+        row = s.iloc[0]
+        record("stability_attribution", f"{tag}, marginal rho (rank SD)",
+               r4(row.marginal_spearman_median),
+               "results/tables/stability_attribution.tsv")
+        record("stability_attribution", f"{tag}, joint beta (rank SD)",
+               r4(row.beta),
+               "results/tables/stability_attribution.tsv")
+        record("stability_attribution", f"{tag}, arms positive (rank SD)",
+               int(row.arms_positive),
+               "results/tables/stability_attribution.tsv")
+
+    record("stability_attribution", "log degree, marginal rho (rank SD)",
+           r4(deg.marginal_spearman_median.iloc[0]),
+           "results/tables/stability_attribution.tsv")
+    record("stability_attribution", "log degree, joint beta (rank SD)",
+           r4(deg.beta.iloc[0]),
+           "results/tables/stability_attribution.tsv",
+           "after the gene's own score CV enters the model")
+    scv = rank_sd[rank_sd.feature == "log_score_cv"]
+    record("stability_attribution", "log score CV, joint beta (rank SD)",
+           r4(scv.beta.iloc[0]),
+           "results/tables/stability_attribution.tsv")
+    scv2 = att[(att.outcome == "score CV") & (att.feature == "log_score_cv")]
+    record("stability_attribution", "log score CV, marginal rho (score CV)",
+           r4(scv2.marginal_spearman_median.iloc[0]),
+           "results/tables/stability_attribution.tsv")
+
+    topo = t("network_stability_vs_topology.tsv")
+    cov = topo[(topo.feature == "mean_label_coverage")
+               & (topo.target == "net_stability_sd")]
+    record("network_stability", "mean label coverage, Spearman rho",
+           r4(cov.spearman.iloc[0]),
+           "results/tables/network_stability_vs_topology.tsv")
+    record("network_stability", "mean label coverage, q (BH)",
+           r6(cov.q_bh.iloc[0]),
+           "results/tables/network_stability_vs_topology.tsv")
+
+    # ---- G3: the bait-matched null -------------------------------
+    g3 = t("g3_bait_matched_null.tsv")
+    temp = g3[g3.label == "intogen_temporal_new"]
+    other = g3[g3.label != "intogen_temporal_new"]
+    record("bait_null", "median share above the null, unmatched (%)",
+           r4(100 * g3.frac_unmatched_null_above.median()),
+           "results/tables/g3_bait_matched_null.tsv")
+    record("bait_null", "median share above the null, matched (%)",
+           r4(100 * g3.frac_matched_null_above.median()),
+           "results/tables/g3_bait_matched_null.tsv")
+    record("bait_null", "temporal label, unmatched (%)",
+           r4(100 * temp.frac_unmatched_null_above.median()),
+           "results/tables/g3_bait_matched_null.tsv")
+    record("bait_null", "temporal label, matched (%)",
+           r4(100 * temp.frac_matched_null_above.median()),
+           "results/tables/g3_bait_matched_null.tsv")
+    record("bait_null", "other labels, unmatched (%)",
+           r4(100 * other.frac_unmatched_null_above.median()),
+           "results/tables/g3_bait_matched_null.tsv")
+    record("bait_null", "other labels, matched (%)",
+           r4(100 * other.frac_matched_null_above.median()),
+           "results/tables/g3_bait_matched_null.tsv")
+
+    # ---- G7: the NCG arbitration test ---------------------------
+    g7 = t("g7_ncg_arbitration.tsv")
+    record("arbitration", "arms with a positive dAUROC",
+           int((g7.delta_auroc > 0).sum()),
+           "results/tables/g7_ncg_arbitration.tsv")
+    record("arbitration", "median dAUROC",
+           r4(g7.delta_auroc.median()),
+           "results/tables/g7_ncg_arbitration.tsv")
+    record("arbitration", "arms with a positive low-FPR dAUC",
+           int((g7.delta_pauc > 0).sum()),
+           "results/tables/g7_ncg_arbitration.tsv")
+
+    # ---- G8: the negative-set audit ------------------------------
+    g8 = t("g8_negative_contamination.tsv")
+    cl = t("g8_cleaned_background.tsv")
+    record("negative_set", "min share of negatives that are NCG genes (%)",
+           r4(100 * g8.frac_negatives_in_ncg.min()),
+           "results/tables/g8_negative_contamination.tsv")
+    record("negative_set", "max share of negatives that are NCG genes (%)",
+           r4(100 * g8.frac_negatives_in_ncg.max()),
+           "results/tables/g8_negative_contamination.tsv")
+    record("negative_set", "max share that are NCG-known (%)",
+           r4(100 * g8.frac_negatives_ncg_known.max()),
+           "results/tables/g8_negative_contamination.tsv")
+    for net, lab, key in (("intact", "intogen2024", "intogen2024 intact"),
+                          ("funmap", "ot_all", "ot_all funmap"),
+                          ("reactome", "intogen_temporal_new",
+                           "reactome temporal")):
+        sel = cl[(cl.network == net) & (cl.label == lab)]
+        for version in ("standard", "cleaned"):
+            v = sel[sel.version == version].delta_auroc.iloc[0]
+            record("negative_set", f"{key}, {version}", r4(v),
+                   "results/tables/g8_cleaned_background.tsv")
+
+    # ---- GR-9: the cancer-type stratification --------------------
+    gr9 = t("gr9_cancer_type_summary.tsv")
+    record("cancer_types", "types with a positive median margin",
+           int((gr9.median_delta_auroc > 0).sum()),
+           "results/tables/gr9_cancer_type_summary.tsv")
+    record("cancer_types", "median of the per-type medians",
+           r4(gr9.median_delta_auroc.median()),
+           "results/tables/gr9_cancer_type_summary.tsv")
+
+    # ---- C2: the NCG circularity audit ---------------------------
+    circ = t("c2_ncg_circularity.tsv")
+    jac = pd.read_csv(REPO / "results/tables/c2_label_jaccard_matrix.tsv",
+                      sep="	", index_col=0)
+    record("ncg_circularity", "Jaccard with intogen2024",
+           r4(float(jac.loc["ncg", "intogen2024"])),
+           "results/tables/c2_label_jaccard_matrix.tsv")
+    for lab in ("ncg", "intogen2024"):
+        sel = circ[(circ.network == "intact") & (circ.label == lab)]
+        record("ncg_circularity",
+               f"intact mean degree percentile, {lab}",
+               r4(sel.mean_degree_percentile.iloc[0]),
+               "results/tables/c2_ncg_circularity.tsv")
+
+    # ---- C6: the variance decomposition with the fifth label ------
+    cmp_ = t("stats_variance_decomp_comparison.tsv")
+    for r in cmp_.itertuples():
+        key = r.variance_source.split(" (")[0].strip().lower()
+        record("variance30", f"{key} share of the between-arm spread (%)",
+               r4(100 * r.frac_between_30),
+               "results/tables/stats_variance_decomp_comparison.tsv")
+        record("variance24", f"{key} share of the between-arm spread (%)",
+               r4(100 * r.frac_between_24),
+               "results/tables/stats_variance_decomp_comparison.tsv")
+
+    # ---- C7: the label-quality tiers and the noise anchor ---------
+    tier = t("label_tier_delta_auroc.tsv")
+    for lab in ("intogen2024", "intogen_temporal_new"):
+        for level in ("high", "mid", "low"):
+            sel = tier[(tier.label == lab) & (tier.tier == level)]
+            if sel.empty:
+                continue
+            record("label_quality", f"{lab}, {level} tier (median)",
+                   r4(sel.delta_auroc.median()),
+                   "results/tables/label_tier_delta_auroc.tsv")
+    anchor = t("clingen_noise_anchor.tsv")
+    record("noise_anchor", "min change under 17 % misassignment",
+           r4(anchor.change.min()),
+           "results/tables/clingen_noise_anchor.tsv")
+    record("noise_anchor", "max change under 17 % misassignment",
+           r4(anchor.change.max()),
+           "results/tables/clingen_noise_anchor.tsv")
+
+    # ---- F3: the DepMap external validation -----------------------
+    dm = t("depmap_validation.tsv")
+    d = dm[dm.threshold == -0.5]
+    for k, tag in ((30.0, "K=30"), (100.0, "K=100")):
+        sel = d[d.K == k]
+        record("depmap", f"{tag} median share of cell lines enriched (%)",
+               r4(100 * sel.frac_celllines_p_lt_005.median()),
+               "results/tables/depmap_validation.tsv")
+        record("depmap", f"{tag} median p-value",
+               r4(sel.median_p.median()),
+               "results/tables/depmap_validation.tsv")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", default=str(REPO / "review"))
@@ -433,6 +636,7 @@ def main() -> int:
     gnn()
     networks()
     labels()
+    recent_series()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

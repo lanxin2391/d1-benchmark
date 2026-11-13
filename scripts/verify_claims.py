@@ -154,6 +154,60 @@ CLAIMS: list[tuple[str, str, str, str]] = [
      "reactome **63**", "the decision log must carry the released D-11 N values"),
     ("dec.d11.old", "decisions.md",
      "string_full700 N=587", "the superseded D-11 N values must be marked superseded"),
+
+    # ---- Phase S: the stability analysis (section I) ----
+    ("stability.sd", "manuscript_a_sections.md",
+     "repeat-level SD of ΔAUROC is 0.0047",
+     "§I.1 must give the arm-level SD of the margin"),
+    ("stability.cv", "manuscript_a_sections.md",
+     "relative error of the score across the 40 re-partitions is 0.185",
+     "§I.1 must give the gene-level relative error"),
+    ("stability.rank", "manuscript_a_sections.md",
+     "~270 places out of ~10,000",
+     "§I.1 must give the rank movement"),
+
+    # ---- G3: the bait-matched null ----
+    ("g3.temporal", "manuscript_a_sections.md",
+     "**4.7 % (chance)**",
+     "§F.12 must state that the temporal label falls to chance"),
+
+    # ---- G7: the NCG arbitration test ----
+    ("g7.arms", "manuscript_a_sections.md",
+     "never seeded with above the degree baseline in 24/24 arms",
+     "§F.14 must state the arbitration result"),
+    ("g7.lowfpr", "manuscript_a_sections.md",
+     "the low-FPR endpoint agrees in only 13/24",
+     "§F.14 must disclose the low-FPR caveat"),
+
+    # ---- G8: the negative-set audit ----
+    ("g8.cleaned", "manuscript_a_sections.md",
+     "| intact | intogen2024 | +0.0651 | **+0.0304** |",
+     "§F.13 must give the IntOGen margin before and after cleaning"),
+    ("g8.reactome", "manuscript_a_sections.md",
+     "**+0.0893**",
+     "§F.16 must give the Reactome-on-NCG margin"),
+
+    # ---- GR-9: the cancer-type stratification ----
+    ("gr9.types", "manuscript_a_sections.md",
+     "All 26 cancer types have a positive median margin",
+     "§F.15 must state the cancer-type result"),
+
+    # ---- C6: the variance decomposition with the fifth label ----
+    ("c6.label", "manuscript_a_sections.md",
+     "34.78 %",
+     "§F.17 must give the 24-arm label share"),
+    ("c6.label30", "manuscript_a_sections.md",
+     "30.75 %",
+     "§F.17 must give the 30-arm label share"),
+
+    # ---- C7: the label-quality tiers and the noise anchor ----
+    ("c7.tiers", "manuscript_a_sections.md",
+     "| intogen2024 | +0.0892 | +0.0633 | +0.0653 |",
+     "§F.18 must give the tier-restricted margins"),
+    ("c7.anchor", "manuscript_a_sections.md",
+     "The margin changes by between −0.0018 and +0.0026",
+     "§F.18 must give the ClinGen noise-anchor range"),
+
 ]
 
 # Numbers that MUST NOT appear anywhere in the three manuscript files.
@@ -318,6 +372,136 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Phase S: the stability analysis ----
+        ("stability repeat-level SD", "manuscript_a_sections.md",
+         r"repeat-level SD of ΔAUROC is (0\.\d{4})",
+         ("stability", "repeat-level SD of dAUROC (median over arms)"),
+         0.0006),
+        ("stability gene-level error", "manuscript_a_sections.md",
+         r"re-partitions is (0\.\d{3})",
+         ("stability", "gene-level relative error (median over arms)"),
+         0.0006),
+        ("stability rank movement", "manuscript_a_sections.md",
+         r"~(\d{3}) places out of",
+         ("stability", "median gene's rank movement (places)"),
+         5.0),
+
+        # ---- G3: the bait-matched null ----
+        ("g3 temporal unmatched", "manuscript_a_sections.md",
+         r"\*\*intogen_temporal_new\*\*\s*\|\s*(\d+\.\d+) %",
+         ("bait_null", "temporal label, unmatched (%)"),
+         0.06),
+        ("g3 temporal matched", "manuscript_a_sections.md",
+         r"\*\*intogen_temporal_new\*\*\s*\|\s*\d+\.\d+ %\s*\|\s*\*\*(\d+\.\d+) %",
+         ("bait_null", "temporal label, matched (%)"),
+         0.06),
+
+        # ---- G7: the NCG arbitration test ----
+        ("g7 arms positive", "manuscript_a_sections.md",
+         r"never seeded with above the degree baseline in (\d+)/24 arms",
+         ("arbitration", "arms with a positive dAUROC"),
+         0.5),
+        ("g7 median dAUROC", "manuscript_a_sections.md",
+         r"arms\*\* \(median (\+0\.\d{4})",
+         ("arbitration", "median dAUROC"),
+         0.0006),
+        ("g7 low-FPR arms", "manuscript_a_sections.md",
+         r"the low-FPR endpoint agrees in only (\d+)/24",
+         ("arbitration", "arms with a positive low-FPR dAUC"),
+         0.5),
+
+        # ---- G8: the negative-set audit ----
+        ("g8 intact intogen2024 standard", "manuscript_a_sections.md",
+         r"\| intact \| intogen2024 \| (\+0\.\d{4}) \| \*\*",
+         ("negative_set", "intogen2024 intact, standard"),
+         0.0006),
+        ("g8 intact intogen2024 cleaned", "manuscript_a_sections.md",
+         r"\| intact \| intogen2024 \| \+0\.\d{4} \| \*\*(\+0\.\d{4})\*\*",
+         ("negative_set", "intogen2024 intact, cleaned"),
+         0.0006),
+        ("g8 funmap ot_all standard", "manuscript_a_sections.md",
+         r"\| funmap \| ot_all \| (\+0\.\d{4}) \| \*\*",
+         ("negative_set", "ot_all funmap, standard"),
+         0.0006),
+        ("g8 funmap ot_all cleaned", "manuscript_a_sections.md",
+         r"\| funmap \| ot_all \| \+0\.\d{4} \| \*\*(\+0\.\d{4})\*\*",
+         ("negative_set", "ot_all funmap, cleaned"),
+         0.0006),
+        ("g8 reactome temporal standard", "manuscript_a_sections.md",
+         r"\| reactome \| intogen_temporal_new \| ([−-]0\.\d{4})",
+         ("negative_set", "reactome temporal, standard"),
+         0.0006),
+        ("g8 reactome temporal cleaned", "manuscript_a_sections.md",
+         r"\| reactome \| intogen_temporal_new \| [−-]0\.\d{4} \| \*\*(\+0\.\d{4})\*\*",
+         ("negative_set", "reactome temporal, cleaned"),
+         0.0006),
+
+        # ---- GR-9: the cancer-type stratification ----
+        ("gr9 types positive", "manuscript_a_sections.md",
+         r"All (\d+) cancer types have a positive median margin",
+         ("cancer_types", "types with a positive median margin"),
+         0.5),
+        ("gr9 median", "manuscript_a_sections.md",
+         r"median over the types (\+0\.\d{4})",
+         ("cancer_types", "median of the per-type medians"),
+         0.0006),
+
+        # ---- C6: the variance decomposition with the fifth label ----
+        ("c6 label share 24", "manuscript_a_sections.md",
+         r"\| label \(main effect\) \| (\d+\.\d{2}) %",
+         ("variance24", "label share of the between-arm spread (%)"),
+         0.006),
+        ("c6 label share 30", "manuscript_a_sections.md",
+         r"\| label \| \d+\.\d{2} % \| (\d+\.\d{2}) %",
+         ("variance30", "label share of the between-arm spread (%)"),
+         0.006),
+        ("c6 interaction share 30", "manuscript_a_sections.md",
+         r"\| network × label \| \d+\.\d{2} % \| (\d+\.\d{2}) %",
+         ("variance30", "network x label share of the between-arm spread (%)"),
+         0.006),
+
+        # ---- C7: the label-quality tiers and the noise anchor ----
+        ("c7 intogen2024 high tier", "manuscript_a_sections.md",
+         r"\| intogen2024 \| (\+0\.\d{4}) \| \+0\.\d{4} \| \+0\.\d{4} \|",
+         ("label_quality", "intogen2024, high tier (median)"),
+         0.0006),
+        ("c7 temporal high tier", "manuscript_a_sections.md",
+         r"\| intogen_temporal_new \| (\+0\.\d{4}) \| \+0\.\d{4} \| \+0\.\d{4} \|",
+         ("label_quality", "intogen_temporal_new, high tier (median)"),
+         0.0006),
+        ("c7 anchor min", "manuscript_a_sections.md",
+         r"changes by between ([−-]0\.\d{4}) and",
+         ("noise_anchor", "min change under 17 % misassignment"),
+         0.0006),
+        ("c7 anchor max", "manuscript_a_sections.md",
+         r"changes by between [−-]0\.\d{4} and (\+0\.\d{4})",
+         ("noise_anchor", "max change under 17 % misassignment"),
+         0.0006),
+
+
+        # ---- the stability attribution, as the manuscript's table states it ----
+        ("attribution degree joint beta", "manuscript_a_sections.md",
+         r"\| log degree \| ([−-]0\.\d{3}) \|",
+         ("stability_attribution", "log degree, joint beta (rank SD)"),
+         0.002),
+        ("attribution degree marginal rho", "manuscript_a_sections.md",
+         r"\| log degree \| [−-]0\.\d{3} \| ([−+]?0\.\d{3})",
+         ("stability_attribution", "log degree, marginal rho (rank SD)"),
+         0.002),
+        ("attribution score CV joint beta", "manuscript_a_sections.md",
+         r"\| \*\*log gene score CV\*\* \| \*\*([−+]?0\.\d{3})\*\*",
+         ("stability_attribution", "log score CV, joint beta (rank SD)"),
+         0.002),
+        ("attribution band marginal rho", "manuscript_a_sections.md",
+         r"\| log local score density \([^)]*\) \| [−+]?0\.\d{3} \| ([−+]?0\.\d{3})",
+         ("stability_attribution", "the +/- 10 % band, marginal rho (rank SD)"),
+         0.002),
+        ("attribution scott marginal rho", "manuscript_a_sections.md",
+         r"\| log crowding \(Scott bandwidth\) \| [−+]?0\.\d{3} \(q = 0\.\d+\) \| ([−+]?0\.\d{3})",
+         ("stability_attribution", "the Scott bandwidth, marginal rho (rank SD)"),
+         0.002),
+
     ]
     for cid, fname, pattern, key, tol in cross:
         val = gt.get(key)
@@ -325,7 +509,10 @@ def main(argv: list[str] | None = None) -> int:
             lines.append(f"  [SKIP] {cid:<30} (no ground truth for {key})")
             continue
         path = ROOT / "docs" / fname
-        text = path.read_text(encoding="utf-8") if path.exists() else ""
+        raw = path.read_text(encoding="utf-8") if path.exists() else ""
+        # a Markdown paragraph may be hard-wrapped, so the pattern is
+        # matched against the whitespace-collapsed text
+        text = re.sub(r"\s+", " ", raw)
         m = re.search(pattern, text)
         if not m:
             n_fail += 1

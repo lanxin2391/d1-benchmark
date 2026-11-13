@@ -43,17 +43,19 @@ used to predict the held-out arm's genes (out-of-sample R²).
 
 ## 2. Headline
 
-| predictor | joint β (rank SD) | marginal ρ (rank SD) | joint β (score CV) | sign stable |
-|---|---|---|---|---|
-| **log local score density** | **+0.787** | **+0.478 (24/24 arms)** | +0.104 | 10/10 |
-| **log score mean** | **+0.910** | +0.340 (24/24) | +0.524 | 10/10 |
-| **log degree** | **−0.995** | **+0.038 (16/24)** | −0.675 | 10/10 |
-| clustering coefficient | +0.089 | +0.088 (20/24) | +0.058 | 10/10 |
-| log betweenness | −0.050 | +0.074 (21/24) | −0.022 | 10/10 |
-| log PageRank | +0.265 | +0.023 (16/24) | +0.213 | 10/10 |
-| log community size | −0.215 | +0.019 (13/24) | −0.145 | 10/10 |
-| distance to the seeds | +0.061 | −0.125 (3/24) | +0.025 | 10/10 |
-| k-core number | −0.001 (q = 0.98) | +0.044 | −0.008 (q = 0.78) | 3/10 |
+| predictor | joint beta on log(rank SD) | marginal within-arm rho | joint beta on score CV | marginal rho (score CV) | q (BH) |
+|---|---|---|---|---|---|
+| log_score_cv | +0.778 | +0.844 (24/24 arms) | +0.616 | +1.000 | 1.73e-137 |
+| log_local_score_density | +0.672 | +0.478 (24/24 arms) | +0.081 | +0.097 | 5.14e-05 |
+| log_score_mean | +0.238 | +0.340 (24/24 arms) | -0.126 | +0.145 | 5.68e-05 |
+| log_crowding_scott | +0.031 | -0.175 (1/24 arms) | -0.087 | -0.126 | 0.000399 |
+| log_degree | -0.083 | +0.038 (16/24 arms) | +0.066 | -0.152 | 6.31e-05 |
+| k_core | -0.024 | +0.044 (16/24 arms) | -0.037 | -0.157 | 0.000251 |
+| clustering | +0.009 | +0.088 (20/24 arms) | -0.002 | -0.030 | 0.249 |
+| log_betweenness | -0.027 | +0.074 (21/24 arms) | -0.000 | -0.098 | 0.995 |
+| log_pagerank | -0.001 | +0.023 (16/24 arms) | -0.012 | -0.093 | 0.16 |
+| log_community_size | -0.025 | +0.019 (13/24 arms) | +0.005 | -0.060 | 0.174 |
+| dist_to_seed | +0.007 | -0.125 (3/24 arms) | -0.016 | -0.095 | 0.000684 |
 
 (standardised coefficients; negative = the feature makes the stability
 *higher*; q = BH-FDR over the nine predictors, per outcome; every row
@@ -104,7 +106,7 @@ Two findings:
 
 Degree has essentially **no marginal association** with rank instability
 (within-arm Spearman +0.038) but a large **negative joint** coefficient
-(−0.995). The reason is collinearity: degree correlates 0.72 with the
+(-0.083). The reason is collinearity: degree correlates 0.72 with the
 RWR score and 0.43 with the local score density, and the score's own
 coefficient is large and positive (+0.910). A predictor that is nearly
 collinear with a strong one is unstable in the joint model and can flip
