@@ -78,7 +78,7 @@
         "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers -- but re-running the whole benchmark with them removed from the background leaves 23/24 arms positive, no sign flip and the median margin at +0.082: the contamination does not carry the result.",
         "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific."
       ],
-      "footer": "Take-home: the prior really transfers to drivers we never labelled — but the absolute numbers depend on how the negative set is built."
+      "footer": "Take-home: the prior really transfers to drivers we never labelled — and the contamination of our own negative set does not carry the result."
     },
     {
       "n": 14,
