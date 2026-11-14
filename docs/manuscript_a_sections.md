@@ -508,6 +508,25 @@ a tier from its own catalogue's notion of confidence:
 The tiers are in `results/tables/label_quality_tiers.tsv`, built by
 `scripts/run_c7_build_tiers.py`.
 
+### C16 — Control 13: the negative set cleaned, the benchmark re-run
+
+G8 (§F.13) measured the contamination of the negative set **post
+hoc**, on the evaluation set of the existing runs. Control 13 is the
+same question done properly: the curated driver genes leave the
+**background**, the positives are untouched, and the whole benchmark is
+re-run on the new splits.
+
+Concretely, for each of the 24 (network, label) arms the rows of the
+NCG-catalogue genes that are negatives of that label are removed from
+the split file (5,072,800 negative rows over 2,280 distinct genes
+across the 24 arms); the fold assignment, the repeats and the learner
+are unchanged; the 24 arms are re-run and the statistics recomputed
+(`scripts/run_c9_clean_background_factorial.py`,
+`results/tables/c9_clean_background_comparison.tsv`).
+
+This is the exploratory family (amendment 4). The pre-registered
+endpoint -- the 24-arm standard design -- is untouched.
+
 ---
 
 ## §D. Methods §4.6 — Statistical analysis
@@ -1094,24 +1113,24 @@ held-out negatives are in the NCG catalogue, and **1.3 % to 9.5 %** are
 NCG-known high-confidence drivers. Reactome's arms are the worst
 (15–22 %), the dense protein networks the least (10 %).
 
-**Does it change the result?** Yes, and in both directions — so this is
-not a small correction:
+**Does it change the result?** The first version of this answer was
+wrong, and the correction matters. The post-hoc computation removes every
+NCG gene from the **evaluation set**, and because NCG and IntOGen
+overlap heavily (463 of the 708 known NCG drivers are IntOGen
+positives) that also removes **87 % of the IntOGen positives** (633 →
+80). The margin it reports is therefore mostly a statement about a much
+smaller evaluation set, not about the cleanliness of the background.
 
-| network | label | ΔAUROC, standard background | ΔAUROC, NCG-cleaned background |
-|---|---|---|---|
-| intact | intogen2024 | +0.0651 | **+0.0304** |
-| funmap | intogen2024 | +0.1001 | **+0.0247** |
-| string_phys700 | intogen2024 | +0.1189 | **+0.0768** |
-| funmap | ot_all | +0.0853 | **+0.1030** |
-| string_phys700 | ot_nolit | +0.1711 | **+0.1979** |
-| reactome | intogen_temporal_new | −0.0125 | **+0.0073** |
-
-On the IntOGen label the margin roughly **halves**; on the Open Targets
-labels it **grows**, because removing curated drivers from the
-background removes false negatives that the degree baseline was getting
-right; and Reactome's temporal cell flips sign. Under the cleaned
-background the low-FPR advantage also disappears on the IntOGen label
-(several arms go negative in ΔpAUC).
+The clean version of the question is to remove the curated drivers from
+the **background only** — the positives are untouched, so the comparison
+isolates one thing — and to re-run the whole benchmark with those
+splits (Control 13, §C16 and §F.19). The answer is that **the headline
+does not depend on the contamination**: 23 of 24 arms stay positive
+with no sign flip, the median margin moves from **+0.0809** to
+**+0.0822** (it goes slightly *up* in almost every arm), and the
+gene-cluster interval passes in **21 of 24** arms instead of 20. The
+contamination of our negative set is real — 10–22 % of the held-out
+negatives are curated drivers — and it does not carry the result.
 
 **The IntOGen label is a good proxy for an independent gold standard; the
 Open Targets labels are not.** 70–79 % of the NCG-known drivers are in
@@ -1121,9 +1140,7 @@ they carry the largest false-positive contamination.
 
 The honest conclusion is uncomfortable and belongs in the abstract:
 **the benchmark's numbers depend on how the negative set is composed**,
-and the cleanest negative set (no curated driver left in it) roughly
-halves the advantage on the strictest label. The exploratory family
-carries the correction (Control 12); the pre-registered endpoint is
+and the negative set does not carry the result: with the curated drivers removed from the background and the whole benchmark re-run, 23 of 24 arms stay positive and the median margin is unchanged (+0.081 to +0.082). (Control 12); the pre-registered endpoint is
 unchanged.
 
 ### F.14 The NCG arbitration test: can the prior find drivers it was not seeded with?
@@ -1349,6 +1366,67 @@ temporal label's high tier is 11 genes, the ClinGen mid tier is 4), so
 their entries are noisy; and the ClinGen label is almost entirely
 Definitive or Strong (80 high, 4 mid, 0 low), so it cannot separate
 tiers at all.
+
+### F.19 The headline does not depend on the contamination of the background
+
+| network | label | standard | background cleaned | change |
+|---|---|---|---|---|
+| string_phys700 | ot_nolit | +0.1711 | +0.1741 | +0.0030 |
+| string_phys700 | ot_all | +0.1582 | +0.1624 | +0.0042 |
+| string_full700 | ot_nolit | +0.1267 | +0.1269 | +0.0002 |
+| string_full700 | ot_all | +0.1201 | +0.1214 | +0.0013 |
+| string_phys700 | intogen2024 | +0.1189 | +0.1289 | +0.0100 |
+| string_full700 | intogen2024 | +0.1133 | +0.1183 | +0.0050 |
+| reactome | ot_all | +0.1103 | +0.1119 | +0.0016 |
+| funmap | intogen2024 | +0.1001 | +0.1046 | +0.0045 |
+| reactome | ot_nolit | +0.0996 | +0.1028 | +0.0032 |
+| funmap | ot_all | +0.0853 | +0.0889 | +0.0036 |
+| intact | ot_all | +0.0842 | +0.0853 | +0.0011 |
+| rna_coexp | ot_nolit | +0.0834 | +0.0832 | -0.0002 |
+| intact | ot_nolit | +0.0784 | +0.0793 | +0.0009 |
+| funmap | ot_nolit | +0.0780 | +0.0813 | +0.0033 |
+| rna_coexp | ot_all | +0.0767 | +0.0768 | +0.0001 |
+| intact | intogen2024 | +0.0651 | +0.0671 | +0.0020 |
+| string_full700 | intogen_temporal_new | +0.0604 | +0.0681 | +0.0077 |
+| rna_coexp | intogen2024 | +0.0521 | +0.0533 | +0.0012 |
+| reactome | intogen2024 | +0.0429 | +0.0466 | +0.0037 |
+| string_phys700 | intogen_temporal_new | +0.0378 | +0.0490 | +0.0112 |
+| funmap | intogen_temporal_new | +0.0196 | +0.0239 | +0.0043 |
+| rna_coexp | intogen_temporal_new | +0.0127 | +0.0152 | +0.0025 |
+| intact | intogen_temporal_new | +0.0071 | +0.0089 | +0.0018 |
+| reactome | intogen_temporal_new | -0.0125 | -0.0099 | +0.0026 |
+
+The answer is the reassuring one, and it is the opposite of what our
+first, post-hoc calculation suggested. **23 of 24 arms are
+positive before the cleaning and 23 of 24 after, with
+0 sign flips**; the median margin moves from
+**+0.0809** to **+0.0822** -- it goes slightly *up* in
+almost every arm, because the curated drivers that leave the
+background were ranked low by the prior anyway, and the degree
+baseline had been getting them wrong.
+
+The H1 verdict is the same story:
+
+| interval | arms excluding 0 (standard) | arms excluding 0 (cleaned) |
+|---|---|---|
+| fold_pct | 24/24 | 24/24 |
+| repeat_pct | 24/24 | 24/24 |
+| repeat_t | 24/24 | 24/24 |
+| repeat_bca | 24/24 | 24/24 |
+| gene | 20/24 | 21/24 |
+
+The conservative gene-cluster interval now passes in **21 of
+24** arms instead of 20: the
+cleaned background removes one more failure.
+
+**What this means.** The contamination of our negative set is real --
+10-22 % of the held-out negatives are curated drivers we do not label
+-- and it is the kind of thing every benchmark in this area should
+audit. But it is **not** what carries our result: with the curated
+drivers removed from the background and the whole benchmark re-run, the
+margin is unchanged. The earlier post-hoc reading ("the margin roughly
+halves") was an artefact of that computation removing 87 % of the
+IntOGen positives from the evaluation set along with the background.
 
 ---
 

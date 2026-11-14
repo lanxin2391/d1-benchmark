@@ -1,0 +1,6 @@
+interval	n_arms	n_excl0	rule_met	rule	failing_arms
+fold_pct	24	24	True	pre-registered H1: the 95% CI excludes 0 in EVERY arm	
+repeat_pct	24	24	True	pre-registered H1: the 95% CI excludes 0 in EVERY arm	
+repeat_t	24	24	True	pre-registered H1: the 95% CI excludes 0 in EVERY arm	
+repeat_bca	24	24	True	pre-registered H1: the 95% CI excludes 0 in EVERY arm	
+gene	24	21	False	pre-registered H1: the 95% CI excludes 0 in EVERY arm	intact x intogen_temporal_new; reactome x intogen_temporal_new; rna_coexp x intogen_temporal_new

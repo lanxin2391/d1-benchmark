@@ -89,11 +89,14 @@ newest-driver label, from 6.8 % to 4.7 %, which is chance (5 %). An
 **NCG arbitration test**, in which the positives are drivers that our own
 labels do not contain, shows that the prior nevertheless transfers: the
 margin is positive in 24/24 arms (median +0.041), and in 26/26 cancer
-types. **An audit of our own negative set** shows that 10-22 % of the
-held-out negatives are curated driver genes we do not label; removing
-them halves the margin on the strictest label (+0.065 to +0.030) and
-raises it on the Open Targets labels (+0.085 to +0.103), so the
-benchmark's numbers depend on how the background is built. **Label-
+types. **An audit of our own negative set**
+shows that 10-22 % of the held-out negatives are curated driver genes we
+do not label. Re-running the whole benchmark with those genes removed
+from the background (the positives untouched) changes nothing material:
+23 of 24 arms stay positive with no sign flip, the median margin moves
+from +0.081 to +0.082, and the conservative gene-cluster interval now
+passes in 21 of 24 arms instead of 20. The contamination of the
+background is real, and it does not carry the result. **Label-
 quality tiering** shows the high-confidence tier carrying the larger
 margin in four of five labels, and a **ClinGen noise anchor** (a random
 17 % of the positives demoted to background, the disagreement rate

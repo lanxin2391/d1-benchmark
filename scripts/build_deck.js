@@ -436,7 +436,7 @@ slides.forEach((sl) => {
     chrome(s, sl);
     if (sl.note) {
       s.addText(sl.note, {
-        x: M, y: 1.38, w: CW, h: 0.5, fontFace: FONT, fontSize: 12,
+        x: M, y: 1.38, w: CW, h: 0.62, fontFace: FONT, fontSize: 12,
         italic: true, color: MUTED, align: "left", valign: "top", margin: 0,
       });
     }
@@ -459,7 +459,7 @@ slides.forEach((sl) => {
     const rowH = Math.min(tb.rowh || 0.42, avail / (tb.rows.length + 1));
     const fs = Math.min(tb.fontsize || 12, Math.max(8.5, (rowH * 72) / 2.7));
     s.addTable([head].concat(body), {
-      x: M, y: 1.95, w: CW, colW, fontFace: FONT, fontSize: fs,
+      x: M, y: 2.05, w: CW, colW, fontFace: FONT, fontSize: fs,
       border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH, valign: "middle", margin: [0.02, 0.06, 0.02, 0.06],
     });

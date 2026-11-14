@@ -282,6 +282,11 @@ negative_set	ot_all funmap, standard	0.0853	results/tables/g8_cleaned_background
 negative_set	ot_all funmap, cleaned	0.103	results/tables/g8_cleaned_background.tsv	
 negative_set	reactome temporal, standard	-0.0125	results/tables/g8_cleaned_background.tsv	
 negative_set	reactome temporal, cleaned	0.0073	results/tables/g8_cleaned_background.tsv	
+clean_background	positive arms, standard design	23	results/tables/c9_clean_background_comparison.tsv	
+clean_background	positive arms, cleaned background	23	results/tables/c9_clean_background_comparison.tsv	
+clean_background	sign flips	0	results/tables/c9_clean_background_comparison.tsv	
+clean_background	median margin, standard design	0.0809	results/tables/c9_clean_background_comparison.tsv	
+clean_background	median margin, cleaned background	0.0822	results/tables/c9_clean_background_comparison.tsv	
 cancer_types	types with a positive median margin	26	results/tables/gr9_cancer_type_summary.tsv	
 cancer_types	median of the per-type medians	0.0271	results/tables/gr9_cancer_type_summary.tsv	
 ncg_circularity	Jaccard with intogen2024	0.522	results/tables/c2_label_jaccard_matrix.tsv	

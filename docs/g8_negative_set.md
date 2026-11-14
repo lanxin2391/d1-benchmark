@@ -97,9 +97,27 @@ Every NCG gene (all 2,372, all tiers) is removed from the background and the end
 
 **The negative set is genuinely contaminated.** Between 10 % and 22 % of the held-out "negatives" are in the NCG catalogue -- curated driver genes we simply do not label -- and 1.3 % to 9.5 % are NCG-*known* high-confidence drivers. Reactome's arms are the worst (15-22 %), the dense protein networks the least (10 %).
 
-**Cleaning the background moves the numbers in both directions, so it is not a small correction.** On the IntOGen label the margin roughly halves (intact 0.0651 -> 0.0304, funmap 0.1001 -> 0.0247, string_phys700 0.1189 -> 0.0768); on the Open Targets labels it *grows* (funmap ot_all 0.0853 -> 0.1030, string_phys700 ot_nolit 0.1711 -> 0.1979), because removing curated drivers from the background removes false negatives that the degree baseline was getting right; and on the temporal label reactome flips from -0.0125 to +0.0073. Under the cleaned background the low-FPR advantage also disappears on the IntOGen label (several arms go negative in dpAUC).
+**Read the next section before quoting these numbers.** The cleaned column below is a POST-HOC computation on the evaluation set, and it removes the genes that are positives of the label being evaluated (87 % of the IntOGen positives), so the "the margin roughly halves" reading is mostly a statement about a smaller evaluation set. The clean version -- background only, positives untouched, whole benchmark re-run -- leaves the headline unchanged (23/24 arms, median +0.082).
 
-**The IntOGen label is a good proxy for an independent gold standard; the Open Targets labels are not.** 70-79 % of the NCG-known drivers are in intogen2024 (and 52-59 % in the temporal label), against 27-37 % in ot_nolit -- the Open Targets panels are much broader, which is also why they carry the largest false-positive contamination.
+ independent gold standard; the Open Targets labels are not.** 70-79 % of the NCG-known drivers are in intogen2024 (and 52-59 % in the temporal label), against 27-37 % in ot_nolit -- the Open Targets panels are much broader, which is also why they carry the largest false-positive contamination.
+
+## Correction (2026-11-12): how the cleaned numbers must be read
+
+The cleaned column above is computed **post hoc on the evaluation set**:
+every NCG gene leaves the evaluation set, *including the genes that
+are positives of the label being evaluated*. Because NCG and IntOGen
+overlap heavily (463 of the 708 known NCG drivers are IntOGen
+positives), that removes **87 % of the IntOGen positives** (633 -> 80),
+and the "the margin roughly halves" reading is mostly a statement about
+a much smaller evaluation set.
+
+The clean version of the question is Control 13
+(`scripts/run_c9_clean_background_factorial.py`): the curated drivers
+leave the **background only**, the positives are untouched, and the
+whole benchmark is re-run. The result: **23 of 24 arms positive, no sign
+flip, the median margin +0.0809 -> +0.0822**, and the gene-cluster
+interval passes in 21 of 24 arms instead of 20. The contamination of the
+negative set is real and it does not carry the result.
 
 ## Caveats
 

@@ -104,7 +104,9 @@ states something the tables do not support.
   [PASS] g7.lowfpr                manuscript_a_sections.md
          §F.14 must disclose the low-FPR caveat
   [PASS] g8.cleaned               manuscript_a_sections.md
-         §F.13 must give the IntOGen margin before and after cleaning
+         §F.19 must give the median margin of the cleaned re-run
+  [PASS] g8.cleaned.arms          manuscript_a_sections.md
+         §F.19 must state that the cleaned re-run keeps the arms positive
   [PASS] g8.reactome              manuscript_a_sections.md
          §F.16 must give the Reactome-on-NCG margin
   [PASS] gr9.types                manuscript_a_sections.md
@@ -184,7 +186,11 @@ states something the tables do not support.
   [PASS] attribution score CV joint beta manuscript=+0.7780  table=+0.7782  tol=0.002
   [PASS] attribution band marginal rho  manuscript=+0.4780  table=+0.4782  tol=0.002
   [PASS] attribution scott marginal rho manuscript=-0.1750  table=-0.1749  tol=0.002
+  [PASS] c9 positive arms, standard     manuscript=+23.0000  table=+23.0000  tol=0.5
+  [PASS] c9 positive arms, cleaned      manuscript=+23.0000  table=+23.0000  tol=0.5
+  [PASS] c9 median, standard            manuscript=+0.0809  table=+0.0809  tol=0.002
+  [PASS] c9 median, cleaned             manuscript=+0.0822  table=+0.0822  tol=0.002
 
 ========================================================================
-RESULT: 104 PASS / 0 FAIL
+RESULT: 109 PASS / 0 FAIL
 ========================================================================

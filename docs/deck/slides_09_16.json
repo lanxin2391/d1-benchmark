@@ -75,7 +75,7 @@
       "bullets": [
         "DepMap (1,361 cell lines): at K = 30 candidates the prior shows no enrichment beyond chance (6 % of cell lines, p < 0.05); at K = 100 it does (48 %). The prior carries set-level signal, not gene-level calls.",
         "NCG arbitration: the prior ranks drivers that our labels do not contain above the rest in 24/24 arms (median +0.041) — but in only 13/24 on the low-FPR endpoint, and the protein networks are the only ones that pass.",
-        "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers. Removing them halves the IntOGen margin (0.065 -> 0.030) and raises the Open Targets margin (0.085 -> 0.103).",
+        "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers -- but re-running the whole benchmark with them removed from the background leaves 23/24 arms positive, no sign flip and the median margin at +0.082: the contamination does not carry the result.",
         "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific."
       ],
       "footer": "Take-home: the prior really transfers to drivers we never labelled — but the absolute numbers depend on how the negative set is built."
@@ -87,7 +87,7 @@
       "title": "What the benchmark says about network priors",
       "points": [
         ["1", "A network prior contributes signal beyond node degree", "23/24 arms positive; the pre-registered rule met under four of five interval constructions"],
-        ["2", "The contribution is real but modest and label-dependent", "median +0.081; 10-22 % of the 'negatives' are curated drivers; cleaning them halves the strictest-label margin"],
+        ["2", "The contribution is real but modest and label-dependent", "median +0.081; 10-22 % of the 'negatives' are curated drivers, and cleaning them changes nothing material (23/24 arms, median +0.082)"],
         ["3", "Much of the published margin is study visibility", "a bait-matched null removes most of the enrichment, and the temporal label's advantage collapses to +0.002"],
         ["4", "The prior's instability is intrinsic", "gene-level CV is explained by the gene's own score variance (rho = 1.00); bagging the prior is a provable no-op"],
         ["5", "Curated networks fail on recently discovered drivers", "Reactome is +0.089 on the 2019 catalogue and negative on the two newest ones — a coverage and curator-lag effect"]

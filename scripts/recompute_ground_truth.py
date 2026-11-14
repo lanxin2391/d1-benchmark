@@ -551,6 +551,25 @@ def recent_series() -> None:
             record("negative_set", f"{key}, {version}", r4(v),
                    "results/tables/g8_cleaned_background.tsv")
 
+    # ---- C9: the factorial re-run with a cleaned background -------
+    c9 = t("c9_clean_background_comparison.tsv")
+    record("clean_background", "positive arms, standard design",
+           int((c9.standard_a05 > 0).sum()),
+           "results/tables/c9_clean_background_comparison.tsv")
+    record("clean_background", "positive arms, cleaned background",
+           int((c9.cleaned_a05 > 0).sum()),
+           "results/tables/c9_clean_background_comparison.tsv")
+    record("clean_background", "sign flips",
+           int((((c9.standard_a05 > 0) & (c9.cleaned_a05 < 0))
+                | ((c9.standard_a05 < 0) & (c9.cleaned_a05 > 0))).sum()),
+           "results/tables/c9_clean_background_comparison.tsv")
+    record("clean_background", "median margin, standard design",
+           r4(c9.standard_a05.median()),
+           "results/tables/c9_clean_background_comparison.tsv")
+    record("clean_background", "median margin, cleaned background",
+           r4(c9.cleaned_a05.median()),
+           "results/tables/c9_clean_background_comparison.tsv")
+
     # ---- GR-9: the cancer-type stratification --------------------
     gr9 = t("gr9_cancer_type_summary.tsv")
     record("cancer_types", "types with a positive median margin",

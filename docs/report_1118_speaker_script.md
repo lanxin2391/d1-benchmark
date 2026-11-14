@@ -669,15 +669,23 @@ held-out "negatives" are curated drivers we simply do not label, and
 **1.3 % to 9.5 %** are NCG-*known* high-confidence ones. Reactome's
 arms are the worst, the dense protein networks the least.
 >
-**The consequence, and it goes both ways.** Removing every NCG gene
-from the background: the IntOGen margin **halves**, from **+0.0651**
-to **+0.0304**; the Open Targets margin **rises**, from **+0.0853**
-to **+0.1030**, because we also removed false negatives that the
-degree baseline was getting right; and the Reactome × newest-drivers
-cell **flips sign**, from **−0.0125** to **+0.0073**. That single
-table is why our abstract says the numbers depend on how the negative
-set is built — and why we think **every benchmark in this area should
-audit its own negative set**.
+**The consequence, and the correction we had to make.** Our first
+answer here was wrong, and the way it was wrong is instructive. The
+post-hoc version removes every NCG gene from the *evaluation set* — and
+because NCG and IntOGen overlap heavily, that also removes **87 % of
+the IntOGen positives** (633 down to 80), which is why the margin
+appeared to halve, from +0.0651 to +0.0304. That is a statement about a
+much smaller evaluation set, not about the background.
+
+The clean experiment removes the curated drivers from the **background
+only** — the positives are untouched — and re-runs the entire benchmark
+on those splits. The result: **23 of 24 arms stay positive, no sign
+flips, the median margin moves from +0.0809 to +0.0822** (slightly up
+in almost every arm), and the conservative gene-cluster interval now
+passes in **21 of 24** arms instead of 20. So the contamination of our
+negative set is real, and it is **not** what carries the result — which
+is a stronger statement than the one we started with, and it is the one
+we will defend.
 >
 **Three controls close this section.**
 **The bait-matched null**, where each positive is paired with a
@@ -738,8 +746,7 @@ Five conclusions.
 **One**: a network prior contributes signal beyond node degree — 23 of
 24 arms positive, the pre-registered rule met under four of five
 interval constructions. **Two**: the contribution is real but modest
-and label-dependent — median +0.081, and cleaning our own negative
-set halves it on the strictest label. **Three**: much of the
+and label-dependent — median +0.081, and re-running the benchmark with the curated drivers removed from the negative set leaves it at +0.082 (23/24 arms, no sign flip) — the contamination of the background is not what carries the result. **Three**: much of the
 published margin is study visibility — a bait-matched null removes
 most of the enrichment, and the temporal label's advantage collapses
 to +0.002. **Four**: the prior's instability is intrinsic — the
@@ -809,7 +816,7 @@ Thank you.
 | 17 | **6 % vs 48 %** | DepMap 细胞系富集率（K=30 / K=100） | 每细胞系超几何检验，1,361 个细胞系 | 集合层面有信号，基因层面没有 | 不能说"先验在单基因水平有用" | "集合有效，基因无效" |
 | 18 | **24/24, +0.0413** | NCG 仲裁测试的 ΔAUROC | 阳性=我们标签没有的 NCG driver | 先验能迁移到没见过的 driver | 低 FPR 端点只有 13/24 | "能迁移，但顶端取决于网络" |
 | 19 | **26/26, +0.0271** | 癌种分层的中位 margin | 按 NCG 癌种注释拆分仲裁阳性 | 优势与癌种无关 | 不能说"每个癌种都很强" | "与癌种无关" |
-| 20 | **10–22 %** | 阴性集中策展 driver 的比例 | 用 NCG 仲裁我们的 holdout 阴性 | 基准的阴性集不干净 | 不能说"我们的结果全错"（清洗后仍为正） | "阴性集脏，数字敏感" |
+| 20 | **10–22 %** | 阴性集中策展 driver 的比例 | 用 NCG 仲裁我们的 holdout 阴性 | 基准的阴性集不干净 | **但把它清掉并重跑，结论不变**（23/24 臂为正、中位 +0.082） | "阴性集脏，但结论不靠它" |
 | 21 | **17.6→11.6 %；6.8→4.7 %** | bait 匹配前后阳性超过零模型的比例 | 每个阳性配一个发表量相同的阴性 | 一部分 margin 是可见度 | 不能说"全是发表量"（其他标签仍留有信号） | "temporal 标签归零到随机水平" |
 | 22 | **−0.0018..+0.0026** | 17 % 误标下的 margin 变化 | 每折随机降级 17 % 阳性 | margin 不是标签噪声的产物 | 不能说"我们的标签无噪声" | "17 % 噪声不伤 margin" |
 | 23 | **+0.0893 vs −0.0110** | reactome × NCG 2019 vs × IntOGen 2024 | 等阳性率面板 | Reactome 失效是标签特异的 | 不能说"curator lag 已被证明" | "是标签年龄，不是网络" |

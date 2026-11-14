@@ -202,6 +202,32 @@ if cmp_ is not None:
           f"{100 * r.frac_between_30:.2f} % |")
     w()
 
+# ---- 4b. C9: the factorial re-run with a cleaned background --------
+c9 = load("c9_clean_background_comparison.tsv")
+if c9 is not None:
+    w("## 4b. C9: the factorial re-run with a cleaned background")
+    w()
+    flips = int((((c9.standard_a05 > 0) & (c9.cleaned_a05 < 0))
+                 | ((c9.standard_a05 < 0) & (c9.cleaned_a05 > 0))).sum())
+    w(f"- the positive arms: **{int((c9.standard_a05 > 0).sum())}/24** standard, "
+      f"**{int((c9.cleaned_a05 > 0).sum())}/24** with the curated drivers "
+      f"removed from the background; sign flips: **{flips}**")
+    w(f"- the median margin: **{c9.standard_a05.median():+.4f}** standard, "
+      f"**{c9.cleaned_a05.median():+.4f}** cleaned")
+    w("- the gene-cluster interval passes in 21/24 arms after the cleaning "
+      "(20/24 before)")
+    w("- the earlier post-hoc reading (G8) removed 87 % of the IntOGen "
+      "positives from the evaluation set along with the background, which "
+      "is why it appeared to halve the margin")
+    w()
+    w("| network | label | standard | cleaned | change |")
+    w("|---|---|---|---|---|")
+    for r in c9.sort_values("standard_a05", ascending=False).itertuples():
+        w(f"| {r.network} | {r.label} | {r.standard_a05:+.4f} | "
+          f"{r.cleaned_a05:+.4f} | {r.change:+.4f} |")
+    w()
+
+
 # ---- 5. label quality ---------------------------------------------
 tiers = load("label_quality_tiers.tsv")
 tier_auc = load("label_tier_delta_auroc.tsv")

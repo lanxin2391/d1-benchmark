@@ -204,38 +204,39 @@ if g3 is not None:
                   "rows": rows, "fontsize": 11.5, "rowh": 0.44},
     })
 
-# ---- A7: the negative-set audit -------------------------------------
+# ---- A7: the negative-set audit and the cleaned re-run -------------
 g8 = load("g8_negative_contamination.tsv")
-g8b = load("g8_cleaned_background.tsv")
-if g8 is not None and g8b is not None:
-    piv = g8b.pivot_table(index=["network", "label"], columns="version",
-                           values="delta_auroc")
+c9 = load("c9_clean_background_comparison.tsv")
+if g8 is not None and c9 is not None:
+    c9i = {(r.network, r.label): r for r in c9.itertuples()}
     labs = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
     rows = []
     for net in ["funmap", "rna_coexp", "string_phys700", "intact",
                 "string_full700", "reactome"]:
         row = [net]
         for lab in labs:
-            key = (net, lab)
             c = g8[(g8.network == net) & (g8.label == lab)]
-            if key not in piv.index or c.empty:
+            r = c9i.get((net, lab))
+            if c.empty or r is None:
                 row.append("-")
                 continue
-            c = c.iloc[0]
-            row.append(f"{c.frac_negatives_in_ncg:.1%} | "
-                       f"{piv.loc[key, 'standard']:+.4f} -> "
-                       f"{piv.loc[key, 'cleaned']:+.4f}")
+            row.append(f"{c.iloc[0].frac_negatives_in_ncg:.1%} | "
+                       f"{r.standard_a05:+.4f} -> {r.cleaned_a05:+.4f}")
         rows.append(row)
     slides.append({
         "n": 23, "kind": "appendix", "tag": "APPENDIX A7",
-        "title": "The negative-set audit: how clean is our background?",
+        "title": "The negative set: contaminated, but it does not carry "
+                 "the result",
         "note": "Each cell: the share of the held-out negatives that are "
                 "curated NCG drivers | the margin BEFORE -> AFTER removing "
-                "every NCG gene from the background. Source: "
-                "g8_negative_contamination.tsv, g8_cleaned_background.tsv.",
+                "them from the BACKGROUND and re-running the benchmark "
+                "(Control 13): 23/24 arms stay positive, no sign flip, the "
+                "median +0.0809 -> +0.0822. Source: "
+                "c9_clean_background_comparison.tsv.",
         "table": {"head": ["network"] + labs,
                   "rows": rows, "fontsize": 11, "rowh": 0.44},
     })
+
 
 # ---- A8: the D-11 capped panel (the curator-lag evidence) -----------
 d11 = load("d11_table_v2.tsv")

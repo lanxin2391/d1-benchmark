@@ -158,6 +158,40 @@ string_full700 intogen_temporal_new                5800                 0.059483
 | network x label (interaction) | 40.07 % | 41.95 % |
 | fold (within cell) | 0.34 % | 0.35 % |
 
+## 4b. C9: the factorial re-run with a cleaned background
+
+- the positive arms: **23/24** standard, **23/24** with the curated drivers removed from the background; sign flips: **0**
+- the median margin: **+0.0809** standard, **+0.0822** cleaned
+- the gene-cluster interval passes in 21/24 arms after the cleaning (20/24 before)
+- the earlier post-hoc reading (G8) removed 87 % of the IntOGen positives from the evaluation set along with the background, which is why it appeared to halve the margin
+
+| network | label | standard | cleaned | change |
+|---|---|---|---|---|
+| string_phys700 | ot_nolit | +0.1711 | +0.1741 | +0.0030 |
+| string_phys700 | ot_all | +0.1582 | +0.1624 | +0.0042 |
+| string_full700 | ot_nolit | +0.1267 | +0.1269 | +0.0002 |
+| string_full700 | ot_all | +0.1201 | +0.1214 | +0.0013 |
+| string_phys700 | intogen2024 | +0.1189 | +0.1289 | +0.0100 |
+| string_full700 | intogen2024 | +0.1133 | +0.1183 | +0.0050 |
+| reactome | ot_all | +0.1103 | +0.1119 | +0.0016 |
+| funmap | intogen2024 | +0.1001 | +0.1046 | +0.0045 |
+| reactome | ot_nolit | +0.0996 | +0.1028 | +0.0032 |
+| funmap | ot_all | +0.0853 | +0.0889 | +0.0036 |
+| intact | ot_all | +0.0842 | +0.0853 | +0.0011 |
+| rna_coexp | ot_nolit | +0.0834 | +0.0832 | -0.0002 |
+| intact | ot_nolit | +0.0784 | +0.0793 | +0.0009 |
+| funmap | ot_nolit | +0.0780 | +0.0813 | +0.0033 |
+| rna_coexp | ot_all | +0.0767 | +0.0768 | +0.0001 |
+| intact | intogen2024 | +0.0651 | +0.0671 | +0.0020 |
+| string_full700 | intogen_temporal_new | +0.0604 | +0.0681 | +0.0077 |
+| rna_coexp | intogen2024 | +0.0521 | +0.0533 | +0.0012 |
+| reactome | intogen2024 | +0.0429 | +0.0466 | +0.0037 |
+| string_phys700 | intogen_temporal_new | +0.0378 | +0.0490 | +0.0112 |
+| funmap | intogen_temporal_new | +0.0196 | +0.0239 | +0.0043 |
+| rna_coexp | intogen_temporal_new | +0.0127 | +0.0152 | +0.0025 |
+| intact | intogen_temporal_new | +0.0071 | +0.0089 | +0.0018 |
+| reactome | intogen_temporal_new | -0.0125 | -0.0099 | +0.0026 |
+
 ## 5. Label quality (C7)
 
 | label | high | mid | low |
