@@ -223,6 +223,9 @@ network_lcc_edges	string_full700	236712	data/processed/networks/string_full700.m
 network_nodes	string_full900	12323	data/processed/networks/string_full900.meta.json	nodes before the LCC restriction
 network_lcc_nodes	string_full900	11693	data/processed/networks/string_full900.meta.json	
 network_lcc_edges	string_full900	100383	data/processed/networks/string_full900.meta.json	
+network_nodes	string_nodb700	17530	data/processed/networks/string_nodb700.meta.json	nodes before the LCC restriction
+network_lcc_nodes	string_nodb700	17293	data/processed/networks/string_nodb700.meta.json	
+network_lcc_edges	string_nodb700	236714	data/processed/networks/string_nodb700.meta.json	
 network_nodes	string_phys700	10746	data/processed/networks/string_phys700.meta.json	nodes before the LCC restriction
 network_lcc_nodes	string_phys700	9830	data/processed/networks/string_phys700.meta.json	
 network_lcc_edges	string_phys700	85576	data/processed/networks/string_phys700.meta.json	
@@ -287,6 +290,18 @@ clean_background	positive arms, cleaned background	23	results/tables/c9_clean_ba
 clean_background	sign flips	0	results/tables/c9_clean_background_comparison.tsv	
 clean_background	median margin, standard design	0.0809	results/tables/c9_clean_background_comparison.tsv	
 clean_background	median margin, cleaned background	0.0822	results/tables/c9_clean_background_comparison.tsv	
+seed_perturbation	median relative loss (%) at 90 % of the seeds	1.8902	results/tables/seed_perturbation_predictions.tsv	
+seed_perturbation	median relative loss (%) at 70 % of the seeds	5.9021	results/tables/seed_perturbation_predictions.tsv	
+seed_perturbation	median relative loss (%) at 50 % of the seeds	11.6531	results/tables/seed_perturbation_predictions.tsv	
+size_matched_gene_ci	arms excluding 0 (standard design)	20	results/tables/c15_size_matched_gene_ci.tsv	
+size_matched_gene_ci	arms excluding 0 (equal positive size)	18	results/tables/c15_size_matched_gene_ci.tsv	
+label_redundancy	min R2 of a label's arm means from the other labels	0.8413	results/tables/c16_label_redundancy.tsv	
+label_redundancy	max R2 of a label's arm means from the other labels	0.9982	results/tables/c16_label_redundancy.tsv	
+second_learner	arms with a positive margin	16	results/tables/second_learner_summary.tsv	
+second_learner	median margin	0.0112	results/tables/second_learner_summary.tsv	
+second_learner	Spearman rho against the RWR margin	0.3043	results/tables/second_learner_summary.tsv	
+nodb_channel	mean margin change	-0.0117	results/tables/c18_nodb_channel.tsv	
+nodb_channel	arms with a positive margin after the removal	4	results/tables/c18_nodb_channel.tsv	
 cancer_types	types with a positive median margin	26	results/tables/gr9_cancer_type_summary.tsv	
 cancer_types	median of the per-type medians	0.0271	results/tables/gr9_cancer_type_summary.tsv	
 ncg_circularity	Jaccard with intogen2024	0.522	results/tables/c2_label_jaccard_matrix.tsv	

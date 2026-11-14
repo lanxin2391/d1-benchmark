@@ -687,6 +687,38 @@ negative set is real, and it is **not** what carries the result — which
 is a stronger statement than the one we started with, and it is the one
 we will defend.
 >
+> **And four controls on the design itself**, because the headline is
+> one number on one learner on one panel. **First, the margin survives
+> losing seeds**: dropping 10 % of the training-fold seeds costs a median
+> of **1.9 %** of the margin and only one of the 24 arms loses more than
+> 10 % of it; halving them costs **11.7 %**. What predicts the loss is the
+> *number* of seeds, not the gene-level noise — the arm with about 50
+> seeds loses 29 % of its margin when half are dropped, the arm with
+> about 470 loses 8 %.
+> **Second, the four arms that fail the conservative gene-cluster
+> interval fail for a reason of power, not of size**: on the equal-
+> positive-size panel the failures are no longer only the newest-driver
+> label — every arm with a small effect fails, so what the four share is
+> a small effect.
+> **Third, five labels are not five independent opinions**: each label's
+> per-network means are **84 % to 99.8 %** predictable from the other
+> four, and the overlap matrix has a participation ratio of **1.54** — so
+> the "label main effect" in the variance decomposition is mostly one
+> shared difficulty factor, and it is not five pieces of evidence about
+> driver biology.
+> **Fourth, and this is the one we have to say out loud: the increment is
+> learner-specific.** Under a second, equally locked learner — the
+> distance to the nearest seed — the margin is positive in **16 of 24**
+> arms with a median of **+0.011**, against +0.081 for RWR, and on the
+> densest network it is negative in every label. That is exactly the
+> warning Guala and Sonnhammer raise, now quantified. Our claim is
+> therefore only the pre-registered one: *under a fixed, pre-registered
+> learner, the network contributes beyond degree* — and we do not
+> generalise it to arbitrary priors. Removing STRING's `database`
+> channel, by contrast, changes little, so the concern that our panel
+> shares an upstream knowledge base with our labels is real in
+> principle and small in this measurement.
+
 **Three controls close this section.**
 **The bait-matched null**, where each positive is paired with a
 negative carrying the same publication count: the fraction of
@@ -820,6 +852,10 @@ Thank you.
 | 21 | **17.6→11.6 %；6.8→4.7 %** | bait 匹配前后阳性超过零模型的比例 | 每个阳性配一个发表量相同的阴性 | 一部分 margin 是可见度 | 不能说"全是发表量"（其他标签仍留有信号） | "temporal 标签归零到随机水平" |
 | 22 | **−0.0018..+0.0026** | 17 % 误标下的 margin 变化 | 每折随机降级 17 % 阳性 | margin 不是标签噪声的产物 | 不能说"我们的标签无噪声" | "17 % 噪声不伤 margin" |
 | 23 | **+0.0893 vs −0.0110** | reactome × NCG 2019 vs × IntOGen 2024 | 等阳性率面板 | Reactome 失效是标签特异的 | 不能说"curator lag 已被证明" | "是标签年龄，不是网络" |
+| 24 | **1.9 % / 11.7 %** | 掉 10 % / 50 % 种子后 margin 的损失 | 每个臂随机抽掉一部分训练种子重跑 | margin 对丢种子稳健 | 不能说丢一半种子也没事（temporal 臂损失 29 %） | 掉 10 % 种子只掉 2 % |
+| 25 | **20/24 → 18/24** | gene-cluster 区间通过数（等阳性数面板） | D-11 capped 面板上重算（阳性数相同） | 失败的是小效应臂，不是小标签 | 不能说把阳性数等量化就能救回 | 是功效问题 |
+| 26 | **84 %–99.8 %** | 每个标签的每网络均值可由其他标签预测的 R² | 5×6 arm 均值矩阵的回归 | 五个标签≈一个共同维度 | 不能说五种策展哲学 | 标签几乎是同一个维度 |
+| 27 | **16/24, +0.011** | 第二个 learner（邻近度）下的 margin | 同切分同基线，score = −到最近种子的距离 | 增量是 learner-specific 的 | 不能说换个方法也成立 | 只在我们锁定的方法下成立 |
 
 ---
 

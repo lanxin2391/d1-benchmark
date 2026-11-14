@@ -329,6 +329,61 @@ if cmp_ is not None:
                   "rows": rows, "fontsize": 12, "rowh": 0.44},
     })
 
+# ---- A11: the four controls on the design itself -------------------
+seedp = load("seed_perturbation_predictions.tsv")
+c15 = load("c15_size_matched_gene_ci.tsv")
+c16 = load("c16_label_redundancy.tsv")
+second = load("second_learner_summary.tsv")
+nodb = load("c18_nodb_channel.tsv")
+if seedp is not None and c15 is not None and c16 is not None:
+    s90 = seedp[seedp.seed_fraction == 0.9].iloc[0]
+    s50 = seedp[seedp.seed_fraction == 0.5].iloc[0]
+    rows = [
+        ["Control 14: the seed perturbation",
+         "does the margin survive losing seeds?",
+         f"90 % of the seeds costs {100 * s90.median_relative_loss:.1f} % "
+         f"of the margin; 50 % costs "
+         f"{100 * s50.median_relative_loss:.1f} % -- the loss is set by "
+         f"the number of seeds, not by the gene-level noise"],
+        ["Control 15: the size-matched diagnostic",
+         "why do four arms fail the gene-cluster interval?",
+         f"with the positive-set size held equal it is "
+         f"{int(c15.gene_ci_excludes_0_capped.sum())}/{len(c15)}, and the "
+         f"failures are no longer only the temporal label -- it is a power "
+         f"problem, not a size artefact"],
+        ["Control 16: the label redundancy",
+         "are five label sets five independent opinions?",
+         f"each label's arm means are "
+         f"{c16.r2_of_its_arm_means_from_the_other_labels.min():.2f}-"
+         f"{c16.r2_of_its_arm_means_from_the_other_labels.max():.2f} "
+         f"predictable from the others; the overlap matrix has a "
+         f"participation ratio of 1.54 -- about one dimension"],
+        ["Control 17: a second, fixed learner",
+         "is the increment about RWR or about topology?",
+         f"under the proximity learner the margin is positive in "
+         f"{int((second.delta_auroc > 0).sum())}/{len(second)} arms "
+         f"(median {second.delta_auroc.median():+.4f} against +0.0809) -- "
+         f"the increment is learner-specific, as Guala warned"],
+        ["Control 18: STRING without the database channel",
+         "does the panel share an upstream knowledge base with the labels?",
+         "the margin survives the removal of the channel "
+         + ", ".join(f"{r.label.split('_cap')[0][:9]} "
+                     f"{r.with_the_database_channel:+.3f}->"
+                     f"{r.without_the_database_channel:+.3f}"
+                     for r in nodb.itertuples())],
+    ]
+    slides.append({
+        "n": 27, "kind": "appendix", "tag": "APPENDIX A11",
+        "title": "Four controls on the design itself",
+        "note": "Each of the four asks whether the headline number can be "
+                "read as a statement about topology rather than about our "
+                "choices. The pre-registered endpoint is untouched; all "
+                "four are exploratory (amendment 4).",
+        "table": {"head": ["control", "the question", "the answer"],
+                  "rows": rows, "fontsize": 11, "rowh": 0.78},
+    })
+
+
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps({"slides": slides}, indent=1, ensure_ascii=False),
                encoding="utf-8")

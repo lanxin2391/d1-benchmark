@@ -76,7 +76,7 @@
         "DepMap (1,361 cell lines): at K = 30 candidates the prior shows no enrichment beyond chance (6 % of cell lines, p < 0.05); at K = 100 it does (48 %). The prior carries set-level signal, not gene-level calls.",
         "NCG arbitration: the prior ranks drivers that our labels do not contain above the rest in 24/24 arms (median +0.041) — but in only 13/24 on the low-FPR endpoint, and the protein networks are the only ones that pass.",
         "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers -- but re-running the whole benchmark with them removed from the background leaves 23/24 arms positive, no sign flip and the median margin at +0.082: the contamination does not carry the result.",
-        "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific."
+        "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific.\nAnd four controls on the design itself: the margin survives losing 10 % of the seeds (-2 %); the four gene-cluster failures are a power problem, not a size artefact; the five labels carry about one dimension, not five; and the increment is learner-specific (a proximity learner gives +0.011 against RWR's +0.081)."
       ],
       "footer": "Take-home: the prior really transfers to drivers we never labelled — and the contamination of our own negative set does not carry the result."
     },

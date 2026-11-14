@@ -192,6 +192,16 @@ string_full700 intogen_temporal_new                5800                 0.059483
 | intact | intogen_temporal_new | +0.0071 | +0.0089 | +0.0018 |
 | reactome | intogen_temporal_new | -0.0125 | -0.0099 | +0.0026 |
 
+## 4c. the four design controls (C17)
+
+- the seed perturbation, 90 % of the seeds: the median margin +0.0781, the median relative loss 1.9 %, 1 of 24 arms lose more than 10 %; rho(score CV, loss) = -0.04
+- the seed perturbation, 70 % of the seeds: the median margin +0.0726, the median relative loss 5.9 %, 5 of 24 arms lose more than 10 %; rho(score CV, loss) = +0.25
+- the seed perturbation, 50 % of the seeds: the median margin +0.0673, the median relative loss 11.7 %, 18 of 24 arms lose more than 10 %; rho(score CV, loss) = +0.26
+- the size-matched diagnostic: the gene-cluster interval excludes zero in 20/24 arms in the standard design and 18/24 with the positive-set size held equal -> the failures are a power problem
+- the label redundancy: each label's per-network means are 0.84-1.00 predictable from the other labels (R-squared); the overlap matrix has a participation ratio of 1.54
+- the second (proximity) learner: positive in 16/24 arms, the median margin +0.0112 against RWR's +0.0809; the Spearman rho between the two learners is +0.30
+- STRING without the database channel: the margin changes by intogen2024 -0.0249, intogen_temporal_new +0.0057, ot_all -0.0381, ot_nolit +0.0103 -> the shared-upstream-knowledge-base concern is small here
+
 ## 5. Label quality (C7)
 
 | label | high | mid | low |

@@ -525,6 +525,41 @@ def main(argv: list[str] | None = None) -> int:
          ("clean_background", "median margin, cleaned background"),
          0.002),
 
+
+        # ---- the four design controls (C17 / F.20) ----
+        ("seed perturbation, 90 %", "manuscript_a_sections.md",
+         r"costs a median of \*\*([\d.]+) %\*\*",
+         ("seed_perturbation",
+          "median relative loss at 90 % of the seeds"),
+         0.06),
+        ("seed perturbation, 50 %", "manuscript_a_sections.md",
+         r"halving the seeds costs a median of\s*([\d.]+) %",
+         ("seed_perturbation",
+          "median relative loss at 50 % of the seeds"),
+         0.06),
+        ("size-matched, standard", "manuscript_a_sections.md",
+         r"gene-cluster interval excludes zero in (\d+) of 24 arms",
+         ("size_matched_gene_ci", "arms excluding 0 (standard design)"),
+         0.5),
+        ("size-matched, capped", "manuscript_a_sections.md",
+         r"the gene-cluster interval excludes\s*zero in \*\*(\d+) of \d+\*\* arms",
+         ("size_matched_gene_ci",
+          "arms excluding 0 (equal positive size)"),
+         0.5),
+        ("label redundancy, low", "manuscript_a_sections.md",
+         r"are \*\*([\d.]+) to [\d.]+\*\*",
+         ("label_redundancy",
+          "min R2 of a label's arm means from the other labels"),
+         0.006),
+        ("second learner, arms", "manuscript_a_sections.md",
+         r"positive in\s*\*\*(\d+) of \d+\*\* arms with a median of",
+         ("second_learner", "arms with a positive margin"),
+         0.5),
+        ("second learner, median", "manuscript_a_sections.md",
+         r"with a median of\s*\*\*([+−-]0\.\d{4})\*\*",
+         ("second_learner", "median margin"),
+         0.002),
+
     ]
     for cid, fname, pattern, key, tol in cross:
         val = gt.get(key)

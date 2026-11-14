@@ -190,7 +190,14 @@ states something the tables do not support.
   [PASS] c9 positive arms, cleaned      manuscript=+23.0000  table=+23.0000  tol=0.5
   [PASS] c9 median, standard            manuscript=+0.0809  table=+0.0809  tol=0.002
   [PASS] c9 median, cleaned             manuscript=+0.0822  table=+0.0822  tol=0.002
+  [SKIP] seed perturbation, 90 %        (no ground truth for ('seed_perturbation', 'median relative loss at 90 % of the seeds'))
+  [SKIP] seed perturbation, 50 %        (no ground truth for ('seed_perturbation', 'median relative loss at 50 % of the seeds'))
+  [PASS] size-matched, standard         manuscript=+20.0000  table=+20.0000  tol=0.5
+  [PASS] size-matched, capped           manuscript=+18.0000  table=+18.0000  tol=0.5
+  [PASS] label redundancy, low          manuscript=+0.8400  table=+0.8413  tol=0.006
+  [PASS] second learner, arms           manuscript=+16.0000  table=+16.0000  tol=0.5
+  [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 109 PASS / 0 FAIL
+RESULT: 114 PASS / 0 FAIL
 ========================================================================

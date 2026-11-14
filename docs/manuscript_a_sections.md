@@ -527,6 +527,45 @@ are unchanged; the 24 arms are re-run and the statistics recomputed
 This is the exploratory family (amendment 4). The pre-registered
 endpoint -- the 24-arm standard design -- is untouched.
 
+### C17 — Four controls on the design itself
+
+The pre-registered endpoint is one number on one learner on one panel.
+Four controls test whether that number can be taken as a statement about
+topology rather than about our choices.
+
+* **Control 14 (the seed perturbation).** Every arm is re-run with
+  100 %, 90 %, 70 % and 50 % of its training-fold seeds (a fresh random
+  subsample per fold, a fixed seed, the same locked learner and the same
+  test folds). This tests the seed-count law directly: if a gene's score
+  is linear in the seed set, then dropping seeds shrinks the scores
+  together and leaves the ranking nearly intact.
+* **Control 15 (the size-matched diagnostic).** The gene-cluster
+  interval excludes zero in 20 of 24 arms, and the four failures are all
+  `intogen_temporal_new` -- the label with the smallest positive set.
+  On the D-11 capped panel, where all four labels have the *same*
+  number of positives inside each arm, the size is held constant and the
+  failures can be attributed to the effect size or to the size.
+* **Control 16 (the label redundancy).** The five label sets are not
+  five independent opinions: the participation ratio of the overlap
+  matrix, the principal components of the arm means, and the R-squared
+  of each label's arm means predicted from the other four quantify how
+  much independent curation information the panel carries.
+* **Control 17 (a second, fixed learner).** The **proximity learner**,
+  score(g) = -distance(g, nearest training seed), is run over the same
+  splits, folds and baseline. It is a deliberately different family
+  from diffusion -- local, greedy, no restart -- and the family
+  Guala & Sonnhammer's benchmark favours, so it tests whether the
+  increment is a property of topology or of RWR.
+* **Control 18 (STRING without the `database` channel).** Reactome is
+  the gold standard of FunMap's edges, Reactome feeds STRING's
+  `database` channel, and Reactome- and CGC-derived evidence is also
+  what the labels are built from. The detailed STRING file carries the
+  per-channel evidence, so the channel can be removed and a
+  density-matched network rebuilt. **This is an approximation**: the edge
+  weight is the maximum over the remaining channels, not STRING's own
+  Bayesian combined score, so the comparison is about the *presence* of
+  the channel rather than about STRING's scoring function.
+
 ---
 
 ## §D. Methods §4.6 — Statistical analysis
@@ -1427,6 +1466,69 @@ drivers removed from the background and the whole benchmark re-run, the
 margin is unchanged. The earlier post-hoc reading ("the margin roughly
 halves") was an artefact of that computation removing 87 % of the
 IntOGen positives from the evaluation set along with the background.
+
+### F.20 Four controls on the design itself
+
+**Control 14 -- the margin survives the loss of seeds.** Dropping 10 % of
+the training-fold seeds costs a median of **1.9 %**
+of the margin (+0.0781 against +0.0809) and only
+**1 of 24** arms loses more than
+10 % of it; halving the seeds costs a median of
+11.7 % (+0.0673). That
+is the seed-count law in practice: the scores shrink together, so the
+ranking survives. A prediction we made did **not** survive: the arms
+whose per-gene score CV is highest do not lose the most (Spearman
+-0.04 / +0.26 at 90 %
+and 50 % of the seeds). What predicts the loss is the **number** of
+seeds: the arm with about 50 seeds (Reactome x the newest drivers) loses
+29 % of its margin when half the seeds are dropped, while an arm with
+about 470 seeds loses 8 %. So the answer to "how many seeds does an arm
+need?" is set by the label's positive set, not by the network.
+
+**Control 15 -- the four failures are a power problem, not a size
+artefact.** On the D-11 capped panel, where every label has the same
+number of positives inside the arm, the gene-cluster interval excludes
+zero in **18 of 24** arms -- and the failures are no longer
+only the temporal label (the Open Targets and IntOGen arms with the
+smallest capped margins fail as well). Holding the size constant does not
+rescue the four arms; what they share is a **small effect size**. The
+temporal label fails because its effect is the smallest, not because its
+label is small.
+
+**Control 16 -- the label panel carries about one dimension, not five.**
+Each label's per-network arm means are **0.84 to 1.00**
+predictable (R-squared) from the other four labels, and the
+participation ratio of the overlap matrix is **1.54** (1.00 on the
+centred overlap), with the principal component loading the same sign on
+all five. The 30-35 % of the between-arm spread that the variance
+decomposition calls "label" is therefore mostly a **shared difficulty
+factor** -- how well a label separates the drivers at all -- and not
+five curation philosophies. It also means that the label main effect is
+not five independent pieces of evidence about driver biology.
+
+**Control 17 -- the increment is learner-specific.** Under the
+proximity learner the margin over degree is positive in
+**16 of 24** arms with a median of
+**+0.0112**, against +0.0809 for RWR, and the two learners'
+margins correlate at only Spearman +0.30. On the densest
+network (IntAct) the proximity margin is *negative* in every label.
+**So the increment we measure is a property of diffusion over degree,
+not a property of topology in general** -- exactly the warning Guala &
+Sonnhammer raise, now quantified. The pre-registered claim (the network
+contributes beyond degree **under a fixed, pre-registered learner**) is
+unaffected; its generalisation is not available, and we do not make it.
+
+**Control 18 -- STRING's contribution is not mostly its database
+channel.** Rebuilding STRING from the non-database channels only, at the
+same edge count (4 of
+four labels), leaves the margin essentially intact:
+* intogen2024: +0.1133 -> +0.0884
+* intogen_temporal_new: +0.0604 -> +0.0661
+* ot_all: +0.1201 -> +0.0820
+* ot_nolit: +0.1267 -> +0.1370
+So the concern that our panel shares an upstream knowledge base with our
+labels is real in principle but small in this measurement: the
+database channel is not what makes STRING useful here.
 
 ---
 

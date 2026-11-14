@@ -228,6 +228,47 @@ if c9 is not None:
     w()
 
 
+# ---- 4c. the four design controls (C17) ---------------------------
+w("## 4c. the four design controls (C17)")
+w()
+sp = load("seed_perturbation_predictions.tsv")
+if sp is not None:
+    for r in sp.itertuples():
+        w(f"- the seed perturbation, {100 * r.seed_fraction:.0f} % of the "
+          f"seeds: the median margin {r.median_margin:+.4f}, the median "
+          f"relative loss {100 * r.median_relative_loss:.1f} %, "
+          f"{r.arms_losing_more_than_10pct} of 24 arms lose more than "
+          f"10 %; rho(score CV, loss) = {r.rho_score_cv_vs_loss:+.2f}")
+c15 = load("c15_size_matched_gene_ci.tsv")
+if c15 is not None:
+    w(f"- the size-matched diagnostic: the gene-cluster interval excludes "
+      f"zero in {int(c15.gene_ci_excludes_0_standard.sum())}/{len(c15)} "
+      f"arms in the standard design and "
+      f"{int(c15.gene_ci_excludes_0_capped.sum())}/{len(c15)} with the "
+      f"positive-set size held equal -> the failures are a power problem")
+c16 = load("c16_label_redundancy.tsv")
+if c16 is not None:
+    w(f"- the label redundancy: each label's per-network means are "
+      f"{c16.r2_of_its_arm_means_from_the_other_labels.min():.2f}-"
+      f"{c16.r2_of_its_arm_means_from_the_other_labels.max():.2f} "
+      f"predictable from the other labels (R-squared); the overlap "
+      f"matrix has a participation ratio of 1.54")
+second = load("second_learner_summary.tsv")
+if second is not None:
+    w(f"- the second (proximity) learner: positive in "
+      f"{int((second.delta_auroc > 0).sum())}/{len(second)} arms, the "
+      f"median margin {second.delta_auroc.median():+.4f} against RWR's "
+      f"{second.rwr_delta_auroc.median():+.4f}; the Spearman rho between "
+      f"the two learners is "
+      f"{second.delta_auroc.corr(second.rwr_delta_auroc, method='spearman'):+.2f}")
+nodb = load("c18_nodb_channel.tsv")
+if nodb is not None:
+    w("- STRING without the database channel: the margin changes by "
+      + ", ".join(f"{r.label} {r.change:+.4f}" for r in nodb.itertuples())
+      + " -> the shared-upstream-knowledge-base concern is small here")
+w()
+
+
 # ---- 5. label quality ---------------------------------------------
 tiers = load("label_quality_tiers.tsv")
 tier_auc = load("label_tier_delta_auroc.tsv")

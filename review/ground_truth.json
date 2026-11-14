@@ -1569,6 +1569,27 @@
  },
  {
   "quantity": "network_nodes",
+  "scope": "string_nodb700",
+  "value": 17530,
+  "source": "data/processed/networks/string_nodb700.meta.json",
+  "note": "nodes before the LCC restriction"
+ },
+ {
+  "quantity": "network_lcc_nodes",
+  "scope": "string_nodb700",
+  "value": 17293,
+  "source": "data/processed/networks/string_nodb700.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_lcc_edges",
+  "scope": "string_nodb700",
+  "value": 236714,
+  "source": "data/processed/networks/string_nodb700.meta.json",
+  "note": ""
+ },
+ {
+  "quantity": "network_nodes",
   "scope": "string_phys700",
   "value": 10746,
   "source": "data/processed/networks/string_phys700.meta.json",
@@ -2013,6 +2034,90 @@
   "scope": "median margin, cleaned background",
   "value": 0.0822,
   "source": "results/tables/c9_clean_background_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "seed_perturbation",
+  "scope": "median relative loss (%) at 90 % of the seeds",
+  "value": 1.8902,
+  "source": "results/tables/seed_perturbation_predictions.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "seed_perturbation",
+  "scope": "median relative loss (%) at 70 % of the seeds",
+  "value": 5.9021,
+  "source": "results/tables/seed_perturbation_predictions.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "seed_perturbation",
+  "scope": "median relative loss (%) at 50 % of the seeds",
+  "value": 11.6531,
+  "source": "results/tables/seed_perturbation_predictions.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "size_matched_gene_ci",
+  "scope": "arms excluding 0 (standard design)",
+  "value": 20,
+  "source": "results/tables/c15_size_matched_gene_ci.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "size_matched_gene_ci",
+  "scope": "arms excluding 0 (equal positive size)",
+  "value": 18,
+  "source": "results/tables/c15_size_matched_gene_ci.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_redundancy",
+  "scope": "min R2 of a label's arm means from the other labels",
+  "value": 0.8413,
+  "source": "results/tables/c16_label_redundancy.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "label_redundancy",
+  "scope": "max R2 of a label's arm means from the other labels",
+  "value": 0.9982,
+  "source": "results/tables/c16_label_redundancy.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "second_learner",
+  "scope": "arms with a positive margin",
+  "value": 16,
+  "source": "results/tables/second_learner_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "second_learner",
+  "scope": "median margin",
+  "value": 0.0112,
+  "source": "results/tables/second_learner_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "second_learner",
+  "scope": "Spearman rho against the RWR margin",
+  "value": 0.3043,
+  "source": "results/tables/second_learner_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "nodb_channel",
+  "scope": "mean margin change",
+  "value": -0.0117,
+  "source": "results/tables/c18_nodb_channel.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "nodb_channel",
+  "scope": "arms with a positive margin after the removal",
+  "value": 4,
+  "source": "results/tables/c18_nodb_channel.tsv",
   "note": ""
  },
  {

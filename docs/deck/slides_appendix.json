@@ -772,6 +772,49 @@
     "fontsize": 12,
     "rowh": 0.44
    }
+  },
+  {
+   "n": 27,
+   "kind": "appendix",
+   "tag": "APPENDIX A11",
+   "title": "Four controls on the design itself",
+   "note": "Each of the four asks whether the headline number can be read as a statement about topology rather than about our choices. The pre-registered endpoint is untouched; all four are exploratory (amendment 4).",
+   "table": {
+    "head": [
+     "control",
+     "the question",
+     "the answer"
+    ],
+    "rows": [
+     [
+      "Control 14: the seed perturbation",
+      "does the margin survive losing seeds?",
+      "90 % of the seeds costs 1.9 % of the margin; 50 % costs 11.7 % -- the loss is set by the number of seeds, not by the gene-level noise"
+     ],
+     [
+      "Control 15: the size-matched diagnostic",
+      "why do four arms fail the gene-cluster interval?",
+      "with the positive-set size held equal it is 18/24, and the failures are no longer only the temporal label -- it is a power problem, not a size artefact"
+     ],
+     [
+      "Control 16: the label redundancy",
+      "are five label sets five independent opinions?",
+      "each label's arm means are 0.84-1.00 predictable from the others; the overlap matrix has a participation ratio of 1.54 -- about one dimension"
+     ],
+     [
+      "Control 17: a second, fixed learner",
+      "is the increment about RWR or about topology?",
+      "under the proximity learner the margin is positive in 16/24 arms (median +0.0112 against +0.0809) -- the increment is learner-specific, as Guala warned"
+     ],
+     [
+      "Control 18: STRING without the database channel",
+      "does the panel share an upstream knowledge base with the labels?",
+      "the margin survives the removal of the channel intogen20 +0.113->+0.088, intogen_t +0.060->+0.066, ot_all +0.120->+0.082, ot_nolit +0.127->+0.137"
+     ]
+    ],
+    "fontsize": 11,
+    "rowh": 0.78
+   }
   }
  ]
 }

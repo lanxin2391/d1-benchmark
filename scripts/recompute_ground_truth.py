@@ -570,6 +570,49 @@ def recent_series() -> None:
            r4(c9.cleaned_a05.median()),
            "results/tables/c9_clean_background_comparison.tsv")
 
+    # ---- the four design controls (C17) ----------------------------
+    sp = t("seed_perturbation_predictions.tsv")
+    for r in sp.itertuples():
+        record("seed_perturbation",
+               f"median relative loss (%) at {100 * r.seed_fraction:.0f} % "
+               f"of the seeds",
+               r4(100 * r.median_relative_loss),
+               "results/tables/seed_perturbation_predictions.tsv")
+    c15 = t("c15_size_matched_gene_ci.tsv")
+    record("size_matched_gene_ci", "arms excluding 0 (standard design)",
+           int(c15.gene_ci_excludes_0_standard.sum()),
+           "results/tables/c15_size_matched_gene_ci.tsv")
+    record("size_matched_gene_ci", "arms excluding 0 (equal positive size)",
+           int(c15.gene_ci_excludes_0_capped.sum()),
+           "results/tables/c15_size_matched_gene_ci.tsv")
+    c16 = t("c16_label_redundancy.tsv")
+    record("label_redundancy",
+           "min R2 of a label's arm means from the other labels",
+           r4(c16.r2_of_its_arm_means_from_the_other_labels.min()),
+           "results/tables/c16_label_redundancy.tsv")
+    record("label_redundancy",
+           "max R2 of a label's arm means from the other labels",
+           r4(c16.r2_of_its_arm_means_from_the_other_labels.max()),
+           "results/tables/c16_label_redundancy.tsv")
+    second = t("second_learner_summary.tsv")
+    record("second_learner", "arms with a positive margin",
+           int((second.delta_auroc > 0).sum()),
+           "results/tables/second_learner_summary.tsv")
+    record("second_learner", "median margin",
+           r4(second.delta_auroc.median()),
+           "results/tables/second_learner_summary.tsv")
+    record("second_learner", "Spearman rho against the RWR margin",
+           r4(second.delta_auroc.corr(second.rwr_delta_auroc,
+                                     method="spearman")),
+           "results/tables/second_learner_summary.tsv")
+    nodb = t("c18_nodb_channel.tsv")
+    record("nodb_channel", "mean margin change",
+           r4(nodb.change.mean()),
+           "results/tables/c18_nodb_channel.tsv")
+    record("nodb_channel", "arms with a positive margin after the removal",
+           int((nodb.without_the_database_channel > 0).sum()),
+           "results/tables/c18_nodb_channel.tsv")
+
     # ---- GR-9: the cancer-type stratification --------------------
     gr9 = t("gr9_cancer_type_summary.tsv")
     record("cancer_types", "types with a positive median margin",

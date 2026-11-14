@@ -1,0 +1,801 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+string_nodb700	intogen_temporal_new	native_string_nodb700		0	0	degree		0.6689168089270101	0.01328473112499408	0.0	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		0	1	degree		0.6902985824871821	0.015613245819440411	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		0	2	degree		0.5839650145772594	0.019169678626036038	0.04	0.03	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		0	3	degree		0.5886193252811329	0.010067766755339035	0.0	0.0	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		0	4	degree		0.6958506872136611	0.018676836548773834	0.0	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		1	0	degree		0.6529749760586251	0.017632852526875534	0.02	0.01	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		1	1	degree		0.6096109379712475	0.011644123870695555	0.0	0.0	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		1	2	degree		0.7693224087664624	0.027406339400081522	0.04	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		1	3	degree		0.6716055810079135	0.013242735087062998	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		1	4	degree		0.5231361932528114	0.009373155470245158	0.0	0.01	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		2	0	degree		0.7040325602698091	0.023476786382453995	0.02	0.02	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		2	1	degree		0.6476123454307832	0.01376499187094027	0.0	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		2	2	degree		0.634457625414698	0.014719746803983927	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		2	3	degree		0.5518117451062057	0.00978705705114945	0.0	0.0	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		2	4	degree		0.6881924198250728	0.015688972635887387	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		3	0	degree		0.6796852229670649	0.01557960398305243	0.0	0.01	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		3	1	degree		0.6486528601588418	0.012778100182928888	0.02	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		3	2	degree		0.6080476525585603	0.013765097529219675	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		3	3	degree		0.6448511037067888	0.021010278611141634	0.04	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		3	4	degree		0.6529154518950437	0.012758982084522393	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		4	0	degree		0.6399113128200858	0.01627645271233344	0.02	0.02	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		4	1	degree		0.7237458530210114	0.02437593181571346	0.02	0.02	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		4	2	degree		0.6461847793304514	0.012414666405368802	0.0	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		4	3	degree		0.6495835068721366	0.013406337571918657	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		4	4	degree		0.5680705955851728	0.010652955987527604	0.02	0.01	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		5	0	degree		0.6469063579964192	0.011257846435737889	0.0	0.0	0.008	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		5	1	degree		0.6440886699507389	0.016879384656146378	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		5	2	degree		0.6552980798230623	0.016315681402166084	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		5	3	degree		0.7064868804664723	0.01881763575178251	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		5	4	degree		0.5789618908788006	0.011219885513163587	0.02	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		6	0	degree		0.6919681891993172	0.01466047594317875	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		6	1	degree		0.5992309238966522	0.013051153791606197	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		6	2	degree		0.5664371167186085	0.010203038837048971	0.0	0.01	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		6	3	degree		0.6943304872969595	0.026114342520522107	0.04	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		6	4	degree		0.6848708871303623	0.014332737683171152	0.0	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		7	0	degree		0.6538701752925011	0.016576567059491	0.02	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		7	1	degree		0.5994923092389665	0.012410413447157612	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		7	2	degree		0.6470141751281793	0.013653242823194788	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		7	3	degree		0.6599385672636401	0.017308888960209656	0.02	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		7	4	degree		0.6720897542690546	0.016693142061991486	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		8	0	degree		0.5814475163425906	0.01009594140221755	0.0	0.0	0.008	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		8	1	degree		0.6769377701819644	0.014765067580867743	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		8	2	degree		0.5490248316075199	0.015980866808978818	0.04	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		8	3	degree		0.7050812161599335	0.016130392533912793	0.0	0.0	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		8	4	degree		0.7202103290295709	0.021066284814643538	0.02	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		9	0	degree		0.6500031227880252	0.01308567514705022	0.0	0.0	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		9	1	degree		0.6077460540866593	0.017345294306858463	0.02	0.02	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		9	2	degree		0.6912234844676787	0.01573829337608622	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		9	3	degree		0.6410714285714285	0.015415610093553968	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		9	4	degree		0.6385620574760517	0.014076989842662148	0.0	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		10	0	degree		0.673777948952825	0.015271458832833172	0.0	0.02	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		10	1	degree		0.6795365436815121	0.02542325551952023	0.04	0.03	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		10	2	degree		0.5908615663013973	0.011346920141919025	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		10	3	degree		0.6375832986255726	0.011422373266062397	0.0	0.0	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		10	4	degree		0.6461162015826738	0.01766130732581251	0.02	0.01	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		11	0	degree		0.6416808927010035	0.02125555660569118	0.02	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		11	1	degree		0.6934050467477632	0.014507432621558292	0.0	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		11	2	degree		0.6250829395797728	0.015926037594125652	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		11	3	degree		0.5980737192836318	0.011132291319857678	0.0	0.0	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		11	4	degree		0.6706997084548105	0.013525538059378	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		12	0	degree		0.7176166881792064	0.023091237820197858	0.02	0.01	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		12	1	degree		0.5991907107670655	0.011209272066650755	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		12	2	degree		0.5722479139439027	0.01636942400446027	0.04	0.04	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		12	3	degree		0.6798365264473136	0.013247006132993452	0.0	0.0	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		12	4	degree		0.6660714285714285	0.013651107598346765	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		13	0	degree		0.6572375817129532	0.017599062064867204	0.02	0.02	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		13	1	degree		0.5823916758821756	0.010158170317263059	0.0	0.0	0.008	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		13	2	degree		0.6955815823866492	0.022845696422569516	0.02	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		13	3	degree		0.7253800499791753	0.017781405668278905	0.0	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		13	4	degree		0.5667065805914202	0.009482230466839617	0.0	0.0	0.006	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		14	0	degree		0.6139401257442645	0.010942854140910755	0.0	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		14	1	degree		0.5963456318487987	0.011024587091456836	0.0	0.0	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		14	2	degree		0.6794460641399417	0.019419485159541276	0.02	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		14	3	degree		0.7026811745106205	0.01680328963239406	0.0	0.03	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		14	4	degree		0.6387338608912952	0.017532785222597186	0.02	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		15	0	degree		0.6872735978681768	0.01716842296741079	0.02	0.01	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		15	1	degree		0.6211973459334473	0.011780817194144423	0.0	0.0	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		15	2	degree		0.6399768774504876	0.013940430530761532	0.0	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		15	3	degree		0.6505935027072053	0.01232258327357542	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		15	4	degree		0.6295501874219075	0.019622172032117163	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		16	0	degree		0.6824228671357788	0.01685652917510486	0.0	0.01	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		16	1	degree		0.6185784658691063	0.013707063205348148	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		16	2	degree		0.6952799839147482	0.029709290075980693	0.04	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		16	3	degree		0.5596834652228239	0.010173240787481629	0.0	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		16	4	degree		0.6730372761349437	0.012641144933915608	0.0	0.0	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		17	0	degree		0.6538649706457925	0.01229955773511356	0.0	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		17	1	degree		0.6647381119935659	0.015840782058478303	0.02	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		17	2	degree		0.6212124258570422	0.013454590465031786	0.02	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		17	3	degree		0.6355320699708454	0.012407266010035759	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		17	4	degree		0.6556018325697626	0.02622737778299117	0.02	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		18	0	degree		0.6656899279676896	0.01386563965520065	0.0	0.0	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		18	1	degree		0.5735799738614659	0.018457694127905523	0.04	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		18	2	degree		0.7153362822961697	0.01791740141393372	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		18	3	degree		0.6802998750520617	0.013010485286904886	0.0	0.0	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		18	4	degree		0.5963348604748022	0.01296857051130649	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		19	0	degree		0.6378138401965273	0.014250872603584153	0.02	0.02	0.01	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		19	1	degree		0.6999447069468181	0.021943865009672377	0.02	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		19	2	degree		0.6063989142455013	0.013343498757006687	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		19	3	degree		0.6053154935443565	0.010185413101837326	0.0	0.0	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		19	4	degree		0.6767388588088297	0.016236579836789663	0.0	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		20	0	degree		0.6604176208518966	0.012893286123648264	0.0	0.0	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		20	1	degree		0.7291645722328339	0.0190022327254609	0.0	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		20	2	degree		0.7062028752387655	0.017832367047109193	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		20	3	degree		0.5391243231986672	0.008972805430272483	0.0	0.0	0.006	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		20	4	degree		0.590988129945856	0.01694504295645326	0.02	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		21	0	degree		0.6905993671149603	0.019435253334761895	0.02	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		21	1	degree		0.6714386247109683	0.013570947459995708	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		21	2	degree		0.6309490298582486	0.013321914479171075	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		21	3	degree		0.6689348188254894	0.013716165885007259	0.0	0.0	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		21	4	degree		0.5673521449396085	0.014076691649107327	0.02	0.02	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		22	0	degree		0.5690812757630012	0.009742443079043865	0.0	0.0	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		22	1	degree		0.6883281391374284	0.017016655696408776	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		22	2	degree		0.5959686337589223	0.011067389112642097	0.0	0.0	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		22	3	degree		0.6664514785506039	0.017180938697078804	0.04	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		22	4	degree		0.7113025822573928	0.02208049997615505	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		23	0	degree		0.6202689761418996	0.013810652512016915	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		23	1	degree		0.7024831607519856	0.021073528875285352	0.02	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		23	2	degree		0.5782798833819242	0.012320134156555142	0.02	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		23	3	degree		0.6506039150354019	0.011704010458675309	0.0	0.0	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		23	4	degree		0.6808361099541859	0.018586287614512285	0.02	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		24	0	degree		0.7027105800058293	0.02219645616869878	0.02	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		24	1	degree		0.5959686337589223	0.010999168882624255	0.02	0.01	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		24	2	degree		0.6216447170001006	0.015407124841225918	0.02	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		24	3	degree		0.5950437317784256	0.012606146208755258	0.0	0.0	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		24	4	degree		0.7174718867138692	0.014432130333975526	0.0	0.0	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		25	0	degree		0.6688595578132157	0.016833537062340167	0.02	0.03	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		25	1	degree		0.6271589423946918	0.012350204986791359	0.0	0.0	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		25	2	degree		0.6082889313360813	0.014062889865631482	0.02	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		25	3	degree		0.6341420241566014	0.015253400774779428	0.02	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		25	4	degree		0.6922167846730529	0.0164652566721968	0.0	0.0	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		26	0	degree		0.5787515093475455	0.01002886905472552	0.0	0.0	0.008	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		26	1	degree		0.6813159746657284	0.01607470734074109	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		26	2	degree		0.5976123454307832	0.017276412888166937	0.02	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		26	3	degree		0.7024312786339026	0.019278130738798097	0.02	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		26	4	degree		0.6685235318617244	0.014181227820052282	0.02	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		27	0	degree		0.6507421826206436	0.01433090443642937	0.02	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		27	1	degree		0.6938122046848295	0.016586167990820255	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		27	2	degree		0.6245099024831607	0.01700831376723826	0.02	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		27	3	degree		0.6297584339858392	0.011719861613063773	0.0	0.01	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		27	4	degree		0.6297792586422325	0.01479289366674151	0.0	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		28	0	degree		0.6172658949910481	0.01587927205623891	0.02	0.02	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		28	1	degree		0.5946416004825575	0.01073359451667411	0.0	0.0	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		28	2	degree		0.674927113702624	0.014505384863550031	0.0	0.0	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		28	3	degree		0.5982767596834652	0.010656158593472463	0.0	0.0	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		28	4	degree		0.7459548104956267	0.027738052159943804	0.04	0.04	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		29	0	degree		0.5991381105050589	0.011802630155681981	0.02	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		29	1	degree		0.7067909922589726	0.02350571898141192	0.04	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		29	2	degree		0.7096109379712476	0.016876961799423454	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		29	3	degree		0.5487244897959185	0.009801902053073418	0.0	0.01	0.008	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		29	4	degree		0.6602821740941275	0.014111065980123173	0.0	0.0	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		30	0	degree		0.6032289628180039	0.010901886706930559	0.0	0.0	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		30	1	degree		0.6496230019101237	0.0159853224476181	0.02	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		30	2	degree		0.6316577862672162	0.016869868214935437	0.0	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		30	3	degree		0.7250989171178677	0.01581666353319336	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		30	4	degree		0.621064139941691	0.014151508610555068	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		31	0	degree		0.6447828621393179	0.011856893085243346	0.0	0.0	0.008	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		31	1	degree		0.698210515733387	0.02590893286324739	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		31	2	degree		0.6099527495727355	0.012414488047773753	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		31	3	degree		0.6796595168679718	0.018340261550441567	0.04	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		31	4	degree		0.5970481049562683	0.011460428521509677	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		32	0	degree		0.5932360411375277	0.014664049898258341	0.02	0.01	0.008	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		32	1	degree		0.647582185583593	0.015563450973215542	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		32	2	degree		0.5817382125263899	0.011486763292050345	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		32	3	degree		0.613603706788838	0.010905361829271893	0.0	0.0	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		32	4	degree		0.794731361932528	0.025477817812536326	0.02	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		33	0	degree		0.5667912312112254	0.009483065998117919	0.0	0.0	0.006	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		33	1	degree		0.6838142153413089	0.014402069040427993	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		33	2	degree		0.6407761134010255	0.012755085382079902	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		33	3	degree		0.6381611828404831	0.017341743745877818	0.04	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		33	4	degree		0.7016607663473553	0.023285403271535485	0.02	0.02	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		34	0	degree		0.6387819044843236	0.016449831990248756	0.02	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		34	1	degree		0.6766512516336584	0.01572625067229694	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		34	2	degree		0.5883582989846184	0.014382460531892023	0.04	0.02	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		34	3	degree		0.6429092044981258	0.012352254444978296	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		34	4	degree		0.6802998750520617	0.016612354884512643	0.0	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		35	0	degree		0.624802223425074	0.01481530368614747	0.0	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		35	1	degree		0.6381572333366844	0.01576471603016381	0.02	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		35	2	degree		0.6815723333668443	0.018355971736406167	0.02	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		35	3	degree		0.659454394002499	0.01341005527562102	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		35	4	degree		0.6257236568096627	0.012316932709375582	0.0	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		36	0	degree		0.6022765124703335	0.015749467426534006	0.02	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		36	1	degree		0.6852166482356489	0.015265466533391423	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		36	2	degree		0.5962802855132201	0.011631144749063044	0.0	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		36	3	degree		0.6771449396084965	0.015921434223193955	0.0	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		36	4	degree		0.6672636401499377	0.016289117931177516	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		37	0	degree		0.6284246575342466	0.01220900242567984	0.0	0.0	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		37	1	degree		0.630295566502463	0.011952701636156636	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		37	2	degree		0.6857243389966825	0.01681080961192043	0.02	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		37	3	degree		0.6150093710953769	0.02134056902434156	0.04	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		37	4	degree		0.670100999583507	0.014721053301813749	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		38	0	degree		0.6354613398842488	0.012277882066607128	0.0	0.0	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		38	1	degree		0.7037046345631849	0.019567360542835196	0.0	0.02	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		38	2	degree		0.5656026942796822	0.01234610517933607	0.02	0.01	0.008	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		38	3	degree		0.6673000832986256	0.0185663501973195	0.02	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		38	4	degree		0.65890254060808	0.014766944389886332	0.0	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		39	0	degree		0.6111504351084648	0.016761911843495916	0.02	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		39	1	degree		0.6272996883482457	0.014160218230083675	0.02	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		39	2	degree		0.7016788981602493	0.016878856147786357	0.0	0.0	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700		39	3	degree		0.6129841732611412	0.0123268751819925	0.0	0.02	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700		39	4	degree		0.6751718034152436	0.014741573470925749	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	0	0	rwr	35.0	0.7472415372444517	0.020470456555550676	0.0	0.03	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	0	1	rwr	35.0	0.7179250025133206	0.02154285493753663	0.02	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	0	2	rwr	35.0	0.6437820448376395	0.014986998313751422	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	0	3	rwr	35.0	0.7042065805914202	0.020890602095224	0.04	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	0	4	rwr	35.0	0.7311745106205748	0.023492223571324543	0.04	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	1	0	rwr	35.0	0.7287234042553191	0.027585084136665515	0.04	0.05	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	1	1	rwr	35.0	0.675329244998492	0.017757258051940037	0.02	0.03	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	1	2	rwr	35.0	0.7713179853222077	0.02712711386852769	0.02	0.05	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	1	3	rwr	35.0	0.7231570179092045	0.015337865204857772	0.0	0.0	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	1	4	rwr	35.0	0.5981257809246148	0.011858013699054374	0.0	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	2	0	rwr	35.0	0.7630636632385394	0.02095184956044098	0.02	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	2	1	rwr	35.0	0.7174726048054689	0.025771989899703984	0.06	0.04	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	2	2	rwr	35.0	0.7018296973961998	0.01906562593358295	0.02	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	2	3	rwr	35.0	0.6353810912119949	0.01315576323637635	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	2	4	rwr	35.0	0.7461162015826739	0.025926142212125733	0.04	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	3	0	rwr	35.0	0.7194070866469583	0.017620560790488744	0.0	0.02	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	3	1	rwr	35.0	0.7327938071780437	0.019852214486130084	0.02	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	3	2	rwr	35.0	0.6503066251130993	0.0152527630516971	0.0	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	3	3	rwr	35.0	0.6873177842565598	0.02747654322197915	0.06	0.04	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	3	4	rwr	35.0	0.7403581840899626	0.02143638040653444	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	4	0	rwr	35.0	0.7038243744014656	0.019242844748087802	0.0	0.01	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	4	1	rwr	35.0	0.7596762843068262	0.026938712659043507	0.02	0.05	0.03	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	4	2	rwr	35.0	0.7044033376897557	0.02099075281243096	0.04	0.04	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	4	3	rwr	35.0	0.7226468138275719	0.020442459549071017	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	4	4	rwr	35.0	0.6545085381091212	0.014644931966685556	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	5	0	rwr	35.0	0.7112149727276512	0.01754209436600733	0.02	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	5	1	rwr	35.0	0.7287322810897757	0.023122464761255263	0.04	0.02	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	5	2	rwr	35.0	0.6896752789785865	0.016043971845942365	0.0	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	5	3	rwr	35.0	0.7324760516451478	0.025534408580777955	0.04	0.04	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	5	4	rwr	35.0	0.6497188671386922	0.016518805676636817	0.02	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	6	0	rwr	35.0	0.7338864137902319	0.021431486463061113	0.02	0.04	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	6	1	rwr	35.0	0.6876947823464361	0.018436799292266225	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	6	2	rwr	35.0	0.6550618276867397	0.01596143738104168	0.02	0.03	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	6	3	rwr	35.0	0.7151915868388171	0.02209692658351172	0.02	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	6	4	rwr	35.0	0.7329654310703874	0.02087145424630722	0.02	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	7	0	rwr	35.0	0.7330640796102761	0.024879558090753682	0.06	0.03	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	7	1	rwr	35.0	0.6566804061526088	0.021102187529706433	0.02	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	7	2	rwr	35.0	0.6685030662511311	0.017726409909748744	0.0	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	7	3	rwr	35.0	0.7242607246980425	0.016035815993273493	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	7	4	rwr	35.0	0.7553206997084548	0.02600625368830781	0.06	0.04	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	8	0	rwr	35.0	0.6681725444476829	0.020049310796950198	0.02	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	8	1	rwr	35.0	0.72149391776415	0.020726340944947574	0.04	0.04	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	8	2	rwr	35.0	0.614124861767367	0.012850343841352922	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	8	3	rwr	35.0	0.7820491461890879	0.024491791939790133	0.0	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	8	4	rwr	35.0	0.7520408163265306	0.026372940569782333	0.06	0.03	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	9	0	rwr	35.0	0.7290148644709997	0.02307152289832738	0.04	0.03	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	9	1	rwr	35.0	0.6917060420227205	0.015439339218529052	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	9	2	rwr	35.0	0.7543279380717804	0.02040967279571571	0.0	0.0	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	9	3	rwr	35.0	0.6851936693044564	0.02714925400260562	0.06	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	9	4	rwr	35.0	0.6652748854643897	0.01636998583969127	0.04	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	10	0	rwr	35.0	0.7212495315817963	0.020769845007735283	0.04	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	10	1	rwr	35.0	0.7484769277168996	0.023769534473337916	0.0	0.04	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	10	2	rwr	35.0	0.6525686136523575	0.01765167269691398	0.02	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	10	3	rwr	35.0	0.6925031236984589	0.014093341078271667	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	10	4	rwr	35.0	0.7006872136609745	0.020850601951410773	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	11	0	rwr	35.0	0.6935712203855602	0.019439607040102346	0.04	0.02	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	11	1	rwr	35.0	0.7378003418116015	0.017603074054803276	0.0	0.0	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	11	2	rwr	35.0	0.6755604704936161	0.02557111775558987	0.04	0.05	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	11	3	rwr	35.0	0.643054977092878	0.0164375240661065	0.02	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	11	4	rwr	35.0	0.761786755518534	0.019558785753045562	0.0	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	12	0	rwr	35.0	0.7314714577174501	0.021015506961154735	0.0	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	12	1	rwr	35.0	0.6947320800241279	0.017212545008688906	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	12	2	rwr	35.0	0.6329948728259778	0.02440907289376203	0.06	0.05	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	12	3	rwr	35.0	0.7514577259475218	0.019194412396875353	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	12	4	rwr	35.0	0.722365680966264	0.0190400234903602	0.04	0.02	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	13	0	rwr	35.0	0.7390702419119791	0.025726057293132154	0.02	0.03	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	13	1	rwr	35.0	0.638564391273751	0.011977638626789505	0.0	0.0	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	13	2	rwr	35.0	0.7643711671860862	0.03211274515563309	0.04	0.05	0.034	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	13	3	rwr	35.0	0.7551332778009163	0.02340371662501033	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	13	4	rwr	35.0	0.6318096626405665	0.011696932084341855	0.0	0.0	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	14	0	rwr	35.0	0.7049069409168507	0.014897340641249219	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	14	1	rwr	35.0	0.6945812807881773	0.01780305087293564	0.0	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	14	2	rwr	35.0	0.6968633758922289	0.029318197944552732	0.06	0.04	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	14	3	rwr	35.0	0.7751770095793419	0.030046139262088645	0.0	0.04	0.028	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	14	4	rwr	35.0	0.684152436484798	0.02231498192318627	0.02	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	15	0	rwr	35.0	0.7492505308739643	0.02436481199064034	0.02	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	15	1	rwr	35.0	0.725887202171509	0.01875939718586562	0.0	0.0	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	15	2	rwr	35.0	0.7127978284910024	0.024682094202575788	0.04	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	15	3	rwr	35.0	0.7073302790503956	0.016683330724222144	0.02	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	15	4	rwr	35.0	0.6830903790087464	0.022301723337411292	0.04	0.04	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	16	0	rwr	35.0	0.7318357829870508	0.02513598142102309	0.02	0.04	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	16	1	rwr	35.0	0.6751382326329547	0.018487646963928045	0.02	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	16	2	rwr	35.0	0.7739519453101438	0.034689623153236926	0.06	0.04	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	16	3	rwr	35.0	0.640545605997501	0.016265994208728863	0.02	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	16	4	rwr	35.0	0.7140774677217826	0.015719541782738804	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	17	0	rwr	35.0	0.7129116875546488	0.015764542959303886	0.0	0.0	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	17	1	rwr	35.0	0.7169699406856338	0.022873316561820345	0.0	0.02	0.03	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	17	2	rwr	35.0	0.695606715592641	0.026215304710343997	0.06	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	17	3	rwr	35.0	0.7091524364847981	0.015616117682822594	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	17	4	rwr	35.0	0.7476988754685547	0.032552462125840655	0.02	0.07	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	18	0	rwr	35.0	0.7094558021401507	0.022069063501731885	0.04	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	18	1	rwr	35.0	0.606685432793807	0.013618294360234946	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	18	2	rwr	35.0	0.770935960591133	0.027646167489231713	0.02	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	18	3	rwr	35.0	0.7702207413577675	0.02081368385183818	0.02	0.02	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	18	4	rwr	35.0	0.6839858392336526	0.024826334866826907	0.04	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	19	0	rwr	35.0	0.7153162343340134	0.02581899116852675	0.06	0.05	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	19	1	rwr	35.0	0.7482054890921886	0.024803874450497428	0.02	0.02	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	19	2	rwr	35.0	0.6869809992962702	0.019889534697345834	0.04	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	19	3	rwr	35.0	0.7033319450229072	0.018401649966479642	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	19	4	rwr	35.0	0.7164202415660141	0.01794606815703096	0.0	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	20	0	rwr	35.0	0.7080193196485822	0.019602215673200394	0.02	0.01	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	20	1	rwr	35.0	0.7996682416809089	0.02734295106882775	0.04	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	20	2	rwr	35.0	0.76262189604906	0.024680664567356472	0.04	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	20	3	rwr	35.0	0.6215535193669304	0.012484503591682489	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	20	4	rwr	35.0	0.6489067055393586	0.017961679567365982	0.0	0.04	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	21	0	rwr	35.0	0.7628867052504477	0.02917713371075584	0.04	0.05	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	21	1	rwr	35.0	0.730923896652257	0.020515585426763464	0.02	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	21	2	rwr	35.0	0.7012365537347944	0.017523536117179554	0.02	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	21	3	rwr	35.0	0.7045918367346939	0.018807304502508535	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	21	4	rwr	35.0	0.6202728029987504	0.014421097178487385	0.0	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	22	0	rwr	35.0	0.6510596660698672	0.01703316814431758	0.02	0.02	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	22	1	rwr	35.0	0.731697999396803	0.023795885333814243	0.02	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	22	2	rwr	35.0	0.6490097516839248	0.015148764514980248	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	22	3	rwr	35.0	0.7175655976676386	0.024169117078920603	0.06	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	22	4	rwr	35.0	0.7637338608912952	0.024556068590339684	0.02	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	23	0	rwr	35.0	0.6648623891410251	0.01955153165725884	0.02	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	23	1	rwr	35.0	0.757756107369056	0.0206916939143168	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	23	2	rwr	35.0	0.6714185181461748	0.01756377921015601	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	23	3	rwr	35.0	0.675	0.018732826065059584	0.04	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	23	4	rwr	35.0	0.7306538942107456	0.022042628536230926	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	24	0	rwr	35.0	0.7536536619894242	0.03534675144753502	0.06	0.05	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	24	1	rwr	35.0	0.6848195435809792	0.016532975275501585	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	24	2	rwr	35.0	0.6864783351764351	0.025176492085128427	0.02	0.05	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	24	3	rwr	35.0	0.6851832569762598	0.017369885854535992	0.0	0.0	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	24	4	rwr	35.0	0.7506872136609746	0.018396414757185856	0.02	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	25	0	rwr	35.0	0.7292334596327601	0.02198012915193311	0.02	0.03	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	25	1	rwr	35.0	0.7136925706243088	0.023043357007175427	0.02	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	25	2	rwr	35.0	0.6492409771790488	0.01727621395080596	0.04	0.03	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	25	3	rwr	35.0	0.6975739275301958	0.01916785775885838	0.02	0.04	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	25	4	rwr	35.0	0.7175239483548522	0.018245461209126394	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	26	0	rwr	35.0	0.6283153599533663	0.013440926579943866	0.02	0.01	0.008	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	26	1	rwr	35.0	0.6996481351161155	0.01887410901090985	0.02	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	26	2	rwr	35.0	0.6908716195837942	0.01655729026219154	0.0	0.0	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	26	3	rwr	35.0	0.7407330279050396	0.027236110117058784	0.04	0.05	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	26	4	rwr	35.0	0.7244064972927947	0.01923045816219113	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	27	0	rwr	35.0	0.7083524170379315	0.017513819967358353	0.02	0.01	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	27	1	rwr	35.0	0.7414195234744143	0.020034874318943453	0.0	0.02	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	27	2	rwr	35.0	0.6986930732884287	0.018517270603455767	0.0	0.02	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	27	3	rwr	35.0	0.6948458975426905	0.020082547260762244	0.04	0.04	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	27	4	rwr	35.0	0.6917638483965014	0.025674537851888415	0.04	0.02	0.028	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	28	0	rwr	35.0	0.6635612274638798	0.013870819476846132	0.0	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	28	1	rwr	35.0	0.6764652659093194	0.01404889872234814	0.0	0.0	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	28	2	rwr	35.0	0.7394792399718508	0.02416350598368904	0.02	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	28	3	rwr	35.0	0.6699187838400666	0.023670101011850332	0.06	0.04	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	28	4	rwr	35.0	0.8033735943356936	0.03910841529212728	0.06	0.05	0.034	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	29	0	rwr	35.0	0.6642066036557438	0.02308878612234651	0.04	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	29	1	rwr	35.0	0.7596863375892229	0.028824793603556872	0.04	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	29	2	rwr	35.0	0.7410877651553233	0.019315300778299845	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	29	3	rwr	35.0	0.6165243648479799	0.012287007171311828	0.0	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	29	4	rwr	35.0	0.7166805497709289	0.021298090507272896	0.02	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	30	0	rwr	35.0	0.6715763833950951	0.015017071025102717	0.0	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	30	1	rwr	35.0	0.713923796119433	0.018009285792678208	0.0	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	30	2	rwr	35.0	0.6997185080928923	0.02214100185950591	0.04	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	30	3	rwr	35.0	0.7743336109954186	0.019322586744191614	0.0	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	30	4	rwr	35.0	0.6776551436901291	0.027341026452379687	0.04	0.05	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	31	0	rwr	35.0	0.7126514552192198	0.021360325273812184	0.0	0.02	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	31	1	rwr	35.0	0.7308434703930833	0.017792321984122048	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	31	2	rwr	35.0	0.6603900673569921	0.013527911886899995	0.0	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	31	3	rwr	35.0	0.7235422740524782	0.020993690522006433	0.06	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	31	4	rwr	35.0	0.677405247813411	0.0194287203734937	0.0	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	32	0	rwr	35.0	0.6585023108631386	0.018826038918597982	0.04	0.02	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	32	1	rwr	35.0	0.7272946617070474	0.02949233517005292	0.06	0.04	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	32	2	rwr	35.0	0.6561375289031869	0.014269038226154163	0.0	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	32	3	rwr	35.0	0.6756872136609746	0.014291527563641517	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	32	4	rwr	35.0	0.8434089962515618	0.03166662220108152	0.02	0.03	0.034	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	33	0	rwr	35.0	0.6187388100095765	0.013590313554137656	0.02	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	33	1	rwr	35.0	0.7673167789283201	0.021580558810093336	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	33	2	rwr	35.0	0.721121946315472	0.023054912571584436	0.02	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	33	3	rwr	35.0	0.7046230737192836	0.028348882714692596	0.06	0.04	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	33	4	rwr	35.0	0.7380466472303207	0.022606368467695002	0.02	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	34	0	rwr	35.0	0.7154619644418537	0.02055887440853962	0.02	0.03	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	34	1	rwr	35.0	0.7055594651653765	0.017765043883959896	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	34	2	rwr	35.0	0.6765456921684931	0.02232265914501587	0.06	0.04	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	34	3	rwr	35.0	0.7365993336109954	0.01842438014603523	0.0	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	34	4	rwr	35.0	0.7441274468971262	0.031153023267299875	0.06	0.06	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	35	0	rwr	35.0	0.6993796061123371	0.02488874859310909	0.04	0.03	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	35	1	rwr	35.0	0.7128682014677792	0.02218836674615045	0.04	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	35	2	rwr	35.0	0.7448175329244998	0.02899457648087149	0.04	0.05	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	35	3	rwr	35.0	0.7018221574344023	0.01602347563711668	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	35	4	rwr	35.0	0.6796126613910871	0.01713124724209936	0.02	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	36	0	rwr	35.0	0.6685680975975351	0.02203923609254369	0.04	0.03	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	36	1	rwr	35.0	0.7262189604906001	0.01807067258344371	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	36	2	rwr	35.0	0.6520961093797125	0.017761858964208965	0.04	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	36	3	rwr	35.0	0.7375156184922949	0.019582173134001162	0.0	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	36	4	rwr	35.0	0.7213765097875885	0.027221554256386494	0.04	0.03	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	37	0	rwr	35.0	0.6968189199317151	0.015468598089992115	0.0	0.01	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	37	1	rwr	35.0	0.6938976575852016	0.01860568401048424	0.02	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	37	2	rwr	35.0	0.7232230823363828	0.021354813700215924	0.04	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	37	3	rwr	35.0	0.6891399416909622	0.024027232262994105	0.06	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	37	4	rwr	35.0	0.7323927530195753	0.023329086208501715	0.02	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	38	0	rwr	35.0	0.6960694508056793	0.01618600185775363	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	38	1	rwr	35.0	0.7665527294661707	0.03271658575388398	0.08	0.06	0.03	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	38	2	rwr	35.0	0.6496833216045039	0.01677142945666295	0.02	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	38	3	rwr	35.0	0.6878279883381925	0.01594677076721693	0.02	0.02	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	38	4	rwr	35.0	0.7145460224906288	0.020173723551429587	0.0	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	39	0	rwr	35.0	0.6790918932422867	0.02128768044492258	0.04	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	39	1	rwr	35.0	0.6947019201769378	0.020874697399474305	0.04	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	39	2	rwr	35.0	0.747853624208304	0.02430110842783955	0.02	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	39	3	rwr	35.0	0.6433569346105789	0.012940058619277994	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.3	39	4	rwr	35.0	0.7419304456476469	0.021310549676430302	0.02	0.02	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	0	0	rwr	20.0	0.7547674563850606	0.021089311702177583	0.0	0.03	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	0	1	rwr	20.0	0.7130391072685232	0.0215472370708312	0.02	0.04	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	0	2	rwr	20.0	0.6504473710666532	0.014504694320903034	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	0	3	rwr	20.0	0.7204081632653061	0.023958592348129134	0.04	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	0	4	rwr	20.0	0.7331424406497292	0.023583232913581643	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	1	0	rwr	20.0	0.7354373985093892	0.028273252132890715	0.04	0.05	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	1	1	rwr	20.0	0.6864582286116417	0.01833904578572281	0.04	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	1	2	rwr	20.0	0.7665627827485675	0.025396578617162775	0.02	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	1	3	rwr	20.0	0.7268950437317784	0.015292956269475733	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	1	4	rwr	20.0	0.606570179092045	0.011947060508570601	0.0	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	2	0	rwr	20.0	0.766051130449265	0.02023398428654491	0.0	0.02	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	2	1	rwr	20.0	0.7234140947019202	0.02799122733727147	0.06	0.04	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	2	2	rwr	20.0	0.7089474213330652	0.01878507003516587	0.02	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	2	3	rwr	20.0	0.6482403165347771	0.014020855551803879	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	2	4	rwr	20.0	0.7502498958767181	0.028691601295581345	0.02	0.04	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	3	0	rwr	20.0	0.724174543032019	0.01747370907357662	0.0	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	3	1	rwr	20.0	0.7415602694279683	0.02110453070852295	0.0	0.02	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	3	2	rwr	20.0	0.6572936563788077	0.014684939409560303	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	3	3	rwr	20.0	0.6871199500208247	0.02723987268197091	0.04	0.05	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	3	4	rwr	20.0	0.7495626822157434	0.024801625299653903	0.04	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	4	0	rwr	20.0	0.7056147728692177	0.020551778768288786	0.0	0.01	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	4	1	rwr	20.0	0.7581682919473207	0.024887796132352962	0.02	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	4	2	rwr	20.0	0.718116014878858	0.02351640707604994	0.04	0.04	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	4	3	rwr	20.0	0.7286651395251978	0.022576008379429274	0.04	0.04	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	4	4	rwr	20.0	0.6636089129529362	0.01476410578663846	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	5	0	rwr	20.0	0.7118707582129326	0.0183106299896365	0.02	0.02	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	5	1	rwr	20.0	0.7318085855031667	0.02442890452774237	0.04	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	5	2	rwr	20.0	0.7019201769377702	0.015994569081583254	0.0	0.0	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	5	3	rwr	20.0	0.7314868804664723	0.024377297768672687	0.02	0.04	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	5	4	rwr	20.0	0.6567055393586007	0.017739869877898516	0.0	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	6	0	rwr	20.0	0.7332202190115336	0.022403504802965758	0.02	0.04	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	6	1	rwr	20.0	0.7007439428973559	0.018622417771055347	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	6	2	rwr	20.0	0.6669548607620387	0.01687811598326463	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	6	3	rwr	20.0	0.7136505622657225	0.02108624286701637	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	6	4	rwr	20.0	0.7347459391920034	0.021060049342977533	0.02	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	7	0	rwr	20.0	0.7419744347753674	0.025880009752312222	0.04	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	7	1	rwr	20.0	0.6655675077912939	0.022036799563299573	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	7	2	rwr	20.0	0.6685734392279079	0.017221340218690012	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	7	3	rwr	20.0	0.7285818408996252	0.016287859244197837	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	7	4	rwr	20.0	0.7626718034152438	0.02779845943335271	0.06	0.04	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	8	0	rwr	20.0	0.6783632427030853	0.022732947756006767	0.04	0.03	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	8	1	rwr	20.0	0.7196943802151403	0.0206629698349107	0.04	0.03	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	8	2	rwr	20.0	0.622539459133407	0.012874280655019384	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	8	3	rwr	20.0	0.7913265306122449	0.025885514028376844	0.02	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	8	4	rwr	20.0	0.7557996668054977	0.024448350241780648	0.04	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	9	0	rwr	20.0	0.7363534163300994	0.026001857310519225	0.04	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	9	1	rwr	20.0	0.7042324318890117	0.015637065620598717	0.0	0.0	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	9	2	rwr	20.0	0.7568513119533528	0.020315633597031986	0.0	0.0	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	9	3	rwr	20.0	0.6928467305289462	0.0275018144182478	0.06	0.04	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	9	4	rwr	20.0	0.6656393169512702	0.01578887774779405	0.04	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	10	0	rwr	20.0	0.728712994961902	0.021212086315117524	0.02	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	10	1	rwr	20.0	0.7509600884688851	0.022980357410924312	0.0	0.02	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	10	2	rwr	20.0	0.6596260178948427	0.018930511972146256	0.02	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	10	3	rwr	20.0	0.6942419825072887	0.014133090591464878	0.0	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	10	4	rwr	20.0	0.7002290712203249	0.020173907301269285	0.0	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	11	0	rwr	20.0	0.6928113419661073	0.018908961653371876	0.04	0.02	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	11	1	rwr	20.0	0.7402231828692067	0.017500479218650215	0.0	0.0	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	11	2	rwr	20.0	0.6885593646325525	0.028498215052049736	0.02	0.05	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	11	3	rwr	20.0	0.6455955851728447	0.01824421113491036	0.02	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	11	4	rwr	20.0	0.7672011661807581	0.01979044951107001	0.0	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	12	0	rwr	20.0	0.7273910146979223	0.0204006463184502	0.0	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	12	1	rwr	20.0	0.703649341510003	0.018119479537373216	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	12	2	rwr	20.0	0.6439730572031768	0.024199793892977592	0.06	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	12	3	rwr	20.0	0.7575281132861308	0.02003828299872508	0.0	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	12	4	rwr	20.0	0.7287692628071637	0.0190993539813229	0.02	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	13	0	rwr	20.0	0.747512178873298	0.028186094934756933	0.04	0.03	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	13	1	rwr	20.0	0.6450085452900371	0.012297685625292619	0.0	0.0	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	13	2	rwr	20.0	0.771207399215844	0.0308816820038099	0.0	0.04	0.03	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	13	3	rwr	20.0	0.7575593502707205	0.02473641279781504	0.02	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	13	4	rwr	20.0	0.6423990004164931	0.01191665680970433	0.0	0.0	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	14	0	rwr	20.0	0.71943831452721	0.015700468232201028	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	14	1	rwr	20.0	0.6995878154217353	0.019223633079090207	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	14	2	rwr	20.0	0.6919674273650347	0.02633239232044211	0.04	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	14	3	rwr	20.0	0.7840379008746355	0.03187142298294236	0.0	0.03	0.028	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	14	4	rwr	20.0	0.6897855060391503	0.024954779918223494	0.04	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	15	0	rwr	20.0	0.7616688179206397	0.024154487784550694	0.02	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	15	1	rwr	20.0	0.7342113199959787	0.01942566323840685	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	15	2	rwr	20.0	0.7149793907710869	0.028972402266574757	0.04	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	15	3	rwr	20.0	0.7161391087047064	0.017166533773375577	0.02	0.02	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	15	4	rwr	20.0	0.6870887130362349	0.022048039732108168	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	16	0	rwr	20.0	0.7302327518008077	0.0236972373080305	0.04	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	16	1	rwr	20.0	0.6836131496933748	0.018760869440514368	0.02	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	16	2	rwr	20.0	0.7832713380918871	0.033460439014367536	0.04	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	16	3	rwr	20.0	0.6515618492294878	0.01876103874537605	0.02	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	16	4	rwr	20.0	0.7122553102873802	0.015794502245252442	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	17	0	rwr	20.0	0.7202710580005829	0.01626511488274902	0.0	0.0	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	17	1	rwr	20.0	0.7150598170302603	0.022763468552705033	0.0	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	17	2	rwr	20.0	0.7045641902081029	0.03167167830453982	0.04	0.05	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	17	3	rwr	20.0	0.722240733027905	0.016405578394144443	0.02	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	17	4	rwr	20.0	0.7540191586838818	0.030611568053067834	0.02	0.05	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	18	0	rwr	20.0	0.711901986093184	0.023710235578188035	0.04	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	18	1	rwr	20.0	0.6141449683321604	0.013298070677642566	0.02	0.01	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	18	2	rwr	20.0	0.7768070775108072	0.029662418568903334	0.0	0.05	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	18	3	rwr	20.0	0.7802998750520617	0.022364107767584962	0.02	0.02	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	18	4	rwr	20.0	0.6872969596001666	0.02890225302939906	0.04	0.02	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	19	0	rwr	20.0	0.7202606487071658	0.025827495552759046	0.04	0.05	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	19	1	rwr	20.0	0.7487785261888007	0.024754247418455423	0.02	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	19	2	rwr	20.0	0.7015884186186789	0.021355421258321954	0.04	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	19	3	rwr	20.0	0.712640566430654	0.02126312852842052	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	19	4	rwr	20.0	0.7183152852977925	0.017671139123381186	0.0	0.01	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	20	0	rwr	20.0	0.7074884456843069	0.02027230618222976	0.02	0.01	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	20	1	rwr	20.0	0.7989242987835528	0.026583836036696173	0.04	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	20	2	rwr	20.0	0.7708756408967528	0.025447029186619174	0.02	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	20	3	rwr	20.0	0.6307476051645147	0.01301933587671036	0.0	0.0	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	20	4	rwr	20.0	0.655591420241566	0.01783199135663275	0.02	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	21	0	rwr	20.0	0.7689553233126535	0.029627343184287672	0.04	0.04	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	21	1	rwr	20.0	0.7272343420126671	0.021193487618349615	0.0	0.04	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	21	2	rwr	20.0	0.7104353071277771	0.018127605680740132	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	21	3	rwr	20.0	0.7059454394002498	0.018751241627536733	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	21	4	rwr	20.0	0.6283735943356934	0.014864870175838171	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	22	0	rwr	20.0	0.6660698671774159	0.019190198814590376	0.02	0.03	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	22	1	rwr	20.0	0.7353875540363929	0.025679293184184524	0.02	0.04	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	22	2	rwr	20.0	0.6536744747159948	0.016381367082723856	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	22	3	rwr	20.0	0.7239587671803416	0.024108750846976945	0.04	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	22	4	rwr	20.0	0.7628696376509787	0.024990870883683465	0.02	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	23	0	rwr	20.0	0.6719302993712786	0.02015490239173371	0.04	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	23	1	rwr	20.0	0.7614456620086458	0.020840151852196794	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	23	2	rwr	20.0	0.6760329747662612	0.01797891675617179	0.0	0.01	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	23	3	rwr	20.0	0.6746876301541025	0.023359639131939954	0.04	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	23	4	rwr	20.0	0.7346522282382341	0.021725375077470528	0.0	0.04	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	24	0	rwr	20.0	0.7524045467793645	0.03633199855732484	0.06	0.04	0.032	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	24	1	rwr	20.0	0.6988840856539661	0.0173997550375357	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	24	2	rwr	20.0	0.6929627023223083	0.0257590417747513	0.02	0.07	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	24	3	rwr	20.0	0.6943981674302374	0.017554475355442842	0.0	0.0	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	24	4	rwr	20.0	0.7566847147022074	0.019276301055419012	0.02	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	25	0	rwr	20.0	0.7393825207144938	0.0220553850448503	0.02	0.02	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	25	1	rwr	20.0	0.7234844676786971	0.025978922476440305	0.04	0.04	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	25	2	rwr	20.0	0.6571026440132702	0.01663007180079288	0.0	0.03	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	25	3	rwr	20.0	0.7046751353602665	0.01980793976753916	0.02	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	25	4	rwr	20.0	0.7188359017076218	0.01933098187576103	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	26	0	rwr	20.0	0.6348523962193448	0.01413892524291923	0.02	0.02	0.01	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	26	1	rwr	20.0	0.6950035186488388	0.0189852575739964	0.02	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	26	2	rwr	20.0	0.6986327535940484	0.016893495363999013	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	26	3	rwr	20.0	0.7419200333194502	0.025379823838032174	0.02	0.04	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	26	4	rwr	20.0	0.7321845064556435	0.01992702975819864	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	27	0	rwr	20.0	0.7154099179747679	0.017346057790244354	0.0	0.01	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	27	1	rwr	20.0	0.7419825072886297	0.01999474857034746	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	27	2	rwr	20.0	0.7009450085452901	0.01876211496009533	0.0	0.02	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	27	3	rwr	20.0	0.7092149104539774	0.022549973084831962	0.04	0.04	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	27	4	rwr	20.0	0.6934922948771345	0.026497601963246964	0.02	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	28	0	rwr	20.0	0.6671107965191323	0.013940716081073936	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	28	1	rwr	20.0	0.6918367346938775	0.015107535953774662	0.0	0.0	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	28	2	rwr	20.0	0.7431989544586308	0.025203180031009326	0.02	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	28	3	rwr	20.0	0.6756247396917952	0.026811393285199128	0.06	0.04	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	28	4	rwr	20.0	0.8063827571845065	0.03855655304357836	0.02	0.05	0.036	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	29	0	rwr	20.0	0.6705770912270476	0.025299606761033967	0.04	0.04	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	29	1	rwr	20.0	0.7627827485674074	0.02836336887162709	0.06	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	29	2	rwr	20.0	0.7386247109681311	0.018659494302376598	0.0	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	29	3	rwr	20.0	0.622188671386922	0.012352068978054957	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	29	4	rwr	20.0	0.7212411495210329	0.0220683272358977	0.02	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	30	0	rwr	20.0	0.6771141274930257	0.015623876554317167	0.0	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	30	1	rwr	20.0	0.7206293354780337	0.018202086837362727	0.0	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	30	2	rwr	20.0	0.7129687342917462	0.02153045590289973	0.0	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	30	3	rwr	20.0	0.7772386505622657	0.019660324825779667	0.02	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	30	4	rwr	20.0	0.6814348188254894	0.029865788125127638	0.04	0.05	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	31	0	rwr	20.0	0.7174709580713662	0.023268252327820295	0.0	0.04	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	31	1	rwr	20.0	0.7286418015482055	0.017324671757786056	0.0	0.01	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	31	2	rwr	20.0	0.6664521966422037	0.0132263468486822	0.0	0.0	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	31	3	rwr	20.0	0.7264369012911287	0.019119692784160574	0.04	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	31	4	rwr	20.0	0.6847251145356102	0.020882230398430096	0.0	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	32	0	rwr	20.0	0.6699837615022692	0.02053716417233971	0.04	0.04	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	32	1	rwr	20.0	0.7344023323615161	0.029475676067032372	0.04	0.04	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	32	2	rwr	20.0	0.6627123755906303	0.0143321886591968	0.0	0.02	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	32	3	rwr	20.0	0.6822365680966264	0.014840230512077945	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	32	4	rwr	20.0	0.838942107455227	0.030023594108475608	0.02	0.02	0.034	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	33	0	rwr	20.0	0.6280238997376858	0.016778983992231586	0.02	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	33	1	rwr	20.0	0.7739921584397307	0.022501654896588782	0.0	0.01	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	33	2	rwr	20.0	0.7256057102644013	0.024322594274198726	0.02	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	33	3	rwr	20.0	0.7147855060391504	0.02822666315368868	0.04	0.05	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	33	4	rwr	20.0	0.7387338608912952	0.02216074266319489	0.04	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	34	0	rwr	20.0	0.7215618103843111	0.020685253262558143	0.02	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	34	1	rwr	20.0	0.7074997486679401	0.0175293854316401	0.0	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	34	2	rwr	20.0	0.6934754197245401	0.023166832789121253	0.04	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	34	3	rwr	20.0	0.7464493960849646	0.019546232074518187	0.0	0.01	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	34	4	rwr	20.0	0.7459496043315285	0.03387904060830856	0.06	0.05	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	35	0	rwr	20.0	0.7060936003664071	0.025600723850415293	0.02	0.04	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	35	1	rwr	20.0	0.719975872122248	0.022158728132951565	0.04	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	35	2	rwr	20.0	0.7467477631446667	0.031206392581376283	0.04	0.06	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	35	3	rwr	20.0	0.7005622657226155	0.015903573524180866	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	35	4	rwr	20.0	0.6845168679716784	0.018084251082195784	0.04	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	36	0	rwr	20.0	0.6789357538410292	0.02468356992721629	0.04	0.03	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	36	1	rwr	20.0	0.7231828692067961	0.017915032581969578	0.02	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	36	2	rwr	20.0	0.6589826078214538	0.022986368304972665	0.04	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	36	3	rwr	20.0	0.7443461057892544	0.01955836524893532	0.0	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	36	4	rwr	20.0	0.7300187421907539	0.02957768631399041	0.04	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	37	0	rwr	20.0	0.7053441312403714	0.015776988905687208	0.02	0.01	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	37	1	rwr	20.0	0.6956871418518147	0.020004733494678288	0.02	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	37	2	rwr	20.0	0.7234945209610938	0.02118380775869818	0.0	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	37	3	rwr	20.0	0.698344439816743	0.024287778057392583	0.06	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	37	4	rwr	20.0	0.7387755102040816	0.0239277124100877	0.02	0.03	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	38	0	rwr	20.0	0.7041991089644835	0.01605710448262033	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	38	1	rwr	20.0	0.7752186588921283	0.03309380223918227	0.04	0.07	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	38	2	rwr	20.0	0.6590228209510405	0.01684591742627944	0.02	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	38	3	rwr	20.0	0.6923469387755101	0.016815520005680967	0.04	0.02	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	38	4	rwr	20.0	0.7137755102040816	0.01987973992469134	0.0	0.01	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	39	0	rwr	20.0	0.6851709205979098	0.023802410030420877	0.04	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	39	1	rwr	20.0	0.7088468885090983	0.02091124533581544	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	39	2	rwr	20.0	0.7487785261888006	0.02378769116645281	0.02	0.02	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	39	3	rwr	20.0	0.6447001249479383	0.012940059013692318	0.0	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.5	39	4	rwr	20.0	0.7420345689296125	0.021498850108009775	0.02	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	0	0	rwr	13.0	0.7579735187575467	0.021776045962351057	0.02	0.04	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	0	1	rwr	13.0	0.7047451492912435	0.021443288547076344	0.04	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	0	2	rwr	13.0	0.6530813310545893	0.014144197945743458	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	0	3	rwr	13.0	0.7300916284881299	0.026157991690818554	0.04	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	0	4	rwr	13.0	0.7324760516451478	0.02297363898391756	0.02	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	1	0	rwr	13.0	0.7363534163300994	0.029199948710362637	0.04	0.05	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	1	1	rwr	13.0	0.6917663617171007	0.0186521482119673	0.04	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	1	2	rwr	13.0	0.7617372071981502	0.02381944016164667	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	1	3	rwr	13.0	0.7259891711786756	0.015119705275152545	0.0	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	1	4	rwr	13.0	0.6104539775093711	0.012019874758727043	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	2	0	rwr	13.0	0.7638131323645752	0.01935854155901122	0.0	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	2	1	rwr	13.0	0.7246607017191113	0.028935893414185614	0.06	0.04	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	2	2	rwr	13.0	0.7092088066753794	0.018569122479011983	0.0	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	2	3	rwr	13.0	0.6547480216576427	0.01439986608182487	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	2	4	rwr	13.0	0.7519054560599749	0.031140507398633735	0.02	0.04	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	3	0	rwr	13.0	0.7270683266019902	0.01725946415342689	0.0	0.01	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	3	1	rwr	13.0	0.7440836433095406	0.021333529205293807	0.02	0.02	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	3	2	rwr	13.0	0.658198451794511	0.014496243899699168	0.0	0.01	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	3	3	rwr	13.0	0.6828821324448147	0.026171550854272252	0.04	0.04	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	3	4	rwr	13.0	0.7527280299875052	0.025645910341282416	0.04	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	4	0	rwr	13.0	0.7062601490610818	0.021415457199954975	0.0	0.02	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	4	1	rwr	13.0	0.7539961797526893	0.02280873386218751	0.0	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	4	2	rwr	13.0	0.7268523172815924	0.02549847287672075	0.04	0.04	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	4	3	rwr	13.0	0.7283527696793003	0.023474212090880596	0.04	0.04	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	4	4	rwr	13.0	0.6635985006247397	0.014367923359329423	0.0	0.0	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	5	0	rwr	13.0	0.7097784902360827	0.01837207898594028	0.02	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	5	1	rwr	13.0	0.730250326731678	0.025512870796006396	0.04	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	5	2	rwr	13.0	0.7098622700311652	0.01624652161834411	0.0	0.0	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	5	3	rwr	13.0	0.7284881299458559	0.02340656091428712	0.02	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	5	4	rwr	13.0	0.6579133694294044	0.01856200358532525	0.0	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	6	0	rwr	13.0	0.7282653953449639	0.022191467806592514	0.02	0.04	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	6	1	rwr	13.0	0.7053583995174424	0.01864385112872171	0.0	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	6	2	rwr	13.0	0.6710968131094802	0.0173644362998667	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	6	3	rwr	13.0	0.7112244897959183	0.020275461337843373	0.0	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	6	4	rwr	13.0	0.7347875885047896	0.021090610174251442	0.02	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	7	0	rwr	13.0	0.7442852979139776	0.026920219092119103	0.04	0.04	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	7	1	rwr	13.0	0.6712777721926209	0.023420738868555356	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	7	2	rwr	13.0	0.6658791595455916	0.016783314812102188	0.02	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	7	3	rwr	13.0	0.7296126613910872	0.016419952208478753	0.0	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	7	4	rwr	13.0	0.7634110787172012	0.0278397520163911	0.02	0.05	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	8	0	rwr	13.0	0.6823187742016072	0.025352708968667436	0.04	0.04	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	8	1	rwr	13.0	0.7162762642002614	0.021164223687065966	0.04	0.04	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	8	2	rwr	13.0	0.6246607017191113	0.012853258468279696	0.0	0.0	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	8	3	rwr	13.0	0.79661599333611	0.02671461000660279	0.02	0.01	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	8	4	rwr	13.0	0.7561640982923781	0.023036585281695218	0.02	0.03	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	9	0	rwr	13.0	0.7388412374568014	0.028107486460535736	0.04	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	9	1	rwr	13.0	0.708545290037197	0.015699449626648296	0.0	0.0	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	9	2	rwr	13.0	0.7544988438725244	0.01981299189593375	0.0	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	9	3	rwr	13.0	0.6976572261557684	0.027082316185437567	0.04	0.04	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	9	4	rwr	13.0	0.6604227405247813	0.014898284966292885	0.0	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	10	0	rwr	13.0	0.7335429071074656	0.02165514951524697	0.02	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	10	1	rwr	13.0	0.748969538554338	0.02206551442653343	0.0	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	10	2	rwr	13.0	0.6615059817030261	0.020384929917844862	0.04	0.03	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	10	3	rwr	13.0	0.6878800499791754	0.013977216294888547	0.0	0.01	0.01	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	10	4	rwr	13.0	0.6967617659308621	0.01921608396103786	0.0	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	11	0	rwr	13.0	0.6889703126951743	0.018851575823568032	0.04	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	11	1	rwr	13.0	0.7389866291344125	0.01708987330283846	0.0	0.0	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	11	2	rwr	13.0	0.6943601085754498	0.028721133679682653	0.04	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	11	3	rwr	13.0	0.6467305289462724	0.019068491553686843	0.02	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	11	4	rwr	13.0	0.7663890045814244	0.019680953179679047	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	12	0	rwr	13.0	0.7213640338093851	0.02004296426462426	0.02	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	12	1	rwr	13.0	0.7048456821152106	0.01843743580810067	0.0	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	12	2	rwr	13.0	0.6486076203880567	0.023416058757102613	0.04	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	12	3	rwr	13.0	0.7596105789254477	0.020098895958147553	0.0	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	12	4	rwr	13.0	0.7326842982090795	0.0190224676958129	0.02	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	13	0	rwr	13.0	0.7496148561435649	0.029098997748611327	0.04	0.03	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	13	1	rwr	13.0	0.6472906403940887	0.012470673174202362	0.0	0.0	0.008	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	13	2	rwr	13.0	0.7715994772293154	0.028945460856547624	0.0	0.02	0.03	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	13	3	rwr	13.0	0.7579446064139942	0.024820044063474076	0.02	0.04	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	13	4	rwr	13.0	0.6451478550603915	0.01196278915735165	0.0	0.0	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	14	0	rwr	13.0	0.725964941499771	0.01624309443718345	0.0	0.0	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	14	1	rwr	13.0	0.6973861465768574	0.019982967217630848	0.04	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	14	2	rwr	13.0	0.686448175329245	0.025716881845521976	0.04	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	14	3	rwr	13.0	0.7874531445231154	0.03193906124256636	0.02	0.02	0.028	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	14	4	rwr	13.0	0.6933152852977926	0.026109027194858567	0.04	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	15	0	rwr	13.0	0.7687575467377274	0.024350580179706018	0.0	0.03	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	15	1	rwr	13.0	0.7352769679300292	0.01958800642536025	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	15	2	rwr	13.0	0.7120036191816628	0.030465788964772315	0.04	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	15	3	rwr	13.0	0.7204081632653061	0.017406894815627988	0.04	0.02	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	15	4	rwr	13.0	0.6865785089546023	0.0217724687348375	0.04	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	16	0	rwr	13.0	0.7281717117042096	0.022731872524488043	0.04	0.04	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	16	1	rwr	13.0	0.6859153513622198	0.018565442987529567	0.0	0.03	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	16	2	rwr	13.0	0.7870714788378406	0.032511839619433366	0.02	0.04	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	16	3	rwr	13.0	0.6579341940857977	0.01956232246801444	0.04	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	16	4	rwr	13.0	0.7072365680966264	0.015418462876472003	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	17	0	rwr	13.0	0.7250593329724779	0.01674967943320876	0.0	0.0	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	17	1	rwr	13.0	0.7082537448476928	0.02182860267514436	0.0	0.03	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	17	2	rwr	13.0	0.7069568714185182	0.032642697063583914	0.04	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	17	3	rwr	13.0	0.7298729695960018	0.017039608515260183	0.02	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	17	4	rwr	13.0	0.7550812161599333	0.029268103249351692	0.02	0.05	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	18	0	rwr	13.0	0.713244784943998	0.0238519836731578	0.04	0.02	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	18	1	rwr	13.0	0.6189805971649744	0.013125671437722506	0.0	0.02	0.01	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	18	2	rwr	13.0	0.7774203277370061	0.028681885782972975	0.02	0.06	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	18	3	rwr	13.0	0.7840483132028322	0.02314358935431623	0.02	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	18	4	rwr	13.0	0.6858600583090378	0.03190107222998765	0.04	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	19	0	rwr	13.0	0.7207602947911896	0.025359162617264838	0.04	0.05	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	19	1	rwr	13.0	0.7462551523072283	0.024528041289789443	0.02	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	19	2	rwr	13.0	0.7097215240776114	0.02179546191119236	0.04	0.04	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	19	3	rwr	13.0	0.7134006663890047	0.022904993612607758	0.02	0.01	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	19	4	rwr	13.0	0.7180758017492712	0.017655668277509026	0.0	0.01	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	20	0	rwr	13.0	0.7038868301619686	0.020999586561090435	0.02	0.01	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	20	1	rwr	13.0	0.791183271338092	0.02541620113891289	0.02	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	20	2	rwr	13.0	0.7759626017894843	0.025778858729494775	0.02	0.03	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	20	3	rwr	13.0	0.6344856309870887	0.013207825404008656	0.0	0.01	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	20	4	rwr	13.0	0.6587671803415244	0.0176742254748813	0.02	0.03	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	21	0	rwr	13.0	0.7712765957446808	0.027812948431260674	0.04	0.03	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	21	1	rwr	13.0	0.7197647531919171	0.02133154869222993	0.02	0.05	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	21	2	rwr	13.0	0.7122147381119937	0.01794034405308536	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	21	3	rwr	13.0	0.7054039983340274	0.01883603222408819	0.02	0.02	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	21	4	rwr	13.0	0.6325801749271137	0.01502896716561832	0.02	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	22	0	rwr	13.0	0.6743868926177292	0.01967015964161844	0.02	0.03	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	22	1	rwr	13.0	0.737920981200362	0.026760128666869276	0.02	0.05	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	22	2	rwr	13.0	0.6558761435608726	0.01645195541878374	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	22	3	rwr	13.0	0.7252603082049147	0.023396671408007375	0.02	0.04	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	22	4	rwr	13.0	0.7598917117867556	0.025569923255263735	0.02	0.02	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	23	0	rwr	13.0	0.6744181204979806	0.020556948989618747	0.04	0.03	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	23	1	rwr	13.0	0.7608927314768271	0.020974630501520524	0.0	0.02	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	23	2	rwr	13.0	0.6773700613250226	0.01815960450776767	0.0	0.02	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	23	3	rwr	13.0	0.6740004164931279	0.0264829233045848	0.04	0.02	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	23	4	rwr	13.0	0.7339337775926698	0.02095210096794809	0.0	0.04	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	24	0	rwr	13.0	0.751727942707249	0.03710781386779121	0.06	0.04	0.032	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	24	1	rwr	13.0	0.7040816326530612	0.01835882512713221	0.02	0.04	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	24	2	rwr	13.0	0.694219362621896	0.02545750107017271	0.0	0.06	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	24	3	rwr	13.0	0.6978862973760933	0.017513214451633403	0.0	0.0	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	24	4	rwr	13.0	0.7598396501457726	0.019965755692120998	0.02	0.01	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	25	0	rwr	13.0	0.7479701877836532	0.02234384872892582	0.02	0.02	0.026	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	25	1	rwr	13.0	0.7288127073489494	0.027612181113703466	0.06	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	25	2	rwr	13.0	0.6594752186588921	0.016005589193094392	0.0	0.03	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	25	3	rwr	13.0	0.7052790503956685	0.02016749669690027	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	25	4	rwr	13.0	0.7161078717201166	0.019417663728968953	0.02	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	26	0	rwr	13.0	0.6376316775617271	0.014927354180637894	0.02	0.02	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	26	1	rwr	13.0	0.6887604302804866	0.018617110694084033	0.02	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	26	2	rwr	13.0	0.6982808887101639	0.016922256412872077	0.0	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	26	3	rwr	13.0	0.7409933361099542	0.023868864852656702	0.02	0.04	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	26	4	rwr	13.0	0.7358808829654311	0.01986652403406773	0.02	0.02	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	27	0	rwr	13.0	0.7194070866469584	0.017419082374594864	0.0	0.02	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	27	1	rwr	13.0	0.7394289735598673	0.019762681237015047	0.0	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	27	2	rwr	13.0	0.6982205690157837	0.018607090452160774	0.0	0.02	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	27	3	rwr	13.0	0.716201582673886	0.02377045650298179	0.04	0.04	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	27	4	rwr	13.0	0.6908163265306122	0.027512422758398658	0.02	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	28	0	rwr	13.0	0.6658616813090728	0.013919933248259261	0.0	0.0	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	28	1	rwr	13.0	0.6991354177138835	0.015688106482333878	0.0	0.0	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	28	2	rwr	13.0	0.7418920277470593	0.0254429091912438	0.02	0.01	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	28	3	rwr	13.0	0.6752915451895044	0.02893919665964057	0.06	0.05	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	28	4	rwr	13.0	0.8100583090379009	0.03702359346788362	0.02	0.06	0.032	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	29	0	rwr	13.0	0.6735125119706874	0.02535421418180489	0.04	0.04	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	29	1	rwr	13.0	0.7625012566602997	0.027331121528996097	0.04	0.04	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	29	2	rwr	13.0	0.7362722428873028	0.018485737845680965	0.0	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	29	3	rwr	13.0	0.625374843815077	0.012452620085210897	0.0	0.0	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	29	4	rwr	13.0	0.7215014577259475	0.022253132710398638	0.02	0.03	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	30	0	rwr	13.0	0.6798829995419912	0.01601927023430668	0.0	0.02	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	30	1	rwr	13.0	0.722710364934151	0.01816295152791523	0.02	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	30	2	rwr	13.0	0.7188700110586107	0.02091357986128186	0.0	0.03	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	30	3	rwr	13.0	0.7749895876718034	0.019611520064688196	0.02	0.01	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	30	4	rwr	13.0	0.6817263640149938	0.030207161781783537	0.04	0.05	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	31	0	rwr	13.0	0.7176062788857892	0.02446468207575687	0.02	0.04	0.022	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	31	1	rwr	13.0	0.7243088368352266	0.017029321211176396	0.0	0.01	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	31	2	rwr	13.0	0.6672765657987333	0.012934671656259732	0.0	0.0	0.012	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	31	3	rwr	13.0	0.7263640149937526	0.018041431472013262	0.02	0.02	0.016	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	31	4	rwr	13.0	0.6871303623490213	0.021505116622203228	0.0	0.03	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	32	0	rwr	13.0	0.6772702668942833	0.02102859763552052	0.04	0.04	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	32	1	rwr	13.0	0.7355685131195335	0.028859849747801376	0.04	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	32	2	rwr	13.0	0.6636071177239369	0.014319880408389425	0.0	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	32	3	rwr	13.0	0.6829341940857976	0.015265754581186588	0.02	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	32	4	rwr	13.0	0.834152436484798	0.028996932118862354	0.0	0.02	0.03	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	33	0	rwr	13.0	0.6308864554274055	0.019647479258257723	0.02	0.02	0.012	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	33	1	rwr	13.0	0.7762038805670052	0.022812645721245514	0.0	0.01	0.028	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	33	2	rwr	13.0	0.7259776817130794	0.024597583355811463	0.02	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	33	3	rwr	13.0	0.7188359017076218	0.02675859747796194	0.04	0.05	0.018	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	33	4	rwr	13.0	0.7372344856309871	0.0222393207412044	0.04	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	34	0	rwr	13.0	0.7232168880376401	0.020944606694466752	0.02	0.02	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	34	1	rwr	13.0	0.7073388961495928	0.017384359796203473	0.0	0.01	0.02	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	34	2	rwr	13.0	0.7031969438021515	0.023357120950853995	0.02	0.04	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	34	3	rwr	13.0	0.7495835068721366	0.020252923627685698	0.0	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	34	4	rwr	13.0	0.743356934610579	0.03579197026058766	0.08	0.05	0.02	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	35	0	rwr	13.0	0.7088520631219554	0.02498216285849498	0.04	0.04	0.024	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	35	1	rwr	13.0	0.7181964411380315	0.022081512562417478	0.04	0.02	0.016	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	35	2	rwr	13.0	0.7458429677289635	0.03197944213176887	0.04	0.06	0.026	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	35	3	rwr	13.0	0.6998021657642648	0.01586023424241815	0.0	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	35	4	rwr	13.0	0.6841836734693878	0.018829583634237087	0.04	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	36	0	rwr	13.0	0.6830266061539743	0.026636803903653177	0.04	0.04	0.018	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	36	1	rwr	13.0	0.7160751985523274	0.01759685369811537	0.0	0.02	0.014	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	36	2	rwr	13.0	0.662792801849804	0.024541196733274803	0.02	0.03	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	36	3	rwr	13.0	0.7479383590170763	0.019455264878554736	0.0	0.01	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	36	4	rwr	13.0	0.7333715118700541	0.030059457707443463	0.04	0.03	0.024	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	37	0	rwr	13.0	0.7106945080567931	0.015989615317734844	0.02	0.01	0.014	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	37	1	rwr	13.0	0.6937066452196642	0.02054749025747165	0.02	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	37	2	rwr	13.0	0.7202875238765458	0.02094467228751557	0.0	0.04	0.018	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	37	3	rwr	13.0	0.7001978342357351	0.024290551455138316	0.04	0.03	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	37	4	rwr	13.0	0.7403581840899626	0.02373525635601104	0.02	0.03	0.026	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	38	0	rwr	13.0	0.7063538327018363	0.016119686361557112	0.0	0.01	0.016	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	38	1	rwr	13.0	0.7795114104755203	0.03162044610213638	0.02	0.06	0.024	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	38	2	rwr	13.0	0.6630742937569116	0.01682896825800565	0.0	0.01	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	38	3	rwr	13.0	0.6933465222823824	0.01751807256889798	0.04	0.02	0.014	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	38	4	rwr	13.0	0.7105268638067472	0.019376325006408512	0.0	0.02	0.022	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	39	0	rwr	13.0	0.6867114960236499	0.025138863269112903	0.04	0.03	0.02	28	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	39	1	rwr	13.0	0.7161757313762943	0.02179874128223043	0.02	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	39	2	rwr	13.0	0.7470292550517743	0.022966840709853952	0.04	0.02	0.022	29	3459
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	39	3	rwr	13.0	0.6443148688046647	0.012814183184570317	0.0	0.01	0.012	28	3458
+string_nodb700	intogen_temporal_new	native_string_nodb700	0.7	39	4	rwr	13.0	0.7400874635568514	0.020988644259590353	0.02	0.03	0.018	28	3458
