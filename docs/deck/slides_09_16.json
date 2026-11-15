@@ -243,7 +243,38 @@
     ]
    ],
    "ai": "AI statement: AI tools assisted with code drafting, debugging, literature triage and figure layout. Every number in this talk comes from our own scripts and tables (audited by two independent check scripts); every figure is generated from a released table, and no simulated result is presented as measured. The scientific decisions — the panel, the learner, the endpoint, the decision rule, and the interpretation of every negative cell — were made by the group, and each is recorded in docs/decisions.md.",
-   "roles": "Group work: the network panel, the RWR engine, the label panel, the statistics and the analysis were built and checked jointly; one member presented the full story and all four members took part in the questions."
+   "roles": "The panel, the engine, the label panel, the statistics and the analysis were built and checked jointly by all four members; the split above is for the question-answering session, following the focus areas the course suggests. Every member is expected to be able to answer on any part of the project.",
+   "roles_table": {
+    "head": [
+     "member",
+     "role in the session",
+     "focus (the course's split)"
+    ],
+    "rows": [
+     [
+      "崔澜馨",
+      "Presenter (A)",
+      "the full logical narrative"
+     ],
+     [
+      "贺羽婕",
+      "Q&A (B)",
+      "omics design, scripts, parameters, QC -- the harder questions"
+     ],
+     [
+      "林煜杰",
+      "Q&A (C)",
+      "result interpretation, limitations, validation"
+     ],
+     [
+      "易宏林",
+      "Q&A (D)",
+      "the literature, the evidence, the knowledge gap"
+     ]
+    ],
+    "fontsize": 11.5,
+    "rowh": 0.5
+   }
   }
  ]
 }

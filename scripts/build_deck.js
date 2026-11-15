@@ -474,19 +474,48 @@ slides.forEach((sl) => {
       x: M, y: 1.5, w: CW, colW: [3.0, 9.23], fontFace: FONT, fontSize: 14.5,
       border: { type: "none" }, rowH: 0.36, valign: "middle", margin: [0, 0.04, 0, 0],
     });
+    // the AI statement on the left, the roles block on the right
+    const aiW = sl.roles_table ? 6.9 : CW;
     s.addShape(pptx.ShapeType.roundRect, {
-      x: M, y: 3.5, w: CW, h: 1.62, fill: { color: "F7F5F0" },
+      x: M, y: 3.5, w: aiW, h: 2.05, fill: { color: "F7F5F0" },
       line: { color: HAIR, width: 0.75 }, rectRadius: 0.05,
     });
     s.addText(sl.ai, {
-      x: M + 0.22, y: 3.62, w: CW - 0.44, h: 1.4, fontFace: FONT,
-      fontSize: 14.5, color: INK, align: "left", valign: "top", margin: 0,
-      lineSpacingMultiple: 1.05,
+      x: M + 0.22, y: 3.62, w: aiW - 0.44, h: 1.82, fontFace: FONT,
+      fontSize: 13.5, color: INK, align: "left", valign: "top", margin: 0,
+      lineSpacingMultiple: 1.02,
     });
-    s.addText(sl.roles, {
-      x: M, y: 5.65, w: CW, h: 0.7, fontFace: FONT, fontSize: 14.5,
-      color: MUTED, align: "left", valign: "top", margin: 0,
-    });
+    if (sl.roles_table) {
+      const rt = sl.roles_table;
+      const rx = M + aiW + 0.25;
+      const rw = CW - aiW - 0.25;
+      const head = rt.head.map((h) => ({
+        text: h, options: { bold: true, color: "FFFFFF", fill: { color: GREEN } },
+      }));
+      const body = rt.rows.map((r, i) => r.map((c, j) => ({
+        text: c,
+        options: {
+          color: INK, bold: j === 0,
+          fill: { color: i % 2 ? "FFFFFF" : "F1F7F1" },
+        },
+      })));
+      s.addTable([head].concat(body), {
+        x: rx, y: 3.5, w: rw, colW: [0.95, 1.15, rw - 2.1],
+        fontFace: FONT, fontSize: rt.fontsize || 11.5,
+        border: { type: "solid", color: HAIR, pt: 0.75 },
+        rowH: rt.rowh || 0.6, valign: "middle",
+        margin: [0.02, 0.06, 0.02, 0.06],
+      });
+      s.addText(sl.roles, {
+        x: M, y: 5.75, w: aiW, h: 0.95, fontFace: FONT, fontSize: 12.5,
+        color: MUTED, align: "left", valign: "top", margin: 0,
+      });
+    } else {
+      s.addText(sl.roles, {
+        x: M, y: 5.75, w: CW, h: 0.7, fontFace: FONT, fontSize: 14.5,
+        color: MUTED, align: "left", valign: "top", margin: 0,
+      });
+    }
     return;
   }
 });
