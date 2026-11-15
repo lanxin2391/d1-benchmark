@@ -636,6 +636,23 @@ def recent_series() -> None:
                r4(sel.mean_degree_percentile.iloc[0]),
                "results/tables/c2_ncg_circularity.tsv")
 
+    # ---- the DepMap three-way control -----------------------------
+    tw = t("depmap_prior_vs_degree.tsv")
+    for K in sorted(tw["K"].unique()):
+        s3 = tw[tw["K"] == K]
+        record("depmap_three_way",
+               f"K={K:g} prior, share of cell lines enriched",
+               r4(s3.prior_frac.median()),
+               "results/tables/depmap_prior_vs_degree.tsv")
+        record("depmap_three_way",
+               f"K={K:g} degree, share of cell lines enriched",
+               r4(s3.degree_frac.median()),
+               "results/tables/depmap_prior_vs_degree.tsv")
+        record("depmap_three_way",
+               f"K={K:g} random, share of cell lines enriched",
+               r4(s3.random_frac.median()),
+               "results/tables/depmap_prior_vs_degree.tsv")
+
     # ---- C6: the variance decomposition with the fifth label ------
     cmp_ = t("stats_variance_decomp_comparison.tsv")
     for r in cmp_.itertuples():

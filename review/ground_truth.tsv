@@ -307,6 +307,15 @@ cancer_types	median of the per-type medians	0.0271	results/tables/gr9_cancer_typ
 ncg_circularity	Jaccard with intogen2024	0.522	results/tables/c2_label_jaccard_matrix.tsv	
 ncg_circularity	intact mean degree percentile, ncg	70.2409	results/tables/c2_ncg_circularity.tsv	
 ncg_circularity	intact mean degree percentile, intogen2024	70.1645	results/tables/c2_ncg_circularity.tsv	
+depmap_three_way	K=0.01 prior, share of cell lines enriched	0.0284	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=0.01 degree, share of cell lines enriched	0.6515	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=0.01 random, share of cell lines enriched	0.0249	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=30 prior, share of cell lines enriched	0.0583	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=30 degree, share of cell lines enriched	0.6923	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=30 random, share of cell lines enriched	0.0311	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=100 prior, share of cell lines enriched	0.4764	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=100 degree, share of cell lines enriched	0.9784	results/tables/depmap_prior_vs_degree.tsv	
+depmap_three_way	K=100 random, share of cell lines enriched	0.0608	results/tables/depmap_prior_vs_degree.tsv	
 variance30	network share of the between-arm spread (%)	26.9455	results/tables/stats_variance_decomp_comparison.tsv	
 variance24	network share of the between-arm spread (%)	24.8192	results/tables/stats_variance_decomp_comparison.tsv	
 variance30	label share of the between-arm spread (%)	30.7546	results/tables/stats_variance_decomp_comparison.tsv	

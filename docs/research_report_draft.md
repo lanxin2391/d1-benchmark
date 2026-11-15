@@ -1467,6 +1467,50 @@ rna_coexp       mean δAUROC       +0.0521    +0.0767   +0.0834   +0.0127
 informative Discussion paragraph, and the three robustness controls in
 §F.2–§F.4 are what make it a finding rather than an accident.
 
+### 3.16 External functional validation on 1,361 cancer cell lines
+
+The protocol's warning (section 9) is that a candidate list can look
+like a hub list rather than a dependency list, and our own evidence
+agrees (the RWR ranking's top 1 % contains almost no drivers; the degree
+baseline is a strong predictor). So the external data have to answer a
+specific question: are the genes the prior puts at the top of the
+ranking -- excluding the label's own positives -- more likely to be
+**required** in a cancer cell line?
+
+We use DepMap's CRISPR gene-effect matrix (**1,361 cell lines**) and
+its expression matrix. A gene counts as essential in a cell line when
+its CERES score is below **−0.5** and it is expressed
+(log2(TPM+1) > 1). For every arm and fold we take the held-out
+negatives, rank them by the scorer, take the top K, and test with a
+hypergeometric test whether the candidates are enriched for the
+essential genes of that cell line.
+
+| K | the prior | the degree baseline | random candidates |
+|---|---|---|---|
+| top 1 % | 2.8 % | **65.1 %** | 2.5 % |
+| top 30 | 5.8 % | **69.2 %** | 3.1 % |
+| top 100 | 47.6 % | **97.8 %** | 6.1 % |
+
+(Medians over the 24 arms; the three rankings are computed on the same
+folds, the same universe, the same K and the same cell lines;
+`scripts/run_depmap_degree_baseline.py`.)
+
+**Reading.** The prior is better than random at the top 100 (47.6 %
+against 6.1 %) and no better than random at the top 30 (5.8 % against
+3.1 %). But **the degree baseline carries almost all of the signal at
+every scale** (65–98 %). Hubness predicts functional essentiality well
+-- a real biological signal, not an artefact of this benchmark -- and a
+diffusion prior does not add to it on this task.
+
+**What this means for the claim.** The prior's contribution is
+**task-specific**: on the curated driver labels it beats degree in 23 of
+24 arms, while on a cell-line functional task degree is the better
+predictor. Read together with §F.12 (the bait-matched null), the
+picture is consistent: the part of the driver-label margin that
+survives the publication-count match is also the part that does not
+transfer to a functional task. We state this as a limit on the scope
+of the result, not as a contradiction of it.
+
 ## 4. Discussion
 
 ### 4.1 What the benchmark establishes

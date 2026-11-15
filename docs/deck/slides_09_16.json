@@ -151,12 +151,12 @@
    "image": "figures/figure4_depmap_validation.png",
    "imagew": 6.3,
    "bullets": [
-    "DepMap (1,361 cell lines): at K = 30 candidates the prior shows no enrichment beyond chance (6 % of cell lines, p < 0.05); at K = 100 it does (48 %). The prior carries set-level signal, not gene-level calls.",
+    "DepMap (1,361 cell lines), three ways on the same folds: at K = 30 the prior enriches 5.8 % of the cell lines, the degree baseline 69.2 %, random 3.1 %; at K = 100, 47.6 % vs 97.8 % vs 6.1 %. The prior's contribution is task-specific: on the driver labels it beats degree in 23/24 arms, on a functional task degree carries almost everything.",
     "NCG arbitration: the prior ranks drivers that our labels do not contain above the rest in 24/24 arms (median +0.041) — but in only 13/24 on the low-FPR endpoint, and the protein networks are the only ones that pass.",
     "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers -- but re-running the whole benchmark with them removed from the background leaves 23/24 arms positive, no sign flip and the median margin at +0.082: the contamination does not carry the result.",
     "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific.\nAnd four controls on the design itself: the margin survives losing 10 % of the seeds (-2 %); the four gene-cluster failures are a power problem, not a size artefact; the five labels carry about one dimension, not five; and the increment is learner-specific (a proximity learner gives +0.011 against RWR's +0.081)."
    ],
-   "keyline": "DepMap (1,361 cell lines): no enrichment at K = 30 (5.8 %, chance 5 %), clear at K = 100 (47.6 %)  |  NCG arbitration: the prior ranks drivers our labels do not contain above the rest in 24/24 arms (median +0.041), 26/26 cancer types, but only 13/24 on the low-FPR endpoint  |  our own negatives: 10-22 % are curated drivers; re-running with them removed leaves 23/24 arms and the median at +0.082"
+   "keyline": "DepMap (1,361 cell lines), three ways on the same folds: at K = 30 the prior enriches 5.8 % of the cell lines, the degree baseline 69.2 %, random 3.1 %; at K = 100, 47.6 % vs 97.8 % vs 6.1 %  |  the prior's contribution is task-specific: on the driver labels it beats degree in 23/24 arms, on a functional task degree carries almost everything"
   },
   {
    "n": 14,

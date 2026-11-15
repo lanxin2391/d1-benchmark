@@ -2156,6 +2156,69 @@
   "note": ""
  },
  {
+  "quantity": "depmap_three_way",
+  "scope": "K=0.01 prior, share of cell lines enriched",
+  "value": 0.0284,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=0.01 degree, share of cell lines enriched",
+  "value": 0.6515,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=0.01 random, share of cell lines enriched",
+  "value": 0.0249,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=30 prior, share of cell lines enriched",
+  "value": 0.0583,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=30 degree, share of cell lines enriched",
+  "value": 0.6923,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=30 random, share of cell lines enriched",
+  "value": 0.0311,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=100 prior, share of cell lines enriched",
+  "value": 0.4764,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=100 degree, share of cell lines enriched",
+  "value": 0.9784,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "depmap_three_way",
+  "scope": "K=100 random, share of cell lines enriched",
+  "value": 0.0608,
+  "source": "results/tables/depmap_prior_vs_degree.tsv",
+  "note": ""
+ },
+ {
   "quantity": "variance30",
   "scope": "network share of the between-arm spread (%)",
   "value": 26.9455,

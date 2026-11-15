@@ -202,6 +202,14 @@ string_full700 intogen_temporal_new                5800                 0.059483
 - the second (proximity) learner: positive in 16/24 arms, the median margin +0.0112 against RWR's +0.0809; the Spearman rho between the two learners is +0.30
 - STRING without the database channel: the margin changes by intogen2024 -0.0249, intogen_temporal_new +0.0057, ot_all -0.0381, ot_nolit +0.0103 -> the shared-upstream-knowledge-base concern is small here
 
+## 4d. The DepMap control, three ways (prior / degree / random)
+
+- K = 0.01: the prior **2.8%**, the degree baseline **65.1%**, random candidates **2.5%** of the cell lines enriched (the same folds, universe, K and cell lines)
+- K = 30: the prior **5.8%**, the degree baseline **69.2%**, random candidates **3.1%** of the cell lines enriched (the same folds, universe, K and cell lines)
+- K = 100: the prior **47.6%**, the degree baseline **97.8%**, random candidates **6.1%** of the cell lines enriched (the same folds, universe, K and cell lines)
+- the degree baseline beats the prior in 21/24, 20/24, 21/24
+- the prior's contribution is task-specific: on the driver labels it beats degree in 23/24 arms; on the cell-line functional task degree carries almost all the signal
+
 ## 5. Label quality (C7)
 
 | label | high | mid | low |

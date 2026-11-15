@@ -269,6 +269,28 @@ if nodb is not None:
 w()
 
 
+# ---- 4d. the DepMap three-way control --------------------------------
+tw = load("depmap_prior_vs_degree.tsv")
+if tw is not None:
+    w("## 4d. The DepMap control, three ways (prior / degree / random)")
+    w()
+    for K in sorted(tw["K"].unique()):
+        s2 = tw[tw["K"] == K]
+        w(f"- K = {K:g}: the prior **{s2.prior_frac.median():.1%}**, the "
+          f"degree baseline **{s2.degree_frac.median():.1%}**, random "
+          f"candidates **{s2.random_frac.median():.1%}** of the cell lines "
+          f"enriched (the same folds, universe, K and cell lines)")
+    w("- the degree baseline beats the prior in "
+      + ", ".join(
+          f"{int((tw[tw['K'] == K].degree_frac > tw[tw['K'] == K].prior_frac).sum())}"
+          f"/{len(tw[tw['K'] == K])}"
+          for K in sorted(tw["K"].unique())))
+    w("- the prior's contribution is task-specific: on the driver labels it "
+      "beats degree in 23/24 arms; on the cell-line functional task degree "
+      "carries almost all the signal")
+    w()
+
+
 # ---- 5. label quality ---------------------------------------------
 tiers = load("label_quality_tiers.tsv")
 tier_auc = load("label_tier_delta_auroc.tsv")
