@@ -92,20 +92,14 @@ function chrome(s, sl) {
       align: "left", valign: "top", margin: 0,
     });
   }
-  // the footer band and the take-home message
+  // the footer band (the take-home message was removed at the group's
+  // request; the band keeps the slide number anchored)
   s.addShape(pptx.ShapeType.rect, {
     x: 0, y: 6.82, w: W, h: 0.68, fill: { color: BAND }, line: { type: "none" },
   });
   s.addShape(pptx.ShapeType.rect, {
     x: 0, y: 6.82, w: 0.22, h: 0.68, fill: { color: colour }, line: { type: "none" },
   });
-  if (sl.footer) {
-    s.addText(sl.footer, {
-      x: M, y: 6.90, w: CW - 0.7, h: 0.52, fontFace: FONT, fontSize: 13.5,
-      italic: true, color: "4A4741", align: "left", valign: "middle",
-      margin: 0,
-    });
-  }
   s.addText(String(sl.n), {
     x: W - 0.85, y: 6.90, w: 0.5, h: 0.52, fontFace: FONT, fontSize: 13,
     color: MUTED, align: "right", valign: "middle", margin: 0,
@@ -161,10 +155,14 @@ slides.forEach((sl) => {
       x: M, y: 2.85, w: CW - 1.0, h: 0.9, fontFace: FONT, fontSize: 22,
       color: "4A4741", align: "left", valign: "top", margin: 0,
     });
-    const rows = sl.members.map((m) => [
-      { text: m.split("—")[0].trim(), options: { bold: true, color: GREEN } },
-      { text: m.split("—")[1].trim(), options: { color: INK } },
-    ]);
+    const rows = sl.members.map((m) => {
+      const parts = m.split("—");
+      const out = [{ text: parts[0].trim(), options: { bold: true, color: GREEN } }];
+      if (parts.length > 1) {
+        out.push({ text: parts[1].trim(), options: { color: INK } });
+      }
+      return out;
+    });
     s.addTable(rows, {
       x: M, y: 4.05, w: CW - 1.0, colW: [2.4, 8.8], fontFace: FONT,
       fontSize: 15, border: { type: "none" }, rowH: 0.32, valign: "middle",
@@ -179,10 +177,6 @@ slides.forEach((sl) => {
     });
     s.addShape(pptx.ShapeType.rect, {
       x: 0, y: 6.82, w: 0.22, h: 0.68, fill: { color: GREEN }, line: { type: "none" },
-    });
-    s.addText(sl.footer, {
-      x: M, y: 6.90, w: CW - 0.7, h: 0.52, fontFace: FONT, fontSize: 13.5,
-      italic: true, color: "4A4741", align: "left", valign: "middle", margin: 0,
     });
     return;
   }
@@ -262,11 +256,15 @@ slides.forEach((sl) => {
       fontSize: 15, border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.42, valign: "middle", margin: [0.03, 0.07, 0.03, 0.07],
     });
-    sl.table.rowlabels.forEach((lab, i) => {
-      s.addText([
-        { text: lab[0] + "   ", options: { bold: true, color: AQUA } },
-        { text: lab[1], options: { color: INK } },
-      ], {
+    const rowLabels = (sl.table.rowlabels || []).map((lab) =>
+      Array.isArray(lab) ? lab : [null, lab]);
+    rowLabels.forEach((lab, i) => {
+      const runs = [];
+      if (lab[0]) {
+        runs.push({ text: lab[0] + "   ", options: { bold: true, color: AQUA } });
+      }
+      runs.push({ text: lab[1], options: { color: INK } });
+      s.addText(runs, {
         x: M, y: 5.05 + i * 0.78, w: CW, h: 0.72, fontFace: FONT,
         fontSize: 15, align: "left", valign: "top", margin: 0,
       });
