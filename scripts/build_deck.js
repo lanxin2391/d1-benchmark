@@ -181,16 +181,29 @@ slides.forEach((sl) => {
     return;
   }
 
+  // the data summary under the title; its height depends on how many
+  // lines it needs, and everything below it starts after it
+  const keyH = sl.keyline
+    ? Math.ceil(sl.keyline.length / 158) * 0.215 + 0.08 : 0;
+  const top = 1.30 + keyH + 0.10;
+  if (sl.keyline) {
+    s.addText(sl.keyline, {
+      x: M, y: 1.30, w: CW, h: keyH, fontFace: FONT, fontSize: 12.5,
+      color: "4A4741", align: "left", valign: "top", margin: 0,
+      lineSpacingMultiple: 1.0,
+    });
+  }
+
   if (sl.kind === "image") {
     chrome(s, sl);
-    const h = image(s, sl.image, sl.imagew, 1.55);
+    const h = image(s, sl.image, sl.imagew, Math.max(1.55, top));
     return;
   }
 
   if (sl.kind === "papers") {
     chrome(s, sl);
     s.addText(sl.paper.cite, {
-      x: M, y: 1.42, w: CW, h: 0.42, fontFace: FONT, fontSize: 15,
+      x: M, y: top, w: CW, h: 0.42, fontFace: FONT, fontSize: 15,
       italic: true, color: VIOLET, align: "left", valign: "top", margin: 0,
     });
     const rows = sl.paper.rows.map((r) => [
@@ -198,7 +211,7 @@ slides.forEach((sl) => {
       { text: r[1], options: { color: INK } },
     ]);
     s.addTable(rows, {
-      x: M, y: 1.95, w: CW, colW: [2.5, 9.73], fontFace: FONT, fontSize: 17,
+      x: M, y: top, w: CW, colW: [2.5, 9.73], fontFace: FONT, fontSize: 17,
       border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.95, valign: "middle", margin: [0.04, 0.08, 0.04, 0.08],
     });
@@ -208,7 +221,7 @@ slides.forEach((sl) => {
   if (sl.kind === "hypotheses") {
     chrome(s, sl);
     s.addText(sl.gap, {
-      x: M, y: 1.45, w: CW, h: 1.25, fontFace: FONT, fontSize: 18,
+      x: M, y: top, w: CW, h: 1.25, fontFace: FONT, fontSize: 18,
       color: "4A4741", align: "left", valign: "top", margin: 0,
     });
     sl.hyp.forEach((h, i) => {
@@ -237,7 +250,7 @@ slides.forEach((sl) => {
   if (sl.kind === "table") {
     chrome(s, sl);
     s.addText(sl.lead, {
-      x: M, y: 1.42, w: CW, h: 0.42, fontFace: FONT, fontSize: 18,
+      x: M, y: top, w: CW, h: 0.42, fontFace: FONT, fontSize: 18,
       color: "4A4741", align: "left", valign: "top", margin: 0,
     });
     const head = sl.table.head.map((h) => ({
@@ -252,7 +265,7 @@ slides.forEach((sl) => {
       },
     })));
     s.addTable([head].concat(body), {
-      x: M, y: 1.95, w: CW, colW: [2.5, 5.4, 1.7, 1.63], fontFace: FONT,
+      x: M, y: top, w: CW, colW: [2.5, 5.4, 1.7, 1.63], fontFace: FONT,
       fontSize: 15, border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.42, valign: "middle", margin: [0.03, 0.07, 0.03, 0.07],
     });
@@ -318,7 +331,7 @@ slides.forEach((sl) => {
       },
     })));
     s.addTable([head].concat(body), {
-      x: M, y: 1.5, w: CW, colW: [2.5, 2.6, 4.0, 3.13], fontFace: FONT,
+      x: M, y: top, w: CW, colW: [2.5, 2.6, 4.0, 3.13], fontFace: FONT,
       fontSize: 13.5, border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.62, valign: "middle", margin: [0.03, 0.07, 0.03, 0.07],
     });
@@ -344,7 +357,7 @@ slides.forEach((sl) => {
       },
     })));
     s.addTable([head].concat(body), {
-      x: M, y: 1.45, w: CW, colW: [3.6, 3.6, 5.03], fontFace: FONT,
+      x: M, y: top, w: CW, colW: [3.6, 3.6, 5.03], fontFace: FONT,
       fontSize: 12.5, border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.44, valign: "middle", margin: [0.02, 0.07, 0.02, 0.07],
     });
@@ -353,7 +366,7 @@ slides.forEach((sl) => {
 
   if (sl.kind === "heatmap") {
     chrome(s, sl);
-    const h = image(s, sl.image, sl.imagew, 1.42);
+    const h = image(s, sl.image, sl.imagew, Math.max(1.42, top));
     const y0 = 1.42 + h + 0.18;
     sl.stats.forEach((st, i) => {
       const x = M + i * 4.05;
@@ -371,7 +384,7 @@ slides.forEach((sl) => {
 
   if (sl.kind === "stability") {
     chrome(s, sl);
-    const h = image(s, sl.image, 11.4, 1.45);
+    const h = image(s, sl.image, 11.4, Math.max(1.45, top));
     bullets(s, sl.bullets, {
       x: M, y: 1.45 + h + 0.12, w: CW, h: 6.7 - (1.45 + h), size: 13,
     });
@@ -380,8 +393,8 @@ slides.forEach((sl) => {
 
   if (sl.kind === "external") {
     chrome(s, sl);
-    image(s, sl.image, 6.35, 1.75, M);
-    bullets(s, sl.bullets, { x: 7.15, y: 1.55, w: W - 7.15 - M, h: 5.0, size: 12.5 });
+    image(s, sl.image, 6.35, Math.max(1.75, top), M);
+    bullets(s, sl.bullets, { x: 7.15, y: Math.max(1.55, top), w: W - 7.15 - M, h: 5.0, size: 12.5 });
     return;
   }
 
@@ -420,7 +433,7 @@ slides.forEach((sl) => {
       },
     })));
     s.addTable([head].concat(body), {
-      x: M, y: 1.5, w: CW, colW: [3.9, 3.3, 5.03], fontFace: FONT,
+      x: M, y: top, w: CW, colW: [3.9, 3.3, 5.03], fontFace: FONT,
       fontSize: 14, border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH: 0.82, valign: "middle", margin: [0.03, 0.08, 0.03, 0.08],
     });
@@ -434,7 +447,7 @@ slides.forEach((sl) => {
     chrome(s, sl);
     if (sl.note) {
       s.addText(sl.note, {
-        x: M, y: 1.38, w: CW, h: 0.62, fontFace: FONT, fontSize: 12,
+      x: M, y: top, w: CW, h: 0.62, fontFace: FONT, fontSize: 12,
         italic: true, color: MUTED, align: "left", valign: "top", margin: 0,
       });
     }
@@ -457,7 +470,7 @@ slides.forEach((sl) => {
     const rowH = Math.min(tb.rowh || 0.42, avail / (tb.rows.length + 1));
     const fs = Math.min(tb.fontsize || 12, Math.max(8.5, (rowH * 72) / 2.7));
     s.addTable([head].concat(body), {
-      x: M, y: 2.05, w: CW, colW, fontFace: FONT, fontSize: fs,
+      x: M, y: top, w: CW, colW, fontFace: FONT, fontSize: fs,
       border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH, valign: "middle", margin: [0.02, 0.06, 0.02, 0.06],
     });
@@ -471,7 +484,7 @@ slides.forEach((sl) => {
       { text: r[1], options: { color: INK } },
     ]);
     s.addTable(rows, {
-      x: M, y: 1.5, w: CW, colW: [3.0, 9.23], fontFace: FONT, fontSize: 14.5,
+      x: M, y: top, w: CW, colW: [3.0, 9.23], fontFace: FONT, fontSize: 14.5,
       border: { type: "none" }, rowH: 0.36, valign: "middle", margin: [0, 0.04, 0, 0],
     });
     // the AI statement on the left, the roles block on the right

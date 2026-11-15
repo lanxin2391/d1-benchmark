@@ -3,7 +3,7 @@
   {
    "n": 17,
    "kind": "appendix",
-   "tag": "APPENDIX A1",
+   "tag": "PART 2 · A1",
    "title": "The literature, and the decision each paper forced",
    "note": "Every design decision in the benchmark traces to a specific published result. Full method digest: D1_参考文献_数据分析算法与方法汇编.docx (41 papers).",
    "table": {
@@ -66,7 +66,7 @@
   {
    "n": 18,
    "kind": "appendix",
-   "tag": "APPENDIX A2",
+   "tag": "PART 2 · A2",
    "title": "Every input, its release, and its identifier",
    "note": "Full list with the local paths: datasets_sources.md.",
    "table": {
@@ -169,7 +169,7 @@
   {
    "n": 19,
    "kind": "appendix",
-   "tag": "APPENDIX A3",
+   "tag": "PART 2 · A3",
    "title": "The full 24-arm primary result (alpha = 0.5)",
    "note": "delta-AUROC (RWR - degree) and its SD over the 200 (repeat, fold) evaluations. Source: results/tables/a4_table1_delta_auroc_v40.tsv. The alpha sweep (0.3 / 0.5 / 0.7) is in the same table set.",
    "table": {
@@ -231,7 +231,7 @@
   {
    "n": 20,
    "kind": "appendix",
-   "tag": "APPENDIX A4",
+   "tag": "PART 2 · A4",
    "title": "The H1 verdict under each interval construction",
    "note": "Pre-registered H1: the 95 % CI excludes 0 in EVERY arm. Source: docs/pre_registration_amendments.md A2.3b and results/tables/stats_h1_verdict_v40.tsv.",
    "table": {
@@ -280,7 +280,7 @@
   {
    "n": 21,
    "kind": "appendix",
-   "tag": "APPENDIX A5",
+   "tag": "PART 2 · A5",
    "title": "The low-FPR endpoints (the G4 co-primary endpoints)",
    "note": "pAUC at FPR <= 0.02 is the normalised excess area (random = 0, perfect = 1); p10 is the top-10 % precision minus the degree baseline's. The margins are much smaller than on AUROC, and the arm order is broadly stable (rho = 0.80-0.90). Source: pauc_top10_summary.tsv.",
    "table": {
@@ -468,7 +468,7 @@
   {
    "n": 22,
    "kind": "appendix",
-   "tag": "APPENDIX A6",
+   "tag": "PART 2 · A6",
    "title": "The bait-matched null: how much of the margin is visibility",
    "note": "For each held-out positive we test a negative matched on its publication count; each cell is the fraction of positives above the null, UNMATCHED -> MATCHED. Chance = 5 %. The temporal column is the one that collapses. Source: results/tables/g3_bait_matched_null.tsv.",
    "table": {
@@ -530,7 +530,7 @@
   {
    "n": 23,
    "kind": "appendix",
-   "tag": "APPENDIX A7",
+   "tag": "PART 2 · A7",
    "title": "The negative set: contaminated, but it does not carry the result",
    "note": "Each cell: the share of the held-out negatives that are curated NCG drivers | the margin BEFORE -> AFTER removing them from the BACKGROUND and re-running the benchmark (Control 13): 23/24 arms stay positive, no sign flip, the median +0.0809 -> +0.0822. Source: c9_clean_background_comparison.tsv.",
    "table": {
@@ -592,7 +592,7 @@
   {
    "n": 24,
    "kind": "appendix",
-   "tag": "APPENDIX A8",
+   "tag": "PART 2 · A8",
    "title": "The equal-prevalence panel: the curator-lag evidence",
    "note": "All five labels have the same number of positives inside each arm (the D-11 common-size cap). Reactome is negative on the two newest catalogues and positive on the 2019 NCG catalogue -> the failure is label-specific, not network-specific. Source: d11_table_v2.tsv.",
    "table": {
@@ -661,7 +661,7 @@
   {
    "n": 25,
    "kind": "appendix",
-   "tag": "APPENDIX A9",
+   "tag": "PART 2 · A9",
    "title": "Label quality: which positives carry the margin?",
    "note": "Tiers: ClinGen review status; IntOGen's number of detecting methods (>= 4 = high); NCG's literature count (>= 10 = high); Open Targets' literature vs non-literature evidence. The margin is recomputed with one tier's positives only. Source: label_quality_tiers.tsv, label_tier_delta_auroc.tsv.",
    "table": {
@@ -723,7 +723,7 @@
   {
    "n": 26,
    "kind": "appendix",
-   "tag": "APPENDIX A10",
+   "tag": "PART 2 · A10",
    "title": "The variance decomposition: 24 arms against 30",
    "note": "The fifth label (NCG) is 65 % identical to IntOGen, so the 30-arm grid measures the effect of adding a REDUNDANT label, not an independent one. Source: stats_variance_decomp_comparison.tsv.",
    "table": {
@@ -776,7 +776,7 @@
   {
    "n": 27,
    "kind": "appendix",
-   "tag": "APPENDIX A11",
+   "tag": "PART 2 · A11",
    "title": "Four controls on the design itself",
    "note": "Each of the four asks whether the headline number can be read as a statement about topology rather than about our choices. The pre-registered endpoint is untouched; all four are exploratory (amendment 4).",
    "table": {

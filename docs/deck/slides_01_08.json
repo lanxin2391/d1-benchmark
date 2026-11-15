@@ -26,7 +26,8 @@
    "tag": "RESEARCH MAP",
    "title": "One question, three hypotheses, one pre-registered benchmark",
    "image": "figures/deck_research_map.png",
-   "imagew": 12.3
+   "imagew": 12.3,
+   "keyline": "the question: how much of a network prior's advantage is topology, how much is node degree, how much is study visibility?  |  24 pre-registered arms, 6 networks, 5 label sets, 11 controls"
   },
   {
    "n": 3,
@@ -53,7 +54,8 @@
       "Purely recurrence-based; no network, no prior, and no way to separate a network contribution from the catalogue's own degree bias"
      ]
     ]
-   }
+   },
+   "keyline": "9,423 TCGA tumour/normal pairs, 26 tissue types, 26 mutation callers voting  |  our label: intogen2024, 633 genes  |  the limitation: purely recurrence-based, no network, no way to separate a network's contribution from the catalogue's degree bias  |  the catalogue became the field's default gold standard (the Cancer Gene Census)"
   },
   {
    "n": 4,
@@ -80,7 +82,8 @@
       "Its gold standard is Reactome-derived (>200-protein pathways), and Reactome also feeds STRING's database channel — the paper's own benchmark is partly circular"
      ]
     ]
-   }
+   },
+   "keyline": "FunMap: XGBoost co-function per pair; edges added in blocks until the set-level LLR < 3.912 (LR = 50); mutual rank > 0.95; 10,525 nodes / 196,800 edges  |  its gold standard is Reactome-derived and Reactome also feeds STRING's database channel  |  our arm: 10,189 nodes / 196,605 edges  |  the paper's own warning: the comparison networks \"incorporate the knowledge used for evaluation\""
   },
   {
    "n": 5,
@@ -107,7 +110,8 @@
       "The confidence level is itself network-derived, and the unlabelled genes are treated as negatives — so it can arbitrate, but not measure"
      ]
     ]
-   }
+   },
+   "keyline": "NCG: 2,372 genes curated from the sequencing literature (708 known / 104 candidate / 1,560 screening); the confidence level is itself network-derived  |  our use: the arbitration catalogue (24/24 arms, median +0.041) and the negative-set audit (10-22 % of our negatives are curated drivers)"
   },
   {
    "n": 6,
@@ -131,7 +135,8 @@
      "Curated networks fail specifically on recently discovered drivers.",
      "Falsified if the failure appears equally on older catalogues."
     ]
-   ]
+   ],
+   "keyline": "the gap: the topology / degree / visibility decomposition has never been done inside one frozen, pre-registered design  |  H-vis (falsified if a publication-matched null keeps the margin)  |  H-stable  |  H-lag"
   },
   {
    "n": 7,
@@ -194,7 +199,8 @@
       "RWR frozen at alpha = 0.5 (no tuning) | 5 folds x 40 repeats = 200 evaluations per arm | positive sets capped per network (D-11) | splits fixed and released"
      ]
     ]
-   }
+   },
+   "keyline": "six networks: 3 protein-derived, 1 RNA-derived, 2 curated  |  largest 17,918 nodes / 564,706 edges (IntAct), smallest 3,953 / 20,143 (Reactome)  |  five label sets: 633, 600, 600, 152, 84, 708 positives  |  RWR frozen at alpha = 0.5, 5 folds x 40 repeats = 200 evaluations per arm"
   },
   {
    "n": 8,
@@ -226,7 +232,8 @@
      "Audit",
      "Pre-registration frozen at Zenodo; every departure is an amendment (A2.3a-k, 14 analysis families registered); 50/50 reproducibility checks and 63/63 claim checks pass"
     ]
-   ]
+   ],
+   "keyline": "build -> harmonise (LCC, unweighted) -> map to HGNC -> cap the positive sets -> split (released, SHA-256 manifests) -> run RWR and the degree baseline on identical folds -> gene-cluster bootstrap + TOST + BH-FDR  |  audit 50/50 PASS, claims 114/114 PASS"
   }
  ]
 }

@@ -37,7 +37,8 @@
      "ambiguous symbols are dropped and counted (83 for NCG)"
     ]
    ],
-   "honesty": "We never picked a parameter to make a result significant. The parameters were frozen before the analysis; every later change is an amendment in docs/pre_registration_amendments.md, and robustness is shown with hub-capped RWR, the alpha sweep, the per-network cap, complex-aware cross-validation and a per-cancer-type split."
+   "honesty": "We never picked a parameter to make a result significant. The parameters were frozen before the analysis; every later change is an amendment in docs/pre_registration_amendments.md, and robustness is shown with hub-capped RWR, the alpha sweep, the per-network cap, complex-aware cross-validation and a per-cancer-type split.",
+   "keyline": "alpha = 0.5 locked in the pre-registration; the same value in all 24 arms and all controls  |  the repeat is the resampling unit (40 x 5 = 200 evaluations); the fold interval is over-conservative (coverage 1.000), the repeat interval calibrated (0.936-0.944)  |  every later change is an amendment (A2.3a-k, 14 analysis families registered)"
   },
   {
    "n": 10,
@@ -100,7 +101,8 @@
      "the gain is an artefact of label noise",
      "the margin moves by -0.0018 .. +0.0026"
     ]
-   ]
+   ],
+   "keyline": "degree-matched seeds (23/24 beat the null at z > 5) · rewiring (23/24 at z > 5) · shared universe (-0.0360) · temporal split (-0.0095) · common-size cap (-0.0125) · complex-aware CV (leakage 0.87-0.96 -> 0.02-0.18) · hub-cap RWR · publication adjustment · bait-matched null · label tiers · ClinGen noise anchor"
   },
   {
    "n": 11,
@@ -123,7 +125,8 @@
      "only negative arm: Reactome x newest drivers"
     ]
    ],
-   "note": "The pre-registered H1 rule (95 % CI excludes 0 in every arm) is met under four of five interval constructions (24/24) and NOT met under the conservative gene-cluster interval (20/24) — the four exceptions are all the newest-driver label."
+   "note": "The pre-registered H1 rule (95 % CI excludes 0 in every arm) is met under four of five interval constructions (24/24) and NOT met under the conservative gene-cluster interval (20/24) — the four exceptions are all the newest-driver label.",
+   "keyline": "delta-AUROC over the degree baseline, same folds: 23/24 arms positive, median +0.081, best +0.171 (STRING physical x OT no-lit), worst -0.013 (Reactome x the newest drivers)  |  H1: 24/24 under four of five interval constructions, 20/24 under the pre-registered gene-cluster bootstrap (the four failures are the smallest effects)"
   },
   {
    "n": 12,
@@ -137,7 +140,8 @@
     "The instability is the gene's own score variance (rho = 1.00, q = 2e-137); no classical topology descriptor predicts it.",
     "Network-level stability is predicted by coverage and the 2-core fraction (rho = -0.905, q = 0.012) — not by size, density or modularity.",
     "The mechanism is the seed-count law: RWR weights seeds linearly, so bagging the prior is a provable no-op. Regularising it cannot restore the ranking."
-   ]
+   ],
+   "keyline": "the endpoint is stable, the gene is not: the arm-level SD is 0.0047 while the per-gene CV is 18 % and a median gene moves ~270 ranks  |  the instability is the gene's own score variance (rho = 1.00), not topology; bagging the prior is a provable no-op  |  at the network level, coverage and the 2-core predict stability (rho = -0.905)"
   },
   {
    "n": 13,
@@ -151,7 +155,8 @@
     "NCG arbitration: the prior ranks drivers that our labels do not contain above the rest in 24/24 arms (median +0.041) — but in only 13/24 on the low-FPR endpoint, and the protein networks are the only ones that pass.",
     "Our own negative set: 10-22 % of the held-out 'negatives' are curated NCG drivers -- but re-running the whole benchmark with them removed from the background leaves 23/24 arms positive, no sign flip and the median margin at +0.082: the contamination does not carry the result.",
     "Reactome is positive on the 2019 NCG catalogue (+0.089) but negative on the two newest catalogues — the failure is label-specific, not network-specific.\nAnd four controls on the design itself: the margin survives losing 10 % of the seeds (-2 %); the four gene-cluster failures are a power problem, not a size artefact; the five labels carry about one dimension, not five; and the increment is learner-specific (a proximity learner gives +0.011 against RWR's +0.081)."
-   ]
+   ],
+   "keyline": "DepMap (1,361 cell lines): no enrichment at K = 30 (5.8 %, chance 5 %), clear at K = 100 (47.6 %)  |  NCG arbitration: the prior ranks drivers our labels do not contain above the rest in 24/24 arms (median +0.041), 26/26 cancer types, but only 13/24 on the low-FPR endpoint  |  our own negatives: 10-22 % are curated drivers; re-running with them removed leaves 23/24 arms and the median at +0.082"
   },
   {
    "n": 14,
@@ -184,7 +189,8 @@
      "Curated networks fail on recently discovered drivers",
      "Reactome is +0.089 on the 2019 catalogue and negative on the two newest ones — a coverage and curator-lag effect"
     ]
-   ]
+   ],
+   "keyline": "1 the prior contributes beyond degree (23/24 arms)  2 but the margin is modest and label-dependent (+0.081; the degree baseline is already 0.644, so a 9 % relative gain)  3 much of it is study visibility (the temporal label falls to chance)  4 the instability is intrinsic (rho = 1.00)  5 curated networks fail on recent drivers (Reactome +0.089 on the 2019 catalogue, negative on the two newest)"
   },
   {
    "n": 15,
@@ -217,7 +223,8 @@
      "RWR only",
      "re-run the locked protocol with a second fixed learner (closeness centrality) to show the conclusion is not learner-specific"
     ]
-   ]
+   ],
+   "keyline": "the gene-cluster interval misses four arms -> re-run on an independent cell-line label  |  the negative set is contaminated -> re-derive it (done: nothing changes)  |  the evaluation is self-referential -> a blind expert-panel challenge  |  no perturbation -> seed-perturbation (done)  |  one learner -> the increment is learner-specific, so claim only what the locked learner supports"
   },
   {
    "n": 16,
@@ -274,7 +281,8 @@
     ],
     "fontsize": 11.5,
     "rowh": 0.5
-   }
+   },
+   "keyline": "the code, the tables, the figures and the splits are public and re-runnable; the pre-registration is frozen; two audit scripts pass 50/50 and 114/114"
   }
  ]
 }

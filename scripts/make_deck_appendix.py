@@ -24,7 +24,7 @@ slides = []
 
 # ---- A1: the literature -> our design decisions ---------------------
 slides.append({
-    "n": 17, "kind": "appendix", "tag": "APPENDIX A1",
+    "n": 17, "kind": "appendix", "tag": "PART 2 · A1",
     "title": "The literature, and the decision each paper forced",
     "note": "Every design decision in the benchmark traces to a specific "
             "published result. Full method digest: "
@@ -66,7 +66,7 @@ slides.append({
 
 # ---- A2: the data provenance ----------------------------------------
 slides.append({
-    "n": 18, "kind": "appendix", "tag": "APPENDIX A2",
+    "n": 18, "kind": "appendix", "tag": "PART 2 · A2",
     "title": "Every input, its release, and its identifier",
     "note": "Full list with the local paths: datasets_sources.md.",
     "table": {
@@ -106,7 +106,7 @@ if t1 is not None:
             r.append(f"{piv.loc[net, lab]:+.4f} +/- {sd.loc[net, lab]:.4f}")
         rows.append(r)
     slides.append({
-        "n": 19, "kind": "appendix", "tag": "APPENDIX A3",
+        "n": 19, "kind": "appendix", "tag": "PART 2 · A3",
         "title": "The full 24-arm primary result (alpha = 0.5)",
         "note": "delta-AUROC (RWR - degree) and its SD over the 200 "
                 "(repeat, fold) evaluations. Source: "
@@ -120,7 +120,7 @@ if t1 is not None:
 
 # ---- A4: the five interval constructions ----------------------------
 slides.append({
-    "n": 20, "kind": "appendix", "tag": "APPENDIX A4",
+    "n": 20, "kind": "appendix", "tag": "PART 2 · A4",
     "title": "The H1 verdict under each interval construction",
     "note": "Pre-registered H1: the 95 % CI excludes 0 in EVERY arm. "
             "Source: docs/pre_registration_amendments.md A2.3b and "
@@ -160,7 +160,7 @@ if g4 is not None:
             ])
 if rows:
     slides.append({
-        "n": 21, "kind": "appendix", "tag": "APPENDIX A5",
+        "n": 21, "kind": "appendix", "tag": "PART 2 · A5",
         "title": "The low-FPR endpoints (the G4 co-primary endpoints)",
         "note": "pAUC at FPR <= 0.02 is the normalised excess area "
                 "(random = 0, perfect = 1); p10 is the top-10 % precision "
@@ -193,7 +193,7 @@ if g3 is not None:
                        f"{r.frac_matched_null_above:.1%}")
         rows.append(row)
     slides.append({
-        "n": 22, "kind": "appendix", "tag": "APPENDIX A6",
+        "n": 22, "kind": "appendix", "tag": "PART 2 · A6",
         "title": "The bait-matched null: how much of the margin is visibility",
         "note": "For each held-out positive we test a negative matched on "
                 "its publication count; each cell is the fraction of "
@@ -224,7 +224,7 @@ if g8 is not None and c9 is not None:
                        f"{r.standard_a05:+.4f} -> {r.cleaned_a05:+.4f}")
         rows.append(row)
     slides.append({
-        "n": 23, "kind": "appendix", "tag": "APPENDIX A7",
+        "n": 23, "kind": "appendix", "tag": "PART 2 · A7",
         "title": "The negative set: contaminated, but it does not carry "
                  "the result",
         "note": "Each cell: the share of the held-out negatives that are "
@@ -254,7 +254,7 @@ if d11 is not None:
             r.append(f"{v:+.4f}" if pd.notna(v) else "-")
         rows.append(r)
     slides.append({
-        "n": 24, "kind": "appendix", "tag": "APPENDIX A8",
+        "n": 24, "kind": "appendix", "tag": "PART 2 · A8",
         "title": "The equal-prevalence panel: the curator-lag evidence",
         "note": "All five labels have the same number of positives inside "
                 "each arm (the D-11 common-size cap). Reactome is negative "
@@ -290,7 +290,7 @@ if tiers is not None and tier_auc is not None:
             pd.notna(m.get("low")) else "-",
         ])
     slides.append({
-        "n": 25, "kind": "appendix", "tag": "APPENDIX A9",
+        "n": 25, "kind": "appendix", "tag": "PART 2 · A9",
         "title": "Label quality: which positives carry the margin?",
         "note": "Tiers: ClinGen review status; IntOGen's number of "
                 "detecting methods (>= 4 = high); NCG's literature count "
@@ -317,7 +317,7 @@ if cmp_ is not None:
             f"{100 * r.delta_frac_between:+.2f} pp",
         ])
     slides.append({
-        "n": 26, "kind": "appendix", "tag": "APPENDIX A10",
+        "n": 26, "kind": "appendix", "tag": "PART 2 · A10",
         "title": "The variance decomposition: 24 arms against 30",
         "note": "The fifth label (NCG) is 65 % identical to IntOGen, so the "
                 "30-arm grid measures the effect of adding a REDUNDANT "
@@ -373,7 +373,7 @@ if seedp is not None and c15 is not None and c16 is not None:
                      for r in nodb.itertuples())],
     ]
     slides.append({
-        "n": 27, "kind": "appendix", "tag": "APPENDIX A11",
+        "n": 27, "kind": "appendix", "tag": "PART 2 · A11",
         "title": "Four controls on the design itself",
         "note": "Each of the four asks whether the headline number can be "
                 "read as a statement about topology rather than about our "
