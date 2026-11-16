@@ -1,10 +1,10 @@
 # What a network prior contributes to cancer-driver gene prioritisation: a leakage-controlled benchmark
 
-**Draft research report (SCI-standard manuscript, v1.0-rc3)**
+**Draft research report (SCI-standard manuscript, v1.0-rc7)**
 
 **Authors:** lanxin2391 (Networks & Engine), kakamiku (Labels & Data)
 **Pre-registration:** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762) (frozen 2026-09-27; amendments 1–5 in `docs/pre_registration_amendments.md`)
-**Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc5`
+**Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc7`
 **Reproducibility:** `python scripts/audit_reproducibility.py` → 50 PASS / 0 FAIL; `python scripts/verify_claims.py` → 63 PASS / 0 FAIL
 **Date:** 2026-11-11
 
@@ -128,7 +128,15 @@ a negative effect, and is reported as such: the same network is
 positive on a 2019 catalogue (+0.089), which is the prediction the
 curator-lag explanation makes. The provenance question (H2) remains
 open: separating provenance from size and coverage requires a larger
-network panel than this design supports.
+network panel than this design supports. We close with three AI-fused
+designs that follow from the findings rather than from the tooling: a
+visibility-aware **residual prior** in which a gradient-boosted model
+acts as a null generator and only the out-of-fold residual is scored;
+**difficulty-calibrated** cross-catalogue comparisons in which every arm
+is a standardised effect against its own null; and an **LLM-assisted
+evidence layer** with a pre-registered rubric and blinded adjudication,
+which is the only route to a label axis that is not derived from the
+catalogues being tested.
 
 ---
 
@@ -1888,7 +1896,98 @@ seed-using closeness-style learner -- a local method that uses the
 seeds -- because that is the configuration the literature favours and
 our two controls do not yet cover it.
 
-## 5. Conclusion
+## 5. What an AI-fused design would look like
+
+Three proposals, each derived from a specific finding of this study, each
+with an endpoint fixed in advance. None of them is a method claim: they
+are the designs we would run next, written down here so that they can be
+criticised before they are run.
+
+### 5.1 A visibility-aware residual prior: the model as a null generator, not as a ranker
+
+**What we found.** A large part of the reported margin tracks study
+visibility rather than topology (§F.12), the degree baseline removes the
+symptom but not the common cause, and the two learners we ran differ in
+how much of the margin is topological (§F.20, §F.24).
+
+**What we would build.** Per arm, a gradient-boosted model that predicts a
+gene's prior score from four confounders — its **degree**, its
+**publication count**, the **size and coverage of the network**, and its
+**label tier** — fitted on the training fold only, with the evaluation
+genes and the label held out. The quantity of interest is the
+**out-of-fold residual**: the part of the prior's score that the
+confounders cannot explain. The endpoint keeps the spirit of the primary
+one and is stricter in practice:
+ΔAUROC = AUROC(residual) − AUROC(degree) on the same 200 evaluations per
+arm, with the publication-matched null (§F.12) as the second control.
+
+**What it fixes.** It turns "topology-only" from an inference drawn by
+subtracting a baseline into a **measured** quantity.
+
+**What it does not fix.** A residual can still inherit the curation bias
+of the label, and a model can only subtract what its confounders explain.
+The study would still need the negative set to be re-derived independently.
+
+### 5.2 Difficulty-calibrated cross-catalogue comparisons
+
+**What we found.** Five catalogues are close to a single difficulty axis
+(participation ratio 1.54; one label-level number recovers 97.8 % of the
+label factor; §F.23), and the network × label interaction is 40 % of the
+between-arm spread (§F.17).
+
+**What we would build.** Report every arm as a **standardised effect
+against its own null** — the margin divided by the spread of that arm's
+degree-matched-seed and rewiring nulls — instead of a raw ΔAUROC. Both
+nulls already exist for all 24 arms, so this is a re-analysis of hours,
+not of weeks.
+
+**What it fixes.** "Which network for which catalogue" becomes a
+well-posed question, because the label difficulty is divided out instead
+of being attributed to the network or to the catalogue.
+
+**What it does not fix.** It standardises the *measurement*, not the
+*labels*: the underlying heterogeneity of the catalogues stays, and a
+z-score cannot create an independent catalogue.
+
+### 5.3 An LLM-assisted evidence layer, with a pre-registered rubric and blinded adjudication
+
+**What we found.** The label panel is the binding constraint on the whole
+design: the catalogues carry one dimension rather than five, the
+newest-driver label is the hardest, and ClinGen's own panels disagree on
+17 % of the variants they examine jointly (§F.18).
+
+**What we would build.** Use a language model to extract candidate
+driver–disease assertions from the primary literature under a **fixed
+rubric** (recurrence, functional assay, rescue, germline segregation),
+keeping a provenance record for every assertion; two independent
+extractions with a frozen prompt and temperature, and a **blinded human
+adjudicator on a random 20 % sample**, with the agreement (Cohen's κ)
+reported as a headline number. The extracted tier then enters as an
+**evidence axis that is not derived from the catalogues we are testing** —
+the only way to break the circularity of "the label defines the label".
+Pre-registered: the rubric, the prompt, the temperature, the adjudication
+sample and the agreement threshold.
+
+**What it fixes.** The circularity of the label axis, and the
+reproducibility of the tiering that Control 7 currently inherits from
+four different catalogues.
+
+**What it does not fix.** An extractor inherits the literature's
+publication bias by construction, so it can only complement, never
+replace, the expert panels; and without evidence-type stratification it
+would make the label axis *more* publication-dependent, not less.
+
+### 5.4 What we did not do
+
+No result in this paper was produced by an AI system. AI tools assisted
+with code drafting, debugging, literature triage and figure layout; every
+number comes from our own scripts and released tables and is checked by
+two independent audit scripts (136 and 71 checks). The three designs
+above are written as specifications with pre-registered endpoints precisely
+so that they can be judged without trusting the tool that would build
+them.
+
+## 6. Conclusion
 
 A network prior contributes to cancer-driver gene prioritisation beyond
 what node degree alone explains. The contribution is not a degree
@@ -1911,7 +2010,7 @@ from size and coverage.
 ## Data and code availability
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
-* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc5`. Release manifest with SHA-256 of every tracked table and figure: `docs/release_manifest_v1.0-rc5.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc5 --check`.
+* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc7`. Release manifest with SHA-256 of every tracked table and figure: `docs/release_manifest_v1.0-rc7.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc7 --check`.
 * **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (63 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.

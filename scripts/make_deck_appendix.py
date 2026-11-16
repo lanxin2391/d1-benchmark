@@ -516,6 +516,45 @@ if c21 is not None:
                   "rows": rows, "fontsize": 11, "rowh": 0.46},
     })
 
+# ---- A15: what we would build with AI -------------------------------
+slides.append({
+    "n": 31, "kind": "appendix", "tag": "PART 2 · A15",
+    "title": "What we would build with AI (three designs)",
+    "note": "Each design follows from a finding of this study and has its "
+            "endpoint fixed in advance, so it can be criticised before it "
+            "is run. NO result in this talk was produced by an AI system: "
+            "AI assisted with code drafting, debugging, literature triage "
+            "and layout; every number comes from our own scripts and "
+            "released tables and is checked by two audit scripts (136 and "
+            "71 checks).",
+    "table": {"head": ["the design", "what we found", "what we would build",
+                       "what it fixes / what it does not"],
+              "rows": [
+                  ["a visibility-aware residual prior",
+                   "a large part of the margin tracks publication volume "
+                   "(17.6 % -> 11.6 %)",
+                   "gradient boosting on degree, publication count, "
+                   "coverage and label tier; score the OUT-OF-FOLD RESIDUAL",
+                   "fixes: makes 'topology only' a measured quantity. "
+                   "does not fix: the label's own curation bias"],
+                  ["difficulty-calibrated cross-catalogue comparison",
+                   "five catalogues are one axis (97.8 % recovered; "
+                   "participation ratio 1.54)",
+                   "report every arm as a standardised effect against its "
+                   "own null -- the nulls already exist",
+                   "fixes: makes 'which network for which catalogue' well "
+                   "posed. does not fix: the catalogues themselves"],
+                  ["an LLM-assisted evidence layer",
+                   "the label panel is the bottleneck; ClinGen's own "
+                   "panels disagree on 17 %",
+                   "extraction under a frozen rubric, two passes, blinded "
+                   "human adjudication on 20 %, Cohen's kappa reported",
+                   "fixes: the circularity of the label axis. does not "
+                   "fix: an extractor inherits the publication bias"],
+              ],
+              "fontsize": 10.5, "rowh": 0.95},
+})
+
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps({"slides": slides}, indent=1, ensure_ascii=False),

@@ -1,6 +1,6 @@
-# D1 benchmark — v1.0-rc7 release note
+# D1 benchmark — v1.0-rc8 release note
 
-**Release commit:** `b9f5df1` (tag `v1.0-rc7`)
+**Release commit:** `see the tag v1.0-rc8`
 **Built:** 2026-11-16
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
@@ -16,6 +16,16 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc7
+
+| area | change |
+|---|---|
+| the paper draft, as a printable PDF | `docs/research_report_draft.pdf` (39 pages, about 17,500 words) is now in the repository and in the report folder -- the TA needs to print it |
+| the AI-fusion section | a new section in the manuscript and the integrated draft, **"What an AI-fused design would look like"**, with three designs that follow from the findings: (1) a **visibility-aware residual prior**, in which a gradient-boosted model acts as a null generator and only the out-of-fold residual is scored; (2) **difficulty-calibrated** cross-catalogue comparison, in which every arm is a standardised effect against its own null; (3) an **LLM-assisted evidence layer** with a pre-registered rubric and blinded adjudication, which is the only route to a label axis that is not derived from the catalogues being tested. Each design states what it fixes AND what it does not fix |
+| the 20-minute script | `docs/report_1118_speaker_script_20min.md` -- a Chinese word-for-word script for the 18-20 minute slot the teacher asked for, with a table mapping the teacher's ten required elements to the sections and the slides, a slide plan (15 body slides, the evidence pages as backup), 13 number cards, a three-person allocation, a 10-minute compression plan and a rehearsal checklist. The pre-defence sweep now checks it as well |
+| the materials guide | `docs/report_1118_materials_guide.md` -> `材料使用说明.docx`: rewritten for the two slots (20 and 40 minutes), the PDF, the new slide list (A1-A15) and the 32 number cards |
+| the deck | 31 slides: appendix A15 carries the three AI-fusion designs, and appendix A14 now states the rewiring feasibility check |
 
 ## What changed since v1.0-rc6
 
