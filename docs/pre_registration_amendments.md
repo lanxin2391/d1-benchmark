@@ -911,3 +911,119 @@ The GNN arm is **not** part of the primary endpoint and **not** part of the
 H1 decision. The pre-registered decision rule continues to be evaluated on
 the pre-registered RWR arm only. This amendment touches a control arm and
 the text describing it.
+
+---
+
+## Amendment 6 — two adversarial controls on the headline, and the H2 verdict restated
+
+**Date:** 2026-11-16 · **Status:** accepted · **Adds two exploratory
+controls and restates one pre-registered verdict. The pre-registration
+(DOI 10.5281/zenodo.23121762) is unchanged.
+
+### A6.1 Why this amendment exists
+
+Two questions were asked of the paper that the registered analyses did
+not answer, and both are questions a reader of the benchmark literature
+will ask:
+
+1. **Is degree a strawman baseline?** The endpoint is
+   ΔAUROC = AUROC(prior) − AUROC(degree). If another classical
+   centrality beats degree on the same folds, the headline is measured
+   against a weak competitor.
+2. **What IS the label main effect?** Control 6 attributes 34.78 % of
+   the between-arm spread to a label main effect. If that effect is one
+   shared difficulty axis, the five label sets are not five independent
+   opinions about driver biology.
+
+Both are answered here, and **both cost us something**.
+
+### A6.2 Control 19 — the baseline family sweep
+
+`scripts/run_baseline_family.py` → `results/tables/baseline_family_*.tsv`,
+`docs/baseline_family.md`.
+
+The same 200 (repeat, fold) evaluations per arm, the same test genes,
+three more classical baselines (closeness estimated from 256 random
+landmarks, validated against the exact harmonic centrality on Reactome
+at Spearman +0.9963; eigenvector centrality; PageRank with uniform
+teleportation) and one second damping inside the diffusion family
+(RWR with restart 0.15 = the literature's PageRank damping 0.85).
+
+| comparison (24 primary arms) | arms positive | median |
+|---|---|---|
+| RWR (α = 0.5) − degree (the headline) | 23/24 | +0.0809 |
+| RWR (restart 0.15) − degree | 23/24 | +0.0571 |
+| closeness − degree | **24/24** | +0.0312 |
+| eigenvector − degree | 16/24 | +0.0098 |
+| PageRank − degree | 1/24 | −0.1537 |
+| RWR − closeness | 20/24 | +0.0528 |
+| **RWR − the strongest baseline of that arm** | **19/24** | **+0.0461** |
+
+**Degree is not the strongest classical baseline in this panel**: the
+strongest baseline in an arm is closeness in 18 of 30 arms and
+eigenvector centrality in the other 12, and degree in none. The
+increment survives the stronger baseline (19/24 arms, median +0.046)
+and survives the literature's damping (23/24 arms, median +0.057), but
+its size against a fair baseline is about 40 % smaller than the
+headline suggests. The paper now states the qualified claim.
+
+The RWR α = 0.5 margins recomputed in this control match the published
+Table 1 on all 24 arms to **4.45e-05**.
+
+### A6.3 Control 20 — the label-difficulty regression
+
+`scripts/run_label_difficulty_regression.py` →
+`results/tables/label_difficulty_*.tsv`,
+`docs/label_difficulty_regression.md`.
+
+Arm-level margin regressed on label-level difficulty numbers with
+network fixed effects. The label factor's gain over the network-only
+model is 0.591 (0.512 on the 30-arm grid); a **single** label-level
+number — the label's mean AUROC under the prior — recovers **97.8 %**
+of it, and the label factor adds nothing beyond it (F-test p = 0.38;
+0.53 with the NCG label). The label with the smallest margin is also
+the label on which every scorer is weakest.
+
+**Consequence.** The 34.78 % "label" share of the variance
+decomposition is *labels differing in difficulty*, not five independent
+pieces of curation philosophy; and the four arms that fail the
+strictest interval fail because their effects are small, not because
+the prior is wrong there.
+
+### A6.4 The H2 verdict, restated in the defence materials
+
+The manuscript has always said that **H2 is not testable** on this
+panel (the provenance classes hold 3, 1 and 2 networks, provenance is
+confounded with size and coverage, and the smallest attainable
+Kruskal-Wallis p-value on that design is 0.1173). What was missing was
+the **defence material**: the deck announced "three hypotheses" without
+naming them, and the speaker script, the Q&A bank and the plain-language
+report did not mention H2 at all. They now do, in one place each:
+
+* the deck, slide 2's key line (the three pre-registered hypotheses and
+  the H2 verdict), slide 14's sixth conclusion and slide 15's limit row;
+* the speaker script, the opening paragraph and number card 30;
+* the Q&A bank, C22 with the full argument and the "not tested ≠ not
+  supported" distinction;
+* the plain-language report, §3.4.
+
+This is a disclosure, not a change of result: **H2 was registered, the
+panel could not test it, the paper says so, and the material now says
+so in the same words.**
+
+### A6.5 What is NOT changed
+
+The pre-registered endpoint, the resampling units, the H1 rule, the
+TOST margin, the FDR family and the verification family are all
+unchanged. Both controls are **exploratory** (they are reported with
+intervals and cannot alter the H1 verdict). The two controls were run
+on the same splits and the same folds as the primary analysis, so they
+are directly comparable to it.
+
+### A6.6 Family registration
+
+| # | analysis | family | enters the H1 verdict? | where |
+|---|---|---|---|---|
+| 19 | the baseline family sweep (Control 19) | exploratory | no | `baseline_family_arms.tsv` |
+| 20 | the label-difficulty regression (Control 20) | exploratory | no | `label_difficulty_coefs.tsv` |
+| 21 | the H2 verdict restated in the defence materials | disclosure (no new analysis) | no | slide 2 / 14 / 15, script, Q&A C22 |

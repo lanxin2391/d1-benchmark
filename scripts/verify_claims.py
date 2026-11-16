@@ -211,6 +211,37 @@ CLAIMS: list[tuple[str, str, str, str]] = [
      "The margin changes by between −0.0018 and +0.0026",
      "§F.18 must give the ClinGen noise-anchor range"),
 
+    # ---- C19: the baseline family sweep ---------------------------
+    ("c19.closeness", "manuscript_a_sections.md",
+     "closeness beats degree in **every one of the 24 arms**",
+     "§F.22 must disclose that closeness beats degree everywhere"),
+    ("c19.best", "manuscript_a_sections.md",
+     "positive in **19 of 24 arms** with a median margin of **+0.046**",
+     "§F.22 must give the margin against the strongest baseline"),
+    ("c19.damping", "manuscript_a_sections.md",
+     "23/24 arms, median +0.0571",
+     "§F.22 must give the result at the literature's PageRank damping"),
+    ("c19.draft", "research_report_draft.md",
+     "degree is never the strongest classical baseline",
+     "§3.17 of the draft must carry the same disclosure"),
+    ("c19.abstract", "manuscript_intro_abstract.md",
+     "+0.046 against the strongest classical baseline",
+     "the abstract must qualify the headline against the strongest baseline"),
+
+    # ---- C20: the label-difficulty regression ----------------------
+    ("c20.share", "manuscript_a_sections.md",
+     "recovers 97.8 % of everything the full label factor explains",
+     "§F.23 must give the share of the label factor recovered"),
+    ("c20.f", "manuscript_a_sections.md",
+     "F-test p = 0.38 on the primary family",
+     "§F.23 must give the F-test that the label factor adds nothing"),
+    ("c20.draft", "research_report_draft.md",
+     "a single label-level number recovers 97.8 %",
+     "§3.18 of the draft must carry the same result"),
+    ("c20.abstract", "manuscript_intro_abstract.md",
+     "one difficulty axis rather than five curation philosophies",
+     "the abstract must say what the label main effect is"),
+
 ]
 
 # Numbers that MUST NOT appear anywhere in the three manuscript files.
@@ -234,6 +265,15 @@ FORBIDDEN: list[tuple[str, str, str]] = [
     ("forbidden.negclaim", "manuscript_intro_abstract.md",
      "publishable finding on curator-lag",
      "the curator-lag reading is a hypothesis, not a finding"),
+    ("forbidden.halfmargin", "manuscript_intro_abstract.md",
+     "shrinks by half on the strictest label",
+     "the corrected C9 result replaces the old post-hoc claim"),
+    ("forbidden.halfmargin.draft", "research_report_draft.md",
+     "shrinks by half on the strictest label",
+     "the corrected C9 result replaces the old post-hoc claim"),
+    ("forbidden.oldconclusion", "manuscript_intro_abstract.md",
+     "the median margin is +0.081, it",
+     "the conclusions must carry the qualified margin, not the old one"),
 ]
 
 
@@ -479,9 +519,60 @@ def main(argv: list[str] | None = None) -> int:
          ("noise_anchor", "min change under 17 % misassignment"),
          0.0006),
         ("c7 anchor max", "manuscript_a_sections.md",
-         r"changes by between [−-]0\.\d{4} and (\+0\.\d{4})",
+         r"changes by between [?−-]0\.\d{4} and (\+0\.\d{4})",
          ("noise_anchor", "max change under 17 % misassignment"),
          0.0006),
+
+        # ---- C19: the baseline family sweep ----
+        ("c19 headline median", "manuscript_a_sections.md",
+         r"\| RWR \(α = 0\.5\) − degree \(the headline\) \| \*\*23/24\*\* \| "
+         r"\*\*(\+0\.\d{4})\*\*",
+         ("baseline_family", "RWR(0.5) - degree: median margin (primary 24)"),
+         0.0006),
+        ("c19 damping median", "manuscript_a_sections.md",
+         r"\| RWR \(restart 0\.15\) − degree \| 23/24 \| (\+0\.\d{4})",
+         ("baseline_family", "RWR(restart 0.15) - degree: median margin (primary 24)"),
+         0.0006),
+        ("c19 closeness median", "manuscript_a_sections.md",
+         r"\| closeness − degree \| \*\*24/24\*\* \| (\+0\.\d{4})",
+         ("baseline_family", "closeness - degree: median margin (primary 24)"),
+         0.0006),
+        ("c19 rwr vs closeness median", "manuscript_a_sections.md",
+         r"\| RWR − closeness \| 20/24 \| (\+0\.\d{4})",
+         ("baseline_family", "RWR(0.5) - closeness: median margin (primary 24)"),
+         0.0006),
+        ("c19 best baseline median", "manuscript_a_sections.md",
+         r"\| \*\*RWR − the strongest baseline of that arm\*\* \| \*\*19/24\*\* \| "
+         r"\*\*(\+0\.\d{4})\*\*",
+         ("baseline_family",
+          "RWR(0.5) - the strongest baseline of the arm: median margin (primary 24)"),
+         0.0006),
+        ("c19 closeness arms", "manuscript_a_sections.md",
+         r"is closeness in (\d+) of the 30 arms",
+         ("baseline_family", "arms where closeness is the strongest baseline"),
+         0.5),
+
+        # ---- C20: the label-difficulty regression ----
+        ("c20 label-factor share", "manuscript_a_sections.md",
+         r"\| label-mean RWR AUROC \| \*\*(\d+\.\d) %\*\*",
+         ("label_difficulty",
+          "rwr_auroc: share of the label factor recovered (%)"),
+         0.06),
+        ("c20 label-factor F test", "manuscript_a_sections.md",
+         r"adds nothing beyond it \(F-test p = (0\.\d+) on the primary family",
+         ("label_difficulty",
+          "rwr_auroc: F-test p for the label factor beyond it"),
+         0.006),
+        ("c20 temporal margin", "manuscript_a_sections.md",
+         r"\| `intogen_temporal_new` \| 150 \| (\d\.\d{4})",
+         ("label_difficulty", "intogen_temporal_new: degree-baseline AUROC"),
+         0.0006),
+        ("c20 temporal margin value", "manuscript_a_sections.md",
+         r"\| `intogen_temporal_new` \| 150 \| \d\.\d{4} \| \d\.\d{4} \| "
+         r"\d\.\d{4} \| \*\*(\+0\.\d{4})\*\*",
+         ("label_difficulty", "intogen_temporal_new: mean margin"),
+         0.0006),
+
 
 
         # ---- the stability attribution, as the manuscript's table states it ----

@@ -366,8 +366,9 @@ slides.forEach((sl) => {
 
   if (sl.kind === "heatmap") {
     chrome(s, sl);
-    const h = image(s, sl.image, sl.imagew, Math.max(1.42, top));
-    const y0 = 1.42 + h + 0.18;
+    const imgTop = Math.max(1.42, top);
+    const h = image(s, sl.image, sl.imagew, imgTop);
+    const y0 = imgTop + h + 0.18;
     sl.stats.forEach((st, i) => {
       const x = M + i * 4.05;
       s.addText(st[0], {
@@ -384,9 +385,10 @@ slides.forEach((sl) => {
 
   if (sl.kind === "stability") {
     chrome(s, sl);
-    const h = image(s, sl.image, 11.4, Math.max(1.45, top));
+    const imgTop = Math.max(1.45, top);
+    const h = image(s, sl.image, 11.4, imgTop);
     bullets(s, sl.bullets, {
-      x: M, y: 1.45 + h + 0.12, w: CW, h: 6.7 - (1.45 + h), size: 13,
+      x: M, y: imgTop + h + 0.12, w: CW, h: 6.7 - (imgTop + h), size: 13,
     });
     return;
   }
@@ -400,8 +402,16 @@ slides.forEach((sl) => {
 
   if (sl.kind === "conclusions") {
     chrome(s, sl);
+    // the block must fit between the key line and the footer band, so
+    // the step and the type sizes shrink when the slide gains a point
+    const n = sl.points.length;
+    const avail = 6.72 - top;
+    const step = Math.min(1.02, (avail - 0.46) / n);
+    const tSize = step > 0.95 ? 19 : (step > 0.85 ? 17.5 : 16.5);
+    const dSize = step > 0.95 ? 14.5 : (step > 0.85 ? 13.5 : 12.5);
+    const tH = Math.min(0.42, step - 0.44);
     sl.points.forEach((p, i) => {
-      const y = 1.5 + i * 1.02;
+      const y = top + i * step;
       s.addShape(pptx.ShapeType.ellipse, {
         x: M, y: y + 0.04, w: 0.5, h: 0.5, fill: { color: GREEN },
         line: { type: "none" },
@@ -411,12 +421,12 @@ slides.forEach((sl) => {
         bold: true, color: "FFFFFF", align: "center", valign: "middle", margin: 0,
       });
       s.addText(p[1], {
-        x: M + 0.68, y, w: CW - 0.68, h: 0.42, fontFace: FONT, fontSize: 19,
+        x: M + 0.68, y, w: CW - 0.68, h: tH, fontFace: FONT, fontSize: tSize,
         bold: true, color: INK, margin: 0,
       });
       s.addText(p[2], {
-        x: M + 0.68, y: y + 0.42, w: CW - 0.68, h: 0.5, fontFace: FONT,
-        fontSize: 14.5, color: "4A4741", margin: 0,
+        x: M + 0.68, y: y + tH, w: CW - 0.68, h: step - tH - 0.04,
+        fontFace: FONT, fontSize: dSize, color: "4A4741", margin: 0,
       });
     });
     return;
@@ -432,10 +442,13 @@ slides.forEach((sl) => {
         color: INK, bold: j === 0, fill: { color: i % 2 ? "FFFFFF" : "F1F7F1" },
       },
     })));
+    const limRows = sl.limits.length;
+    const limRowH = Math.min(0.82, (6.70 - top) / (limRows + 1));
+    const limFont = limRowH > 0.72 ? 14 : (limRowH > 0.62 ? 13 : 12);
     s.addTable([head].concat(body), {
       x: M, y: top, w: CW, colW: [3.9, 3.3, 5.03], fontFace: FONT,
-      fontSize: 14, border: { type: "solid", color: HAIR, pt: 0.75 },
-      rowH: 0.82, valign: "middle", margin: [0.03, 0.08, 0.03, 0.08],
+      fontSize: limFont, border: { type: "solid", color: HAIR, pt: 0.75 },
+      rowH: limRowH, valign: "middle", margin: [0.03, 0.08, 0.03, 0.08],
     });
     return;
   }
@@ -445,13 +458,16 @@ slides.forEach((sl) => {
       + "every full table is in the repository "
       + "(results/tables/, with SHA-256 manifests).");
     chrome(s, sl);
+    const noteH = sl.note
+      ? Math.ceil(sl.note.length / 165) * 0.205 + 0.12 : 0;
     if (sl.note) {
       s.addText(sl.note, {
-      x: M, y: top, w: CW, h: 0.62, fontFace: FONT, fontSize: 12,
+      x: M, y: top, w: CW, h: noteH, fontFace: FONT, fontSize: 12,
         italic: true, color: MUTED, align: "left", valign: "top", margin: 0,
       });
     }
     const tb = sl.table;
+    const tableTop = top + noteH;
     const head = tb.head.map((h) => ({
       text: h, options: { bold: true, color: "FFFFFF", fill: { color: APPENDIX_GREY } },
     }));
@@ -466,11 +482,11 @@ slides.forEach((sl) => {
     const rest = (CW - first) / (ncol - 1);
     const colW = tb.head.map((_, j) => (j === 0 ? first : rest));
     // fit the table into the space between the note and the footer
-    const avail = 4.55;
+    const avail = 6.70 - tableTop;
     const rowH = Math.min(tb.rowh || 0.42, avail / (tb.rows.length + 1));
     const fs = Math.min(tb.fontsize || 12, Math.max(8.5, (rowH * 72) / 2.7));
     s.addTable([head].concat(body), {
-      x: M, y: top, w: CW, colW, fontFace: FONT, fontSize: fs,
+      x: M, y: tableTop, w: CW, colW, fontFace: FONT, fontSize: fs,
       border: { type: "solid", color: HAIR, pt: 0.75 },
       rowH, valign: "middle", margin: [0.02, 0.06, 0.02, 0.06],
     });

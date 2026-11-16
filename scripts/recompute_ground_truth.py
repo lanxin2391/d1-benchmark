@@ -694,6 +694,72 @@ def recent_series() -> None:
                r4(sel.median_p.median()),
                "results/tables/depmap_validation.tsv")
 
+    # ---- C19: the baseline family sweep ---------------------------
+    bf = t("baseline_family_arms.tsv")
+    prim_labels = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
+    bfp = bf[bf.label.isin(prim_labels)]
+    for col, tag in (
+            ("margin_rwr05_vs_degree", "RWR(0.5) - degree"),
+            ("margin_rwr15_vs_degree", "RWR(restart 0.15) - degree"),
+            ("margin_closeness_vs_degree", "closeness - degree"),
+            ("margin_eigen_vs_degree", "eigenvector - degree"),
+            ("margin_pagerank_vs_degree", "PageRank - degree"),
+            ("margin_rwr05_vs_closeness", "RWR(0.5) - closeness"),
+            ("margin_rwr05_vs_eigen", "RWR(0.5) - eigenvector"),
+            ("margin_rwr05_vs_pagerank", "RWR(0.5) - PageRank"),
+            ("margin_rwr05_vs_best_baseline",
+             "RWR(0.5) - the strongest baseline of the arm")):
+        record("baseline_family", f"{tag}: arms positive (primary 24)",
+               int((bfp[col] > 0).sum()),
+               "results/tables/baseline_family_arms.tsv")
+        record("baseline_family", f"{tag}: median margin (primary 24)",
+               r4(bfp[col].median()),
+               "results/tables/baseline_family_arms.tsv")
+        record("baseline_family", f"{tag}: minimum margin (primary 24)",
+               r4(bfp[col].min()),
+               "results/tables/baseline_family_arms.tsv")
+        record("baseline_family", f"{tag}: maximum margin (primary 24)",
+               r4(bfp[col].max()),
+               "results/tables/baseline_family_arms.tsv")
+    record("baseline_family", "arms where closeness is the strongest baseline",
+           int((bf.strongest_baseline == "closeness").sum()),
+           "results/tables/baseline_family_arms.tsv")
+    record("baseline_family", "arms where degree is the strongest baseline",
+           int((bf.strongest_baseline == "degree").sum()),
+           "results/tables/baseline_family_arms.tsv")
+
+    # ---- C20: the label-difficulty regression ----------------------
+    lc = t("label_difficulty_coefs.tsv")
+    l24 = lc[lc.scope == "primary24"]
+    for r in l24.itertuples():
+        record("label_difficulty", f"{r.metric}: beta",
+               r4(r.beta), "results/tables/label_difficulty_coefs.tsv")
+        record("label_difficulty",
+               f"{r.metric}: share of the label factor recovered (%)",
+               r4(100 * r.label_factor_share_of_gain),
+               "results/tables/label_difficulty_coefs.tsv")
+        record("label_difficulty",
+               f"{r.metric}: F-test p for the label factor beyond it",
+               r4(r.p_label_factor_vs_difficulty),
+               "results/tables/label_difficulty_coefs.tsv")
+        record("label_difficulty", f"{r.metric}: R2 of the network-only model",
+               r4(r.r2_network_only),
+               "results/tables/label_difficulty_coefs.tsv")
+        record("label_difficulty",
+               f"{r.metric}: R2 of the network + label-factor model",
+               r4(r.r2_with_label_factor),
+               "results/tables/label_difficulty_coefs.tsv")
+    ll = t("label_difficulty_labels.tsv")
+    for r in ll.itertuples():
+        record("label_difficulty", f"{r.label}: mean margin",
+               r4(r.margin_mean), "results/tables/label_difficulty_labels.tsv")
+        record("label_difficulty", f"{r.label}: degree-baseline AUROC",
+               r4(r.deg_auroc), "results/tables/label_difficulty_labels.tsv")
+        record("label_difficulty", f"{r.label}: RWR AUROC",
+               r4(r.rwr_auroc), "results/tables/label_difficulty_labels.tsv")
+        record("label_difficulty", f"{r.label}: number of positives",
+               int(r.n_pos), "results/tables/label_difficulty_labels.tsv")
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)

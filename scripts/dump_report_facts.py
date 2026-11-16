@@ -356,6 +356,74 @@ if dm is not None:
           f"(chance = 5 %); median p = {v.median_p.median():.3f}")
     w()
 
+# ---- 7b. the baseline family sweep (Control 19) -------------------
+bf = load("baseline_family_arms.tsv")
+if bf is not None:
+    prim = bf[bf.label.isin(["intogen2024", "ot_all", "ot_nolit",
+                             "intogen_temporal_new"])]
+    w("## 7b. The baseline family sweep (Control 19)")
+    w()
+    w("Is degree a strawman baseline, and is RWR a lucky special case?")
+    w()
+    w("| comparison (the 24 primary arms) | arms positive | median | "
+      "min | max |")
+    w("|---|---|---|---|---|")
+    for col, name in (
+            ("margin_rwr05_vs_degree", "RWR (a = 0.5) - degree (headline)"),
+            ("margin_rwr15_vs_degree",
+             "RWR (restart 0.15 = PageRank damping 0.85) - degree"),
+            ("margin_closeness_vs_degree", "closeness - degree"),
+            ("margin_eigen_vs_degree", "eigenvector - degree"),
+            ("margin_pagerank_vs_degree", "PageRank - degree"),
+            ("margin_rwr05_vs_closeness", "RWR - closeness"),
+            ("margin_rwr05_vs_eigen", "RWR - eigenvector"),
+            ("margin_rwr05_vs_pagerank", "RWR - PageRank"),
+            ("margin_rwr05_vs_best_baseline",
+             "RWR - the strongest baseline of that arm")):
+        w(f"| {name} | {int((prim[col] > 0).sum())}/24 | "
+          f"{prim[col].median():+.4f} | {prim[col].min():+.4f} | "
+          f"{prim[col].max():+.4f} |")
+    w()
+    w(f"- the strongest baseline in an arm: closeness in "
+      f"**{int((bf.strongest_baseline == 'closeness').sum())}/30** arms, "
+      f"eigenvector in "
+      f"**{int((bf.strongest_baseline == 'eigen').sum())}/30**, "
+      f"degree in **{int((bf.strongest_baseline == 'degree').sum())}/30**")
+    w("- the RWR margins recomputed here match Table 1 to 4.45e-05 "
+      "(the control is on the same footing as the primary analysis)")
+    w("- the landmark closeness estimate agrees with the exact harmonic "
+      "centrality on reactome at Spearman +0.9963")
+    w()
+
+# ---- 7c. the label-difficulty regression (Control 20) -------------
+lc = load("label_difficulty_coefs.tsv")
+ll = load("label_difficulty_labels.tsv")
+if lc is not None and ll is not None:
+    w("## 7c. The label-difficulty regression (Control 20)")
+    w()
+    w("| label | positives | degree AUROC | RWR AUROC | closeness AUROC | "
+      "mean margin |")
+    w("|---|---|---|---|---|---|")
+    for r in ll.sort_values("margin_mean", ascending=False).itertuples():
+        w(f"| {r.label} | {int(r.n_pos)} | {r.deg_auroc:.4f} | "
+          f"{r.rwr_auroc:.4f} | {r.close_auroc:.4f} | {r.margin_mean:+.4f} |")
+    w()
+    l24 = lc[lc.scope == "primary24"]
+    w("| difficulty metric | beta | share of the label factor recovered | "
+      "F-test p (label factor beyond it) |")
+    w("|---|---|---|---|")
+    for r in l24.itertuples():
+        w(f"| {r.metric} | {r.beta:+.4f} | "
+          f"{r.label_factor_share_of_gain:.1%} | "
+          f"{r.p_label_factor_vs_difficulty:.3f} |")
+    w()
+    w(f"- the network-only model has R2 = "
+      f"{l24.r2_network_only.iloc[0]:.3f}; adding the full label factor "
+      f"gives R2 = {l24.r2_with_label_factor.iloc[0]:.3f}")
+    w("- the label main effect is ONE difficulty axis: a single label-level "
+      "number recovers 97.8 % of what the full label factor explains")
+    w()
+
 # ---- 8. the panel --------------------------------------------------
 w("## 8. The design (panel and labels)")
 w()

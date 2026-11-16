@@ -4,7 +4,7 @@
 
 **Authors:** lanxin2391 (Networks & Engine), kakamiku (Labels & Data)
 **Pre-registration:** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762) (frozen 2026-09-27; amendments 1–5 in `docs/pre_registration_amendments.md`)
-**Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc3`
+**Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc4`
 **Reproducibility:** `python scripts/audit_reproducibility.py` → 50 PASS / 0 FAIL; `python scripts/verify_claims.py` → 63 PASS / 0 FAIL
 **Date:** 2026-11-11
 
@@ -91,15 +91,25 @@ that the per-gene instability of the prior is the gene's own score
 variance (Spearman ρ = 1.00) and not any topology descriptor, which
 makes bagging the prior a provable no-op. Adding the NCG catalogue as
 a fifth label shrinks the label main effect from 34.8 % to 30.8 % of the
-between-arm spread.
+between-arm spread. A **baseline family sweep** shows that degree is not
+the strongest classical competitor: closeness centrality beats it in all
+24 arms, and against the strongest baseline in each arm the prior is
+positive in 19 of 24 arms with a median margin of +0.046; at the
+literature's default PageRank damping the increment survives (23/24 arms,
+median +0.057). A **label-difficulty regression** shows that the label
+main effect is one difficulty axis rather than five curation philosophies:
+a single label-level number recovers 97.8 % of what the full label factor
+explains (F-test p = 0.38).
 
 **Conclusions.** A network prior contributes to cancer-driver
 prioritisation beyond node degree, and the contribution is not
 explained by seed degree, by network size, or by the degree
 distribution of the labels. It is also smaller and more fragile than
-the field's headline numbers suggest: the median margin is +0.081, it
-shrinks by half on the strictest label once curated driver genes are
-removed from the background, and a large part of it tracks how often a
+the field's headline numbers suggest: the median margin is +0.081
+against degree but +0.046 against the strongest classical baseline
+(closeness centrality, which beats degree in all 24 arms), removing
+the curated drivers from the background leaves it unchanged (23 of 24
+arms, median +0.082), and a large part of it tracks how often a
 gene has been published rather than its topology. The prior does
 transfer, to drivers that none of our labels contain, in 24 of 24 arms
 and 26 of 26 cancer types — but its advantage in the top of the list is
@@ -496,7 +506,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (63 PASS / 0 FAIL). The second mechanism
+manuscript against that table (136 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -1511,6 +1521,112 @@ survives the publication-count match is also the part that does not
 transfer to a functional task. We state this as a limit on the scope
 of the result, not as a contradiction of it.
 
+### 3.17 Is degree a strawman baseline, and is RWR a lucky special case?
+
+The primary endpoint is ΔAUROC = AUROC(prior) − AUROC(**degree**). Two
+objections follow immediately, and both are answered here on the same
+splits, the same 200 (repeat, fold) evaluations per arm and the same test
+genes (`scripts/run_baseline_family.py`):
+
+* **(A) "degree is a strawman."** The honest competitor may be a stronger
+  centrality. We evaluate three more classical baselines on the identical
+  test folds: **closeness** (harmonic centrality, estimated from 256
+  random landmarks; on Reactome, the smallest panel member, the landmark
+  estimate agrees with the exact harmonic centrality at Spearman
+  **+0.9963** — the exact quantity needs O(V·E) all-pairs distances),
+  **eigenvector centrality** (power iteration) and **PageRank** (uniform
+  teleportation, damping 0.85).
+* **(B) "RWR is a lucky special case."** We re-run the same protocol at the
+  damping the PageRank literature uses, 0.85, which in our parameterisation
+  is RWR with restart 0.15 — outside our pre-registered sensitivity range
+  of 0.3–0.7.
+
+| comparison (primary 24 arms) | arms positive | median | min | max |
+|---|---|---|---|---|
+| RWR (α = 0.5) − degree (the headline) | **23/24** | **+0.0809** | −0.0125 | +0.1711 |
+| RWR (restart 0.15) − degree | 23/24 | +0.0571 | −0.0051 | +0.1552 |
+| closeness − degree | **24/24** | +0.0312 | +0.0011 | +0.0733 |
+| eigenvector − degree | 16/24 | +0.0098 | −0.0450 | +0.0603 |
+| PageRank − degree | 1/24 | −0.1537 | −0.2946 | +0.0032 |
+| RWR − closeness | 20/24 | +0.0528 | −0.0245 | +0.1229 |
+| RWR − eigenvector | 21/24 | +0.0613 | −0.0226 | +0.1959 |
+| RWR − PageRank | 24/24 | +0.2040 | +0.0095 | +0.4147 |
+| **RWR − the strongest baseline of that arm** | **19/24** | **+0.0461** | −0.0245 | +0.1229 |
+
+**Reading.** Objection (A) is **correct**: closeness beats degree in
+**every one of the 24 arms** (median +0.0312), and the strongest baseline
+in an arm is closeness in 18 of the 30 arms and eigenvector centrality in
+the other 12 — **degree is never the strongest classical baseline in this
+panel.** Our headline is therefore measured against a baseline a standard
+centrality beats everywhere. Objection (B) is **rejected**: at the
+literature's own damping the increment survives (23/24 arms, median
++0.0571), about 30 % smaller than at the locked α = 0.5. Against the best
+competitor in each arm the prior is positive in **19 of 24 arms** with a
+median margin of **+0.046**. The direction of the result is unchanged; its
+size against a fair baseline is roughly 40 % smaller than against degree.
+
+The RWR α = 0.5 margins recomputed in this control match the published
+Table 1 on all 24 arms to **4.45e-05**, so the control is on the same
+footing as the primary analysis. The three added baselines are static
+centralities that use no seeds, so they are baseline *competitors*, not
+priors in the protocol's sense (the seed-using competitor is the proximity
+learner of Control 17).
+
+### 3.18 The label main effect is one difficulty axis, not five curation philosophies
+
+The variance decomposition of §C6 attributes 34.78 % of the between-arm
+spread of the margin to a **label main effect**. What is that effect? Two
+readings are possible: five genuinely different curation philosophies, each
+saying something different about driver biology; or one shared **difficulty**
+axis — "how easy is this label set to rank" — on which the labels happen to
+line up. The second reading is testable without new data: fit the arm-level
+margin on label-level difficulty numbers with network fixed effects
+absorbing the network main effect
+(`scripts/run_label_difficulty_regression.py`).
+
+| label | positives | degree AUROC | RWR AUROC | closeness AUROC | mean margin |
+|---|---|---|---|---|---|
+| `ot_nolit` | 585 | 0.6434 | 0.7496 | 0.6692 | **+0.1062** |
+| `ot_all` | 589 | 0.6643 | 0.7701 | 0.6939 | **+0.1058** |
+| `ncg_known` | 693 | 0.6443 | 0.7319 | 0.6782 | +0.0876 |
+| `intogen2024` | 623 | 0.6479 | 0.7299 | 0.6880 | +0.0821 |
+| `intogen_temporal_new` | 150 | 0.5827 | 0.6036 | 0.6075 | **+0.0209** |
+
+Models on the 24 primary arms (R²): network only **0.313**; network +
+difficulty **0.795–0.892**; network + the full label factor **0.905**. The
+label factor's gain over the network-only model is **0.591** (0.512 on all
+30 arms), and:
+
+| difficulty metric | share of the label factor recovered | F-test: label factor beyond this metric, p |
+|---|---|---|
+| label-mean RWR AUROC | **97.8 %** | **0.38** |
+| label-mean degree AUROC | 90.3 % | 0.029 |
+| label positive count | 87.6 % | 0.014 |
+| label-mean closeness AUROC | 81.5 % | 0.003 |
+
+**Reading.** The label main effect is **one difficulty axis, not five
+independent curation philosophies**: a single label-level number recovers
+97.8 % of everything the full label factor explains, and the label factor
+adds nothing beyond it (F-test p = 0.38 on the primary family, 0.53 with
+the NCG label added). This sharpens the earlier redundancy result
+(participation ratio 1.54) from "the labels are nearly collinear" to "the
+label factor is one number". The mechanism is visible in the table: the
+label with the smallest margin (`intogen_temporal_new`, +0.0209) is also
+the label on which *every* scorer is weakest (degree AUROC 0.583, RWR AUROC
+0.604 against 0.730–0.770 for the others) — the whole problem is harder
+there, not the prior specifically.
+
+**Consequences, stated plainly.** (1) The 34.78 % "label" share of the
+variance decomposition should be read as *labels differ in difficulty*, not
+as five pieces of independent evidence about driver biology. (2) The
+`intogen_temporal_new` arms, which fail the strictest interval in four
+cells, are small-effect cells for the reason Control 15 established
+(power), and their smallness is a property of the label, not of the
+network. (3) Because the difficulty numbers are computed from the same arms
+as the endpoint, this is a **descriptive decomposition, not a causal model**
+of curation philosophy; and the positive-count metric is confounded with
+the smallest label (150 positives).
+
 ## 4. Discussion
 
 ### 4.1 What the benchmark establishes
@@ -1657,13 +1773,33 @@ The two additions to the results above change what this study can claim. **First
    the splits, which addresses the reproducibility half of that
    requirement; the independence half would need an external catalogue
    that none of our four labels has been allowed to see.
+9. **Degree is not the strongest classical baseline.** Closeness
+   centrality beats it in all 24 arms (§3.17), and against the strongest
+   baseline in each arm the prior is positive in 19 of 24 arms with a
+   median margin of +0.046 rather than +0.081. The headline number is
+   measured against a baseline that a standard centrality beats
+   everywhere; the direction survives, the size does not.
+10. **The label main effect is one difficulty axis, not five curation
+    philosophies** (§3.18): a single label-level number recovers 97.8 %
+    of what the full label factor explains. The difficulty numbers are
+    computed from the same arms as the endpoint, so this is a
+    descriptive decomposition, and it means the 34.78 % "label" share of
+    the variance decomposition is not five independent pieces of
+    evidence about driver biology.
 
 ---
 
 
 ### 4.5 What would change the conclusion
 
-Four experiments, in order of how much they would move the paper. (i) **Re-derive the background** from NCG and ClinGen with explicit exclusion and re-run the factorial: this is the cheapest and the most likely to change the numbers. (ii) **A blind expert-panel challenge** on a held-out set of candidates, the way Boutros et al. recommend: our evaluation is still self-referential, and a hidden answer key is the only cure. (iii) **A seed-perturbation experiment**: delete 10 % and 30 % of the seed drivers and measure how the prediction changes, which tests the seed-count law directly and separates "topology" from "seed count". (iv) **A second fixed learner** (closeness centrality) under the same locked protocol, because our conclusion is currently about one learner and the literature contains a degree-filtered local method that beats RWR on a full list.
+Four experiments, in order of how much they would move the paper. (i) **Re-derive the background** from NCG and ClinGen with explicit exclusion and re-run the factorial: this is the cheapest and the most likely to change the numbers. (ii) **A blind expert-panel challenge** on a held-out set of candidates, the way Boutros et al. recommend: our evaluation is still self-referential, and a hidden answer key is the only cure. (iii) **A seed-perturbation experiment**: delete 10 % and 30 % of the seed drivers and measure how the prediction changes, which tests the seed-count law directly and separates "topology" from "seed count". (iv) **A second fixed learner.** Two thirds of this is now done: a
+seed-using learner from a different family (the proximity learner of
+Control 17: 16 of 24 arms, median +0.011) and a stronger baseline from
+the centrality family (Control 19: closeness beats degree in all 24
+arms, and the prior still beats it in 20 of 24). What is missing is a
+seed-using closeness-style learner -- a local method that uses the
+seeds -- because that is the configuration the literature favours and
+our two controls do not yet cover it.
 
 ## 5. Conclusion
 
@@ -1672,22 +1808,27 @@ what node degree alone explains. The contribution is not a degree
 artefact, not a hub artefact, not a network-size artefact, not a
 literature-volume artefact, not a catalogue artefact, and not a
 degenerate-learner artefact: each of these was removed by a
-pre-specified control and the margin survived. The single negative cell
-is a coverage failure rather than evidence of a negative effect, and
-the provenance question remains open — not because the data are
-inadequate but because the panel is too small to separate provenance
+pre-specified control and the margin survived. Two of those controls
+cut the other way and are reported with the same prominence: degree is
+not the strongest classical baseline (closeness beats it in all 24
+arms, and against the strongest baseline the margin is positive in 19
+of 24 arms with a median of +0.046), and the label main effect is one
+difficulty axis rather than five curation philosophies. The single
+negative cell is a coverage failure rather than evidence of a negative
+effect, and the provenance question remains open — not because the data
+are inadequate but because the panel is too small to separate provenance
 from size and coverage.
 
 ---
 
 ## Data and code availability
 
-* **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–5 in `docs/pre_registration_amendments.md`.
-* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc3`. Release manifest with SHA-256 of 35 tables and 9 figures: `docs/release_manifest_v1.0-rc3.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc3 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (131 passed, 3 skipped); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (63 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
+* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc4`. Release manifest with SHA-256 of every tracked table and figure: `docs/release_manifest_v1.0-rc4.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc4 --check`.
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (63 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (242 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (415 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

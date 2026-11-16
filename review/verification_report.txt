@@ -119,6 +119,24 @@ states something the tables do not support.
          §F.18 must give the tier-restricted margins
   [PASS] c7.anchor                manuscript_a_sections.md
          §F.18 must give the ClinGen noise-anchor range
+  [PASS] c19.closeness            manuscript_a_sections.md
+         §F.22 must disclose that closeness beats degree everywhere
+  [PASS] c19.best                 manuscript_a_sections.md
+         §F.22 must give the margin against the strongest baseline
+  [PASS] c19.damping              manuscript_a_sections.md
+         §F.22 must give the result at the literature's PageRank damping
+  [PASS] c19.draft                research_report_draft.md
+         §3.17 of the draft must carry the same disclosure
+  [PASS] c19.abstract             manuscript_intro_abstract.md
+         the abstract must qualify the headline against the strongest baseline
+  [PASS] c20.share                manuscript_a_sections.md
+         §F.23 must give the share of the label factor recovered
+  [PASS] c20.f                    manuscript_a_sections.md
+         §F.23 must give the F-test that the label factor adds nothing
+  [PASS] c20.draft                research_report_draft.md
+         §3.18 of the draft must carry the same result
+  [PASS] c20.abstract             manuscript_intro_abstract.md
+         the abstract must say what the label main effect is
 
 ------------------------------------------------------------------------
 2. FORBIDDEN STRINGS -- the manuscript must NOT contain these
@@ -141,6 +159,12 @@ states something the tables do not support.
          the superseded transfer counts must be GONE
   [PASS] forbidden.negclaim       manuscript_intro_abstract.md
          the curator-lag reading is a hypothesis, not a finding
+  [PASS] forbidden.halfmargin     manuscript_intro_abstract.md
+         the corrected C9 result replaces the old post-hoc claim
+  [PASS] forbidden.halfmargin.draft research_report_draft.md
+         the corrected C9 result replaces the old post-hoc claim
+  [PASS] forbidden.oldconclusion  manuscript_intro_abstract.md
+         the conclusions must carry the qualified margin, not the old one
 
 ------------------------------------------------------------------------
 3. NUMERIC CROSS-CHECK -- the manuscript's captured numbers vs the recomputed table values
@@ -181,6 +205,16 @@ states something the tables do not support.
   [PASS] c7 temporal high tier          manuscript=+0.0743  table=+0.0743  tol=0.0006
   [PASS] c7 anchor min                  manuscript=-0.0018  table=-0.0018  tol=0.0006
   [PASS] c7 anchor max                  manuscript=+0.0026  table=+0.0026  tol=0.0006
+  [PASS] c19 headline median            manuscript=+0.0809  table=+0.0809  tol=0.0006
+  [PASS] c19 damping median             manuscript=+0.0571  table=+0.0571  tol=0.0006
+  [PASS] c19 closeness median           manuscript=+0.0312  table=+0.0312  tol=0.0006
+  [PASS] c19 rwr vs closeness median    manuscript=+0.0528  table=+0.0528  tol=0.0006
+  [PASS] c19 best baseline median       manuscript=+0.0461  table=+0.0461  tol=0.0006
+  [PASS] c19 closeness arms             manuscript=+18.0000  table=+18.0000  tol=0.5
+  [PASS] c20 label-factor share         manuscript=+97.8000  table=+97.7943  tol=0.06
+  [PASS] c20 label-factor F test        manuscript=+0.3800  table=+0.3820  tol=0.006
+  [PASS] c20 temporal margin            manuscript=+0.5827  table=+0.5827  tol=0.0006
+  [PASS] c20 temporal margin value      manuscript=+0.0209  table=+0.0209  tol=0.0006
   [PASS] attribution degree joint beta  manuscript=-0.0830  table=-0.0834  tol=0.002
   [PASS] attribution degree marginal rho manuscript=+0.0380  table=+0.0380  tol=0.002
   [PASS] attribution score CV joint beta manuscript=+0.7780  table=+0.7782  tol=0.002
@@ -199,5 +233,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 114 PASS / 0 FAIL
+RESULT: 136 PASS / 0 FAIL
 ========================================================================

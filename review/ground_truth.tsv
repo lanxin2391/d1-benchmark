@@ -336,3 +336,81 @@ depmap	K=30 median share of cell lines enriched (%)	5.827	results/tables/depmap_
 depmap	K=30 median p-value	0.5228	results/tables/depmap_validation.tsv	
 depmap	K=100 median share of cell lines enriched (%)	47.6436	results/tables/depmap_validation.tsv	
 depmap	K=100 median p-value	0.058	results/tables/depmap_validation.tsv	
+baseline_family	RWR(0.5) - degree: arms positive (primary 24)	23	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - degree: median margin (primary 24)	0.0809	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - degree: minimum margin (primary 24)	-0.0125	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - degree: maximum margin (primary 24)	0.1711	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(restart 0.15) - degree: arms positive (primary 24)	23	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(restart 0.15) - degree: median margin (primary 24)	0.0571	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(restart 0.15) - degree: minimum margin (primary 24)	-0.0051	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(restart 0.15) - degree: maximum margin (primary 24)	0.1552	results/tables/baseline_family_arms.tsv	
+baseline_family	closeness - degree: arms positive (primary 24)	24	results/tables/baseline_family_arms.tsv	
+baseline_family	closeness - degree: median margin (primary 24)	0.0312	results/tables/baseline_family_arms.tsv	
+baseline_family	closeness - degree: minimum margin (primary 24)	0.0011	results/tables/baseline_family_arms.tsv	
+baseline_family	closeness - degree: maximum margin (primary 24)	0.0733	results/tables/baseline_family_arms.tsv	
+baseline_family	eigenvector - degree: arms positive (primary 24)	16	results/tables/baseline_family_arms.tsv	
+baseline_family	eigenvector - degree: median margin (primary 24)	0.0098	results/tables/baseline_family_arms.tsv	
+baseline_family	eigenvector - degree: minimum margin (primary 24)	-0.045	results/tables/baseline_family_arms.tsv	
+baseline_family	eigenvector - degree: maximum margin (primary 24)	0.0603	results/tables/baseline_family_arms.tsv	
+baseline_family	PageRank - degree: arms positive (primary 24)	1	results/tables/baseline_family_arms.tsv	
+baseline_family	PageRank - degree: median margin (primary 24)	-0.1537	results/tables/baseline_family_arms.tsv	
+baseline_family	PageRank - degree: minimum margin (primary 24)	-0.2946	results/tables/baseline_family_arms.tsv	
+baseline_family	PageRank - degree: maximum margin (primary 24)	0.0032	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - closeness: arms positive (primary 24)	20	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - closeness: median margin (primary 24)	0.0528	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - closeness: minimum margin (primary 24)	-0.0245	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - closeness: maximum margin (primary 24)	0.1229	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - eigenvector: arms positive (primary 24)	21	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - eigenvector: median margin (primary 24)	0.0613	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - eigenvector: minimum margin (primary 24)	-0.0226	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - eigenvector: maximum margin (primary 24)	0.1959	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - PageRank: arms positive (primary 24)	24	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - PageRank: median margin (primary 24)	0.204	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - PageRank: minimum margin (primary 24)	0.0095	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - PageRank: maximum margin (primary 24)	0.4147	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - the strongest baseline of the arm: arms positive (primary 24)	19	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - the strongest baseline of the arm: median margin (primary 24)	0.0461	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - the strongest baseline of the arm: minimum margin (primary 24)	-0.0245	results/tables/baseline_family_arms.tsv	
+baseline_family	RWR(0.5) - the strongest baseline of the arm: maximum margin (primary 24)	0.1229	results/tables/baseline_family_arms.tsv	
+baseline_family	arms where closeness is the strongest baseline	18	results/tables/baseline_family_arms.tsv	
+baseline_family	arms where degree is the strongest baseline	0	results/tables/baseline_family_arms.tsv	
+label_difficulty	deg_auroc: beta	1.0685	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	deg_auroc: share of the label factor recovered (%)	90.2919	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	deg_auroc: F-test p for the label factor beyond it	0.0291	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	deg_auroc: R2 of the network-only model	0.3132	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	deg_auroc: R2 of the network + label-factor model	0.9047	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	rwr_auroc: beta	0.53	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	rwr_auroc: share of the label factor recovered (%)	97.7943	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	rwr_auroc: F-test p for the label factor beyond it	0.382	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	rwr_auroc: R2 of the network-only model	0.3132	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	rwr_auroc: R2 of the network + label-factor model	0.9047	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	close_auroc: beta	0.918	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	close_auroc: share of the label factor recovered (%)	81.4594	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	close_auroc: F-test p for the label factor beyond it	0.0032	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	close_auroc: R2 of the network-only model	0.3132	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	close_auroc: R2 of the network + label-factor model	0.9047	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	n_pos: beta	0.0002	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	n_pos: share of the label factor recovered (%)	87.5728	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	n_pos: F-test p for the label factor beyond it	0.0137	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	n_pos: R2 of the network-only model	0.3132	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	n_pos: R2 of the network + label-factor model	0.9047	results/tables/label_difficulty_coefs.tsv	
+label_difficulty	ot_nolit: mean margin	0.1062	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_nolit: degree-baseline AUROC	0.6434	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_nolit: RWR AUROC	0.7496	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_nolit: number of positives	585	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_all: mean margin	0.1058	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_all: degree-baseline AUROC	0.6643	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_all: RWR AUROC	0.7701	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ot_all: number of positives	589	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ncg_known: mean margin	0.0876	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ncg_known: degree-baseline AUROC	0.6443	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ncg_known: RWR AUROC	0.7319	results/tables/label_difficulty_labels.tsv	
+label_difficulty	ncg_known: number of positives	693	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen2024: mean margin	0.0821	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen2024: degree-baseline AUROC	0.6479	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen2024: RWR AUROC	0.7299	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen2024: number of positives	623	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen_temporal_new: mean margin	0.0209	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen_temporal_new: degree-baseline AUROC	0.5827	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen_temporal_new: RWR AUROC	0.6036	results/tables/label_difficulty_labels.tsv	
+label_difficulty	intogen_temporal_new: number of positives	150	results/tables/label_difficulty_labels.tsv	

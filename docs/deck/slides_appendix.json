@@ -815,6 +815,144 @@
     "fontsize": 11,
     "rowh": 0.78
    }
+  },
+  {
+   "n": 28,
+   "kind": "appendix",
+   "tag": "PART 2 · A12",
+   "title": "Is degree a strawman baseline? (Control 19)",
+   "note": "Two objections, one control: the same 200 evaluations per arm, the same test genes. (A) degree may be a weak baseline -- closeness centrality beats it in every arm (18/30 arms have closeness as the strongest baseline, 12/30 eigenvector, 0/30 degree). (B) RWR may be a lucky special case -- the increment survives the literature's default PageRank damping. Source: baseline_family_arms.tsv.",
+   "table": {
+    "head": [
+     "comparison (the 24 primary arms)",
+     "arms +",
+     "median",
+     "min",
+     "max"
+    ],
+    "rows": [
+     [
+      "RWR (a = 0.5) - degree (headline)",
+      "23/24",
+      "+0.0809",
+      "-0.0125",
+      "+0.1711"
+     ],
+     [
+      "RWR (restart 0.15 = PageRank damping 0.85) - degree",
+      "23/24",
+      "+0.0571",
+      "-0.0051",
+      "+0.1552"
+     ],
+     [
+      "closeness - degree",
+      "24/24",
+      "+0.0312",
+      "+0.0011",
+      "+0.0733"
+     ],
+     [
+      "eigenvector - degree",
+      "16/24",
+      "+0.0098",
+      "-0.0450",
+      "+0.0603"
+     ],
+     [
+      "PageRank - degree",
+      "1/24",
+      "-0.1537",
+      "-0.2946",
+      "+0.0032"
+     ],
+     [
+      "RWR - closeness",
+      "20/24",
+      "+0.0528",
+      "-0.0245",
+      "+0.1229"
+     ],
+     [
+      "RWR - eigenvector",
+      "21/24",
+      "+0.0613",
+      "-0.0226",
+      "+0.1959"
+     ],
+     [
+      "RWR - PageRank",
+      "24/24",
+      "+0.2040",
+      "+0.0095",
+      "+0.4147"
+     ],
+     [
+      "RWR - the strongest baseline of that arm",
+      "19/24",
+      "+0.0461",
+      "-0.0245",
+      "+0.1229"
+     ]
+    ],
+    "fontsize": 11.5,
+    "rowh": 0.42
+   }
+  },
+  {
+   "n": 29,
+   "kind": "appendix",
+   "tag": "PART 2 · A13",
+   "title": "The label main effect is one difficulty axis (Control 20)",
+   "note": "Is the 34.78 % label share of the variance decomposition five curation philosophies, or one difficulty axis? One label-level number recovers 97.8 % of it (F-test p = 0.38), and the label with the smallest margin is the one on which every scorer is weakest. Source: label_difficulty_*.tsv.",
+   "table": {
+    "head": [
+     "label",
+     "positives",
+     "degree AUROC",
+     "RWR AUROC",
+     "mean margin"
+    ],
+    "rows": [
+     [
+      "ot_nolit",
+      "585",
+      "0.6434",
+      "0.7496",
+      "+0.1062"
+     ],
+     [
+      "ot_all",
+      "589",
+      "0.6643",
+      "0.7701",
+      "+0.1058"
+     ],
+     [
+      "ncg_known",
+      "693",
+      "0.6443",
+      "0.7319",
+      "+0.0876"
+     ],
+     [
+      "intogen2024",
+      "623",
+      "0.6479",
+      "0.7299",
+      "+0.0821"
+     ],
+     [
+      "intogen_temporal_new",
+      "150",
+      "0.5827",
+      "0.6036",
+      "+0.0209"
+     ]
+    ],
+    "fontsize": 11.5,
+    "rowh": 0.42
+   }
   }
  ]
 }

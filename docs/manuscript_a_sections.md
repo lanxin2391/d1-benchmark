@@ -1576,6 +1576,120 @@ of the result, not as a contradiction of it.
 
 ---
 
+### F.22 Control 19: is degree a strawman baseline, and is RWR a lucky special case?
+
+The primary endpoint is ΔAUROC = AUROC(prior) − AUROC(**degree**). Two
+objections follow immediately, and both are answered here on the same
+splits, the same 200 (repeat, fold) evaluations per arm and the same test
+genes (`scripts/run_baseline_family.py`):
+
+* **(A) "degree is a strawman."** The honest competitor may be a stronger
+  centrality. We therefore evaluate three more classical baselines on the
+  identical test folds: **closeness** (harmonic centrality, estimated from
+  256 random landmarks -- the exact quantity needs O(V·E) all-pairs
+  distances; on Reactome, the smallest panel member, the landmark estimate
+  agrees with the exact harmonic centrality at Spearman **+0.9963**),
+  **eigenvector centrality** (power iteration) and **PageRank** (uniform
+  teleportation, damping 0.85).
+* **(B) "RWR is a lucky special case."** We re-run the same protocol at the
+  damping that the PageRank literature actually uses, 0.85, which in our
+  parameterisation is RWR with restart 0.15 -- outside our pre-registered
+  sensitivity range of 0.3–0.7.
+
+| comparison (primary 24 arms) | arms positive | median | min | max |
+|---|---|---|---|---|
+| RWR (α = 0.5) − degree (the headline) | **23/24** | **+0.0809** | −0.0125 | +0.1711 |
+| RWR (restart 0.15) − degree | 23/24 | +0.0571 | −0.0051 | +0.1552 |
+| closeness − degree | **24/24** | +0.0312 | +0.0011 | +0.0733 |
+| eigenvector − degree | 16/24 | +0.0098 | −0.0450 | +0.0603 |
+| PageRank − degree | 1/24 | −0.1537 | −0.2946 | +0.0032 |
+| RWR − closeness | 20/24 | +0.0528 | −0.0245 | +0.1229 |
+| RWR − eigenvector | 21/24 | +0.0613 | −0.0226 | +0.1959 |
+| RWR − PageRank | 24/24 | +0.2040 | +0.0095 | +0.4147 |
+| **RWR − the strongest baseline of that arm** | **19/24** | **+0.0461** | −0.0245 | +0.1229 |
+
+**Reading.** Objection (A) is **correct**: closeness beats degree in
+**every one of the 24 arms** (median +0.0312), and the strongest baseline
+in an arm is closeness in 18 of the 30 arms and eigenvector centrality in
+the other 12 -- **degree is never the strongest classical baseline in this
+panel.** Our headline is therefore measured against a baseline that a
+standard centrality beats everywhere. Objection (B) is **rejected**: at the
+literature's own damping the increment survives (23/24 arms, median +0.0571),
+about 30 % smaller than at the locked α = 0.5. And the increment survives
+the stronger baseline as well: against the best competitor in each arm the
+prior is positive in **19 of 24 arms** with a median margin of **+0.046**.
+
+The honest statement is therefore narrower than the headline alone: **the
+prior beats degree in 23 of 24 arms (median +0.081) and beats the strongest
+classical baseline in 19 of 24 arms (median +0.046).** The direction of the
+result is unchanged; its size against a fair baseline is roughly 40 %
+smaller than against degree.
+
+Two bookkeeping facts: the RWR α = 0.5 margins recomputed in this control
+match the published Table 1 on all 24 arms to **4.45e-05**, so the control
+is on the same footing as the primary analysis; and the three added
+baselines are static centralities that use no seeds, so they are baseline
+*competitors*, not priors in the protocol's sense (the seed-using
+competitor is Control 17's proximity learner).
+
+---
+
+### F.23 Control 20: the label main effect is one difficulty axis, not five curation philosophies
+
+The variance decomposition of §C6 attributes 34.78 % of the between-arm
+spread of the margin to a **label main effect**. What is that effect? Two
+readings are possible: five genuinely different curation philosophies, each
+saying something different about driver biology; or one shared **difficulty**
+axis -- "how easy is this label set to rank" -- on which the labels happen
+to line up. The second reading is testable without new data: fit the
+arm-level margin on label-level difficulty numbers with network fixed
+effects absorbing the network main effect (`scripts/run_label_difficulty_regression.py`).
+
+| label | positives | degree AUROC | RWR AUROC | closeness AUROC | mean margin |
+|---|---|---|---|---|---|
+| `ot_nolit` | 585 | 0.6434 | 0.7496 | 0.6692 | **+0.1062** |
+| `ot_all` | 589 | 0.6643 | 0.7701 | 0.6939 | **+0.1058** |
+| `ncg_known` | 693 | 0.6443 | 0.7319 | 0.6782 | +0.0876 |
+| `intogen2024` | 623 | 0.6479 | 0.7299 | 0.6880 | +0.0821 |
+| `intogen_temporal_new` | 150 | 0.5827 | 0.6036 | 0.6075 | **+0.0209** |
+
+Models on the 24 primary arms (R²): network only **0.313**; network +
+difficulty **0.795–0.892**; network + the full label factor **0.905**. The
+label factor's gain over the network-only model is **0.591** (0.512 on all
+30 arms), and:
+
+| difficulty metric | share of the label factor recovered | F-test: label factor beyond this metric, p |
+|---|---|---|
+| label-mean RWR AUROC | **97.8 %** | **0.38** |
+| label-mean degree AUROC | 90.3 % | 0.029 |
+| label positive count | 87.6 % | 0.014 |
+| label-mean closeness AUROC | 81.5 % | 0.003 |
+
+**Reading.** The label main effect is **one difficulty axis, not five
+independent curation philosophies**: a single label-level number recovers
+97.8 % of everything the full label factor explains, and the label factor
+adds nothing beyond it (F-test p = 0.38 on the primary family, 0.53 with
+the NCG label added). This sharpens the earlier redundancy result
+(participation ratio 1.54) from "the labels are nearly collinear" to "the
+label factor is one number". The mechanism is visible in the table: the
+label with the smallest margin (`intogen_temporal_new`, +0.0209) is also
+the label on which *every* scorer is weakest (degree AUROC 0.583, RWR AUROC
+0.604 against 0.730–0.770 for the others), i.e. the whole problem is harder
+there, not the prior specifically.
+
+**Consequences, stated plainly.** (1) The 34.78 % "label" share of the
+variance decomposition should be read as *labels differ in difficulty*, not
+as five pieces of independent evidence about driver biology. (2) The
+`intogen_temporal_new` arms, which fail the strictest interval in four
+cells, are small-effect cells for the reason Control 15 established
+(power), and their smallness is a property of the label, not of the
+network. (3) Because the difficulty numbers are computed from the same arms
+as the endpoint, this is a **descriptive decomposition, not a causal model**
+of curation philosophy; and the positive-count metric is confounded with
+the smallest label (150 positives).
+
+---
+
 ## §G. Results §A5 degree-matched seed null (control 2)
 
 100 degree-matched random seed sets per cell, each propagated over the
@@ -2009,6 +2123,17 @@ four exceptions being the four `intogen_temporal_new` arms with the
 smallest effects. The cell-level separation from the degree-matched
 seed null is z = 3.1–227 and from the rewired null z = 8.9–205
 (excluding the single Reactome cell, §F.1).
+
+The margin is nevertheless measured against degree, and degree is **not
+the strongest classical baseline**: closeness centrality beats it in all
+24 arms (§F.22). Against the strongest baseline in each arm the prior is
+positive in **19 of 24 arms** with a median margin of **+0.046**, and at
+the literature's default PageRank damping (restart 0.15) it is positive in
+23/24 arms with a median of +0.057. The direction of the verdict is
+unchanged; the size against a fair baseline is about 40 % smaller than
+against degree alone. Relatedly, the label main effect of the variance
+decomposition is one difficulty axis rather than five curation
+philosophies: a single label-level number recovers 97.8 % of it (§F.23).
 
 Two further results make the verdict stronger rather than weaker.
 **Under the strictest control we could add** — the complex-aware

@@ -109,15 +109,25 @@ that the per-gene instability of the prior is the gene's own score
 variance (Spearman ρ = 1.00) and not any topology descriptor, which
 makes bagging the prior a provable no-op. Adding the NCG catalogue as
 a fifth label shrinks the label main effect from 34.8 % to 30.8 % of the
-between-arm spread.
+between-arm spread. A **baseline family sweep** shows that degree is not
+the strongest classical competitor: closeness centrality beats it in all
+24 arms, and against the strongest baseline in each arm the prior is
+positive in 19 of 24 arms with a median margin of +0.046; at the
+literature's default PageRank damping the increment survives (23/24 arms,
+median +0.057). A **label-difficulty regression** shows that the label
+main effect is one difficulty axis rather than five curation philosophies:
+a single label-level number recovers 97.8 % of what the full label factor
+explains (F-test p = 0.38).
 
 **Conclusions.** A network prior contributes to cancer-driver
 prioritisation beyond node degree, and the contribution is not
 explained by seed degree, by network size, or by the degree
 distribution of the labels. It is also smaller and more fragile than
-the field's headline numbers suggest: the median margin is +0.081, it
-shrinks by half on the strictest label once curated driver genes are
-removed from the background, and a large part of it tracks how often a
+the field's headline numbers suggest: the median margin is +0.081
+against degree but +0.046 against the strongest classical baseline
+(closeness centrality, which beats degree in all 24 arms), removing
+the curated drivers from the background leaves it unchanged (23 of 24
+arms, median +0.082), and a large part of it tracks how often a
 gene has been published rather than its topology. The prior does
 transfer, to drivers that none of our labels contain, in 24 of 24 arms
 and 26 of 26 cancer types — but its advantage in the top of the list is

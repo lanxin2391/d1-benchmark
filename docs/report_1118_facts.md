@@ -292,6 +292,46 @@ score CV      log_crowding_scott -0.086891 0.023498 -0.132946 -0.040836  2.17475
 - K = 30.0: median over the 24 arms of the fraction of cell lines with p < 0.05 = **5.8%** (chance = 5 %); median p = 0.523
 - K = 100.0: median over the 24 arms of the fraction of cell lines with p < 0.05 = **47.6%** (chance = 5 %); median p = 0.058
 
+## 7b. The baseline family sweep (Control 19)
+
+Is degree a strawman baseline, and is RWR a lucky special case?
+
+| comparison (the 24 primary arms) | arms positive | median | min | max |
+|---|---|---|---|---|
+| RWR (a = 0.5) - degree (headline) | 23/24 | +0.0809 | -0.0125 | +0.1711 |
+| RWR (restart 0.15 = PageRank damping 0.85) - degree | 23/24 | +0.0571 | -0.0051 | +0.1552 |
+| closeness - degree | 24/24 | +0.0312 | +0.0011 | +0.0733 |
+| eigenvector - degree | 16/24 | +0.0098 | -0.0450 | +0.0603 |
+| PageRank - degree | 1/24 | -0.1537 | -0.2946 | +0.0032 |
+| RWR - closeness | 20/24 | +0.0528 | -0.0245 | +0.1229 |
+| RWR - eigenvector | 21/24 | +0.0613 | -0.0226 | +0.1959 |
+| RWR - PageRank | 24/24 | +0.2040 | +0.0095 | +0.4147 |
+| RWR - the strongest baseline of that arm | 19/24 | +0.0461 | -0.0245 | +0.1229 |
+
+- the strongest baseline in an arm: closeness in **18/30** arms, eigenvector in **12/30**, degree in **0/30**
+- the RWR margins recomputed here match Table 1 to 4.45e-05 (the control is on the same footing as the primary analysis)
+- the landmark closeness estimate agrees with the exact harmonic centrality on reactome at Spearman +0.9963
+
+## 7c. The label-difficulty regression (Control 20)
+
+| label | positives | degree AUROC | RWR AUROC | closeness AUROC | mean margin |
+|---|---|---|---|---|---|
+| ot_nolit | 585 | 0.6434 | 0.7496 | 0.6692 | +0.1062 |
+| ot_all | 589 | 0.6643 | 0.7701 | 0.6939 | +0.1058 |
+| ncg_known | 693 | 0.6443 | 0.7319 | 0.6782 | +0.0876 |
+| intogen2024 | 623 | 0.6479 | 0.7299 | 0.6880 | +0.0821 |
+| intogen_temporal_new | 150 | 0.5827 | 0.6036 | 0.6075 | +0.0209 |
+
+| difficulty metric | beta | share of the label factor recovered | F-test p (label factor beyond it) |
+|---|---|---|---|
+| deg_auroc | +1.0685 | 90.3% | 0.029 |
+| rwr_auroc | +0.5300 | 97.8% | 0.382 |
+| close_auroc | +0.9180 | 81.5% | 0.003 |
+| n_pos | +0.0002 | 87.6% | 0.014 |
+
+- the network-only model has R2 = 0.313; adding the full label factor gives R2 = 0.905
+- the label main effect is ONE difficulty axis: a single label-level number recovers 97.8 % of what the full label factor explains
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

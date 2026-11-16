@@ -383,6 +383,77 @@ if seedp is not None and c15 is not None and c16 is not None:
                   "rows": rows, "fontsize": 11, "rowh": 0.78},
     })
 
+# ---- A12: the baseline family sweep (Control 19) -------------------
+bf = load("baseline_family_arms.tsv")
+if bf is not None:
+    prim_labels = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
+    prim = bf[bf.label.isin(prim_labels)]
+    rows = []
+    for col, name in (
+            ("margin_rwr05_vs_degree", "RWR (a = 0.5) - degree (headline)"),
+            ("margin_rwr15_vs_degree",
+             "RWR (restart 0.15 = PageRank damping 0.85) - degree"),
+            ("margin_closeness_vs_degree", "closeness - degree"),
+            ("margin_eigen_vs_degree", "eigenvector - degree"),
+            ("margin_pagerank_vs_degree", "PageRank - degree"),
+            ("margin_rwr05_vs_closeness", "RWR - closeness"),
+            ("margin_rwr05_vs_eigen", "RWR - eigenvector"),
+            ("margin_rwr05_vs_pagerank", "RWR - PageRank"),
+            ("margin_rwr05_vs_best_baseline",
+             "RWR - the strongest baseline of that arm")):
+        rows.append([
+            name,
+            f"{int((prim[col] > 0).sum())}/24",
+            f"{prim[col].median():+.4f}",
+            f"{prim[col].min():+.4f}",
+            f"{prim[col].max():+.4f}"])
+    n_close = int((bf.strongest_baseline == "closeness").sum())
+    n_eig = int((bf.strongest_baseline == "eigen").sum())
+    n_deg = int((bf.strongest_baseline == "degree").sum())
+    slides.append({
+        "n": 28, "kind": "appendix", "tag": "PART 2 · A12",
+        "title": "Is degree a strawman baseline? (Control 19)",
+        "note": "Two objections, one control: the same 200 evaluations per "
+                "arm, the same test genes. (A) degree may be a weak "
+                "baseline -- closeness centrality beats it in every arm "
+                f"({n_close}/30 arms have closeness as the strongest "
+                f"baseline, {n_eig}/30 eigenvector, {n_deg}/30 degree). "
+                "(B) RWR may be a lucky special case -- the increment "
+                "survives the literature's default PageRank damping. "
+                "Source: baseline_family_arms.tsv.",
+        "table": {"head": ["comparison (the 24 primary arms)", "arms +",
+                           "median", "min", "max"],
+                  "rows": rows, "fontsize": 11.5, "rowh": 0.42},
+    })
+
+# ---- A13: the label-difficulty regression (Control 20) -------------
+lc = load("label_difficulty_coefs.tsv")
+ll = load("label_difficulty_labels.tsv")
+if lc is not None and ll is not None:
+    rows = []
+    for r in ll.sort_values("margin_mean", ascending=False).itertuples():
+        rows.append([r.label, f"{int(r.n_pos)}", f"{r.deg_auroc:.4f}",
+                     f"{r.rwr_auroc:.4f}", f"{r.margin_mean:+.4f}"])
+    l24 = lc[lc.scope == "primary24"]
+    mrows = []
+    for r in l24.itertuples():
+        mrows.append([r.metric, f"{r.beta:+.4f}",
+                      f"{r.label_factor_share_of_gain:.1%}",
+                      f"{r.p_label_factor_vs_difficulty:.3f}"])
+    slides.append({
+        "n": 29, "kind": "appendix", "tag": "PART 2 · A13",
+        "title": "The label main effect is one difficulty axis (Control 20)",
+        "note": "Is the 34.78 % label share of the variance decomposition "
+                "five curation philosophies, or one difficulty axis? One "
+                "label-level number recovers 97.8 % of it (F-test p = "
+                "0.38), and the label with the smallest margin is the one "
+                "on which every scorer is weakest. Source: "
+                "label_difficulty_*.tsv.",
+        "table": {"head": ["label", "positives", "degree AUROC",
+                           "RWR AUROC", "mean margin"],
+                  "rows": rows, "fontsize": 11.5, "rowh": 0.42},
+    })
+
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps({"slides": slides}, indent=1, ensure_ascii=False),

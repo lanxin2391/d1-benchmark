@@ -21,17 +21,17 @@
 
 ---
 
-## 逐页配时表（**单人讲 30–35 分钟**：正文 16 页 ≈ 24 分钟 + 证据页 11 页 ≈ 8 分钟）
+## 逐页配时表（**单人讲约 40 分钟**：正文 16 页 ≈ 27 分钟 + 证据页 13 页 ≈ 11 分钟）
 
 > 课程的建议是"主讲 12–15 分钟"，但本组的答辩时长是 **40 分钟**，且只有一位主讲。
-> 课程同时规定"**附录不计**"——所以我们把 11 页证据页作为**第二部分**正式讲，
+> 课程同时规定"**附录不计**"——所以我们把 13 页证据页作为**第二部分**正式讲，
 > 而不是只当问答时的备用材料。正文仍然严格是 16 页，符合 12–16 页的要求。
 > 每页都有一行**关键数字**（deck 里就在标题下面），照着念，数字不会错。
 
 | 时间 | 页 | 讲什么 | 分钟 |
 |---|---|---|---|
 | 0:00 | 1 | 标题、四个成员与分工、预注册与仓库地址 | 0.6 |
-| 0:40 | 2 | 研究地图：问题 → 三个假说 → 设计 → 结论 | 1.4 |
+| 0:40 | 2 | 研究地图：问题 → **三个预注册假说**（H2 不可检验）→ 设计 → 结论 | 2.0 |
 | 2:05 | 3 | Bailey 2018：MC3 共识（9,423 对 / 26 组织 / 26 个检测器）与其局限 | 1.5 |
 | 3:35 | 4 | Shi 2025 FunMap：边的构造（LLR 3.912、MR 0.95）与它自己的循环性警告 | 1.7 |
 | 5:15 | 5 | Repana 2019 NCG：三层、置信度来自网络、我们怎么用它 | 1.5 |
@@ -41,27 +41,29 @@
 | 11:50 | 8 | 流程与复现：六步管线、两个审计脚本、13 个 P0 自审 | 1.6 |
 | 13:30 | 9 | 参数与稳健性：为什么锁 alpha、区间怎么校准、每个偏离都有 amendment | 1.5 |
 | 15:00 | 10 | 十一层控制栈（逐条一句 + 一个数） | 1.8 |
-| 16:50 | 11 | 主端点：23/24、中位 +0.081、H1 在五种区间下的准确表述 | 2.0 |
-| 18:50 | 12 | 稳定性：端点稳 / 单基因不稳；拥挤假说被否证；种子数定律 | 2.2 |
-| 21:10 | 13 | 外部证据 + 我们自己数字的脆弱性（清洗背景重跑的结果） | 2.2 |
-| 23:20 | 14 | 五条结论 | 1.2 |
-| 24:30 | 15 | 局限 → 验证实验 | 1.2 |
-| 25:45 | 16 | 交付物、组内分工、AI 声明 | 1.0 |
-| 26:45 | A1 | 证据页①：文献 → 我们的决定 | 0.8 |
-| 27:35 | A2 | 证据页②：数据来源与登录号 | 0.6 |
-| 28:15 | A3 | 证据页③：24 臂全表 | 0.6 |
-| 28:55 | A4 | 证据页④：H1 在五种区间下的判定 | 0.7 |
-| 29:35 | A5 | 证据页⑤：低 FPR 端点 | 0.6 |
-| 30:15 | A6 | 证据页⑥：bait 匹配零模型 | 0.8 |
-| 31:05 | A7 | 证据页⑦：阴性集审计与清洗后重跑 | 0.9 |
-| 31:55 | A8 | 证据页⑧：等阳性率面板（curator lag 证据） | 0.7 |
-| 32:35 | A9 | 证据页⑨：标签质量分层 | 0.6 |
-| 33:15 | A10 | 证据页⑩：方差分解 24 vs 30 | 0.6 |
-| 33:55 | A11 | 证据页⑪：四个设计控制 | 1.0 |
-| 34:55 | — | 收束：回到第 14 页的五条结论 + 一句结束语 | 0.5 |
+| 17:20 | 11 | 主端点：23/24、中位 +0.081、H1 在五种区间下的准确表述、**度不是最强基线** | 2.8 |
+| 20:10 | 12 | 稳定性：端点稳 / 单基因不稳；拥挤假说被否证；种子数定律 | 2.2 |
+| 22:30 | 13 | 外部证据 + 我们自己数字的脆弱性（清洗背景重跑的结果） | 2.2 |
+| 24:40 | 14 | 六条结论（含"H2 不可检验"） | 1.5 |
+| 26:00 | 15 | 局限 → 验证实验 | 1.3 |
+| 27:20 | 16 | 交付物、组内分工、AI 声明 | 1.0 |
+| 28:10 | A1 | 证据页①：文献 → 我们的决定 | 0.8 |
+| 29:00 | A2 | 证据页②：数据来源与登录号 | 0.6 |
+| 29:40 | A3 | 证据页③：24 臂全表 | 0.6 |
+| 30:20 | A4 | 证据页④：H1 在五种区间下的判定 | 0.7 |
+| 31:00 | A5 | 证据页⑤：低 FPR 端点 | 0.6 |
+| 31:40 | A6 | 证据页⑥：bait 匹配零模型 | 0.8 |
+| 32:30 | A7 | 证据页⑦：阴性集审计与清洗后重跑 | 0.9 |
+| 33:20 | A8 | 证据页⑧：等阳性率面板（curator lag 证据） | 0.7 |
+| 34:00 | A9 | 证据页⑨：标签质量分层 | 0.6 |
+| 34:40 | A10 | 证据页⑩：方差分解 24 vs 30 | 0.6 |
+| 35:20 | A11 | 证据页⑪：四个设计控制 | 1.0 |
+| 36:20 | A12 | 证据页⑫：**度是不是稻草基线**（基线族扫描） | 1.3 |
+| 37:40 | A13 | 证据页⑬：**标签主效应是难度轴**（标签难度回归） | 1.1 |
+| 38:50 | — | 收束：回到第 14 页的六条结论 + 一句结束语 | 0.5 |
 
-**合计 ≈ 35.5 分钟**（被打断时优先砍证据页 A2–A5、A9–A10，每页 0.6 分钟；
-**正文 16 页与 A11 绝不砍**）。
+**合计 ≈ 39.5 分钟**（被打断时优先砍证据页 A2–A5、A9–A10，每页 0.6 分钟；
+**正文 16 页与 A11–A13 绝不砍**）。
 
 
 ---
@@ -82,6 +84,21 @@ prioritisation is standard practice — it is the formalisation of
 guilt-by-association — and it works in the sense that random walk
 with restart usually beats a degree-only ranking. What has never been
 done is to **decompose** that gain.
+>
+Our pre-registration carries **three hypotheses**, and I want to be
+precise about which of them this design can answer. **H1** — the
+network contributes beyond node degree — is the core, and it is
+testable. **H3** — the differences between networks reflect literature
+attention rather than topology — is partially testable, through the
+publication-count adjustment. **H2** — the contribution does not depend
+on where the network came from — is **not testable on this panel**, and
+I would rather say that now than have you discover it in the
+questions: the three provenance classes hold **3, 1 and 2** networks, and
+provenance is completely confounded with network size and coverage, so
+the smallest p-value a Kruskal-Wallis test can possibly return on this
+design is **0.1173**. We therefore record H2 as **not tested** — not as
+"not supported" — and appendix A14 states what a panel that could test
+it would have to look like.
 >
 There are three concrete reasons to think the decomposition matters,
 and each one is a published result. **First**, driver genes are hubs,
@@ -560,6 +577,25 @@ first draft. We did not relax it. If you force one hard sentence:
 to distinguish it from zero.** That is what "label-dependent" means
 literally, not rhetorically.
 >
+**And is degree a strong enough baseline? We asked, and the answer
+costs us.** We ran the same 200 evaluations per arm with three more
+classical baselines on the identical test folds: closeness centrality,
+eigenvector centrality and PageRank. Closeness **beats degree in every
+one of the 24 arms** (median +0.0312), and in the strongest-baseline
+count, closeness is the best competitor in **18 of 30** arms and
+eigenvector in the other 12 — **degree is never the strongest classical
+baseline in this panel**. So our headline is measured against a baseline
+that a standard centrality beats everywhere. Against the strongest
+baseline in each arm, the prior is still positive in **19 of 24 arms**,
+with a median margin of **+0.0461** instead of +0.0809. And the
+increment is not an artefact of our particular damping: at the
+PageRank damping the literature actually uses (0.85, which in our
+parameterisation is restart 0.15), the margin is positive in 23 of 24
+arms at **+0.0571**. Appendix A12 has the whole table. The honest
+sentence is therefore two sentences: **against degree the increment is
+23 of 24 arms and +0.081; against the strongest classical baseline it is
+19 of 24 arms and +0.046.**
+>
 **And if we change the endpoint, the margin shrinks.** Median
 **+0.0809** on AUROC, but **+0.0308** on partial AUC at FPR ≤ 0.02
 and **+0.0412** on top-10 % precision, and the number of arms with a
@@ -790,11 +826,48 @@ independent one.
 
 ---
 
-## 38:00–40:00 · 结论、局限与交付物（正文 slide 14–16）
+## 36:20–38:50 · 证据页⑫⑬：基线族扫描与标签难度回归（附录 A12–A13）
+
+[`【图：附录 A12（基线族扫描）→ 附录 A13（标签难度回归）】`]
+
+Two controls we added after the review pass, both because they are
+questions an examiner will ask and both because the answers cost us
+something.
+>
+**A12, the baseline family.** The headline is a margin over degree, so
+the first objection is that degree is a strawman. On the same folds and
+the same test genes we ran closeness centrality, eigenvector centrality
+and PageRank as additional baselines. Closeness **beats degree in all
+24 arms**; the strongest baseline in an arm is closeness in 18 of 30
+arms and eigenvector in the other 12, and degree in **none**. The
+second objection is that RWR is a lucky special case: at the damping
+the PageRank literature uses, 0.85, the margin is positive in 23 of 24
+arms at **+0.0571**, about 30 % smaller than at our locked 0.5. And
+against the best competitor in each arm the prior is positive in **19
+of 24** arms, median **+0.0461**. Two numbers to quote: **+0.0809
+against degree, +0.0461 against the strongest baseline**.
+>
+**A13, the label difficulty.** The variance decomposition attributes
+**34.78 %** of the between-arm spread to a label main effect. Is that
+five curation philosophies or one difficulty axis? We regressed the
+arm-level margin on label-level difficulty numbers with network fixed
+effects. One number — the label's mean AUROC under the prior — recovers
+**97.8 %** of everything the full label factor explains, and the label
+factor adds nothing beyond it (F-test **p = 0.38**). And the mechanism
+is visible: the label with the smallest margin, the newest-driver label,
+is also the label on which **every** scorer is weakest (degree AUROC
+0.583, RWR AUROC 0.604, against 0.73–0.77 for the others). So the
+label effect is difficulty, not five opinions about biology, and the
+four arms that fail the strictest interval fail because the problem is
+hard there, not because the prior is wrong.
+
+---
+
+## 38:50–40:00 · 结论、局限与交付物（正文 slide 14–16）
 
 [`【图：slide 14（结论）→ slide 15（局限 → 验证实验）→ slide 16（交付物 + AI 声明）】`]
 
-Five conclusions.
+Six conclusions.
 **One**: a network prior contributes signal beyond node degree — 23 of
 24 arms positive, the pre-registered rule met under four of five
 interval constructions. **Two**: the contribution is real but modest
@@ -805,7 +878,12 @@ to +0.002. **Four**: the prior's instability is intrinsic — the
 gene's own score variance explains it, and bagging the prior is a
 provable no-op, so no learner can remove it. **Five**: curated
 networks fail on recently discovered drivers — Reactome is +0.089 on
-the 2019 catalogue and negative on the two newest.
+the 2019 catalogue and negative on the two newest. **Six**: one of our
+three pre-registered hypotheses was never testable — H2, provenance
+invariance, because the provenance classes hold 3, 1 and 2 networks and
+provenance is confounded with size and coverage; the smallest attainable
+p-value on that design is 0.1173, so we record it as **not tested**
+rather than reporting a p-value that could never have been small.
 >
 **The limits, and what would change our mind** — every limitation we
 know of has a named experiment: the gene-cluster interval misses four
@@ -814,14 +892,19 @@ set is contaminated → re-derive it with explicit NCG and ClinGen
 exclusion; the evaluation is self-referential → run a blind
 expert-panel challenge; we have no perturbation experiment, so we
 claim no causality → edit the seed set and measure the effect on the
-predicted neighbourhood; we test one learner → re-run the locked
-protocol with a second fixed learner.
+predicted neighbourhood; we test one learner and one baseline → the
+increment is learner-specific (a proximity learner gives 16/24 arms and
++0.011), and degree is not the strongest baseline (closeness beats it
+in 24/24 arms), so the remaining experiment is a seed-using
+closeness-style learner under the same locked protocol; and H2 needs a
+larger, size- and coverage-matched panel — at least four networks per
+provenance class.
 >
 **Everything is public and re-runnable**: the code, tables, figures
-and split manifests are on GitHub at the v1.0-rc3 tag; the
+and split manifests are on GitHub at the v1.0-rc4 tag; the
 pre-registration is frozen at Zenodo DOI 10.5281/zenodo.23121762 with
 its amendments; two independent audit scripts pass **50 of 50** and
-**63 of 63** checks; and every figure in this talk is generated from a
+**136 of 136** checks; and every figure in this talk is generated from a
 released table by a script in the repository.
 >
 **AI use statement.** AI tools assisted with code drafting, debugging,
@@ -843,7 +926,7 @@ Thank you.
 
 ---
 
-# 附录 A · 必背数字卡（23 张）
+# 附录 A · 必背数字卡（30 张）
 
 每张卡：**数字 → 它是什么 → 怎么算的 → 说明什么 → 不能说明什么 → 一句话**。
 
@@ -876,6 +959,9 @@ Thank you.
 | 25 | **20/24 → 18/24** | gene-cluster 区间通过数（等阳性数面板） | D-11 capped 面板上重算（阳性数相同） | 失败的是小效应臂，不是小标签 | 不能说把阳性数等量化就能救回 | 是功效问题 |
 | 26 | **84 %–99.8 %** | 每个标签的每网络均值可由其他标签预测的 R² | 5×6 arm 均值矩阵的回归 | 五个标签≈一个共同维度 | 不能说五种策展哲学 | 标签几乎是同一个维度 |
 | 27 | **16/24, +0.011** | 第二个 learner（邻近度）下的 margin | 同切分同基线，score = −到最近种子的距离 | 增量是 learner-specific 的 | 不能说换个方法也成立 | 只在我们锁定的方法下成立 |
+| 28 | **+0.0809 vs +0.0461** | 对度基线 / 对最强基线的中位 margin | 同折同测试集再跑 closeness、特征向量、PageRank 三个基线 | 度不是最强基线（closeness 在 24/24 臂都赢度） | 不能说"换成最强基线结论就变了"（方向仍 19/24 为正） | 对度 +0.081，对最强基线 +0.046 |
+| 29 | **97.8 %, p = 0.38** | 标签主效应被单一难度轴解释的比例 | 臂级 margin ~ 网络固定效应 + 标签级难度数 | 标签≈一个维度，不是五种策展哲学 | 不能说"难度决定一切"（是描述性分解，非因果） | 标签主效应是难度轴 |
+| 30 | **0.1173** | 该设计下 Kruskal-Wallis 能达到的最小 p 值 | 3/1/2 网络按 3! = 6 种分配穷举 | H2 结构性不可检验 | **不能说"H2 被否定"**（是"未检验"） | H2 未检验，不是未获支持 |
 
 ---
 
@@ -887,10 +973,12 @@ Thank you.
 4. **H1 到底成立吗？** —— 5 种区间里 4 种 24/24，gene-cluster 20/24，4 个例外全是 temporal。
 5. **是不是"网络越大越好"？** —— D-11 cap 与 D-12 共享宇宙压住了这个解释（−0.0360），但覆盖度确实解释一部分（ρ=−0.905）。
 6. **ΔAUROC 能读成"多找出 8 % driver"吗？** —— 不能，低 FPR 端点只有 +0.031。
-7. **为什么用五个目录？** —— 策展哲学不同；26/26 癌种为正说明不是某一份目录的怪癖。
+7. **为什么用五个目录？** —— 为了不把话说成"某一份目录的怪癖"；但要诚实：标签主效应 97.8 % 可由单一难度轴解释（F p = 0.38），所以五个目录≈一个维度，而不是五份独立证据。
 8. **能说因果吗？** —— 不能，没有扰动实验；验证计划里有种子扰动实验。
-9. **AI 会不会编数字？** —— 全部数字来自已发布表格 + 两个审计脚本（50/50、63/63）；PPT 的数字由脚本导出。
+9. **AI 会不会编数字？** —— 全部数字来自已发布表格 + 两个审计脚本（50/50、136/136）；PPT 的数字由脚本导出。
 10. **核心差异不成立会怎样？** —— 见题库 C2：三个假说各自对应哪张表会变。
+11. **H2 为什么不可检验？** —— 3/1/2 张网络、来源与规模完全混淆，最小可达 p = 0.1173；所以记为"未检验"，不是"未获支持"。
+12. **度是不是稻草基线？** —— 不是：closeness 在 24/24 臂都赢度；对最强基线先验仍 19/24 为正、中位 +0.046。
 
 ---
 
