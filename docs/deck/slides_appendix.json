@@ -953,6 +953,68 @@
     "fontsize": 11.5,
     "rowh": 0.42
    }
+  },
+  {
+   "n": 30,
+   "kind": "appendix",
+   "tag": "PART 2 · A14",
+   "title": "The visibility effect survives the second learner",
+   "note": "Guala & Sonnhammer (2017) had already shown that a degree-filtered local method beats diffusion on a full list, so the size of our margin is learner-dependent. This control asks whether the VISIBILITY component is too: the bait-matched null recomputed with the proximity learner. The sign of the drop agrees in 24/24 arms, and the newest-driver label falls to chance under both learners. Source: c21_visibility_learner_comparison.tsv.",
+   "table": {
+    "head": [
+     "the 24 primary arms",
+     "above the unmatched null",
+     "above the matched null",
+     "the drop (or the two learners)",
+     "reading"
+    ],
+    "rows": [
+     [
+      "RWR (the published G3)",
+      "17.6%",
+      "11.6%",
+      "5.9% points",
+      "the margin is partly study visibility"
+     ],
+     [
+      "proximity (Control 21)",
+      "7.7%",
+      "4.8%",
+      "2.3% points",
+      "the SAME effect, under a different learner"
+     ],
+     [
+      "per label: intogen2024",
+      "20.7%",
+      "10.9%",
+      "8.4% -> 5.6%",
+      "the two learners, unmatched -> matched"
+     ],
+     [
+      "per label: ot_all",
+      "31.0%",
+      "20.2%",
+      "8.3% -> 5.0%",
+      "the two learners, unmatched -> matched"
+     ],
+     [
+      "per label: ot_nolit",
+      "27.1%",
+      "18.9%",
+      "7.2% -> 4.7%",
+      "the two learners, unmatched -> matched"
+     ],
+     [
+      "per label: intogen_temporal_new",
+      "6.8%",
+      "4.7%",
+      "7.5% -> 4.8%",
+      "the two learners, unmatched -> matched"
+     ]
+    ],
+    "fontsize": 11,
+    "rowh": 0.46
+   }
   }
  ]
 }

@@ -454,6 +454,52 @@ if lc is not None and ll is not None:
                   "rows": rows, "fontsize": 11.5, "rowh": 0.42},
     })
 
+# ---- A14: the visibility decomposition under the second learner ----
+c21 = load("c21_visibility_learner_comparison.tsv")
+if c21 is not None:
+    prim = c21[c21.label.isin(["intogen2024", "ot_all", "ot_nolit",
+                                "intogen_temporal_new"])]
+    rows = [
+        ["RWR (the published G3)",
+         f"{prim.rwr_unmatched.median():.1%}",
+         f"{prim.rwr_matched.median():.1%}",
+         f"{prim.rwr_drop.median():.1%} points",
+         "the margin is partly study visibility"],
+        ["proximity (Control 21)",
+         f"{prim.frac_unmatched_null_above.median():.1%}",
+         f"{prim.frac_matched_null_above.median():.1%}",
+         f"{prim.prox_drop.median():.1%} points",
+         "the SAME effect, under a different learner"],
+    ]
+    for lab in ["intogen2024", "ot_all", "ot_nolit",
+                "intogen_temporal_new"]:
+        r = c21[c21.label == lab]
+        if r.empty:
+            continue
+        rows.append([
+            f"per label: {lab}",
+            f"{r.rwr_unmatched.median():.1%}",
+            f"{r.rwr_matched.median():.1%}",
+            f"{r.frac_unmatched_null_above.median():.1%} -> "
+            f"{r.frac_matched_null_above.median():.1%}",
+            "the two learners, unmatched -> matched"])
+    slides.append({
+        "n": 30, "kind": "appendix", "tag": "PART 2 · A14",
+        "title": "The visibility effect survives the second learner",
+        "note": "Guala & Sonnhammer (2017) had already shown that a "
+                "degree-filtered local method beats diffusion on a full "
+                "list, so the size of our margin is learner-dependent. "
+                "This control asks whether the VISIBILITY component is "
+                "too: the bait-matched null recomputed with the proximity "
+                "learner. The sign of the drop agrees in 24/24 arms, and "
+                "the newest-driver label falls to chance under both "
+                "learners. Source: c21_visibility_learner_comparison.tsv.",
+        "table": {"head": ["the 24 primary arms", "above the unmatched null",
+                           "above the matched null", "the drop (or the two learners)",
+                           "reading"],
+                  "rows": rows, "fontsize": 11, "rowh": 0.46},
+    })
+
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps({"slides": slides}, indent=1, ensure_ascii=False),

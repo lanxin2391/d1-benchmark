@@ -171,8 +171,8 @@
     ],
     [
      "2",
-     "The contribution is real but modest and label-dependent",
-     "median +0.081 against degree, +0.046 against the strongest classical baseline (closeness, which beats degree in all 24 arms); cleaning the background changes nothing material (23/24 arms, median +0.082)"
+     "The contribution is real but modest, and its size depends on the learner",
+     "median +0.081 against degree, +0.046 against the strongest classical baseline (closeness), +0.011 under a second locked learner; cleaning the background changes nothing material (23/24 arms, median +0.082)"
     ],
     [
      "3",
@@ -195,7 +195,7 @@
      "H2 (provenance invariance): 3/1/2 networks per class, and provenance is confounded with size and coverage -- the smallest attainable p-value is 0.1173, so we record it as NOT TESTED"
     ]
    ],
-   "keyline": "1 contributes beyond degree (23/24 arms)  2 modest and label-dependent (+0.081 against degree, +0.046 against the strongest baseline)  3 much of it is study visibility  4 the instability is intrinsic (rho = 1.00)  5 curated networks fail on recent drivers  6 H2 (provenance invariance) was never testable"
+   "keyline": "1 contributes beyond degree (23/24 arms)  2 but the margin is modest and learner-dependent (+0.081 against degree, +0.046 against the strongest baseline, +0.011 under a second locked learner; the degree baseline is already 0.644, so a 9 % relative gain)  3 much of it is study visibility -- and that part replicates under the second learner (24/24 arms)  4 the instability is intrinsic (rho = 1.00)  5 curated networks fail on recent drivers (Reactome +0.089 on the 2019 catalogue, negative on the two newest)  6 H2 (provenance invariance) was never testable"
   },
   {
    "n": 15,

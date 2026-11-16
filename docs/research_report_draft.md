@@ -99,15 +99,22 @@ literature's default PageRank damping the increment survives (23/24 arms,
 median +0.057). A **label-difficulty regression** shows that the label
 main effect is one difficulty axis rather than five curation philosophies:
 a single label-level number recovers 97.8 % of what the full label factor
-explains (F-test p = 0.38).
+explains (F-test p = 0.38). The **size** of the topology increment is
+learner-dependent (a second, locked local learner gives 16/24 arms and
++0.011, as Guala and Sonnhammer had already shown), but the
+**visibility** component is not: under that second learner the
+publication-matched null removes a quarter to a third of the positives'
+advantage in 24 of 24 arms, and the newest-driver label falls to chance
+under both learners.
 
 **Conclusions.** A network prior contributes to cancer-driver
 prioritisation beyond node degree, and the contribution is not
 explained by seed degree, by network size, or by the degree
 distribution of the labels. It is also smaller and more fragile than
 the field's headline numbers suggest: the median margin is +0.081
-against degree but +0.046 against the strongest classical baseline
-(closeness centrality, which beats degree in all 24 arms), removing
+against degree, +0.046 against the strongest classical baseline
+(closeness centrality, which beats degree in all 24 arms) and +0.011
+under a second, locked local learner, removing
 the curated drivers from the background leaves it unchanged (23 of 24
 arms, median +0.082), and a large part of it tracks how often a
 gene has been published rather than its topology. The prior does
@@ -1627,6 +1634,55 @@ as the endpoint, this is a **descriptive decomposition, not a causal model**
 of curation philosophy; and the positive-count metric is confounded with
 the smallest label (150 positives).
 
+### 3.19 The visibility decomposition under the second learner
+
+Control 17 (§3.18 of the controls; the margin under a second, equally
+locked learner -- the distance to the nearest seed) is positive in
+**16/24 arms** with a median of **+0.011** against +0.0809 for RWR, with
+an arm-level Spearman of +0.30. That is consistent with Guala &
+Sonnhammer (2017), who had already reported that a degree-filtered local
+method beats the diffusion methods on a full list; taken alone it is a
+confirmation, not a new claim. The question it raises is whether the
+**decomposition** -- the project's actual claim -- is also an artefact of
+one learner. Control 21 answers it by recomputing the bait-matched null
+with the proximity learner as the scorer: same splits, same folds, same
+publication counts, same matching rule (the 20 negatives nearest in
+log10(n_pubmed + 1)). The matcher was verified first on the RWR score
+dumps of one arm, where it reproduces the published G3 statistic exactly
+(0.0854 against 0.0854).
+
+| the 24 primary arms | above the unmatched null | above the publication-matched null | the drop |
+|---|---|---|---|
+| RWR (the published G3) | **17.6 %** | **11.6 %** | −5.9 points (−26.4 %) |
+| proximity (this control) | 7.7 % | 4.8 % | −2.3 points (−33.6 %) |
+
+The visibility effect **replicates**: the sign of the drop agrees in
+**24 of 24 arms**, and the per-label pattern replicates as well --
+`intogen2024` 20.7 % → 10.9 % (RWR) against 8.4 % → 5.6 % (proximity);
+`ot_all` 31.0 % → 20.2 % against 8.3 % → 5.0 %; `ot_nolit` 27.1 % →
+18.9 % against 7.2 % → 4.7 %; and the newest-driver label **6.8 % →
+4.7 %** against **7.5 % → 4.8 %**, i.e. chance (5 %) under both learners.
+The absolute levels differ (the proximity learner separates the positives
+from the negatives less well in this statistic) and the arm-level
+correlation of the two matched-null statistics is only +0.28 -- but the
+effect is the same in every arm.
+
+**What this settles.** The size of the topology component is
+learner-dependent (diffusion +0.081, local +0.011); **the visibility
+component is not**. The decomposition this paper reports is a property of
+the data, not of the learner we happened to freeze -- and the part Guala
+& Sonnhammer never measured, because they did not measure visibility at
+all, is the part that survives the change of learner.
+
+**One methodological note.** The proximity learner's score is an integer
+distance, so almost every test gene ties with another one; G3's strict
+comparison counts a tie as "not above", which inflates the statistic
+(91 % of the positives "beat" the null on `intact × intogen2024`, while
+the AUROC of the same scores is 0.627). The comparison is therefore made
+on the protocol's **ranks** (decision D-07: score descending, then gene
+symbol ascending). RWR has few ties, so its numbers are unchanged, and
+the self-check confirms it.
+
 ## 4. Discussion
 
 ### 4.1 What the benchmark establishes
@@ -1786,6 +1842,15 @@ The two additions to the results above change what this study can claim. **First
     descriptive decomposition, and it means the 34.78 % "label" share of
     the variance decomposition is not five independent pieces of
     evidence about driver biology.
+11. **The size of the topology component is learner-dependent.** Under a
+    second, equally locked local learner the margin is positive in
+    16/24 arms with a median of +0.011 (§3.19); Guala & Sonnhammer
+    (2017) had already reported that a degree-filtered local method
+    beats the diffusion methods on a full list, so we claim only what
+    the locked learner supports. The **visibility** component is not
+    learner-dependent: the publication-matched null removes a quarter to
+    a third of the positives' advantage in 24/24 arms under both
+    learners, and the newest-driver label falls to chance under both.
 
 ---
 

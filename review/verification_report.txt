@@ -129,6 +129,14 @@ states something the tables do not support.
          §3.17 of the draft must carry the same disclosure
   [PASS] c19.abstract             manuscript_intro_abstract.md
          the abstract must qualify the headline against the strongest baseline
+  [PASS] c21.dropsign             manuscript_a_sections.md
+         §F.24 must state that the visibility drop replicates in every arm
+  [PASS] c21.prox                 manuscript_a_sections.md
+         §F.24 must state that the visibility component replicates
+  [PASS] c21.tie                  manuscript_a_sections.md
+         §F.24 must disclose the tie correction
+  [PASS] c21.draft                research_report_draft.md
+         §3.19 of the draft must carry the same result
   [PASS] c20.share                manuscript_a_sections.md
          §F.23 must give the share of the label factor recovered
   [PASS] c20.f                    manuscript_a_sections.md
@@ -233,5 +241,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 136 PASS / 0 FAIL
+RESULT: 140 PASS / 0 FAIL
 ========================================================================

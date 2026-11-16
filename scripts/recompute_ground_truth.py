@@ -694,6 +694,44 @@ def recent_series() -> None:
                r4(sel.median_p.median()),
                "results/tables/depmap_validation.tsv")
 
+    # ---- C21: the visibility decomposition under the second learner ---
+    c21 = t("c21_visibility_learner_comparison.tsv")
+    c21p = c21[c21.label.isin(["intogen2024", "ot_all", "ot_nolit",
+                                "intogen_temporal_new"])]
+    record("visibility", "RWR: positives above the unmatched null (median)",
+           r4(100 * c21p.rwr_unmatched.median()),
+           "results/tables/c21_visibility_learner_comparison.tsv")
+    record("visibility", "RWR: positives above the matched null (median)",
+           r4(100 * c21p.rwr_matched.median()),
+           "results/tables/c21_visibility_learner_comparison.tsv")
+    record("visibility",
+           "proximity: positives above the unmatched null (median)",
+           r4(100 * c21p.frac_unmatched_null_above.median()),
+           "results/tables/c21_visibility_learner_comparison.tsv")
+    record("visibility",
+           "proximity: positives above the matched null (median)",
+           r4(100 * c21p.frac_matched_null_above.median()),
+           "results/tables/c21_visibility_learner_comparison.tsv")
+    record("visibility", "arms where the two learners agree on the sign",
+           int(((c21.rwr_drop > 0) == (c21.prox_drop > 0)).sum()),
+           "results/tables/c21_visibility_learner_comparison.tsv")
+    for lab in ("intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"):
+        r = c21[c21.label == lab]
+        if r.empty:
+            continue
+        record("visibility", f"{lab}: RWR unmatched (median)",
+               r4(100 * r.rwr_unmatched.median()),
+               "results/tables/c21_visibility_learner_comparison.tsv")
+        record("visibility", f"{lab}: RWR matched (median)",
+               r4(100 * r.rwr_matched.median()),
+               "results/tables/c21_visibility_learner_comparison.tsv")
+        record("visibility", f"{lab}: proximity unmatched (median)",
+               r4(100 * r.frac_unmatched_null_above.median()),
+               "results/tables/c21_visibility_learner_comparison.tsv")
+        record("visibility", f"{lab}: proximity matched (median)",
+               r4(100 * r.frac_matched_null_above.median()),
+               "results/tables/c21_visibility_learner_comparison.tsv")
+
     # ---- C19: the baseline family sweep ---------------------------
     bf = t("baseline_family_arms.tsv")
     prim_labels = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]

@@ -332,6 +332,23 @@ Is degree a strawman baseline, and is RWR a lucky special case?
 - the network-only model has R2 = 0.313; adding the full label factor gives R2 = 0.905
 - the label main effect is ONE difficulty axis: a single label-level number recovers 97.8 % of what the full label factor explains
 
+## 7d. The visibility decomposition under the second learner (Control 21)
+
+| the 24 primary arms | above the unmatched null | above the matched null | the drop |
+|---|---|---|---|
+| RWR (the published G3) | **17.6%** | **11.6%** | 5.9% points |
+| proximity (Control 21) | 7.7% | 4.8% | 2.3% points |
+
+| label | RWR: unmatched -> matched | proximity: unmatched -> matched |
+|---|---|---|
+| intogen2024 | 20.7% -> 10.9% | 8.4% -> 5.6% |
+| ot_all | 31.0% -> 20.2% | 8.3% -> 5.0% |
+| ot_nolit | 27.1% -> 18.9% | 7.2% -> 4.7% |
+| intogen_temporal_new | 6.8% -> 4.7% | 7.5% -> 4.8% |
+
+- the sign of the drop agrees in **24/24** arms; the newest-driver label falls to chance (5 %) under both learners
+- the matcher reproduces the published G3 statistic exactly on the RWR dumps of one arm (0.0854 against 0.0854)
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

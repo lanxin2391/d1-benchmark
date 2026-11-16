@@ -228,6 +228,20 @@ CLAIMS: list[tuple[str, str, str, str]] = [
      "+0.046 against the strongest classical baseline",
      "the abstract must qualify the headline against the strongest baseline"),
 
+    # ---- C21: the visibility decomposition under the second learner ---
+    ("c21.dropsign", "manuscript_a_sections.md",
+     "the sign of the drop agrees in 24 of 24 arms",
+     "§F.24 must state that the visibility drop replicates in every arm"),
+    ("c21.prox", "manuscript_a_sections.md",
+     "The visibility effect **replicates under the second learner**",
+     "§F.24 must state that the visibility component replicates"),
+    ("c21.tie", "manuscript_a_sections.md",
+     "counts a tie as \"not above\"",
+     "§F.24 must disclose the tie correction"),
+    ("c21.draft", "research_report_draft.md",
+     "The visibility effect **replicates**",
+     "§3.19 of the draft must carry the same result"),
+
     # ---- C20: the label-difficulty regression ----------------------
     ("c20.share", "manuscript_a_sections.md",
      "recovers 97.8 % of everything the full label factor explains",

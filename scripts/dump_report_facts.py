@@ -424,6 +424,46 @@ if lc is not None and ll is not None:
       "number recovers 97.8 % of what the full label factor explains")
     w()
 
+# ---- 7d. the visibility decomposition under the second learner ----
+c21 = load("c21_visibility_learner_comparison.tsv")
+if c21 is not None:
+    prim21 = c21[c21.label.isin(["intogen2024", "ot_all", "ot_nolit",
+                                  "intogen_temporal_new"])]
+    w("## 7d. The visibility decomposition under the second learner "
+      "(Control 21)")
+    w()
+    w("| the 24 primary arms | above the unmatched null | above the "
+      "matched null | the drop |")
+    w("|---|---|---|---|")
+    w(f"| RWR (the published G3) | **{prim21.rwr_unmatched.median():.1%}** | "
+      f"**{prim21.rwr_matched.median():.1%}** | "
+      f"{prim21.rwr_drop.median():.1%} points |")
+    w(f"| proximity (Control 21) | "
+      f"{prim21.frac_unmatched_null_above.median():.1%} | "
+      f"{prim21.frac_matched_null_above.median():.1%} | "
+      f"{prim21.prox_drop.median():.1%} points |")
+    w()
+    w("| label | RWR: unmatched -> matched | proximity: unmatched -> "
+      "matched |")
+    w("|---|---|---|")
+    for lab in ["intogen2024", "ot_all", "ot_nolit",
+                "intogen_temporal_new", "ncg_known"]:
+        r = c21[c21.label == lab]
+        if r.empty:
+            continue
+        w(f"| {lab} | {r.rwr_unmatched.median():.1%} -> "
+          f"{r.rwr_matched.median():.1%} | "
+          f"{r.frac_unmatched_null_above.median():.1%} -> "
+          f"{r.frac_matched_null_above.median():.1%} |")
+    w()
+    w(f"- the sign of the drop agrees in "
+      f"**{int(((c21.rwr_drop > 0) == (c21.prox_drop > 0)).sum())}/"
+      f"{len(c21)}** arms; the newest-driver label falls to chance (5 %) "
+      f"under both learners")
+    w("- the matcher reproduces the published G3 statistic exactly on the "
+      "RWR dumps of one arm (0.0854 against 0.0854)")
+    w("")
+
 # ---- 8. the panel --------------------------------------------------
 w("## 8. The design (panel and labels)")
 w()

@@ -2359,6 +2359,153 @@
   "note": ""
  },
  {
+  "quantity": "visibility",
+  "scope": "RWR: positives above the unmatched null (median)",
+  "value": 17.6339,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "RWR: positives above the matched null (median)",
+  "value": 11.5907,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "proximity: positives above the unmatched null (median)",
+  "value": 7.7021,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "proximity: positives above the matched null (median)",
+  "value": 4.7968,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "arms where the two learners agree on the sign",
+  "value": 24,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen2024: RWR unmatched (median)",
+  "value": 20.7408,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen2024: RWR matched (median)",
+  "value": 10.884,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen2024: proximity unmatched (median)",
+  "value": 8.3812,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen2024: proximity matched (median)",
+  "value": 5.628,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_all: RWR unmatched (median)",
+  "value": 30.959,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_all: RWR matched (median)",
+  "value": 20.193,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_all: proximity unmatched (median)",
+  "value": 8.3174,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_all: proximity matched (median)",
+  "value": 4.9572,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_nolit: RWR unmatched (median)",
+  "value": 27.1239,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_nolit: RWR matched (median)",
+  "value": 18.8646,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_nolit: proximity unmatched (median)",
+  "value": 7.2223,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "ot_nolit: proximity matched (median)",
+  "value": 4.6633,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen_temporal_new: RWR unmatched (median)",
+  "value": 6.8389,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen_temporal_new: RWR matched (median)",
+  "value": 4.7056,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen_temporal_new: proximity unmatched (median)",
+  "value": 7.4925,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "visibility",
+  "scope": "intogen_temporal_new: proximity matched (median)",
+  "value": 4.7968,
+  "source": "results/tables/c21_visibility_learner_comparison.tsv",
+  "note": ""
+ },
+ {
   "quantity": "baseline_family",
   "scope": "RWR(0.5) - degree: arms positive (primary 24)",
   "value": 23,

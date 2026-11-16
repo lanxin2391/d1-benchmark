@@ -117,15 +117,22 @@ literature's default PageRank damping the increment survives (23/24 arms,
 median +0.057). A **label-difficulty regression** shows that the label
 main effect is one difficulty axis rather than five curation philosophies:
 a single label-level number recovers 97.8 % of what the full label factor
-explains (F-test p = 0.38).
+explains (F-test p = 0.38). The **size** of the topology increment is
+learner-dependent (a second, locked local learner gives 16/24 arms and
++0.011, as Guala and Sonnhammer had already shown), but the
+**visibility** component is not: under that second learner the
+publication-matched null removes a quarter to a third of the positives'
+advantage in 24 of 24 arms, and the newest-driver label falls to chance
+under both learners.
 
 **Conclusions.** A network prior contributes to cancer-driver
 prioritisation beyond node degree, and the contribution is not
 explained by seed degree, by network size, or by the degree
 distribution of the labels. It is also smaller and more fragile than
 the field's headline numbers suggest: the median margin is +0.081
-against degree but +0.046 against the strongest classical baseline
-(closeness centrality, which beats degree in all 24 arms), removing
+against degree, +0.046 against the strongest classical baseline
+(closeness centrality, which beats degree in all 24 arms) and +0.011
+under a second, locked local learner, removing
 the curated drivers from the background leaves it unchanged (23 of 24
 arms, median +0.082), and a large part of it tracks how often a
 gene has been published rather than its topology. The prior does

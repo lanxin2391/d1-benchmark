@@ -1690,6 +1690,71 @@ the smallest label (150 positives).
 
 ---
 
+### F.24 Control 21: the visibility decomposition under the second learner
+
+Control 17 (§F.20) measured the **margin** under a second, equally locked
+learner -- the distance to the nearest seed -- and found it positive in
+**16/24 arms** with a median of **+0.011** against +0.0809 for RWR, with
+an arm-level Spearman of +0.30. That is consistent with Guala &
+Sonnhammer (2017), who had already reported that a degree-filtered local
+method beats the diffusion methods on a full list. Taken alone it is a
+confirmation, not a new claim, and it raises the obvious question: is the
+project's own claim -- that the reported margin is a **mixture** of
+topology, node degree and study visibility -- also an artefact of one
+learner?
+
+The margin is not the claim; the **decomposition** is. And no visibility
+measurement existed under a second learner. Control 21 computes the
+**bait-matched null** (§F.12) with the proximity learner as the scorer:
+the same splits, the same folds, the same publication counts and the same
+matching rule (the 20 negatives nearest to the positive in
+log10(n_pubmed + 1)). The matcher was verified first on the RWR score
+dumps of one arm, where it reproduces the published G3 statistic exactly
+(0.0854 against 0.0854).
+
+| the 24 primary arms | above the unmatched null | above the publication-matched null | the drop |
+|---|---|---|---|
+| RWR (the published G3) | **17.6 %** | **11.6 %** | −5.9 points (−26.4 %) |
+| proximity (this control) | 7.7 % | 4.8 % | −2.3 points (−33.6 %) |
+
+**Reading.** The visibility effect **replicates under the second
+learner**: matching the negatives on publication volume destroys a
+quarter to a third of the positives' advantage, and **the sign of the
+drop agrees in 24 of 24 arms**. The per-label pattern replicates as well
+(medians over the six networks):
+
+| label | RWR: unmatched → matched | proximity: unmatched → matched |
+|---|---|---|
+| `intogen2024` | 20.7 % → 10.9 % | 8.4 % → 5.6 % |
+| `ot_all` | 31.0 % → 20.2 % | 8.3 % → 5.0 % |
+| `ot_nolit` | 27.1 % → 18.9 % | 7.2 % → 4.7 % |
+| `intogen_temporal_new` | **6.8 % → 4.7 %** | **7.5 % → 4.8 %** |
+
+The newest-driver label falls to **chance (5 %)** under both learners.
+The absolute levels differ (the proximity learner separates the positives
+from the negatives less well in this statistic, 7.7 % against 17.6 %),
+and the arm-level correlation of the two matched-null statistics is only
++0.28 -- but the *effect* is the same in every arm.
+
+**What this settles.** The size of the topology component is
+learner-dependent (diffusion +0.081, local +0.011); **the visibility
+component is not**. So the decomposition this paper reports is a property
+of the data, not of the learner we happened to freeze -- and the part of
+it that Guala & Sonnhammer never measured, because they did not measure
+visibility at all, is the part that survives the change of learner.
+
+**One methodological note that belongs in the record.** The proximity
+learner's score is an integer distance, so almost every test gene ties
+with another one; G3's strict comparison ("a negative that scores above
+the positive") counts a tie as "not above", which inflates the statistic
+(91 % of the positives "beat" the null on `intact × intogen2024`, while
+the AUROC of the same scores is 0.627). The comparison is therefore made
+on the protocol's **ranks** (decision D-07: score descending, then gene
+symbol ascending), which resolves the ties the documented way. RWR has
+few ties, so its numbers are unchanged, and the self-check confirms it.
+
+---
+
 ## §G. Results §A5 degree-matched seed null (control 2)
 
 100 degree-matched random seed sets per cell, each propagated over the
@@ -2129,11 +2194,21 @@ the strongest classical baseline**: closeness centrality beats it in all
 24 arms (§F.22). Against the strongest baseline in each arm the prior is
 positive in **19 of 24 arms** with a median margin of **+0.046**, and at
 the literature's default PageRank damping (restart 0.15) it is positive in
-23/24 arms with a median of +0.057. The direction of the verdict is
-unchanged; the size against a fair baseline is about 40 % smaller than
-against degree alone. Relatedly, the label main effect of the variance
-decomposition is one difficulty axis rather than five curation
-philosophies: a single label-level number recovers 97.8 % of it (§F.23).
+23/24 arms with a median of +0.057. It is also **learner-dependent in
+size**: under the proximity learner of Control 17 the margin is positive
+in 16/24 arms with a median of +0.011 (§F.20), which is what Guala &
+Sonnhammer (2017) had already shown for a degree-filtered local method.
+The direction of the verdict is unchanged; the size against a fair
+baseline is about 40 % smaller than against degree alone, and about
+seven times smaller under the second learner.
+
+Relatedly, the label main effect of the variance decomposition is one
+difficulty axis rather than five curation philosophies: a single
+label-level number recovers 97.8 % of it (§F.23). And the **visibility**
+component of the decomposition is **not** learner-specific: under the
+second learner the bait-matched null removes the advantage of a quarter
+to a third of the positives in **24 of 24 arms**, and the newest-driver
+label falls to chance under both learners (§F.24).
 
 Two further results make the verdict stronger rather than weaker.
 **Under the strictest control we could add** — the complex-aware

@@ -1027,3 +1027,46 @@ are directly comparable to it.
 | 19 | the baseline family sweep (Control 19) | exploratory | no | `baseline_family_arms.tsv` |
 | 20 | the label-difficulty regression (Control 20) | exploratory | no | `label_difficulty_coefs.tsv` |
 | 21 | the H2 verdict restated in the defence materials | disclosure (no new analysis) | no | slide 2 / 14 / 15, script, Q&A C22 |
+| 22 | the visibility decomposition under the second learner (Control 21) | exploratory | no | `c21_visibility_learner_comparison.tsv` |
+
+### A6.7 Control 21 — the visibility decomposition under the second learner
+
+**Why.** Control 17 measured the margin under a second, equally locked
+learner (the distance to the nearest seed) and found it positive in
+16/24 arms with a median of +0.011, with an arm-level Spearman of
++0.30 — consistent with Guala & Sonnhammer (2017), who had already
+reported that a degree-filtered local method beats the diffusion methods
+on a full list. Taken alone that is a confirmation, not a new claim, and
+it raised the question that decides whether this project is a
+contribution: **is the DECOMPOSITION (topology / degree / visibility)
+learner-invariant, or only the margin?**
+
+**What.** `scripts/run_c21_visibility_second_learner.py` recomputes the
+bait-matched null with the proximity learner as the scorer: the same
+splits, the same folds, the same publication counts and the same
+matching rule (the 20 negatives nearest to the positive in
+log10(n_pubmed + 1)). The matcher was verified first on the RWR score
+dumps of one arm, where it reproduces the published G3 statistic exactly
+(0.0854 against 0.0854).
+
+**What it found.** The visibility effect **replicates**: RWR 17.6 % →
+11.6 % (a drop of 5.9 points, −26.4 % relative), proximity 7.7 % → 4.8 %
+(−2.3 points, −33.6 % relative), and **the sign of the drop agrees in
+24 of 24 arms**. The per-label pattern replicates too: the newest-driver
+label falls to chance (5 %) under both learners (4.7 % and 4.8 %).
+
+**What it settles.** The size of the topology component is
+learner-dependent; **the visibility component is not**. The
+decomposition this project reports is a property of the data, not of the
+learner we happened to freeze — and the part Guala & Sonnhammer never
+measured, because they never measured visibility, is the part that
+survives the change of learner.
+
+**A methodological note that belongs in the record.** The proximity
+learner's score is an integer distance, so almost every test gene ties
+with another one, and G3's strict comparison counts a tie as "not
+above" — which inflates the statistic to 91 % on `intact × intogen2024`
+while the AUROC of the same scores is 0.627. The comparison is therefore
+made on the protocol's **ranks** (decision D-07: score descending, then
+gene symbol ascending). RWR has few ties, so its published numbers are
+unchanged, and the self-check confirms it.

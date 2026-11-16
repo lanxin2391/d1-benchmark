@@ -336,6 +336,27 @@ depmap	K=30 median share of cell lines enriched (%)	5.827	results/tables/depmap_
 depmap	K=30 median p-value	0.5228	results/tables/depmap_validation.tsv	
 depmap	K=100 median share of cell lines enriched (%)	47.6436	results/tables/depmap_validation.tsv	
 depmap	K=100 median p-value	0.058	results/tables/depmap_validation.tsv	
+visibility	RWR: positives above the unmatched null (median)	17.6339	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	RWR: positives above the matched null (median)	11.5907	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	proximity: positives above the unmatched null (median)	7.7021	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	proximity: positives above the matched null (median)	4.7968	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	arms where the two learners agree on the sign	24	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen2024: RWR unmatched (median)	20.7408	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen2024: RWR matched (median)	10.884	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen2024: proximity unmatched (median)	8.3812	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen2024: proximity matched (median)	5.628	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_all: RWR unmatched (median)	30.959	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_all: RWR matched (median)	20.193	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_all: proximity unmatched (median)	8.3174	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_all: proximity matched (median)	4.9572	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_nolit: RWR unmatched (median)	27.1239	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_nolit: RWR matched (median)	18.8646	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_nolit: proximity unmatched (median)	7.2223	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	ot_nolit: proximity matched (median)	4.6633	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen_temporal_new: RWR unmatched (median)	6.8389	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen_temporal_new: RWR matched (median)	4.7056	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen_temporal_new: proximity unmatched (median)	7.4925	results/tables/c21_visibility_learner_comparison.tsv	
+visibility	intogen_temporal_new: proximity matched (median)	4.7968	results/tables/c21_visibility_learner_comparison.tsv	
 baseline_family	RWR(0.5) - degree: arms positive (primary 24)	23	results/tables/baseline_family_arms.tsv	
 baseline_family	RWR(0.5) - degree: median margin (primary 24)	0.0809	results/tables/baseline_family_arms.tsv	
 baseline_family	RWR(0.5) - degree: minimum margin (primary 24)	-0.0125	results/tables/baseline_family_arms.tsv	
