@@ -1,6 +1,6 @@
-# D1 benchmark — v1.0-rc6 release note
+# D1 benchmark — v1.0-rc7 release note
 
-**Release commit:** `4c659ca` (tag `v1.0-rc6`)
+**Release commit:** `b9f5df1` (tag `v1.0-rc7`)
 **Built:** 2026-11-16
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
@@ -16,6 +16,14 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc6
+
+| area | change |
+|---|---|
+| Control 22 -- the rewiring null under the second learner | a **feasibility check on one arm** (funmap x intogen2024), reading the 20 rewired networks Control 2 had already produced: observed **+0.0804**, rewired null **-0.0124 +- 0.0072**, **z = +12.9** (the same arm under RWR: z = +94.2). Every rewired network gives a negative margin, and the rewiring preserves the degree sequence **exactly** (the largest degree difference over the 20 rewirings is 0). The full grid (6 networks x 4 labels x ~100 rewirings) is the first item of the validation plan. `scripts/run_c22_rewiring_second_learner.py`, `results/tables/c22_rewiring_second_learner*.tsv` |
+| the claim verification | `scripts/recompute_ground_truth.py` records **443** quantities (was 436) and `scripts/verify_claims.py` runs **144 checks** (was 140) |
+| the release manifest | it covers **189 tables + 14 figures** (was 187 + 14) |
 
 ## What changed since v1.0-rc5
 
