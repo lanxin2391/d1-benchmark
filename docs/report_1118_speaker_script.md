@@ -901,7 +901,7 @@ larger, size- and coverage-matched panel — at least four networks per
 provenance class.
 >
 **Everything is public and re-runnable**: the code, tables, figures
-and split manifests are on GitHub at the v1.0-rc4 tag; the
+and split manifests are on GitHub at the v1.0-rc5 tag; the
 pre-registration is frozen at Zenodo DOI 10.5281/zenodo.23121762 with
 its amendments; two independent audit scripts pass **50 of 50** and
 **136 of 136** checks; and every figure in this talk is generated from a
