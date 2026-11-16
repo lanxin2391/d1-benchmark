@@ -1,23 +1,14 @@
-# 1118 终期答辩 · 主讲稿（单人 40 分钟版）
+# 1118 终期答辩 · 讲稿（中文逐字稿 · 单人讲约 40 分钟）
 
-**讲者**：本人（唯一主讲，讲满 40 分钟）· 其余三人在讲完后回答问题
-**配套**：`D1_defence_deck.pptx`（正文 16 页 + 附录 10 页，附录页在讲稿里被用到）、
-`report_1118_qa_bank.md`（29 题）、`report_1118_facts.md`（全部数字的单一来源）、
-`datasets_sources.md`（数据来源与登录号）
+**讲者：** 崔澜馨（A）　**问答：** 贺羽婕（B·方法参数）、林煜杰（C·结果局限）、易宏林（D·文献证据）
+**PPT：** 英文（本讲稿只负责"说什么"，幻灯片上的文字与图都不动）
+**预注册：** Zenodo DOI 10.5281/zenodo.23121762（2026-09-27 冻结）　**仓库：** github.com/lanxin2391/d1-benchmark（release v1.0-rc5）
 
-**这份稿子的写法**
-- 每节开头：**中文提示**（时间点、这一节要落到的点、指哪页）。
-- 正文：**逐字英文口播**。凡出现数字，口播里都必须交代四件事——
-  **它是什么**（量纲/分母）、**怎么算出来的**（哪张表、哪个比较）、
-  **它说明什么**、**它不能说明什么**（这一条最容易丢分，也最容易显得专业）。
-- `【数：…】` 是**只给你自己看的提醒**（数字 + 出处），不要念。
-- 每节末尾有一句**过渡句**，用来接下一节。
-- 附录 A 是**必背数字卡**（23 张），附录 C 是**15 分钟压缩方案**，附录 D 是**彩排清单**。
-- **语速**：正文英文口播共约 **6,840 词**，按 140–170 词/分是 **40–49 分钟**；配上下面的
-  逐页配时表走，正常语速下正好落在 40 分钟上下。讲快了就用附录 C 砍。
-
-
----
+> **怎么用这份稿子**：每段就是一个意思单元，括号里是"做什么"（指图、翻页、强调）。
+> `【数：…】` 是这一段必须说出口的数字，**照念**；正文里的数字与 `docs/report_1118_facts.md` 完全一致，
+> 两个审计脚本会逐条核对（verify_claims 136 PASS / 0 FAIL，verify_report 71 PASS / 0 FAIL）。
+> **全文口语约 7,500 个汉字，外加 326 个要念出口的数字**（数字与停顿另占时间）；按每分钟 240–260 字、每个数字约 1.5 秒估算，**约 38–40 分钟**。
+> 方框里的【提示】是给自己的提醒，不要念出来。
 
 ---
 
@@ -72,56 +63,35 @@
 
 【提示：40 秒。不要报任何数字，先把问题立住。】
 
-Good morning. Our project asks a question that sounds simple and that
-the field has never actually answered: **when a network prior is used
-to prioritise cancer-driver genes, how much of the reported gain comes
-from the network's topology, how much from plain node degree, and how
-much from the fact that well-studied genes have been published about
-hundreds of times?** [`【图：slide 2 研究地图】`]
+各位老师好。我们的项目问的是一个听起来很简单、但这个领域其实一直没有真正回答过的问题：
+**当一个"网络先验"被用来给癌症驱动基因排序时，报告出来的提升里，有多少来自网络的拓扑结构，
+有多少来自"这个基因连着多少个基因"这个纯粹的度，有多少来自"这个基因被研究过、被发表过多少次"？**
+[`【图：slide 2 研究地图】`]
 >
-The motivation is not scepticism for its own sake. Network-based
-prioritisation is standard practice — it is the formalisation of
-guilt-by-association — and it works in the sense that random walk
-with restart usually beats a degree-only ranking. What has never been
-done is to **decompose** that gain.
+先说清楚动机，我们不是为了怀疑而怀疑。基于网络的基因排序是标准操作——它就是"连坐"这个想法的形式化：
+一个基因如果离很多已知驱动基因近，它本身也很可能是驱动基因。但**从来没有人在一个冻结的设计里
+把这块收益拆开过**。
 >
-Our pre-registration carries **three hypotheses**, and I want to be
-precise about which of them this design can answer. **H1** — the
-network contributes beyond node degree — is the core, and it is
-testable. **H3** — the differences between networks reflect literature
-attention rather than topology — is partially testable, through the
-publication-count adjustment. **H2** — the contribution does not depend
-on where the network came from — is **not testable on this panel**, and
-I would rather say that now than have you discover it in the
-questions: the three provenance classes hold **3, 1 and 2** networks, and
-provenance is completely confounded with network size and coverage, so
-the smallest p-value a Kruskal-Wallis test can possibly return on this
-design is **0.1173**. We therefore record H2 as **not tested** — not as
-"not supported" — and appendix A14 states what a panel that could test
-it would have to look like.
+拆开为什么重要？有三个已经发表的结果。第一，驱动基因确实是枢纽，但这种富集很大程度上是**研究强度的假象**：
+bait usage——一个基因在已发表的相互作用文献里被当作实验诱饵出现过多少次——与它的度的相关系数是 **r = 0.52**；
+把这一层扣掉之后，癌症组与对照组的度差异基本消失。这是 Schaefer 等人 2015 年的结果，也是对我们最重要的一篇文献。
+第二，**表现跟着网络规模走**：在超过 **45 张人类相互作用组**上，准确率随网络规模变化，
+而一旦把基因集覆盖度控制住，这个效应基本塌掉。这是 Wright 等人 2025 年的结果。
+第三，**标准交叉验证在复合物跨折时会偏乐观**：把一个蛋白复合物固定在同一折里，
+一个本来很强的网络分类器，前 20 名里的正确命中会从大约 **12 个掉到不到 4.5 个**——
+这个落差已经和"竞争方法之间"的差距一样大。这是 Picart-Armada 等人 2019 年的结果。
 >
-There are three concrete reasons to think the decomposition matters,
-and each one is a published result. **First**, driver genes are hubs,
-but the enrichment is largely an artefact of research intensity: bait
-usage — how often a gene appears in the published interaction
-literature — correlates with its degree at **r = 0.52**, and correcting
-for it removes the cancer-versus-control degree difference entirely.
-That is Schaefer and colleagues, 2015, and it is the single most
-important paper for us. **Second**, performance tracks network size:
-across more than **45 human interactomes**, accuracy follows the size
-of the network, and the effect largely collapses once gene-set
-coverage is controlled. That is Wright and colleagues, 2025. **Third**,
-standard cross-validation is optimistic when the same protein
-complexes appear on both sides of the split: holding a complex
-together in the fold drops a strong network classifier from about **12**
-hits in the top 20 to **fewer than 4.5** — a fall as large as the gap
-between competing methods and the baseline. That is Picart-Armada and
-colleagues, 2019.
+我们的预注册里有**三个假说**，我想先把哪一个能检验、哪一个不能检验说清楚。
+**H1**——网络比节点度还多提供信息——是核心，也可以检验。
+**H3**——网络之间的差异反映的是文献关注度而不是拓扑——可以用发表量调整**部分**检验。
+而 **H2**——不同来源的网络表现应该一样——在**这个面板上不可检验**。
+这一点我宁愿现在讲，也不想等各位在提问时才发现：三个来源类别只有 **3、1、2** 张网络，
+而且"来源"和"网络规模、基因覆盖度"**完全混淆**，所以这种设计下一个 Kruskal-Wallis 检验
+能返回的**最小 p 值是 0.1173**。因此我们把 H2 明确记为**"未检验"**，而不是"未获支持"——
+这是两件不同的事；能检验它的面板需要什么样的规模，我们写在附录 A14。
 >
-So we built a **pre-registered, leakage-controlled benchmark on public
-data**, and in the next forty minutes I will show you the design, the
-control stack, three result slides, and — just as important — the
-limits of what we are allowed to claim.
+所以我们做了一个**预注册、防泄漏、只用公开数据的基准**。接下来四十分钟，我会讲设计、
+控制栈、三个结果页，以及同样重要的——**我们被允许主张什么、又被禁止主张什么**。
 
 ---
 
@@ -135,177 +105,126 @@ limits of what we are allowed to claim.
 
 [`【图：slide 3】` `【数：9,423 对肿瘤/正常；26 个组织类型；26 种突变检测方法；我们的 intogen2024 = 633 个基因】`]
 
-The first source paper is Bailey and the MC3 Working Group, in Cell.
-Their question was: **which genes are mutated recurrently enough,
-across tumour types, to be called drivers?** The data were **9,423
-TCGA tumour-normal pairs** across **26 tissue types**. The
-methodological core is the **MC3 consensus**: **26 independent
-mutation-calling algorithms vote**, and a gene becomes a driver when
-the methods agree — not when one method is confident. The result
-became the field's default gold standard, the Cancer Gene Census.
+第一篇来源论文是 Bailey 和 MC3 工作组，发表在 Cell。
+他们的问题是：**哪些基因在多个癌种里反复突变到可以被称作驱动基因？**
+数据是 **9,423 对 TCGA 肿瘤/正常样本**，覆盖 **26 个组织类型**。
+方法上的核心是 **MC3 共识**：**26 种互相独立的突变检测算法投票**，
+一个基因要成为驱动基因，靠的是**方法之间达成一致**，而不是某一个方法自己有把握。
+这个结果成了整个领域的默认金标准，也就是 Cancer Gene Census。
 >
-The numbers I want you to hold: **9,423 samples** is a large
-cohort, which is why the consensus is trustworthy; **26 voters** is
-what makes it a consensus rather than another predictor; and the
-mutation-recurrence panel we inherit from this lineage has **633
-positive genes** in our build.
+请记住这几个数：**9,423 对样本**是个很大的队列，所以共识值得信；
+**26 个投票者**让它成为共识而不是又一个预测器；
+而我们从这一脉继承的"突变复现"标签，在我们的构建里有 **633 个阳性基因**。
 >
-What it leaves open, and this is the gap we work in: it is **purely
-recurrence-based**. There is no network, no prior, and no way to
-separate "what a network adds" from "the catalogue's own degree
-bias". And note the consequence for us: because we use this catalogue
-as our primary label, **we inherit its curation choices** — which is
-why we measure label quality rather than assume it (I will show you
-that measurement in result three).
+它留下了什么空白，这正是我们工作的位置：它**纯粹基于复现**——没有网络、没有先验，
+也没有办法把"网络加了多少"和"这份目录自身的度偏倚"分开。
+对我们的后果是：因为我们把这份目录当主要标签，**我们就继承了它的策展选择**——
+所以我们选择**测量**标签质量，而不是假设它（这个测量我会在结果三里给各位看）。
 
 ### 1.2 Shi et al. 2025, Nature Cancer 6:205–222 — FunMap
 
 [`【图：slide 4】` `【数：XGBoost 逐对共功能概率；集合级 LLR 3.912（= LR 50）；mutual rank > 0.95；10,525 节点 / 196,800 边；11 个癌种；≤200 蛋白通路规则；FunMap 的金标准来自 Reactome】`]
 
-The second source paper is Shi and colleagues' FunMap. Their question:
-**can a pan-cancer proteogenomic functional network prioritise cancer
-genes better than the existing interactomes?** The data are the
-**CPTAC pan-cancer proteogenomics and transcriptomics**.
+第二篇是 Shi 等人的 FunMap。它的问题是：
+**一张泛癌蛋白组学的功能网络，能不能比现有的相互作用组更好地给癌症基因排序？**
+数据是 **CPTAC 的泛癌蛋白组与转录组**。
 >
-The method deserves thirty seconds of precision, because it changes how
-we treat the network. **FunMap's edges are not raw interactions.**
-Every gene pair gets an XGBoost-predicted co-function probability;
-the pairs are then added **in blocks** until the **set-level
-log-likelihood ratio falls below 3.912 — that is, a likelihood ratio
-of 50**, meaning "these two genes are 50 times more likely to be
-functionally associated than not"; and before scoring, a hard filter
-requires the pair's **mutual rank to exceed 0.95 in at least one
-cohort**. That threshold is what yields **10,525 nodes and 196,800
-edges**. Two consequences for us: the published edge list is a
-**derived, supervised, thresholded object**, not an interaction table,
-so we treat it as a prior network and we report its coverage; and the
-network is built from **11 cancer types** in **bulk tissue**, so tumour
-cells and microenvironment are mixed inside one graph.
+这个方法值得花半分钟讲清楚，因为它改变了我们对待这张网络的方式。
+**FunMap 的边不是原始相互作用。**每一对基因先由 XGBoost 预测一个"共功能概率"；
+然后这些基因对被**成块地**加入网络，直到**集合级的对数似然比降到 3.912 以下**——
+也就是似然比 50，意思是"这两个基因在功能上相关的可能性是不相关的 50 倍"；
+而且在打分之前还有一个硬过滤：**这一对基因的 mutual rank 必须在至少一个队列里超过 0.95**。
+这个阈值就是 **10,525 个节点、196,800 条边**的来源。
+对我们的两个后果：已发表的边表是一个**推导出来的、有监督的、被阈值化的对象**，不是一张相互作用表，
+所以我们把它当作先验网络，并明确报告它的覆盖度；而且这张网络是用 **11 个癌种**的** bulk 组织**建的，
+所以肿瘤细胞和微环境在**同一张图里**被混在一起。
 >
-The result: FunMap outperforms STRING for cancer-gene prioritisation,
-and it ships with a gold standard. And here is the limitation the
-authors state themselves, which is the one we care about most:
-**their gold standard is Reactome-derived** — a gene pair counts as
-positive if the two genes share a "detailed" Reactome pathway of at
-most **200 proteins** — and Reactome is *also* an input to STRING's
-`database` channel. So the network inherits Reactome's notion of
-function, and the comparison networks "incorporate the knowledge used
-for evaluation".
+结果是 FunMap 在癌症基因排序上超过 STRING，并且自带一份金标准。
+而作者自己声明的那个局限，正是我们最在意的：**他们的金标准来自 Reactome**——
+一对基因共享一条"detailed"级别、最多 **200 个蛋白**的 Reactome 通路就算阳性——
+而 Reactome **同时**也是 STRING 的 `database` 通道的输入。
+所以这张网络继承了 Reactome 对"功能"的定义，而用于对照的网络"包含了用于评估的知识"。
 >
-**Our design decisions, three of them.** First, FunMap is one of our
-six networks because it is the most on-topic cancer-specific prior,
-and we report its coverage explicitly: its **10,525** genes are the
-protein-coding genes CPTAC actually quantified, so a
-largest-connected-component analysis runs on a small,
-expression-biased, tumour-derived universe. Second, we **audit
-circularity per network** rather than in general. Third, because the
-gold standard is Reactome-derived, we do **not** treat "FunMap beats
-STRING" as independent evidence — we treat it as one more reason the
-whole field needs the decomposition we are doing.
+**我们由此做出的三个设计决定。**第一，FunMap 是我们六张网络之一，因为它是最贴题的癌症先验；
+而且我们明确报告它的覆盖度：它的 **10,525** 个基因是 CPTAC 真正定量到的蛋白编码基因，
+所以最大连通子图分析是在一个**偏表达、来自肿瘤的小宇宙**上做的。
+第二，我们**逐张网络做循环性审计**，而不是泛泛而谈。
+第三，因为金标准来自 Reactome，我们**不把"FunMap 超过 STRING"当作独立证据**——
+我们把它看作"整个领域需要我们正在做的这种拆解"的又一个理由。
 
 ### 1.3 Repana et al. 2019, Genome Biology 20:1 — NCG
 
 [`【图：slide 5】` `【数：2,372 个基因；708 known / 104 candidate / 1,560 screening；置信度来自 HuRI、GTRD、Reactome、STRING 实验通道；我们的 ncg_known = 708】`]
 
-The third source paper is Repana and colleagues' Network of Cancer
-Genes. Their question: **which genes have been called drivers across
-the published cancer sequencing literature, and how confident is each
-call?** They curated **2,372 genes** from that literature into three
-tiers: **708 known** tumour suppressors and oncogenes, **104
-multi-screen candidates**, and **1,560 screening-level genes**, and
-attached to each gene a confidence level computed from curated
-interaction channels — HuRI for binary interactions, GTRD for
-transcription-factor binding, Reactome for pathways, STRING's
-experimental channel.
+第三篇是 Repana 等人的 Network of Cancer Genes。它的问题是：
+**在已发表的癌症测序文献里，哪些基因被称作驱动基因，每一次判断有多确信？**
+他们从文献里策展了 **2,372 个基因**，分成三层：**708 个 known**（已确认的抑癌基因与癌基因）、
+**104 个 candidate**（多次筛查候选）、**1,560 个 screening**（筛查级别），
+并且给每个基因附一个**由策展的相互作用通道算出来的置信度**——
+HuRI 提供二元互作、GTRD 提供转录因子结合、Reactome 提供通路、STRING 的实验通道。
 >
-What it leaves open, and it is a sharp point: **that confidence level
-is itself network-derived**, and every gene the catalogue does not
-mention is implicitly a negative. So NCG cannot measure anything by
-itself — it can only arbitrate.
+它留下的空白很尖锐：**那个置信度本身是网络导出的**，而且目录里没提到的每一个基因，
+都隐含地是阴性。所以 NCG 自己无法测量任何东西——它只能**仲裁**。
 >
-**Our decision**, which is the one I would defend hardest: we use
-NCG as an **arbitration catalogue and as an audit instrument**, never
-as a confirmatory label. Two things follow. First, because it shares
-no curation with our four label sets, it can arbitrate them — I will
-show you that test, and it is our strongest positive result. Second,
-because its confidence level is network-derived, it is exactly the
-right instrument for the **circularity audit**: it tells us whether
-our network panel and our label panel overlap in their evidence.
-And note the arithmetic that makes this work: **708 known genes** in
-the catalogue against **633 positives** in our primary label — so
-they are not the same set, and that is the whole point.
+**我们的决定**（这是我最愿意辩护的一条）：我们把 NCG 当作**仲裁目录和审计工具**，
+从来不当作验证性标签。由此有两件事：第一，因为它与我们的四个标签**没有任何策展上的重叠**，
+它可以仲裁它们——这个测试我会给各位看，它是我们最强的正面结果；
+第二，正因为它的置信度是网络导出的，它恰好是做**循环性审计**最合适的工具：
+它能告诉我们"我们的网络面板和我们的标签面板在证据上是不是重叠"。
+还有一组数字让这件事成立：目录里的 **708 个 known** 对我们主标签的 **633 个阳性**——
+**它们不是同一批基因，而这正是重点**。
 
 ### 1.4 五篇方法学文献：每一条都变成一个设计决定
 
 [`【图：附录 A1（文献 → 决定对照表）】`]
 
-The three source papers give us the inputs. **Five** further papers
-give us the **design**, and I want to be explicit about which decision
-each one produced, because each of them is a place where we could
-have gone wrong.
+三篇来源论文给了我们输入。另外**五篇**论文给了我们**设计**，
+我想明确说出每一篇产生了哪个决定，因为每一个都是"我们本可能做错"的地方。
 
 **Picart-Armada et al. 2019, PLoS Comput Biol 15:e1007276.**
-They benchmarked network propagation for disease-gene identification
-and found three things we adopted. First, **pure topology baselines
-against random** have to be in the benchmark, not only degree.
-Second, the **complex leakage** number I quoted: holding a complex
-together in the fold drops a strong network classifier from about
-**12** hits in the top 20 to **fewer than 4.5**. Third, **the endpoint
-changes the ranking of methods** — AUROC and top-k disagree.
-**Our decisions**: complex-aware cross-validation, where the whole
-protein complex stays in one fold; and **two extra endpoints** —
-partial AUC at FPR ≤ 0.02 and top-10 % precision — reported next to
-AUROC, so that "the prior wins" cannot be an artefact of the metric.
+他们为疾病基因识别基准测试网络传播，发现三件我们都采纳的事。
+第一，**纯拓扑基线对随机基线**必须进基准，不能只放度。
+第二，就是我刚才引用的**复合物泄漏**那个数：把复合物固定在同一折里，
+一个强网络分类器前 20 名里的命中从约 **12 个掉到不到 4.5 个**。
+第三，**端点会改变方法的排名**——AUROC 和 top-k 会给出不同的结论。
+**我们的决定**：复合物感知交叉验证（整个蛋白复合物留在同一折）；
+以及**两个额外端点**——FPR ≤ 0.02 的 partial AUC 和 top-10 % precision——与 AUROC 并列报告，
+这样"先验赢了"就不会是端点选择的产物。
 
 **Guala & Sonnhammer 2017, Scientific Reports 7:46598.**
-This is the paper that made us most careful, and I want to state its
-result plainly because it is the sharpest warning in this field:
-**MaxLink — a local method with an explicit degree filter, built so
-that highly connected genes cannot rank high just by being connected —
-beats the diffusion (RWR-family) methods on the full list.** Diffusion
-wins only in the **top 1–10 %**. They also use partial AUC at
-**FPR ≤ 0.02**, which is where we took our low-FPR endpoint from, and
-they warn about gold standards that share evidence with the network.
-**Our decisions**: we never claim RWR is the best method — we freeze
-it and measure the **network's contribution relative to degree**,
-which is precisely the quantity Guala shows can be small; and we
-report the top-1–10 % region separately, because that is where
-diffusion actually wins.
+这是让我们最谨慎的一篇，我想把它的结论直说，因为它是这个领域最尖锐的警告：
+**MaxLink——一个带显式度过滤的局部方法，专门设计成让高连接基因不能靠"连得多"就排到前面——
+在完整排名上打败了扩散类（RWR 家族）方法**；扩散类只在**最前面 1–10 %**领先。
+他们也用 FPR ≤ 0.02 的 partial AUC——我们的低 FPR 端点就是从那儿来的——
+并且警告过"金标准与网络共享证据"这件事。
+**我们的决定**：我们从**不**声称 RWR 是最好的方法——我们把它**冻结**，测量的是
+**网络相对度基线的贡献**，而这恰恰是 Guala 指出可能很小的那个量；
+并且我们把最前面 1–10 % 单独报告，因为那才是扩散真正占优的地方。
 
 **Hill et al. 2019.**
-They benchmarked **17 network-contextualisation algorithms** and found
-that over **10,000 random gene lists**, the algorithms differ
-enormously in how much of their output is **input-independent**. In
-other words: a learner that ignores its input still returns the hubs.
-**Our decision**: a **random-input degeneracy control** — feed the
-learner shuffled inputs, and it must degrade to the baseline.
+他们基准测试了 **17 种网络上下文化算法**，发现：在 **10,000 个随机基因表**上，
+这些算法的输出有**多大比例与输入无关**，差别巨大。换句话说：
+一个完全无视输入的 learner，照样会把枢纽基因返回给你。
+**我们的决定**：加一个**随机输入退化控制**——喂给 learner 打乱过的输入，
+它必须退回到基线的水平。
 
 **Wright et al. 2025.**
-Over **45 human interactomes**, performance tracks network size, and
-the effect largely collapses once gene-set coverage is controlled.
-**Our decisions**: the **shared-gene-universe control** (all arms
-evaluated on the same 1,605 genes) and the **per-network common-size
-cap**, so that a margin cannot be bought with a bigger gene universe.
+在 **45 张以上人类相互作用组**上，表现跟着网络规模走，而一旦控制基因集覆盖度，这个效应基本塌掉。
+**我们的决定**：**共享基因宇宙控制**（所有臂都在同样的 1,605 个基因上评估）
+和**逐网络统一阳性数上限**，这样一条 margin 不能靠"更大的基因宇宙"买来。
 
 **Schaefer et al. 2015, Frontiers in Genetics.**
-This is the paper our third hypothesis is built on, and I will come
-back to it in the results because **the number r = 0.52** is the hinge
-of the whole talk: **bait usage correlates with degree, and correcting
-for it removes the cancer-versus-control degree difference.** What
-looks like a biological degree effect can be a publication effect.
-**Our decisions**: a **publication-count-adjusted label** and a
-**bait-matched null model** in which each positive is paired with a
-negative carrying the same publication count.
+这是我们第三个假说的基础，我会在结果部分回到它，因为 **r = 0.52** 这个数是整场报告的枢纽：
+**bait usage 与度相关，扣掉它之后癌/对照的度差异就消失了。**
+看起来像生物学的度效应，可能其实是发表效应。
+**我们的决定**：**按发表量调整的标签**，以及**bait 匹配的零模型**——
+每个阳性配一个发表量相同的阴性。
 
 **Boutros et al. 2014, Genome Biology 15:462.**
-Their principle is the one we borrowed for the whole design: **the
-gold standard dominates any ranking, so the evaluator must be blind
-to the algorithm**; a benchmark should be a community challenge with
-hidden answers, not a leaderboard people can overfit.
-**Our decisions**: the **NCG arbitration test** is our mini-version
-of that — an independent catalogue none of our labels was built from
-— and it is also the experiment we name first in our validation plan.
-
+他们的原则是我们整个设计借来的：**金标准支配任何排名，所以评估者必须对算法盲**；
+基准应该是一场隐藏答案的社区挑战，而不是一个可以被刷榜的排行榜。
+**我们的决定**：**NCG 仲裁测试**就是它的迷你版本——一份独立目录，
+我们的标签没有一个是从它构建的——它也是我们验证计划里点名的第一个实验。
 
 ---
 
@@ -313,33 +232,25 @@ of that — an independent catalogue none of our labels was built from
 
 [`【图：slide 6】` `【数：三个假说各有一条"如何被证伪"的判据】`]
 
-Putting the literature together, the gap is precise and it is not a
-generic "more research is needed". **No published study separates the
-topology contribution from the degree contribution from the
-study-visibility contribution inside one frozen design with one
-decision rule.** Each piece exists separately — Zhang's degree
-stratification, Schaefer's bait correction, Picart-Armada's leakage,
-Wright's coverage — but never together, and never on a pre-registered
-endpoint with the resampling unit fixed in advance.
+把文献放在一起，空白是**精确**的，不是"还需要更多研究"这种套话：
+**没有任何已发表研究，在一个冻结的设计、一条事先定好的判定规则下，
+把"拓扑的贡献""度的贡献""研究可见度的贡献"三者分开。**
+每一块都单独存在——Zhang 的度分层、Schaefer 的 bait 校正、Picart-Armada 的泄漏、
+Wright 的覆盖度——但从来没有同时出现，也从来没有在**预注册的端点**、
+**事先固定的重采样单位**下出现过。
 >
-So we made three hypotheses, and for each one we wrote down in advance
-how it could fail.
+所以我们提了三个假说，并且对每一个都**事先写下了它怎么算失败**。
 >
-**H-vis**: much of the reported margin is **study visibility**, not
-topology. *Falsified* if the margin survives a null model that matches
-positives and negatives on their publication count.
+**H-vis**：报告出来的 margin 里有很大一部分是**研究可见度**，不是拓扑。
+*被证伪的条件*是：这个 margin 在一个"按发表量配对阳性与阴性"的零模型下仍然存活。
 >
-**H-stable**: the prior's instability is a property of the **gene's
-own score variance**, not of topology, and it cannot be smoothed away.
-*Falsified* if any topology descriptor predicts instability, or if a
-regularised scorer restores the ranking.
+**H-stable**：先验的不稳定性来自**基因自身的分数方差**，而不是拓扑，而且抹不掉。
+*被证伪的条件*是：任何一个拓扑描述量能预测这种不稳定性，或者一个正则化的打分器能恢复排名。
 >
-**H-lag**: curated networks fail specifically on **recently
-discovered** drivers. *Falsified* if the failure appears equally on
-older catalogues.
+**H-lag**：策展型网络专门在**最近才发现的**驱动基因上失效。
+*被证伪的条件*是：这个失效在更老的目录上同样出现。
 >
-Each of the three has a number attached, and I will now show you the
-numbers.
+这三个假说每一个都挂着一个数字，接下来我就把数字给各位看。
 
 ---
 
@@ -347,86 +258,59 @@ numbers.
 
 [`【图：slide 7（面板与标签）→ 附录 A2（每个输入的版本与标识符）】`]
 
-**The network panel: six networks, three provenance classes.**
-Provenance is an experimental factor here, not a nuisance to be
-removed. Three are protein-derived, one is RNA-derived, two are
-curated or literature-derived.
+**网络面板：六张网络，三个来源类别。**
+在这里"来源"是一个**实验因子**，不是一个要排除的干扰。三张来自蛋白实验，一张来自 RNA，
+两张来自策展或文献。
 >
-**funmap**, the CPTAC proteogenomic network: **10,189 nodes and
-196,605 edges** in the largest connected component. **intact**,
-IntAct human-human interactions at taxid 9606: **17,918 nodes and
-564,706 edges** — by far the densest, and remember that density is
-what the coverage control is about. **string_phys700**, the STRING v12
-physical subnetwork at combined score ≥ 700: **9,830 nodes and 85,576
-edges**. **rna_coexp**, which we built ourselves from FunMap's
-published CPTAC mRNA matrices: Pearson correlation per cohort, Fisher-z
-averaged across cohorts, and then the top **196,172** pairs by mean z
-to density-match funmap — note that we matched the **density**, not
-the size, so the RNA network has comparable edge density but its own
-gene universe: **9,152 nodes**. **string_full700**, STRING v12 all
-evidence channels at ≥ 700: **15,882 nodes and 236,712 edges**.
-**reactome**, version 86, human only: **3,953 nodes and 20,143 edges**
-— the smallest network by an order of magnitude, and that turns out to
-matter.
+**funmap**，CPTAC 蛋白组学网络：最大连通子图 **10,189 个节点、196,605 条边**。
+**intact**，IntAct 的人类互作（taxid 9606）：**17,918 个节点、564,706 条边**——
+最密的一张；记住，密度正是覆盖度控制要处理的东西。
+**string_phys700**，STRING v12 的物理子网（combined score ≥ 700）：**9,830 个节点、85,576 条边**。
+**rna_coexp**，我们自己用 FunMap 公布的 CPTAC mRNA 矩阵建的：
+按队列算 Pearson 相关，Fisher-z 跨队列平均，再按平均 z 取前 **196,172** 对以**匹配 funmap 的密度**——
+注意我们匹配的是**密度**不是规模，所以这张 RNA 网络边密度相当，但基因宇宙是自己的：**9,152 个节点**。
+**string_full700**，STRING v12 全部证据通道 ≥ 700：**15,882 个节点、236,712 条边**。
+**reactome**，第 86 版，只取人类：**3,953 个节点、20,143 条边**——
+规模小一个数量级，而这件事后来证明很要紧。
 >
-**Two harmonisation decisions.** First, **Reactome needs a pathway
-size cap**. Reactome provides **no numeric edge weight at all** — its
-only quantitative layer is the curation star rating — and the
-signalling and transcription pathways are so large that a naive
-co-membership graph is nearly complete inside them, so its connected
-component carries almost no information as a "prior". We therefore
-follow the **≤ 200-protein** rule that FunMap's own gold standard
-uses, and we snapshot a **specific** Reactome version rather than
-always taking "current" — the 3- and 4-star curation events appeared
-in June 2023, and historical tools drift.
-Second, the primary analysis is **unweighted** — decision D-01 — so
-what we measure is topology, not the weight scale.
+**两个 harmonisation 决定。**第一，**Reactome 需要通路规模上限**。
+Reactome **完全不给数值边权**——它唯一的定量层是策展的星级——
+而信号通路和转录通路大到在它们内部"共成员关系图"几乎是完全图，
+所以它的连通子图作为"先验"几乎不携带信息。因此我们沿用 **≤ 200 蛋白**这条规则
+（FunMap 自己的金标准用的就是它），并且锁定**特定**的 Reactome 版本，而不是永远取"当前版"——
+3 星和 4 星的策展事件是 2023 年 6 月才有的，而历史工具会漂移。
+第二，主要分析是**不加权**的——决定 D-01——所以我们测的是拓扑，不是权重尺度。
 >
-**The label panel: five catalogues, four curation philosophies.**
-**intogen2024**, **633** positive genes, mutation recurrence from
-IntOGen — and this is the most defensible pure-positive source we
-have, because a positive is defined by positive-selection evidence in
-mutation data, not by literature co-occurrence or pathway
-co-membership, which is exactly the independence a network-prior
-benchmark needs. **ot_all** and **ot_nolit**, **600** genes each,
-Open Targets 26.06, the second with the literature channel removed;
-the difference between them is control 7 in label form.
-**intogen_temporal_new**, **152** genes — the newest IntOGen drivers,
-a deliberately harder label. **clingen_label**, **84** genes, clinical
-gene-disease validity: **79 Definitive, 1 Strong and 4 Moderate** —
-the hardest evidence of all, and we use it twice, as an extra label
-and as the external noise anchor. **ncg_known**, **708** genes, the
-NCG known tier, added later as a pre-planned exploratory extension.
+**标签面板：五份目录，四种策展哲学。**
+**intogen2024**，**633** 个阳性，来自 IntOGen 的突变复现——
+这是我们能拿到的**最可辩护的纯阳性来源**，因为一个阳性由突变数据里的正选择证据定义，
+而不是由文献共现或通路共成员定义，这正是一个网络先验基准所需要的独立性。
+**ot_all** 与 **ot_nolit**，各 **600** 个基因，Open Targets 26.06，后者去掉了文献通道；
+两者之间的差别就是标签形态的 Control 7。
+**intogen_temporal_new**，**152** 个基因——最新的 IntOGen 驱动基因，一个刻意更难的标签。
+**clingen_label**，**84** 个基因，临床基因-疾病有效性：**79 个 Definitive、1 个 Strong、4 个 Moderate**——
+这是最硬的证据，我们用它两次：一次作额外标签，一次作外部噪声锚点。
+**ncg_known**，**708** 个基因，NCG 的 known 层，后来作为事先计划的探索性扩展加入。
 >
-**Two curation caveats we had to handle.** IntOGen is a **gene ×
-cancer type** structure — 99 breast drivers mixed with 20
-neuroblastoma drivers — so we stratify by cancer type rather than
-treating it as a flat list; that stratification is what gives us
-**26 cancer types with a positive median margin** later on. And
-**ranking a label by Cancer Gene Census membership would measure
-literature curation intensity, not driver prediction**, because 75 %
-of the IntOGen compendium is CGC-annotated — so we never use CGC
-membership as a ranking tier.
+**两个必须处理的策展坑。**
+IntOGen 是**基因 × 癌种**的结构——99 个乳腺癌驱动基因和 20 个神经母细胞瘤驱动基因混在一起——
+所以我们按癌种分层，而不是把它当成一张平铺的清单；正是这个分层后来给我们带来
+**26 个癌种都为正的中位 margin**。
+另外，**用"Cancer Gene Census 成员资格"给标签排序，测的是文献策展强度而不是驱动预测**，
+因为 IntOGen 汇编里 75 % 都有 CGC 注释——所以我们从不用 CGC 成员资格当排序层级。
 >
-**Symbol alignment and provenance.** Everything maps to HGNC approved
-symbols under decision D-02: the approved symbol maps to itself, a
-previous symbol or alias maps only when the mapping is one-to-one, and
-ambiguous symbols are **dropped and counted** — for NCG that was
-**83** symbols, and we keep them visible in the release rather than
-discarding them silently. Nine NCG genes were renamed outright —
-CARS → CARS1, MKL1 → MRTFA, FGFR1OP → CEP43 and six others — and we
-carry the old names in the label file for traceability.
+**符号对齐与出处。**所有东西都映射到 HGNC 批准符号（决定 D-02）：
+批准符号映射到自身，旧符号或别名**只有在一对一映射时**才映射，有歧义的符号**丢弃并计数**——
+NCG 那边是 **83** 个符号，我们把它们留在发布里可见，而不是悄悄扔掉。
+有九个 NCG 基因被改名——CARS → CARS1、MKL1 → MRTFA、FGFR1OP → CEP43 等——
+我们在标签文件里保留旧名以便追溯。
 >
-Two more provenance items. The **protein-complex map** for the
-complex-aware splits was built from the UniProt REST API by
-cross-referencing ComplexPortal identifiers: **2,569 complexes** over
-**3,708 genes**. And every external input carries an explicit release
-and identifier, which is in appendix A2: the pre-registration is
-frozen at Zenodo DOI **10.5281/zenodo.23121762**, the FunMap matrices
-are Zenodo record **7948944**, IntOGen releases **2020, 2023 and
-2024**, Open Targets **26.06**, STRING **v12.0**, Reactome **v86**,
-IntAct **2024-09**, the ClinGen file of **2026-09-26**, and DepMap's
-CRISPR gene-effect matrix in two public releases.
+还有两项出处信息。用于复合物感知切分的**蛋白复合物图**，是用 UniProt REST API
+交叉比对 ComplexPortal 标识符建的：**2,569 个复合物、3,708 个基因**。
+而每一个外部输入都带有明确的版本与标识符，见附录 A2：
+预注册冻结在 Zenodo DOI **10.5281/zenodo.23121762**，FunMap 矩阵是 Zenodo 记录 **7948944**，
+IntOGen 发布版 **2020、2023、2024**，Open Targets **26.06**，STRING **v12.0**，Reactome **v86**，
+IntAct **2024-09**，ClinGen 文件是 **2026-09-26**，DepMap 的 CRISPR 基因效应矩阵有两个公开发布版。
 
 ---
 
@@ -434,66 +318,46 @@ CRISPR gene-effect matrix in two public releases.
 
 [`【图：slide 8（流程）→ slide 9（参数表）】` `【数：α=0.5；5 折 × 40 repeat = 200 次/臂；6×4×3×200；覆盖模拟 1.000 vs 0.936–0.944；13 个 P0；10 次 repeat 与原文件逐字节相同】`]
 
-Now the design, and I want to spend a few minutes on the discipline,
-because that is what makes the result interpretable rather than
-merely interesting.
+下面讲设计。我想花几分钟讲纪律，因为**纪律**才让结果可解释，而不只是有意思。
 >
-**The learner is frozen.** RWR at **α = 0.5**, no tuning, the same
-value in all 24 arms and all controls. The reason is not that RWR is
-best — Guala just showed a degree-filtered local method can beat it
-on a full list. The reason is that once the learner is tunable, the
-quantity of interest silently becomes "we tuned a method" instead of
-"the network contributes". We ran a **GNN courtesy arm** anyway: with
-p = q = 1, node2vec is exactly DeepWalk-style embeddings, so we report
-it under that name — RWR **+0.079** against **+0.028** for the
-embedding, both as margins over degree.
+**learner 是冻结的。**RWR，**α = 0.5**，不调参，24 个臂、所有控制都同一个值。
+理由不是 RWR 最好——Guala 刚证明了带度过滤的局部方法在完整排名上能赢它。
+理由是：**一旦 learner 可调，我们关心的量就悄悄变成了"我们调出了一个方法"，
+而不是"网络贡献了多少"。**我们还是跑了一个 **GNN 礼节性对照**：
+p = q = 1 时 node2vec 恰好等价于 DeepWalk 式嵌入，所以我们就用那个名字报告——
+RWR **+0.079** 对嵌入的 **+0.028**，两个都是相对度的 margin。
 >
-**The resampling unit is the repeat, not the fold.** 5 folds × 40
-repeats = **200 evaluations per arm**; 6 networks × 4 labels × 3
-alphas × 200 evaluations is the whole primary design. We moved from
-10 to 40 repeats because the pre-registered interval must resample
-repeats, and a coverage simulation showed why: at 40 repeats the
-fold-level percentile interval has coverage **1.000** — it is
-over-conservative — while the repeat-level percentile is calibrated at
-**0.936–0.944**. And the design is a strict superset: the first 10
-repeats of the 40-repeat split files are **byte-identical** to the
-original 10-repeat files.
+**重采样单位是 repeat，不是 fold。**5 折 × 40 repeat = **每个臂 200 次评估**；
+6 网络 × 4 标签 × 3 个 alpha × 200 次评估，就是整个主要设计。
+我们从 10 个 repeat 提到 40 个，是因为预注册的区间必须按 repeat 重采样，
+而覆盖模拟说明了为什么：40 个 repeat 时，fold 层的百分位区间覆盖率是 **1.000**——过于保守——
+repeat 层的百分位区间则是标定好的，**0.936–0.944**。
+而且这个设计是严格的超集：40-repeat 切分文件的前 10 个 repeat 与原来的 10-repeat 文件**逐字节相同**。
 >
-**Splits are fixed and released** with SHA-256 manifests, so another
-group re-runs on the same folds.
+**切分是固定并公开的**，带 SHA-256 清单，所以别的组可以在同一批折上重跑。
 >
-**The common-size cap is a control, not the primary design.** The
-primary arms use each label's own positive set; the cap is what
-equalises prevalence inside an arm. One detail that matters and that
-we got wrong first: the cap must be applied **after** restricting to
-the network's universe, otherwise funmap holds **78** positives
-instead of **104** — we found that as a defect and recorded it as
-amendment A2.3i.
+**统一阳性数上限是一个控制，不是主要设计。**主要臂用每个标签自己的阳性集；
+上限是在臂内部拉平阳性比例用的。
+有一个细节很重要，而且我们一开始做错了：**上限必须在限制到网络宇宙之后才应用**，
+否则 funmap 只剩 **78** 个阳性而不是 **104** 个——我们把这个当成缺陷发现，并记在修订 A2.3i 里。
 >
-**Everything is pre-registered, and every departure is written
-down.** The pre-registration was frozen on **2026-09-27**; we now
-have amendments **A2.3a to A2.3k** plus a register of the **14**
-analysis families, each marked as belonging to the verification family
-or the exploratory family.
+**一切都预注册了，每一处偏离都写在案。**预注册冻结于 **2026-09-27**；
+我们现在有修订 **A2.3a 到 A2.3k**，加上一份 **14 类分析**的族登记，
+每一类都标明了属于验证族还是探索族。
 >
-**The statistical layer.** A mixed-effects variance decomposition; a
-**gene-cluster bootstrap** — the pre-registered §9.3 unit, which
-resamples **genes**, not folds; a **TOST** equivalence test for the
-borderline arm; and **BH-FDR inside the pre-declared family only** —
-we do not run BH across 72 correlated cells and call that multiplicity
-control.
+**统计层。**混合效应方差分解；**gene-cluster bootstrap**——预注册 §9.3 规定的单位，
+它重采样的是**基因**而不是折；给临界臂用的 **TOST** 等效性检验；
+以及**只在事先声明的族内部**做 **BH-FDR**——我们不会把 72 个相关的格子一起做 BH 然后自称多重性控制。
 >
-**And we should mention the self-audit**, because a benchmark that
-reports its own defects is more credible than one that does not. An
-independent review of this repository found **ten P0-class defects**:
-a bootstrap that accepted an alpha parameter and never used it, a
-TOST that was not TOST, a cap file whose name collided so each
-network silently overwrote the previous cap, a shared-universe control
-that did not use the shared universe, a temporal control with zero
-replication, a variance decomposition that treated folds as a noise
-bucket, a released results table with 4 rows instead of 24, and a
-manuscript that quietly relaxed the H1 decision rule. All are fixed,
-and all are recorded in the amendments.
+**最后要提自审**，因为一个会报告自己缺陷的基准比一个不会的更可信。
+一次独立复审在本仓库里找到了**十个 P0 级缺陷**：
+一个接受 alpha 参数却从不使用它的 bootstrap、一个根本不是 TOST 的 TOST、
+一个文件名冲突导致每张网络悄悄覆盖上一个 cap 的 cap 文件、
+一个并没有用共享宇宙的共享宇宙控制、
+一个零重复的时间控制、
+一个把折当成噪声桶的方差分解、
+一张只有 4 行而不是 24 行的已发布结果表，
+以及一篇悄悄放松了 H1 判定规则的稿件。全部已修，全部记在修订里。
 
 ---
 
@@ -501,22 +365,20 @@ and all are recorded in the amendments.
 
 [`【图：slide 10】` `【数：11 层；每一层一个数】`]
 
-Eleven controls, one artefact each. In order, and I will give the
-number for each as we go: **degree-matched random seeds** — does the
-prior only re-rank hubs? **Degree-preserving rewiring** — is the
-signal carried by the wiring? **Shared gene universe** — gene-set
-size differences? **Temporal split** — is the effect only in the
-past? **Common-size cap** — unequal positive-set sizes?
-**Complex-aware cross-validation** — complex leakage? **Hub-capped
-RWR** — is the gain a hub effect? **Publication-count adjusted
-label** — study visibility? **Bait-matched null** — does the gain
-track publication count? **Label-quality tiers** — does the gain live
-in the weak positives? **ClinGen 17 % noise anchor** — is the gain an
-artefact of label noise?
+十一层控制，每一层防一种假象。我按顺序念，每一层给一个数：
+**度匹配的随机种子**——先验是不是只是在给枢纽重新排序？
+**保度重连**——信号是不是由"连线的形状"带出来的？
+**共享基因宇宙**——基因集大小的差异？
+**时间切分**——效应是不是只存在于"过去"？
+**统一阳性数上限**——各标签阳性数不同？
+**复合物感知交叉验证**——复合物泄漏？
+**枢纽受限的 RWR**——收益是不是就是枢纽效应？
+**按发表量调整的标签**——研究可见度？
+**bait 匹配零模型**——收益是不是跟着发表量走？
+**标签质量分层**——收益是不是住在"弱阳性"里？
+**ClinGen 17 % 噪声锚点**——收益是不是标签噪声的产物？
 >
-Every one of these has a number, and four of them changed what we are
-allowed to conclude.
-
+每一层都有一个数，而**其中四层改变了我们被允许下的结论**。
 
 ---
 
@@ -524,87 +386,61 @@ allowed to conclude.
 
 [`【图：slide 11（30 格热图）→ 附录 A3（24 臂全表）→ 附录 A4（H1 五种区间）→ 附录 A5（低 FPR 端点）】`]
 
-The primary endpoint is the margin of RWR over a degree-only ranking
-on identical folds: **ΔAUROC = AUROC(RWR) − AUROC(degree)**, at
-α = 0.5, with the degree baseline computed **on the same folds, in
-the same universe**, so the only thing that differs between the two
-numbers is the scorer.
+主要端点是：**在同一批折上**，RWR 相对"只按度排序"的 margin，
+**ΔAUROC = AUROC(RWR) − AUROC(degree)**，α = 0.5，
+而且度基线是在**同样的折、同样的宇宙**上算的，所以两个数之间唯一的差别就是打分器。
 >
-**The headline numbers.** Across the **24 pre-registered cells** — six
-networks times four labels — the margin is positive in **23**, and the
-**median is +0.0809**. The best cell is STRING physical against
-Open Targets without literature, at **+0.1711**; the worst is Reactome
-against the newest IntOGen drivers, at **−0.0125**. Each cell is the
-mean over **200 evaluations** — 40 repeats times 5 folds — and each
-has its own standard deviation, which is in appendix A3.
+**headline 数字。**在 **24 个预注册格子**——六张网络乘四个标签——上，
+margin 为正的有 **23** 个，**中位数是 +0.0809**。
+最好的一格是 STRING 物理网络对"去掉文献通道的 Open Targets"，**+0.1711**；
+最差的是 Reactome 对最新的 IntOGen 驱动基因，**-0.0125**。
+每一格是 **200 次评估**（40 个 repeat 乘 5 折）的均值，每一格都有自己的标准差，在附录 A3。
 >
-**What +0.0809 does and does not mean.** It is a difference of two
-AUROC values on the same test folds. It does **not** mean we find 8 %
-more drivers; an AUROC difference of 0.08 is a modest, real
-discrimination difference. And it does **not** mean the prior is
-*better* than degree — it means the *information the prior adds
-beyond degree* is worth about 0.08 AUROC on average. Which is why
-the next two slides matter more than this one.
+**+0.0809 意味着什么、不意味着什么。**它是同一批测试折上两个 AUROC 的差。
+它**不**意味着我们多找出了 8 % 的驱动基因——0.08 的 AUROC 差是一个不大但真实的判别力差异。
+它也**不**意味着先验"比度更好"——它意味着**先验在度之外多出来的那点信息，平均值约等于 0.08 AUROC**。
+这就是为什么后面两页比这一页更重要。
 >
-**The one negative cell, stated honestly.** Reactome against the
-newest drivers is **−0.0125**. We do **not** claim this is a negative
-effect. A confidence interval excluding zero says an effect is
-*distinguishable* from zero; it does not say the effect is *real*.
-The equivalence test answers the second question, and with a
-corrected TOST the answer is that this cell is **not distinguishable
-from "no effect"**. So the correct sentence is: **on this arm there is
-no detectable contribution.** We had this inference wrong in an early
-draft of the amendment and corrected it in A2.3c.
+**唯一那个负格子，诚实地讲。**Reactome 对最新驱动基因是 **-0.0125**。
+我们**不**主张这是一个负效应。置信区间排除 0 只说明效应**可以与 0 区分开**，
+不说明效应**是真的存在**。等效性检验回答的是第二个问题，
+而修正过的 TOST 给出的答案是：这一格**与"没有效应"无法区分**。
+所以正确的说法是：**这个臂上没有可检出的贡献。**
+我们在修订的早期草稿里把这个推理写错过，在 A2.3c 里改正了。
 >
-**Now the H1 verdict, exactly as the pre-registration defines it.**
-The rule: the 95 % confidence interval excludes zero **in every arm**.
-It is met under **four of the five** interval constructions —
-fold-percentile, repeat-percentile, repeat-t and repeat-BCa all give
-**24 of 24** — and it is **not** met under the fifth, the
-gene-cluster bootstrap, which gives **20 of 24**. The four exceptions
-are **all** the newest-driver label, the one with the smallest
-effects. Why is that interval wider — **about 12 times** wider than
-the repeat-level one? Because it asks a different question: resampling
-genes asks "what if a different set of genes had been measured",
-while resampling repeats asks "what if the same universe were
-re-partitioned". Appendix A4 has the five rows.
+**现在说 H1 的判定，严格按预注册的定义。**
+规则是：95 % 置信区间**在每一个臂里**都排除 0。
+它在**五种区间构造里的四种**成立——fold 百分位、repeat 百分位、repeat-t 和 repeat-BCa 都给出 **24 / 24**——
+而在第五种、也就是 gene-cluster bootstrap 下**不成立**，那一路是 **20 / 24**。
+那四个例外**全是**最新驱动基因标签，也就是效应最小的那一个。
+为什么那条区间宽——大约是 repeat 层区间的 **12 倍**？
+因为它问的是另一个问题：重采样基因问的是"如果当初测的是另一批基因会怎样"，
+重采样 repeat 问的是"如果同一个宇宙被重新划分会怎样"。附录 A4 有五行。
 >
-I want to be careful here, because this is precisely where a paper
-quietly relaxes a rule, and our own review flagged exactly that in our
-first draft. We did not relax it. If you force one hard sentence:
-**in 20 of the 24 arms the increment over degree excludes zero at
-95 % confidence; in the remaining four, the effect is too small for us
-to distinguish it from zero.** That is what "label-dependent" means
-literally, not rhetorically.
+这里我要特别小心，因为**这正是论文悄悄放松规则的地方**，我们自己的复审在初稿里就标出了同一处。
+我们没有放松。如果一定要一句硬话：**24 个臂里有 20 个臂，相对度的增量在 95 % 置信水平下排除 0；
+剩下四个臂，效应太小，我们无法把它与 0 区分开。**这就是"label-dependent"字面意义上的意思，
+不是修辞。
 >
-**And is degree a strong enough baseline? We asked, and the answer
-costs us.** We ran the same 200 evaluations per arm with three more
-classical baselines on the identical test folds: closeness centrality,
-eigenvector centrality and PageRank. Closeness **beats degree in every
-one of the 24 arms** (median +0.0312), and in the strongest-baseline
-count, closeness is the best competitor in **18 of 30** arms and
-eigenvector in the other 12 — **degree is never the strongest classical
-baseline in this panel**. So our headline is measured against a baseline
-that a standard centrality beats everywhere. Against the strongest
-baseline in each arm, the prior is still positive in **19 of 24 arms**,
-with a median margin of **+0.0461** instead of +0.0809. And the
-increment is not an artefact of our particular damping: at the
-PageRank damping the literature actually uses (0.85, which in our
-parameterisation is restart 0.15), the margin is positive in 23 of 24
-arms at **+0.0571**. Appendix A12 has the whole table. The honest
-sentence is therefore two sentences: **against degree the increment is
-23 of 24 arms and +0.081; against the strongest classical baseline it is
-19 of 24 arms and +0.046.**
+**那"度"这个基线够强吗？我们去问了，答案是要付代价的。**
+我们在同样的 200 次评估、同样的一批测试基因上，加跑了三个经典基线：
+closeness 中心性、特征向量中心性和 PageRank。
+结果是 **closeness 在 24 个臂里全都赢 degree**（中位 +0.0312）；
+按"每臂最强基线"来数，closeness 占 **18 / 30** 个臂，特征向量占另外 **12** 个臂，
+**degree 一个都没有**。所以我们的 headline 是对一张"标准中心性到处都能赢"的基线量的。
+不过先验对每臂最强基线仍然是 **19 / 24 个臂为正、中位 +0.0461**；
+而且增量也不是我们挑阻尼挑出来的：在文献常用的 PageRank 阻尼 0.85
+（在我们的参数化里等于重启 0.15）下，margin 仍是 **23 / 24 为正、中位 +0.0571**。
+附录 A12 有整张表。所以诚实的说法是**两句话**：
+**对度，增量是 23 / 24 个臂、+0.0809；对最强的经典基线，是 19 / 24 个臂、+0.0461。**
 >
-**And if we change the endpoint, the margin shrinks.** Median
-**+0.0809** on AUROC, but **+0.0308** on partial AUC at FPR ≤ 0.02
-and **+0.0412** on top-10 % precision, and the number of arms with a
-positive margin falls from 23 to **20** for both. The arm *order* is
-broadly stable, with Spearman ρ between **0.80 and 0.90** depending
-on the endpoint pair — so the ranking of networks is robust, but the
-size of the advantage is not, and it is **smallest exactly where
-practitioners use the method**, in the top of the list. That is the
-honest reading, and it is in appendix A5.
+**换端点，margin 就会缩水。**AUROC 上中位 **+0.0809**，
+但 FPR ≤ 0.02 的 partial AUC 上只有 **+0.0308**，top-10 % precision 上是 **+0.0412**，
+而 margin 为正的臂数从 23 掉到 **20**。臂之间的**顺序**基本稳定，
+不同端点两两之间的 Spearman ρ 在 **0.80 到 0.90**——
+所以"网络之间的排名"是稳健的，但**优势的量级不是**，
+而且它**恰恰在 practitioners 真正使用的那一段——榜单最前面——最小**。
+这是诚实的读法，见附录 A5。
 
 ---
 
@@ -612,60 +448,47 @@ honest reading, and it is in appendix A5.
 
 [`【图：slide 12（面板 A 网络级 + 面板 B 基因级）】`]
 
-The second result is the one our teacher asked us to make
-first-class: **where does the stability of a network prior come from?**
-We took the approach of Klingelhuber and colleagues — treat stability
-as a first-class quantity, measure it, attribute it, and publish it.
+第二个结果，是老师点名要我们做成一等公民的那件事：
+**网络先验的稳定性从哪来？**
+我们采用 Klingelhuber 等人的做法——**把稳定性当成一个一等量来测、来归因、来发表**。
 >
-**The two layers, which are both true at once.** At the **arm level**
-the mean margin is stable: the standard deviation of ΔAUROC across
-the 200 evaluations of an arm is **0.0047**. At the **gene level** the
-picture is the opposite: the median per-gene score coefficient of
-variation is **18 %**, and a median gene moves about **270 ranks**
-between repeats. These are not in conflict — they say the *endpoint*
-is stable while the *individual gene calls* are not, and that is
-exactly what a benchmark user should be told.
+**两个层次，它们同时成立。**在**臂级**，平均 margin 是稳定的：
+一个臂的 200 次评估之间 ΔAUROC 的标准差是 **0.0047**。
+在**基因级**，画面正相反：每基因分数变异系数的中位数是 **18 %**，
+而且一个中位基因在两次 repeat 之间会**挪动大约 270 名**。
+这两件事不矛盾——它们说的是：**端点稳定，而单个基因的判定不稳定**，
+这正是基准使用者应该被告知的。
 >
-**The attribution — and the correction of our own first explanation.**
-Our initial hypothesis was **crowding**: genes in dense regions have
-unstable scores. **The data do not support it.** The two crowding
-definitions have **opposite signs** — a ±10 % band gives **+0.478** in 24 of 24 arms, while a Scott bandwidth gives **-0.175** (negative in 23 of 24 arms). A
-hypothesis with opposite signs under two reasonable definitions is
-not a mechanism.
+**归因——以及对我们自己第一个解释的更正。**
+我们最初的假设是**拥挤**：处在稠密区域的基因分数不稳。**数据不支持它。**
+两种"拥挤"的定义给出**相反的符号**——±10 % 的带宽在 24 / 24 个臂里是 **+0.478**，
+而 Scott 带宽给出 **-0.175**（在 23 / 24 个臂里为负）。
+一个在两种同样合理的定义下符号相反的假说，不是机制。
 >
-**What does explain it is the gene's own score variance**: in the
-gene-level model, the coefficient on the gene's own score CV is
-**β = +0.616**, with Spearman **ρ = 1.00** and **q = 2e-137** — and
-**no classical topology descriptor predicts the instability at all**:
-degree, k-core, clustering, betweenness, PageRank and community size
-are all non-significant.
+**真正能解释的是基因自身的分数方差**：在基因级模型里，
+基因自身 score CV 的系数是 **β = +0.616**，Spearman **ρ = 1.00**，**q = 2e-137**——
+而且**没有任何经典拓扑描述量能预测这种不稳定性**：
+度、k-core、聚类系数、介数、PageRank、社区规模，全部不显著。
 >
-**And here is the diagnostic that convinced us the degree effect we
-first measured was an artefact.** Put the gene's own score CV into the
-model and degree's *marginal* association is **+0.038** — that is, nothing — while its coefficient in the model is **−0.083**. That is the signature of **suppression**: the topology
-appeared to matter only because it was standing in for the score
-variance.
+**下面这个诊断让我们确信最早测到的度效应是假象。**
+把基因自身的 score CV 放进模型后，度的**边际**关联只剩 **+0.038**——也就是什么都没有——
+而它在模型里的系数是 **-0.083**。这正是**抑制效应**的特征：
+拓扑看起来重要，只是因为它在替分数方差挡枪。
 >
-**At the network level, something does predict stability**: coverage
-and the 2-core fraction, at Spearman **ρ = −0.905**, **q = 0.012**;
-network size, density and modularity do **not** predict it. So a
-network is stable when it covers the label well and has a
-well-connected core — which is a statement about curation, not about
-graph theory.
+**在网络层面，确实有东西能预测稳定性**：覆盖度和 2-core 比例，
+Spearman **ρ = -0.905**、**q = 0.012**；网络规模、密度和模块度**不**预测。
+所以一张网络稳定，是因为它覆盖标签良好、并且有一个连得好的核心——
+这是一句关于**策展**的话，不是关于图论的话。
 >
-**The mechanism is a theorem, not a correlation.** RWR weights seeds
-**linearly**, so a gene's score is a linear function of how many
-seeds sit near it. Averaging the prior over bootstrapped seeds —
-**bagging** — is therefore a **provable no-op**. We tested the
-consequence: a stability-regularised scorer that shrinks each gene's
-score toward a confidence-weighted neighbourhood median **cannot
-restore the ranking**. That is why we report it as a **negative
-result** in section I.6 of the manuscript instead of hiding it.
+**这个机制是一个定理，不是一个相关。**RWR 对种子的权重是**线性**的，
+所以一个基因的分数就是"它附近有多少个种子"的线性函数。
+因此把先验在自助重采样的种子上取平均——也就是 **bagging**——**在数学上证明是一个空操作**。
+我们检验了它的推论：一个把每个基因的分数朝"按置信度加权的邻域中位数"收缩的
+**稳定性正则化打分器，无法恢复排名**。所以我们把它写成论文 I.6 节的**负结果**，而不是藏起来。
 >
-**Two independent checks.** The whole picture replicates on **ClinGen**
-as an independent system, and in a transfer experiment the ranking
-reproduces only at the two extremes, with **ρ = +0.37** — which is
-itself the honest statement of how much of this transfers.
+**两个独立检验。**整幅图景在 **ClinGen** 这个独立系统上复现；
+在迁移实验里，排名只在两个极端上重现，**ρ = +0.37**——
+这本身就是对"有多少能迁移"的诚实陈述。
 
 ---
 
@@ -673,156 +496,108 @@ itself the honest statement of how much of this transfers.
 
 [`【图：slide 13（DepMap 图 + 右栏要点）→ 附录 A6（bait 匹配）→ A7（阴性集审计）→ A8（等阳性率面板）→ A9（标签质量）→ A10（方差分解）】`]
 
-The third result is deliberately two-sided: an independent line of
-support, and an uncomfortable finding about our own numbers.
+第三个结果是**故意两面都给**的：一条独立的支撑，和一个关于我们自己数字的、让人不舒服的发现。
 >
-**The support, first: DepMap.** We took **1,361 cancer cell lines**
-with their CRISPR gene-effect scores and their expression. A gene
-counts as essential in a cell line if its CERES score is below **−0.5**
-and it is expressed above **log2(TPM+1) > 1**. Then, per cell line,
-we asked whether the prior's top-K candidates are enriched for
-essential genes relative to that cell line's own gene set, with a
-hypergeometric test.
+**先说支撑：DepMap。**我们取了 **1,361 个癌细胞系**的 CRISPR 基因效应分数和表达量。
+一个基因在某细胞系里算"必需"，条件是它的 CERES 分数低于 **-0.5**、并且有表达（log2(TPM+1) > 1）。
+然后在每个细胞系里问：先验排出来的前 K 个候选，相对这个细胞系自己的基因集，
+是否富集了那些必需基因？我们用超几何检验。
 >
-**The numbers.** At **K = 30** candidates — and 30 is roughly the
-number of genuinely essential genes in one cell line — **6 % of cell
-lines** reach p < 0.05. Chance is **5 %**. So at that scale the
-prior is **indistinguishable from chance**: the median p-value is
-**0.52**. At **K = 100**, **48 %** of cell lines reach p < 0.05 and
-the median p is **0.058**. The result is robust to the CERES
-threshold — **−0.3, −0.5 and −0.8** give the same picture.
+**数字。**在 **K = 30** 个候选时——30 大概就是一个细胞系里真正必需的基因数——
+**6 % 的细胞系**达到 p < 0.05，而**随机水平是 5 %**。
+所以在这个尺度上先验**与随机无法区分**，中位 p 值是 **0.52**。
+在 **K = 100** 时，**48 %** 的细胞系达到 p < 0.05，中位 p 是 **0.058**。
+这个结果对 CERES 阈值稳健——**-0.3、-0.5、-0.8** 给出同样的画面。
 >
-**What that means, and what it does not.** It means the prior carries
-**set-level signal, not gene-level calls**: it can tell you something
-about the composition of a hundred candidates, and nothing reliable
-about which single candidate is a driver. The negative half — nothing
-at K = 30 — is the more important half, because that is the scale
-people actually work at.
+**这意味着什么、不意味着什么。**它意味着先验带有的是**集合层面的信号，不是单基因判定**：
+它能告诉你一百个候选的构成大概是什么样，但对你要问的"哪一个候选是驱动基因"给不出可靠答案。
+更重要的其实是**否定的那一半**——K = 30 时什么都没有，
+因为那才是人们真正工作的尺度。
 >
-**The second support: the NCG arbitration test.** This is the
-mini-challenge in Boutros's sense. We seed the walk with our own
-label's positives, and then ask: among the drivers **our labels do not
-contain** — **27 %** of the NCG known tier — does the prior rank them
-above the rest of the universe? The answer is **24 of 24 arms
-positive**, median **+0.0413**. And stratified by cancer type,
-**26 of 26 cancer types** have a positive median margin, **+0.0271**
-over the types. So the prior transfers to drivers we never labelled,
-and the advantage is not a quirk of one tumour class.
+**第二个支撑：NCG 仲裁测试。**这是 Boutros 意义上的"迷你挑战"。
+我们用自己标签的阳性做种子，然后问：那些**我们的标签里没有**的驱动基因
+——占 NCG known 层的 **27 %**——先验会不会把它们排在其他基因前面？
+答案是 **24 个臂全部为正**，中位 **+0.0413**。
+再按癌种分层，**26 个癌种全部**有正的中位 margin，癌种中位 **+0.0271**。
+所以先验能迁移到我们从未标注过的驱动基因，而且这个优势不是某一类肿瘤的怪癖。
 >
-**But** on the low-FPR endpoint it is only **13 of 24**, and the
-split is systematic: the four protein networks pass in every label,
-while funmap and RNA co-expression fail in all four. So the advantage
-*in the very top of the list* is a property of the **interaction
-network**, not of the prior alone. One technical note so nobody
-questions it: the background was sub-sampled to **20,000** genes for
-tractability, and re-computing one arm with **200,000** and with the
-**full** background gives **exactly** the same value, +0.1269 — so
-the sub-sampling is immaterial.
+**但是**在低 FPR 端点上只有 **13 / 24**，而且这个分裂是有规律的：
+四个蛋白网络在每个标签上都通过，而 funmap 和 RNA 共表达在四个标签上全不过。
+所以**榜单最前面**那段优势是**相互作用网络**的性质，不完全是先验的功劳。
+一个技术说明，免得有人质疑：为了算得动，背景被下采样到 **20,000** 个基因，
+而用一个臂以 **200,000** 和以**全量**背景重算，得到**完全相同**的值 **+0.1269**——
+所以下采样无关紧要。
 >
-**Now the uncomfortable part: our own negative set is not clean.**
-Using NCG as an arbiter, we measured that **10 % to 22 %** of our
-held-out "negatives" are curated drivers we simply do not label, and
-**1.3 % to 9.5 %** are NCG-*known* high-confidence ones. Reactome's
-arms are the worst, the dense protein networks the least.
+**现在是不舒服的部分：我们自己的阴性集不干净。**
+用 NCG 当仲裁者，我们测到我们 holdout 出来的"阴性"里，
+**10 % 到 22 %** 是我们没有标注的策展 driver，
+其中 **1.3 % 到 9.5 %** 是 NCG 的 **known** 高置信那一层。Reactome 的臂最严重，稠密的蛋白网络最轻。
 >
-**The consequence, and the correction we had to make.** Our first
-answer here was wrong, and the way it was wrong is instructive. The
-post-hoc version removes every NCG gene from the *evaluation set* — and
-because NCG and IntOGen overlap heavily, that also removes **87 % of
-the IntOGen positives** (633 down to 80), which is why the margin
-appeared to halve, from +0.0651 to +0.0304. That is a statement about a
-much smaller evaluation set, not about the background.
+**后果，以及我们不得不做的更正。**我们第一次的回答是错的，而错的方式很有教育意义。
+事后版本把**每一个** NCG 基因从*评估集*里删掉——因为 NCG 和 IntOGen 重叠很重，
+这同时也删掉了 **87 % 的 IntOGen 阳性**（633 降到 80），
+所以 margin 才"看起来腰斩"，从 +0.0651 变成 +0.0304。
+那说的是一个**小得多的评估集**，不是背景的问题。
 
-The clean experiment removes the curated drivers from the **background
-only** — the positives are untouched — and re-runs the entire benchmark
-on those splits. The result: **23 of 24 arms stay positive, no sign
-flips, the median margin moves from +0.0809 to +0.0822** (slightly up
-in almost every arm), and the conservative gene-cluster interval now
-passes in **21 of 24** arms instead of 20. So the contamination of our
-negative set is real, and it is **not** what carries the result — which
-is a stronger statement than the one we started with, and it is the one
-we will defend.
+正确的实验是：把策展 driver 只从**背景**里删掉——**阳性一动不动**——然后在这些切分上
+把整个基准重跑一遍。结果是：**23 / 24 个臂仍为正，0 处符号翻转，
+中位 margin 从 +0.0809 变成 +0.0822**（几乎每个臂都略微**变大**），
+而且保守的 gene-cluster 区间通过的臂从 20 个变成 **21 / 24** 个。
+所以我们阴性集的污染是真的，而它**不是**结论的支撑——这比我们一开始的说法更强，
+也是我们要辩护的那一句。
 >
-> **And four controls on the design itself**, because the headline is
-> one number on one learner on one panel. **First, the margin survives
-> losing seeds**: dropping 10 % of the training-fold seeds costs a median
-> of **1.9 %** of the margin and only one of the 24 arms loses more than
-> 10 % of it; halving them costs **11.7 %**. What predicts the loss is the
-> *number* of seeds, not the gene-level noise — the arm with about 50
-> seeds loses 29 % of its margin when half are dropped, the arm with
-> about 470 loses 8 %.
-> **Second, the four arms that fail the conservative gene-cluster
-> interval fail for a reason of power, not of size**: on the equal-
-> positive-size panel the failures are no longer only the newest-driver
-> label — every arm with a small effect fails, so what the four share is
-> a small effect.
-> **Third, five labels are not five independent opinions**: each label's
-> per-network means are **84 % to 99.8 %** predictable from the other
-> four, and the overlap matrix has a participation ratio of **1.54** — so
-> the "label main effect" in the variance decomposition is mostly one
-> shared difficulty factor, and it is not five pieces of evidence about
-> driver biology.
-> **Fourth, and this is the one we have to say out loud: the increment is
-> learner-specific.** Under a second, equally locked learner — the
-> distance to the nearest seed — the margin is positive in **16 of 24**
-> arms with a median of **+0.011**, against +0.081 for RWR, and on the
-> densest network it is negative in every label. That is exactly the
-> warning Guala and Sonnhammer raise, now quantified. Our claim is
-> therefore only the pre-registered one: *under a fixed, pre-registered
-> learner, the network contributes beyond degree* — and we do not
-> generalise it to arbitrary priors. Removing STRING's `database`
-> channel, by contrast, changes little, so the concern that our panel
-> shares an upstream knowledge base with our labels is real in
-> principle and small in this measurement.
+> **另外四个关于设计本身的控制**，因为 headline 只是"一个 learner、一个面板上的一个数"。
+> **第一，margin 经得起丢种子**：抽掉 10 % 训练折种子，中位只损失 **1.9 %** 的 margin，
+> 24 个臂里只有一个损失超过 10 %；抽掉一半损失 **11.7 %**。
+> 预测损失的是种子的**数量**，不是基因级噪声——大约 50 个种子的臂掉一半损失 29 %，
+> 大约 470 个种子的臂只损失 8 %。
+> **第二，那四个在保守 gene-cluster 区间下失败的臂，失败的原因是功效，不是规模**：
+> 在等阳性数面板上，失败的已经不只是最新驱动基因标签——**每个小效应的臂都失败**，
+> 所以这四个臂的共同点是"效应小"。
+> **第三，五个标签不是五份独立意见**：每个标签的每网络均值有 **84 % 到 99.8 %**
+> 可以由其他四个预测，重叠矩阵的 participation ratio 是 **1.54**——
+> 所以方差分解里那个"label 主效应"主要是一个共同的难度因子，
+> **不是**五份关于 driver 生物学的证据。
+> **第四，这一点我们必须自己说出来：增量是 learner-specific 的。**
+> 在第二个同样锁定的 learner 下——到最近种子的距离——margin 只有 **16 / 24** 个臂为正，
+> 中位 **+0.011**（RWR 是 +0.081），而且在最密的网络上每个标签都是负的。
+> 这正是 Guala 和 Sonnhammer 提出的警告，现在被量化了。
+> 所以我们的主张只能是预注册的那一句：*在一个固定、事先注册的 learner 下，网络相对度有增量*——
+> 我们**不**把它推广到任意先验。
+> 反过来，**去掉 STRING 的 `database` 通道影响很小**，
+> 所以"我们的面板与标签共享上游知识库"这个担忧，原则上成立，在这项测量里很小。
 
-**Three controls close this section.**
-**The bait-matched null**, where each positive is paired with a
-negative carrying the same publication count: the fraction of
-positives above the null falls from a median **17.6 % to 11.6 %**
-across all arms, and on the temporal label from **6.8 % to 4.7 %** —
-and chance is **5 %**. On the other three labels the fall is from
-**24.8 % to 13.7 %**. So a large part of the apparent margin is
-visibility.
-**The label-quality tiering**, where each gene gets a tier from its
-own catalogue — ClinGen's review status, IntOGen's number of detecting
-methods, NCG's literature count, and the literature/non-literature
-split for Open Targets: the **high-confidence tier carries the larger
-margin in four of five labels** (IntOGen **+0.0892** against +0.0633
-and +0.0653; the temporal label **+0.0743** against +0.0123 and
-+0.0232). NCG **inverts** the order, and that is not a
-contradiction: NCG's tier *is* a publication count, so its high tier
-is exactly the set the degree baseline already ranks well. The two
-orderings are the same statement from two sides: **the prior's
-increment is largest where the catalogue's own evidence is thinnest.**
-**And the ClinGen 17 % noise anchor**: demoting a random 17 % of the
-positives in every fold — 17 % being ClinGen's own inter-laboratory
-disagreement rate — moves the margin by between **−0.0018** and
-**+0.0026**, while a *perfect* scorer would lose **8.5** AUROC points
-under the same misassignment. So the margin is **not** an artefact of
-the label noise that ClinGen's curation process documents.
+**三个控制给这一节收尾。**
+**bait 匹配零模型**：每个阳性配一个发表量相同的阴性，
+全部臂上"超过零模型的阳性比例"中位从 **17.6 % 降到 11.6 %**，
+在 temporal 标签上从 **6.8 % 降到 4.7 %**——而**随机是 5 %**；
+另外三个标签上从 **24.8 % 降到 13.7 %**。所以表观 margin 里有很大一部分是可见度。
+**标签质量分层**：每个基因按它自己目录里的证据打层——
+ClinGen 的复审状态、IntOGen 的检测方法数、NCG 的文献数、Open Targets 的文献/非文献之分：
+**高置信层在五个标签里有四个带着更大的 margin**
+（IntOGen **+0.0892**，对 +0.0633 和 +0.0653；temporal 标签 **+0.0743**，对 +0.0123 和 +0.0232）。
+NCG 那一行**反过来**，但那不是矛盾：NCG 的层**本身就是文献数**，
+所以它的高层恰好就是度基线已经排得很好的那批基因。
+两种排序是从两个方向说的同一句话：**先验的增量在"目录自身证据最薄"的地方最大。**
+**还有 ClinGen 的 17 % 噪声锚点**：在每一折里随机把 17 % 的阳性降级为背景
+（17 % 是 ClinGen 自己的实验室间不一致率），
+margin 的变化在 **-0.0018** 到 **+0.0026** 之间，
+而一个**完美**的打分器在同样的误标下会损失 **8.5** 个 AUROC 点。
+所以 margin **不是** ClinGen 策展过程所记录的那种标签噪声的产物。
 >
-**One more diagnostic worth a sentence**: the gene-cluster bootstrap
-interval width correlates with the arm's positive-set size at Spearman
-**ρ = −0.966** (p = 2e-14, 24 arms), and with the high-tier share
-only at **ρ = −0.475**. So the wide intervals are a
-**small-positive-set phenomenon**, not a label-quality phenomenon.
+**还有一个值得说一句的诊断**：gene-cluster 区间的宽度与该臂阳性集大小相关，
+Spearman **ρ = -0.966**（p = 2e-14，24 个臂），与高置信层占比只有 **ρ = -0.475**。
+所以那些宽区间是**阳性集小**的现象，不是标签质量的现象。
 >
-**Finally, the fifth label and the curator lag.** On the
-equal-prevalence panel, where all five labels have the same number of
-positives inside each arm, **Reactome is positive on the 2019 NCG
-catalogue at +0.0893** and negative on the two newest catalogues, at
-**−0.0110** and **−0.0125**. The Reactome failure is therefore
-**label-specific, not network-specific** — the first test of the
-curator-lag hypothesis that does not rely on the temporal split. We
-report it as *supported*, not proven, because a 2019 catalogue
-differs from IntOGen 2024 in more than its age. And re-running the
-variance decomposition on the 30-cell grid: the label main effect's
-share of the between-arm spread falls from **34.78 % to 30.75 %**, the
-interaction rises from **40.07 % to 41.95 %**, and the within-cell
-noise rises from **40.39 % to 41.56 %** of the total variance. But
-remember NCG is **65 % identical** to IntOGen — Jaccard **0.522** —
-so this measures the effect of adding a **redundant** label, not an
-independent one.
+**最后，第五个标签与策展滞后。**在等流行率面板上（五个标签在每个臂里阳性数相同），
+**Reactome 在 2019 年的 NCG 目录上是正的，+0.0893**，在两个最新目录上是负的，
+分别是 **-0.0110** 和 **-0.0125**。所以 Reactome 的失效是**标签特异的，不是网络特异的**——
+这是**不依赖时间切分**的策展滞后假说的第一个检验。我们把它报成*得到支持*，不是*已被证明*，
+因为一份 2019 年的目录与 IntOGen 2024 的差别不只是年龄。
+再把方差分解在 30 格网格上重算：label 主效应在臂间差异中的份额从 **34.78 % 降到 30.75 %**，
+交互从 **40.07 % 升到 41.95 %**，格内噪声从 **40.39 % 升到 41.56 %**（占总方差）。
+但要记住 NCG 与 IntOGen 有 **65 % 完全相同**——Jaccard **0.522**——
+所以这测的是"加一个**冗余**标签"的效果，不是加一个独立标签。
 
 ---
 
@@ -830,36 +605,24 @@ independent one.
 
 [`【图：附录 A12（基线族扫描）→ 附录 A13（标签难度回归）】`]
 
-Two controls we added after the review pass, both because they are
-questions an examiner will ask and both because the answers cost us
-something.
+这两个控制是复审之后我们补上的，两个都是"评委会问"的问题，
+而且两个的答案都让我们付出代价。
 >
-**A12, the baseline family.** The headline is a margin over degree, so
-the first objection is that degree is a strawman. On the same folds and
-the same test genes we ran closeness centrality, eigenvector centrality
-and PageRank as additional baselines. Closeness **beats degree in all
-24 arms**; the strongest baseline in an arm is closeness in 18 of 30
-arms and eigenvector in the other 12, and degree in **none**. The
-second objection is that RWR is a lucky special case: at the damping
-the PageRank literature uses, 0.85, the margin is positive in 23 of 24
-arms at **+0.0571**, about 30 % smaller than at our locked 0.5. And
-against the best competitor in each arm the prior is positive in **19
-of 24** arms, median **+0.0461**. Two numbers to quote: **+0.0809
-against degree, +0.0461 against the strongest baseline**.
+**A12，基线族。**headline 是相对度的 margin，所以第一个质疑就是"度是稻草基线"。
+在同一批折、同一批测试基因上，我们把 closeness 中心性、特征向量中心性和 PageRank
+也当作基线跑了一遍：**closeness 在 24 个臂里全都赢 degree**；
+按"每臂最强基线"统计，closeness 占 18 / 30 个臂、特征向量占另外 12 个臂，**degree 一个都没有**。
+第二个质疑是"RWR 只是运气好"：在 PageRank 文献使用的阻尼 0.85 下，
+margin 仍是 23 / 24 个臂为正、**+0.0571**，比我们锁定的 0.5 小约 30 %。
+而对每臂最好的那个竞争者，先验仍 **19 / 24** 个臂为正、中位 **+0.0461**。
+两个要背下来的数：**对度 +0.0809，对最强基线 +0.0461**。
 >
-**A13, the label difficulty.** The variance decomposition attributes
-**34.78 %** of the between-arm spread to a label main effect. Is that
-five curation philosophies or one difficulty axis? We regressed the
-arm-level margin on label-level difficulty numbers with network fixed
-effects. One number — the label's mean AUROC under the prior — recovers
-**97.8 %** of everything the full label factor explains, and the label
-factor adds nothing beyond it (F-test **p = 0.38**). And the mechanism
-is visible: the label with the smallest margin, the newest-driver label,
-is also the label on which **every** scorer is weakest (degree AUROC
-0.583, RWR AUROC 0.604, against 0.73–0.77 for the others). So the
-label effect is difficulty, not five opinions about biology, and the
-four arms that fail the strictest interval fail because the problem is
-hard there, not because the prior is wrong.
+**A13，标签难度。**方差分解把臂间差异的 **34.78 %** 归给 label 主效应。
+那是五种策展哲学，还是一个难度轴？我们做了臂级回归（网络固定效应 + 标签级难度数）：
+**单一标签级数字就能解释 label 因子全部解释力的 97.8 %**，
+而 label 因子在它之外**不再带来任何东西**（F 检验 **p = 0.38**）。
+机制在表里看得很清楚：**margin 最小的那个标签，也是所有打分器都最弱的标签**——
+是那道题本身更难，不是先验在那里失效。
 
 ---
 
@@ -867,62 +630,45 @@ hard there, not because the prior is wrong.
 
 [`【图：slide 14（结论）→ slide 15（局限 → 验证实验）→ slide 16（交付物 + AI 声明）】`]
 
-Six conclusions.
-**One**: a network prior contributes signal beyond node degree — 23 of
-24 arms positive, the pre-registered rule met under four of five
-interval constructions. **Two**: the contribution is real but modest
-and label-dependent — median +0.081, and re-running the benchmark with the curated drivers removed from the negative set leaves it at +0.082 (23/24 arms, no sign flip) — the contamination of the background is not what carries the result. **Three**: much of the
-published margin is study visibility — a bait-matched null removes
-most of the enrichment, and the temporal label's advantage collapses
-to +0.002. **Four**: the prior's instability is intrinsic — the
-gene's own score variance explains it, and bagging the prior is a
-provable no-op, so no learner can remove it. **Five**: curated
-networks fail on recently discovered drivers — Reactome is +0.089 on
-the 2019 catalogue and negative on the two newest. **Six**: one of our
-three pre-registered hypotheses was never testable — H2, provenance
-invariance, because the provenance classes hold 3, 1 and 2 networks and
-provenance is confounded with size and coverage; the smallest attainable
-p-value on that design is 0.1173, so we record it as **not tested**
-rather than reporting a p-value that could never have been small.
+六条结论。
+**一**：网络先验确实贡献了超出节点度的信号——23 / 24 个臂为正，
+预注册规则在五种区间构造里的四种下达成。
+**二**：这个贡献是真的，但不大，而且依赖标签——中位 +0.081；
+换成最强的经典基线是 19 / 24 个臂、+0.046；
+而把策展 driver 从阴性集里清掉再重跑，结论不变（23 / 24 个臂、中位 +0.082）。
+**三**：已发表的 margin 里有很大一部分是**研究可见度**——bait 匹配零模型去掉了大部分富集，
+temporal 标签上的优势塌到 +0.002。
+**四**：先验的不稳定性是内在的——基因自身的分数方差解释了它，
+而 bagging 先验是**可证明的空操作**，所以没有任何 learner 能把它去掉。
+**五**：策展型网络在最近才发现的驱动基因上失效——Reactome 在 2019 年目录上是 +0.089，
+在两个最新目录上是负的。
+**六**：我们三个预注册假说里**有一个从来就不可检验**——H2，来源不变性，
+因为三个来源类别只有 3、1、2 张网络，且来源与规模、覆盖度混淆；
+那个设计下能返回的最小 p 值是 0.1173，所以我们记为**未检验**，
+而不是报一个永远不可能小的 p 值。
 >
-**The limits, and what would change our mind** — every limitation we
-know of has a named experiment: the gene-cluster interval misses four
-arms → re-run on an independent cell-line-derived label; our negative
-set is contaminated → re-derive it with explicit NCG and ClinGen
-exclusion; the evaluation is self-referential → run a blind
-expert-panel challenge; we have no perturbation experiment, so we
-claim no causality → edit the seed set and measure the effect on the
-predicted neighbourhood; we test one learner and one baseline → the
-increment is learner-specific (a proximity learner gives 16/24 arms and
-+0.011), and degree is not the strongest baseline (closeness beats it
-in 24/24 arms), so the remaining experiment is a seed-using
-closeness-style learner under the same locked protocol; and H2 needs a
-larger, size- and coverage-matched panel — at least four networks per
-provenance class.
+**局限，以及什么会改变我们的想法**——我们知道的每一个局限都配了一个有名字的实验：
+gene-cluster 区间在 4 / 24 个臂上失败 → 在一个独立的细胞系来源标签上重跑；
+我们的阴性集被策展 driver 污染 → 显式排除 NCG 与 ClinGen 后重新推导它；
+评估是自指的 → 跑一场盲测专家挑战；我们没有扰动实验，所以不主张因果 →
+改种子集并测量对预测邻域的影响；我们只测了一个 learner 和一个基线 →
+增量是 learner-specific 的，而且 closeness 在 24 / 24 个臂里赢度 →
+剩下的实验是在同一套锁定协议下做一个**用种子的 closeness 式局部 learner**；
+而 H2 需要更大、规模与覆盖度都匹配的面板——每类至少 4 张。
 >
-**Everything is public and re-runnable**: the code, tables, figures
-and split manifests are on GitHub at the v1.0-rc5 tag; the
-pre-registration is frozen at Zenodo DOI 10.5281/zenodo.23121762 with
-its amendments; two independent audit scripts pass **50 of 50** and
-**136 of 136** checks; and every figure in this talk is generated from a
-released table by a script in the repository.
+**一切都是公开、可重跑的**：代码、表格、图和切分清单都在 GitHub 的 v1.0-rc5 标签上；
+预注册冻结在 Zenodo DOI 10.5281/zenodo.23121762，连同它的修订记录；
+两个独立的审计脚本分别通过 **50 / 50** 和 **136 / 136** 项检查；
+这次报告里的每一张图，都是由仓库里的脚本从已发布的表格生成的。
 >
-**AI use statement.** AI tools assisted with code drafting, debugging,
-literature triage and slide layout. Every number in this talk comes
-from our own scripts and tables, verified by the two audit scripts;
-every figure is generated from a released table; **no simulated result
-is presented as a measured one**. The scientific decisions — the
-panel, the frozen learner, the endpoint, the decision rule, and the
-interpretation of every negative cell — were made by the group and are
-recorded in `docs/decisions.md`.
+**AI 使用声明。**AI 工具协助了代码起草、调试、文献分诊和版面整理。
+这次报告里的每一个数字都来自我们自己的脚本和表格，并由两个审计脚本验证；
+每一张图都由已发布的表格生成；**没有任何模拟结果被当作实测结果呈现**。
+科学决策——面板、冻结的 learner、端点、判定规则，以及每一个负结果的解读——
+都是小组做的，并且记录在 `docs/decisions.md` 里。
 >
-So the one sentence I would like you to take away: **network priors do
-help, but the honest number is much smaller than the headline one, and
-the difference is mostly about how often a gene has been published.**
-The benchmark, the pre-registration and the amendments are public —
-please re-run it and check us.
->
-Thank you.
+所以，如果只让我留下一句话：**网络先验确实有用，但诚实的数字比 headline 小得多，
+而这个差距大部分是关于"一个基因被发表过多少次"。**
 
 ---
 
