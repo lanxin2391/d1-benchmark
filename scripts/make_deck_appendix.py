@@ -504,7 +504,12 @@ if c21 is not None:
                 "too: the bait-matched null recomputed with the proximity "
                 "learner. The sign of the drop agrees in 24/24 arms, and "
                 "the newest-driver label falls to chance under both "
-                "learners. Source: c21_visibility_learner_comparison.tsv.",
+                "learners. The rewiring null was also checked under the "
+                "second learner on ONE arm (funmap x intogen2024, 20 "
+                "rewirings): observed +0.0804 against a rewired null of "
+                "-0.0124 +- 0.0072, z = +12.9 -- a feasibility check, not "
+                "the control. Source: c21_visibility_learner_comparison.tsv, "
+                "c22_rewiring_second_learner_summary.tsv.",
         "table": {"head": ["the 24 primary arms", "above the unmatched null",
                            "above the matched null", "the drop (or the two learners)",
                            "reading"],
