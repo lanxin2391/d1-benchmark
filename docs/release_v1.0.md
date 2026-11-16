@@ -1,7 +1,7 @@
 # D1 benchmark — v1.0-rc4 release note
 
 **Release commit:** `d9408299b81d8114531ddf6316f4c5b6f714c95e` (tag `v1.0-rc4`)
-**Built:** 2026-11-12
+**Built:** 2026-11-16
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
 (DOI 10.5281/zenodo.23121762) is the frozen v1 and is unchanged.
@@ -16,6 +16,18 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc4
+
+| area | change |
+|---|---|
+| Control 19 -- the baseline family sweep | three more classical baselines on the same folds and the same test genes (closeness, eigenvector centrality, PageRank) plus the literature's default PageRank damping. **Closeness beats degree in 24/24 arms**, and against the strongest baseline in each arm the prior is positive in **19/24 arms** (median **+0.0461** against +0.0809 against degree). The headline is now stated with that qualification. `scripts/run_baseline_family.py`, `results/tables/baseline_family_*.tsv`, `docs/baseline_family.md` |
+| Control 20 -- the label-difficulty regression | the label main effect of the variance decomposition is **one difficulty axis, not five curation philosophies**: a single label-level number recovers **97.8 %** of what the full label factor explains (F-test p = 0.38). `scripts/run_label_difficulty_regression.py`, `results/tables/label_difficulty_*.tsv`, `docs/label_difficulty_regression.md` |
+| the H2 disclosure | the manuscript has always said that H2 (provenance invariance) is **not testable** on this panel (3/1/2 networks per class, provenance confounded with size and coverage, smallest attainable Kruskal-Wallis p = 0.1173). The defence material now says the same, in one place each: deck slides 2, 14 and 15, the speaker script's opening and number card 30, Q&A bank C22, and the plain-language report's 3.4 |
+| the claim verification | `scripts/recompute_ground_truth.py` now records **415** quantities (was 296) and `scripts/verify_claims.py` runs **136 checks** (was 104). Two of the new checks are FORBIDDEN entries for the superseded "the margin shrinks by half" sentence, which had survived the C9 correction in the abstract and the integrated draft; both are corrected now, and a revert fails the audit |
+| the release manifest | it covers **185 tables + 14 figures** (was 144 + 14) |
+| the repository | the per-gene score dumps of the cap and no-database arms (682 MB of derived data) are untracked again, and `.gitignore` carries one general rule for every `results/scores_*` directory. The source zip is 216.7 MB again |
+| the defence material | the deck has 29 slides (the body is still 16 pages; two evidence pages were added), the speaker script runs to 39.5 minutes with 30 number cards, the Q&A bank has 51 + 3 questions and eleven defensive facts, and the plain-language report is a separate deliverable |
 
 ## What changed since v1.0-rc3
 
