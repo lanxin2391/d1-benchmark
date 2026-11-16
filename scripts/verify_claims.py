@@ -228,6 +228,22 @@ CLAIMS: list[tuple[str, str, str, str]] = [
      "+0.046 against the strongest classical baseline",
      "the abstract must qualify the headline against the strongest baseline"),
 
+    # ---- C22: the rewiring feasibility check under the second learner ---
+    ("c22.manuscript", "manuscript_a_sections.md",
+     "Control 22 is a **feasibility check on one arm**",
+     "§F.24 must label the rewiring check as a feasibility check"),
+    ("c22.z", "manuscript_a_sections.md",
+     "| proximity (20 rewirings) | **+0.0804** | **−0.0124 ± 0.0072** | "
+     "**+12.9** |",
+     "§F.24 must give the rewiring null under the second learner"),
+    ("c22.degree", "manuscript_a_sections.md",
+     "the largest difference in any gene's degree over\nthe 20 rewirings is "
+     "**0**",
+     "§F.24 must state that the rewiring preserves the degree sequence"),
+    ("c22.draft", "research_report_draft.md",
+     "the largest degree difference over the 20 rewirings is\n**0**",
+     "§3.19 of the draft must carry the same result"),
+
     # ---- C21: the visibility decomposition under the second learner ---
     ("c21.dropsign", "manuscript_a_sections.md",
      "the sign of the drop agrees in 24 of 24 arms",

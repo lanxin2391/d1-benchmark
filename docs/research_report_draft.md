@@ -1674,6 +1674,28 @@ the data, not of the learner we happened to freeze -- and the part Guala
 & Sonnhammer never measured, because they did not measure visibility at
 all, is the part that survives the change of learner.
 
+**The last learner-sensitive piece: the rewiring null.** One null was
+measured only under RWR -- the **degree-preserving rewiring** of Control
+2, which asks whether the signal is carried by the *wiring* rather than
+by the degree sequence. The full version under the proximity learner
+needs about 470,000 multi-source BFS runs, so Control 22 is a
+**feasibility check on one arm** (funmap × intogen2024), reading the 20
+rewired networks Control 2 had already produced:
+
+| funmap × intogen2024 | observed | rewired null | z |
+|---|---|---|---|
+| RWR (100 rewirings) | +0.0998 | +0.0024 ± 0.0103 | +94.2 |
+| proximity (20 rewirings) | **+0.0804** | **−0.0124 ± 0.0072** | **+12.9** |
+
+Every rewired network gives a **negative** margin (−0.0001 to −0.0310):
+re-paired wiring actively hurts the proximity learner, exactly as it
+hurts the diffusion one. The rewiring also preserves the degree sequence
+**exactly** (the largest degree difference over the 20 rewirings is
+**0**), so the null keeps the hubs and only re-pairs them. The control is
+computable under the second learner, and the full grid (six networks ×
+four labels × ~100 rewirings) is the first item of the validation plan.
+**One arm out of 24: a feasibility check, not the control.**
+
 **One methodological note.** The proximity learner's score is an integer
 distance, so almost every test gene ties with another one; G3's strict
 comparison counts a tie as "not above", which inflates the statistic

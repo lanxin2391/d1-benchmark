@@ -694,6 +694,32 @@ def recent_series() -> None:
                r4(sel.median_p.median()),
                "results/tables/depmap_validation.tsv")
 
+    # ---- C22: the rewiring feasibility check under the second learner ---
+    c22 = t("c22_rewiring_second_learner_summary.tsv")
+    r22 = c22.iloc[0]
+    record("rewiring_second_learner", "the observed proximity margin",
+           r4(r22.observed_proximity_margin),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+    record("rewiring_second_learner", "the rewired null mean",
+           r4(r22.null_mean),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+    record("rewiring_second_learner", "the rewired null SD",
+           r4(r22.null_sd),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+    record("rewiring_second_learner", "the z score",
+           r4(r22.z_score),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+    record("rewiring_second_learner", "the rewirings used",
+           int(r22.n_rewire),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+    record("rewiring_second_learner",
+           "the largest degree difference over the rewirings",
+           int(r22.max_degree_difference_over_rewirings),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+    record("rewiring_second_learner", "the RWR z on the same arm",
+           r4(r22.rwr_z_score),
+           "results/tables/c22_rewiring_second_learner_summary.tsv")
+
     # ---- C21: the visibility decomposition under the second learner ---
     c21 = t("c21_visibility_learner_comparison.tsv")
     c21p = c21[c21.label.isin(["intogen2024", "ot_all", "ot_nolit",

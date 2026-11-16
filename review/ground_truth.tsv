@@ -336,6 +336,13 @@ depmap	K=30 median share of cell lines enriched (%)	5.827	results/tables/depmap_
 depmap	K=30 median p-value	0.5228	results/tables/depmap_validation.tsv	
 depmap	K=100 median share of cell lines enriched (%)	47.6436	results/tables/depmap_validation.tsv	
 depmap	K=100 median p-value	0.058	results/tables/depmap_validation.tsv	
+rewiring_second_learner	the observed proximity margin	0.0804	results/tables/c22_rewiring_second_learner_summary.tsv	
+rewiring_second_learner	the rewired null mean	-0.0124	results/tables/c22_rewiring_second_learner_summary.tsv	
+rewiring_second_learner	the rewired null SD	0.0072	results/tables/c22_rewiring_second_learner_summary.tsv	
+rewiring_second_learner	the z score	12.9194	results/tables/c22_rewiring_second_learner_summary.tsv	
+rewiring_second_learner	the rewirings used	20	results/tables/c22_rewiring_second_learner_summary.tsv	
+rewiring_second_learner	the largest degree difference over the rewirings	0	results/tables/c22_rewiring_second_learner_summary.tsv	
+rewiring_second_learner	the RWR z on the same arm	94.1568	results/tables/c22_rewiring_second_learner_summary.tsv	
 visibility	RWR: positives above the unmatched null (median)	17.6339	results/tables/c21_visibility_learner_comparison.tsv	
 visibility	RWR: positives above the matched null (median)	11.5907	results/tables/c21_visibility_learner_comparison.tsv	
 visibility	proximity: positives above the unmatched null (median)	7.7021	results/tables/c21_visibility_learner_comparison.tsv	

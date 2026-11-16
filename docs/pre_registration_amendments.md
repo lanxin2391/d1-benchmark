@@ -1028,6 +1028,7 @@ are directly comparable to it.
 | 20 | the label-difficulty regression (Control 20) | exploratory | no | `label_difficulty_coefs.tsv` |
 | 21 | the H2 verdict restated in the defence materials | disclosure (no new analysis) | no | slide 2 / 14 / 15, script, Q&A C22 |
 | 22 | the visibility decomposition under the second learner (Control 21) | exploratory | no | `c21_visibility_learner_comparison.tsv` |
+| 23 | the rewiring null under the second learner, one arm (Control 22) | exploratory (feasibility) | no | `c22_rewiring_second_learner_summary.tsv` |
 
 ### A6.7 Control 21 — the visibility decomposition under the second learner
 
@@ -1061,6 +1062,29 @@ decomposition this project reports is a property of the data, not of the
 learner we happened to freeze — and the part Guala & Sonnhammer never
 measured, because they never measured visibility, is the part that
 survives the change of learner.
+
+### A6.8 Control 22 — the rewiring null under the second learner (feasibility)
+
+One null was still measured only under RWR: the degree-preserving
+rewiring of Control 2, which asks whether the signal is carried by the
+*wiring* rather than by the degree sequence. The full version under the
+proximity learner needs about 470,000 multi-source BFS runs, so
+Control 22 is a **feasibility check on one arm** (`funmap ×
+intogen2024`), reading the 20 rewired networks that Control 2 had
+already produced rather than re-running the rewiring.
+
+| funmap × intogen2024 | observed | rewired null | z |
+|---|---|---|---|
+| RWR (100 rewirings) | +0.0998 | +0.0024 ± 0.0103 | +94.2 |
+| proximity (20 rewirings) | +0.0804 | −0.0124 ± 0.0072 | +12.9 |
+
+Every rewired network gives a negative margin (−0.0001 to −0.0310), and
+the rewiring preserves the degree sequence **exactly** (the largest
+difference in any gene's degree over the 20 rewirings is 0), so the null
+keeps the hubs and only re-pairs them. The control is computable under
+the second learner; the full grid (six networks × four labels × ~100
+rewirings) is the first item of the validation plan. **This is one arm
+out of 24 and is labelled a feasibility check everywhere it appears.**
 
 **A methodological note that belongs in the record.** The proximity
 learner's score is an integer distance, so almost every test gene ties

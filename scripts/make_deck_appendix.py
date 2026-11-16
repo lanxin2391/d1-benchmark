@@ -471,6 +471,17 @@ if c21 is not None:
          f"{prim.prox_drop.median():.1%} points",
          "the SAME effect, under a different learner"],
     ]
+    c22 = load("c22_rewiring_second_learner_summary.tsv")
+    if c22 is not None:
+        s22 = c22.iloc[0]
+        rows.append([
+            "the rewiring null, one arm",
+            f"RWR {s22.observed_rwr_margin:+.4f} vs null "
+            f"{s22.rwr_null_mean:+.4f} (z {s22.rwr_z_score:+.0f})",
+            f"proximity {s22.observed_proximity_margin:+.4f} vs null "
+            f"{s22.null_mean:+.4f} (z {s22.z_score:+.1f})",
+            "funmap x intogen2024, 20 rewirings",
+            "a FEASIBILITY CHECK, one arm of 24"])
     for lab in ["intogen2024", "ot_all", "ot_nolit",
                 "intogen_temporal_new"]:
         r = c21[c21.label == lab]

@@ -349,6 +349,17 @@ Is degree a strawman baseline, and is RWR a lucky special case?
 - the sign of the drop agrees in **24/24** arms; the newest-driver label falls to chance (5 %) under both learners
 - the matcher reproduces the published G3 statistic exactly on the RWR dumps of one arm (0.0854 against 0.0854)
 
+## 7e. The rewiring null under the second learner (Control 22, a feasibility check)
+
+| funmap x intogen2024 | observed | rewired null | z |
+|---|---|---|---|
+| RWR (100 rewirings) | +0.0998 | +0.0024 +- 0.0103 | +94.2 |
+| proximity (20 rewirings) | **+0.0804** | **-0.0124 +- 0.0072** | **+12.9** |
+
+- the degree sequence is preserved exactly (the largest difference in any gene's degree over the 20 rewirings is **0**)
+- every rewired network gives a negative margin: re-paired wiring actively hurts the learner
+- **one arm out of 24, 20 rewirings: a feasibility check**, not the control; the full grid is the first item of the validation plan
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

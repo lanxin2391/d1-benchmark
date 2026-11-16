@@ -464,6 +464,30 @@ if c21 is not None:
       "RWR dumps of one arm (0.0854 against 0.0854)")
     w("")
 
+# ---- 7e. the rewiring feasibility check under the second learner ----
+c22 = load("c22_rewiring_second_learner_summary.tsv")
+if c22 is not None:
+    s = c22.iloc[0]
+    w("## 7e. The rewiring null under the second learner (Control 22, "
+      "a feasibility check)")
+    w()
+    w("| funmap x intogen2024 | observed | rewired null | z |")
+    w("|---|---|---|---|")
+    w(f"| RWR (100 rewirings) | {s.observed_rwr_margin:+.4f} | "
+      f"{s.rwr_null_mean:+.4f} +- {s.rwr_null_sd:.4f} | {s.rwr_z_score:+.1f} |")
+    w(f"| proximity (20 rewirings) | "
+      f"**{s.observed_proximity_margin:+.4f}** | "
+      f"**{s.null_mean:+.4f} +- {s.null_sd:.4f}** | **{s.z_score:+.1f}** |")
+    w()
+    w(f"- the degree sequence is preserved exactly (the largest difference "
+      f"in any gene's degree over the {int(s.n_rewire)} rewirings is "
+      f"**{int(s.max_degree_difference_over_rewirings)}**)")
+    w("- every rewired network gives a negative margin: re-paired wiring "
+      "actively hurts the learner")
+    w("- **one arm out of 24, 20 rewirings: a feasibility check**, not the "
+      "control; the full grid is the first item of the validation plan")
+    w()
+
 # ---- 8. the panel --------------------------------------------------
 w("## 8. The design (panel and labels)")
 w()
