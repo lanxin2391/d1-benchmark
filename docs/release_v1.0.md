@@ -1,6 +1,6 @@
-# D1 benchmark — v1.0-rc4 release note
+# D1 benchmark — v1.0-rc6 release note
 
-**Release commit:** `d9408299b81d8114531ddf6316f4c5b6f714c95e` (tag `v1.0-rc4`)
+**Release commit:** `4c659ca` (tag `v1.0-rc6`)
 **Built:** 2026-11-16
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
@@ -16,6 +16,17 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc5
+
+| area | change |
+|---|---|
+| Control 21 -- the visibility decomposition under the second learner | the bait-matched null recomputed with the proximity learner as the scorer (same splits, folds, publication counts and matching rule; the matcher reproduces the published G3 statistic exactly on the RWR dumps). RWR 17.6 % -> 11.6 %, proximity 7.7 % -> 4.8 %, and **the sign of the drop agrees in 24 of 24 arms**; the newest-driver label falls to chance under both learners. **The size of the topology component is learner-dependent; the visibility component is not.** `scripts/run_c21_visibility_second_learner.py`, `results/tables/c21_visibility_*.tsv` |
+| the headline | it is now an interval rather than a point: **+0.081** against degree, **+0.046** against the strongest classical baseline, **+0.011** under a second locked learner |
+| a methodological correction inside Control 21 | the proximity learner's score is an integer distance, so almost every test gene ties; G3's strict comparison counts a tie as "not above", which inflates the statistic (91 % against an AUROC of 0.627). The comparison is made on the protocol's ranks (decision D-07). RWR has few ties, so its published numbers are unchanged, and the self-check confirms it |
+| the speaker script | rewritten in Chinese (the slides stay English): 7,530 characters plus 326 numbers, about 38-40 minutes; the English draft is kept as `docs/report_1118_speaker_script_en.md` |
+| the claim verification | `scripts/recompute_ground_truth.py` records **436** quantities (was 415) and `scripts/verify_claims.py` runs **140 checks** (was 136) |
+| the release manifest | it covers **187 tables + 14 figures** (was 185 + 14) |
 
 ## What changed since v1.0-rc4
 
