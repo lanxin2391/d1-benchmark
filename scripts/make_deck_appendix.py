@@ -516,19 +516,59 @@ if c21 is not None:
                   "rows": rows, "fontsize": 11, "rowh": 0.46},
     })
 
-# ---- A15: what we would build with AI -------------------------------
+# ---- A15: how we used AI in this project ----------------------------
 slides.append({
     "n": 31, "kind": "appendix", "tag": "PART 2 · A15",
-    "title": "What we would build with AI (two designs)",
-    "note": "Both designs use machine learning the same way: not to replace "
-            "the network as a scorer, but to subtract hubness and study "
-            "visibility so that what the network contributes can be read "
-            "off directly. Each has its endpoint fixed in advance, so it "
-            "can be criticised before it is run. NO result in this talk was "
-            "produced by an AI system: AI assisted with code drafting, "
-            "debugging, literature triage and layout; every number comes "
-            "from our own scripts and released tables and is checked by two "
-            "audit scripts (136 and 71 checks).",
+    "title": "How we used AI in this project",
+    "note": "Every use below is traceable to something in the repository. "
+            "NO result in this talk was produced by an AI system: every "
+            "number comes from our own scripts and released tables and is "
+            "checked by two audit scripts (136 and 71 checks).",
+    "table": {"head": ["the use", "what it produced here"],
+              "rows": [
+                  ["literature triage",
+                   "41 papers read and structured into one comparative "
+                   "table; that table is the origin of most of the control "
+                   "stack -- complex leakage -> complex-aware CV, bait "
+                   "bias -> the publication-adjusted label and the "
+                   "bait-matched null, coverage bias -> the shared gene "
+                   "universe and the common-size cap"],
+                  ["adversarial reading",
+                   "the model was asked to argue against our conclusions; "
+                   "each objection had to become a falsifiable control. "
+                   "Three recent examples: the baseline family sweep, the "
+                   "label-difficulty regression, and the visibility "
+                   "decomposition under a second learner -- and TWO of "
+                   "them returned results that cost us (closeness beats "
+                   "degree in 24/24 arms; the increment is "
+                   "learner-specific)"],
+                  ["scripted presentation",
+                   "every figure, table and slide is generated from the "
+                   "released tables; the deck is built from JSON, the "
+                   "appendix tables are exported from the result tables, "
+                   "and the manuscript's Word and PDF come from one "
+                   "Markdown source -- no number on a slide is typed by "
+                   "hand"],
+                  ["what it taught us",
+                   "(1) the most productive role for the model is the "
+                   "adversary and the checker, not the generator; "
+                   "(2) anything a model touches has to be machine-"
+                   "verifiable, hence two audit scripts and 443 recomputed "
+                   "quantities; (3) a model inherits the bias of the "
+                   "training set, so the unfavourable controls have to be "
+                   "run by us -- 'closeness beats degree' came from "
+                   "exactly that step"],
+              ],
+              "fontsize": 10.5, "rowh": 1.25},
+})
+
+# ---- A16: the two designs this use suggests -------------------------
+slides.append({
+    "n": 32, "kind": "appendix", "tag": "PART 2 · A16",
+    "title": "Two designs this use suggests",
+    "note": "Both follow from the adversarial reading above and have their "
+            "endpoint fixed in advance, so they can be criticised before "
+            "they are run. They are specifications, not results.",
     "table": {"head": ["the design", "the problem", "what it is",
                        "how it would be validated"],
               "rows": [
@@ -561,7 +601,6 @@ slides.append({
               ],
               "fontsize": 10, "rowh": 1.15},
 })
-
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps({"slides": slides}, indent=1, ensure_ascii=False),

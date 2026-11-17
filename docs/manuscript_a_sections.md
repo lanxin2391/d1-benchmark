@@ -2565,83 +2565,101 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
 
 ---
 
-## §L. What an AI-fused design would look like
+## §L. How AI was used in this project, and what it taught us
 
-Two designs, each written so that it can be criticised before it is run.
-Both use machine learning in the same way: **not to replace the network
-as a scorer, but to subtract the two confounds we have measured -- hubness
-and study visibility -- so that whatever the network contributes can be
-read off directly.**
+### L.1 Three uses, each traceable to something in the repository
 
-### L.1 A visibility-debiased graph neural network
+**Literature triage.** We used a language model to read and structure 41
+methodological papers -- their method, their hyper-parameters, their
+assumptions and the objections they raise -- into a single comparative
+table. That table, not our memory, is the origin of most of the control
+stack: the complex leakage of Picart-Armada et al. became the
+complex-aware cross-validation of §F.6, the bait bias of Schaefer et al.
+became the publication-adjusted label and the bait-matched null of §F.12,
+and the coverage bias of Wright et al. became the shared gene universe of
+§F.4 and the common-size cap of §F.3.
 
-**The problem.** Existing network methods score a gene with hubness and
-study visibility built in, so the improvement they report cannot be
-attributed to topology (§F.12). Deep models make this worse rather than
-better: our GNN courtesy arm reaches a margin of only +0.028 against
-RWR's +0.079 (§J.4), because a message-passing model propagates
-hubness efficiently.
+**Adversarial reading.** We used the model in the opposite role: to argue
+against our own conclusions. Each objection it raised had to be turned
+into a falsifiable control before it counted. The three most recent
+examples are the baseline family sweep (§F.22), the label-difficulty
+regression (§F.23) and the visibility decomposition under a second
+learner (§F.24) -- and two of the three returned results that cost us:
+closeness centrality beats degree in every arm, and the increment is
+learner-specific. Those findings are in the paper because the model
+proposed the tests, not because they flattered us. The same adversarial
+pass over our own manuscript and code found real inconsistencies, among
+them a conclusion that still quoted a superseded post-hoc result and two
+coefficients that disagreed with the released tables.
 
-**What it is.** A graph neural network with **degree and publication
-count excluded from the node features**, so that neither can be used
-directly; and a training objective that is **not** "predict the driver
-label" but "predict the label after the positives have been re-paired on
-publication count", which removes the research-intensity shortcut from
-the training signal. The model outputs a per-gene *structural contribution
-score*.
+**Scripted presentation.** Every figure, table and slide in this project
+is generated from the released tables by a script; the deck is built from
+JSON, the appendix tables are exported from the result tables, and the
+manuscript's Word and PDF versions are produced from one Markdown source.
+No number on a slide is typed by hand, which is why the same figures
+appear in the paper, the deck and this document.
 
-**How it would be validated.** On the same 200 evaluations per arm and
-the same endpoint (ΔAUROC = AUROC(model score) − AUROC(degree)), three
-results would be reported side by side: RWR (+0.0809), a plain
-structure-only GNN, and the debiased model; and then the decisive test --
-whether the debiased score remains positive **under the
-publication-matched null** of §F.12. If it does, the model has learned
-structure rather than visibility.
+### L.2 Three things we learned from using it
 
-**What it does not fix.** The training signal is small (152 to 633
-positives per arm, so the smallest label may be under-trained); the model
-depends on hyper-parameters and would have to be pre-registered; and the
-evidence of §F.21 suggests that the structural increment on a functional
-task is limited in any case.
+**The most productive role for the model is the adversary and the
+checker, not the generator.** Every finding in this paper that survived
+came from a test we did not have to think of ourselves; no number in this
+paper was produced by a model.
 
-### L.2 An LLM-assisted evidence layer, with a pre-registered rubric and blinded adjudication
+**Anything a model touches has to be machine-verifiable.** Our review
+passes exposed how easy it is for prose to drift away from the tables, so
+we replaced human cross-checking with two audit scripts (136 and 71
+checks) and a ground-truth table of 443 recomputed quantities.
 
-**The problem.** The label panel is the binding constraint of the whole
-design: the catalogues carry one dimension rather than five (§F.23), and
-ClinGen's own panels disagree on 17 % of the variants they examine
-jointly (§F.18). In other words, the answer key we use to test the
+**A model inherits the bias of the training set, which is why the
+unfavourable controls have to be run by us.** The model proposes
+plausible-sounding analyses; the plausible ones are often the ones already
+in the literature. The baseline sweep is the clearest case: we only ran
+closeness against ourselves because the model was asked to attack our
+choice of baseline, and it is the control that most reduced our headline.
+
+### L.3 Two designs this use suggests
+
+The same adversarial process points at two designs, both with their
+endpoint fixed in advance.
+
+**A visibility-debiased graph neural network.** Network methods score
+with hubness and study visibility built in, so the reported gain cannot
+be attributed (§F.12), and deep models amplify hubness rather than
+reducing it: our GNN courtesy arm reaches a margin of only +0.028
+against RWR's +0.079 (§J.4). A GNN that receives **neither degree nor
+publication count** as node features, trained on **publication-re-paired**
+labels so that research intensity cannot be used as a shortcut, would
+output a structural contribution score that can be read directly. It
+would be validated on the same folds and the same endpoint, with the
+decisive test being whether it stays positive under the
+publication-matched null. Its limits are equally clear: 152 to 633
+positives per arm, a pre-registered hyper-parameter set, and the evidence
+of §F.21 that the structural increment is limited in any case.
+
+**An LLM-assisted evidence layer.** The label panel is the binding
+constraint of the design: the catalogues carry one dimension rather than
+five (§F.23) and ClinGen's own panels disagree on 17 % of the variants
+they examine jointly (§F.18) -- the answer key we use to test the
 network is itself partly a function of how thoroughly a gene has been
-published.
+published. A language model that extracts driver assertions from the
+primary literature under a **fixed rubric**, with provenance retained, two
+independent passes and a **blinded human adjudicator on a random 20 %**
+sample (Cohen's kappa reported), would give an evidence axis that is not
+derived from the catalogues being tested. The first thing to report would
+be its overlap with the four existing catalogues: if the new axis is
+again nearly collinear with them, the circularity stands. The limit is
+that an extractor inherits the literature's publication bias by
+construction and can only complement the expert panels.
 
-**What it is.** A language model extracts, from the primary literature,
-assertions of the form "this gene is a driver", under a **fixed rubric**
-(recurrence, functional assay, rescue, germline segregation), with the
-provenance of every assertion retained; two independent extractions with
-a frozen prompt and temperature; and a **blinded human adjudicator on a
-random 20 % sample**, with the agreement (Cohen's kappa) reported as a
-headline number. The extracted tiers form an evidence axis that is **not
-derived from the catalogues being tested**.
-
-**How it would be validated.** First, and before anything else, the
-overlap between the extracted tiers and the four existing catalogues: if
-the new axis is again nearly collinear with them, the circularity has not
-been broken, and that has to be reported first. Then the primary design
-is re-run with the extracted tiers as a fifth label, and the H1 verdict
-is compared.
-
-**What it does not fix.** An extractor inherits the literature's
-publication bias by construction, so it can only complement the expert
-panels, never replace them; without stratification by evidence type it
-would make the label axis *more* publication-dependent rather than less.
-
-### L.3 What we did not do
+### L.4 What was not done
 
 No result in this paper was produced by an AI system. AI tools assisted
-with code drafting, debugging, literature triage and figure layout; every
-number comes from our own scripts and released tables and is checked by
-two independent audit scripts (136 and 71 checks). The two designs above
-are specifications with pre-registered endpoints precisely so that they
-can be judged without trusting the tool that would build them.
+with code drafting, debugging, literature triage, adversarial review and
+figure layout; every number comes from our own scripts and released
+tables and is checked by two independent audit scripts. The two designs
+above are specifications, so that they can be judged without trusting the
+tool that would build them.
 
 ## Cross-references
 
