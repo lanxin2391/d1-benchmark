@@ -1,4 +1,4 @@
-# D1 benchmark — v1.0-rc9 release note
+# D1 benchmark — v1.0-rc10 release note
 
 **Release commit:** `see the tag v1.0-rc8`
 **Built:** 2026-11-16
@@ -16,6 +16,12 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc9
+
+| area | change |
+|---|---|
+| the title | one sentence, no punctuation inside, written in the shape the source papers use ("Comprehensive Characterization of...", "Mapping...", "Benchmarking..."), and the Chinese and English correspond word for word: **《癌症驱动基因排序中网络先验贡献的定量分解》** / **Quantitative decomposition of the contribution of network priors to cancer-driver gene prioritisation**. The paper, the deck cover, the spoken script and the PDF all carry the same name |
 
 ## What changed since v1.0-rc8
 
