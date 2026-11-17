@@ -146,15 +146,14 @@ a negative effect, and is reported as such: the same network is
 positive on a 2019 catalogue (+0.089), which is the prediction the
 curator-lag explanation makes. The provenance question (H2) remains
 open: separating provenance from size and coverage requires a larger
-network panel than this design supports. We close with three AI-fused
-designs that follow from the findings rather than from the tooling: a
-visibility-aware **residual prior** in which a gradient-boosted model
-acts as a null generator and only the out-of-fold residual is scored;
-**difficulty-calibrated** cross-catalogue comparisons in which every arm
-is a standardised effect against its own null; and an **LLM-assisted
-evidence layer** with a pre-registered rubric and blinded adjudication,
-which is the only route to a label axis that is not derived from the
-catalogues being tested.
+network panel than this design supports. We close with two AI-fused designs
+that follow from the findings rather than from the tooling: a
+**visibility-debiased graph neural network** that excludes degree and
+publication count from its input and is trained on publication-re-paired
+labels, so that the structural contribution can be read off directly; and
+an **LLM-assisted evidence layer** with a pre-registered rubric and
+blinded adjudication, which is the only route to a label axis that is
+not derived from the catalogues being tested.
 
 ---
 

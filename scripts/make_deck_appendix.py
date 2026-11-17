@@ -519,40 +519,47 @@ if c21 is not None:
 # ---- A15: what we would build with AI -------------------------------
 slides.append({
     "n": 31, "kind": "appendix", "tag": "PART 2 · A15",
-    "title": "What we would build with AI (three designs)",
-    "note": "Each design follows from a finding of this study and has its "
-            "endpoint fixed in advance, so it can be criticised before it "
-            "is run. NO result in this talk was produced by an AI system: "
-            "AI assisted with code drafting, debugging, literature triage "
-            "and layout; every number comes from our own scripts and "
-            "released tables and is checked by two audit scripts (136 and "
-            "71 checks).",
-    "table": {"head": ["the design", "what we found", "what we would build",
-                       "what it fixes / what it does not"],
+    "title": "What we would build with AI (two designs)",
+    "note": "Both designs use machine learning the same way: not to replace "
+            "the network as a scorer, but to subtract hubness and study "
+            "visibility so that what the network contributes can be read "
+            "off directly. Each has its endpoint fixed in advance, so it "
+            "can be criticised before it is run. NO result in this talk was "
+            "produced by an AI system: AI assisted with code drafting, "
+            "debugging, literature triage and layout; every number comes "
+            "from our own scripts and released tables and is checked by two "
+            "audit scripts (136 and 71 checks).",
+    "table": {"head": ["the design", "the problem", "what it is",
+                       "how it would be validated"],
               "rows": [
-                  ["a visibility-aware residual prior",
-                   "a large part of the margin tracks publication volume "
-                   "(17.6 % -> 11.6 %)",
-                   "gradient boosting on degree, publication count, "
-                   "coverage and label tier; score the OUT-OF-FOLD RESIDUAL",
-                   "fixes: makes 'topology only' a measured quantity. "
-                   "does not fix: the label's own curation bias"],
-                  ["difficulty-calibrated cross-catalogue comparison",
-                   "five catalogues are one axis (97.8 % recovered; "
-                   "participation ratio 1.54)",
-                   "report every arm as a standardised effect against its "
-                   "own null -- the nulls already exist",
-                   "fixes: makes 'which network for which catalogue' well "
-                   "posed. does not fix: the catalogues themselves"],
+                  ["a visibility-debiased graph neural network",
+                   "network methods score with hubness and visibility built "
+                   "in, so the reported gain cannot be attributed (our GNN "
+                   "arm: +0.028 against RWR's +0.079)",
+                   "a GNN that receives NO degree and NO publication-count "
+                   "feature, trained on PUBLICATION-RE-PAIRED labels so it "
+                   "cannot win on research intensity; it outputs a "
+                   "structural contribution score",
+                   "same folds, same endpoint (model score minus degree), "
+                   "then the decisive test: is it still positive under the "
+                   "publication-matched null? Limits: only 152-633 "
+                   "positives per arm; hyper-parameters must be "
+                   "pre-registered"],
                   ["an LLM-assisted evidence layer",
-                   "the label panel is the bottleneck; ClinGen's own "
+                   "the label panel is the constraint: the catalogues are "
+                   "one axis (participation ratio 1.54) and ClinGen's own "
                    "panels disagree on 17 %",
-                   "extraction under a frozen rubric, two passes, blinded "
-                   "human adjudication on 20 %, Cohen's kappa reported",
-                   "fixes: the circularity of the label axis. does not "
-                   "fix: an extractor inherits the publication bias"],
+                   "a language model extracts driver assertions from the "
+                   "primary literature under a frozen rubric with "
+                   "provenance kept; two passes, blinded human adjudication "
+                   "on 20 %, Cohen's kappa reported",
+                   "first check the overlap with the four existing "
+                   "catalogues (if it is again collinear, the circularity "
+                   "stands and must be reported); then re-run the design "
+                   "with it as a fifth label. Limits: it inherits the "
+                   "publication bias, so it complements the panels"],
               ],
-              "fontsize": 10.5, "rowh": 0.95},
+              "fontsize": 10, "rowh": 1.15},
 })
 
 

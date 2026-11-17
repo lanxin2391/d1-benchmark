@@ -2567,94 +2567,81 @@ Biology; see `docs/handoff_to_B_s2.md` for the cover-letter draft.
 
 ## §L. What an AI-fused design would look like
 
-Three proposals, each derived from a specific finding of this study, each
-with an endpoint fixed in advance. None of them is a method claim: they
-are the designs we would run next, written down here so that they can be
-criticised before they are run.
+Two designs, each written so that it can be criticised before it is run.
+Both use machine learning in the same way: **not to replace the network
+as a scorer, but to subtract the two confounds we have measured -- hubness
+and study visibility -- so that whatever the network contributes can be
+read off directly.**
 
-### L.1 A visibility-aware residual prior: the model as a null generator, not as a ranker
+### L.1 A visibility-debiased graph neural network
 
-**What we found.** A large part of the reported margin tracks study
-visibility rather than topology (§F.12), the degree baseline removes the
-symptom but not the common cause, and the two learners we ran differ in
-how much of the margin is topological (§F.20, §F.24).
+**The problem.** Existing network methods score a gene with hubness and
+study visibility built in, so the improvement they report cannot be
+attributed to topology (§F.12). Deep models make this worse rather than
+better: our GNN courtesy arm reaches a margin of only +0.028 against
+RWR's +0.079 (§J.4), because a message-passing model propagates
+hubness efficiently.
 
-**What we would build.** Per arm, a gradient-boosted model that predicts a
-gene's prior score from four confounders — its **degree**, its
-**publication count**, the **size and coverage of the network**, and its
-**label tier** — fitted on the training fold only, with the evaluation
-genes and the label held out. The quantity of interest is the
-**out-of-fold residual**: the part of the prior's score that the
-confounders cannot explain. The endpoint keeps the spirit of the primary
-one and is stricter in practice:
-ΔAUROC = AUROC(residual) − AUROC(degree) on the same 200 evaluations per
-arm, with the publication-matched null (§F.12) as the second control.
+**What it is.** A graph neural network with **degree and publication
+count excluded from the node features**, so that neither can be used
+directly; and a training objective that is **not** "predict the driver
+label" but "predict the label after the positives have been re-paired on
+publication count", which removes the research-intensity shortcut from
+the training signal. The model outputs a per-gene *structural contribution
+score*.
 
-**What it fixes.** It turns "topology-only" from an inference drawn by
-subtracting a baseline into a **measured** quantity.
+**How it would be validated.** On the same 200 evaluations per arm and
+the same endpoint (ΔAUROC = AUROC(model score) − AUROC(degree)), three
+results would be reported side by side: RWR (+0.0809), a plain
+structure-only GNN, and the debiased model; and then the decisive test --
+whether the debiased score remains positive **under the
+publication-matched null** of §F.12. If it does, the model has learned
+structure rather than visibility.
 
-**What it does not fix.** A residual can still inherit the curation bias
-of the label, and a model can only subtract what its confounders explain.
-The study would still need the negative set to be re-derived independently.
+**What it does not fix.** The training signal is small (152 to 633
+positives per arm, so the smallest label may be under-trained); the model
+depends on hyper-parameters and would have to be pre-registered; and the
+evidence of §F.21 suggests that the structural increment on a functional
+task is limited in any case.
 
-### L.2 Difficulty-calibrated cross-catalogue comparisons
+### L.2 An LLM-assisted evidence layer, with a pre-registered rubric and blinded adjudication
 
-**What we found.** Five catalogues are close to a single difficulty axis
-(participation ratio 1.54; one label-level number recovers 97.8 % of the
-label factor; §F.23), and the network × label interaction is 40 % of the
-between-arm spread (§F.17).
+**The problem.** The label panel is the binding constraint of the whole
+design: the catalogues carry one dimension rather than five (§F.23), and
+ClinGen's own panels disagree on 17 % of the variants they examine
+jointly (§F.18). In other words, the answer key we use to test the
+network is itself partly a function of how thoroughly a gene has been
+published.
 
-**What we would build.** Report every arm as a **standardised effect
-against its own null** — the margin divided by the spread of that arm's
-degree-matched-seed and rewiring nulls — instead of a raw ΔAUROC. Both
-nulls already exist for all 24 arms, so this is a re-analysis of hours,
-not of weeks.
+**What it is.** A language model extracts, from the primary literature,
+assertions of the form "this gene is a driver", under a **fixed rubric**
+(recurrence, functional assay, rescue, germline segregation), with the
+provenance of every assertion retained; two independent extractions with
+a frozen prompt and temperature; and a **blinded human adjudicator on a
+random 20 % sample**, with the agreement (Cohen's kappa) reported as a
+headline number. The extracted tiers form an evidence axis that is **not
+derived from the catalogues being tested**.
 
-**What it fixes.** "Which network for which catalogue" becomes a
-well-posed question, because the label difficulty is divided out instead
-of being attributed to the network or to the catalogue.
-
-**What it does not fix.** It standardises the *measurement*, not the
-*labels*: the underlying heterogeneity of the catalogues stays, and a
-z-score cannot create an independent catalogue.
-
-### L.3 An LLM-assisted evidence layer, with a pre-registered rubric and blinded adjudication
-
-**What we found.** The label panel is the binding constraint on the whole
-design: the catalogues carry one dimension rather than five, the
-newest-driver label is the hardest, and ClinGen's own panels disagree on
-17 % of the variants they examine jointly (§F.18).
-
-**What we would build.** Use a language model to extract candidate
-driver–disease assertions from the primary literature under a **fixed
-rubric** (recurrence, functional assay, rescue, germline segregation),
-keeping a provenance record for every assertion; two independent
-extractions with a frozen prompt and temperature, and a **blinded human
-adjudicator on a random 20 % sample**, with the agreement (Cohen's κ)
-reported as a headline number. The extracted tier then enters as an
-**evidence axis that is not derived from the catalogues we are testing** —
-the only way to break the circularity of "the label defines the label".
-Pre-registered: the rubric, the prompt, the temperature, the adjudication
-sample and the agreement threshold.
-
-**What it fixes.** The circularity of the label axis, and the
-reproducibility of the tiering that Control 7 currently inherits from
-four different catalogues.
+**How it would be validated.** First, and before anything else, the
+overlap between the extracted tiers and the four existing catalogues: if
+the new axis is again nearly collinear with them, the circularity has not
+been broken, and that has to be reported first. Then the primary design
+is re-run with the extracted tiers as a fifth label, and the H1 verdict
+is compared.
 
 **What it does not fix.** An extractor inherits the literature's
-publication bias by construction, so it can only complement, never
-replace, the expert panels; and without evidence-type stratification it
-would make the label axis *more* publication-dependent, not less.
+publication bias by construction, so it can only complement the expert
+panels, never replace them; without stratification by evidence type it
+would make the label axis *more* publication-dependent rather than less.
 
-### L.4 What we did not do
+### L.3 What we did not do
 
 No result in this paper was produced by an AI system. AI tools assisted
 with code drafting, debugging, literature triage and figure layout; every
 number comes from our own scripts and released tables and is checked by
-two independent audit scripts (136 and 71 checks). The three designs
-above are written as specifications with pre-registered endpoints precisely
-so that they can be judged without trusting the tool that would build
-them.
+two independent audit scripts (136 and 71 checks). The two designs above
+are specifications with pre-registered endpoints precisely so that they
+can be judged without trusting the tool that would build them.
 
 ## Cross-references
 
