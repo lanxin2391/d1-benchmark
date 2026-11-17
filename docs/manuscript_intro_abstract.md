@@ -19,7 +19,7 @@ paper.
 
 # Title
 
-**What a network prior contributes to cancer-driver gene prioritisation.**
+**Quantitative decomposition of the contribution of network priors to cancer-driver gene prioritisation.**
 
 **Authors:** lanxin2391 (Networks & Engine), kakamiku (Labels & Data)
 **Pre-registration:** Zenodo DOI 10.5281/zenodo.23121762

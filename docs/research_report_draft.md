@@ -1,4 +1,4 @@
-# What a network prior contributes to cancer-driver gene prioritisation
+# Quantitative decomposition of the contribution of network priors to cancer-driver gene prioritisation
 
 **Draft research report (SCI-standard manuscript, v1.0-rc9)**
 
