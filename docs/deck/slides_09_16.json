@@ -136,12 +136,12 @@
    "image": "figures/deck_stability.png",
    "imagew": 9.4,
    "bullets": [
-    "Per-gene scores are unstable (median CV 18 %; a median gene moves ~270 ranks) while the arm-level mean is stable (SD 0.0047).",
-    "The instability is the gene's own score variance (rho = 1.00, q = 2e-137); no classical topology descriptor predicts it.",
-    "Network-level stability is predicted by coverage and the 2-core fraction (rho = -0.905, q = 0.012) — not by size, density or modularity.",
-    "The mechanism is the seed-count law: RWR weights seeds linearly, so bagging the prior is a provable no-op. Regularising it cannot restore the ranking."
+    "What predicts a gene's score noise? No topology descriptor: degree, k-core, crowding and local density all sit on zero with error bars crossing it.",
+    "The noise is the seed sampling itself: RWR weights seeds linearly, so a gene's score is essentially how many seeds are near it -- and bagging the prior over partitions is therefore a provable no-op.",
+    "At the rank level a noisy score means a noisy rank (Spearman(rank SD, score CV) = +0.844): a median gene moves ~270 ranks while the arm-level SD stays at 0.0047.",
+    "Network-level stability is predicted by coverage and the 2-core fraction (rho = -0.905, q = 0.012) -- not by size, density or modularity."
    ],
-   "keyline": "the endpoint is stable, the gene is not: the arm-level SD is 0.0047 while the per-gene CV is 18 % and a median gene moves ~270 ranks  |  the instability is the gene's own score variance (rho = 1.00), not topology; bagging the prior is a provable no-op  |  at the network level, coverage and the 2-core predict stability (rho = -0.905)"
+   "keyline": "the endpoint is stable, the gene is not: the arm-level SD is 0.0047 while the per-gene CV is 18 % and a median gene moves ~270 ranks  |  no topology descriptor predicts a gene's score noise -- degree, k-core, crowding and local density are all on zero  |  the noise is the seed sampling: RWR weights seeds linearly, so bagging the prior is a provable no-op  |  at the network level, coverage and the 2-core predict stability (rho = -0.905)"
   },
   {
    "n": 12,

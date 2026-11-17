@@ -38,6 +38,7 @@ VIOLET = "#4a3aa7"
 RED = "#e34948"
 ORANGE = "#eb6834"
 INK, MUTED = "#2a2723", "#8c877d"
+GREY = "#a39d92"   # the self-correlation bar, marked as such
 DIVERGING = LinearSegmentedColormap.from_list(
     "os_div", ["#104281", "#3987e5", "#cde2fb", "#e7e3da",
                "#f6c3c2", "#e34948", "#8c1f1e"])
@@ -215,7 +216,12 @@ def stability():
     s["abs"] = s.beta.abs()
     s = s.sort_values("abs", ascending=False).head(6).iloc[::-1]
     y = np.arange(len(s))
-    ax2.barh(y, s.beta, color=[BLUE if b > 0 else RED for b in s.beta],
+    # the score-CV bar is the outcome correlated with itself: grey it and
+    # say so, so that no reader mistakes it for a result
+    colours = [GREY if f == "log_score_cv"
+               else (BLUE if b > 0 else RED)
+               for f, b in zip(s.feature, s.beta)]
+    ax2.barh(y, s.beta, color=colours,
              height=0.62, zorder=3)
     ax2.errorbar(s.beta, y, xerr=[s.beta - s.ci_low, s.ci_high - s.beta],
                  fmt="none", ecolor=INK, elinewidth=1.6, capsize=3, zorder=4)
@@ -231,7 +237,7 @@ def stability():
                          for f in s.feature], fontsize=12)
     ax2.set_xlabel("beta in the gene-level model of the score CV",
                    fontsize=13)
-    ax2.set_title("B  What drives gene-level instability?", loc="left",
+    ax2.set_title("B  What predicts a gene's score noise?", loc="left",
                   fontsize=16)
     for i, (b, q, r) in enumerate(zip(s.beta, s.q_bh,
                                     s.marginal_spearman_median)):
@@ -242,13 +248,13 @@ def stability():
     ax2.grid(axis="x", zorder=0)
 
     fig.text(0.012, 0.015,
-             "A: the arm-level SD over 200 evaluations per arm, 8 networks "
-             "(the two STRING sensitivity arms included). B: the "
-             "gene-level model of the score CV over 24 arms x 40 repeats; "
-             "the gene's own score CV explains it (rho = 1.00, "
-             "q = 2e-137),\nno classical topology descriptor does. "
-             "Source: results/tables/network_stability.tsv, "
-             "stability_attribution.tsv.",
+             "A: the arm-level SD over 200 evaluations per arm, 8 networks; "
+            "cov = the network's coverage of the label. B: what "
+            "predicts a gene's score noise; the score-CV bar (grey) "
+            "is the outcome correlated with itself, not a result -- "
+            "no topology descriptor predicts the noise. "
+            "Source: results/tables/network_stability.tsv, "
+            "stability_attribution.tsv.",
              fontsize=12, color=MUTED, ha="left", va="top")
     fig.savefig(FIG / "deck_stability.png", dpi=200, facecolor="white")
     plt.close(fig)
