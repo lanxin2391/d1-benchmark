@@ -39,8 +39,8 @@ const CW = W - 2 * M;           // the content width
 
 const SECTION = {
   1: GREEN, 2: BLUE, 3: VIOLET, 4: VIOLET, 5: VIOLET, 6: VIOLET,
-  7: AQUA, 8: BLUE, 9: BLUE, 10: BLUE, 11: ORANGE, 12: ORANGE,
-  13: ORANGE, 14: GREEN, 15: GREEN, 16: GREEN,
+  7: AQUA, 8: BLUE, 9: BLUE, 10: ORANGE, 11: ORANGE,
+  12: ORANGE, 13: GREEN, 14: GREEN, 15: GREEN,
 };
 // the appendix slides are grey: they are evidence, not narrative
 const APPENDIX_GREY = "6B675E";
@@ -61,6 +61,13 @@ function readJSON(p) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
+// the Chinese speaker script, page by page (scripts/make_deck_notes.py)
+const notes = (() => {
+  const f = path.join(ROOT, "docs/deck/notes_zh.json");
+  if (!fs.existsSync(f)) return {};
+  return readJSON(f);
+})();
+
 const part1 = readJSON(path.join(ROOT, "docs/deck/slides_01_08.json"));
 const part2 = readJSON(path.join(ROOT, "docs/deck/slides_09_16.json"));
 const appx = readJSON(path.join(ROOT, "docs/deck/slides_appendix.json"));
@@ -74,6 +81,12 @@ pptx.title = meta.title;
 pptx.subject = meta.subject;
 pptx.author = meta.author;
 pptx.company = meta.company;
+
+function addNotes(s, sl) {
+  const n = notes[String(sl.n)];
+  if (!n || !n.length) return;
+  s.addNotes(n.join("\n\n"));
+}
 
 function chrome(s, sl) {
   const colour = sl.kind === "appendix" ? APPENDIX_GREY : (SECTION[sl.n] || BLUE);
@@ -137,6 +150,7 @@ function bullets(s, items, opt) {
 // ---------------------------------------------------------------- build
 slides.forEach((sl) => {
   const s = pptx.addSlide();
+  addNotes(s, sl);
 
   if (sl.kind === "title") {
     s.background = { color: "FFFFFF" };

@@ -1,10 +1,4 @@
 {
- "meta": {
-  "title": "How much of a network prior's advantage is topology?",
-  "subject": "A leakage-controlled benchmark of network priors for cancer-driver gene prioritisation",
-  "author": "Group members: [Name 1] (presenter), [Name 2] (Q&A A), [Name 3] (Q&A B), [Name 4] (Q&A C)",
-  "company": "Bioinformatics: From Multi-Omics Data to Discovery, 2026 Fall"
- },
  "slides": [
   {
    "n": 1,
@@ -201,39 +195,12 @@
     ]
    },
    "keyline": "six networks: 3 protein-derived, 1 RNA-derived, 2 curated  |  largest 17,918 nodes / 564,706 edges (IntAct), smallest 3,953 / 20,143 (Reactome)  |  five label sets: 633, 600, 600, 152, 84, 708 positives  |  RWR frozen at alpha = 0.5, 5 folds x 40 repeats = 200 evaluations per arm"
-  },
-  {
-   "n": 8,
-   "kind": "pipeline",
-   "tag": "PIPELINE AND REPRODUCIBILITY",
-   "title": "From raw public files to a frozen verdict",
-   "steps": [
-    [
-     "Build",
-     "6 network edge lists from public releases (FunMap, IntAct, STRING v12, Reactome v86, CPTAC mRNA); harmonise: drop unmapped genes, self-loops, duplicates, keep the largest connected component"
-    ],
-    [
-     "Label",
-     "5 catalogues mapped to HGNC (D-02: approved symbol wins; aliases only when 1-to-1; ambiguous dropped and counted)"
-    ],
-    [
-     "Split",
-     "5 folds x 40 repeats per (network, label); positives capped to a common size per network; split files released with SHA-256 manifests"
-    ],
-    [
-     "Run",
-     "One locked learner (RWR, alpha = 0.5) scored against a degree-only baseline on identical folds; per-gene scores dumped for the gene-cluster bootstrap"
-    ],
-    [
-     "Test",
-     "Mixed-effects variance decomposition, gene-cluster bootstrap CIs, TOST equivalence, BH-FDR within a pre-declared family"
-    ],
-    [
-     "Audit",
-     "Pre-registration frozen at Zenodo; every departure is an amendment (A2.3a-k, 14 analysis families registered); 50/50 reproducibility checks and 63/63 claim checks pass"
-    ]
-   ],
-   "keyline": "build -> harmonise (LCC, unweighted) -> map to HGNC -> cap the positive sets -> split (released, SHA-256 manifests) -> run RWR and the degree baseline on identical folds -> gene-cluster bootstrap + TOST + BH-FDR  |  audit 50/50 PASS, claims 114/114 PASS"
   }
- ]
+ ],
+ "meta": {
+  "title": "How much of a network prior's advantage is topology?",
+  "subject": "A leakage-controlled benchmark of network priors for cancer-driver gene prioritisation",
+  "author": "Group members: [Name 1] (presenter), [Name 2] (Q&A A), [Name 3] (Q&A B), [Name 4] (Q&A C)",
+  "company": "Bioinformatics: From Multi-Omics Data to Discovery, 2026 Fall"
+ }
 }

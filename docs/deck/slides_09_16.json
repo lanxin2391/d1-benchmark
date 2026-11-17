@@ -1,7 +1,7 @@
 {
  "slides": [
   {
-   "n": 9,
+   "n": 8,
    "kind": "params",
    "tag": "PARAMETERS AND ROBUSTNESS",
    "title": "What we chose, why, and how we checked it",
@@ -41,7 +41,7 @@
    "keyline": "alpha = 0.5 locked in the pre-registration; the same value in all 24 arms and all controls  |  the repeat is the resampling unit (40 x 5 = 200 evaluations); the fold interval is over-conservative (coverage 1.000), the repeat interval calibrated (0.936-0.944)  |  every later change is an amendment (A2.3a-k, 14 analysis families registered)"
   },
   {
-   "n": 10,
+   "n": 9,
    "kind": "controls",
    "tag": "THE CONTROL STACK",
    "title": "Eleven controls, one artefact each",
@@ -105,7 +105,7 @@
    "keyline": "degree-matched seeds (23/24 beat the null at z > 5) · rewiring (23/24 at z > 5) · shared universe (-0.0360) · temporal split (-0.0095) · common-size cap (-0.0125) · complex-aware CV (leakage 0.87-0.96 -> 0.02-0.18) · hub-cap RWR · publication adjustment · bait-matched null · label tiers · ClinGen noise anchor"
   },
   {
-   "n": 11,
+   "n": 10,
    "kind": "heatmap",
    "tag": "RESULT 1 OF 3",
    "title": "The primary endpoint: 23 of 24 arms positive",
@@ -129,7 +129,7 @@
    "keyline": "delta-AUROC over the degree baseline, same folds: 23/24 arms positive, median +0.081, best +0.171 (STRING physical x OT no-lit), worst -0.013 (Reactome x the newest drivers)  |  H1: 24/24 under four of five interval constructions, 20/24 under the pre-registered gene-cluster bootstrap (the four failures are the smallest effects)  |  and degree is not the strongest baseline: closeness beats it in 24/24 arms, and against the strongest baseline the margin is +0.046 in 19/24 arms"
   },
   {
-   "n": 12,
+   "n": 11,
    "kind": "stability",
    "tag": "RESULT 2 OF 3",
    "title": "Where the prior's stability comes from — and where it does not",
@@ -144,7 +144,7 @@
    "keyline": "the endpoint is stable, the gene is not: the arm-level SD is 0.0047 while the per-gene CV is 18 % and a median gene moves ~270 ranks  |  the instability is the gene's own score variance (rho = 1.00), not topology; bagging the prior is a provable no-op  |  at the network level, coverage and the 2-core predict stability (rho = -0.905)"
   },
   {
-   "n": 13,
+   "n": 12,
    "kind": "external",
    "tag": "RESULT 3 OF 3",
    "title": "External evidence, and the fragility of our own numbers",
@@ -159,7 +159,7 @@
    "keyline": "DepMap (1,361 cell lines), three ways on the same folds: at K = 30 the prior enriches 5.8 % of the cell lines, the degree baseline 69.2 %, random 3.1 %; at K = 100, 47.6 % vs 97.8 % vs 6.1 %  |  the prior's contribution is task-specific: on the driver labels it beats degree in 23/24 arms, on a functional task degree carries almost everything"
   },
   {
-   "n": 14,
+   "n": 13,
    "kind": "conclusions",
    "tag": "CONCLUSIONS",
    "title": "What the benchmark says about network priors",
@@ -198,7 +198,7 @@
    "keyline": "1 contributes beyond degree (23/24 arms)  2 but the margin is modest and learner-dependent (+0.081 against degree, +0.046 against the strongest baseline, +0.011 under a second locked learner; the degree baseline is already 0.644, so a 9 % relative gain)  3 much of it is study visibility -- and that part replicates under the second learner (24/24 arms)  4 the instability is intrinsic (rho = 1.00)  5 curated networks fail on recent drivers (Reactome +0.089 on the 2019 catalogue, negative on the two newest)  6 H2 (provenance invariance) was never testable"
   },
   {
-   "n": 15,
+   "n": 14,
    "kind": "limits",
    "tag": "LIMITATIONS AND VALIDATION",
    "title": "What would change our mind",
@@ -237,14 +237,14 @@
    "keyline": "the gene-cluster interval misses four arms -> re-run on an independent cell-line label  |  the negative set is contaminated -> re-derive it (done: nothing changes)  |  the evaluation is self-referential -> a blind expert-panel challenge  |  no perturbation -> seed-perturbation (done)  |  one learner and one baseline -> the increment is learner-specific and closeness beats degree in 24/24 arms  |  H2 was never testable (3/1/2 networks per class, minimum attainable p = 0.1173) -> a larger, matched panel  |  the rewiring null under the second learner -> done on one arm as a feasibility check (z = +12.9); the full grid is next"
   },
   {
-   "n": 16,
+   "n": 15,
    "kind": "closing",
    "tag": "DELIVERABLES, GROUP WORK AND AI USE",
    "title": "Deliverables, group work and the AI statement",
    "links": [
     [
      "Code, tables, figures",
-     "github.com/lanxin2391/d1-benchmark (release v1.0-rc7)"
+     "github.com/lanxin2391/d1-benchmark (release v1.0-rc11)"
     ],
     [
      "Pre-registration",
