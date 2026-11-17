@@ -414,6 +414,29 @@ slides.forEach((sl) => {
     return;
   }
 
+  if (sl.kind === "external_table") {
+    // the figure on the left, a compact table on the right (slide 12)
+    chrome(s, sl);
+    image(s, sl.image, 6.35, Math.max(1.75, top), M);
+    const th = sl.table.head.map((h) => ({
+      text: h, options: { bold: true, color: "FFFFFF", fill: { color: ORANGE } },
+    }));
+    const tb = sl.table.rows.map((r, i) => r.map((c, j) => ({
+      text: String(c),
+      options: {
+        color: INK, bold: j === 0, fill: { color: i % 2 ? "FFFFFF" : "FBF3EC" },
+      },
+    })));
+    s.addTable([th].concat(tb), {
+      x: 7.05, y: Math.max(1.55, top), w: W - 7.05 - M,
+      colW: sl.table.colw || [1.3, 1.75, 2.5],
+      fontFace: FONT, fontSize: 11.5,
+      border: { type: "solid", color: HAIR, pt: 0.75 },
+      valign: "middle", margin: [0.03, 0.07, 0.03, 0.07],
+    });
+    return;
+  }
+
   if (sl.kind === "conclusions") {
     chrome(s, sl);
     // the block must fit between the key line and the footer band, so
