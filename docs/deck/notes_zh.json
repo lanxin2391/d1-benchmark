@@ -11,17 +11,19 @@
   "【§2 · 1.4 分钟】",
   "问题在于，网络先验报告的排序改善并不只来自网络。一个基因在排序中被优先给出，通常同时满足三个条件：\n与已知驱动基因在网络中距离近、连接的基因数量多、被研究被发表的程度高。\n这三个条件在真实数据里高度相关——连接多的基因往往也是被研究得多的基因。\n因此单独测得的改善量不能直接解释为拓扑信息的贡献。",
   "【§2 · 1.4 分钟】",
-  "已有文献分别给出过这三类混淆的证据（bait 偏倚与度相关 r = 0.52、性能随网络规模变化而随覆盖度消失、\n复合物跨折时标准交叉验证偏乐观），但从未在同一个冻结的设计与同一套判定规则下同时测量；\n这三项在第 3 节按来源论文分别讲。本工作的出发点即这一缺口。"
+  "这三类混淆各自都有已发表的证据：bait 偏倚与度相关 r = 0.52、性能随网络规模变化而随覆盖度消失、\n复合物跨折时标准交叉验证偏乐观。但要说清楚，这三篇**不是**第 3 节要讲的那三篇来源论文，\n而是另外三篇方法学文献（Schaefer 2015、Wright 2025、Picart-Armada 2019）；\n它们分别变成了我们的三项控制——发表量调整标签与 bait 匹配零模型、共享基因宇宙与统一阳性数上限、\n复合物感知交叉验证，对应关系在附录 A1 的对照表里。\n这些证据从未在同一个冻结的设计与同一套判定规则下被同时测量，本工作的出发点就是这个缺口。"
  ],
  "3": [
   "【§3 · 0.7 分钟】",
-  "**第一篇，Bailey 等 2018，Cell 173:371–385，《Comprehensive Characterization of Cancer Driver Genes and Mutations》。**\n问题：哪些基因在多个癌种中反复突变到足以被称为驱动基因？\n数据与方法：9,423 对 TCGA 肿瘤/正常样本，26 个组织类型，26 种独立的突变检测算法投票，一致时判定为驱动基因。\n结论：泛癌驱动基因共识（MC3），成为该领域的默认金标准。\n留下的空白：判据完全基于突变复现，不含网络与先验，读不出网络信息的净贡献，其策展选择也会被下游继承。"
+  "先说清楚这三篇在我们项目里是什么角色：它们是项目的三个输入——**一份标签目录**\n（Bailey 的 MC3 共识）、**一张网络**（Shi 的 FunMap）、**一份仲裁目录**（Repana 的 NCG）；\n而它们各自带来的限制，也各自决定了我们的一个设计决定。"
  ],
  "4": [
   "【§3 · 0.7 分钟】",
-  "**第二篇，Shi 等 2025，Nature Cancer 6:205–222，《Mapping the functional network of human cancer through machine learning and pan-cancer proteogenomics》。**\n问题：由泛癌蛋白组学构建的功能关联网络，能否比现有相互作用组更有效地排序癌症基因？\n数据与方法：CPTAC 泛癌蛋白组与转录组，XGBoost 估计成对共功能概率，边的阈值取似然比 50。\n结论：FunMap 在癌症基因排序上优于 STRING，并自带一份金标准。\n留下的空白（作者自述）：金标准由 Reactome 派生，而 Reactome 同时是 STRING `database` 通道的输入，\n所以\"FunMap 优于 STRING\"不是独立证据。"
+  "**第一篇，Bailey 等 2018，Cell 173:371–385，《Comprehensive Characterization of Cancer Driver Genes and Mutations》。**\n问题：哪些基因在多个癌种中反复突变到足以被称为驱动基因？\n数据与方法：9,423 对 TCGA 肿瘤/正常样本，26 个组织类型，26 种独立的突变检测算法投票，一致时判定为驱动基因。\n结论：泛癌驱动基因共识（MC3），成为该领域的默认金标准。\n留下的空白：判据完全基于突变复现，不含网络与先验，读不出网络信息的净贡献，其策展选择也会被下游继承。"
  ],
  "5": [
+  "【§3 · 0.7 分钟】",
+  "**第二篇，Shi 等 2025，Nature Cancer 6:205–222，《Mapping the functional network of human cancer through machine learning and pan-cancer proteogenomics》。**\n问题：由泛癌蛋白组学构建的功能关联网络，能否比现有相互作用组更有效地排序癌症基因？\n数据与方法：CPTAC 泛癌蛋白组与转录组，XGBoost 估计成对共功能概率，边的阈值取似然比 50。\n结论：FunMap 在癌症基因排序上优于 STRING，并自带一份金标准。\n留下的空白（作者自述）：金标准由 Reactome 派生，而 Reactome 同时是 STRING `database` 通道的输入，\n所以\"FunMap 优于 STRING\"不是独立证据。",
   "【§3 · 0.7 分钟】",
   "**第三篇，Repana 等 2019，Genome Biology 20:1，《The Network of Cancer Genes (NCG): a comprehensive catalogue of known and candidate cancer genes from cancer sequencing screens》。**\n问题：已发表的癌症测序文献中，哪些基因被称为驱动基因，每次判定的置信度如何？\n数据与方法：策展 2,372 个基因分三层（708 known / 104 candidate / 1,560 screening），\n置信度由策展的相互作用通道计算。\n结论：给出带置信度的驱动基因目录。\n留下的空白：置信度本身由网络导出，未被提及的基因默认为阴性，因此该目录测不了任何效应，\n只能作为仲裁者。本工作以它承担两项职能。"
  ],
