@@ -21,7 +21,8 @@ try {
 }
 
 const ROOT = path.resolve(__dirname, "..");
-const OUT = "D:/Grade3/swxxx/final/D1/1118汇报/D1_defence_deck.pptx";
+const OUT = process.argv[2] ||
+  "D:/Grade3/swxxx/final/D1/1118汇报/D1_defence_deck.pptx";
 const FONT = "Times New Roman";
 const INK = "2A2723";
 const MUTED = "8C877D";

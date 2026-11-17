@@ -233,8 +233,8 @@
     ],
     [
      "Our negative set contains curated drivers",
-     "10-22 % of negatives",
-     "re-derive the background from NCG and ClinGen with explicit exclusion, then re-run the factorial"
+     "10-22 % of the held-out negatives",
+     "SETTLED: with the drivers removed from the background only and the positives untouched, the whole benchmark re-run gives 23/24 arms positive, no sign flips, median +0.0809 -> +0.0822 -- the contamination does not carry the result"
     ],
     [
      "The prior is evaluated on its own ranking",
@@ -248,16 +248,16 @@
     ],
     [
      "One learner, and one baseline",
-     "the increment is learner-specific; degree is not the strongest baseline (closeness beats it in 24/24 arms)",
-     "a seed-using closeness-style learner under the same locked protocol, to show the conclusion is not learner-specific (the proximity learner already gives 16/24 arms, +0.011)"
+     "the increment is learner-specific; degree is not the strongest baseline (closeness wins in 24/24 arms)",
+     "run the full degree-preserving rewiring null under the second learner (one arm done: observed +0.0804 vs rewired null -0.0124 +- 0.0072, z = +12.9; the same arm under RWR gives z = +94.2)"
     ],
     [
      "H2 was never testable",
      "3/1/2 networks per provenance class; the smallest attainable p-value is 0.1173",
-     "a larger panel with size- and coverage-matched networks, at least four per provenance class"
+     "collect more networks: size- and coverage-matched ones, at least four per provenance class -- this is the next thing we are going to do"
     ]
    ],
-   "keyline": "the gene-cluster interval misses four arms -> re-run on an independent cell-line label  |  the negative set is contaminated -> re-derive it (done: nothing changes)  |  the evaluation is self-referential -> a blind expert-panel challenge  |  no perturbation -> seed-perturbation (done)  |  one learner and one baseline -> the increment is learner-specific and closeness beats degree in 24/24 arms  |  H2 was never testable (3/1/2 networks per class, minimum attainable p = 0.1173) -> a larger, matched panel  |  the rewiring null under the second learner -> done on one arm as a feasibility check (z = +12.9); the full grid is next"
+   "keyline": "the gene-cluster interval misses four arms -> re-run on an independent cell-line label  |  the negative set is contaminated -> re-derived, and nothing changes  |  the evaluation is self-referential -> a blind expert-panel challenge  |  no perturbation -> seed-perturbation  |  one learner and one baseline -> the rewiring null under the second learner (one arm done, z = +12.9; the full grid is next)  |  H2 was never testable -> we are going to collect more networks, at least four per provenance class"
   },
   {
    "n": 15,
