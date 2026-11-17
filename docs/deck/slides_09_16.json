@@ -237,9 +237,9 @@
      "SETTLED: with the drivers removed from the background only and the positives untouched, the whole benchmark re-run gives 23/24 arms positive, no sign flips, median +0.0809 -> +0.0822 -- the contamination does not carry the result"
     ],
     [
-     "The prior is evaluated on its own ranking",
-     "self-referential",
-     "a blind challenge: a held-out expert panel ranks the same genes, as in Boutros et al. 2014"
+     "The gold standard and the networks share upstream curation",
+     "FunMap's gold standard is Reactome-derived and Reactome is a STRING database channel; the training and the test folds are separate (complex-aware CV checks the cross-fold leak)",
+     "a blind challenge with a sealed answer key and an expert panel that does not know our method (Boutros et al. 2014)"
     ],
     [
      "We did not test causality",
@@ -257,7 +257,7 @@
      "collect more networks: size- and coverage-matched ones, at least four per provenance class -- this is the next thing we are going to do"
     ]
    ],
-   "keyline": "the gene-cluster interval misses four arms -> re-run on an independent cell-line label  |  the negative set is contaminated -> re-derived, and nothing changes  |  the evaluation is self-referential -> a blind expert-panel challenge  |  no perturbation -> seed-perturbation  |  one learner and one baseline -> the rewiring null under the second learner (one arm done, z = +12.9; the full grid is next)  |  H2 was never testable -> we are going to collect more networks, at least four per provenance class"
+   "keyline": "the gene-cluster interval misses four arms -> re-run on an independent cell-line label  |  the negative set is contaminated -> re-derived, and nothing changes  |  the gold standard and the networks share upstream curation -> a blind challenge with a sealed answer key  |  no perturbation -> seed-perturbation  |  one learner and one baseline -> the rewiring null under the second learner (one arm done, z = +12.9; the full grid is next)  |  H2 was never testable -> we are going to collect more networks, at least four per provenance class"
   },
   {
    "n": 15,
