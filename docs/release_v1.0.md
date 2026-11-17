@@ -1,4 +1,4 @@
-# D1 benchmark — v1.0-rc8 release note
+# D1 benchmark — v1.0-rc9 release note
 
 **Release commit:** `see the tag v1.0-rc8`
 **Built:** 2026-11-16
@@ -16,6 +16,14 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc8
+
+| area | change |
+|---|---|
+| the title | one sentence, no punctuation inside, the way a paper title is written: **"What a network prior contributes to cancer-driver gene prioritisation"** (the Chinese name is 《网络先验到底贡献了多少》). The "leakage-controlled benchmark" part moved into the abstract and into the deck's subtitle, where it already was |
+| the 20-minute script | the spoken text no longer carries document-style labels ("一句话结论：" and friends) -- everything inside the spoken paragraphs can be read out as it stands; the opening now starts with the conclusion itself |
+| the length | the 20-minute talk was measured and trimmed: **3,793 Chinese characters + 242 numbers**, about 19-20 minutes at 240-260 characters per minute, with the rule "start the closing at 18:30" written at the top |
 
 ## What changed since v1.0-rc7
 
