@@ -80,7 +80,7 @@ CHECKS: list[tuple[str, str, str]] = [
     ("audit", "50 PASS / 0 FAIL", "the audit result"),
     ("audit", "170 PASS / 0 FAIL", "the claim-verification result"),
     ("audit", "134 passed", "the test suite"),
-    ("manifest", "35 tables and 9 figures", "the release manifest"),
+    ("manifest", "194 tables + 15 figures", "the release manifest"),
     ("groundtruth", "638 recomputed quantities", "the ground-truth table"),
     ("pauc.median", "+0.0308", "the partial-AUC median margin"),
     ("pauc.p10", "+0.0412", "the top-10 % median margin"),
