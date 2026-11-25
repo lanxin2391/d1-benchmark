@@ -49,6 +49,19 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 32: the pathway level ----
+    ("control32.section", "manuscript_a_sections.md",
+     "### F.33 Control 32", "\u00a7F.33 must report the pathway level"),
+    ("control32.section.draft", "research_report_draft.md",
+     "### 3.28 The pathway level", "\u00a73.28 must report the pathway level"),
+    ("control32.reading", "manuscript_a_sections.md",
+     "point at the driver's pathways more", "\u00a7F.33 must state the reading"),
+    ("control32.facts", "report_1118_facts.md",
+     "## 7n. The pathway level (Control 32)",
+     "the facts sheet must carry Control 32"),
+    ("control32.qa", "report_1118_qa_bank.md",
+     "### B33", "the question bank must carry Control 32"),
+
     # ---- Control 31: the cross-method complementarity ----
     ("control31.section", "manuscript_a_sections.md",
      "### F.32 Control 31", "\u00a7F.32 must report the overlap table"),
@@ -594,6 +607,37 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Control 32: the pathway level ----
+        ("control 32 the prior's driver-pathway hits",
+         "manuscript_a_sections.md",
+         r"picks hit (\d+\.\d) of the driver-enriched pathways",
+         ("control32_hits", "the prior's mean driver-pathway hits"), 0.06),
+        ("control 32 the degree baseline's driver-pathway hits",
+         "manuscript_a_sections.md",
+         r"baseline's (\d+\.\d), and a random set",
+         ("control32_hits",
+          "the degree baseline's mean driver-pathway hits"), 0.06),
+        ("control 32 the random baseline's driver-pathway hits",
+         "manuscript_a_sections.md",
+         r"same pool (\d+\.\d)",
+         ("control32_hits", "the random baseline's mean driver-pathway hits"),
+         0.06),
+        ("control 32 the arms where the prior beats the degree baseline",
+         "manuscript_a_sections.md",
+         r"degree baseline in \*\*(\d+) of the (\d+) arms",
+         ("control32_hits",
+          "the arms where the prior beats the degree baseline"), 0.5),
+        ("control 32 the arms where the prior beats the random baseline",
+         "manuscript_a_sections.md",
+         r"random baseline in \*\*(\d+) of the",
+         ("control32_hits",
+          "the arms where the prior beats the random baseline"), 0.5),
+        ("control 32 the drivers' enriched pathways (IntOGen 2024)",
+         "manuscript_a_sections.md",
+         r"\| intogen2024 \| [\d,]+ \| (\d+) \|",
+         ("control32_pathway", "the drivers' enriched pathways: intogen2024"),
+         0.5),
 
         # ---- Control 31: the cross-method complementarity ----
         ("control 31 the smallest mean pairwise Jaccard",

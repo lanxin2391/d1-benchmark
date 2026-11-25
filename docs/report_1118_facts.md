@@ -478,6 +478,25 @@ Six scorers on the same folds, the same test genes and the same top 100: the RWR
 - → **跑第二个方法拿到的不是同一份清单**：方法之间在"挑哪些基因"上分歧很大，这和 F.30 的准确率格局一致（先验与 1 跳计数最像，邻近度最不像）
 - `scripts/run_c31_cross_method.py`, `results/tables/c31_cross_method_overlap.tsv`, `results/tables/c31_cross_method_union.tsv`, `docs/c31_cross_method.md`
 
+## 7n. The pathway level (Control 32)
+
+The pathway-to-gene mapping comes from the raw Reactome release (the `Interaction context` column), the Ensembl ids are mapped through HGNC, and the universe is the Reactome network's own gene set (4,294 pathways with at least five genes).
+
+- **which pathways are the drivers in** (the hypergeometric enrichment per pathway, BH-corrected):
+
+| label | the pathways tested | the pathways enriched at q < 0.05 |
+|---|---|---|
+| intogen2024 | 4,294 | 257 |
+| ot_all | 4,294 | 992 |
+| ot_nolit | 4,294 | 887 |
+| intogen_temporal_new | 4,294 | 0 |
+
+- **do the prior's candidates point at the same pathways** (the pathways enriched among the top-100 picks *and* among the drivers; the mean over the arms): the prior **97.4**, the degree baseline **63.7**, a random set of the same size **6.7**
+- the prior is above the degree baseline in **18/24** arms and above the random baseline in **17/24**
+- the six zero arms are the newest-driver label (152 drivers in no significantly enriched pathway) → the pathway view says nothing about them either way
+- 限制：通路标识符没有名字（仓库里没有 Reactome 通路字典）；Reactome 臂与通路注释同源（数字偏高），但五个不同源的网络上结论一致
+- `scripts/run_c32_pathway_level.py`, `results/tables/c32_pathway_enrichment_drivers.tsv`, `results/tables/c32_pathway_picks.tsv`, `results/tables/c32_pathway_permutation.tsv`, `docs/c32_pathway_level.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

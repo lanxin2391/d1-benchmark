@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (241 PASS / 0 FAIL). The second mechanism
+manuscript against that table (252 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -2298,6 +2298,85 @@ pre-registered endpoint is touched.
 
 ---
 
+### 3.28 The pathway level
+
+Control 32: the pathway level
+
+Everything above is at the gene level. The pathway level needs three
+things the repository did not have: a pathway-to-gene mapping, a
+pathway-level statistic, and a pathway-level null.
+
+**The mapping** comes from the raw Reactome release we already downloaded
+-- the `Interaction context` column of the interaction table is the pathway
+identifier -- with the Ensembl ids mapped to symbols through the HGNC set
+we already use, restricted to the genes of the Reactome network so that
+the universe is the network's own gene set (4,294 pathways
+with at least five genes).
+
+**1. Which pathways are the drivers in?** The hypergeometric enrichment of
+each pathway for the label's positives, with a Benjamini-Hochberg
+correction over the pathways:
+
+| label | the pathways tested | the pathways enriched at q < 0.05 |
+|---|---|---|
+| intogen2024 | 4,294 | 257 |
+| ot_all | 4,294 | 992 |
+| ot_nolit | 4,294 | 887 |
+| intogen_temporal_new | 4,294 | 0 |
+
+**2. Do the prior's candidates point at the same pathways?** For every arm
+and fold, the number of pathways that are significantly enriched among the
+scorer's top-100 picks *and* enriched among the label's drivers (the
+permutation of the picks gives the null). The table gives the prior, the
+degree baseline and the random baseline:
+
+| network | intogen2024 | ot_all | ot_nolit | intogen_temporal_new |
+|---|---|---|---|---|
+| funmap | 5.2 / 1.0 / 3.3 | 29.5 / 13.4 / 11.4 | 31.9 / 12.5 / 10.6 | 0.0 / 0.0 / 0.0 |
+| intact | 41.0 / 34.5 / 3.4 | 114.6 / 77.9 / 10.9 | 95.3 / 60.9 / 10.0 | 0.0 / 0.0 / 0.0 |
+| reactome | 91.2 / 86.1 / 3.7 | 376.3 / 323.2 / 14.5 | 346.8 / 297.7 / 12.9 | 0.0 / 0.0 / 0.0 |
+| rna_coexp | 3.4 / 2.9 / 3.9 | 35.3 / 14.0 / 11.5 | 32.6 / 17.6 / 9.5 | 0.0 / 0.0 / 0.0 |
+| string_full700 | 77.4 / 48.5 / 3.2 | 261.6 / 131.9 / 11.2 | 228.2 / 105.1 / 9.0 | 0.0 / 0.0 / 0.0 |
+| string_phys700 | 70.4 / 41.1 / 2.7 | 263.4 / 142.5 / 15.1 | 232.7 / 117.4 / 12.9 | 0.0 / 0.0 / 0.0 |
+
+**Reading.** **The prior's candidates point at the driver's pathways more
+than the degree baseline's do.** Averaged over the arms, the prior's picks
+hit 97.4 of the driver-enriched pathways, the degree
+baseline's 63.7, and a random set of a hundred genes from the
+same pool 6.7. The prior is above the degree baseline in
+**18 of the 24 arms** and above the random
+baseline in **17 of the 24**; the six arms where
+all three are zero are the newest-driver label, whose 152 drivers are not
+concentrated in any significantly enriched pathway at all -- which is
+itself the answer for that label.
+
+**What this means for the claim.** It gives the gene-level result a
+biological reading: the increment over degree is not a shift of the
+ranking among near-equals, it is a shift towards the genes that sit in
+the pathways where the drivers actually are. And it shows the limit of the
+pathway level for the newest drivers: with 152 curated genes, no Reactome
+pathway reaches significance, so the pathway view says nothing about them
+either way.
+
+**Caveats.** The pathway identifiers are given without names, because the
+Reactome pathway dictionary is not part of the repository; the identifiers
+are stable and can be resolved against the Reactome release. The Reactome
+arm shares its source with the pathway annotation (its network *is* the
+pathway graph), so its numbers are inflated relative to the other five;
+the pattern nevertheless holds in all six networks, including the five
+that do not share the source. The permutation null permutes the picks
+among the test genes, so it tests the enrichment statistic and not the
+pathway annotation itself. **Exploratory** (amendment 4): no pre-registered
+endpoint is touched.
+
+(`scripts/run_c32_pathway_level.py`;
+`results/tables/c32_pathway_enrichment_drivers.tsv`,
+`results/tables/c32_pathway_picks.tsv`,
+`results/tables/c32_pathway_permutation.tsv`;
+`docs/c32_pathway_level.md`.)
+
+---
+
 ### 4.1 What the benchmark establishes
 
 The headline is a negative-space claim with a positive-space
@@ -2523,7 +2602,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 932 recomputed quantities.
+checks) and a ground-truth table of 943 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2599,10 +2678,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`. Release manifest with SHA-256 of every tracked table and figure (194 tables + 15 figures): `docs/release_manifest_v1.0-rc11.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc11 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (241 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (252 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (932 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (943 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

@@ -1252,3 +1252,22 @@ learner.
 **What is NOT changed.** No pre-registered endpoint, interval or verdict is
 touched; Control 31 is registered in the amendment-4 family (see A4.6).
 
+### A6.16 Control 32 -- the pathway level
+
+The pathway-to-gene mapping comes from the raw Reactome release with the
+Ensembl ids mapped through HGNC, restricted to the Reactome network's own
+gene set (4,294 pathways with at least five genes).
+
+| | the value |
+|---|---|
+| the pathways the drivers are enriched in (IntOGen 2024) | 257 of 4,294 |
+| the pathways the drivers are enriched in (Open Targets, all) | 992 of 4,294 |
+| the pathways the drivers are enriched in (the newest drivers) | 0 of 4,294 |
+| the driver-pathway hits among the prior's top-100 picks | 97.4 (the mean over the arms) |
+| the same for the degree baseline | 63.7 |
+| the same for a random set of the same size | 6.7 |
+| the arms where the prior is above the degree baseline | 18/24 |
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Control 32 is registered in the amendment-4 family (see A4.6).
+

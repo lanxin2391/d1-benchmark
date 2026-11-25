@@ -6522,5 +6522,82 @@
   "value": 9.2421,
   "source": "c31_cross_method_union.tsv",
   "note": ""
+ },
+ {
+  "quantity": "control32_pathway",
+  "scope": "the pathways tested",
+  "value": 4294,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_pathway",
+  "scope": "the drivers' enriched pathways: intogen2024",
+  "value": 257,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_pathway",
+  "scope": "the drivers' enriched pathways: intogen_temporal_new",
+  "value": 0,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_pathway",
+  "scope": "the drivers' enriched pathways: ot_all",
+  "value": 992,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_pathway",
+  "scope": "the drivers' enriched pathways: ot_nolit",
+  "value": 887,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_hits",
+  "scope": "the prior's mean driver-pathway hits",
+  "value": 97.3646,
+  "source": "c32_pathway_picks.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_hits",
+  "scope": "the degree baseline's mean driver-pathway hits",
+  "value": 63.6688,
+  "source": "c32_pathway_picks.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_hits",
+  "scope": "the random baseline's mean driver-pathway hits",
+  "value": 6.6627,
+  "source": "c32_pathway_permutation.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_hits",
+  "scope": "the arms where the prior beats the degree baseline",
+  "value": 18,
+  "source": "c32_pathway_picks.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_hits",
+  "scope": "the arms where the prior beats the random baseline",
+  "value": 17,
+  "source": "c32_pathway_picks.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control32_hits",
+  "scope": "the arms",
+  "value": 24,
+  "source": "c32_pathway_picks.tsv",
+  "note": ""
  }
 ]

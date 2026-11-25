@@ -738,6 +738,41 @@ def control31() -> None:
                    "c31_cross_method_union.tsv")
 
 
+# ----------------------------------------------------------------- control 32
+def control32() -> None:
+    """The pathway level (Control 32)."""
+    dp = TABLES / "c32_pathway_enrichment_drivers.tsv"
+    pp = TABLES / "c32_pathway_picks.tsv"
+    pm = TABLES / "c32_pathway_permutation.tsv"
+    if not (dp.exists() and pp.exists() and pm.exists()):
+        return
+    d = pd.read_csv(dp, sep="\t")
+    p = pd.read_csv(pp, sep="\t")
+    m = pd.read_csv(pm, sep="\t")
+    record("control32_pathway", "the pathways tested", int(d.pathway.nunique()),
+           "c32_pathway_enrichment_drivers.tsv")
+    for lab, g in d.groupby("label"):
+        record("control32_pathway",
+               f"the drivers' enriched pathways: {lab}",
+               int((g.q < 0.05).sum()), "c32_pathway_enrichment_drivers.tsv")
+    a = p.groupby(["network", "label", "scorer"])["n_driver_pathways_hit"].mean()
+    rb = m.groupby(["network", "label"])["n_driver_pathways_hit"].mean()
+    prior = a.xs("the prior", level="scorer")
+    degree = a.xs("degree", level="scorer")
+    record("control32_hits", "the prior's mean driver-pathway hits",
+           r4(prior.mean()), "c32_pathway_picks.tsv")
+    record("control32_hits", "the degree baseline's mean driver-pathway hits",
+           r4(degree.mean()), "c32_pathway_picks.tsv")
+    record("control32_hits", "the random baseline's mean driver-pathway hits",
+           r4(rb.mean()), "c32_pathway_permutation.tsv")
+    record("control32_hits", "the arms where the prior beats the degree "
+           "baseline", int((prior > degree).sum()), "c32_pathway_picks.tsv")
+    record("control32_hits", "the arms where the prior beats the random "
+           "baseline", int((prior > rb.reindex(prior.index)).sum()),
+           "c32_pathway_picks.tsv")
+    record("control32_hits", "the arms", int(len(prior)), "c32_pathway_picks.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1298,6 +1333,7 @@ def main() -> int:
     control28()
     control30()
     control31()
+    control32()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

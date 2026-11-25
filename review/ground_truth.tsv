@@ -931,3 +931,14 @@ control31_union	the genes only the RWR prior picks	24.0292	c31_cross_method_unio
 control31_union	the genes only degree picks	24.6208	c31_cross_method_union.tsv	
 control31_union	the genes only betweenness picks	43.6538	c31_cross_method_union.tsv	
 control31_union	the genes only the 1-hop seed count picks	9.2421	c31_cross_method_union.tsv	
+control32_pathway	the pathways tested	4294	c32_pathway_enrichment_drivers.tsv	
+control32_pathway	the drivers' enriched pathways: intogen2024	257	c32_pathway_enrichment_drivers.tsv	
+control32_pathway	the drivers' enriched pathways: intogen_temporal_new	0	c32_pathway_enrichment_drivers.tsv	
+control32_pathway	the drivers' enriched pathways: ot_all	992	c32_pathway_enrichment_drivers.tsv	
+control32_pathway	the drivers' enriched pathways: ot_nolit	887	c32_pathway_enrichment_drivers.tsv	
+control32_hits	the prior's mean driver-pathway hits	97.3646	c32_pathway_picks.tsv	
+control32_hits	the degree baseline's mean driver-pathway hits	63.6688	c32_pathway_picks.tsv	
+control32_hits	the random baseline's mean driver-pathway hits	6.6627	c32_pathway_permutation.tsv	
+control32_hits	the arms where the prior beats the degree baseline	18	c32_pathway_picks.tsv	
+control32_hits	the arms where the prior beats the random baseline	17	c32_pathway_picks.tsv	
+control32_hits	the arms	24	c32_pathway_picks.tsv	

@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control32.section        manuscript_a_sections.md
+         §F.33 must report the pathway level
+  [PASS] control32.section.draft  research_report_draft.md
+         §3.28 must report the pathway level
+  [PASS] control32.reading        manuscript_a_sections.md
+         §F.33 must state the reading
+  [PASS] control32.facts          report_1118_facts.md
+         the facts sheet must carry Control 32
+  [PASS] control32.qa             report_1118_qa_bank.md
+         the question bank must carry Control 32
   [PASS] control31.section        manuscript_a_sections.md
          §F.32 must report the overlap table
   [PASS] control31.section.draft  research_report_draft.md
@@ -296,6 +306,12 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 32 the prior's driver-pathway hits manuscript=+97.4000  table=+97.3646  tol=0.06
+  [PASS] control 32 the degree baseline's driver-pathway hits manuscript=+63.7000  table=+63.6688  tol=0.06
+  [PASS] control 32 the random baseline's driver-pathway hits manuscript=+6.7000  table=+6.6627  tol=0.06
+  [PASS] control 32 the arms where the prior beats the degree baseline manuscript=+18.0000  table=+18.0000  tol=0.5
+  [PASS] control 32 the arms where the prior beats the random baseline manuscript=+17.0000  table=+17.0000  tol=0.5
+  [PASS] control 32 the drivers' enriched pathways (IntOGen 2024) manuscript=+257.0000  table=+257.0000  tol=0.5
   [PASS] control 31 the smallest mean pairwise Jaccard manuscript=+0.0590  table=+0.0593  tol=0.0006
   [PASS] control 31 the largest mean pairwise Jaccard manuscript=+0.4620  table=+0.4623  tol=0.0006
   [PASS] control 31 the genes all six methods pick manuscript=+3.1000  table=+3.1225  tol=0.06
@@ -395,5 +411,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 241 PASS / 0 FAIL
+RESULT: 252 PASS / 0 FAIL
 ========================================================================
