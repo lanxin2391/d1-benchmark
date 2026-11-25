@@ -4592,129 +4592,724 @@
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "the prior: all",
-  "value": 0.7477,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_observed",
+  "scope": "funmap x intogen2024",
+  "value": 0.1001,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "degree: all",
-  "value": 0.6562,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_null",
+  "scope": "funmap x intogen2024: the null mean",
+  "value": -0.0002,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "the mutation score: all",
-  "value": 0.8375,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_null",
+  "scope": "funmap x intogen2024: the null SD",
+  "value": 0.0096,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "the combination: all",
-  "value": 0.8822,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_p",
+  "scope": "funmap x intogen2024",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_wins",
-  "scope": "the combination beats the prior: all",
-  "value": 6,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_observed",
+  "scope": "funmap x intogen_temporal_new",
+  "value": 0.0196,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_wins",
-  "scope": "the combination beats the mutation score: all",
-  "value": 4,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_null",
+  "scope": "funmap x intogen_temporal_new: the null mean",
+  "value": 0.0053,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_wins",
-  "scope": "the prior beats degree: all",
-  "value": 6,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_null",
+  "scope": "funmap x intogen_temporal_new: the null SD",
+  "value": 0.0232,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "the prior: minus_intogen",
-  "value": 0.6926,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_p",
+  "scope": "funmap x intogen_temporal_new",
+  "value": 0.2,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "degree: minus_intogen",
-  "value": 0.5798,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_observed",
+  "scope": "funmap x ot_all",
+  "value": 0.0853,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "the mutation score: minus_intogen",
-  "value": 0.5118,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_null",
+  "scope": "funmap x ot_all: the null mean",
+  "value": 0.0032,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_auc",
-  "scope": "the combination: minus_intogen",
-  "value": 0.6984,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_null",
+  "scope": "funmap x ot_all: the null SD",
+  "value": 0.013,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_wins",
-  "scope": "the combination beats the prior: minus_intogen",
+  "quantity": "control26_p",
+  "scope": "funmap x ot_all",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "funmap x ot_nolit",
+  "value": 0.078,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "funmap x ot_nolit: the null mean",
+  "value": 0.0026,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "funmap x ot_nolit: the null SD",
+  "value": 0.0148,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "funmap x ot_nolit",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "intact x intogen2024",
+  "value": 0.0651,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x intogen2024: the null mean",
+  "value": -0.0003,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x intogen2024: the null SD",
+  "value": 0.0043,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "intact x intogen2024",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "intact x intogen_temporal_new",
+  "value": 0.0071,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x intogen_temporal_new: the null mean",
+  "value": 0.0037,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x intogen_temporal_new: the null SD",
+  "value": 0.012,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "intact x intogen_temporal_new",
+  "value": 0.4,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "intact x ot_all",
+  "value": 0.0842,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x ot_all: the null mean",
+  "value": 0.0037,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x ot_all: the null SD",
+  "value": 0.0083,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "intact x ot_all",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "intact x ot_nolit",
+  "value": 0.0784,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x ot_nolit: the null mean",
+  "value": -0.001,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "intact x ot_nolit: the null SD",
+  "value": 0.006,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "intact x ot_nolit",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "reactome x intogen2024",
+  "value": 0.0429,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x intogen2024: the null mean",
+  "value": -0.0028,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x intogen2024: the null SD",
+  "value": 0.0114,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "reactome x intogen2024",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "reactome x intogen_temporal_new",
+  "value": -0.0125,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x intogen_temporal_new: the null mean",
+  "value": 0.0106,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x intogen_temporal_new: the null SD",
+  "value": 0.0348,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "reactome x intogen_temporal_new",
+  "value": 0.75,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "reactome x ot_all",
+  "value": 0.1103,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x ot_all: the null mean",
+  "value": 0.0005,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x ot_all: the null SD",
+  "value": 0.0142,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "reactome x ot_all",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "reactome x ot_nolit",
+  "value": 0.0996,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x ot_nolit: the null mean",
+  "value": 0.0053,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "reactome x ot_nolit: the null SD",
+  "value": 0.0172,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "reactome x ot_nolit",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "rna_coexp x intogen2024",
+  "value": 0.0521,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x intogen2024: the null mean",
+  "value": 0.0007,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x intogen2024: the null SD",
+  "value": 0.0162,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "rna_coexp x intogen2024",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "rna_coexp x intogen_temporal_new",
+  "value": 0.0127,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x intogen_temporal_new: the null mean",
+  "value": -0.002,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x intogen_temporal_new: the null SD",
+  "value": 0.0231,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "rna_coexp x intogen_temporal_new",
+  "value": 0.25,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "rna_coexp x ot_all",
+  "value": 0.0767,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x ot_all: the null mean",
+  "value": -0.0016,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x ot_all: the null SD",
+  "value": 0.0117,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "rna_coexp x ot_all",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "rna_coexp x ot_nolit",
+  "value": 0.0834,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x ot_nolit: the null mean",
+  "value": -0.0022,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "rna_coexp x ot_nolit: the null SD",
+  "value": 0.0092,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "rna_coexp x ot_nolit",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_full700 x intogen2024",
+  "value": 0.1133,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x intogen2024: the null mean",
+  "value": 0.0001,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x intogen2024: the null SD",
+  "value": 0.0096,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_full700 x intogen2024",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_full700 x intogen_temporal_new",
+  "value": 0.0604,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x intogen_temporal_new: the null mean",
+  "value": 0.0009,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x intogen_temporal_new: the null SD",
+  "value": 0.0149,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_full700 x intogen_temporal_new",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_full700 x ot_all",
+  "value": 0.1201,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x ot_all: the null mean",
+  "value": 0.003,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x ot_all: the null SD",
+  "value": 0.009,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_full700 x ot_all",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_full700 x ot_nolit",
+  "value": 0.1267,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x ot_nolit: the null mean",
+  "value": 0.0021,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_full700 x ot_nolit: the null SD",
+  "value": 0.0091,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_full700 x ot_nolit",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_phys700 x intogen2024",
+  "value": 0.1189,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x intogen2024: the null mean",
+  "value": 0.0012,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x intogen2024: the null SD",
+  "value": 0.0112,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_phys700 x intogen2024",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_phys700 x intogen_temporal_new",
+  "value": 0.0378,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x intogen_temporal_new: the null mean",
+  "value": 0.0007,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x intogen_temporal_new: the null SD",
+  "value": 0.0274,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_phys700 x intogen_temporal_new",
+  "value": 0.1,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_phys700 x ot_all",
+  "value": 0.1582,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x ot_all: the null mean",
+  "value": -0.0013,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x ot_all: the null SD",
+  "value": 0.0083,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_phys700 x ot_all",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_observed",
+  "scope": "string_phys700 x ot_nolit",
+  "value": 0.1711,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x ot_nolit: the null mean",
+  "value": 0.0007,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_null",
+  "scope": "string_phys700 x ot_nolit: the null SD",
+  "value": 0.0133,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_p",
+  "scope": "string_phys700 x ot_nolit",
+  "value": 0.0,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_summary",
+  "scope": "the arms where the observed margin is beyond the null's 95 % interval",
+  "value": 19,
+  "source": "c26_label_permutation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control26_summary",
+  "scope": "the arms where it is inside the null's range",
   "value": 5,
-  "source": "c25_mutation_vs_network.tsv",
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_wins",
-  "scope": "the combination beats the mutation score: minus_intogen",
-  "value": 6,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_summary",
+  "scope": "the smallest null mean",
+  "value": -0.0028,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_wins",
-  "scope": "the prior beats degree: minus_intogen",
-  "value": 6,
-  "source": "c25_mutation_vs_network.tsv",
+  "quantity": "control26_summary",
+  "scope": "the largest null mean",
+  "value": 0.0106,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_recurrence",
-  "scope": "the prior",
-  "value": 0.553,
-  "source": "c25_recurrence.tsv",
+  "quantity": "control26_summary",
+  "scope": "the smallest null SD",
+  "value": 0.0043,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_recurrence",
-  "scope": "degree",
-  "value": 0.5133,
-  "source": "c25_recurrence.tsv",
+  "quantity": "control26_summary",
+  "scope": "the largest null SD",
+  "value": 0.0348,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  },
  {
-  "quantity": "control25_recurrence",
-  "scope": "the publication count",
-  "value": 0.5677,
-  "source": "c25_recurrence.tsv",
-  "note": ""
- },
- {
-  "quantity": "control25_recurrence",
-  "scope": "the arms where the publication count beats the prior",
-  "value": 5,
-  "source": "c25_recurrence.tsv",
+  "quantity": "control26_summary",
+  "scope": "the smallest observed margin that clears its null",
+  "value": 0.0429,
+  "source": "c26_label_permutation_summary.tsv",
   "note": ""
  }
 ]

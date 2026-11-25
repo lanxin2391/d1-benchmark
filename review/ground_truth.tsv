@@ -655,21 +655,106 @@ control25_recurrence	the prior	0.553	c25_recurrence.tsv
 control25_recurrence	degree	0.5133	c25_recurrence.tsv	
 control25_recurrence	the publication count	0.5677	c25_recurrence.tsv	
 control25_recurrence	the arms where the publication count beats the prior	5	c25_recurrence.tsv	
-control25_auc	the prior: all	0.7477	c25_mutation_vs_network.tsv	
-control25_auc	degree: all	0.6562	c25_mutation_vs_network.tsv	
-control25_auc	the mutation score: all	0.8375	c25_mutation_vs_network.tsv	
-control25_auc	the combination: all	0.8822	c25_mutation_vs_network.tsv	
-control25_wins	the combination beats the prior: all	6	c25_mutation_vs_network.tsv	
-control25_wins	the combination beats the mutation score: all	4	c25_mutation_vs_network.tsv	
-control25_wins	the prior beats degree: all	6	c25_mutation_vs_network.tsv	
-control25_auc	the prior: minus_intogen	0.6926	c25_mutation_vs_network.tsv	
-control25_auc	degree: minus_intogen	0.5798	c25_mutation_vs_network.tsv	
-control25_auc	the mutation score: minus_intogen	0.5118	c25_mutation_vs_network.tsv	
-control25_auc	the combination: minus_intogen	0.6984	c25_mutation_vs_network.tsv	
-control25_wins	the combination beats the prior: minus_intogen	5	c25_mutation_vs_network.tsv	
-control25_wins	the combination beats the mutation score: minus_intogen	6	c25_mutation_vs_network.tsv	
-control25_wins	the prior beats degree: minus_intogen	6	c25_mutation_vs_network.tsv	
-control25_recurrence	the prior	0.553	c25_recurrence.tsv	
-control25_recurrence	degree	0.5133	c25_recurrence.tsv	
-control25_recurrence	the publication count	0.5677	c25_recurrence.tsv	
-control25_recurrence	the arms where the publication count beats the prior	5	c25_recurrence.tsv	
+control26_observed	funmap x intogen2024	0.1001	c26_label_permutation_summary.tsv	
+control26_null	funmap x intogen2024: the null mean	-0.0002	c26_label_permutation_summary.tsv	
+control26_null	funmap x intogen2024: the null SD	0.0096	c26_label_permutation_summary.tsv	
+control26_p	funmap x intogen2024	0.0	c26_label_permutation_summary.tsv	
+control26_observed	funmap x intogen_temporal_new	0.0196	c26_label_permutation_summary.tsv	
+control26_null	funmap x intogen_temporal_new: the null mean	0.0053	c26_label_permutation_summary.tsv	
+control26_null	funmap x intogen_temporal_new: the null SD	0.0232	c26_label_permutation_summary.tsv	
+control26_p	funmap x intogen_temporal_new	0.2	c26_label_permutation_summary.tsv	
+control26_observed	funmap x ot_all	0.0853	c26_label_permutation_summary.tsv	
+control26_null	funmap x ot_all: the null mean	0.0032	c26_label_permutation_summary.tsv	
+control26_null	funmap x ot_all: the null SD	0.013	c26_label_permutation_summary.tsv	
+control26_p	funmap x ot_all	0.0	c26_label_permutation_summary.tsv	
+control26_observed	funmap x ot_nolit	0.078	c26_label_permutation_summary.tsv	
+control26_null	funmap x ot_nolit: the null mean	0.0026	c26_label_permutation_summary.tsv	
+control26_null	funmap x ot_nolit: the null SD	0.0148	c26_label_permutation_summary.tsv	
+control26_p	funmap x ot_nolit	0.0	c26_label_permutation_summary.tsv	
+control26_observed	intact x intogen2024	0.0651	c26_label_permutation_summary.tsv	
+control26_null	intact x intogen2024: the null mean	-0.0003	c26_label_permutation_summary.tsv	
+control26_null	intact x intogen2024: the null SD	0.0043	c26_label_permutation_summary.tsv	
+control26_p	intact x intogen2024	0.0	c26_label_permutation_summary.tsv	
+control26_observed	intact x intogen_temporal_new	0.0071	c26_label_permutation_summary.tsv	
+control26_null	intact x intogen_temporal_new: the null mean	0.0037	c26_label_permutation_summary.tsv	
+control26_null	intact x intogen_temporal_new: the null SD	0.012	c26_label_permutation_summary.tsv	
+control26_p	intact x intogen_temporal_new	0.4	c26_label_permutation_summary.tsv	
+control26_observed	intact x ot_all	0.0842	c26_label_permutation_summary.tsv	
+control26_null	intact x ot_all: the null mean	0.0037	c26_label_permutation_summary.tsv	
+control26_null	intact x ot_all: the null SD	0.0083	c26_label_permutation_summary.tsv	
+control26_p	intact x ot_all	0.0	c26_label_permutation_summary.tsv	
+control26_observed	intact x ot_nolit	0.0784	c26_label_permutation_summary.tsv	
+control26_null	intact x ot_nolit: the null mean	-0.001	c26_label_permutation_summary.tsv	
+control26_null	intact x ot_nolit: the null SD	0.006	c26_label_permutation_summary.tsv	
+control26_p	intact x ot_nolit	0.0	c26_label_permutation_summary.tsv	
+control26_observed	reactome x intogen2024	0.0429	c26_label_permutation_summary.tsv	
+control26_null	reactome x intogen2024: the null mean	-0.0028	c26_label_permutation_summary.tsv	
+control26_null	reactome x intogen2024: the null SD	0.0114	c26_label_permutation_summary.tsv	
+control26_p	reactome x intogen2024	0.0	c26_label_permutation_summary.tsv	
+control26_observed	reactome x intogen_temporal_new	-0.0125	c26_label_permutation_summary.tsv	
+control26_null	reactome x intogen_temporal_new: the null mean	0.0106	c26_label_permutation_summary.tsv	
+control26_null	reactome x intogen_temporal_new: the null SD	0.0348	c26_label_permutation_summary.tsv	
+control26_p	reactome x intogen_temporal_new	0.75	c26_label_permutation_summary.tsv	
+control26_observed	reactome x ot_all	0.1103	c26_label_permutation_summary.tsv	
+control26_null	reactome x ot_all: the null mean	0.0005	c26_label_permutation_summary.tsv	
+control26_null	reactome x ot_all: the null SD	0.0142	c26_label_permutation_summary.tsv	
+control26_p	reactome x ot_all	0.0	c26_label_permutation_summary.tsv	
+control26_observed	reactome x ot_nolit	0.0996	c26_label_permutation_summary.tsv	
+control26_null	reactome x ot_nolit: the null mean	0.0053	c26_label_permutation_summary.tsv	
+control26_null	reactome x ot_nolit: the null SD	0.0172	c26_label_permutation_summary.tsv	
+control26_p	reactome x ot_nolit	0.0	c26_label_permutation_summary.tsv	
+control26_observed	rna_coexp x intogen2024	0.0521	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x intogen2024: the null mean	0.0007	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x intogen2024: the null SD	0.0162	c26_label_permutation_summary.tsv	
+control26_p	rna_coexp x intogen2024	0.0	c26_label_permutation_summary.tsv	
+control26_observed	rna_coexp x intogen_temporal_new	0.0127	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x intogen_temporal_new: the null mean	-0.002	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x intogen_temporal_new: the null SD	0.0231	c26_label_permutation_summary.tsv	
+control26_p	rna_coexp x intogen_temporal_new	0.25	c26_label_permutation_summary.tsv	
+control26_observed	rna_coexp x ot_all	0.0767	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x ot_all: the null mean	-0.0016	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x ot_all: the null SD	0.0117	c26_label_permutation_summary.tsv	
+control26_p	rna_coexp x ot_all	0.0	c26_label_permutation_summary.tsv	
+control26_observed	rna_coexp x ot_nolit	0.0834	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x ot_nolit: the null mean	-0.0022	c26_label_permutation_summary.tsv	
+control26_null	rna_coexp x ot_nolit: the null SD	0.0092	c26_label_permutation_summary.tsv	
+control26_p	rna_coexp x ot_nolit	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_full700 x intogen2024	0.1133	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x intogen2024: the null mean	0.0001	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x intogen2024: the null SD	0.0096	c26_label_permutation_summary.tsv	
+control26_p	string_full700 x intogen2024	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_full700 x intogen_temporal_new	0.0604	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x intogen_temporal_new: the null mean	0.0009	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x intogen_temporal_new: the null SD	0.0149	c26_label_permutation_summary.tsv	
+control26_p	string_full700 x intogen_temporal_new	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_full700 x ot_all	0.1201	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x ot_all: the null mean	0.003	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x ot_all: the null SD	0.009	c26_label_permutation_summary.tsv	
+control26_p	string_full700 x ot_all	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_full700 x ot_nolit	0.1267	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x ot_nolit: the null mean	0.0021	c26_label_permutation_summary.tsv	
+control26_null	string_full700 x ot_nolit: the null SD	0.0091	c26_label_permutation_summary.tsv	
+control26_p	string_full700 x ot_nolit	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_phys700 x intogen2024	0.1189	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x intogen2024: the null mean	0.0012	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x intogen2024: the null SD	0.0112	c26_label_permutation_summary.tsv	
+control26_p	string_phys700 x intogen2024	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_phys700 x intogen_temporal_new	0.0378	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x intogen_temporal_new: the null mean	0.0007	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x intogen_temporal_new: the null SD	0.0274	c26_label_permutation_summary.tsv	
+control26_p	string_phys700 x intogen_temporal_new	0.1	c26_label_permutation_summary.tsv	
+control26_observed	string_phys700 x ot_all	0.1582	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x ot_all: the null mean	-0.0013	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x ot_all: the null SD	0.0083	c26_label_permutation_summary.tsv	
+control26_p	string_phys700 x ot_all	0.0	c26_label_permutation_summary.tsv	
+control26_observed	string_phys700 x ot_nolit	0.1711	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x ot_nolit: the null mean	0.0007	c26_label_permutation_summary.tsv	
+control26_null	string_phys700 x ot_nolit: the null SD	0.0133	c26_label_permutation_summary.tsv	
+control26_p	string_phys700 x ot_nolit	0.0	c26_label_permutation_summary.tsv	
+control26_summary	the arms where the observed margin is beyond the null's 95 % interval	19	c26_label_permutation_summary.tsv	
+control26_summary	the arms where it is inside the null's range	5	c26_label_permutation_summary.tsv	
+control26_summary	the smallest null mean	-0.0028	c26_label_permutation_summary.tsv	
+control26_summary	the largest null mean	0.0106	c26_label_permutation_summary.tsv	
+control26_summary	the smallest null SD	0.0043	c26_label_permutation_summary.tsv	
+control26_summary	the largest null SD	0.0348	c26_label_permutation_summary.tsv	
+control26_summary	the smallest observed margin that clears its null	0.0429	c26_label_permutation_summary.tsv	

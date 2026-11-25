@@ -49,6 +49,21 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 26: the label-permutation audit ----
+    ("control26.section", "manuscript_a_sections.md",
+     "### F.28 Control 26", "\u00a7F.28 must report the permutation audit"),
+    ("control26.section.draft", "research_report_draft.md",
+     "### 3.23 The label-permutation audit",
+     "\u00a73.23 must report the permutation audit"),
+    ("control26.reading", "manuscript_a_sections.md",
+     "does not manufacture a margin from random labels",
+     "\u00a7F.28 must state the audit's reading"),
+    ("control26.facts", "report_1118_facts.md",
+     "## 7i. The label-permutation audit (Control 26)",
+     "the facts sheet must carry Control 26"),
+    ("control26.qa", "report_1118_qa_bank.md",
+     "### C24", "the question bank must carry Control 26"),
+
     # ---- Control 25: mutation-first versus network-first ----
     ("control25.section", "manuscript_a_sections.md",
      "### F.27 Control 25", "\u00a7F.27 must report the mutation comparison"),
@@ -520,6 +535,29 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Control 26: the label-permutation audit ----
+("control 26 the reactome x intogen2024 margin",
+         "manuscript_a_sections.md",
+         r"reactome x intogen2024 has an observed margin of (\+0\.\d{4})",
+         ("control26_observed", "reactome x intogen2024"), 0.0006),
+        ("control 26 the reactome x intogen2024 null mean",
+         "manuscript_a_sections.md",
+         r"against a null mean of (\-0\.\d{4}) \(SD 0\.\d{4}\)",
+         ("control26_null", "reactome x intogen2024: the null mean"), 0.0006),
+        ("control 26 the reactome x intogen2024 null SD",
+         "manuscript_a_sections.md",
+         r"against a null mean of \-0\.\d{4} \(SD (0\.\d{4})\)",
+         ("control26_null", "reactome x intogen2024: the null SD"), 0.0006),
+        ("control 26 the string_phys700 x ot_nolit margin",
+         "manuscript_a_sections.md",
+         r"string_phys700 x ot_nolit has (\+0\.\d{4})",
+         ("control26_observed", "string_phys700 x ot_nolit"), 0.0006),
+        ("control 26 the arms beyond the null",
+         "manuscript_a_sections.md",
+         r"\*\*(\d+) of the 24 arms",
+         ("control26_summary", "the arms where the observed margin is beyond "
+          "the null's 95 % interval"), 0.5),
 
         # ---- Control 25: mutation-first versus network-first ----
         ("control 25 the prior, the whole universe", "manuscript_a_sections.md",

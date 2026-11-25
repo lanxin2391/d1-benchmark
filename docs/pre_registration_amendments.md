@@ -1144,3 +1144,23 @@ touched. Control 25 is exploratory and is registered in the amendment-4
 family (see A4.6). It changes the *scope* statements in the manuscript
 (F.21, F.26, F.27) and not the headline.
 
+### A6.11 Control 26 -- the label-permutation audit
+
+The one leakage test still missing from the list: permute the label
+vector, re-run the whole pipeline, and ask whether a margin survives.
+The permutation is at the gene level (the positive count and the gene set
+are unchanged), the permuted labels decide the seeds, and the statistic is
+the arm-level mean delta-AUROC over 20 permutations per arm.
+
+| | the value |
+|---|---|
+| the null means over the 24 arms | -0.0028 to +0.0106 |
+| the null SD over the 24 arms | 0.0043 to 0.0348 |
+| the arms where the observed margin is beyond the null's 95 % interval | 19/24 |
+| the arms where it is inside the null's range | 5/24, all of them the newest-driver (temporal) label |
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; the audit is registered in the amendment-4 family (see A4.6) and
+it *supports* the pre-registered verdict while sharpening its weakest
+cell.
+

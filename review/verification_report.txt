@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control26.section        manuscript_a_sections.md
+         §F.28 must report the permutation audit
+  [PASS] control26.section.draft  research_report_draft.md
+         §3.23 must report the permutation audit
+  [PASS] control26.reading        manuscript_a_sections.md
+         §F.28 must state the audit's reading
+  [PASS] control26.facts          report_1118_facts.md
+         the facts sheet must carry Control 26
+  [PASS] control26.qa             report_1118_qa_bank.md
+         the question bank must carry Control 26
   [PASS] control25.section        manuscript_a_sections.md
          §F.27 must report the mutation comparison
   [PASS] control25.section.draft  research_report_draft.md
@@ -246,6 +256,11 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 26 the reactome x intogen2024 margin manuscript=+0.0429  table=+0.0429  tol=0.0006
+  [PASS] control 26 the reactome x intogen2024 null mean manuscript=-0.0028  table=-0.0028  tol=0.0006
+  [PASS] control 26 the reactome x intogen2024 null SD manuscript=+0.0114  table=+0.0114  tol=0.0006
+  [PASS] control 26 the string_phys700 x ot_nolit margin manuscript=+0.1711  table=+0.1711  tol=0.0006
+  [PASS] control 26 the arms beyond the null manuscript=+19.0000  table=+19.0000  tol=0.5
   [PASS] control 25 the prior, the whole universe manuscript=+0.7477  table=+0.7477  tol=0.0006
   [PASS] control 25 degree, the whole universe manuscript=+0.6562  table=+0.6562  tol=0.0006
   [PASS] control 25 the mutation score, the whole universe manuscript=+0.8375  table=+0.8375  tol=0.0006
@@ -313,5 +328,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 184 PASS / 0 FAIL
+RESULT: 194 PASS / 0 FAIL
 ========================================================================

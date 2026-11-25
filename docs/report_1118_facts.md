@@ -412,6 +412,16 @@ The answer key is the NCG-known catalogue (curated independently of IntOGen); th
 - the recurrence comparison (the held-out IntOGen 2024 positives, "is recurrent" = seen in at least three samples in some cohort): the prior **0.5530** (above the degree 0.5133 in 5/6), the publication count **0.5677** (above the prior in 5/6) → the prior's weak recurrence preference is no better explained than visibility
 - `scripts/run_c25_mutation_vs_network.py`, `results/tables/c25_mutation_vs_network.tsv`, `results/tables/c25_recurrence.tsv`, `results/tables/c25_summary.tsv`, `docs/c25_mutation_vs_network.md`
 
+## 7i. The label-permutation audit (Control 26)
+
+The label vector is permuted inside each split file (the positive count and the gene set are unchanged) and the **whole pipeline** is re-run: the permuted labels decide the seeds, the seeds decide the scores, the scores are evaluated against the permuted test labels. 20 permutations per arm; the statistic is the arm-level mean delta-AUROC.
+
+- the null is centred on zero in **all 24 arms** (the null means run from -0.0028 to +0.0106)
+- the observed margin is beyond the null's 95 % interval in **19/24** arms (p < 1/20); in the other 5 arms it lies inside the null's range, and **all of them are the newest-driver (temporal) label**: funmap x intogen_temporal_new, intact x intogen_temporal_new, reactome x intogen_temporal_new, rna_coexp x intogen_temporal_new, string_phys700 x intogen_temporal_new
+- the null's SD runs from 0.0043 to 0.0348 → **a margin of +0.01 on its own is not evidence**
+- the smallest observed margin that clears its null: **+0.0429** (reactome x intogen2024), about 4.0 null SDs above its null mean
+- `scripts/run_c26_label_permutation.py`, `results/tables/c26_label_permutation.tsv`, `results/tables/c26_label_permutation_summary.tsv`, `docs/c26_label_permutation.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

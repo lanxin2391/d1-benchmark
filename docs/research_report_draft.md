@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (184 PASS / 0 FAIL). The second mechanism
+manuscript against that table (194 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -1943,6 +1943,78 @@ pre-registered endpoint is touched.
 
 ---
 
+### 3.23 The label-permutation audit
+
+Control 26: the label-permutation audit (the ultimate leakage check)
+
+The one leakage test that was still missing from the list asks a simple
+question: if the positive labels carried no information about the genes,
+would the pipeline still report a positive margin? Control 26 permutes the
+gene-level label vector inside each split file -- the positive count and
+the gene set are unchanged -- and re-runs the **whole pipeline**: the
+permuted labels decide the seeds, the seeds decide the scores, and the
+scores are evaluated against the permuted test labels. The comparison
+statistic is the arm-level mean delta-AUROC, the same statistic the
+headline uses, over 20 permutations per arm.
+
+The observed mean delta-AUROC per arm (the released Table 1 values,
+recomputed here through the same code path):
+
+| network | intogen2024 | ot_all | ot_nolit | intogen_temporal_new |
+|---|---|---|---|---|
+| funmap | +0.1001 | +0.0853 | +0.0780 | +0.0196 |
+| intact | +0.0651 | +0.0842 | +0.0784 | +0.0071 |
+| reactome | +0.0429 | +0.1103 | +0.0996 | -0.0125 |
+| rna_coexp | +0.0521 | +0.0767 | +0.0834 | +0.0127 |
+| string_full700 | +0.1133 | +0.1201 | +0.1267 | +0.0604 |
+| string_phys700 | +0.1189 | +0.1582 | +0.1711 | +0.0378 |
+
+and the mean of the permutation null over the same arms:
+
+| network | intogen2024 | ot_all | ot_nolit | intogen_temporal_new |
+|---|---|---|---|---|
+| funmap | -0.0002 | +0.0032 | +0.0026 | +0.0053 |
+| intact | -0.0003 | +0.0037 | -0.0010 | +0.0037 |
+| reactome | -0.0028 | +0.0005 | +0.0053 | +0.0106 |
+| rna_coexp | +0.0007 | -0.0016 | -0.0022 | -0.0020 |
+| string_full700 | +0.0001 | +0.0030 | +0.0021 | +0.0009 |
+| string_phys700 | +0.0012 | -0.0013 | +0.0007 | +0.0007 |
+
+**Reading.** **The null is centred on zero in every one of the 24 arms**
+(the null means run from -0.0028 to +0.0106),
+so the pipeline does not manufacture a margin from random labels: the
+positive result is a property of the labels, not of the machinery. The
+observed margin is beyond the null's 95 % interval in **19 of the 24
+arms** (in those arms none of the 20 permutations reached it). In the
+other **5 arms** the observed margin lies inside the null's range,
+and **all of them are the newest-driver (temporal) label** (funmap x intogen_temporal_new, intact x intogen_temporal_new, reactome x intogen_temporal_new, rna_coexp x intogen_temporal_new, string_phys700 x intogen_temporal_new)
+-- the arm family where the margin is smallest and negative in one case.
+Read with F.25 that is the expected shape: the newest-driver labels are
+where the network and the catalogue are least in step, and the permutation
+null cannot separate a real but small margin from a random one.
+
+The table also calibrates what a margin is worth: the null's SD runs from
+0.0043 to 0.0348, so **a margin of +0.01 on its
+own is not evidence**. The smallest observed margin that clears its null is
++0.0429 (reactome x intogen2024), about 4.0 null SDs above its null mean. Worked example: reactome x intogen2024 has an observed margin of +0.0429 against a null mean of -0.0028 (SD 0.0114), and string_phys700 x ot_nolit has +0.1711 against a null mean of +0.0007 (SD 0.0133).
+
+**What this means for the claim.** It removes the last mechanical
+explanation of the headline: the margin is not produced by the machinery,
+by the seed selection, or by the evaluation code. What it does **not** do
+is license the margin's size, and it does not address the biological
+biases -- those are the job of the bait-matched null (F.12) and the
+publication-count control (F.14). And it sharpens the weakest cell of
+the panel: on the newest-driver label the margin is not distinguishable
+from what random labels produce, which is a stronger statement than the
+sign alone.
+
+(`scripts/run_c26_label_permutation.py`;
+`results/tables/c26_label_permutation.tsv`,
+`results/tables/c26_label_permutation_summary.tsv`;
+`docs/c26_label_permutation.md`.)
+
+---
+
 ### 4.1 What the benchmark establishes
 
 The headline is a negative-space claim with a positive-space
@@ -2168,7 +2240,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 674 recomputed quantities.
+checks) and a ground-truth table of 759 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2244,10 +2316,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`. Release manifest with SHA-256 of every tracked table and figure (194 tables + 15 figures): `docs/release_manifest_v1.0-rc11.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc11 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (184 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (194 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (674 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (759 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

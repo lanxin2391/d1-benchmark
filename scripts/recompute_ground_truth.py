@@ -459,6 +459,43 @@ def control25() -> None:
            "c25_recurrence.tsv")
 
 
+# ----------------------------------------------------------------- control 26
+def control26() -> None:
+    """The label-permutation audit (Control 26)."""
+    p = TABLES / "c26_label_permutation_summary.tsv"
+    if not p.exists():
+        return
+    s = pd.read_csv(p, sep="\t")
+    for _, r in s.iterrows():
+        scope = f"{r['network']} x {r['label']}"
+        record("control26_observed", scope, r4(r["observed"]),
+               "c26_label_permutation_summary.tsv")
+        record("control26_null", f"{scope}: the null mean", r4(r["null_mean"]),
+               "c26_label_permutation_summary.tsv")
+        record("control26_null", f"{scope}: the null SD", r4(r["null_sd"]),
+               "c26_label_permutation_summary.tsv")
+        record("control26_p", scope, r4(r["empirical_p"]),
+               "c26_label_permutation_summary.tsv")
+    record("control26_summary", "the arms where the observed margin is beyond "
+               "the null's 95 % interval", int((s.empirical_p < 0.05).sum()),
+               "c26_label_permutation_summary.tsv")
+    record("control26_summary", "the arms where it is inside the null's range",
+           int((s.empirical_p >= 0.05).sum()),
+           "c26_label_permutation_summary.tsv")
+    record("control26_summary", "the smallest null mean", r4(s.null_mean.min()),
+           "c26_label_permutation_summary.tsv")
+    record("control26_summary", "the largest null mean", r4(s.null_mean.max()),
+           "c26_label_permutation_summary.tsv")
+    record("control26_summary", "the smallest null SD", r4(s.null_sd.min()),
+           "c26_label_permutation_summary.tsv")
+    record("control26_summary", "the largest null SD", r4(s.null_sd.max()),
+           "c26_label_permutation_summary.tsv")
+    sig = s[s.empirical_p < 0.05]
+    record("control26_summary", "the smallest observed margin that clears its "
+               "null", r4(sig.observed.min()),
+           "c26_label_permutation_summary.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1014,7 +1051,7 @@ def main() -> int:
     recent_series()
     control24()
     control25()
-    control25()
+    control26()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")
