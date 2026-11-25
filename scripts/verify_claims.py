@@ -49,6 +49,20 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 27: the rewiring null under the second learner ----
+    ("control27.section", "manuscript_a_sections.md",
+     "### F.29 Control 27", "\u00a7F.29 must report the rewiring grid"),
+    ("control27.section.draft", "research_report_draft.md",
+     "### 3.24 The rewiring null under the second learner",
+     "\u00a73.24 must report the rewiring grid"),
+    ("control27.reading", "manuscript_a_sections.md",
+     "does not depend on the learner", "\u00a7F.29 must state the reading"),
+    ("control27.facts", "report_1118_facts.md",
+     "## 7j. The rewiring null under the second learner (Control 27",
+     "the facts sheet must carry Control 27"),
+    ("control27.qa", "report_1118_qa_bank.md",
+     "### B29", "the question bank must carry Control 27"),
+
     # ---- Control 26: the label-permutation audit ----
     ("control26.section", "manuscript_a_sections.md",
      "### F.28 Control 26", "\u00a7F.28 must report the permutation audit"),
@@ -535,6 +549,37 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Control 27: the rewiring null under the second learner ----
+        ("control 27 the arms with a positive effect-size z",
+         "manuscript_a_sections.md",
+         r"effect-size z is positive in (\d+) of",
+         ("control27_z", "the arms with a positive effect-size z"), 0.5),
+        ("control 27 the median effect-size z", "manuscript_a_sections.md",
+         r"the median at (\d+\.\d+) and the range",
+         ("control27_z", "the median effect-size z"), 0.006),
+        ("control 27 the smallest effect-size z", "manuscript_a_sections.md",
+         r"and the range (\d+\.\d+) to",
+         ("control27_z", "the smallest effect-size z"), 0.006),
+        ("control 27 the largest effect-size z", "manuscript_a_sections.md",
+         r"and the range \d+\.\d+ to (\d+\.\d+)\.",
+         ("control27_z", "the largest effect-size z"), 0.006),
+        ("control 27 the intact x intogen2024 observed margin",
+         "manuscript_a_sections.md",
+         r"the observed (\+?-?\d\.\d{4}) against a rewired null",
+         ("control27_observed", "intact x intogen2024"), 0.0006),
+        ("control 27 the intact x intogen2024 null mean",
+         "manuscript_a_sections.md",
+         r"against a rewired null of (\+?-?\d\.\d{4})",
+         ("control27_null", "intact x intogen2024: the null mean"), 0.0006),
+        ("control 27 the RWR effect-size z, the median",
+         "manuscript_a_sections.md",
+         r"with a median of \u2212?\+?(\d+\.\d{2})",
+         ("control27_z", "the RWR effect-size z: the median"), 0.006),
+        ("control 27 the RWR effect-size z, the largest",
+         "manuscript_a_sections.md",
+         r"to \u2012?\+?(\d+\.\d{2}) with a median of",
+         ("control27_z", "the RWR effect-size z: the largest"), 0.006),
 
         # ---- Control 26: the label-permutation audit ----
 ("control 26 the reactome x intogen2024 margin",

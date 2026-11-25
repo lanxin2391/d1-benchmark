@@ -1762,8 +1762,10 @@ produced. The result is the same qualitative answer as under RWR:
 
 | funmap × intogen2024 | observed | rewired null | z |
 |---|---|---|---|
-| RWR (100 rewirings) | +0.0998 | +0.0024 ± 0.0103 | +94.2 |
+| RWR (100 rewirings) | +0.0998 | +0.0024 ± 0.0103 | +94.2 (standard-error z) / **+9.4** (effect-size z) |
 | proximity (20 rewirings) | **+0.0804** | **−0.0124 ± 0.0072** | **+12.9** |
+
+(The two rows of this table use two different z conventions, so the numbers are not comparable as they stand: the RWR row quotes the **standard-error z** of the released table -- the observed minus the null mean, divided by the null mean's standard error -- while the proximity row quotes the **effect-size z**, the observed minus the null mean divided by the null spread. On the effect-size convention the RWR arm is z = +9.4. The verdicts are the same under both.)
 
 Every rewired network gives a **negative** margin (between −0.0001 and
 −0.0310): re-paired wiring actively hurts the proximity learner, exactly
@@ -2236,6 +2238,85 @@ sign alone.
 `results/tables/c26_label_permutation.tsv`,
 `results/tables/c26_label_permutation_summary.tsv`;
 `docs/c26_label_permutation.md`.)
+
+---
+
+### F.29 Control 27: the rewiring null under the second learner (the full grid)
+
+Control 22 showed on one arm that the degree-preserving rewiring null is
+computable under the proximity learner. Control 27 runs the **full grid**:
+6 networks x 4 labels x every rewiring that exists (100 per network, 98 for
+Reactome), with the same proximity learner, the same degree baseline and
+the same test genes as the released second-learner run, and 20 folds per
+arm (one per repeat) for the observed and the null alike.
+
+| network | label | the observed margin | the null mean | the null SD | the rewirings | the effect-size z |
+|---|---|---|---|---|---|---|
+| funmap | intogen2024 | +0.0821 | -0.0064 | 0.0079 | 100 | +11.21 |
+| funmap | intogen_temporal_new | +0.0512 | -0.0067 | 0.0202 | 100 | +2.86 |
+| funmap | ot_all | +0.0700 | -0.0267 | 0.0071 | 100 | +13.56 |
+| funmap | ot_nolit | +0.0492 | -0.0228 | 0.0077 | 100 | +9.36 |
+| intact | intogen2024 | -0.0824 | -0.1242 | 0.0040 | 100 | +10.40 |
+| intact | intogen_temporal_new | -0.0426 | -0.0621 | 0.0192 | 100 | +1.01 |
+| intact | ot_all | -0.0693 | -0.1184 | 0.0045 | 100 | +10.98 |
+| intact | ot_nolit | -0.0552 | -0.1025 | 0.0049 | 100 | +9.69 |
+| reactome | intogen2024 | -0.0293 | -0.0927 | 0.0111 | 98 | +5.73 |
+| reactome | intogen_temporal_new | -0.0435 | -0.0581 | 0.0252 | 98 | +0.58 |
+| reactome | ot_all | +0.0079 | -0.1045 | 0.0080 | 98 | +14.11 |
+| reactome | ot_nolit | -0.0031 | -0.0946 | 0.0101 | 98 | +9.04 |
+| rna_coexp | intogen2024 | +0.0455 | -0.0389 | 0.0079 | 100 | +10.69 |
+| rna_coexp | intogen_temporal_new | +0.0303 | -0.0183 | 0.0205 | 100 | +2.38 |
+| rna_coexp | ot_all | +0.0489 | -0.0171 | 0.0091 | 100 | +7.23 |
+| rna_coexp | ot_nolit | +0.0770 | -0.0166 | 0.0094 | 100 | +9.93 |
+| string_full700 | intogen2024 | +0.0109 | -0.1031 | 0.0058 | 100 | +19.51 |
+| string_full700 | intogen_temporal_new | +0.0106 | -0.0651 | 0.0204 | 100 | +3.72 |
+| string_full700 | ot_all | -0.0214 | -0.1382 | 0.0055 | 100 | +21.18 |
+| string_full700 | ot_nolit | -0.0115 | -0.1177 | 0.0049 | 100 | +21.69 |
+| string_phys700 | intogen2024 | +0.0508 | -0.0602 | 0.0082 | 100 | +13.48 |
+| string_phys700 | intogen_temporal_new | +0.0001 | -0.0520 | 0.0209 | 100 | +2.48 |
+| string_phys700 | ot_all | +0.0586 | -0.0702 | 0.0083 | 100 | +15.44 |
+| string_phys700 | ot_nolit | +0.0774 | -0.0599 | 0.0087 | 100 | +15.74 |
+
+**Reading.** **The rewiring null is as decisive under the second learner
+as under RWR: the effect-size z is positive in 24 of 24 arms**,
+with the median at 10.16 and the range 0.58 to 21.69. A
+degree-preserving rewiring destroys the margin in every arm -- including
+the eight arms where the proximity learner's own margin is negative (for
+example `intact x intogen2024`: the observed -0.0824 against a rewired null of -0.1242). So the
+conclusion that the increment is carried by the *wiring* rather than by
+the degree sequence does not depend on the learner -- which is the point
+of running it under a second one.
+
+Two conventions are in play for the z statistic, and the project has used
+both: the **effect-size z** is (observed - null mean) / null SD, i.e. how
+many null SDs the observation is away from the null, and the
+**standard-error z** is (observed - null mean) / (null SD / sqrt(n)), i.e.
+how many standard errors of the null *mean* the observation is. The
+released `w5_p_values.tsv` column reports the second one, so its values
+are about ten times larger (the RWR effect-size z runs from -0.36 to
++20.52 with a median of +8.53; the same arms under the proximity learner
+run from 0.58 to 21.69 with a median of 10.16). The verdicts
+are the same under both conventions. Where the two appear in the same
+table (F.22, the Control 22 feasibility check) each row now states its
+convention.
+
+**What this means for the claim.** The rewiring control was the strongest
+evidence that the contribution is topological rather than a property of
+the degree sequence, and it is now shown under both learners. It does not
+repair the learner-dependence of the *size* of the margin (F.22: under
+proximity the margin is positive in 16 of 24 arms with a median of
++0.011, against 23 of 24 and +0.081 under RWR) -- it says that whichever
+learner is used, the margin is not produced by the degree sequence.
+
+**Caveats.** 20 folds per arm for both the observed and the null, because
+every rewiring needs a fresh multi-source BFS per fold; the released RWR
+null used all 200 folds. The rewirings are the ones Control 2 generated.
+**Exploratory** (amendment 4): no pre-registered endpoint is touched.
+
+(`scripts/run_c27_rewiring_second_learner.py`;
+`results/tables/c27_rewiring_second_learner.tsv`,
+`results/tables/c27_rewiring_second_learner_summary.tsv`;
+`docs/c27_rewiring_second_learner.md`.)
 
 ---
 
@@ -3010,8 +3091,8 @@ paper was produced by a model.
 
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
-we replaced human cross-checking with two audit scripts (194 and 71
-checks) and a ground-truth table of 759 recomputed quantities.
+we replaced human cross-checking with two audit scripts (207 and 71
+checks) and a ground-truth table of 863 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes

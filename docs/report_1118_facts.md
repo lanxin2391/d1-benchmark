@@ -354,7 +354,7 @@ Is degree a strawman baseline, and is RWR a lucky special case?
 
 | funmap x intogen2024 | observed | rewired null | z |
 |---|---|---|---|
-| RWR (100 rewirings) | +0.0998 | +0.0024 +- 0.0103 | +94.2 |
+| RWR (100 rewirings) | +0.0998 | +0.0024 +- 0.0103 | +94.2 (standard-error z) / **+9.4** (effect-size z) |
 | proximity (20 rewirings) | **+0.0804** | **-0.0124 +- 0.0072** | **+12.9** |
 
 - the degree sequence is preserved exactly (the largest difference in any gene's degree over the 20 rewirings is **0**)
@@ -421,6 +421,16 @@ The label vector is permuted inside each split file (the positive count and the 
 - the null's SD runs from 0.0043 to 0.0348 → **a margin of +0.01 on its own is not evidence**
 - the smallest observed margin that clears its null: **+0.0429** (reactome x intogen2024), about 4.0 null SDs above its null mean
 - `scripts/run_c26_label_permutation.py`, `results/tables/c26_label_permutation.tsv`, `results/tables/c26_label_permutation_summary.tsv`, `docs/c26_label_permutation.md`
+
+## 7j. The rewiring null under the second learner (Control 27, the full grid)
+
+6 networks x 4 labels x every rewiring (100 per network, 98 for Reactome), the proximity learner, the same degree baseline and test genes, 20 folds per arm for the observed and the null alike.
+
+- the effect-size z (observed - null mean)/null SD is positive in **24/24** arms: the median 10.16, the range 0.58 to 21.69
+- the rewiring destroys the margin in **every** arm, including the eight arms where the proximity learner's own margin is negative (e.g. intact x intogen2024: the observed -0.0824 against a rewired null of -0.1242)
+- the RWR null on the same arms: the effect-size z runs from -0.36 to +20.52 with a median of +8.53 → the two learners agree that the margin is not a property of the degree sequence
+- **the two z conventions**: the released `w5_p_values.tsv` column is the standard-error z (divided by the null mean's standard error), which is about ten times the effect-size z; where the two appear in one table each row now states its convention
+- `scripts/run_c27_rewiring_second_learner.py`, `results/tables/c27_rewiring_second_learner.tsv`, `results/tables/c27_rewiring_second_learner_summary.tsv`, `docs/c27_rewiring_second_learner.md`
 
 ## 8. The design (panel and labels)
 

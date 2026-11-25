@@ -496,6 +496,47 @@ def control26() -> None:
            "c26_label_permutation_summary.tsv")
 
 
+# ----------------------------------------------------------------- control 27
+def control27() -> None:
+    """The rewiring null under the second learner (Control 27)."""
+    p = TABLES / "c27_rewiring_second_learner_summary.tsv"
+    if not p.exists():
+        return
+    s = pd.read_csv(p, sep="\t")
+    for _, r in s.iterrows():
+        scope = f"{r['network']} x {r['label']}"
+        record("control27_observed", scope, r4(r["observed_margin"]),
+               "c27_rewiring_second_learner_summary.tsv")
+        record("control27_null", f"{scope}: the null mean", r4(r["null_mean"]),
+               "c27_rewiring_second_learner_summary.tsv")
+        record("control27_null", f"{scope}: the null SD", r4(r["null_sd"]),
+               "c27_rewiring_second_learner_summary.tsv")
+        record("control27_z", scope, r4(r["z_effect_size"]),
+               "c27_rewiring_second_learner_summary.tsv")
+    record("control27_z", "the arms with a positive effect-size z",
+           int((s.z_effect_size > 0).sum()),
+           "c27_rewiring_second_learner_summary.tsv")
+    record("control27_z", "the median effect-size z", r4(s.z_effect_size.median()),
+           "c27_rewiring_second_learner_summary.tsv")
+    record("control27_z", "the smallest effect-size z", r4(s.z_effect_size.min()),
+           "c27_rewiring_second_learner_summary.tsv")
+    record("control27_z", "the largest effect-size z", r4(s.z_effect_size.max()),
+           "c27_rewiring_second_learner_summary.tsv")
+    # the released RWR null, in the effect-size convention
+    w5 = TABLES / "w5_p_values.tsv"
+    if w5.exists():
+        w = pd.read_csv(w5, sep="\t")
+        z_eff = (w.observed_delta - w.null_mean) / w.null_sd
+        record("control27_z", "the RWR effect-size z: the median",
+               r4(z_eff.median()), "w5_p_values.tsv")
+        record("control27_z", "the RWR effect-size z: the smallest",
+               r4(z_eff.min()), "w5_p_values.tsv")
+        record("control27_z", "the RWR effect-size z: the largest",
+               r4(z_eff.max()), "w5_p_values.tsv")
+        record("control27_z", "the RWR arms with a positive effect-size z",
+               int((z_eff > 0).sum()), "w5_p_values.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1052,6 +1093,7 @@ def main() -> int:
     control24()
     control25()
     control26()
+    control27()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

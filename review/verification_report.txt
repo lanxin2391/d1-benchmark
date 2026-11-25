@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control27.section        manuscript_a_sections.md
+         §F.29 must report the rewiring grid
+  [PASS] control27.section.draft  research_report_draft.md
+         §3.24 must report the rewiring grid
+  [PASS] control27.reading        manuscript_a_sections.md
+         §F.29 must state the reading
+  [PASS] control27.facts          report_1118_facts.md
+         the facts sheet must carry Control 27
+  [PASS] control27.qa             report_1118_qa_bank.md
+         the question bank must carry Control 27
   [PASS] control26.section        manuscript_a_sections.md
          §F.28 must report the permutation audit
   [PASS] control26.section.draft  research_report_draft.md
@@ -256,6 +266,14 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 27 the arms with a positive effect-size z manuscript=+24.0000  table=+24.0000  tol=0.5
+  [PASS] control 27 the median effect-size z manuscript=+10.1600  table=+10.1650  tol=0.006
+  [PASS] control 27 the smallest effect-size z manuscript=+0.5800  table=+0.5800  tol=0.006
+  [PASS] control 27 the largest effect-size z manuscript=+21.6900  table=+21.6900  tol=0.006
+  [PASS] control 27 the intact x intogen2024 observed margin manuscript=-0.0824  table=-0.0824  tol=0.0006
+  [PASS] control 27 the intact x intogen2024 null mean manuscript=-0.1242  table=-0.1242  tol=0.0006
+  [PASS] control 27 the RWR effect-size z, the median manuscript=+8.5300  table=+8.5304  tol=0.006
+  [PASS] control 27 the RWR effect-size z, the largest manuscript=+20.5200  table=+20.5249  tol=0.006
   [PASS] control 26 the reactome x intogen2024 margin manuscript=+0.0429  table=+0.0429  tol=0.0006
   [PASS] control 26 the reactome x intogen2024 null mean manuscript=-0.0028  table=-0.0028  tol=0.0006
   [PASS] control 26 the reactome x intogen2024 null SD manuscript=+0.0114  table=+0.0114  tol=0.0006
@@ -328,5 +346,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 194 PASS / 0 FAIL
+RESULT: 207 PASS / 0 FAIL
 ========================================================================

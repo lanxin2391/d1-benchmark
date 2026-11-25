@@ -758,3 +758,107 @@ control26_summary	the largest null mean	0.0106	c26_label_permutation_summary.tsv
 control26_summary	the smallest null SD	0.0043	c26_label_permutation_summary.tsv	
 control26_summary	the largest null SD	0.0348	c26_label_permutation_summary.tsv	
 control26_summary	the smallest observed margin that clears its null	0.0429	c26_label_permutation_summary.tsv	
+control27_observed	funmap x intogen2024	0.0821	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x intogen2024: the null mean	-0.0064	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x intogen2024: the null SD	0.0079	c27_rewiring_second_learner_summary.tsv	
+control27_z	funmap x intogen2024	11.21	c27_rewiring_second_learner_summary.tsv	
+control27_observed	funmap x intogen_temporal_new	0.0512	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x intogen_temporal_new: the null mean	-0.0067	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x intogen_temporal_new: the null SD	0.0202	c27_rewiring_second_learner_summary.tsv	
+control27_z	funmap x intogen_temporal_new	2.86	c27_rewiring_second_learner_summary.tsv	
+control27_observed	funmap x ot_all	0.07	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x ot_all: the null mean	-0.0267	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x ot_all: the null SD	0.0071	c27_rewiring_second_learner_summary.tsv	
+control27_z	funmap x ot_all	13.56	c27_rewiring_second_learner_summary.tsv	
+control27_observed	funmap x ot_nolit	0.0492	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x ot_nolit: the null mean	-0.0228	c27_rewiring_second_learner_summary.tsv	
+control27_null	funmap x ot_nolit: the null SD	0.0077	c27_rewiring_second_learner_summary.tsv	
+control27_z	funmap x ot_nolit	9.36	c27_rewiring_second_learner_summary.tsv	
+control27_observed	intact x intogen2024	-0.0824	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x intogen2024: the null mean	-0.1242	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x intogen2024: the null SD	0.004	c27_rewiring_second_learner_summary.tsv	
+control27_z	intact x intogen2024	10.4	c27_rewiring_second_learner_summary.tsv	
+control27_observed	intact x intogen_temporal_new	-0.0426	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x intogen_temporal_new: the null mean	-0.0621	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x intogen_temporal_new: the null SD	0.0192	c27_rewiring_second_learner_summary.tsv	
+control27_z	intact x intogen_temporal_new	1.01	c27_rewiring_second_learner_summary.tsv	
+control27_observed	intact x ot_all	-0.0693	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x ot_all: the null mean	-0.1184	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x ot_all: the null SD	0.0045	c27_rewiring_second_learner_summary.tsv	
+control27_z	intact x ot_all	10.98	c27_rewiring_second_learner_summary.tsv	
+control27_observed	intact x ot_nolit	-0.0552	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x ot_nolit: the null mean	-0.1025	c27_rewiring_second_learner_summary.tsv	
+control27_null	intact x ot_nolit: the null SD	0.0049	c27_rewiring_second_learner_summary.tsv	
+control27_z	intact x ot_nolit	9.69	c27_rewiring_second_learner_summary.tsv	
+control27_observed	reactome x intogen2024	-0.0293	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x intogen2024: the null mean	-0.0927	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x intogen2024: the null SD	0.0111	c27_rewiring_second_learner_summary.tsv	
+control27_z	reactome x intogen2024	5.73	c27_rewiring_second_learner_summary.tsv	
+control27_observed	reactome x intogen_temporal_new	-0.0435	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x intogen_temporal_new: the null mean	-0.0581	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x intogen_temporal_new: the null SD	0.0252	c27_rewiring_second_learner_summary.tsv	
+control27_z	reactome x intogen_temporal_new	0.58	c27_rewiring_second_learner_summary.tsv	
+control27_observed	reactome x ot_all	0.0079	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x ot_all: the null mean	-0.1045	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x ot_all: the null SD	0.008	c27_rewiring_second_learner_summary.tsv	
+control27_z	reactome x ot_all	14.11	c27_rewiring_second_learner_summary.tsv	
+control27_observed	reactome x ot_nolit	-0.0031	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x ot_nolit: the null mean	-0.0946	c27_rewiring_second_learner_summary.tsv	
+control27_null	reactome x ot_nolit: the null SD	0.0101	c27_rewiring_second_learner_summary.tsv	
+control27_z	reactome x ot_nolit	9.04	c27_rewiring_second_learner_summary.tsv	
+control27_observed	rna_coexp x intogen2024	0.0455	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x intogen2024: the null mean	-0.0389	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x intogen2024: the null SD	0.0079	c27_rewiring_second_learner_summary.tsv	
+control27_z	rna_coexp x intogen2024	10.69	c27_rewiring_second_learner_summary.tsv	
+control27_observed	rna_coexp x intogen_temporal_new	0.0303	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x intogen_temporal_new: the null mean	-0.0183	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x intogen_temporal_new: the null SD	0.0205	c27_rewiring_second_learner_summary.tsv	
+control27_z	rna_coexp x intogen_temporal_new	2.38	c27_rewiring_second_learner_summary.tsv	
+control27_observed	rna_coexp x ot_all	0.0489	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x ot_all: the null mean	-0.0171	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x ot_all: the null SD	0.0091	c27_rewiring_second_learner_summary.tsv	
+control27_z	rna_coexp x ot_all	7.23	c27_rewiring_second_learner_summary.tsv	
+control27_observed	rna_coexp x ot_nolit	0.077	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x ot_nolit: the null mean	-0.0166	c27_rewiring_second_learner_summary.tsv	
+control27_null	rna_coexp x ot_nolit: the null SD	0.0094	c27_rewiring_second_learner_summary.tsv	
+control27_z	rna_coexp x ot_nolit	9.93	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_full700 x intogen2024	0.0109	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x intogen2024: the null mean	-0.1031	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x intogen2024: the null SD	0.0058	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_full700 x intogen2024	19.51	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_full700 x intogen_temporal_new	0.0106	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x intogen_temporal_new: the null mean	-0.0651	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x intogen_temporal_new: the null SD	0.0204	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_full700 x intogen_temporal_new	3.72	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_full700 x ot_all	-0.0214	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x ot_all: the null mean	-0.1382	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x ot_all: the null SD	0.0055	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_full700 x ot_all	21.18	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_full700 x ot_nolit	-0.0115	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x ot_nolit: the null mean	-0.1177	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_full700 x ot_nolit: the null SD	0.0049	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_full700 x ot_nolit	21.69	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_phys700 x intogen2024	0.0508	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x intogen2024: the null mean	-0.0602	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x intogen2024: the null SD	0.0082	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_phys700 x intogen2024	13.48	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_phys700 x intogen_temporal_new	0.0001	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x intogen_temporal_new: the null mean	-0.052	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x intogen_temporal_new: the null SD	0.0209	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_phys700 x intogen_temporal_new	2.48	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_phys700 x ot_all	0.0586	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x ot_all: the null mean	-0.0702	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x ot_all: the null SD	0.0083	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_phys700 x ot_all	15.44	c27_rewiring_second_learner_summary.tsv	
+control27_observed	string_phys700 x ot_nolit	0.0774	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x ot_nolit: the null mean	-0.0599	c27_rewiring_second_learner_summary.tsv	
+control27_null	string_phys700 x ot_nolit: the null SD	0.0087	c27_rewiring_second_learner_summary.tsv	
+control27_z	string_phys700 x ot_nolit	15.74	c27_rewiring_second_learner_summary.tsv	
+control27_z	the arms with a positive effect-size z	24	c27_rewiring_second_learner_summary.tsv	
+control27_z	the median effect-size z	10.165	c27_rewiring_second_learner_summary.tsv	
+control27_z	the smallest effect-size z	0.58	c27_rewiring_second_learner_summary.tsv	
+control27_z	the largest effect-size z	21.69	c27_rewiring_second_learner_summary.tsv	
+control27_z	the RWR effect-size z: the median	8.5304	w5_p_values.tsv	
+control27_z	the RWR effect-size z: the smallest	-0.3565	w5_p_values.tsv	
+control27_z	the RWR effect-size z: the largest	20.5249	w5_p_values.tsv	
+control27_z	the RWR arms with a positive effect-size z	23	w5_p_values.tsv	

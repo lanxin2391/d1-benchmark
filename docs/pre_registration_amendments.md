@@ -1075,8 +1075,9 @@ already produced rather than re-running the rewiring.
 
 | funmap × intogen2024 | observed | rewired null | z |
 |---|---|---|---|
-| RWR (100 rewirings) | +0.0998 | +0.0024 ± 0.0103 | +94.2 |
+| RWR (100 rewirings) | +0.0998 | +0.0024 ± 0.0103 | +94.2 (standard-error z) / **+9.4** (effect-size z) |
 | proximity (20 rewirings) | +0.0804 | −0.0124 ± 0.0072 | +12.9 |
+(The two rows of this table use two different z conventions, so the numbers are not comparable as they stand: the RWR row quotes the **standard-error z** of the released table -- the observed minus the null mean, divided by the null mean's standard error -- while the proximity row quotes the **effect-size z**, the observed minus the null mean divided by the null spread. On the effect-size convention the RWR arm is z = +9.4. The verdicts are the same under both.)
 
 Every rewired network gives a negative margin (−0.0001 to −0.0310), and
 the rewiring preserves the degree sequence **exactly** (the largest
@@ -1163,4 +1164,28 @@ the arm-level mean delta-AUROC over 20 permutations per arm.
 touched; the audit is registered in the amendment-4 family (see A4.6) and
 it *supports* the pre-registered verdict while sharpening its weakest
 cell.
+
+### A6.12 Control 27 -- the rewiring null under the second learner (the full grid)
+
+Control 22 was a feasibility check on one arm; this is the full grid: 6
+networks x 4 labels x every rewiring, the proximity learner, 20 folds per
+arm for the observed and the null alike.
+
+| | the value |
+|---|---|
+| the arms with a positive effect-size z | 24/24 |
+| the median effect-size z | 10.16 |
+| the range | 0.58 to 21.69 |
+
+**The z conventions, made explicit.** The released `w5_p_values.tsv`
+column is the *standard-error* z, (observed - null mean) / (null SD /
+sqrt(n)); the *effect-size* z, (observed - null mean) / null SD, is about
+sqrt(n) times smaller (the RWR arms: -0.36 to +20.52, median +8.53;
+the proximity arms: 0.58 to 21.69, median 10.16). The verdicts
+are the same under both. Where the two conventions appeared in one table
+(the Control 22 feasibility check), each row now states which one it
+uses.
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Control 27 is registered in the amendment-4 family (see A4.6).
 
