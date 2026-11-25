@@ -66,7 +66,10 @@ choice and 24.8 % from network choice, with 0.3 % fold noise. The
 95 % CI on ΔAUROC excludes zero in 24/24 arms under four of the five
 interval constructions and in 20/24 under the pre-registered
 gene-cluster bootstrap; the four exceptions are the smallest-effect
-`intogen_temporal_new` arms. The margin is flat across the degree
+`intogen_temporal_new` arms. Both verdicts are unchanged under five
+alternative cross-validation designs (5 x 10, 5 x 20, 10 x 10, 10 x 20
+and 20 x 10): the median margin moves by less than 5 % and the
+gene-cluster count stays at 20/24 in every one of them. The margin is flat across the degree
 tercile of the seeds (mean ΔAUROC +0.053 / +0.061 / +0.054 for
 low / mid / high seed degree), so it is not a hub artefact; and it
 survives adjustment for network size and label coverage (23/24 cells

@@ -1777,6 +1777,55 @@ on the protocol's **ranks** (decision D-07: score descending, then gene
 symbol ascending), which resolves the ties the documented way. RWR has
 few ties, so its numbers are unchanged, and the self-check confirms it.
 
+### F.25 Control 23: the split-design comparison
+
+The teacher asked us to try other cross-validation designs -- 10 x 10
+among them -- and to say which one is best. We compared six designs on
+the same 24 arms, the same networks, the same catalogues and the same
+endpoint (alpha = 0.5): five folds with 10, 20 and 40 repeats (the
+first two are subsets of the released panel, the third is the
+pre-registered design), ten folds with 10 and 20 repeats, and twenty
+folds with 10 repeats (these three are new splits, built with the same
+base seed).
+
+| design | evaluations per arm | median margin | positive arms | repeat-level CI | gene-cluster CI | median gene-cluster width |
+|---|---|---|---|---|---|---|
+| 5 x 10 | 50 | +0.0813 | 23/24 | 24/24 | 20/24 | 0.0366 |
+| 5 x 20 | 100 | +0.0803 | 23/24 | 24/24 | 20/24 | 0.0366 |
+| **5 x 40 (pre-registered)** | 200 | +0.0806 | 23/24 | 24/24 | 20/24 | 0.0365 |
+| 10 x 10 | 100 | +0.0836 | 23/24 | 24/24 | 20/24 | 0.0370 |
+| 10 x 20 | 200 | +0.0839 | 23/24 | 24/24 | 20/24 | 0.0373 |
+| 20 x 10 | 200 | +0.0831 | 23/24 | 24/24 | 20/24 | 0.0366 |
+
+Three findings. **The size of the effect is a property of the data, not
+of the design**: the median margin stays between +0.0803 and +0.0839
+across the six designs and no arm's margin moves by more than 0.0075
+AUROC. **None of the verdicts moves**: in every design 23 of 24 arms are
+positive, the repeat-level interval certifies 24 of 24 and the
+conservative gene-cluster bootstrap certifies 20 of 24 -- and the four
+it does not certify are the same four (the newest-driver arms) every
+time. **What the design does move is the width of the conservative
+interval** (0.0365 to 0.0373): the fold count matters more than the
+repeat count, because more folds mean smaller test sets and therefore
+noisier per-fold AUROC estimates.
+
+There is therefore no design that gives a different answer, and the
+pre-registered design is neither the most nor the least favourable one.
+We keep it -- switching designs after seeing the table would be exactly
+the kind of post-hoc choice this project is built to avoid -- and report
+this as a sensitivity analysis.
+
+One detail: Reactome x the newest drivers has a margin of -0.0125, and
+under the repeat-level construction its interval [-0.0156, -0.0094]
+excludes zero on the negative side, which is why the "the interval
+excludes zero" count is 24/24 there. The sentence we quote is still
+the equivalence-test one: no detectable contribution on that arm.
+
+**Source:** `scripts/run_c23_split_design.py`,
+`results/tables/c23_split_design_arms.tsv`,
+`results/tables/c23_split_design_summary.tsv`,
+`docs/c23_split_design.md`. **Exploratory** (amendment 4).
+
 ---
 
 ## §G. Results §A5 degree-matched seed null (control 2)

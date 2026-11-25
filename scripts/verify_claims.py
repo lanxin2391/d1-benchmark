@@ -228,6 +228,20 @@ CLAIMS: list[tuple[str, str, str, str]] = [
      "+0.046 against the strongest classical baseline",
      "the abstract must qualify the headline against the strongest baseline"),
 
+    # ---- C23: the split-design comparison -----------------------------
+    ("c23.manuscript", "manuscript_a_sections.md",
+     "None of the verdicts moves",
+     "§F.25 must state that the verdicts do not move between designs"),
+    ("c23.draft", "research_report_draft.md",
+     "none of the verdicts moves",
+     "§3.20 of the draft must carry the same result"),
+    ("c23.preferred", "manuscript_a_sections.md",
+     "| 10 x 10 | 100 | +0.0836 | 23/24 | 24/24 | 20/24 | 0.0370 |",
+     "§F.25 must give the 10 x 10 row of the comparison"),
+    ("c23.preferred.prereg", "manuscript_a_sections.md",
+     "| **5 x 40 (pre-registered)** | 200 | +0.0806 | 23/24 | 24/24 | 20/24 | 0.0365 |",
+     "§F.25 must give the pre-registered row of the comparison"),
+
     # ---- C22: the rewiring feasibility check under the second learner ---
     ("c22.manuscript", "manuscript_a_sections.md",
      "Control 22 is a **feasibility check on one arm**",

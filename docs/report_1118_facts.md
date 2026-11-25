@@ -360,6 +360,22 @@ Is degree a strawman baseline, and is RWR a lucky special case?
 - every rewired network gives a negative margin: re-paired wiring actively hurts the learner
 - **one arm out of 24, 20 rewirings: a feasibility check**, not the control; the full grid is the first item of the validation plan
 
+## 7f. The split-design comparison (Control 23)
+
+| design | evaluations per arm | median margin | positive arms | repeat-level certifies | gene-cluster certifies | median gene-cluster width |
+|---|---|---|---|---|---|---|
+| k5_r10 | 50 | +0.0813 | 23/24 | 24/24 | 20/24 | 0.0366 |
+| k5_r20 | 100 | +0.0803 | 23/24 | 24/24 | 20/24 | 0.0366 |
+| k5_r40 **(pre-registered)** | 200 | +0.0806 | 23/24 | 24/24 | 20/24 | 0.0365 |
+| k10_r10 | 100 | +0.0836 | 23/24 | 24/24 | 20/24 | 0.0370 |
+| k10_r20 | 200 | +0.0839 | 23/24 | 24/24 | 20/24 | 0.0373 |
+| k20_r10 | 200 | +0.0831 | 23/24 | 24/24 | 20/24 | 0.0366 |
+
+- the median margin moves between +0.0803 and +0.0839 across the six designs: the effect size is a property of the data
+- the verdicts do not move at all: 23/24 positive arms, 24/24 certified under the repeat-level interval and 20/24 under the gene-cluster bootstrap in EVERY design
+- the median gene-cluster interval width moves from 0.0365 to 0.0373: the fold count matters more than the repeat count
+- the pre-registered 5 x 40 design is neither the most nor the least favourable one; it is kept, and the comparison is reported as a sensitivity analysis
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

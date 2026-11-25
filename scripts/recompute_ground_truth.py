@@ -694,6 +694,27 @@ def recent_series() -> None:
                r4(sel.median_p.median()),
                "results/tables/depmap_validation.tsv")
 
+    # ---- C23: the split-design comparison -----------------------------
+    c23 = t("c23_split_design_summary.tsv")
+    for r in c23.itertuples():
+        key = f"{r.design}"
+        record("split_design", f"{key}: median margin", r4(r.margin_median),
+               "results/tables/c23_split_design_summary.tsv")
+        record("split_design", f"{key}: positive arms", int(r.arms_positive),
+               "results/tables/c23_split_design_summary.tsv")
+        record("split_design", f"{key}: repeat-level CI certifies",
+               int(r.repeat_ci_certified),
+               "results/tables/c23_split_design_summary.tsv")
+        record("split_design", f"{key}: gene-cluster CI certifies",
+               int(r.gene_ci_certified),
+               "results/tables/c23_split_design_summary.tsv")
+        record("split_design", f"{key}: median gene-cluster CI width",
+               r4(r.gene_ci_width_median),
+               "results/tables/c23_split_design_summary.tsv")
+        record("split_design", f"{key}: evaluations per arm",
+               int(r.n_evaluations),
+               "results/tables/c23_split_design_summary.tsv")
+
     # ---- C22: the rewiring feasibility check under the second learner ---
     c22 = t("c22_rewiring_second_learner_summary.tsv")
     r22 = c22.iloc[0]

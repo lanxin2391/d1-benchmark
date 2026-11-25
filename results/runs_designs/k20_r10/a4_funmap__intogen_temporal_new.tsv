@@ -1,0 +1,401 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+funmap	intogen_temporal_new	native_funmap		0	0	degree		0.6588118811881188	0.01862861000954207	0.0	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		0	1	degree		0.4221782178217822	0.010573812165498374	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		0	2	degree		0.5225742574257426	0.034049973663188814	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		0	3	degree		0.5756435643564356	0.019762905064412604	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		0	4	degree		0.7097029702970297	0.05378634481321748	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		0	5	degree		0.29166666666666663	0.0103974723497963	0.0	0.0	0.01	6	510
+funmap	intogen_temporal_new	native_funmap		0	6	degree		0.3057208994708994	0.009312823979541925	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		0	7	degree		0.6264880952380952	0.041267365176183346	0.04	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		0	8	degree		0.4151785714285714	0.01116830138112971	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		0	9	degree		0.6412698412698412	0.10318863413042179	0.06	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	10	degree		0.5700396825396825	0.024057522761617267	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	11	degree		0.4041666666666667	0.010326253973624558	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	12	degree		0.6150793650793651	0.01778465965965966	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	13	degree		0.667063492063492	0.03449928950822052	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	14	degree		0.4805555555555555	0.011488626689989633	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	15	degree		0.6075396825396825	0.024447484301161067	0.02	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	16	degree		0.5281746031746032	0.013704478524897456	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	17	degree		0.7162698412698413	0.019315901475832557	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	18	degree		0.4438492063492063	0.009689871570643362	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		0	19	degree		0.602579365079365	0.016365557906428987	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	0	degree		0.5326732673267327	0.012826581804235014	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		1	1	degree		0.44178217821782184	0.010229464441995295	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		1	2	degree		0.643960396039604	0.027796604215608343	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		1	3	degree		0.5021782178217822	0.021878683903332044	0.02	0.02	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		1	4	degree		0.7338613861386138	0.030614206301554363	0.04	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		1	5	degree		0.5145502645502645	0.035659294428722586	0.04	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		1	6	degree		0.5593584656084656	0.01965545721036727	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		1	7	degree		0.6102843915343915	0.017110827336961315	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		1	8	degree		0.44907407407407407	0.020049925368500466	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		1	9	degree		0.6690476190476191	0.1429428974118049	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	10	degree		0.3654761904761905	0.009286809318957917	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	11	degree		0.5978174603174604	0.022176951475043925	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	12	degree		0.5978174603174603	0.01703637888736629	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	13	degree		0.41190476190476183	0.00928826797983967	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	14	degree		0.5212301587301588	0.028726467069529832	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	15	degree		0.48750000000000004	0.01111437402228311	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	16	degree		0.5148809523809523	0.01335313834911886	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	17	degree		0.5738095238095238	0.015901980260909332	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	18	degree		0.4527777777777778	0.012706749200302788	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		1	19	degree		0.5382936507936508	0.022505877639344796	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	0	degree		0.3940594059405941	0.009236291428024276	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		2	1	degree		0.2384158415841584	0.007326416784482302	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		2	2	degree		0.47465346534653463	0.010345976910543796	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		2	3	degree		0.680990099009901	0.03790591557135675	0.04	0.02	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		2	4	degree		0.39504950495049507	0.010513230933399	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		2	5	degree		0.4657738095238095	0.015990650789247204	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		2	6	degree		0.46792328042328046	0.016574411755813846	0.02	0.01	0.01	6	510
+funmap	intogen_temporal_new	native_funmap		2	7	degree		0.36342592592592593	0.010570732358978497	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		2	8	degree		0.712962962962963	0.1283313694443315	0.04	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		2	9	degree		0.6255952380952381	0.02689667255599109	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	10	degree		0.6188492063492064	0.01667463938330218	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	11	degree		0.45178571428571423	0.019346985514142524	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	12	degree		0.5196428571428572	0.012890019849494271	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	13	degree		0.7966269841269842	0.03957564348289322	0.02	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	14	degree		0.5228174603174603	0.014088041292840272	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	15	degree		0.4523809523809524	0.010033375912956801	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	16	degree		0.7505952380952382	0.05257849688000442	0.06	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	17	degree		0.6575396825396825	0.023060531873353607	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	18	degree		0.4301587301587301	0.011531779514405588	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		2	19	degree		0.7446428571428572	0.03613599326872157	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	0	degree		0.3807920792079208	0.010348534670785309	0.0	0.01	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		3	1	degree		0.5053465346534654	0.023071006616660755	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		3	2	degree		0.5394059405940594	0.07606835574908673	0.02	0.01	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		3	3	degree		0.574059405940594	0.01365338035894293	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		3	4	degree		0.7033663366336634	0.021268482605449023	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		3	5	degree		0.39269179894179895	0.011180718428827044	0.0	0.0	0.01	6	510
+funmap	intogen_temporal_new	native_funmap		3	6	degree		0.5854828042328042	0.045975791827642484	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		3	7	degree		0.7124669312169313	0.04097012748949384	0.04	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		3	8	degree		0.5762235449735449	0.017155023320531485	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		3	9	degree		0.398015873015873	0.00974423260824489	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	10	degree		0.7111111111111111	0.037887091183180566	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	11	degree		0.3886904761904762	0.009008707597762126	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	12	degree		0.5666666666666667	0.033269133662724	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	13	degree		0.37103174603174605	0.00852494217348962	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	14	degree		0.40436507936507937	0.019445458001831638	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	15	degree		0.547420634920635	0.017252838043255832	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	16	degree		0.6061507936507937	0.014095957855408701	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	17	degree		0.5442460317460318	0.012811142624846127	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	18	degree		0.4275793650793651	0.010368545040738026	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		3	19	degree		0.7466269841269841	0.040815437286025526	0.04	0.04	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	0	degree		0.5207920792079208	0.01213969076881542	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		4	1	degree		0.5388118811881188	0.01749208654905661	0.0	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		4	2	degree		0.3348514851485148	0.008813587123023527	0.0	0.0	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		4	3	degree		0.3776237623762376	0.008814256715006595	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		4	4	degree		0.31049504950495055	0.013795787845385437	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		4	5	degree		0.33416005291005285	0.020790502962985194	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		4	6	degree		0.626818783068783	0.04420290425725208	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		4	7	degree		0.6878306878306879	0.030693249283704333	0.04	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		4	8	degree		0.6914682539682538	0.03919057328947965	0.04	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		4	9	degree		0.5930555555555556	0.0211567524117596	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	10	degree		0.7303571428571429	0.027089795659185838	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	11	degree		0.5888888888888888	0.0313586369925833	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	12	degree		0.4204365079365079	0.009327108570141473	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	13	degree		0.48829365079365084	0.011526947694920818	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	14	degree		0.6281746031746032	0.01630696771459235	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	15	degree		0.5990079365079365	0.04034425784205377	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	16	degree		0.7613095238095239	0.0433051442799342	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	17	degree		0.6666666666666666	0.03356276273458252	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	18	degree		0.42261904761904767	0.009332115913614356	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		4	19	degree		0.34523809523809523	0.009986927341579611	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	0	degree		0.6134653465346535	0.02522130763887955	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		5	1	degree		0.37544554455445545	0.017123865507341036	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		5	2	degree		0.6598019801980197	0.02380065490889254	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		5	3	degree		0.43188118811881193	0.01004082573959442	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		5	4	degree		0.6255445544554455	0.021664813335377647	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		5	5	degree		0.5638227513227513	0.01722064204408759	0.0	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		5	6	degree		0.40674603174603174	0.01166495215040178	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		5	7	degree		0.5056216931216931	0.013842296212293652	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		5	8	degree		0.4993386243386243	0.018548465036759353	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		5	9	degree		0.318452380952381	0.01207929432812341	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	10	degree		0.7634920634920636	0.026974207299549767	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	11	degree		0.7011904761904763	0.05174322228579155	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	12	degree		0.796031746031746	0.03689562292526579	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	13	degree		0.41964285714285715	0.00939799110286868	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	14	degree		0.27341269841269844	0.00784827060591899	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	15	degree		0.715873015873016	0.05569915766672881	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	16	degree		0.4841269841269842	0.011835149794184284	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	17	degree		0.655952380952381	0.04023491742347261	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	18	degree		0.39126984126984127	0.008943443912375572	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		5	19	degree		0.5517857142857143	0.02150326797385621	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	0	degree		0.48415841584158414	0.010827099861371	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		6	1	degree		0.503960396039604	0.01830664748621405	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		6	2	degree		0.45504950495049507	0.010132960423901393	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		6	3	degree		0.20811881188118814	0.00708221750238557	0.0	0.0	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		6	4	degree		0.7211881188118812	0.06445632798573975	0.06	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		6	5	degree		0.701223544973545	0.022929447884188374	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		6	6	degree		0.5681216931216931	0.022753194675420453	0.02	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		6	7	degree		0.5168650793650793	0.019415858391002065	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		6	8	degree		0.7273478835978836	0.04090433940822414	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		6	9	degree		0.5428571428571428	0.017711688365240875	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	10	degree		0.4994047619047619	0.011624013029620302	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	11	degree		0.5970238095238095	0.026473360740898226	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	12	degree		0.5097222222222223	0.020784630896227098	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	13	degree		0.5928571428571429	0.05165975868637461	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	14	degree		0.44166666666666665	0.013544460930643484	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	15	degree		0.6109126984126985	0.015586415136789728	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	16	degree		0.21884920634920635	0.0071733313482090074	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	17	degree		0.7073412698412698	0.03008134555337501	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	18	degree		0.518452380952381	0.0375205258047679	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		6	19	degree		0.4638888888888889	0.010268423556554529	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	0	degree		0.6831683168316832	0.03427956254272044	0.04	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		7	1	degree		0.6998019801980198	0.02053585771658061	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		7	2	degree		0.5407920792079208	0.07589245706367985	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		7	3	degree		0.5568316831683169	0.01735860660566587	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		7	4	degree		0.5227722772277228	0.011812242428652286	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		7	5	degree		0.6658399470899471	0.018828191142385257	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		7	6	degree		0.5448082010582012	0.022749774054921113	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		7	7	degree		0.46097883597883593	0.013727128432966218	0.0	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		7	8	degree		0.33151455026455023	0.009570597086420154	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		7	9	degree		0.5577380952380953	0.019808865864729876	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	10	degree		0.44642857142857145	0.010208245151588247	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	11	degree		0.4876984126984127	0.011635417112021365	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	12	degree		0.4388888888888889	0.10767011231585295	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	13	degree		0.5573412698412699	0.012774820968382297	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	14	degree		0.44027777777777777	0.01505365594799267	0.02	0.02	0.008	5	509
+funmap	intogen_temporal_new	native_funmap		7	15	degree		0.5640873015873016	0.021827187503218135	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	16	degree		0.8238095238095238	0.058075024798782515	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	17	degree		0.44345238095238093	0.07485352543112857	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	18	degree		0.42519841269841274	0.010485997031399687	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		7	19	degree		0.5551587301587302	0.018070547832320386	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	0	degree		0.5192079207920792	0.022658243384195146	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		8	1	degree		0.38693069306930694	0.009000389961410709	0.0	0.0	0.008	5	510
+funmap	intogen_temporal_new	native_funmap		8	2	degree		0.6704950495049505	0.07162803845620509	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		8	3	degree		0.5324752475247525	0.012672401153868978	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		8	4	degree		0.7085148514851485	0.05348408874675942	0.06	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		8	5	degree		0.7561177248677249	0.03683269642245469	0.02	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		8	6	degree		0.6575727513227513	0.0223529900166088	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		8	7	degree		0.5289351851851852	0.01751543077794871	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		8	8	degree		0.392526455026455	0.015395351629303026	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		8	9	degree		0.6392857142857142	0.015253726149640587	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	10	degree		0.5619047619047619	0.031191598761775904	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	11	degree		0.41111111111111115	0.009673467053246931	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	12	degree		0.3507936507936508	0.008638816914150884	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	13	degree		0.5269841269841269	0.017716259746200707	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	14	degree		0.3408730158730159	0.009266069320088496	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	15	degree		0.4005952380952381	0.010303086486955574	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	16	degree		0.7311507936507936	0.026896592675834313	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	17	degree		0.49007936507936506	0.0126977615174248	0.0	0.0	0.008	5	509
+funmap	intogen_temporal_new	native_funmap		8	18	degree		0.5648809523809524	0.015012319015401052	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		8	19	degree		0.5128968253968254	0.028189343351172395	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	0	degree		0.31623762376237624	0.007802673659817115	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		9	1	degree		0.6847524752475248	0.039728952613983015	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		9	2	degree		0.5815841584158417	0.021844197700151245	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		9	3	degree		0.42118811881188123	0.009361783426098357	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		9	4	degree		0.6346534653465347	0.033094704157322755	0.04	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap		9	5	degree		0.683531746031746	0.022996491836281475	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		9	6	degree		0.6643518518518519	0.04111372263552392	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		9	7	degree		0.5324074074074074	0.014167073392191566	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap		9	8	degree		0.449404761904762	0.012035271318196355	0.0	0.01	0.01	6	510
+funmap	intogen_temporal_new	native_funmap		9	9	degree		0.5611111111111111	0.020135021962917825	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	10	degree		0.5406746031746031	0.01300809763676741	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	11	degree		0.5914682539682541	0.018332178607546525	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	12	degree		0.39603174603174607	0.023542803981933483	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	13	degree		0.7194444444444444	0.03280058873095394	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	14	degree		0.7315476190476191	0.04056933191804947	0.02	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	15	degree		0.5212301587301588	0.012044494412911682	0.0	0.0	0.008	5	509
+funmap	intogen_temporal_new	native_funmap		9	16	degree		0.22222222222222227	0.007863836842868632	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	17	degree		0.5859126984126984	0.05739503721765391	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	18	degree		0.5521825396825397	0.021449498397082104	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap		9	19	degree		0.2690476190476191	0.00780058894337287	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	0	rwr	21.0	0.6827722772277227	0.04069663734581863	0.02	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	1	rwr	21.0	0.5576237623762377	0.013300089662423924	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	2	rwr	21.0	0.5801980198019802	0.021421551078037553	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	3	rwr	21.0	0.5445544554455446	0.016017043383770906	0.0	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	4	rwr	21.0	0.6946534653465347	0.035849357868422534	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	5	rwr	21.0	0.3326719576719577	0.009733398642015556	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	6	rwr	21.0	0.4890873015873016	0.01383821382665603	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	7	rwr	21.0	0.6888227513227513	0.035639266782474234	0.04	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	8	rwr	21.0	0.3657407407407407	0.010517608482621031	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	0	9	rwr	21.0	0.6194444444444445	0.04094832104757663	0.06	0.03	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	10	rwr	21.0	0.6952380952380953	0.02618428780437576	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	11	rwr	21.0	0.3658730158730159	0.008975005905859132	0.0	0.0	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	12	rwr	21.0	0.5916666666666667	0.016319976779201054	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	13	rwr	21.0	0.6309523809523809	0.023620638430582954	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	14	rwr	21.0	0.5007936507936508	0.013278620559453082	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	15	rwr	21.0	0.5996031746031747	0.01749723449151533	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	16	rwr	21.0	0.5063492063492063	0.04279806127352828	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	17	rwr	21.0	0.7242063492063492	0.02220082921257083	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	18	rwr	21.0	0.49642857142857144	0.011060645868822886	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	0	19	rwr	21.0	0.6345238095238095	0.0207518306420336	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	0	rwr	21.0	0.4043564356435644	0.009564743930311526	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	1	rwr	21.0	0.43683168316831683	0.010281053362553486	0.0	0.0	0.008	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	2	rwr	21.0	0.6776237623762376	0.06332879776428657	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	3	rwr	21.0	0.5714851485148515	0.05437679037195659	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	4	rwr	21.0	0.7097029702970297	0.020756627602461247	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	5	rwr	21.0	0.5201719576719577	0.016618020962663856	0.0	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	6	rwr	21.0	0.7337962962962963	0.029455979419343737	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	7	rwr	21.0	0.5830026455026455	0.01622220153295919	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	8	rwr	21.0	0.5066137566137566	0.027826100846755547	0.02	0.03	0.01	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	1	9	rwr	21.0	0.6892857142857143	0.04052651462492739	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	10	rwr	21.0	0.4353174603174603	0.010298885737123653	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	11	rwr	21.0	0.5424603174603175	0.016070650922976132	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	12	rwr	21.0	0.5805555555555556	0.014186818917250767	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	13	rwr	21.0	0.5170634920634921	0.012562609186303253	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	14	rwr	21.0	0.5134920634920634	0.022762608721382478	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	15	rwr	21.0	0.5087301587301587	0.012013984156641727	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	16	rwr	21.0	0.6238095238095238	0.021681925786553466	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	17	rwr	21.0	0.5761904761904761	0.017493261614187513	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	18	rwr	21.0	0.4809523809523809	0.010967726794032717	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	1	19	rwr	21.0	0.5948412698412698	0.020836342159856636	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	0	rwr	21.0	0.4752475247524752	0.01067302222896924	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	1	rwr	21.0	0.24792079207920792	0.007692192491779403	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	2	rwr	21.0	0.6598019801980198	0.017038698633790657	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	3	rwr	21.0	0.6724752475247525	0.024094525734575274	0.02	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	4	rwr	21.0	0.38574257425742575	0.00908874599526752	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	5	rwr	21.0	0.5208333333333334	0.015972241917459502	0.0	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	6	rwr	21.0	0.47817460317460314	0.01682988423890161	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	7	rwr	21.0	0.36904761904761907	0.010193151506520512	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	8	rwr	21.0	0.7483465608465608	0.06706183765238842	0.06	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	2	9	rwr	21.0	0.5876984126984127	0.015635687158144933	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	10	rwr	21.0	0.5801587301587302	0.0185981602700737	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	11	rwr	21.0	0.5456349206349207	0.019889704130991892	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	12	rwr	21.0	0.5095238095238095	0.03748018260929929	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	13	rwr	21.0	0.8142857142857143	0.029573739427861095	0.0	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	14	rwr	21.0	0.4646825396825397	0.010962632223955441	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	15	rwr	21.0	0.5567460317460318	0.015186010742346635	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	16	rwr	21.0	0.6761904761904762	0.027592235738963758	0.02	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	17	rwr	21.0	0.6158730158730159	0.020420221244963514	0.0	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	18	rwr	21.0	0.39682539682539686	0.00990031047010452	0.0	0.0	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	2	19	rwr	21.0	0.7031746031746031	0.04412240815826678	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	0	rwr	21.0	0.4344554455445545	0.00995746446726839	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	1	rwr	21.0	0.6106930693069307	0.01964880661134369	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	2	rwr	21.0	0.5302970297029703	0.024622353311749345	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	3	rwr	21.0	0.6756435643564356	0.017116965183920696	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	4	rwr	21.0	0.6673267326732673	0.0175942314895971	0.0	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	5	rwr	21.0	0.4169973544973545	0.012180647074333533	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	6	rwr	21.0	0.6448412698412699	0.03706277400752448	0.04	0.04	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	7	rwr	21.0	0.6613756613756614	0.04878849061474352	0.06	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	8	rwr	21.0	0.5826719576719577	0.01693584512635577	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	3	9	rwr	21.0	0.4726190476190476	0.011981682185786657	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	10	rwr	21.0	0.6595238095238095	0.025724329953120895	0.02	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	11	rwr	21.0	0.513095238095238	0.011682915168126824	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	12	rwr	21.0	0.5380952380952381	0.02336745597724714	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	13	rwr	21.0	0.4873015873015873	0.01112695924288502	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	14	rwr	21.0	0.5357142857142858	0.014636863525811162	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	15	rwr	21.0	0.5194444444444444	0.027366438885919005	0.02	0.02	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	16	rwr	21.0	0.5503968253968254	0.01277633727579458	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	17	rwr	21.0	0.523015873015873	0.012509321515325363	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	18	rwr	21.0	0.4273809523809524	0.011008445139545488	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	3	19	rwr	21.0	0.7218253968253968	0.02649229377587587	0.02	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	0	rwr	21.0	0.5572277227722773	0.01377124098210146	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	1	rwr	21.0	0.6039603960396039	0.03531366768153133	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	2	rwr	21.0	0.3918811881188119	0.009733240800749172	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	3	rwr	21.0	0.42772277227722777	0.011298591749078327	0.0	0.01	0.008	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	4	rwr	21.0	0.2526732673267327	0.009641520325584508	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	5	rwr	21.0	0.3326719576719576	0.013114365228715319	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	6	rwr	21.0	0.6402116402116402	0.025702938472266044	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	7	rwr	21.0	0.6742724867724867	0.031439963179476595	0.04	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	8	rwr	21.0	0.6970899470899472	0.028549187306019366	0.04	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	4	9	rwr	21.0	0.6341269841269841	0.019340551858787046	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	10	rwr	21.0	0.753968253968254	0.03281995183750651	0.0	0.04	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	11	rwr	21.0	0.655952380952381	0.017317308348925826	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	12	rwr	21.0	0.47500000000000003	0.01150045436553561	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	13	rwr	21.0	0.3853174603174603	0.009166950209659607	0.0	0.0	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	14	rwr	21.0	0.7134920634920635	0.01940660487676449	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	15	rwr	21.0	0.6607142857142857	0.0699393877481527	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	16	rwr	21.0	0.7821428571428571	0.03718238041044697	0.06	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	17	rwr	21.0	0.5873015873015873	0.024117031021893075	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	18	rwr	21.0	0.5531746031746032	0.012713693949367054	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	4	19	rwr	21.0	0.3817460317460317	0.009797478524203975	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	0	rwr	21.0	0.6954455445544554	0.020444864976579914	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	1	rwr	21.0	0.4154455445544555	0.013268921066727706	0.02	0.01	0.008	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	2	rwr	21.0	0.565940594059406	0.021153926138114076	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	3	rwr	21.0	0.3394059405940594	0.008438763700654554	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	4	rwr	21.0	0.7306930693069307	0.07024350205198358	0.04	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	5	rwr	21.0	0.628968253968254	0.028403162910695404	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	6	rwr	21.0	0.38657407407407407	0.011912169794634123	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	7	rwr	21.0	0.5307539682539683	0.014411800005142146	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	8	rwr	21.0	0.5608465608465608	0.019659154134338407	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	5	9	rwr	21.0	0.3035714285714286	0.013986517363107557	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	10	rwr	21.0	0.75	0.03219366687052428	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	11	rwr	21.0	0.6654761904761904	0.02380683705669947	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	12	rwr	21.0	0.8861111111111111	0.046791314937426484	0.02	0.05	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	13	rwr	21.0	0.4801587301587302	0.011618717643284596	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	14	rwr	21.0	0.41805555555555557	0.009743579285318583	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	15	rwr	21.0	0.717857142857143	0.027060621382748475	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	16	rwr	21.0	0.5162698412698412	0.014128872422191227	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	17	rwr	21.0	0.557936507936508	0.023249395292702535	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	18	rwr	21.0	0.4456349206349207	0.010337930173483632	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	5	19	rwr	21.0	0.5916666666666667	0.017291393717195493	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	0	rwr	21.0	0.5223762376237624	0.012428937819853679	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	1	rwr	21.0	0.48752475247524757	0.019439884955998795	0.02	0.02	0.008	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	2	rwr	21.0	0.5500990099009901	0.01800008804634165	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	3	rwr	21.0	0.379009900990099	0.010362484977889727	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	4	rwr	21.0	0.7017821782178219	0.03235502440964848	0.04	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	5	rwr	21.0	0.6802248677248678	0.02021675493882445	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	6	rwr	21.0	0.6507936507936507	0.02237477970486864	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	7	rwr	21.0	0.49107142857142855	0.013497560556400327	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	8	rwr	21.0	0.6841931216931217	0.027761553971455733	0.02	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	6	9	rwr	21.0	0.6583333333333333	0.05122026252070855	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	10	rwr	21.0	0.5186507936507937	0.012174526427262737	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	11	rwr	21.0	0.6123015873015873	0.02763784598191279	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	12	rwr	21.0	0.4591269841269841	0.012663194304133889	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	13	rwr	21.0	0.6603174603174604	0.02251395262561993	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	14	rwr	21.0	0.44880952380952377	0.028272003953626668	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	15	rwr	21.0	0.6607142857142857	0.018727929726461354	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	16	rwr	21.0	0.16706349206349208	0.006746582484511371	0.0	0.0	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	17	rwr	21.0	0.6825396825396824	0.01940840770624639	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	18	rwr	21.0	0.5317460317460317	0.02483370021228523	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	6	19	rwr	21.0	0.611111111111111	0.015428573894052344	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	0	rwr	21.0	0.7184158415841584	0.03232606113123395	0.02	0.02	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	1	rwr	21.0	0.6594059405940594	0.018057559586914646	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	2	rwr	21.0	0.6079207920792079	0.023011604889546785	0.02	0.02	0.008	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	3	rwr	21.0	0.636039603960396	0.01883895639744588	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	4	rwr	21.0	0.5366336633663367	0.013099755814331203	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	5	rwr	21.0	0.6709656084656084	0.019418979098729167	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	6	rwr	21.0	0.5274470899470899	0.019682500787622077	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	7	rwr	21.0	0.4742063492063492	0.01354830050882989	0.0	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	8	rwr	21.0	0.4017857142857143	0.011465713112907658	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	7	9	rwr	21.0	0.523015873015873	0.01852481577351545	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	10	rwr	21.0	0.5218253968253967	0.014201695938648996	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	11	rwr	21.0	0.5424603174603174	0.03954299146161105	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	12	rwr	21.0	0.6396825396825397	0.03006787735902255	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	13	rwr	21.0	0.5166666666666666	0.013045476187601962	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	14	rwr	21.0	0.4071428571428572	0.010129660173756622	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	15	rwr	21.0	0.4976190476190476	0.014934236661226057	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	16	rwr	21.0	0.8015873015873016	0.04063150015502428	0.04	0.03	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	17	rwr	21.0	0.48452380952380947	0.022266645011573227	0.02	0.01	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	18	rwr	21.0	0.4797619047619048	0.04162977357979591	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	7	19	rwr	21.0	0.5515873015873016	0.019460540505555464	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	0	rwr	21.0	0.44158415841584153	0.014598286723563945	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	1	rwr	21.0	0.4225742574257426	0.011209208686966345	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	2	rwr	21.0	0.6954455445544555	0.03843010026799576	0.04	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	3	rwr	21.0	0.5544554455445545	0.01344870882793526	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	4	rwr	21.0	0.7037623762376237	0.025217813440166267	0.0	0.03	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	5	rwr	21.0	0.7466931216931217	0.05215966396998596	0.04	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	6	rwr	21.0	0.7278439153439153	0.02569515860116988	0.0	0.03	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	7	rwr	21.0	0.49702380952380953	0.015162637179198472	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	8	rwr	21.0	0.4894179894179894	0.019216639831653858	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	8	9	rwr	21.0	0.6353174603174603	0.01512566404102936	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	10	rwr	21.0	0.5230158730158729	0.02308298554818647	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	11	rwr	21.0	0.32103174603174606	0.008236693477850408	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	12	rwr	21.0	0.46984126984126984	0.011219034588599807	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	13	rwr	21.0	0.5654761904761905	0.0251518538672382	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	14	rwr	21.0	0.46587301587301594	0.013385297111213888	0.0	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	15	rwr	21.0	0.5126984126984127	0.012510235942592889	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	16	rwr	21.0	0.7019841269841269	0.027558692117331494	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	17	rwr	21.0	0.48968253968253966	0.011474308174449558	0.0	0.0	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	18	rwr	21.0	0.5583333333333333	0.018097324511804038	0.02	0.02	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	8	19	rwr	21.0	0.4496031746031746	0.02095323271380576	0.04	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	0	rwr	21.0	0.4617821782178218	0.011185800264722559	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	1	rwr	21.0	0.6827722772277228	0.019754488357989847	0.02	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	2	rwr	21.0	0.5520792079207921	0.013627719582484906	0.0	0.01	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	3	rwr	21.0	0.48237623762376236	0.011248160675093103	0.0	0.0	0.01	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	4	rwr	21.0	0.5691089108910891	0.020404165417536632	0.0	0.03	0.008	5	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	5	rwr	21.0	0.7093253968253969	0.025249320932125657	0.02	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	6	rwr	21.0	0.708994708994709	0.03441755482202617	0.04	0.02	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	7	rwr	21.0	0.4973544973544974	0.013294325440604	0.0	0.0	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	8	rwr	21.0	0.45535714285714285	0.03359585823563543	0.02	0.01	0.012	6	510
+funmap	intogen_temporal_new	native_funmap	0.5	9	9	rwr	21.0	0.5257936507936508	0.017748481611828435	0.02	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	10	rwr	21.0	0.6678571428571429	0.03186967327617204	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	11	rwr	21.0	0.6194444444444445	0.02080164516229109	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	12	rwr	21.0	0.42063492063492064	0.018763321234060968	0.02	0.01	0.008	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	13	rwr	21.0	0.6492063492063492	0.022787160674484618	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	14	rwr	21.0	0.6944444444444445	0.028053320171267503	0.0	0.04	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	15	rwr	21.0	0.6123015873015873	0.01749702211468493	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	16	rwr	21.0	0.3511904761904763	0.009505692559159418	0.0	0.01	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	17	rwr	21.0	0.5503968253968254	0.02970525173032877	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	18	rwr	21.0	0.5988095238095239	0.016857679228118413	0.02	0.02	0.01	5	509
+funmap	intogen_temporal_new	native_funmap	0.5	9	19	rwr	21.0	0.39126984126984127	0.009781104463997117	0.0	0.01	0.01	5	509

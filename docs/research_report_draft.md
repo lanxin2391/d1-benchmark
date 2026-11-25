@@ -48,7 +48,10 @@ choice and 24.8 % from network choice, with 0.3 % fold noise. The
 95 % CI on ΔAUROC excludes zero in 24/24 arms under four of the five
 interval constructions and in 20/24 under the pre-registered
 gene-cluster bootstrap; the four exceptions are the smallest-effect
-`intogen_temporal_new` arms. The margin is flat across the degree
+`intogen_temporal_new` arms. Both verdicts are unchanged under five
+alternative cross-validation designs (5 x 10, 5 x 20, 10 x 10, 10 x 20
+and 20 x 10): the median margin moves by less than 5 % and the
+gene-cluster count stays at 20/24 in every one of them. The margin is flat across the degree
 tercile of the seeds (mean ΔAUROC +0.053 / +0.061 / +0.054 for
 low / mid / high seed degree), so it is not a hub artefact; and it
 survives adjustment for network size and label coverage (23/24 cells
@@ -1710,6 +1713,47 @@ the AUROC of the same scores is 0.627). The comparison is therefore made
 on the protocol's **ranks** (decision D-07: score descending, then gene
 symbol ascending). RWR has few ties, so its numbers are unchanged, and
 the self-check confirms it.
+
+### 3.20 The split-design comparison
+
+The teacher asked us to try other cross-validation designs -- 10 x 10 among
+them -- and to say which one is best. We compared six designs on the same 24
+arms, the same networks, the same catalogues and the same endpoint
+(alpha = 0.5): five folds with 10, 20 and 40 repeats (the first two are
+subsets of the released panel, the third is the pre-registered design), ten
+folds with 10 and 20 repeats, and twenty folds with 10 repeats (these three
+are new splits, built with the same base seed).
+
+| design | evaluations per arm | median margin | positive arms | repeat-level CI | gene-cluster CI | median gene-cluster width |
+|---|---|---|---|---|---|---|
+| 5 x 10 | 50 | +0.0813 | 23/24 | 24/24 | 20/24 | 0.0366 |
+| 5 x 20 | 100 | +0.0803 | 23/24 | 24/24 | 20/24 | 0.0366 |
+| **5 x 40 (pre-registered)** | 200 | +0.0806 | 23/24 | 24/24 | 20/24 | 0.0365 |
+| 10 x 10 | 100 | +0.0836 | 23/24 | 24/24 | 20/24 | 0.0370 |
+| 10 x 20 | 200 | +0.0839 | 23/24 | 24/24 | 20/24 | 0.0373 |
+| 20 x 10 | 200 | +0.0831 | 23/24 | 24/24 | 20/24 | 0.0366 |
+
+Three findings: the size of the effect is a property of the data, not of the
+design (the median margin stays between +0.0803 and +0.0839, and no arm
+moves by more than 0.0075 AUROC); **none of the verdicts moves** (23 of 24
+arms positive, the repeat-level interval certifies 24 of 24 and the
+conservative gene-cluster bootstrap certifies 20 of 24 in every design, and
+the four it does not certify are the same four -- the newest-driver arms --
+every time); and what the design does move is the **width** of the
+conservative interval (0.0365 to 0.0373), with the fold count mattering
+more than the repeat count, because more folds mean smaller test sets and
+therefore noisier per-fold AUROC estimates.
+
+So no design gives a different answer, and the pre-registered design is
+neither the most nor the least favourable one. We keep it -- switching
+designs after seeing this table would be exactly the post-hoc choice this
+project is built to avoid -- and report the comparison as a sensitivity
+analysis.
+
+**Source:** `scripts/run_c23_split_design.py`,
+`results/tables/c23_split_design_arms.tsv`,
+`results/tables/c23_split_design_summary.tsv`, `docs/c23_split_design.md`.
+**Exploratory** (amendment 4).
 
 ## 4. Discussion
 

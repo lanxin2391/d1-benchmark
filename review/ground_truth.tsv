@@ -336,6 +336,42 @@ depmap	K=30 median share of cell lines enriched (%)	5.827	results/tables/depmap_
 depmap	K=30 median p-value	0.5228	results/tables/depmap_validation.tsv	
 depmap	K=100 median share of cell lines enriched (%)	47.6436	results/tables/depmap_validation.tsv	
 depmap	K=100 median p-value	0.058	results/tables/depmap_validation.tsv	
+split_design	k5_r10: median margin	0.0813	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r10: positive arms	23	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r10: repeat-level CI certifies	24	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r10: gene-cluster CI certifies	20	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r10: median gene-cluster CI width	0.0366	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r10: evaluations per arm	50	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r20: median margin	0.0803	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r20: positive arms	23	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r20: repeat-level CI certifies	24	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r20: gene-cluster CI certifies	20	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r20: median gene-cluster CI width	0.0366	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r20: evaluations per arm	100	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r40: median margin	0.0806	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r40: positive arms	23	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r40: repeat-level CI certifies	24	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r40: gene-cluster CI certifies	20	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r40: median gene-cluster CI width	0.0365	results/tables/c23_split_design_summary.tsv	
+split_design	k5_r40: evaluations per arm	200	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r10: median margin	0.0836	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r10: positive arms	23	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r10: repeat-level CI certifies	24	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r10: gene-cluster CI certifies	20	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r10: median gene-cluster CI width	0.037	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r10: evaluations per arm	100	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r20: median margin	0.0839	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r20: positive arms	23	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r20: repeat-level CI certifies	24	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r20: gene-cluster CI certifies	20	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r20: median gene-cluster CI width	0.0373	results/tables/c23_split_design_summary.tsv	
+split_design	k10_r20: evaluations per arm	200	results/tables/c23_split_design_summary.tsv	
+split_design	k20_r10: median margin	0.0831	results/tables/c23_split_design_summary.tsv	
+split_design	k20_r10: positive arms	23	results/tables/c23_split_design_summary.tsv	
+split_design	k20_r10: repeat-level CI certifies	24	results/tables/c23_split_design_summary.tsv	
+split_design	k20_r10: gene-cluster CI certifies	20	results/tables/c23_split_design_summary.tsv	
+split_design	k20_r10: median gene-cluster CI width	0.0366	results/tables/c23_split_design_summary.tsv	
+split_design	k20_r10: evaluations per arm	200	results/tables/c23_split_design_summary.tsv	
 rewiring_second_learner	the observed proximity margin	0.0804	results/tables/c22_rewiring_second_learner_summary.tsv	
 rewiring_second_learner	the rewired null mean	-0.0124	results/tables/c22_rewiring_second_learner_summary.tsv	
 rewiring_second_learner	the rewired null SD	0.0072	results/tables/c22_rewiring_second_learner_summary.tsv	
