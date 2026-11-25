@@ -537,6 +537,118 @@ def control27() -> None:
                int((z_eff > 0).sum()), "w5_p_values.tsv")
 
 
+# ----------------------------------------------------------------- control 28
+def control28() -> None:
+    """The topology prior suite (Control 28)."""
+    p = TABLES / "c28_topology_suite_summary.tsv"
+    if not p.exists():
+        return
+    s = pd.read_csv(p, sep="\t")
+    piv = s.pivot_table(index=["network", "label"], columns="scorer",
+                        values="mean")
+    names = {"betweenness": "the betweenness centrality",
+             "the 1-hop seed count": "the 1-hop seed count",
+             "the 2-hop seed count": "the 2-hop seed count"}
+    for tag, name in names.items():
+        if tag not in piv.columns:
+            continue
+        v = piv[tag].dropna()
+        record("control28_scorer", f"{name}: the median margin against degree",
+               r4(v.median()), "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the arms positive",
+               int((v > 0).sum()), "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the arms", int(len(v)),
+               "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the smallest margin",
+               r4(v.min()), "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the largest margin",
+               r4(v.max()), "c28_topology_suite_summary.tsv")
+    rwr = TABLES / "a4_table1_delta_auroc_v40.tsv"
+    if rwr.exists():
+        w = pd.read_csv(rwr, sep="\t")
+        w = w[["network", "label_set", "a0.5_mean"]].rename(
+            columns={"label_set": "label"})
+        m = w.merge(piv.reset_index(), on=["network", "label"], how="left")
+        record("control28_scorer",
+               "the RWR prior: the median margin against degree",
+               r4(m["a0.5_mean"].median()), "a4_table1_delta_auroc_v40.tsv")
+        record("control28_scorer", "the RWR prior: the arms positive",
+               int((m["a0.5_mean"] > 0).sum()), "a4_table1_delta_auroc_v40.tsv")
+        record("control28_scorer", "the RWR prior: the arms",
+               int(len(m)), "a4_table1_delta_auroc_v40.tsv")
+        if "the 1-hop seed count" in m.columns:
+            d = (m["a0.5_mean"] - m["the 1-hop seed count"]).dropna()
+            record("control28_scorer",
+                   "the RWR prior minus the 1-hop seed count: the median",
+                   r4(d.median()), "c28_topology_suite_summary.tsv")
+    bc = piv.get("betweenness")
+    if bc is not None:
+        per_net = s.groupby(["network", "scorer"])["mean"].median()
+        try:
+            v = per_net.loc[("string_phys700", "betweenness")]
+            record("control28_scorer",
+                   "the betweenness on string_phys700: the median margin",
+                   r4(v), "c28_topology_suite_summary.tsv")
+        except KeyError:
+            pass
+
+
+# ----------------------------------------------------------------- control 28
+def control28() -> None:
+    """The topology prior suite (Control 28)."""
+    p = TABLES / "c28_topology_suite_summary.tsv"
+    if not p.exists():
+        return
+    s = pd.read_csv(p, sep="\t")
+    piv = s.pivot_table(index=["network", "label"], columns="scorer",
+                        values="mean")
+    names = {"betweenness": "the betweenness centrality",
+             "the 1-hop seed count": "the 1-hop seed count",
+             "the 2-hop seed count": "the 2-hop seed count"}
+    for tag, name in names.items():
+        if tag not in piv.columns:
+            continue
+        v = piv[tag].dropna()
+        record("control28_scorer", f"{name}: the median margin against degree",
+               r4(v.median()), "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the arms positive",
+               int((v > 0).sum()), "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the arms", int(len(v)),
+               "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the smallest margin",
+               r4(v.min()), "c28_topology_suite_summary.tsv")
+        record("control28_scorer", f"{name}: the largest margin",
+               r4(v.max()), "c28_topology_suite_summary.tsv")
+    rwr = TABLES / "a4_table1_delta_auroc_v40.tsv"
+    if rwr.exists():
+        w = pd.read_csv(rwr, sep="\t")
+        w = w[["network", "label_set", "a0.5_mean"]].rename(
+            columns={"label_set": "label"})
+        m = w.merge(piv.reset_index(), on=["network", "label"], how="left")
+        record("control28_scorer",
+               "the RWR prior: the median margin against degree",
+               r4(m["a0.5_mean"].median()), "a4_table1_delta_auroc_v40.tsv")
+        record("control28_scorer", "the RWR prior: the arms positive",
+               int((m["a0.5_mean"] > 0).sum()), "a4_table1_delta_auroc_v40.tsv")
+        record("control28_scorer", "the RWR prior: the arms",
+               int(len(m)), "a4_table1_delta_auroc_v40.tsv")
+        if "the 1-hop seed count" in m.columns:
+            d = (m["a0.5_mean"] - m["the 1-hop seed count"]).dropna()
+            record("control28_scorer",
+                   "the RWR prior minus the 1-hop seed count: the median",
+                   r4(d.median()), "c28_topology_suite_summary.tsv")
+    bc = piv.get("betweenness")
+    if bc is not None:
+        per_net = s.groupby(["network", "scorer"])["mean"].median()
+        try:
+            v = per_net.loc[("string_phys700", "betweenness")]
+            record("control28_scorer",
+                   "the betweenness on string_phys700: the median margin",
+                   r4(v), "c28_topology_suite_summary.tsv")
+        except KeyError:
+            pass
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1094,6 +1206,8 @@ def main() -> int:
     control25()
     control26()
     control27()
+    control28()
+    control28()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

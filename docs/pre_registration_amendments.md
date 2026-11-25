@@ -1189,3 +1189,26 @@ uses.
 **What is NOT changed.** No pre-registered endpoint, interval or verdict is
 touched; Control 27 is registered in the amendment-4 family (see A4.6).
 
+### A6.13 Control 28 -- the topology prior suite
+
+Control 19 showed that closeness beats degree in every arm; the question
+this control answers is whether the prior's increment over degree is
+generic ("topology beats degree") or specific to proximity to the
+positives. Three new scorers on the same folds, the same test genes and
+the same degree baseline.
+
+| scorer | the median margin against degree | the arms positive |
+|---|---|---|
+| the RWR prior (the headline) | +0.0809 | 23/24 |
+| the 1-hop seed count | +0.0732 | 19/24 |
+| the 2-hop seed count | +0.0584 | 23/24 |
+| the betweenness centrality | -0.0098 | 7/24 |
+
+The betweenness does not beat degree, so the increment is not a generic
+"topology beats degree" artefact; the effect belongs to the proximity-to-
+the-positives family, and the diffusion's own margin over the trivial
+one-hop count is a median of +0.0186.
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Control 28 is registered in the amendment-4 family (see A4.6).
+

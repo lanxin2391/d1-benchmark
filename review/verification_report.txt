@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control28.section        manuscript_a_sections.md
+         §F.30 must report the topology suite
+  [PASS] control28.section.draft  research_report_draft.md
+         §3.25 must report the topology suite
+  [PASS] control28.reading        manuscript_a_sections.md
+         §F.30 must state the corrected reading
+  [PASS] control28.facts          report_1118_facts.md
+         the facts sheet must carry Control 28
+  [PASS] control28.qa             report_1118_qa_bank.md
+         the question bank must carry Control 28
   [PASS] control27.section        manuscript_a_sections.md
          §F.29 must report the rewiring grid
   [PASS] control27.section.draft  research_report_draft.md
@@ -266,6 +276,10 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 28 the betweenness median margin manuscript=-0.0098  table=-0.0098  tol=0.0006
+  [PASS] control 28 the 1-hop seed count median margin manuscript=+0.0732  table=+0.0732  tol=0.0006
+  [PASS] control 28 the 2-hop seed count median margin manuscript=+0.0584  table=+0.0584  tol=0.0006
+  [PASS] control 28 the RWR minus the 1-hop count manuscript=+0.0186  table=+0.0186  tol=0.0006
   [PASS] control 27 the arms with a positive effect-size z manuscript=+24.0000  table=+24.0000  tol=0.5
   [PASS] control 27 the median effect-size z manuscript=+10.1600  table=+10.1650  tol=0.006
   [PASS] control 27 the smallest effect-size z manuscript=+0.5800  table=+0.5800  tol=0.006
@@ -346,5 +360,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 207 PASS / 0 FAIL
+RESULT: 216 PASS / 0 FAIL
 ========================================================================

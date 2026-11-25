@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (207 PASS / 0 FAIL). The second mechanism
+manuscript against that table (216 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -2096,6 +2096,74 @@ null used all 200 folds. The rewirings are the ones Control 2 generated.
 
 ---
 
+### 3.25 The topology prior suite
+
+Control 28: the topology prior suite (is the prior's edge over degree a generic "topology beats degree" effect?)
+
+The headline is a network prior against a degree baseline, and Control 19
+already showed that closeness beats degree in every arm while degree is
+never the strongest classical baseline in the panel. That raises the
+sharper question this control answers: **is the prior's increment over
+degree something any topology-aware score gets, or is it specific to how
+close a candidate is to the positive set?**
+
+Three new scorers, on the same folds, the same test genes and the same
+degree baseline as the primary endpoint: the **betweenness centrality**
+(the classical path-based measure of network importance; exact for the
+networks with at most 3,000 nodes, approximated with 400 sampled sources
+for the larger ones), the **1-hop seed count** (how many of the training
+positives are one edge away) and the **2-hop seed count** (how many are
+within two edges).
+
+| scorer | the median margin against degree | the arms positive | the range |
+|---|---|---|---|
+| the RWR prior (the headline) | +0.0809 | 23/24 | -0.0125 to +0.1711 |
+| the 1-hop seed count | +0.0732 | 19/24 | -0.0803 to +0.1438 |
+| the 2-hop seed count | +0.0584 | 23/24 | -0.0091 to +0.1038 |
+| the betweenness centrality | **-0.0098** | 7/24 | -0.0395 to +0.0346 |
+
+**Reading.** **Not every topology-aware score beats degree.** Betweenness
+-- the classical measure of how much a gene lies on the paths between
+other genes -- does not: its margin against degree is -0.0098, positive
+in 7 of 24 arms. So the increment is **not** a generic "topology
+beats degree" artefact. What does beat degree are the scores that measure
+**proximity to the positives**: the diffusion prior (+0.0809), the
+number of seeds within one hop (+0.0732) and within two hops (+0.0584).
+The honest reading is two-sided. The effect is about proximity to the
+positive set rather than about global centrality, and it is not specific
+to diffusion: a one-line seed count recovers most of it, and the
+diffusion's own margin over that trivial score is a median of
++0.0186 across the arms.
+
+**What this means for the claim.** It sharpens the mechanism and it sets a
+bar. The network's contribution over degree is a proximity-to-the-positives
+effect: a score that measures how central a gene is in the network's
+*paths* does not reproduce it, and a score that measures how close it is
+to the positives largely does. The remaining head-room for a diffusion
+prior is small -- +0.0186 of median margin over the one-hop
+count -- and the rest of its value lies in the properties the controls
+already document (the stability of F.23-F.25 and the increment under a
+second learner of F.22).
+
+**Caveats.** The betweenness is approximated for the networks with more
+than 3,000 nodes (400 sampled sources), so its per-arm values carry
+sampling noise (re-running with 100 sampled sources moved the median
+margin by 0.001). The negative median is a per-network pattern rather
+than scattered noise -- and it has one exception: on string_phys700 the
+betweenness does beat degree (a median margin of +0.026 across its four
+labels), so the betweenness is not a universal failure, only a failure to
+reproduce the effect across the panel. The seed-count scores are fold-dependent by
+construction (the seeds change), while the betweenness is a property of
+the network alone. **Exploratory** (amendment 4): no pre-registered
+endpoint is touched.
+
+(`scripts/run_c28_topology_suite.py`;
+`results/tables/c28_topology_suite.tsv`,
+`results/tables/c28_topology_suite_summary.tsv`;
+`docs/c28_topology_suite.md`.)
+
+---
+
 ### 4.1 What the benchmark establishes
 
 The headline is a negative-space claim with a positive-space
@@ -2321,7 +2389,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 863 recomputed quantities.
+checks) and a ground-truth table of 903 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2397,10 +2465,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`. Release manifest with SHA-256 of every tracked table and figure (194 tables + 15 figures): `docs/release_manifest_v1.0-rc11.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc11 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (207 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (216 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (863 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (903 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

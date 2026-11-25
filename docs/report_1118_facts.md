@@ -432,6 +432,22 @@ The label vector is permuted inside each split file (the positive count and the 
 - **the two z conventions**: the released `w5_p_values.tsv` column is the standard-error z (divided by the null mean's standard error), which is about ten times the effect-size z; where the two appear in one table each row now states its convention
 - `scripts/run_c27_rewiring_second_learner.py`, `results/tables/c27_rewiring_second_learner.tsv`, `results/tables/c27_rewiring_second_learner_summary.tsv`, `docs/c27_rewiring_second_learner.md`
 
+## 7k. The topology prior suite (Control 28)
+
+Three more scorers on the same folds, the same test genes and the same degree baseline: the betweenness centrality (a classical path-based centrality; approximate with 400 sampled sources for the networks with more than 3,000 nodes), the 1-hop seed count and the 2-hop seed count.
+
+| scorer | the median margin against degree | the arms positive | the range |
+|---|---|---|---|
+| the RWR prior (the headline) | +0.0809 | 23/24 | -0.0125 to +0.1711 |
+| the 1-hop seed count | +0.0732 | 19/24 | -0.0803 to +0.1438 |
+| the 2-hop seed count | +0.0584 | 23/24 | -0.0091 to +0.1038 |
+| the betweenness centrality | **-0.0098** | 7/24 | -0.0395 to +0.0346 |
+
+- **not every topology-aware score beats degree**: betweenness does not → the increment is not a generic "topology beats degree" artefact
+- what beats degree is the **proximity to the positives** family: the prior, the 1-hop count, the 2-hop count
+- the diffusion's own margin over the trivial one-hop count: the median **+0.0186** → the head-room for a diffusion prior is small; the rest of its value is the stability and the learner-robustness
+- `scripts/run_c28_topology_suite.py`, `results/tables/c28_topology_suite.tsv`, `results/tables/c28_topology_suite_summary.tsv`, `docs/c28_topology_suite.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

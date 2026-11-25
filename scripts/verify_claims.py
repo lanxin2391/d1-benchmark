@@ -49,6 +49,21 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 28: the topology prior suite ----
+    ("control28.section", "manuscript_a_sections.md",
+     "### F.30 Control 28", "\u00a7F.30 must report the topology suite"),
+    ("control28.section.draft", "research_report_draft.md",
+     "### 3.25 The topology prior suite",
+     "\u00a73.25 must report the topology suite"),
+    ("control28.reading", "manuscript_a_sections.md",
+     "Not every topology-aware score beats degree",
+     "\u00a7F.30 must state the corrected reading"),
+    ("control28.facts", "report_1118_facts.md",
+     "## 7k. The topology prior suite (Control 28)",
+     "the facts sheet must carry Control 28"),
+    ("control28.qa", "report_1118_qa_bank.md",
+     "### B30", "the question bank must carry Control 28"),
+
     # ---- Control 27: the rewiring null under the second learner ----
     ("control27.section", "manuscript_a_sections.md",
      "### F.29 Control 27", "\u00a7F.29 must report the rewiring grid"),
@@ -549,6 +564,29 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Control 28: the topology prior suite ----
+        ("control 28 the betweenness median margin",
+         "manuscript_a_sections.md",
+         r"\| the betweenness centrality \| \*\*([\u2212\-+]?0\.\d{4})\*\* \|",
+         ("control28_scorer",
+          "the betweenness centrality: the median margin against degree"),
+         0.0006),
+        ("control 28 the 1-hop seed count median margin",
+         "manuscript_a_sections.md",
+         r"\| the 1-hop seed count \| ([\u2212\-+]?0\.\d{4}) \|",
+         ("control28_scorer",
+          "the 1-hop seed count: the median margin against degree"), 0.0006),
+        ("control 28 the 2-hop seed count median margin",
+         "manuscript_a_sections.md",
+         r"\| the 2-hop seed count \| ([\u2212\-+]?0\.\d{4}) \|",
+         ("control28_scorer",
+          "the 2-hop seed count: the median margin against degree"), 0.0006),
+        ("control 28 the RWR minus the 1-hop count",
+         "manuscript_a_sections.md",
+         r"margin over that trivial score is a median of\s*([\u2212\-+]?0\.\d{4})",
+         ("control28_scorer",
+          "the RWR prior minus the 1-hop seed count: the median"), 0.0006),
 
         # ---- Control 27: the rewiring null under the second learner ----
         ("control 27 the arms with a positive effect-size z",
