@@ -1,10 +1,10 @@
 # Quantitative decomposition of the contribution of network priors to cancer-driver gene prioritisation
 
-**Draft research report (SCI-standard manuscript, v1.0-rc11)**
+**Draft research report (SCI-standard manuscript, v1.0-rc12)**
 
 **Authors:** lanxin2391 (Networks & Engine), kakamiku (Labels & Data)
 **Pre-registration:** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762) (frozen 2026-09-27; amendments 1–5 in `docs/pre_registration_amendments.md`)
-**Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`
+**Code and data:** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc12`
 **Reproducibility:** `python scripts/audit_reproducibility.py` → 50 PASS / 0 FAIL; `python scripts/verify_claims.py` → 63 PASS / 0 FAIL
 **Date:** 2026-11-11
 
@@ -2677,7 +2677,7 @@ from size and coverage.
 ## Data and code availability
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
-* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`. Release manifest with SHA-256 of every tracked table and figure (194 tables + 15 figures): `docs/release_manifest_v1.0-rc11.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc11 --check`.
+* **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc12`. Release manifest with SHA-256 of every tracked table and figure (209 tables + 15 figures): `docs/release_manifest_v1.0-rc12.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc12 --check`.
 * **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (252 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
