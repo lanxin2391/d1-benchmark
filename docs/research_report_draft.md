@@ -1739,16 +1739,25 @@ moves by more than 0.0075 AUROC); **none of the verdicts moves** (23 of 24
 arms positive, the repeat-level interval certifies 24 of 24 and the
 conservative gene-cluster bootstrap certifies 20 of 24 in every design, and
 the four it does not certify are the same four -- the newest-driver arms --
-every time); and what the design does move is the **width** of the
-conservative interval (0.0365 to 0.0373), with the fold count mattering
-more than the repeat count, because more folds mean smaller test sets and
-therefore noisier per-fold AUROC estimates.
+every time); and what the design does move is the **width** of the conservative
+interval, and only slightly: 0.0365 to 0.0373 across the six designs,
+i.e. at most 2.3 % relative to the pre-registered design. The ten-fold
+designs are the widest (+1.6 % and +2.3 %); the five-fold and
+twenty-fold designs sit within 0.5 % of the pre-registered one, and at a
+fixed fold count the number of repeats changes the width by less than
+0.5 %.
 
 So no design gives a different answer, and the pre-registered design is
 neither the most nor the least favourable one. We keep it -- switching
 designs after seeing this table would be exactly the post-hoc choice this
 project is built to avoid -- and report the comparison as a sensitivity
 analysis.
+
+**Figure 5.** (A) 每个臂的 margin 在六种设计之间的取值范围，预注册设计的取值单独标出，
+唯一的负臂已标注；每段都很短——任何臂的 margin 在设计之间变动不超过 0.0075 AUROC。
+(B) 唯一会变的量：最保守的基因簇区间宽度，以预注册设计为基准表示，柱上标注绝对宽度；
+10 折的两个设计最宽（+1.6 % 与 +2.3 %）。每种设计下都是 23/24 个臂为正、
+repeat 层区间认证 24/24、基因簇 bootstrap 认证 20/24。
 
 **Source:** `scripts/run_c23_split_design.py`,
 `results/tables/c23_split_design_arms.tsv`,

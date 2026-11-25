@@ -1805,9 +1805,12 @@ positive, the repeat-level interval certifies 24 of 24 and the
 conservative gene-cluster bootstrap certifies 20 of 24 -- and the four
 it does not certify are the same four (the newest-driver arms) every
 time. **What the design does move is the width of the conservative
-interval** (0.0365 to 0.0373): the fold count matters more than the
-repeat count, because more folds mean smaller test sets and therefore
-noisier per-fold AUROC estimates.
+interval**, and only slightly: 0.0365 to 0.0373 across the six
+designs, i.e. at most 2.3 % relative to the pre-registered design.
+The ten-fold designs are the widest (+1.6 % and +2.3 %); the five-fold
+and twenty-fold designs sit within 0.5 % of the pre-registered one, and
+at a fixed fold count the number of repeats changes the width by less
+than 0.5 %.
 
 There is therefore no design that gives a different answer, and the
 pre-registered design is neither the most nor the least favourable one.
@@ -1820,6 +1823,22 @@ under the repeat-level construction its interval [-0.0156, -0.0094]
 excludes zero on the negative side, which is why the "the interval
 excludes zero" count is 24/24 there. The sentence we quote is still
 the equivalence-test one: no detectable contribution on that arm.
+
+
+**Figure 5.** The conclusion does not depend on the cross-validation
+design. (A) For each of the 24 arms, the range of margins the arm takes
+over the six designs (5 x 10, 5 x 20, 5 x 40, 10 x 10, 10 x 20 and
+20 x 10 repeats); the pre-registered design's value is marked, and the
+only negative arm is labelled. The segments are tight everywhere: no
+arm's margin moves by more than 0.0075 AUROC between designs. (B) The
+one quantity that does move -- the median width of the conservative
+gene-cluster interval -- expressed relative to the pre-registered
+design, with the absolute widths on the bars; the ten-fold designs are
+the widest (+1.6 % and +2.3 %). In every design 23 of 24 arms are
+positive, the repeat-level interval certifies 24 of 24 and the
+gene-cluster bootstrap certifies 20 of 24. Source:
+`scripts/make_figure_split_design.py`,
+`results/tables/c23_split_design_arms.tsv`.
 
 **Source:** `scripts/run_c23_split_design.py`,
 `results/tables/c23_split_design_arms.tsv`,

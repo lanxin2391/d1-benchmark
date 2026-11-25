@@ -135,6 +135,10 @@ states something the tables do not support.
          §3.20 of the draft must carry the same result
   [PASS] c23.preferred            manuscript_a_sections.md
          §F.25 must give the 10 x 10 row of the comparison
+  [PASS] c23.figure               manuscript_a_sections.md
+         §F.25 must carry the figure and its caption
+  [PASS] c23.figure.draft         research_report_draft.md
+         §3.20 of the draft must carry the figure and its caption
   [PASS] c23.preferred.prereg     manuscript_a_sections.md
          §F.25 must give the pre-registered row of the comparison
   [PASS] c22.manuscript           manuscript_a_sections.md
@@ -257,5 +261,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 148 PASS / 0 FAIL
+RESULT: 150 PASS / 0 FAIL
 ========================================================================

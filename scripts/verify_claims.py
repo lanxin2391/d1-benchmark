@@ -238,6 +238,13 @@ CLAIMS: list[tuple[str, str, str, str]] = [
     ("c23.preferred", "manuscript_a_sections.md",
      "| 10 x 10 | 100 | +0.0836 | 23/24 | 24/24 | 20/24 | 0.0370 |",
      "§F.25 must give the 10 x 10 row of the comparison"),
+    ("c23.figure", "manuscript_a_sections.md",
+     "**Figure 5.** The conclusion does not depend on the cross-validation "
+     "design.",
+     "§F.25 must carry the figure and its caption"),
+    ("c23.figure.draft", "research_report_draft.md",
+     "**Figure 5.** (A) 每个臂的 margin 在六种设计之间的取值范围",
+     "§3.20 of the draft must carry the figure and its caption"),
     ("c23.preferred.prereg", "manuscript_a_sections.md",
      "| **5 x 40 (pre-registered)** | 200 | +0.0806 | 23/24 | 24/24 | 20/24 | 0.0365 |",
      "§F.25 must give the pre-registered row of the comparison"),
