@@ -1236,3 +1236,19 @@ new label and its splits are written to new paths
 (`data/processed/labels/depmap_essential_*.tsv`,
 `data/processed/splits_depmap/`).
 
+### A6.15 Control 31 -- the cross-method complementarity
+
+Six scorers on the same folds and the same top 100: the RWR prior, degree,
+the betweenness centrality, the 1-hop and 2-hop seed counts, the proximity
+learner.
+
+| | the value |
+|---|---|
+| the mean pairwise Jaccard overlap | 0.059 to 0.462 |
+| the genes all six methods pick | 3.1 of 100 each |
+| the union relative to one list | 3.2 |
+| the genes only one method picks (per 100) | 9.2 to 65.7 |
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Control 31 is registered in the amendment-4 family (see A4.6).
+

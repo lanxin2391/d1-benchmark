@@ -49,6 +49,21 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 31: the cross-method complementarity ----
+    ("control31.section", "manuscript_a_sections.md",
+     "### F.32 Control 31", "\u00a7F.32 must report the overlap table"),
+    ("control31.section.draft", "research_report_draft.md",
+     "### 3.27 The cross-method complementarity",
+     "\u00a73.27 must report the overlap table"),
+    ("control31.reading", "manuscript_a_sections.md",
+     "The methods pick largely different candidates",
+     "\u00a7F.32 must state the reading"),
+    ("control31.facts", "report_1118_facts.md",
+     "## 7m. The cross-method complementarity (Control 31)",
+     "the facts sheet must carry Control 31"),
+    ("control31.qa", "report_1118_qa_bank.md",
+     "### B32", "the question bank must carry Control 31"),
+
     # ---- Control 30: the DepMap essential-gene catalogue ----
     ("control30.section", "manuscript_a_sections.md",
      "### F.31 Control 30", "\u00a7F.31 must report the functional label"),
@@ -579,6 +594,34 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Control 31: the cross-method complementarity ----
+        ("control 31 the smallest mean pairwise Jaccard",
+         "manuscript_a_sections.md",
+         r"overlap runs from (\d\.\d{3})",
+         ("control31_overlap", "the smallest mean pairwise Jaccard"), 0.0006),
+        ("control 31 the largest mean pairwise Jaccard",
+         "manuscript_a_sections.md",
+         r"to (\d\.\d{3}) \(the RWR prior against",
+         ("control31_overlap", "the largest mean pairwise Jaccard"), 0.0006),
+        ("control 31 the genes all six methods pick",
+         "manuscript_a_sections.md",
+         r"pick only (\d+\.\d) genes in common",
+         ("control31_union", "the genes all six methods pick"), 0.06),
+        ("control 31 the union relative to one list",
+         "manuscript_a_sections.md",
+         r"union of the six lists is about (\d+\.\d) times",
+         ("control31_union", "the union relative to one list"), 0.06),
+        ("control 31 the unique genes, the minimum",
+         "manuscript_a_sections.md",
+         r"from (\d+\.\d) per 100 \(the 1-hop seed count\)",
+         ("control31_union",
+          "the genes only one method picks: the minimum"), 0.06),
+        ("control 31 the unique genes, the maximum",
+         "manuscript_a_sections.md",
+         r"per 100 \(the 1-hop seed count\) to (\d+\.\d) \(the",
+         ("control31_union",
+          "the genes only one method picks: the maximum"), 0.06),
 
         # ---- Control 30: the DepMap essential-gene catalogue ----
         ("control 30 the arms with a positive margin",

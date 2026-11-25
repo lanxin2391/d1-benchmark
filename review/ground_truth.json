@@ -6431,5 +6431,96 @@
   "value": 0.2144,
   "source": "c30_depmap_essential_label.tsv",
   "note": ""
+ },
+ {
+  "quantity": "control31_overlap",
+  "scope": "the smallest mean pairwise Jaccard",
+  "value": 0.0593,
+  "source": "c31_cross_method_overlap.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_overlap",
+  "scope": "the largest mean pairwise Jaccard",
+  "value": 0.4623,
+  "source": "c31_cross_method_overlap.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_overlap",
+  "scope": "the RWR prior against the 1-hop seed count",
+  "value": 0.4623,
+  "source": "c31_cross_method_overlap.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_overlap",
+  "scope": "the proximity learner against the RWR prior",
+  "value": 0.1035,
+  "source": "c31_cross_method_overlap.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes all six methods pick",
+  "value": 3.1225,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the union relative to one list",
+  "value": 3.1773,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only one method picks: the minimum",
+  "value": 9.2421,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only one method picks: the maximum",
+  "value": 65.7212,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only the proximity learner picks",
+  "value": 65.7212,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only the RWR prior picks",
+  "value": 24.0292,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only degree picks",
+  "value": 24.6208,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only betweenness picks",
+  "value": 43.6538,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control31_union",
+  "scope": "the genes only the 1-hop seed count picks",
+  "value": 9.2421,
+  "source": "c31_cross_method_union.tsv",
+  "note": ""
  }
 ]

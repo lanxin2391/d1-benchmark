@@ -693,6 +693,51 @@ def control30() -> None:
                r4(r["mean_delta_auroc"]), "c30_depmap_essential_label.tsv")
 
 
+# ----------------------------------------------------------------- control 31
+def control31() -> None:
+    """The cross-method complementarity (Control 31)."""
+    op = TABLES / "c31_cross_method_overlap.tsv"
+    up = TABLES / "c31_cross_method_union.tsv"
+    if not op.exists() or not up.exists():
+        return
+    o = pd.read_csv(op, sep="\t")
+    u = pd.read_csv(up, sep="\t")
+    piv = o.pivot_table(index=["scorer_a", "scorer_b"], values="jaccard",
+                        aggfunc="mean")
+    record("control31_overlap", "the smallest mean pairwise Jaccard",
+           r4(piv.min().iloc[0]), "c31_cross_method_overlap.tsv")
+    record("control31_overlap", "the largest mean pairwise Jaccard",
+           r4(piv.max().iloc[0]), "c31_cross_method_overlap.tsv")
+    for a, b, name in (("the RWR prior", "the 1-hop seed count",
+                        "the RWR prior against the 1-hop seed count"),
+                       ("the proximity learner", "the RWR prior",
+                        "the proximity learner against the RWR prior")):
+        if (a, b) in piv.index:
+            v = piv.loc[(a, b), "jaccard"]
+        else:
+            v = piv.loc[(b, a), "jaccard"]
+        record("control31_overlap", name, r4(v),
+               "c31_cross_method_overlap.tsv")
+    g = u.groupby("scorer")[["n_picked", "n_in_all", "n_in_any",
+                              "n_unique_to_this"]].mean()
+    record("control31_union", "the genes all six methods pick",
+           r4(g.n_in_all.mean()), "c31_cross_method_union.tsv")
+    record("control31_union", "the union relative to one list",
+           r4(g.n_in_any.mean() / g.n_picked.mean()),
+           "c31_cross_method_union.tsv")
+    record("control31_union", "the genes only one method picks: the minimum",
+           r4(g.n_unique_to_this.min()), "c31_cross_method_union.tsv")
+    record("control31_union", "the genes only one method picks: the maximum",
+           r4(g.n_unique_to_this.max()), "c31_cross_method_union.tsv")
+    for scorer in ("the proximity learner", "the RWR prior", "degree",
+                   "betweenness", "the 1-hop seed count"):
+        if scorer in g.index:
+            record("control31_union",
+                   f"the genes only {scorer} picks",
+                   r4(g.loc[scorer, "n_unique_to_this"]),
+                   "c31_cross_method_union.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1252,6 +1297,7 @@ def main() -> int:
     control27()
     control28()
     control30()
+    control31()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

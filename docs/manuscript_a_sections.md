@@ -2461,6 +2461,63 @@ touched.
 
 ---
 
+### F.32 Control 31: the cross-method complementarity
+
+Control 19 compared the methods by their accuracy against degree. This
+control compares them by their **candidates**, which is the question a
+user actually faces: what do I get by running a second method on top of
+the first one? Six scorers on the same folds, the same test genes and the
+same top 100: the RWR prior (the headline learner), degree, the
+betweenness centrality, the 1-hop and the 2-hop seed counts, and the
+proximity learner (the distance to the nearest seed).
+
+| the Jaccard overlap of the top-100 picks | betweenness | degree | the 1-hop seed count | the 2-hop seed count | the RWR prior | the proximity learner |
+|---|---|---|---|---|---|---|
+| **betweenness** | - | 0.235 | 0.193 | 0.242 | 0.215 | 0.059 |
+| **degree** | 0.235 | - | 0.392 | 0.401 | 0.277 | 0.070 |
+| **the 1-hop seed count** | 0.193 | 0.392 | - | 0.445 | 0.462 | 0.141 |
+| **the 2-hop seed count** | 0.242 | 0.401 | 0.445 | - | 0.299 | 0.078 |
+| **the RWR prior** | 0.215 | 0.277 | 0.462 | 0.299 | - | 0.103 |
+| **the proximity learner** | 0.059 | 0.070 | 0.141 | 0.078 | 0.103 | - |
+
+**Reading.** **The methods pick largely different candidates.** The mean
+pairwise Jaccard overlap runs from 0.059 (the proximity learner
+against the RWR prior) to 0.462 (the RWR prior against the 1-hop seed
+count); all six methods together pick only 3.1 genes in common out
+of 100 each, so the union of the six lists is about 3.2 times
+one list; and every method contributes genes that nobody else picks --
+from 9.2 per 100 (the 1-hop seed count) to 65.7 (the
+proximity learner).
+
+The pattern matches the accuracy pattern of F.30: the RWR prior and the
+1-hop seed count are the most similar pair (a Jaccard of
+0.462) and they are also the two that beat degree by a similar
+margin, while the proximity learner is the most distinct method
+(0.103 against the prior) and the one whose accuracy depends
+most on the learner (F.22).
+
+**What this means for the claim.** Practically, a user who runs a second
+method does not get the same list twice: the choice of method is a real
+decision, not a formality. For the paper, it means that the "which
+method" question is not only about which margin is bigger -- the methods
+disagree about *which genes* to look at, so the choice changes what the
+experimenter does next.
+
+**Caveats.** 20 folds per arm (one per repeat), the same folds for every
+scorer. The closeness centrality is not in this table: its landmark
+estimate costs 256 breadth-first searches per fold and Control 19 already
+reports it (+0.0312 against degree in 24 of 24 arms). The overlap is a
+property of the top-K sets, not of the scores: two scorers can agree on
+the picks and disagree on the order. **Exploratory** (amendment 4): no
+pre-registered endpoint is touched.
+
+(`scripts/run_c31_cross_method.py`;
+`results/tables/c31_cross_method_overlap.tsv`,
+`results/tables/c31_cross_method_union.tsv`;
+`docs/c31_cross_method.md`.)
+
+---
+
 ### H.1 Two co-primary endpoints: the low-FPR partial AUC and the top-10 % precision
 
 The full AUROC is the metric on which propagation methods look worst:
@@ -3232,8 +3289,8 @@ paper was produced by a model.
 
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
-we replaced human cross-checking with two audit scripts (230 and 71
-checks) and a ground-truth table of 919 recomputed quantities.
+we replaced human cross-checking with two audit scripts (241 and 71
+checks) and a ground-truth table of 932 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes

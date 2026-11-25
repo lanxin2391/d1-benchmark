@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control31.section        manuscript_a_sections.md
+         §F.32 must report the overlap table
+  [PASS] control31.section.draft  research_report_draft.md
+         §3.27 must report the overlap table
+  [PASS] control31.reading        manuscript_a_sections.md
+         §F.32 must state the reading
+  [PASS] control31.facts          report_1118_facts.md
+         the facts sheet must carry Control 31
+  [PASS] control31.qa             report_1118_qa_bank.md
+         the question bank must carry Control 31
   [PASS] control30.section        manuscript_a_sections.md
          §F.31 must report the functional label
   [PASS] control30.section.draft  research_report_draft.md
@@ -286,6 +296,12 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 31 the smallest mean pairwise Jaccard manuscript=+0.0590  table=+0.0593  tol=0.0006
+  [PASS] control 31 the largest mean pairwise Jaccard manuscript=+0.4620  table=+0.4623  tol=0.0006
+  [PASS] control 31 the genes all six methods pick manuscript=+3.1000  table=+3.1225  tol=0.06
+  [PASS] control 31 the union relative to one list manuscript=+3.2000  table=+3.1773  tol=0.06
+  [PASS] control 31 the unique genes, the minimum manuscript=+9.2000  table=+9.2421  tol=0.06
+  [PASS] control 31 the unique genes, the maximum manuscript=+65.7000  table=+65.7212  tol=0.06
   [PASS] control 30 the arms with a positive margin manuscript=+24.0000  table=+24.0000  tol=0.5
   [PASS] control 30 the median margin   manuscript=+0.1236  table=+0.1236  tol=0.0006
   [PASS] control 30 the prior AUROC, the smallest manuscript=+0.7400  table=+0.7402  tol=0.0006
@@ -379,5 +395,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 230 PASS / 0 FAIL
+RESULT: 241 PASS / 0 FAIL
 ========================================================================

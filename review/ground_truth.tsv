@@ -918,3 +918,16 @@ control30_arm	string_phys700 x 20 %: the margin	0.1218	c30_depmap_essential_labe
 control30_arm	intact x 20 %: the margin	0.063	c30_depmap_essential_label.tsv	
 control30_arm	string_full700 x 20 %: the margin	0.111	c30_depmap_essential_label.tsv	
 control30_arm	reactome x 20 %: the margin	0.2144	c30_depmap_essential_label.tsv	
+control31_overlap	the smallest mean pairwise Jaccard	0.0593	c31_cross_method_overlap.tsv	
+control31_overlap	the largest mean pairwise Jaccard	0.4623	c31_cross_method_overlap.tsv	
+control31_overlap	the RWR prior against the 1-hop seed count	0.4623	c31_cross_method_overlap.tsv	
+control31_overlap	the proximity learner against the RWR prior	0.1035	c31_cross_method_overlap.tsv	
+control31_union	the genes all six methods pick	3.1225	c31_cross_method_union.tsv	
+control31_union	the union relative to one list	3.1773	c31_cross_method_union.tsv	
+control31_union	the genes only one method picks: the minimum	9.2421	c31_cross_method_union.tsv	
+control31_union	the genes only one method picks: the maximum	65.7212	c31_cross_method_union.tsv	
+control31_union	the genes only the proximity learner picks	65.7212	c31_cross_method_union.tsv	
+control31_union	the genes only the RWR prior picks	24.0292	c31_cross_method_union.tsv	
+control31_union	the genes only degree picks	24.6208	c31_cross_method_union.tsv	
+control31_union	the genes only betweenness picks	43.6538	c31_cross_method_union.tsv	
+control31_union	the genes only the 1-hop seed count picks	9.2421	c31_cross_method_union.tsv	

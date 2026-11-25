@@ -468,6 +468,16 @@ The DepMap essential genes become a label (essential in at least X % of the 1,36
 - 诚实说明：这是**传播效应**，阳性集是"共同必需基因"（CRISPR 筛选的技术属性 + 生物学属性），margin 随阳性集越同质越大
 - `scripts/run_c30_depmap_essential_label.py`, `results/tables/c30_depmap_essential_label.tsv`, `docs/c30_depmap_essential_label.md`
 
+## 7m. The cross-method complementarity (Control 31)
+
+Six scorers on the same folds, the same test genes and the same top 100: the RWR prior, degree, the betweenness centrality, the 1-hop and 2-hop seed counts, the proximity learner.
+
+- the mean pairwise **Jaccard overlap of the top-100 picks**: 0.059 to 0.462 (the largest: the RWR prior vs the 1-hop seed count 0.462; the smallest: the proximity learner vs the RWR prior 0.103)
+- all six methods pick only **3.1 genes in common** out of 100 each; the union is about 3.2 times one list
+- the genes only one method picks (per 100): the proximity learner 65.7, the betweenness 43.7, degree 24.6, the RWR prior 24.0, the 1-hop seed count 9.2
+- → **跑第二个方法拿到的不是同一份清单**：方法之间在"挑哪些基因"上分歧很大，这和 F.30 的准确率格局一致（先验与 1 跳计数最像，邻近度最不像）
+- `scripts/run_c31_cross_method.py`, `results/tables/c31_cross_method_overlap.tsv`, `results/tables/c31_cross_method_union.tsv`, `docs/c31_cross_method.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |
