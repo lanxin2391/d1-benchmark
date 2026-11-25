@@ -448,6 +448,26 @@ Three more scorers on the same folds, the same test genes and the same degree ba
 - the diffusion's own margin over the trivial one-hop count: the median **+0.0186** → the head-room for a diffusion prior is small; the rest of its value is the stability and the learner-robustness
 - `scripts/run_c28_topology_suite.py`, `results/tables/c28_topology_suite.tsv`, `results/tables/c28_topology_suite_summary.tsv`, `docs/c28_topology_suite.md`
 
+## 7l. The DepMap essential-gene catalogue as a fifth label (Control 30)
+
+The DepMap essential genes become a label (essential in at least X % of the 1,361 cell lines) and the whole protocol runs on it.
+
+| network | 1 % of the cell lines | 5 % | 10 % | 20 % |
+|---|---|---|---|---|
+| funmap | +0.1254 | +0.1372 | +0.1395 | +0.1362 |
+| intact | +0.0204 | +0.0482 | +0.0557 | +0.0630 |
+| reactome | +0.1402 | +0.1889 | +0.2007 | +0.2144 |
+| rna_coexp | +0.2653 | +0.3357 | +0.3481 | +0.3526 |
+| string_full700 | +0.0878 | +0.1103 | +0.1131 | +0.1110 |
+| string_phys700 | +0.0893 | +0.1154 | +0.1187 | +0.1218 |
+
+- **the H1 verdict is met on this key**: the margin is positive in **24/24 arms**, the median **+0.1236**
+- the prior's AUROC: 0.740–0.919 across the networks; the degree baseline's: 0.467–0.808
+- the mechanism we hypothesised was **not** supported: the margin vs the positives' degree ratio ρ = -0.59, vs their internal density ρ = -0.15; what it does track is **the degree baseline's weakness** (ρ = -0.77)
+- **与 Control 24 不矛盾**：C24 问的是"用**驱动基因**当种子能否从候选池里挑出功能必需基因"（不能，AUROC 0.501）；C30 问的是"用**功能必需基因**当种子时，留出的必需基因能否排在前面"（能）——两问的种子不同
+- 诚实说明：这是**传播效应**，阳性集是"共同必需基因"（CRISPR 筛选的技术属性 + 生物学属性），margin 随阳性集越同质越大
+- `scripts/run_c30_depmap_essential_label.py`, `results/tables/c30_depmap_essential_label.tsv`, `docs/c30_depmap_essential_label.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

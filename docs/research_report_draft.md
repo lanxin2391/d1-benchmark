@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (216 PASS / 0 FAIL). The second mechanism
+manuscript against that table (230 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -2164,6 +2164,81 @@ endpoint is touched.
 
 ---
 
+### 3.26 The DepMap essential-gene catalogue as a fifth label
+
+Control 30: the DepMap essential-gene catalogue as a fifth label
+
+The teacher asked whether the network prior helps on the functional side.
+Control 24 answered that as a ranking question; this control answers it in
+the benchmark's own terms: the DepMap essential genes become a **label** --
+a fifth catalogue at four intervals -- and the whole protocol runs on it
+(the same networks, the same folds, the same degree baseline, the same
+endpoint). The label is the genes essential (CERES < -0.5 and expressed) in
+at least X % of the 1,361 cancer cell lines, for X in {1, 5, 10, 20}
+(X = 1 %: 4,237 genes, X = 5 %: 2,766 genes, X = 10 %: 2,372 genes, X = 20 %: 1,991 genes).
+
+The mean margin against degree, per arm:
+
+| network | 1 % of the cell lines | 5 % | 10 % | 20 % |
+|---|---|---|---|---|
+| funmap | +0.1254 | +0.1372 | +0.1395 | +0.1362 |
+| intact | +0.0204 | +0.0482 | +0.0557 | +0.0630 |
+| reactome | +0.1402 | +0.1889 | +0.2007 | +0.2144 |
+| rna_coexp | +0.2653 | +0.3357 | +0.3481 | +0.3526 |
+| string_full700 | +0.0878 | +0.1103 | +0.1131 | +0.1110 |
+| string_phys700 | +0.0893 | +0.1154 | +0.1187 | +0.1218 |
+
+**The H1 verdict is met on this key**: the margin is positive in **24
+of 24 arms**, with a median of **+0.1236**. The prior's own AUROC
+on this label runs from 0.740 to 0.919 across the six
+networks, while the degree baseline's runs from 0.467 to 0.808.
+
+**Why, and what it does not mean.** The honest reading has three parts.
+
+1. **It is a propagation effect, and the answer key is special.** The DepMap
+   "common essentials" are a housekeeping-like set that is tightly wired in
+   every network, and the seeds of a fold are other essential genes, so a
+   diffusion prior propagates into the held-out essential genes. The
+   margin grows as the positive set becomes more homogeneous (the 1 %
+   interval to the 20 % interval).
+2. **The mechanism we hypothesised was tested and not supported.** If the
+   margin were driven by the positives being hubs, it would track their
+   degree ratio; the Spearman correlation is -0.59, the wrong
+   sign. Nor does it track the positives' internal density (-0.15).
+   What it does track is **the degree baseline's own weakness**: the
+   correlation between the margin and the degree baseline's AUROC is
+   **-0.77**. The prior's AUROC is nearly network-invariant
+   (0.740 to 0.919) while the degree's swings from 0.467
+   to 0.808, so the increment is largest exactly where the baseline
+   is weakest.
+3. **Read together with Control 24, the two results are not in conflict,
+   because the seeds differ.** Control 24 asked whether the prior, seeded
+   by *driver* positives, can pick the functionally essential genes out of
+   the driver-negative candidate pool: it cannot (the AUROC inside the pool
+   is 0.501). This control seeds the prior with *functional* positives and
+   asks whether the held-out functional positives rank above the
+   functional negatives: they do. So the network does beat degree on a
+   functional answer key, but only in the regime where the seeds are
+   themselves functional -- which is a statement about propagation, not
+   about the network discovering functional importance.
+
+**Caveats.** The label's positives are the assay's common essentials, a
+technical property of the CRISPR screen as much as a biological one. The
+RNA co-expression network is built from the same expression matrix that
+defines the essentiality filter, so that arm has a shared input; the
+dependency runs in the direction that would help the degree baseline
+(the expression network's degree is the weakest of the six, 0.47 on
+average) rather than the prior, but it cannot be excluded. The design
+uses 10 repeats rather than 40, and the splits are built fresh for the
+new label. **Exploratory** (amendment 4): no pre-registered endpoint is
+touched.
+
+(`scripts/run_c30_depmap_essential_label.py`;
+`results/tables/c30_depmap_essential_label.tsv`;
+`docs/c30_depmap_essential_label.md`.)
+
+---
+
 ### 4.1 What the benchmark establishes
 
 The headline is a negative-space claim with a positive-space
@@ -2389,7 +2464,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 903 recomputed quantities.
+checks) and a ground-truth table of 919 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2465,10 +2540,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`. Release manifest with SHA-256 of every tracked table and figure (194 tables + 15 figures): `docs/release_manifest_v1.0-rc11.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc11 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (216 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (230 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (903 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (919 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

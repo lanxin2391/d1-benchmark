@@ -649,6 +649,50 @@ def control28() -> None:
             pass
 
 
+# ----------------------------------------------------------------- control 30
+def control30() -> None:
+    """The DepMap essential-gene catalogue as a fifth label (Control 30)."""
+    p = TABLES / "c30_depmap_essential_label.tsv"
+    if not p.exists():
+        return
+    d = pd.read_csv(p, sep="\t")
+    record("control30_arm", "the arms with a positive margin",
+           int((d.mean_delta_auroc > 0).sum()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the arms", int(len(d)),
+           "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the median margin",
+           r4(d.mean_delta_auroc.median()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the smallest margin",
+           r4(d.mean_delta_auroc.min()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the largest margin",
+           r4(d.mean_delta_auroc.max()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the prior AUROC: the smallest",
+           r4(d.rwr_auroc.min()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the prior AUROC: the largest",
+           r4(d.rwr_auroc.max()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the degree baseline AUROC: the smallest",
+           r4(d.degree_auroc.min()), "c30_depmap_essential_label.tsv")
+    record("control30_arm", "the degree baseline AUROC: the largest",
+           r4(d.degree_auroc.max()), "c30_depmap_essential_label.tsv")
+    rho_deg = d[["mean_delta_auroc", "degree_auroc"]].corr(method="spearman")
+    record("control30_mechanism",
+           "the Spearman rho: the margin against the degree baseline's AUROC",
+           r4(rho_deg.iloc[0, 1]), "c30_depmap_essential_label.tsv")
+    rho_ratio = d[["mean_delta_auroc", "degree_ratio"]].corr(method="spearman")
+    record("control30_mechanism",
+           "the Spearman rho: the margin against the positives' degree ratio",
+           r4(rho_ratio.iloc[0, 1]), "c30_depmap_essential_label.tsv")
+    rho_int = d[["mean_delta_auroc", "internal_density_ratio"]].corr(
+        method="spearman")
+    record("control30_mechanism",
+           "the Spearman rho: the margin against the positives' internal "
+           "density", r4(rho_int.iloc[0, 1]), "c30_depmap_essential_label.tsv")
+    for _, r in d.iterrows():
+        record("control30_arm",
+               f"{r['network']} x {int(r['interval_pct'])} %: the margin",
+               r4(r["mean_delta_auroc"]), "c30_depmap_essential_label.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1207,7 +1251,7 @@ def main() -> int:
     control26()
     control27()
     control28()
-    control28()
+    control30()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

@@ -1212,3 +1212,27 @@ one-hop count is a median of +0.0186.
 **What is NOT changed.** No pre-registered endpoint, interval or verdict is
 touched; Control 28 is registered in the amendment-4 family (see A4.6).
 
+### A6.14 Control 30 -- the DepMap essential-gene catalogue as a fifth label
+
+The teacher's functional question, answered in the protocol's own terms: the
+DepMap essential genes become a label (essential in at least X % of the
+1,361 cell lines, X in 1/5/10/20) and the whole protocol runs on it.
+
+| | the value |
+|---|---|
+| the arms with a positive margin | 24/24 |
+| the median margin | +0.1236 |
+| the prior's AUROC across the networks | 0.740 to 0.919 |
+| the degree baseline's AUROC across the networks | 0.467 to 0.808 |
+| the Spearman rho (the margin vs the degree baseline's AUROC) | -0.77 |
+
+The hypothesised mechanism (the positives' hubness, rho = -0.59;
+their internal density, rho = -0.15) is **not supported**;
+what the margin tracks is the degree baseline's own weakness.
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Control 30 is registered in the amendment-4 family (see A4.6). The
+new label and its splits are written to new paths
+(`data/processed/labels/depmap_essential_*.tsv`,
+`data/processed/splits_depmap/`).
+

@@ -6181,143 +6181,255 @@
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the betweenness centrality: the median margin against degree",
-  "value": -0.0098,
-  "source": "c28_topology_suite_summary.tsv",
-  "note": ""
- },
- {
-  "quantity": "control28_scorer",
-  "scope": "the betweenness centrality: the arms positive",
-  "value": 7,
-  "source": "c28_topology_suite_summary.tsv",
-  "note": ""
- },
- {
-  "quantity": "control28_scorer",
-  "scope": "the betweenness centrality: the arms",
+  "quantity": "control30_arm",
+  "scope": "the arms with a positive margin",
   "value": 24,
-  "source": "c28_topology_suite_summary.tsv",
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the betweenness centrality: the smallest margin",
-  "value": -0.0395,
-  "source": "c28_topology_suite_summary.tsv",
-  "note": ""
- },
- {
-  "quantity": "control28_scorer",
-  "scope": "the betweenness centrality: the largest margin",
-  "value": 0.0346,
-  "source": "c28_topology_suite_summary.tsv",
-  "note": ""
- },
- {
-  "quantity": "control28_scorer",
-  "scope": "the 1-hop seed count: the median margin against degree",
-  "value": 0.0732,
-  "source": "c28_topology_suite_summary.tsv",
-  "note": ""
- },
- {
-  "quantity": "control28_scorer",
-  "scope": "the 1-hop seed count: the arms positive",
-  "value": 19,
-  "source": "c28_topology_suite_summary.tsv",
-  "note": ""
- },
- {
-  "quantity": "control28_scorer",
-  "scope": "the 1-hop seed count: the arms",
+  "quantity": "control30_arm",
+  "scope": "the arms",
   "value": 24,
-  "source": "c28_topology_suite_summary.tsv",
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 1-hop seed count: the smallest margin",
-  "value": -0.0803,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the median margin",
+  "value": 0.1236,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 1-hop seed count: the largest margin",
-  "value": 0.1438,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the smallest margin",
+  "value": 0.0204,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 2-hop seed count: the median margin against degree",
-  "value": 0.0584,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the largest margin",
+  "value": 0.3526,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 2-hop seed count: the arms positive",
-  "value": 23,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the prior AUROC: the smallest",
+  "value": 0.7402,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 2-hop seed count: the arms",
-  "value": 24,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the prior AUROC: the largest",
+  "value": 0.9186,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 2-hop seed count: the smallest margin",
-  "value": -0.0091,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the degree baseline AUROC: the smallest",
+  "value": 0.467,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the 2-hop seed count: the largest margin",
-  "value": 0.1038,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "the degree baseline AUROC: the largest",
+  "value": 0.8076,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the RWR prior: the median margin against degree",
-  "value": 0.0809,
-  "source": "a4_table1_delta_auroc_v40.tsv",
+  "quantity": "control30_mechanism",
+  "scope": "the Spearman rho: the margin against the degree baseline's AUROC",
+  "value": -0.7713,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the RWR prior: the arms positive",
-  "value": 23,
-  "source": "a4_table1_delta_auroc_v40.tsv",
+  "quantity": "control30_mechanism",
+  "scope": "the Spearman rho: the margin against the positives' degree ratio",
+  "value": -0.587,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the RWR prior: the arms",
-  "value": 24,
-  "source": "a4_table1_delta_auroc_v40.tsv",
+  "quantity": "control30_mechanism",
+  "scope": "the Spearman rho: the margin against the positives' internal density",
+  "value": -0.1513,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the RWR prior minus the 1-hop seed count: the median",
-  "value": 0.0186,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "funmap x 1 %: the margin",
+  "value": 0.1254,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  },
  {
-  "quantity": "control28_scorer",
-  "scope": "the betweenness on string_phys700: the median margin",
-  "value": 0.0259,
-  "source": "c28_topology_suite_summary.tsv",
+  "quantity": "control30_arm",
+  "scope": "rna_coexp x 1 %: the margin",
+  "value": 0.2653,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_phys700 x 1 %: the margin",
+  "value": 0.0893,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "intact x 1 %: the margin",
+  "value": 0.0204,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_full700 x 1 %: the margin",
+  "value": 0.0878,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "reactome x 1 %: the margin",
+  "value": 0.1402,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "funmap x 5 %: the margin",
+  "value": 0.1372,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "rna_coexp x 5 %: the margin",
+  "value": 0.3357,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_phys700 x 5 %: the margin",
+  "value": 0.1154,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "intact x 5 %: the margin",
+  "value": 0.0482,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_full700 x 5 %: the margin",
+  "value": 0.1103,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "reactome x 5 %: the margin",
+  "value": 0.1889,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "funmap x 10 %: the margin",
+  "value": 0.1395,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "rna_coexp x 10 %: the margin",
+  "value": 0.3481,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_phys700 x 10 %: the margin",
+  "value": 0.1187,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "intact x 10 %: the margin",
+  "value": 0.0557,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_full700 x 10 %: the margin",
+  "value": 0.1131,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "reactome x 10 %: the margin",
+  "value": 0.2007,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "funmap x 20 %: the margin",
+  "value": 0.1362,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "rna_coexp x 20 %: the margin",
+  "value": 0.3526,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_phys700 x 20 %: the margin",
+  "value": 0.1218,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "intact x 20 %: the margin",
+  "value": 0.063,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "string_full700 x 20 %: the margin",
+  "value": 0.111,
+  "source": "c30_depmap_essential_label.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control30_arm",
+  "scope": "reactome x 20 %: the margin",
+  "value": 0.2144,
+  "source": "c30_depmap_essential_label.tsv",
   "note": ""
  }
 ]

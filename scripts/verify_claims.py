@@ -49,6 +49,21 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 30: the DepMap essential-gene catalogue ----
+    ("control30.section", "manuscript_a_sections.md",
+     "### F.31 Control 30", "\u00a7F.31 must report the functional label"),
+    ("control30.section.draft", "research_report_draft.md",
+     "### 3.26 The DepMap essential-gene catalogue",
+     "\u00a73.26 must report the functional label"),
+    ("control30.reading", "manuscript_a_sections.md",
+     "the two results are not in conflict, because the seeds differ",
+     "\u00a7F.31 must reconcile it with Control 24"),
+    ("control30.facts", "report_1118_facts.md",
+     "## 7l. The DepMap essential-gene catalogue as a fifth label",
+     "the facts sheet must carry Control 30"),
+    ("control30.qa", "report_1118_qa_bank.md",
+     "### B31", "the question bank must carry Control 30"),
+
     # ---- Control 28: the topology prior suite ----
     ("control28.section", "manuscript_a_sections.md",
      "### F.30 Control 28", "\u00a7F.30 must report the topology suite"),
@@ -565,7 +580,46 @@ def main(argv: list[str] | None = None) -> int:
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
 
-        # ---- Control 28: the topology prior suite ----
+        # ---- Control 30: the DepMap essential-gene catalogue ----
+        ("control 30 the arms with a positive margin",
+         "manuscript_a_sections.md",
+         r"margin is positive in \*\*(\d+) of",
+         ("control30_arm", "the arms with a positive margin"), 0.5),
+        ("control 30 the median margin", "manuscript_a_sections.md",
+         r"arms\*\*, with a median of \*\*(\+0\.\d{4})\*\*",
+         ("control30_arm", "the median margin"), 0.0006),
+        ("control 30 the prior AUROC, the smallest", "manuscript_a_sections.md",
+         r"own AUROC on this label runs from (0\.\d{3})",
+         ("control30_arm", "the prior AUROC: the smallest"), 0.0006),
+        ("control 30 the prior AUROC, the largest", "manuscript_a_sections.md",
+         r"own AUROC on this label runs from 0\.\d{3} to (0\.\d{3})",
+         ("control30_arm", "the prior AUROC: the largest"), 0.0006),
+        ("control 30 the degree AUROC, the smallest", "manuscript_a_sections.md",
+         r"the degree baseline's runs from (0\.\d{3})",
+         ("control30_arm", "the degree baseline AUROC: the smallest"), 0.0006),
+        ("control 30 the degree AUROC, the largest", "manuscript_a_sections.md",
+         r"the degree baseline's runs from 0\.\d{3} to (0\.\d{3})",
+         ("control30_arm", "the degree baseline AUROC: the largest"), 0.0006),
+        ("control 30 the margin against the degree baseline's AUROC",
+         "manuscript_a_sections.md",
+         r"degree baseline's AUROC is \*\*(-?\d\.\d{2})\*\*",
+         ("control30_mechanism",
+          "the Spearman rho: the margin against the degree baseline's AUROC"),
+         0.006),
+        ("control 30 the margin against the degree ratio",
+         "manuscript_a_sections.md",
+         r"correlation is (-?\d\.\d{2}), the wrong sign",
+         ("control30_mechanism",
+          "the Spearman rho: the margin against the positives' degree ratio"),
+         0.006),
+        ("control 30 the margin against the internal density",
+         "manuscript_a_sections.md",
+         r"internal density \((-?\d\.\d{2})\)",
+         ("control30_mechanism",
+          "the Spearman rho: the margin against the positives' internal "
+          "density"), 0.006),
+
+        # ---- Control 28: the topology prior suite ----        # ---- Control 28: the topology prior suite ----
         ("control 28 the betweenness median margin",
          "manuscript_a_sections.md",
          r"\| the betweenness centrality \| \*\*([\u2212\-+]?0\.\d{4})\*\* \|",
