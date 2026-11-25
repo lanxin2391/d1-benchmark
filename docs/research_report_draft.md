@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (136 PASS / 0 FAIL). The second mechanism
+manuscript against that table (170 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -1523,19 +1523,27 @@ folds, the same universe, the same K and the same cell lines;
 
 **Reading.** The prior is better than random at the top 100 (47.6 %
 against 6.1 %) and no better than random at the top 30 (5.8 % against
-3.1 %). But **the degree baseline carries almost all of the signal at
-every scale** (65–98 %). Hubness predicts functional essentiality well
--- a real biological signal, not an artefact of this benchmark -- and a
-diffusion prior does not add to it on this task.
+3.1 %). The degree baseline's picks are enriched at every scale
+(65–98 %), which was first read as "hubness predicts functional
+essentiality well". Control 24 (§F.26) shows that this reading needs a
+correction: the enrichment statistic saturates inside the top degree
+stratum, where even a **random** pick from the same stratum is enriched in
+82 % of the cell lines, and read as a ranking the gene-level AUROC inside
+the pool is at chance for every scorer. The accurate statement is that
+**on a cell-line functional task no scorer inside the candidate pool
+separates the essential genes from the rest**, and the diffusion prior
+does not add to the degree baseline on it.
 
 **What this means for the claim.** The prior's contribution is
 **task-specific**: on the curated driver labels it beats degree in 23 of
-24 arms, while on a cell-line functional task degree is the better
-predictor. Read together with §F.12 (the bait-matched null), the
-picture is consistent: the part of the driver-label margin that
-survives the publication-count match is also the part that does not
-transfer to a functional task. We state this as a limit on the scope
-of the result, not as a contradiction of it.
+24 arms, while on a cell-line functional task no scorer inside the
+candidate pool separates the essential genes from the rest (Control 24),
+so the functional data cannot arbitrate between the prior and the
+baselines and cannot be used to argue for either. Read together with
+§F.12 (the bait-matched null), the picture is consistent: the part of the
+driver-label margin that survives the publication-count match is also the
+part that does not transfer to a functional task. We state this as a limit
+on the scope of the result, not as a contradiction of it.
 
 ### 3.17 Is degree a strawman baseline, and is RWR a lucky special case?
 
@@ -1766,6 +1774,99 @@ repeat 层区间认证 24/24、基因簇 bootstrap 认证 20/24。
 
 ## 4. Discussion
 
+### 3.21 Does the network add anything on the functional task once hubness is taken out?
+
+Control 24: does the network add anything on the functional task once hubness is taken out?
+
+The DepMap control (§F.21) is a negative result for the prior, but it was
+reported with an enrichment statistic that can saturate, and it left one
+question open: whether the network says anything about function *after*
+hubness is accounted for. Control 24 asks both, on the same held-out
+negative pools as §F.21 (the pool holds 753 candidate genes at the median,
+384 to 1,082 across the arms), the same 24 arms, the same folds and the
+same alpha = 0.5.
+
+**Q1 -- the gene level.** For every arm, fold and cell line, the AUROC for
+discriminating the functionally essential genes *inside the candidate pool*,
+for three scores: the prior; the degree baseline; and the prior with its
+degree part regressed out (the least-squares residual of the prior's score
+on log1p(degree) inside the pool).
+
+| threshold | the prior | degree | the residual |
+|---|---|---|---|
+| CERES < −0.8 | 0.4996 | 0.4911 | 0.4998 |
+| CERES < −0.5 | 0.5007 | 0.4948 | 0.5003 |
+| CERES < −0.3 | 0.5008 | 0.4948 | 0.5000 |
+
+(The median over the 24 arms of the per-arm medians; per arm the prior is
+above 0.5 in 14 of 24 arms, the residual in 14 of 24, and the degree
+baseline in 9 of 24 -- at chance for everyone, with the degree baseline at
+or slightly below it.)
+
+**Reading.** Inside the candidate pool **no scorer separates the
+functionally essential genes from the rest**: the prior is at chance, the
+degree baseline is at or below chance, and removing the degree part of the
+prior leaves a residual at chance as well. There is no visibility-aware
+residual signal to recover on this task, and the functional data cannot
+arbitrate between the prior and the baselines.
+
+**Q2 -- inside a degree stratum.** Split each pool into five degree strata
+and compare the top-K picks with a random pick from the same stratum
+(K = 30, the threshold −0.5, one fold in five):
+
+| degree stratum (1 = the lowest) | the prior's picks | degree's picks | a random pick from the same stratum |
+|---|---|---|---|
+| 1 | 0.0 % | 0.0 % | 0.0 % |
+| 2 | 0.0 % | 0.1 % | 0.0 % |
+| 3 | 0.1 % | 11.7 % | 2.1 % |
+| 4 (the top degree fifth) | 52.5 % | 92.3 % | 81.7 % |
+
+(The median over the 24 arms of the per-arm medians, the share of cell
+lines in which the candidates are enriched for the cell line's essential
+genes; the sign of the prior-minus-random difference is not consistent
+across arms -- 13 of the 24 arms have the prior above the random
+baseline.)
+
+**Reading.** This is the correction of the way §F.21 was read. In the top
+degree stratum a **random** pick is enriched in 82 % of the cell lines:
+the statistic is close to saturated there, because that stratum holds most
+of the essential genes. The degree baseline reaches 92 % because it picks
+the very top of that stratum; the prior reaches 52 % because inside the
+top stratum it prefers the lower-degree genes. The enrichment statistic
+therefore measures **which stratum a pick came from**, not whether the pick
+found the essential genes. The gene-level statement is the clean one, and
+it is negative for every scorer.
+
+**What this means for the claim.** Nothing here weakens the headline,
+which is about the curated driver labels; it sharpens the scope. The
+prior's contribution to prioritisation is **task-specific**: on the
+curated labels it beats degree in 23 of 24 arms, and on a cell-line
+functional task no score inside the candidate pool beats chance. So the
+functional data cannot be used to argue that a network prior *helps* find
+essential genes, and they cannot be used to argue that it *hurts* either:
+the honest reading is that they do not discriminate. Read with §F.12 (the
+bait-matched null) and §F.22 (the baseline family), the picture is
+consistent -- the part of the driver-label margin that survives the
+publication-count match is also the part that does not transfer to
+function. We state this as a limit on the scope of the result, not as a
+contradiction of it.
+
+**Two consequences for the follow-up work.** First, the proposed
+visibility-debiased scorer (§L.3) has no functional signal to exploit on
+this data -- the residual's AUROC is 0.500 -- so that direction must
+either be reframed around the catalogue structure or dropped. Second, the
+released DepMap table needs its reading corrected wherever it is quoted
+(§F.21, §3.16 of the report, the facts sheet and the question bank): the
+degree column is a statement about the composition of the top-degree
+stratum, not about predictive power.
+
+(`scripts/run_c24_depmap_within_degree.py`;
+`results/tables/c24_depmap_gene_level.tsv`,
+`results/tables/c24_depmap_within_degree.tsv`,
+`results/tables/c24_summary.tsv`; `docs/c24_depmap_within_degree.md`.)
+
+---
+
 ### 4.1 What the benchmark establishes
 
 The headline is a negative-space claim with a positive-space
@@ -1991,7 +2092,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 443 recomputed quantities.
+checks) and a ground-truth table of 638 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2067,10 +2168,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc11`. Release manifest with SHA-256 of every tracked table and figure: `docs/release_manifest_v1.0-rc11.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc11 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (63 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (170 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (415 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (638 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

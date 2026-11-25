@@ -478,3 +478,162 @@ label_difficulty	intogen_temporal_new: mean margin	0.0209	results/tables/label_d
 label_difficulty	intogen_temporal_new: degree-baseline AUROC	0.5827	results/tables/label_difficulty_labels.tsv	
 label_difficulty	intogen_temporal_new: RWR AUROC	0.6036	results/tables/label_difficulty_labels.tsv	
 label_difficulty	intogen_temporal_new: number of positives	150	results/tables/label_difficulty_labels.tsv	
+control24_auc	the prior (CERES < -0.8): the median over the arms	0.4996	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.8): the arms above 0.5	11	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.8): the smallest arm	0.4928	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.8): the largest arm	0.5093	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.8): the median over the arms	0.4911	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.8): the arms above 0.5	9	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.8): the smallest arm	0.4693	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.8): the largest arm	0.5072	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.8): the median over the arms	0.4998	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.8): the arms above 0.5	11	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.8): the smallest arm	0.4911	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.8): the largest arm	0.511	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.5): the median over the arms	0.5007	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.5): the arms above 0.5	14	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.5): the smallest arm	0.495	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.5): the largest arm	0.5067	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.5): the median over the arms	0.4948	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.5): the arms above 0.5	9	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.5): the smallest arm	0.477	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.5): the largest arm	0.5076	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.5): the median over the arms	0.5003	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.5): the arms above 0.5	14	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.5): the smallest arm	0.4937	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.5): the largest arm	0.5073	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.3): the median over the arms	0.5008	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.3): the arms above 0.5	15	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.3): the smallest arm	0.4964	c24_depmap_gene_level.tsv	
+control24_auc	the prior (CERES < -0.3): the largest arm	0.5092	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.3): the median over the arms	0.4948	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.3): the arms above 0.5	9	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.3): the smallest arm	0.4804	c24_depmap_gene_level.tsv	
+control24_auc	degree (CERES < -0.3): the largest arm	0.5069	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.3): the median over the arms	0.5	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.3): the arms above 0.5	12	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.3): the smallest arm	0.4939	c24_depmap_gene_level.tsv	
+control24_auc	the residual (CERES < -0.3): the largest arm	0.5064	c24_depmap_gene_level.tsv	
+control24_pool	the median number of candidate genes in the pool	753	c24_depmap_gene_level.tsv	
+control24_pool	the smallest pool	384	c24_depmap_gene_level.tsv	
+control24_pool	the largest pool	1082	c24_depmap_gene_level.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 0: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 0: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 0: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 0: the arms where the prior is above the random pick	1	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 1: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 1: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 1: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 1: the arms where the prior is above the random pick	4	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 2: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 2: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 2: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 2: the arms where the prior is above the random pick	4	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 3: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 3: degree's picks (the share of cell lines enriched, %)	4.4311	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 3: a random pick from the same stratum (the share of cell lines enriched, %)	0.774	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 3: the arms where the prior is above the random pick	4	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 4: the prior's picks (the share of cell lines enriched, %)	41.4667	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 4: degree's picks (the share of cell lines enriched, %)	90.5573	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	74.9033	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 30, stratum 4: the arms where the prior is above the random pick	8	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 0: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 0: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 0: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 0: the arms where the prior is above the random pick	2	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 1: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 1: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 1: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 1: the arms where the prior is above the random pick	0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 2: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 2: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 2: a random pick from the same stratum (the share of cell lines enriched, %)	0.0193	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 2: the arms where the prior is above the random pick	4	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 3: the prior's picks (the share of cell lines enriched, %)	2.4768	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 3: degree's picks (the share of cell lines enriched, %)	50.8127	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 3: a random pick from the same stratum (the share of cell lines enriched, %)	24.3228	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 3: the arms where the prior is above the random pick	2	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 4: the prior's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 4: degree's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.8, K = 100, stratum 4: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 0: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 0: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 0: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 0: the arms where the prior is above the random pick	1	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 1: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 1: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 1: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 1: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 2: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 2: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 2: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 2: the arms where the prior is above the random pick	6	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 3: the prior's picks (the share of cell lines enriched, %)	0.058	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 3: degree's picks (the share of cell lines enriched, %)	11.726	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 3: a random pick from the same stratum (the share of cell lines enriched, %)	2.0704	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 3: the arms where the prior is above the random pick	4	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 4: the prior's picks (the share of cell lines enriched, %)	52.4574	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 4: degree's picks (the share of cell lines enriched, %)	92.3181	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	81.7144	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 30, stratum 4: the arms where the prior is above the random pick	10	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 0: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 0: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 0: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 0: the arms where the prior is above the random pick	2	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 1: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 1: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 1: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 1: the arms where the prior is above the random pick	0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 2: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 2: degree's picks (the share of cell lines enriched, %)	0.0774	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 2: a random pick from the same stratum (the share of cell lines enriched, %)	0.1161	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 2: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 3: the prior's picks (the share of cell lines enriched, %)	7.6625	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 3: degree's picks (the share of cell lines enriched, %)	78.1927	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 3: a random pick from the same stratum (the share of cell lines enriched, %)	58.4365	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 3: the arms where the prior is above the random pick	1	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 4: the prior's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 4: degree's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.5, K = 100, stratum 4: the arms where the prior is above the random pick	4	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 0: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 0: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 0: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 0: the arms where the prior is above the random pick	0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 1: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 1: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 1: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 1: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 2: the prior's picks (the share of cell lines enriched, %)	0.0774	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 2: degree's picks (the share of cell lines enriched, %)	0.1741	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 2: a random pick from the same stratum (the share of cell lines enriched, %)	0.0774	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 2: the arms where the prior is above the random pick	7	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 3: the prior's picks (the share of cell lines enriched, %)	0.3289	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 3: degree's picks (the share of cell lines enriched, %)	16.7183	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 3: a random pick from the same stratum (the share of cell lines enriched, %)	5.4567	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 3: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 4: the prior's picks (the share of cell lines enriched, %)	50.6966	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 4: degree's picks (the share of cell lines enriched, %)	82.8947	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	83.7655	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 30, stratum 4: the arms where the prior is above the random pick	10	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 0: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 0: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 0: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 0: the arms where the prior is above the random pick	2	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 1: the prior's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 1: degree's picks (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 1: a random pick from the same stratum (the share of cell lines enriched, %)	0.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 1: the arms where the prior is above the random pick	0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 2: the prior's picks (the share of cell lines enriched, %)	0.1161	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 2: degree's picks (the share of cell lines enriched, %)	0.5998	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 2: a random pick from the same stratum (the share of cell lines enriched, %)	0.4257	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 2: the arms where the prior is above the random pick	6	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 3: the prior's picks (the share of cell lines enriched, %)	21.3816	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 3: degree's picks (the share of cell lines enriched, %)	88.4675	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 3: a random pick from the same stratum (the share of cell lines enriched, %)	76.7802	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 3: the arms where the prior is above the random pick	1	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 4: the prior's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 4: degree's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
+control24_stratum	CERES < -0.3, K = 100, stratum 4: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	

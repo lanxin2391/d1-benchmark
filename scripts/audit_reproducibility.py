@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 import time
@@ -208,7 +209,10 @@ print("\n[4b] SHA-256 fingerprints (docs/release_manifest_v1.0-rc3.json)")
 sys.path.insert(0, str(ROOT))
 from d1.engine.io import sha256_normalised  # noqa: E402
 
-release_manifests = sorted((ROOT / "docs").glob("release_manifest_v1.0-rc*.json"))
+release_manifests = sorted(
+    (ROOT / "docs").glob("release_manifest_v1.0-rc*.json"),
+    key=lambda p: int(re.search(r"rc(\d+)", p.name).group(1))
+    if re.search(r"rc(\d+)", p.name) else -1)
 if not release_manifests:
     add(FAIL, "release-manifest-exists", "no release manifest found")
 else:

@@ -9,6 +9,18 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control24.section        manuscript_a_sections.md
+         §F.26 must report the functional-layer control
+  [PASS] control24.section.draft  research_report_draft.md
+         §3.21 must report the functional-layer control
+  [PASS] control24.reading        manuscript_a_sections.md
+         §F.26 must state the corrected reading
+  [PASS] control24.reading.draft  research_report_draft.md
+         §3.21 must state the corrected reading
+  [PASS] control24.facts          report_1118_facts.md
+         the facts sheet must carry Control 24
+  [PASS] control24.qa             report_1118_qa_bank.md
+         the question bank must carry the corrected DepMap reading
   [PASS] design.repeats           manuscript_intro_abstract.md
          the abstract must state the 40-repeat design
   [PASS] design.repeats.a         manuscript_a_sections.md
@@ -191,6 +203,18 @@ states something the tables do not support.
          the corrected C9 result replaces the old post-hoc claim
   [PASS] forbidden.halfmargin.draft research_report_draft.md
          the corrected C9 result replaces the old post-hoc claim
+  [PASS] forbidden.hubnessclaim   manuscript_a_sections.md
+         the saturated-enrichment reading must be gone (Control 24)
+  [PASS] forbidden.hubnessclaim.draft research_report_draft.md
+         the saturated-enrichment reading must be gone (Control 24)
+  [PASS] forbidden.degreesignal   manuscript_a_sections.md
+         the corrected reading must replace it (Control 24)
+  [PASS] forbidden.degreesignal.draft research_report_draft.md
+         the corrected reading must replace it (Control 24)
+  [PASS] forbidden.degreepredictor manuscript_a_sections.md
+         the functional task cannot arbitrate between the prior and the baselines
+  [PASS] forbidden.degreepredictor.draft research_report_draft.md
+         the functional task cannot arbitrate between the prior and the baselines
   [PASS] forbidden.oldconclusion  manuscript_intro_abstract.md
          the conclusions must carry the qualified margin, not the old one
 
@@ -210,6 +234,14 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 24 the prior's AUROC   manuscript=+0.5007  table=+0.5007  tol=0.0006
+  [PASS] control 24 degree's AUROC      manuscript=+0.4948  table=+0.4948  tol=0.0006
+  [PASS] control 24 the residual's AUROC manuscript=+0.5003  table=+0.5003  tol=0.0006
+  [PASS] control 24 the top stratum: the prior's picks manuscript=+52.5000  table=+52.4574  tol=0.06
+  [PASS] control 24 the top stratum: degree's picks manuscript=+92.3000  table=+92.3181  tol=0.06
+  [PASS] control 24 the top stratum: the random baseline manuscript=+81.7000  table=+81.7144  tol=0.06
+  [PASS] control 24 the prior's AUROC (the draft) manuscript=+0.5007  table=+0.5007  tol=0.0006
+  [PASS] control 24 the random baseline (the draft) manuscript=+81.7000  table=+81.7144  tol=0.06
   [PASS] stability repeat-level SD      manuscript=+0.0047  table=+0.0047  tol=0.0006
   [PASS] stability gene-level error     manuscript=+0.1850  table=+0.1848  tol=0.0006
   [PASS] stability rank movement        manuscript=+270.0000  table=+270.0000  tol=5.0
@@ -261,5 +293,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 150 PASS / 0 FAIL
+RESULT: 170 PASS / 0 FAIL
 ========================================================================

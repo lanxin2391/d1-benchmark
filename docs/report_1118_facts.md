@@ -291,6 +291,7 @@ score CV      log_crowding_scott -0.086891 0.023498 -0.132946 -0.040836  2.17475
 - K = 0.01: median over the 24 arms of the fraction of cell lines with p < 0.05 = **2.8%** (chance = 5 %); median p = 0.602
 - K = 30.0: median over the 24 arms of the fraction of cell lines with p < 0.05 = **5.8%** (chance = 5 %); median p = 0.523
 - K = 100.0: median over the 24 arms of the fraction of cell lines with p < 0.05 = **47.6%** (chance = 5 %); median p = 0.058
+- **the reading was corrected after the defence (Control 24, §7g)**: the enrichment statistic saturates inside the top degree stratum, where even a random pick from the same stratum is enriched in 81.7 % of the cell lines; read as a ranking (the gene-level AUROC inside the pool) nothing beats chance, so this table cannot be used to argue for or against the prior
 
 ## 7b. The baseline family sweep (Control 19)
 
@@ -375,6 +376,27 @@ Is degree a strawman baseline, and is RWR a lucky special case?
 - the verdicts do not move at all: 23/24 positive arms, 24/24 certified under the repeat-level interval and 20/24 under the gene-cluster bootstrap in EVERY design
 - the median gene-cluster interval width moves from 0.0365 to 0.0373, i.e. at most 2.3 % relative to the pre-registered design; the ten-fold designs are the widest, and at a fixed fold count the repeat count changes the width by less than 0.5 %
 - the pre-registered 5 x 40 design is neither the most nor the least favourable one; it is kept, and the comparison is reported as a sensitivity analysis
+
+## 7g. The functional task, read as a ranking (Control 24)
+
+- the gene-level AUROC for functional essentiality **inside** the candidate pool (the median over the 24 arms of the per-arm medians, the threshold CERES < −0.5):
+  - the prior: **0.5007** (above 0.5 in 14 of 24 arms; the arm range 0.4950–0.5067)
+  - degree: **0.4948** (above 0.5 in 9 of 24 arms; the arm range 0.4770–0.5076)
+  - the prior with its degree part regressed out: **0.5003** (above 0.5 in 14 of 24 arms)
+- the same three numbers at CERES < −0.8: 0.4996 / 0.4911 / 0.4998; at CERES < −0.3: 0.5008 / 0.4948 / 0.5000
+- the pool holds **753** candidate genes at the median (384–1,082 across the arms), the same held-out negatives as the released DepMap analysis
+- inside the degree strata (K = 30, CERES < −0.5, the share of cell lines enriched, the median over the arms):
+
+| degree stratum | the prior's picks | degree's picks | a random pick from the same stratum |
+|---|---|---|---|
+| 1 | 0.0 % | 0.0 % | 0.0 % |
+| 2 | 0.0 % | 0.1 % | 0.0 % |
+| 3 | 0.1 % | 11.7 % | 2.1 % |
+| 4 (the top degree fifth) | 52.5 % | 92.3 % | **81.7 %** |
+
+- **the correction**: in the top degree stratum even a **random** pick from the same stratum is enriched in 82 % of the cell lines, so the released table's "the degree baseline 69.2 %" is a statement about which stratum a pick came from, not about predictive power; read as a ranking, nothing beats chance
+- the prior's picks are below the random baseline in the top stratum in 11 of 24 arms and above it in 13 of 24 -- the sign is not consistent, so there is no stratified advantage either
+- `scripts/run_c24_depmap_within_degree.py`, `results/tables/c24_depmap_gene_level.tsv`, `results/tables/c24_depmap_within_degree.tsv`, `results/tables/c24_summary.tsv`, `docs/c24_depmap_within_degree.md`
 
 ## 8. The design (panel and labels)
 

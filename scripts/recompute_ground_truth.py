@@ -314,6 +314,63 @@ def control10() -> None:
                    "control10_random_input_summary.tsv")
 
 
+# ----------------------------------------------------------------- control 24
+def control24() -> None:
+    """The functional task read as a ranking (Control 24).
+
+    The gene-level AUROC inside the candidate pool, and the stratified
+    enrichment inside the degree strata.
+    """
+    gp = TABLES / "c24_depmap_gene_level.tsv"
+    sp = TABLES / "c24_depmap_within_degree.tsv"
+    if not gp.exists() or not sp.exists():
+        return
+    g = pd.read_csv(gp, sep="\t")
+    s = pd.read_csv(sp, sep="\t")
+    for th in sorted(g.threshold.unique()):
+        sub = g[g.threshold == th]
+        per_arm = sub.groupby(["network", "label", "scorer"]).auc_median.median()
+        for tag, name in (("prior", "the prior"),
+                          ("degree", "degree"),
+                          ("residual", "the residual")):
+            v = per_arm[per_arm.index.get_level_values("scorer") == tag]
+            record("control24_auc", f"{name} (CERES < {th}): the median over the arms",
+                   r4(v.median()), "c24_depmap_gene_level.tsv")
+            record("control24_auc", f"{name} (CERES < {th}): the arms above 0.5",
+                   int((v > 0.5).sum()), "c24_depmap_gene_level.tsv")
+            record("control24_auc", f"{name} (CERES < {th}): the smallest arm",
+                   r4(v.min()), "c24_depmap_gene_level.tsv")
+            record("control24_auc", f"{name} (CERES < {th}): the largest arm",
+                   r4(v.max()), "c24_depmap_gene_level.tsv")
+    record("control24_pool", "the median number of candidate genes in the pool",
+           int(g[g.threshold == -0.5].n_pool.median()),
+           "c24_depmap_gene_level.tsv")
+    record("control24_pool", "the smallest pool", int(g[g.threshold == -0.5].n_pool.min()),
+           "c24_depmap_gene_level.tsv")
+    record("control24_pool", "the largest pool", int(g[g.threshold == -0.5].n_pool.max()),
+           "c24_depmap_gene_level.tsv")
+    for th in sorted(s.threshold.unique()):
+        for K in sorted(s.K.unique()):
+            sub = s[(s.threshold == th) & (s.K == K)]
+            for st in sorted(sub.stratum.unique()):
+                arm = (sub[sub.stratum == st]
+                       .groupby(["network", "label", "scorer", "pick"])
+                       .frac_enriched.median().unstack(["scorer", "pick"]))
+                for (tag, pick), name in ((("prior", "top"), "the prior's picks"),
+                                          (("degree", "top"), "degree's picks"),
+                                          (("prior", "random"),
+                                           "a random pick from the same stratum")):
+                    record("control24_stratum",
+                           f"CERES < {th}, K = {K}, stratum {st}: {name} (the share of cell lines enriched, %)",
+                           r4(arm[(tag, pick)].median() * 100),
+                           "c24_depmap_within_degree.tsv")
+                pr = arm[("prior", "top")]
+                rd = arm[("prior", "random")]
+                record("control24_stratum",
+                       f"CERES < {th}, K = {K}, stratum {st}: the arms where the prior is above the random pick",
+                       int((pr > rd).sum()), "c24_depmap_within_degree.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -867,6 +924,7 @@ def main() -> int:
     networks()
     labels()
     recent_series()
+    control24()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

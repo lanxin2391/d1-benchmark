@@ -1094,3 +1094,32 @@ while the AUROC of the same scores is 0.627. The comparison is therefore
 made on the protocol's **ranks** (decision D-07: score descending, then
 gene symbol ascending). RWR has few ties, so its published numbers are
 unchanged, and the self-check confirms it.
+
+### A6.9 Control 24 -- the functional task, read as a ranking
+
+The DepMap control was reported with an enrichment statistic that
+saturates inside the top degree stratum, and it left one question open:
+whether the network says anything about function after hubness is
+accounted for. Control 24 asks both on the same held-out negative pools
+(the same 24 arms, the same folds, alpha = 0.5).
+
+| the gene-level AUROC inside the candidate pool (CERES < −0.5) | value | the arms above 0.5 |
+|---|---|---|
+| the prior | 0.5007 | 14/24 |
+| degree | 0.4948 | 9/24 |
+| the prior with its degree part regressed out | 0.5003 | 14/24 |
+
+| the top degree stratum (K = 30) | the share of cell lines enriched |
+|---|---|
+| the prior's picks | 52.5 % |
+| degree's picks | 92.3 % |
+| **a random pick from the same stratum** | **81.7 %** |
+
+The finding is negative for every scorer and it changes how the released
+DepMap table must be read: the degree column is a statement about the
+composition of the top-degree stratum, not about predictive power.
+**This is a correction of the interpretation of an existing released
+result, not a change of any pre-registered endpoint**: the primary
+endpoint, its interval and the H1 verdict are untouched. Registered as an
+exploratory analysis of the amendment-4 family (see §A4.6).
+
