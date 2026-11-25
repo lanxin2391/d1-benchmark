@@ -49,6 +49,24 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Control 25: mutation-first versus network-first ----
+    ("control25.section", "manuscript_a_sections.md",
+     "### F.27 Control 25", "\u00a7F.27 must report the mutation comparison"),
+    ("control25.section.draft", "research_report_draft.md",
+     "### 3.22 Mutation-first versus network-first",
+     "\u00a73.22 must report the mutation comparison"),
+    ("control25.reading", "manuscript_a_sections.md",
+     "complementary rather than redundant",
+     "\u00a7F.27 must state that the two sources are complementary"),
+    ("control25.facts", "report_1118_facts.md",
+     "## 7h. Mutation-first versus network-first (Control 25)",
+     "the facts sheet must carry Control 25"),
+    ("control25.qa", "report_1118_qa_bank.md",
+     "### B28", "the question bank must carry Control 25"),
+    ("control25.recurrence.honest", "manuscript_a_sections.md",
+     "do not claim that the network encodes a recurrent-mutation signal",
+     "\u00a7F.27 must disclaim the recurrent-mutation reading"),
+
     # ---- Control 24: the functional task, read as a ranking ----
     ("control24.section", "manuscript_a_sections.md",
      "### F.26 Control 24", "\u00a7F.26 must report the functional-layer control"),
@@ -502,6 +520,38 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Control 25: mutation-first versus network-first ----
+        ("control 25 the prior, the whole universe", "manuscript_a_sections.md",
+         r"\| the whole test universe \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_auc", "the prior: all"), 0.0006),
+        ("control 25 degree, the whole universe", "manuscript_a_sections.md",
+         r"\| the whole test universe \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_auc", "degree: all"), 0.0006),
+        ("control 25 the mutation score, the whole universe",
+         "manuscript_a_sections.md",
+         r"\| the whole test universe \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_auc", "the mutation score: all"), 0.0006),
+        ("control 25 the combination, the whole universe",
+         "manuscript_a_sections.md",
+         r"\| the whole test universe \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_auc", "the combination: all"), 0.0006),
+        ("control 25 the prior, without the IntOGen drivers",
+         "manuscript_a_sections.md",
+         r"\| the test universe without the IntOGen drivers \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_auc", "the prior: minus_intogen"), 0.0006),
+        ("control 25 the mutation score, without the IntOGen drivers",
+         "manuscript_a_sections.md",
+         r"\| the test universe without the IntOGen drivers \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_auc", "the mutation score: minus_intogen"), 0.0006),
+        ("control 25 the recurrence AUROC of the prior",
+         "manuscript_a_sections.md",
+         r"\| over the 6 networks \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_recurrence", "the prior"), 0.0006),
+        ("control 25 the recurrence AUROC of the publication count",
+         "manuscript_a_sections.md",
+         r"\| over the 6 networks \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}0\.\d{4}\*{0,2} \| \*{0,2}(0\.\d{4})\*{0,2}",
+         ("control25_recurrence", "the publication count"), 0.0006),
 
         # ---- Control 24: the functional task, read as a ranking ----
         ("control 24 the prior's AUROC", "manuscript_a_sections.md",

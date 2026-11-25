@@ -371,6 +371,94 @@ def control24() -> None:
                        int((pr > rd).sum()), "c24_depmap_within_degree.tsv")
 
 
+# ----------------------------------------------------------------- control 25
+def control25() -> None:
+    """Mutation-first versus network-first (Control 25)."""
+    mp = TABLES / "c25_mutation_vs_network.tsv"
+    rp = TABLES / "c25_recurrence.tsv"
+    if not mp.exists() or not rp.exists():
+        return
+    m = pd.read_csv(mp, sep="\t")
+    r = pd.read_csv(rp, sep="\t")
+    names = {"the prior": "the prior",
+             "degree": "degree",
+             "the mutation score (the cohorts)": "the mutation score",
+             "the prior + the mutation score": "the combination"}
+    for universe in sorted(m.universe.unique()):
+        sub = m[m.universe == universe]
+        med = sub.groupby(["network", "scorer"]).auc.median().unstack()
+        for tag, name in names.items():
+            record("control25_auc", f"{name}: {universe}",
+                   r4(med[tag].median()), "c25_mutation_vs_network.tsv")
+        record("control25_wins",
+               f"the combination beats the prior: {universe}",
+               int((med["the prior + the mutation score"]
+                    > med["the prior"]).sum()),
+               "c25_mutation_vs_network.tsv")
+        record("control25_wins",
+               f"the combination beats the mutation score: {universe}",
+               int((med["the prior + the mutation score"]
+                    > med["the mutation score (the cohorts)"]).sum()),
+               "c25_mutation_vs_network.tsv")
+        record("control25_wins", f"the prior beats degree: {universe}",
+               int((med["the prior"] > med["degree"]).sum()),
+               "c25_mutation_vs_network.tsv")
+    med = r.groupby(["network", "scorer"]).auc.median().unstack()
+    for tag, name in (("the prior", "the prior"),
+                       ("degree", "degree"),
+                       ("the publication count", "the publication count")):
+        record("control25_recurrence", name, r4(med[tag].median()),
+               "c25_recurrence.tsv")
+    record("control25_recurrence", "the arms where the publication count "
+               "beats the prior",
+           int((med["the publication count"] > med["the prior"]).sum()),
+           "c25_recurrence.tsv")
+
+
+# ----------------------------------------------------------------- control 25
+def control25() -> None:
+    """Mutation-first versus network-first (Control 25)."""
+    mp = TABLES / "c25_mutation_vs_network.tsv"
+    rp = TABLES / "c25_recurrence.tsv"
+    if not mp.exists() or not rp.exists():
+        return
+    m = pd.read_csv(mp, sep="\t")
+    r = pd.read_csv(rp, sep="\t")
+    names = {"the prior": "the prior",
+             "degree": "degree",
+             "the mutation score (the cohorts)": "the mutation score",
+             "the prior + the mutation score": "the combination"}
+    for universe in sorted(m.universe.unique()):
+        sub = m[m.universe == universe]
+        med = sub.groupby(["network", "scorer"]).auc.median().unstack()
+        for tag, name in names.items():
+            record("control25_auc", f"{name}: {universe}",
+                   r4(med[tag].median()), "c25_mutation_vs_network.tsv")
+        record("control25_wins",
+               f"the combination beats the prior: {universe}",
+               int((med["the prior + the mutation score"]
+                    > med["the prior"]).sum()),
+               "c25_mutation_vs_network.tsv")
+        record("control25_wins",
+               f"the combination beats the mutation score: {universe}",
+               int((med["the prior + the mutation score"]
+                    > med["the mutation score (the cohorts)"]).sum()),
+               "c25_mutation_vs_network.tsv")
+        record("control25_wins", f"the prior beats degree: {universe}",
+               int((med["the prior"] > med["degree"]).sum()),
+               "c25_mutation_vs_network.tsv")
+    med = r.groupby(["network", "scorer"]).auc.median().unstack()
+    for tag, name in (("the prior", "the prior"),
+                       ("degree", "degree"),
+                       ("the publication count", "the publication count")):
+        record("control25_recurrence", name, r4(med[tag].median()),
+               "c25_recurrence.tsv")
+    record("control25_recurrence", "the arms where the publication count "
+               "beats the prior",
+           int((med["the publication count"] > med["the prior"]).sum()),
+           "c25_recurrence.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -925,6 +1013,8 @@ def main() -> int:
     labels()
     recent_series()
     control24()
+    control25()
+    control25()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

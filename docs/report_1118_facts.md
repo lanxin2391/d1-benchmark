@@ -398,6 +398,20 @@ Is degree a strawman baseline, and is RWR a lucky special case?
 - the prior's picks are below the random baseline in the top stratum in 11 of 24 arms and above it in 13 of 24 -- the sign is not consistent, so there is no stratified advantage either
 - `scripts/run_c24_depmap_within_degree.py`, `results/tables/c24_depmap_gene_level.tsv`, `results/tables/c24_depmap_within_degree.tsv`, `results/tables/c24_summary.tsv`, `docs/c24_depmap_within_degree.md`
 
+## 7h. Mutation-first versus network-first (Control 25)
+
+The answer key is the NCG-known catalogue (curated independently of IntOGen); the mutation evidence is the IntOGen 2024 driver table.
+
+| the median AUROC over the 6 networks | the prior | degree | the mutation score (the cohorts) | the mutation score (the samples) | the prior + the mutation score |
+|---|---|---|---|---|---|
+| the whole test universe | 0.7477 | 0.6562 | 0.8375 | 0.8365 | **0.8822** |
+| the test universe without the IntOGen drivers | **0.6926** | 0.5798 | 0.5118 | 0.5117 | 0.6984 |
+
+- the combination beats the prior in **6/6** networks and the mutation score in **4/6** (the median gain over the mutation score: +0.0447 AUROC)
+- the mutation score collapses to chance (0.5118, the range 0.5075–0.5156) once the IntOGen drivers leave the test universe; the prior keeps 0.6926 and stays above degree in **6/6**
+- the recurrence comparison (the held-out IntOGen 2024 positives, "is recurrent" = seen in at least three samples in some cohort): the prior **0.5530** (above the degree 0.5133 in 5/6), the publication count **0.5677** (above the prior in 5/6) → the prior's weak recurrence preference is no better explained than visibility
+- `scripts/run_c25_mutation_vs_network.py`, `results/tables/c25_mutation_vs_network.tsv`, `results/tables/c25_recurrence.tsv`, `results/tables/c25_summary.tsv`, `docs/c25_mutation_vs_network.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

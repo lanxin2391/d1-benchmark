@@ -9,6 +9,18 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control25.section        manuscript_a_sections.md
+         §F.27 must report the mutation comparison
+  [PASS] control25.section.draft  research_report_draft.md
+         §3.22 must report the mutation comparison
+  [PASS] control25.reading        manuscript_a_sections.md
+         §F.27 must state that the two sources are complementary
+  [PASS] control25.facts          report_1118_facts.md
+         the facts sheet must carry Control 25
+  [PASS] control25.qa             report_1118_qa_bank.md
+         the question bank must carry Control 25
+  [PASS] control25.recurrence.honest manuscript_a_sections.md
+         §F.27 must disclaim the recurrent-mutation reading
   [PASS] control24.section        manuscript_a_sections.md
          §F.26 must report the functional-layer control
   [PASS] control24.section.draft  research_report_draft.md
@@ -234,6 +246,14 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 25 the prior, the whole universe manuscript=+0.7477  table=+0.7477  tol=0.0006
+  [PASS] control 25 degree, the whole universe manuscript=+0.6562  table=+0.6562  tol=0.0006
+  [PASS] control 25 the mutation score, the whole universe manuscript=+0.8375  table=+0.8375  tol=0.0006
+  [PASS] control 25 the combination, the whole universe manuscript=+0.8822  table=+0.8822  tol=0.0006
+  [PASS] control 25 the prior, without the IntOGen drivers manuscript=+0.6926  table=+0.6926  tol=0.0006
+  [PASS] control 25 the mutation score, without the IntOGen drivers manuscript=+0.5118  table=+0.5118  tol=0.0006
+  [PASS] control 25 the recurrence AUROC of the prior manuscript=+0.5530  table=+0.5530  tol=0.0006
+  [PASS] control 25 the recurrence AUROC of the publication count manuscript=+0.5677  table=+0.5677  tol=0.0006
   [PASS] control 24 the prior's AUROC   manuscript=+0.5007  table=+0.5007  tol=0.0006
   [PASS] control 24 degree's AUROC      manuscript=+0.4948  table=+0.4948  tol=0.0006
   [PASS] control 24 the residual's AUROC manuscript=+0.5003  table=+0.5003  tol=0.0006
@@ -293,5 +313,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 170 PASS / 0 FAIL
+RESULT: 184 PASS / 0 FAIL
 ========================================================================

@@ -1123,3 +1123,24 @@ result, not a change of any pre-registered endpoint**: the primary
 endpoint, its interval and the H1 verdict are untouched. Registered as an
 exploratory analysis of the amendment-4 family (see §A4.6).
 
+### A6.10 Control 25 -- mutation-first versus network-first
+
+The teacher's question after the defence was whether the network prior adds
+anything to the mutation evidence. Control 25 answers it on the data
+already in the repository: the NCG-known catalogue as the answer key, the
+IntOGen 2024 mutation table as the mutation evidence, the same folds and
+the same test genes.
+
+| the median AUROC over the 6 networks | the prior | degree | the mutation score | the prior + the mutation score |
+|---|---|---|---|---|
+| the whole test universe | 0.7477 | 0.6562 | 0.8375 | **0.8822** |
+| without the IntOGen drivers | **0.6926** | 0.5798 | 0.5118 | 0.6984 |
+
+The recurrence comparison (the held-out IntOGen 2024 positives): the prior
+0.5530, the degree 0.5133, the publication count 0.5677.
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched. Control 25 is exploratory and is registered in the amendment-4
+family (see A4.6). It changes the *scope* statements in the manuscript
+(F.21, F.26, F.27) and not the headline.
+

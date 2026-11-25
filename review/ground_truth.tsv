@@ -637,3 +637,39 @@ control24_stratum	CERES < -0.3, K = 100, stratum 4: the prior's picks (the share
 control24_stratum	CERES < -0.3, K = 100, stratum 4: degree's picks (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
 control24_stratum	CERES < -0.3, K = 100, stratum 4: a random pick from the same stratum (the share of cell lines enriched, %)	100.0	c24_depmap_within_degree.tsv	
 control24_stratum	CERES < -0.3, K = 100, stratum 4: the arms where the prior is above the random pick	3	c24_depmap_within_degree.tsv	
+control25_auc	the prior: all	0.7477	c25_mutation_vs_network.tsv	
+control25_auc	degree: all	0.6562	c25_mutation_vs_network.tsv	
+control25_auc	the mutation score: all	0.8375	c25_mutation_vs_network.tsv	
+control25_auc	the combination: all	0.8822	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the prior: all	6	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the mutation score: all	4	c25_mutation_vs_network.tsv	
+control25_wins	the prior beats degree: all	6	c25_mutation_vs_network.tsv	
+control25_auc	the prior: minus_intogen	0.6926	c25_mutation_vs_network.tsv	
+control25_auc	degree: minus_intogen	0.5798	c25_mutation_vs_network.tsv	
+control25_auc	the mutation score: minus_intogen	0.5118	c25_mutation_vs_network.tsv	
+control25_auc	the combination: minus_intogen	0.6984	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the prior: minus_intogen	5	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the mutation score: minus_intogen	6	c25_mutation_vs_network.tsv	
+control25_wins	the prior beats degree: minus_intogen	6	c25_mutation_vs_network.tsv	
+control25_recurrence	the prior	0.553	c25_recurrence.tsv	
+control25_recurrence	degree	0.5133	c25_recurrence.tsv	
+control25_recurrence	the publication count	0.5677	c25_recurrence.tsv	
+control25_recurrence	the arms where the publication count beats the prior	5	c25_recurrence.tsv	
+control25_auc	the prior: all	0.7477	c25_mutation_vs_network.tsv	
+control25_auc	degree: all	0.6562	c25_mutation_vs_network.tsv	
+control25_auc	the mutation score: all	0.8375	c25_mutation_vs_network.tsv	
+control25_auc	the combination: all	0.8822	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the prior: all	6	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the mutation score: all	4	c25_mutation_vs_network.tsv	
+control25_wins	the prior beats degree: all	6	c25_mutation_vs_network.tsv	
+control25_auc	the prior: minus_intogen	0.6926	c25_mutation_vs_network.tsv	
+control25_auc	degree: minus_intogen	0.5798	c25_mutation_vs_network.tsv	
+control25_auc	the mutation score: minus_intogen	0.5118	c25_mutation_vs_network.tsv	
+control25_auc	the combination: minus_intogen	0.6984	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the prior: minus_intogen	5	c25_mutation_vs_network.tsv	
+control25_wins	the combination beats the mutation score: minus_intogen	6	c25_mutation_vs_network.tsv	
+control25_wins	the prior beats degree: minus_intogen	6	c25_mutation_vs_network.tsv	
+control25_recurrence	the prior	0.553	c25_recurrence.tsv	
+control25_recurrence	degree	0.5133	c25_recurrence.tsv	
+control25_recurrence	the publication count	0.5677	c25_recurrence.tsv	
+control25_recurrence	the arms where the publication count beats the prior	5	c25_recurrence.tsv	

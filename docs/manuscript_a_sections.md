@@ -2095,6 +2095,80 @@ stratum, not about predictive power.
 
 ---
 
+### F.27 Control 25: mutation-first versus network-first
+
+The teacher's question after the defence was whether the network prior adds
+anything to the **mutation** evidence. Control 25 answers it with the data
+already in the repository, in two parts, and the two parts answer it
+differently.
+
+**25a -- as a prioritisation strategy.** The answer key is the NCG-known
+catalogue, which is curated independently of IntOGen. On the same held-out
+test genes and the same 200 folds we compare four scorers: the IntOGen
+2024 mutation evidence (the number of cohorts in which the gene is a
+driver, and the number of samples), the network prior (RWR at alpha = 0.5,
+seeded with the training positives), degree, and the rank sum of the prior
+and the mutation score.
+
+| the median AUROC over the 6 networks | the prior | degree | the mutation score | the prior + the mutation score |
+|---|---|---|---|---|
+| the whole test universe | 0.7477 | 0.6562 | 0.8375 | **0.8822** |
+| the test universe without the IntOGen drivers | **0.6926** | 0.5798 | 0.5118 | 0.6984 |
+
+**Reading.** In the whole universe the mutation evidence is the stronger
+scorer (0.838 against the prior's 0.748) -- but that is almost entirely the
+overlap between the two catalogues: with the IntOGen driver genes removed
+from the test universe the mutation score falls to chance (0.512, the range
+0.508 to 0.516), because those genes have no mutation count to speak with,
+while the prior keeps its signal (0.693, above degree in 6 of 6 networks).
+The two sources are therefore **complementary rather than redundant**, and
+the combination is the best of the three: it beats the prior in 6 of 6
+networks and the mutation score in 4 of 6 (0.882 against 0.838 in the
+whole universe, a median gain of +0.045 AUROC).
+
+**25b -- does the network know which drivers are recurrently mutated?**
+Among the held-out IntOGen 2024 positives, the prior's score was compared
+for the recurrently mutated drivers (seen in at least three samples in some
+cohort) and the single-mutation ones:
+
+| the median AUROC for "is recurrent" | the prior | degree | the publication count |
+|---|---|---|---|
+| over the 6 networks | 0.5530 | 0.5133 | **0.5677** |
+
+**Reading.** The prior carries a small recurrence signal (above the degree
+in 5 of 6 networks) but **the publication count carries at least as much**
+(higher than the prior in 5 of 6). A recurrently mutated gene is also a
+gene that has been looked at more, and on this data the prior's recurrence
+preference is no better explained than by visibility. We therefore do not
+claim that the network encodes a recurrent-mutation signal.
+
+**What this means for the claim.** Two things, one narrowing and one
+practical. Narrowing: the prior's contribution is a *catalogue-structure*
+phenomenon, and Control 25 shows the same pattern from the other side --
+where a direct mutation count exists it dominates, where it does not the
+prior still works, and neither substitutes for the other. Practical: a user
+who has mutation data should use both; the rank sum of the prior and the
+mutation score is the best of the three scorers on this catalogue in 6 of 6
+networks. In the universe without the IntOGen drivers the combination adds
+nothing over the prior alone (0.698 against 0.693), which is what should
+happen when the second input carries no information.
+
+**Caveats.** The mutation score is a static per-gene quantity while the
+prior is fold-dependent; both are evaluated on the same test genes in the
+same folds. The NCG catalogue and IntOGen overlap (the Jaccard is 0.522),
+which is why the second row of the first table is the one to read. The
+recurrence status is the IntOGen annotation of the gene, so "recurrent" and
+"more studied" are entangled by construction -- which is exactly why the
+publication count is the comparator. **Exploratory** (amendment 4): no
+pre-registered endpoint is touched.
+
+(`scripts/run_c25_mutation_vs_network.py`;
+`results/tables/c25_mutation_vs_network.tsv`,
+`results/tables/c25_recurrence.tsv`, `results/tables/c25_summary.tsv`;
+`docs/c25_mutation_vs_network.md`.)
+
+---
+
 ### H.1 Two co-primary endpoints: the low-FPR partial AUC and the top-10 % precision
 
 The full AUROC is the metric on which propagation methods look worst:
@@ -2866,8 +2940,8 @@ paper was produced by a model.
 
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
-we replaced human cross-checking with two audit scripts (170 and 71
-checks) and a ground-truth table of 638 recomputed quantities.
+we replaced human cross-checking with two audit scripts (184 and 71
+checks) and a ground-truth table of 674 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
