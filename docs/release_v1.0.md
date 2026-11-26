@@ -1,6 +1,6 @@
 # D1 benchmark — v1.0-rc14 release note
 
-**Release commit:** `d69fc9e3f71c4d7999fe1e74017295b411d86f03`
+**Release commit:** `1e9e381638b66b4cf676c703b7f7393eca563f45`
 **Built:** 2026-11-26
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
@@ -21,9 +21,9 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 
 | file | the size | the SHA-256 |
 |---|---|---|
-| `release/d1-benchmark-v1.0-results.zip` | 53.6 MB | `4e1a9dac988d1a2e34889e4c444eb740ff35cc1659bebdfc923b22760da036b9` |
-| `release/d1-benchmark-v1.0-source.zip` | 272.5 MB | `aa9d885ddb7e708dd9a63d1b146025158bf946eeebb7c37c42dec30ce17ad996` |
-| `release/d1-benchmark-v1.0-splits.zip` | 142.1 MB | `dd1d884dc06626afd8312392bdfa1820354b79ebdffc99c76914711d7be1e213` |
+| `release/d1-benchmark-v1.0-results.zip` | 53.6 MB | `66e4b71244e44885d2da522dc9e5b9014f3973e4807bc9ea7899e53cda798cb6` |
+| `release/d1-benchmark-v1.0-source.zip` | 272.5 MB | `20fff70add854ffff73f178e34e59ae1b12d00605b0760b444f7d82b84975a73` |
+| `release/d1-benchmark-v1.0-splits.zip` | 142.1 MB | `4b14408c28324a62454f2e2f2b6f9d0c813551f2dc6c86f36d50ae5328921a95` |
 
 They are built from the tag with `python scripts/build_zenodo_release.py --tag v1.0-rc14`; the upload to Zenodo (and the DOI that Zenodo mints) is a manual step.
 
