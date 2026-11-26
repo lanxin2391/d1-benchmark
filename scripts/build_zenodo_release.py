@@ -343,6 +343,8 @@ def main() -> int:
         whose hashes depend on the checkout's line endings is not a
         record.
         """
+        if str(REPO) not in sys.path:
+            sys.path.insert(0, str(REPO))
         from d1.engine.io import sha256_normalised
         return sha256_normalised(path)
 
