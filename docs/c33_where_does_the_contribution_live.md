@@ -73,6 +73,10 @@ Both are computed on the same folds, the same test genes and the same endpoint a
 
 ## Reading
 
+**There is a network contribution that is neither degree nor visibility.** The component of the prior that survives both regressions is above chance in 20 of 24 arms (the median AUROC 0.5783), and the self-written model confirms it from the other direction: a degree-and-visibility model becomes a better predictor when the network score is added, in 23 of 24 arms (the median +0.0097).
+
+**Two things the same table says that we must not hide.** The publication count alone is the strongest single predictor of the driver label (the median AUROC 0.8072, against the prior's 0.7051) -- visibility is a powerful confounder, which is why the publication-matched null of F.12 exists and why it, and not this regression, is the control that matters for the headline. And the prior and the visibility overlap heavily: removing the publication count from the prior's score drops it from 0.7051 to 0.5422, while removing the degree drops it to 0.6418. The network's own, degree-free and visibility-free component is real but modest (0.5783).
+
 ## Caveats
 
 1. The regressions are fitted on the test genes of each fold (the same population the AUROC is computed on), with no label information, so the residual is 'what the degree and the publication count do not explain *here*'.

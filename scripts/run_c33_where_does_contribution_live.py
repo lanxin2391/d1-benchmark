@@ -197,6 +197,20 @@ def main() -> int:
 
 def write_doc(r: pd.DataFrame, m: pd.DataFrame) -> None:
     arm = r.groupby(["network", "label", "scorer"]).auroc.median().unstack()
+
+    def st(col: str):
+        v = arm[col].dropna()
+        return (float(v.median()), int((v > 0.5).sum()), len(v))
+
+    prior = st("the prior")
+    vis = st("the publication count")
+    res_deg = st("the prior, degree removed")
+    res_vis = st("the prior, the publication count removed")
+    res_both = st("the prior, the degree and the publication count removed")
+    MOD = m.groupby(["network", "label"]).agg(
+        beta=("beta_network", "median"), d_auc=("delta_auc", "mean"))
+    gain_med = float(MOD.d_auc.median())
+    gain_pos = int((MOD.d_auc > 0).sum())
     mod = m.groupby(["network", "label"]).agg(
         beta_network=("beta_network", "median"),
         delta_auc=("delta_auc", "mean")).reset_index()
@@ -265,6 +279,27 @@ def write_doc(r: pd.DataFrame, m: pd.DataFrame) -> None:
     lines += [
         "",
         "## Reading",
+        "",
+        "**There is a network contribution that is neither degree nor "
+        "visibility.** The component of the prior that survives both "
+        "regressions is above chance in "
+        f"{res_both[1]} of {res_both[2]} arms (the median AUROC "
+        f"{res_both[0]:.4f}), and the self-written model confirms it from "
+        f"the other direction: a degree-and-visibility model becomes a "
+        f"better predictor when the network score is added, in "
+        f"{gain_pos} of {len(MOD)} arms (the median {gain_med:+.4f}).",
+        "",
+        "**Two things the same table says that we must not hide.** The "
+        f"publication count alone is the strongest single predictor of the "
+        f"driver label (the median AUROC {vis[0]:.4f}, against the prior's "
+        f"{prior[0]:.4f}) -- visibility is a powerful confounder, which is "
+        "why the publication-matched null of F.12 exists and why it, and "
+        "not this regression, is the control that matters for the headline. "
+        "And the prior and the visibility overlap heavily: removing the "
+        f"publication count from the prior's score drops it from "
+        f"{prior[0]:.4f} to {res_vis[0]:.4f}, while removing the degree "
+        f"drops it to {res_deg[0]:.4f}. The network's own, degree-free and "
+        f"visibility-free component is real but modest ({res_both[0]:.4f}).",
         "",
         "## Caveats",
         "",
