@@ -527,6 +527,17 @@ The full protocol: `docs/protocol_network_to_experiment.md`; the paper section: 
 - **the clinical-use boundary**: (1) the network ranks, it does not diagnose; (2) no clinical claim without an outcome dataset (we have none → neither "helps" nor "does not help" is available); (3) the publication count is reported with every candidate
 - the allele-specific-network preconditions: independence from the label's curation, ≥70 % coverage of the same gene universe, a matched degree sequence, a pre-registered endpoint (and the rewiring null and the permutation audit re-run on it)
 
+## 7q. The clean-machine reproduction (item 22)
+
+A fresh virtual environment (the conda environment's Python 3.11, with no inherited packages), the three release zips unpacked, `pip install -e .` from the unpacked source, and then the reproduction itself.
+
+- the ground-truth table recomputed in the clean environment: **952 quantities**; the claim verification of the 
+  **released** source: **279 PASS / 0 FAIL** (the repository since gained two more checks, which the released
+  source cannot have: 281 in main)
+- the only quantities the zips cannot produce: **30** network descriptors (`network_nodes`, `network_lcc_nodes`, `network_lcc_edges`, ten networks each) -- they come from `data/processed/networks/`, which the zips exclude on purpose because the networks are rebuilt from the raw downloads
+- the reproduction needed the pip index given explicitly (this machine's default is a mirror that is not reachable from here) -- the reproduction must not depend on the reader's network configuration
+- the log: `docs/reproduction_log.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

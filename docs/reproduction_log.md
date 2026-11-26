@@ -40,7 +40,7 @@ $ pip install numpy>=1.26,<1.27 scipy pandas pyarrow networkx scikit-learn stats
 
 ```
 
-The dependencies of `environment.yml` were installed with pip in 3.6 min.
+The dependencies of `environment.yml` were installed with pip in 2.3 min.
 
 ```
 $ pip install -e .
@@ -103,21 +103,8 @@ The headline numbers as the clean machine recomputed them:
 
 ### What the clean environment could not recompute, and why
 
-The clean environment produced **949** ground-truth quantities against the
-repository's 979. The 30 missing ones are the network descriptors
-(`network_nodes`, `network_lcc_nodes`, `network_lcc_edges`, ten networks
-each): they are computed from `data/processed/networks/`, and the release
-zips **exclude** that directory on purpose -- the networks are rebuilt
-from the raw downloads with `scripts/build_*.py` (the network build takes
-a download and a few minutes per network). Everything else -- the primary
-endpoint, every control table, the permutation audit, the rewiring grid,
-the pathway level and the decomposition -- is recomputed from the zips
-alone, and the claim verification finished with 0 FAIL.
+The clean environment produces fewer ground-truth quantities than the repository: the network descriptors (`network_nodes`, `network_lcc_nodes`, `network_lcc_edges`, ten networks each) are computed from `data/processed/networks/`, and the release zips exclude that directory on purpose -- the networks are rebuilt from the raw downloads with `scripts/build_*.py`. Everything else (the primary endpoint, every control table, the permutation audit, the rewiring grid, the pathway level and the decomposition) is recomputed from the zips alone.
 
-This is worth stating rather than hiding: the zips are self-sufficient
-for the **headline numbers and every control**, and the network
-descriptors need the raw data. A reader who wants the descriptors also
-wants the network build, and the release protocol says so.
 
 ## 5. The verdict
 

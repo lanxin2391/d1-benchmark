@@ -33,7 +33,7 @@
 | **19** | **per-year 独立时间切分** | 把时间切分从"两代目录"细化到逐年 | IntOGen 2021/2022 下载（用户侧） | 新表 | 半天（下载到手即可） |
 | **20** | **重出 paper draft PDF**（含 1–14 项的新结果与结论更新）并发 TA | 交付动作 | 第 1–14 项 | 新版 PDF | 半天 |
 | **21** | **重建 release zip + 更新 README / release 协议里的 commit hash 与发布状态** | 归档 | 全部新表 | release v1.0-rc8+ | 半小时 |
-| **22** | **干净机器从零复现**（只靠 release zip 跑出主表） | 我们声称"可复现"，需要自己验证一次 | release zip | 复现日志 | 1 天 |
+| **22** | **（**2026-11-26 已完成**：新建一个干净虚拟环境（只有三个 release zip + `pip install -e .`），重算 ground truth 并跑了 claim 验证：**281 PASS / 0 FAIL**；唯一缺的 30 个量是网络描述统计（zip 里不含处理后的网络，要从原始下载重建）→ `docs/reproduction_log.md`）干净机器从零复现**（只靠 release zip 跑出主表） | 我们声称"可复现"，需要自己验证一次 | release zip | 复现日志 | 1 天 |
 | **23** | **预注册 v2 定稿并上传 Zenodo**（含本次新增分析族登记） | 预注册的承诺 | 第 1–19 项 | Zenodo v2 | 半天（上传需用户） |
 
 **用户侧阻塞项（我做不了，按依赖顺序）**：① 上传三个 zip 到 Zenodo 并回填 v1.0 DOI（仍 pending）；
