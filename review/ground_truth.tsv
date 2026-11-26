@@ -966,3 +966,18 @@ control33_model	the median coefficient on the network score	0.2532	c33_self_writ
 control33_model	the arms where adding the network raises the AUROC	23	c33_self_written_model.tsv	
 control33_model	the median AUROC gain of adding the network	0.0097	c33_self_written_model.tsv	
 control33_check	the recomputed prior minus degree	0.0829	c33_residual_decomposition.tsv	
+protocol_seed_perturbation	the seed fraction 0.5: the median relative loss (%)	11.6531	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 0.5: the worst arm (%)	29.1852	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 0.7: the median relative loss (%)	5.9021	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 0.7: the worst arm (%)	33.2922	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 0.9: the median relative loss (%)	1.8902	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 0.9: the worst arm (%)	11.5591	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 1.0: the median relative loss (%)	0.0	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed fraction 1.0: the worst arm (%)	0.0	seed_perturbation_summary.tsv	
+protocol_seed_perturbation	the seed-fragility threshold we state (%)	12.0	the rule in docs/protocol_network_to_experiment.md	
+protocol_seed_perturbation	the worst arm's loss at a 10 % seed loss (%)	11.5591	seed_perturbation_summary.tsv	
+protocol_matching	the share of positives beating the publication-matched null (%)	11.5907	g3_bait_matched_null.tsv	
+protocol_matching	the share of positives beating the unmatched null (%)	17.6339	g3_bait_matched_null.tsv	
+protocol_pathway	the enriched pathways: intogen2024	257	c32_pathway_enrichment_drivers.tsv	
+protocol_pathway	the enriched pathways: intogen_temporal_new	0	c32_pathway_enrichment_drivers.tsv	
+protocol_pathway	the pathways tested	4294	c32_pathway_enrichment_drivers.tsv	

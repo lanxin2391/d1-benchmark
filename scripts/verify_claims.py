@@ -49,6 +49,21 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- items 13 and 14: the protocol and the clinical boundary ----
+    ("protocol.section", "manuscript_a_sections.md",
+     "### M.1 The protocol", "\u00a7M.1 must state the protocol"),
+    ("protocol.section.draft", "research_report_draft.md",
+     "### 4.2 From the network to the experiment",
+     "\u00a74.2 must state the protocol"),
+    ("protocol.scope", "manuscript_a_sections.md",
+     "it may not be used as a diagnostic test",
+     "\u00a7M.2 must state the clinical boundary"),
+    ("protocol.facts", "report_1118_facts.md",
+     "## 7p. From the network to the experiment",
+     "the facts sheet must carry the protocol"),
+    ("protocol.qa", "report_1118_qa_bank.md",
+     "### B35", "the question bank must carry the protocol"),
+
     # ---- Control 33: where the network's contribution lives ----
     ("control33.section", "manuscript_a_sections.md",
      "### F.34 Control 33", "\u00a7F.34 must report the decomposition"),
@@ -622,6 +637,32 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- items 13 and 14: the protocol numbers ----
+        ("protocol the matched-null share", "manuscript_a_sections.md",
+         r"beating the matched null is (\d+\.\d) %",
+         ("protocol_matching",
+          "the share of positives beating the publication-matched null (%)"),
+         0.06),
+        ("protocol the unmatched-null share", "manuscript_a_sections.md",
+         r"against (\d+\.\d) % for\s*the unmatched null\)",
+         ("protocol_matching",
+          "the share of positives beating the unmatched null (%)"), 0.06),
+        ("protocol the 10 % seed loss", "manuscript_a_sections.md",
+         r"median margin loss of (\d+\.\d) %",
+         ("protocol_seed_perturbation",
+          "the seed fraction 0.9: the median relative loss (%)"), 0.06),
+        ("protocol the worst arm at a 10 % seed loss", "manuscript_a_sections.md",
+         r"worst arm (\d+\.\d) %",
+         ("protocol_seed_perturbation",
+          "the worst arm's loss at a 10 % seed loss (%)"), 0.06),
+        ("protocol the seed-fragility threshold", "manuscript_a_sections.md",
+         r"loses more than (\d+) % under a 10 % seed perturbation",
+         ("protocol_seed_perturbation",
+          "the seed-fragility threshold we state (%)"), 0.5),
+        ("protocol the IntOGen 2024 pathway count", "manuscript_a_sections.md",
+         r"(\d+) of 4,294 for the IntOGen 2024\s*catalogue",
+         ("protocol_pathway", "the enriched pathways: intogen2024"), 0.5),
 
         # ---- Control 33: where the network's contribution lives ----
         ("control 33 the prior's median AUROC", "manuscript_a_sections.md",

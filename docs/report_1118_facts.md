@@ -516,6 +516,17 @@ The plan item inherited from the second paper's H6 was a *conditional repair* (i
 - 一致性检查：这里重算的"先验 AUROC − 度 AUROC"= +0.0829，与已发布的 +0.0809 相符
 - `scripts/run_c33_where_does_contribution_live.py`, `results/tables/c33_residual_decomposition.tsv`, `results/tables/c33_self_written_model.tsv`, `docs/c33_where_does_contribution_live.md`
 
+## 7p. From the network to the experiment, and the clinical boundary (items 13 and 14)
+
+The full protocol: `docs/protocol_network_to_experiment.md`; the paper section: §M.
+
+- **the scope**: the network prior is a **navigation aid** (it reorders a candidate list), not evidence that a gene matters
+- **the candidate-generation rule**: ≥2 independent curation sources as the seeds · the RWR at the locked α=0.5 on the pre-registered six-network panel · the **median rank across the six networks** (never the best network) · the degree / publication count / number of catalogues **reported but never used to select** · the pathway check (257 of 4,294 pathways enriched for IntOGen 2024; **0** for the newest drivers → for that catalogue the pathway criterion is uninformative)
+- **the matching rule**: every "the network found this" claim must carry the per-bait publication-matched null (the median share of positives beating the matched null **11.6 %**, against **17.6 %** unmatched) and the degree-stratified match
+- **the perturbation criteria**: a 10 % seed loss costs the median margin **1.9 %** (the worst arm 11.6 %) → **a candidate set losing more than 12 % is reported as seed-fragile** and its candidates are not called network-derived; the wet-lab criterion is **comparative** (the predicted set must change more than a degree-matched control set of the same size), pre-registered, with a functional readout
+- **the clinical-use boundary**: (1) the network ranks, it does not diagnose; (2) no clinical claim without an outcome dataset (we have none → neither "helps" nor "does not help" is available); (3) the publication count is reported with every candidate
+- the allele-specific-network preconditions: independence from the label's curation, ≥70 % coverage of the same gene universe, a matched degree sequence, a pre-registered endpoint (and the rewiring null and the permutation audit re-run on it)
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

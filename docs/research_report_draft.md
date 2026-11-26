@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (268 PASS / 0 FAIL). The second mechanism
+manuscript against that table (279 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -2493,6 +2493,75 @@ removed:
   overlaps the real-input ranking by 1.9 % in the top 100, so the learner
   is genuinely reading its input.
 
+### 4.2 From the network to the experiment: an executable protocol
+
+The teacher's question after the defence was what one would actually do
+with the result. This is the answer, written so that a negative result
+can be recognised as one; the executable version, with every threshold's
+source, is `docs/protocol_network_to_experiment.md`.
+
+**The scope.** The network prior is a **navigation aid**: it reorders a
+candidate list. It is not evidence that a gene matters. On the curated
+driver catalogues it beats degree in 23 of 24 arms (the median margin
++0.0809) and the strongest classical baseline in 19 of 24 (+0.0461); on a
+functional answer key built from the DepMap assay the same protocol is
+positive in 24 of 24 arms (the median +0.1236) -- but there the mechanism
+is propagation, and the margin tracks the *weakness of the degree
+baseline* rather than any discovery of function (the correlation between
+the margin and the degree baseline's own AUROC is -0.77). With the degree
+and the publication count regressed out, the network's own component is
+above chance in 20 of 24 arms but modest (the median AUROC 0.5783 against
+the prior's 0.7051 and the publication count's 0.8072).
+
+**The candidate-generation rule.** (1) *Input*: a curated seed set from
+**at least two independent curation sources**, with the source of each
+positive recorded -- one source is not enough, because the four
+catalogues are one curation dimension rather than four independent
+votes. (2) *Score*: the RWR at the locked alpha = 0.5 on the
+pre-registered six-network panel. (3) *Aggregation*: the **median rank
+across the six networks**, never the best network. (4) *Covariates
+reported, never used to select*: the degree, the publication count and
+the number of catalogues listing the gene -- the publication count alone
+predicts the driver labels **better** than the network score does (0.8072
+against 0.7051), so a selection rule that used it would be a
+literature-curation filter wearing a network's clothes. (5) *The pathway
+check*: the candidate's pathway context and whether that pathway is among
+the pathways the drivers are enriched in (257 of 4,294 for the IntOGen
+2024 catalogue, **none** for the newest-driver catalogue) -- so for a
+catalogue with no significant pathway enrichment the pathway criterion is
+uninformative and must not promote or demote a candidate.
+
+**The matching rule.** Any statement of the form "the network found this"
+must come with a per-bait comparison in which both confounders are
+matched: the bait-matched null (the median fraction of positives beating
+the matched null is 11.6 %, against 17.6 % for the unmatched null) and the
+degree-stratified match. The effect size is reported against the matched
+null with the unmatched value alongside.
+
+**The perturbation criteria.** A computational pre-check first: delete 10 %
+of the seeds and recompute; the measured median margin loss is 1.9 % (the
+worst arm 11.6 %), so **a candidate set whose margin loses more than 12 %
+under a 10 % seed perturbation is reported as seed-fragile and its
+candidates are not described as network-derived**. The experimental
+criterion is **comparative, not threshold-based**: the perturbation, the
+predicted direction of the change in every member of the predicted
+neighbourhood and the readout are pre-registered; the readout is
+functional; the predicted set must change *more* than a degree-matched
+control set of the same size, with the effect size and the sample size
+fixed in advance; and the degree-matched control set must not show the
+same change, or the effect is about the confound.
+
+**The clinical-use boundary.** Three rules. (1) The network ranks; it does
+not diagnose -- no diagnostic test, no risk score, no clinical decision.
+(2) No clinical claim without an outcome dataset: this project has no
+patient outcomes, no survival data and no treatment response, so no
+statement about clinical utility is derivable in either direction.
+(3) The publication count is reported with every candidate, because it is
+the strongest single predictor of a curated driver label in our own data
+-- a candidate list that does not report it cannot be interpreted.
+
+---
+
 ### 4.2 What it does not establish
 
 **Provenance invariance (H2) is untested.** §3.8. This is the most
@@ -2685,7 +2754,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 967 recomputed quantities.
+checks) and a ground-truth table of 982 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2761,10 +2830,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc13`. Release manifest with SHA-256 of every tracked table and figure (211 tables + 15 figures): `docs/release_manifest_v1.0-rc13.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc13 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (268 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (279 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (967 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (982 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 

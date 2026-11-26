@@ -818,6 +818,54 @@ def control33() -> None:
            "c33_residual_decomposition.tsv")
 
 
+# ------------------------------------------------------- items 13 and 14
+def protocol_numbers() -> None:
+    """The numbers the protocol and the clinical boundary quote."""
+    sp = TABLES / "seed_perturbation_summary.tsv"
+    if sp.exists():
+        s = pd.read_csv(sp, sep="\t")
+        for frac in sorted(s.seed_fraction.unique()):
+            g = s[s.seed_fraction == frac]
+            record("protocol_seed_perturbation",
+                   f"the seed fraction {frac}: the median relative loss (%)",
+                   r4(g.relative_loss.median() * 100),
+                   "seed_perturbation_summary.tsv")
+            record("protocol_seed_perturbation",
+                   f"the seed fraction {frac}: the worst arm (%)",
+                   r4(g.relative_loss.max() * 100),
+                   "seed_perturbation_summary.tsv")
+        # the rule we state in the protocol: the threshold above the worst
+        # arm's loss at a 10 % seed loss
+        worst = s[s.seed_fraction == 0.9].relative_loss.max() * 100
+        record("protocol_seed_perturbation",
+               "the seed-fragility threshold we state (%)",
+               12.0, "the rule in docs/protocol_network_to_experiment.md")
+        record("protocol_seed_perturbation",
+               "the worst arm's loss at a 10 % seed loss (%)",
+               r4(worst), "seed_perturbation_summary.tsv")
+    g3p = TABLES / "g3_bait_matched_null.tsv"
+    if g3p.exists():
+        g = pd.read_csv(g3p, sep="\t")
+        record("protocol_matching",
+               "the share of positives beating the publication-matched null "
+               "(%)", r4(g.frac_positives_beating_matched_null.median() * 100),
+               "g3_bait_matched_null.tsv")
+        record("protocol_matching",
+               "the share of positives beating the unmatched null (%)",
+               r4(g.frac_positives_beating_unmatched_null.median() * 100),
+               "g3_bait_matched_null.tsv")
+    c32p = TABLES / "c32_pathway_enrichment_drivers.tsv"
+    if c32p.exists():
+        g = pd.read_csv(c32p, sep="\t")
+        for lab in ("intogen2024", "intogen_temporal_new"):
+            gg = g[g.label == lab]
+            record("protocol_pathway",
+                   f"the enriched pathways: {lab}",
+                   int((gg.q < 0.05).sum()), "c32_pathway_enrichment_drivers.tsv")
+        record("protocol_pathway", "the pathways tested",
+               int(g.pathway.nunique()), "c32_pathway_enrichment_drivers.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1380,6 +1428,7 @@ def main() -> int:
     control31()
     control32()
     control33()
+    protocol_numbers()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

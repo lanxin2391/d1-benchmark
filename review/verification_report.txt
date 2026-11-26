@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] protocol.section         manuscript_a_sections.md
+         §M.1 must state the protocol
+  [PASS] protocol.section.draft   research_report_draft.md
+         §4.2 must state the protocol
+  [PASS] protocol.scope           manuscript_a_sections.md
+         §M.2 must state the clinical boundary
+  [PASS] protocol.facts           report_1118_facts.md
+         the facts sheet must carry the protocol
+  [PASS] protocol.qa              report_1118_qa_bank.md
+         the question bank must carry the protocol
   [PASS] control33.section        manuscript_a_sections.md
          §F.34 must report the decomposition
   [PASS] control33.section.draft  research_report_draft.md
@@ -316,6 +326,12 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] protocol the matched-null share manuscript=+11.6000  table=+11.5907  tol=0.06
+  [PASS] protocol the unmatched-null share manuscript=+17.6000  table=+17.6339  tol=0.06
+  [PASS] protocol the 10 % seed loss    manuscript=+1.9000  table=+1.8902  tol=0.06
+  [PASS] protocol the worst arm at a 10 % seed loss manuscript=+11.6000  table=+11.5591  tol=0.06
+  [PASS] protocol the seed-fragility threshold manuscript=+12.0000  table=+12.0000  tol=0.5
+  [PASS] protocol the IntOGen 2024 pathway count manuscript=+257.0000  table=+257.0000  tol=0.5
   [PASS] control 33 the prior's median AUROC manuscript=+0.7051  table=+0.7051  tol=0.0006
   [PASS] control 33 the degree's median AUROC manuscript=+0.6450  table=+0.6450  tol=0.0006
   [PASS] control 33 the publication count's median AUROC manuscript=+0.8072  table=+0.8072  tol=0.0006
@@ -432,5 +448,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 268 PASS / 0 FAIL
+RESULT: 279 PASS / 0 FAIL
 ========================================================================

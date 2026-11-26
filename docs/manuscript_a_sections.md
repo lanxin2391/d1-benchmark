@@ -3447,8 +3447,8 @@ paper was produced by a model.
 
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
-we replaced human cross-checking with two audit scripts (268 and 71
-checks) and a ground-truth table of 967 recomputed quantities.
+we replaced human cross-checking with two audit scripts (279 and 71
+checks) and a ground-truth table of 982 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -3499,6 +3499,94 @@ figure layout; every number comes from our own scripts and released
 tables and is checked by two independent audit scripts. The two designs
 above are specifications, so that they can be judged without trusting the
 tool that would build them.
+
+## §M. From the network to the experiment, and the limits of clinical use
+
+The teacher's question after the defence was what one would actually *do*
+with the result. This section is the answer, written so that a negative
+result can be recognised as one; the executable version, with every
+threshold's source, is `docs/protocol_network_to_experiment.md`.
+
+### M.1 The protocol
+
+**The scope.** The network prior is a **navigation aid**: it reorders a
+candidate list. It is not evidence that a gene matters. On the curated
+driver catalogues it beats degree in 23 of 24 arms (the median margin
++0.0809, F.22) and the strongest classical baseline in 19 of 24
+(+0.0461); on a functional answer key built from the DepMap assay the
+same protocol is positive in 24 of 24 arms (the median +0.1236, F.30) --
+but there the mechanism is propagation, and the margin tracks the *weakness
+of the degree baseline* rather than any discovery of function (the
+correlation between the margin and the degree baseline's own AUROC is
+-0.77). With the degree and the publication count regressed out, the
+network's own component is above chance in 20 of 24 arms but modest (the
+median AUROC 0.5783 against the prior's 0.7051 and the publication
+count's 0.8072, F.34).
+
+**The candidate-generation rule.** (1) *Input*: a curated seed set from
+**at least two independent curation sources**, with the source of each
+positive recorded -- one source is not enough, because the four
+catalogues in this project are one curation dimension rather than four
+independent votes (F.23). (2) *Score*: the RWR at the locked alpha =
+0.5 on the pre-registered six-network panel. (3) *Aggregation*: the
+**median rank across the six networks**, never the best network -- the
+split design does not change the result (F.25) but the per-network
+margins differ threefold, so "best network" would be a free parameter
+fitted to the candidate set. (4) *Covariates reported, never used to
+select*: the degree, the publication count and the number of catalogues
+listing the gene, because the publication count alone predicts the driver
+labels **better** than the network score does (0.8072 against 0.7051,
+F.34) -- a selection rule that used it would be a literature-curation
+filter wearing a network's clothes. (5) *The pathway check*: the
+candidate's pathway context, and whether that pathway is among the
+pathways the drivers are enriched in (257 of 4,294 for the IntOGen 2024
+catalogue, and **none** for the newest-driver catalogue, F.33) -- so
+**for a catalogue with no significant pathway enrichment the pathway
+criterion is uninformative and must not promote or demote a candidate**.
+
+**The matching rule.** Any statement of the form "the network found
+this" must be accompanied by a per-bait comparison in which both
+confounders are matched: the bait-matched null of F.12 (the median
+fraction of positives beating the matched null is 11.6 %, against 17.6 %
+for the unmatched null) and the degree-stratified match of F.14. The
+effect size is reported against the matched null with the unmatched value
+given alongside, and the claim is scoped to the arms in which it holds.
+
+**The perturbation criteria.** A computational pre-check first: delete
+10 % of the seeds and recompute. The measured cost on this panel is a
+median margin loss of 1.9 % (the worst arm 11.6 %), so **a candidate set
+whose margin loses more than 12 % under a 10 % seed perturbation is
+reported as seed-fragile, and its candidates are not described as
+network-derived** (Control 8, F.2). The experimental criterion is
+**comparative, not threshold-based**: the perturbation, the predicted
+direction of the change in every member of the predicted neighbourhood,
+and the readout are pre-registered; the readout is functional; the
+predicted set must change *more* than a degree-matched control set of the
+same size, with the effect size and the sample size fixed in advance; and
+the degree-matched control set must not show the same change, or the
+effect is about the confound.
+
+### M.2 The clinical-use boundary
+
+Three rules. **(1) The network ranks; it does not diagnose.** It may
+reorder a candidate list inside a research pipeline; it may not be used
+as a diagnostic test, a risk score or the basis of a clinical decision.
+**(2) No clinical claim without an outcome dataset.** This project has
+no patient outcomes, no survival data and no treatment response, so no
+statement about clinical utility is derivable from it in either
+direction -- "the network helps" and "the network does not help" are both
+unavailable here, and only the ranking-level statement of M.1 is.
+**(3) The publication count is reported with every candidate**, because
+it is the strongest single predictor of a curated driver label in our own
+data (F.34): a candidate list that does not report it cannot be
+interpreted, because the reader cannot tell a network-driven candidate
+from a well-studied one.
+
+The wording we use: *the network prior is a research instrument for
+ordering candidate lists; it is not a clinical marker, and nothing in
+this work supports a clinical claim.*
+
+---
 
 ## Cross-references
 

@@ -1295,3 +1295,22 @@ here, is +0.0829 against the released headline +0.0809.
 **What is NOT changed.** No pre-registered endpoint, interval or verdict is
 touched; Control 33 is registered in the amendment-4 family (see A4.6).
 
+### A6.18 Items 13 and 14 -- the protocol and the clinical-use boundary
+
+Two deliverable items rather than an experiment: the executable protocol
+(`docs/protocol_network_to_experiment.md`) and the three clinical-use rules
+(the paper's section M).
+
+The thresholds in the protocol are measured, not assumed: the median
+fraction of positives beating the publication-matched null is 11.6 %
+(against 17.6 % unmatched); a 10 % seed loss costs the median margin 1.9 %
+(the worst arm 11.6 %), which is why 12 % is the seed-fragility threshold;
+the publication count predicts the driver labels better than the network
+score (0.8072 against 0.7051), which is why it is reported and never used
+to select; and the newest-driver catalogue has no significantly enriched
+pathway, which is why the pathway criterion is declared uninformative
+there.
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; these are protocol and wording deliverables.
+

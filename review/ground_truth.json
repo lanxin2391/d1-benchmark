@@ -6767,5 +6767,110 @@
   "value": 0.0829,
   "source": "c33_residual_decomposition.tsv",
   "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 0.5: the median relative loss (%)",
+  "value": 11.6531,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 0.5: the worst arm (%)",
+  "value": 29.1852,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 0.7: the median relative loss (%)",
+  "value": 5.9021,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 0.7: the worst arm (%)",
+  "value": 33.2922,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 0.9: the median relative loss (%)",
+  "value": 1.8902,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 0.9: the worst arm (%)",
+  "value": 11.5591,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 1.0: the median relative loss (%)",
+  "value": 0.0,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed fraction 1.0: the worst arm (%)",
+  "value": 0.0,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the seed-fragility threshold we state (%)",
+  "value": 12.0,
+  "source": "the rule in docs/protocol_network_to_experiment.md",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_seed_perturbation",
+  "scope": "the worst arm's loss at a 10 % seed loss (%)",
+  "value": 11.5591,
+  "source": "seed_perturbation_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_matching",
+  "scope": "the share of positives beating the publication-matched null (%)",
+  "value": 11.5907,
+  "source": "g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_matching",
+  "scope": "the share of positives beating the unmatched null (%)",
+  "value": 17.6339,
+  "source": "g3_bait_matched_null.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_pathway",
+  "scope": "the enriched pathways: intogen2024",
+  "value": 257,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_pathway",
+  "scope": "the enriched pathways: intogen_temporal_new",
+  "value": 0,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "protocol_pathway",
+  "scope": "the pathways tested",
+  "value": 4294,
+  "source": "c32_pathway_enrichment_drivers.tsv",
+  "note": ""
  }
 ]
