@@ -942,3 +942,27 @@ control32_hits	the random baseline's mean driver-pathway hits	6.6627	c32_pathway
 control32_hits	the arms where the prior beats the degree baseline	18	c32_pathway_picks.tsv	
 control32_hits	the arms where the prior beats the random baseline	17	c32_pathway_picks.tsv	
 control32_hits	the arms	24	c32_pathway_picks.tsv	
+control33_auc	the prior: the median AUROC	0.7051	c33_residual_decomposition.tsv	
+control33_auc	the prior: the arms above 0.5	24	c33_residual_decomposition.tsv	
+control33_auc	the prior: the arms	24	c33_residual_decomposition.tsv	
+control33_auc	the degree: the median AUROC	0.645	c33_residual_decomposition.tsv	
+control33_auc	the degree: the arms above 0.5	24	c33_residual_decomposition.tsv	
+control33_auc	the degree: the arms	24	c33_residual_decomposition.tsv	
+control33_auc	the publication count: the median AUROC	0.8072	c33_residual_decomposition.tsv	
+control33_auc	the publication count: the arms above 0.5	24	c33_residual_decomposition.tsv	
+control33_auc	the publication count: the arms	24	c33_residual_decomposition.tsv	
+control33_auc	the prior with the degree removed: the median AUROC	0.6418	c33_residual_decomposition.tsv	
+control33_auc	the prior with the degree removed: the arms above 0.5	21	c33_residual_decomposition.tsv	
+control33_auc	the prior with the degree removed: the arms	24	c33_residual_decomposition.tsv	
+control33_auc	the prior with the publication count removed: the median AUROC	0.5422	c33_residual_decomposition.tsv	
+control33_auc	the prior with the publication count removed: the arms above 0.5	16	c33_residual_decomposition.tsv	
+control33_auc	the prior with the publication count removed: the arms	24	c33_residual_decomposition.tsv	
+control33_auc	the prior with both removed: the median AUROC	0.5783	c33_residual_decomposition.tsv	
+control33_auc	the prior with both removed: the arms above 0.5	20	c33_residual_decomposition.tsv	
+control33_auc	the prior with both removed: the arms	24	c33_residual_decomposition.tsv	
+control33_model	the arms where the network coefficient is positive	19	c33_self_written_model.tsv	
+control33_model	the arms	24	c33_self_written_model.tsv	
+control33_model	the median coefficient on the network score	0.2532	c33_self_written_model.tsv	
+control33_model	the arms where adding the network raises the AUROC	23	c33_self_written_model.tsv	
+control33_model	the median AUROC gain of adding the network	0.0097	c33_self_written_model.tsv	
+control33_check	the recomputed prior minus degree	0.0829	c33_residual_decomposition.tsv	

@@ -1271,3 +1271,27 @@ gene set (4,294 pathways with at least five genes).
 **What is NOT changed.** No pre-registered endpoint, interval or verdict is
 touched; Control 32 is registered in the amendment-4 family (see A4.6).
 
+### A6.17 Control 33 -- where the network's contribution lives
+
+The repositioned item 7. H6 was a conditional repair whose trigger did not
+fire on 2026-11-05; the useful version is the decomposition: the residual
+of the prior after regressing out the degree, the publication count, or
+both, and the self-written model (degree + visibility + the network score).
+
+| | the value |
+|---|---|
+| the prior's median AUROC | 0.7051 |
+| the degree's | 0.6450 |
+| the publication count's | 0.8072 |
+| the prior with the degree removed | 0.6418 (21/24 arms above 0.5) |
+| the prior with the publication count removed | 0.5422 (16/24) |
+| the prior with both removed | 0.5783 (20/24) |
+| the arms where the self-written model's network coefficient is positive | 19/24 |
+| the arms where adding the network raises the AUROC | 23/24 |
+
+The consistency check: the prior's AUROC minus the degree's, recomputed
+here, is +0.0829 against the released headline +0.0809.
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Control 33 is registered in the amendment-4 family (see A4.6).
+

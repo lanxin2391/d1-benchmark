@@ -497,6 +497,25 @@ The pathway-to-gene mapping comes from the raw Reactome release (the `Interactio
 - 限制：通路标识符没有名字（仓库里没有 Reactome 通路字典）；Reactome 臂与通路注释同源（数字偏高），但五个不同源的网络上结论一致
 - `scripts/run_c32_pathway_level.py`, `results/tables/c32_pathway_enrichment_drivers.tsv`, `results/tables/c32_pathway_picks.tsv`, `results/tables/c32_pathway_permutation.tsv`, `docs/c32_pathway_level.md`
 
+## 7o. Where the network's contribution lives (Control 33)
+
+The plan item inherited from the second paper's H6 was a *conditional repair* (its trigger was tested on 2026-11-05 and did not fire); the useful version is the decomposition below.
+
+| the median AUROC over the 24 arms | the value | the arms above 0.5 |
+|---|---|---|
+| the prior | 0.7051 | 24/24 |
+| the degree | 0.6450 | 24/24 |
+| **the publication count** | **0.8072** | 24/24 |
+| the prior, the degree removed | 0.6418 | 21/24 |
+| the prior, the publication count removed | 0.5422 | 16/24 |
+| **the prior, the degree and the publication count removed** | **0.5783** | 20/24 |
+
+- the self-written model (degree + publication count, with and without the network score): the coefficient on the network score is positive in **19/24** arms (the median +0.2532); adding the network raises the AUROC in **23/24** arms (the median +0.0097)
+- **结论：网络有"既不是度也不是可见度"的贡献**（双正交化后的残差在 20/24 个臂里高于随机）
+- 但要一起说的两句：**发表量单独就是最强的单一预测因子**（0.8072 > 先验 0.7051）→ 这正是 F.12 的发表量匹配零模型存在的理由；先验与可见度**重叠很大**（去掉发表量后先验从 0.7051 掉到 0.5422，去掉度掉到 0.6418）
+- 一致性检查：这里重算的"先验 AUROC − 度 AUROC"= +0.0829，与已发布的 +0.0809 相符
+- `scripts/run_c33_where_does_contribution_live.py`, `results/tables/c33_residual_decomposition.tsv`, `results/tables/c33_self_written_model.tsv`, `docs/c33_where_does_contribution_live.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

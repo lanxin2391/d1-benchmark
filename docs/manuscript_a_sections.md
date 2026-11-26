@@ -1992,14 +1992,16 @@ contradiction of it.
 
 **The same question in the protocol's own terms.** Control 30 (F.31) turns the DepMap essential genes into a fifth label and runs the whole protocol on it: there the margin is positive in 24 of 24 arms, because the seeds of a fold are themselves essential genes. The two results differ in their seeds, not in their conclusions about what the prior is doing.
 
-**Two consequences for the follow-up work.** First, the proposed
+**One consequence for the follow-up work.** The proposed
 visibility-debiased scorer (§L.3) has no functional signal to exploit on
-this data -- the residual's AUROC is 0.500 -- so that direction must
-either be reframed around the catalogue structure or dropped. Second, the
-released DepMap table needs its reading corrected wherever it is quoted
-(§F.21, §3.16 of the report, the facts sheet and the question bank): the
-degree column is a statement about the composition of the top-degree
-stratum, not about predictive power.
+this data -- the residual's AUROC is 0.500 -- so it cannot be reframed as a
+functional-discovery scorer. That is a statement about the functional task
+only: on the driver task the same kind of residual does carry signal,
+which Control 33 (§F.34) measures. The released DepMap table also needs
+its reading corrected wherever it is quoted (§F.21, §3.16 of the report,
+the facts sheet and the question bank): the degree column is a statement
+about the composition of the top-degree stratum, not about predictive
+power.
 
 (`scripts/run_c24_depmap_within_degree.py`;
 `results/tables/c24_depmap_gene_level.tsv`,
@@ -2592,6 +2594,85 @@ endpoint is touched.
 `results/tables/c32_pathway_picks.tsv`,
 `results/tables/c32_pathway_permutation.tsv`;
 `docs/c32_pathway_level.md`.)
+
+---
+
+### F.34 Control 33: where does the network's contribution live?
+
+The post-defence plan listed an item inherited from the second paper's
+H6: "write our own model -- a degree-orthogonalised RWR". The context
+that plan entry had lost matters: H6 was a **conditional repair**, to be
+triggered *if* the RWR advantage disappeared once the hubs were removed.
+That trigger was tested on 2026-11-05 and it did not fire -- the
+degree-penalised walk is larger (+0.0979), not smaller -- so as a repair
+the idea was retired. The useful version of the item is not a repair but a
+**decomposition**: how much of the network's contribution survives when the
+degree and the publication count are taken out?
+
+**1. The per-gene residual.** On the same folds, the same test genes and
+the same endpoint as the primary analysis, we regress the degree, the
+publication count, or both, out of the prior's score, and ask whether what
+is left still ranks the drivers above the non-drivers.
+
+| the median AUROC over the 24 arms | the value | the arms above 0.5 |
+|---|---|---|
+| the prior | 0.7051 | 24/24 |
+| the degree | 0.6450 | 24/24 |
+| **the publication count** | **0.8072** | 24/24 |
+| the prior, the degree removed | 0.6418 | 21/24 |
+| the prior, the publication count removed | 0.5422 | 16/24 |
+| **the prior, the degree and the publication count removed** | **0.5783** | 20/24 |
+
+**2. The self-written model.** A logistic model on the test genes with the
+degree and the publication count as features, with and without the network
+score: the coefficient on the standardised network score is positive in
+**19 of 24 arms** (the median +0.2532), and adding
+the network to the degree-and-visibility model raises the AUROC in
+**23 of 24 arms** (the median +0.0097, the range
+-0.0006 to +0.1001).
+
+**Reading.** **There is a network contribution that is neither degree nor
+visibility.** The component of the prior that survives both regressions is
+above chance in **20 of 24 arms** (the median AUROC
+0.5783), and the self-written model confirms it from the other
+direction: a degree-and-visibility model becomes a better predictor when
+the network score is added, in 23 of 24 arms.
+
+Two things the same table says that we must not hide. **The publication
+count alone is the strongest single predictor of the driver label**
+(the median AUROC 0.8072, against the prior's 0.7051) -- the
+visibility is a powerful confounder, which is why the publication-matched
+null of F.12 exists and why it, and not this regression, is the control
+that matters for the headline. And **the prior and the visibility overlap
+heavily**: removing the publication count from the prior's score drops it
+from 0.7051 to 0.5422, while removing the degree drops
+it to 0.6418. So the network's own, degree-free and
+visibility-free component is real but modest (0.5783), and the
+honest description of the whole result is: the network prior beats degree
+by +0.081, and a noticeable part of that margin is shared with study
+visibility -- but not all of it.
+
+**What this means for the claim.** It closes the loop that item 7 was
+meant to open, in the form the evidence supports: the claim "a network
+prior contributes beyond degree" survives a degree residual, a visibility
+residual and a model that contains both, and the size of the surviving
+contribution is now stated rather than assumed.
+
+**Caveats.** The regressions are fitted on the test genes of each fold (no
+label information), so the residual is "what the degree and the publication
+count do not explain *in this population*". The publication count here is
+a per-gene covariate; the publication-matched null of F.12 is a different
+and stronger control, because it matches the publication count at the
+level of the bait rather than regressing it out of the score, and the two
+should not be confused. The consistency check passes: the prior's AUROC
+minus the degree's, recomputed here, is +0.0829 against the released
+headline +0.0809. **Exploratory** (amendment 4): no pre-registered endpoint
+is touched.
+
+(`scripts/run_c33_where_does_contribution_live.py`;
+`results/tables/c33_residual_decomposition.tsv`,
+`results/tables/c33_self_written_model.tsv`;
+`docs/c33_where_does_contribution_live.md`.)
 
 ---
 
@@ -3366,8 +3447,8 @@ paper was produced by a model.
 
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
-we replaced human cross-checking with two audit scripts (252 and 71
-checks) and a ground-truth table of 943 recomputed quantities.
+we replaced human cross-checking with two audit scripts (268 and 71
+checks) and a ground-truth table of 967 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes

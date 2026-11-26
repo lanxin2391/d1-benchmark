@@ -773,6 +773,51 @@ def control32() -> None:
     record("control32_hits", "the arms", int(len(prior)), "c32_pathway_picks.tsv")
 
 
+# ----------------------------------------------------------------- control 33
+def control33() -> None:
+    """Where the network's contribution lives (Control 33)."""
+    rp = TABLES / "c33_residual_decomposition.tsv"
+    mp = TABLES / "c33_self_written_model.tsv"
+    if not rp.exists() or not mp.exists():
+        return
+    r = pd.read_csv(rp, sep="\t")
+    m = pd.read_csv(mp, sep="\t")
+    arm = r.groupby(["network", "label", "scorer"])["auroc"].median().unstack()
+    names = {"the prior": "the prior",
+             "the degree": "the degree",
+             "the publication count": "the publication count",
+             "the prior, degree removed": "the prior with the degree removed",
+             "the prior, the publication count removed":
+                 "the prior with the publication count removed",
+             "the prior, the degree and the publication count removed":
+                 "the prior with both removed"}
+    for tag, name in names.items():
+        if tag not in arm.columns:
+            continue
+        v = arm[tag].dropna()
+        record("control33_auc", f"{name}: the median AUROC", r4(v.median()),
+               "c33_residual_decomposition.tsv")
+        record("control33_auc", f"{name}: the arms above 0.5",
+               int((v > 0.5).sum()), "c33_residual_decomposition.tsv")
+        record("control33_auc", f"{name}: the arms", int(len(v)),
+               "c33_residual_decomposition.tsv")
+    mod = m.groupby(["network", "label"]).agg(beta=("beta_network", "median"),
+                                               d_auc=("delta_auc", "mean"))
+    record("control33_model", "the arms where the network coefficient is "
+           "positive", int((mod.beta > 0).sum()), "c33_self_written_model.tsv")
+    record("control33_model", "the arms", int(len(mod)),
+           "c33_self_written_model.tsv")
+    record("control33_model", "the median coefficient on the network score",
+           r4(mod.beta.median()), "c33_self_written_model.tsv")
+    record("control33_model", "the arms where adding the network raises the "
+           "AUROC", int((mod.d_auc > 0).sum()), "c33_self_written_model.tsv")
+    record("control33_model", "the median AUROC gain of adding the network",
+           r4(mod.d_auc.median()), "c33_self_written_model.tsv")
+    record("control33_check", "the recomputed prior minus degree",
+           r4((arm["the prior"] - arm["the degree"]).dropna().median()),
+           "c33_residual_decomposition.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1334,6 +1379,7 @@ def main() -> int:
     control30()
     control31()
     control32()
+    control33()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

@@ -6599,5 +6599,173 @@
   "value": 24,
   "source": "c32_pathway_picks.tsv",
   "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior: the median AUROC",
+  "value": 0.7051,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior: the arms above 0.5",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior: the arms",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the degree: the median AUROC",
+  "value": 0.645,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the degree: the arms above 0.5",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the degree: the arms",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the publication count: the median AUROC",
+  "value": 0.8072,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the publication count: the arms above 0.5",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the publication count: the arms",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with the degree removed: the median AUROC",
+  "value": 0.6418,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with the degree removed: the arms above 0.5",
+  "value": 21,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with the degree removed: the arms",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with the publication count removed: the median AUROC",
+  "value": 0.5422,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with the publication count removed: the arms above 0.5",
+  "value": 16,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with the publication count removed: the arms",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with both removed: the median AUROC",
+  "value": 0.5783,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with both removed: the arms above 0.5",
+  "value": 20,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_auc",
+  "scope": "the prior with both removed: the arms",
+  "value": 24,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_model",
+  "scope": "the arms where the network coefficient is positive",
+  "value": 19,
+  "source": "c33_self_written_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_model",
+  "scope": "the arms",
+  "value": 24,
+  "source": "c33_self_written_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_model",
+  "scope": "the median coefficient on the network score",
+  "value": 0.2532,
+  "source": "c33_self_written_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_model",
+  "scope": "the arms where adding the network raises the AUROC",
+  "value": 23,
+  "source": "c33_self_written_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_model",
+  "scope": "the median AUROC gain of adding the network",
+  "value": 0.0097,
+  "source": "c33_self_written_model.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control33_check",
+  "scope": "the recomputed prior minus degree",
+  "value": 0.0829,
+  "source": "c33_residual_decomposition.tsv",
+  "note": ""
  }
 ]

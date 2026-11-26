@@ -9,6 +9,16 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control33.section        manuscript_a_sections.md
+         §F.34 must report the decomposition
+  [PASS] control33.section.draft  research_report_draft.md
+         §3.29 must report the decomposition
+  [PASS] control33.reading        manuscript_a_sections.md
+         §F.34 must state the reading
+  [PASS] control33.facts          report_1118_facts.md
+         the facts sheet must carry Control 33
+  [PASS] control33.qa             report_1118_qa_bank.md
+         the question bank must carry Control 33
   [PASS] control32.section        manuscript_a_sections.md
          §F.33 must report the pathway level
   [PASS] control32.section.draft  research_report_draft.md
@@ -306,6 +316,17 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 33 the prior's median AUROC manuscript=+0.7051  table=+0.7051  tol=0.0006
+  [PASS] control 33 the degree's median AUROC manuscript=+0.6450  table=+0.6450  tol=0.0006
+  [PASS] control 33 the publication count's median AUROC manuscript=+0.8072  table=+0.8072  tol=0.0006
+  [PASS] control 33 the degree-removed residual manuscript=+0.6418  table=+0.6418  tol=0.0006
+  [PASS] control 33 the visibility-removed residual manuscript=+0.5422  table=+0.5422  tol=0.0006
+  [PASS] control 33 the both-removed residual manuscript=+0.5783  table=+0.5783  tol=0.0006
+  [PASS] control 33 the arms above chance for the both-removed residual manuscript=+20.0000  table=+20.0000  tol=0.5
+  [PASS] control 33 the arms where the model coefficient is positive manuscript=+19.0000  table=+19.0000  tol=0.5
+  [PASS] control 33 the arms where the AUROC rises manuscript=+23.0000  table=+23.0000  tol=0.5
+  [PASS] control 33 the median AUROC gain manuscript=+0.0097  table=+0.0097  tol=0.0006
+  [PASS] control 33 the consistency check manuscript=+0.0829  table=+0.0829  tol=0.0006
   [PASS] control 32 the prior's driver-pathway hits manuscript=+97.4000  table=+97.3646  tol=0.06
   [PASS] control 32 the degree baseline's driver-pathway hits manuscript=+63.7000  table=+63.6688  tol=0.06
   [PASS] control 32 the random baseline's driver-pathway hits manuscript=+6.7000  table=+6.6627  tol=0.06
@@ -411,5 +432,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 252 PASS / 0 FAIL
+RESULT: 268 PASS / 0 FAIL
 ========================================================================
