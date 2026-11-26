@@ -17,6 +17,16 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
 
+### The three zips (v1.0-rc14)
+
+| file | the size | the SHA-256 |
+|---|---|---|
+| `release/d1-benchmark-v1.0-results.zip` | 53.6 MB | `1a16b50e2bdd0f113f87c5ddf997dc9d8850b5888097bfdd3b8bdd8d8ee2db58` |
+| `release/d1-benchmark-v1.0-source.zip` | 272.5 MB | `31ae822a7b5dafaa511d3561f6299d64d7cc445c49d9852b5a25b337e1e9be78` |
+| `release/d1-benchmark-v1.0-splits.zip` | 142.1 MB | `cc17e94a418041c8dff2a9abc92009cbaba264f09e17375aeff45c3054fd20bc` |
+
+They are built from the tag with `python scripts/build_zenodo_release.py --tag v1.0-rc14`; the upload to Zenodo (and the DOI that Zenodo mints) is a manual step.
+
 ## What changed since v1.0-rc13
 
 * **Controls 24-33** were added and written into the manuscript (F.26-F.34),
