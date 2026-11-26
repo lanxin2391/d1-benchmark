@@ -69,6 +69,22 @@ def tracked_files(tag: str) -> list[str]:
     return [ln.strip().replace("\\", "/") for ln in out.splitlines() if ln.strip()]
 
 
+def _write_normalised(zf: zipfile.ZipFile, src: Path, arcname: str) -> None:
+    """Write a file into the zip with LF line endings.
+
+    The repository's .gitattributes normalises every `*.tsv` to LF, so the
+    released tables have to be LF as well; a zip built from a Windows
+    working tree would otherwise ship CRLF tables and break the released
+    files' reproducibility contract.
+    """
+    data = src.read_bytes()
+    if b"\r\n" in data:
+        data = data.replace(b"\r\n", b"\n")
+        zf.writestr(arcname, data)
+    else:
+        zf.writestr(arcname, data)
+
+
 def write_source_zip(files: list[str], out_path: Path) -> None:
     excluded = 0
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as zf:
@@ -80,7 +96,7 @@ def write_source_zip(files: list[str], out_path: Path) -> None:
             if not src.is_file():
                 continue
             arcname = PREFIX + rel
-            zf.write(src, arcname)
+            _write_normalised(zf, src, arcname)
     print(f"  source  zip: {out_path}  ({out_path.stat().st_size / 1e6:.1f} MB, "
           f"{len(files) - excluded} files, {excluded} excluded)")
 
@@ -99,7 +115,7 @@ def write_subset_zip(
             src = REPO / rel
             if not src.is_file():
                 continue
-            zf.write(src, PREFIX + rel)
+            _write_normalised(zf, src, PREFIX + rel)
             kept.append(rel)
         zf.writestr(PREFIX + "README_zenodo_subset.txt", readme_text)
     print(f"  subset  zip: {out_path}  ({out_path.stat().st_size / 1e6:.1f} MB, "
@@ -319,11 +335,16 @@ def main() -> int:
     import json as _json
 
     def _sha256(path: Path) -> str:
-        h = hashlib.sha256()
-        with open(path, "rb") as fh:
-            for chunk in iter(lambda: fh.read(1 << 20), b""):
-                h.update(chunk)
-        return h.hexdigest()
+        """The SHA-256 of the file with the line endings normalised.
+
+        This must be the SAME function the audit and
+        scripts/build_release_manifest.py use (sha256_normalised): the
+        release manifest is the tamper-evidence record, and a record
+        whose hashes depend on the checkout's line endings is not a
+        record.
+        """
+        from d1.engine.io import sha256_normalised
+        return sha256_normalised(path)
 
     # ONE SOURCE OF TRUTH for the list of key tables: the release manifest
     # that scripts/build_release_manifest.py writes. The list used to be a
