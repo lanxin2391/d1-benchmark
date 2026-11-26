@@ -2,7 +2,7 @@
 
 **What a network prior contributes to cancer-driver prioritisation: a leakage-controlled benchmark.**
 
-**Release:** v1.0-rc3 (tag `v1.0-rc3`) · Zenodo DOI pending ·
+**Release:** v1.0-rc14 (tag `v1.0-rc14`) · Zenodo DOI pending ·
 pre-registration: [Zenodo 10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762)
 **Audit:** 50 PASS / 0 FAIL on `python scripts/audit_reproducibility.py`
 **Manuscript verification:** 63 PASS / 0 FAIL on `python scripts/verify_claims.py`
@@ -34,7 +34,7 @@ python -m pytest                                  # 131 passed, 3 skipped
 python scripts/audit_reproducibility.py            # 50 PASS / 0 FAIL
 python scripts/verify_claims.py                    # 63 PASS / 0 FAIL
 python scripts/verify_report.py                    # 71 PASS / 0 FAIL
-python scripts/build_release_manifest.py --release v1.0-rc3 --check
+python scripts/build_release_manifest.py --release v1.0-rc14 --check
 ```
 
 `scripts/verify_claims.py` is the mechanism that keeps the prose honest:
@@ -45,7 +45,7 @@ verifier (`scripts/verify_report.py`).
 
 ---
 
-## Release v1.0-rc3 — index of deliverables
+## Release v1.0-rc14 — index of deliverables
 
 | File | Owner | What it is |
 |---|---|---|
@@ -159,7 +159,7 @@ Use the **Anaconda Prompt** or **Anaconda PowerShell Prompt** (Windows Start men
 ```bash
 git clone https://github.com/lanxin2391/d1-benchmark.git
 cd d1-benchmark
-git checkout v1.0-rc3     # or main
+git checkout v1.0-rc14     # or main
 conda env create -f environment.yml
 conda activate d1
 pip install -e .          # makes `import d1` work everywhere
@@ -261,7 +261,7 @@ returns a Series of symbols (NaN if unmapped/ambiguous); `id_type` ∈ `symbol, 
 
 ## 5. Reproducing the release end-to-end
 
-The v1.0-rc3 release was regenerated on a clean machine via the
+The v1.0-rc14 release was regenerated on a clean machine via the
 B-side reproducibility audit (`docs/reproducibility_audit.md`) and the
 line-ending normalisation of the released tables
 (`scripts/normalise_line_endings.py`).
@@ -277,6 +277,6 @@ If you use this benchmark, please cite:
 * The protocol: *D1 benchmark: What a network prior contributes to
   cancer-driver prioritisation.*
 * The pre-registration: DOI 10.5281/zenodo.23121762.
-* The v1.0-rc3 release: this GitHub repository at the
-  `v1.0-rc3` tag.
+* The v1.0-rc14 release: this GitHub repository at the
+  `v1.0-rc14` tag.
 * The manuscript draft: `docs/research_report_draft.md`.

@@ -1,7 +1,7 @@
-# D1 benchmark — v1.0-rc10 release note
+# D1 benchmark — v1.0-rc14 release note
 
-**Release commit:** `see the tag v1.0-rc8`
-**Built:** 2026-11-16
+**Release commit:** `f0add9aba845f192a5ed8c96669dae076a51ed3b`
+**Built:** 2026-11-26
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
 (DOI 10.5281/zenodo.23121762) is the frozen v1 and is unchanged.
@@ -16,6 +16,24 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | direction 1 | the consensus prior over the six networks, and its robustness checks |
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
+
+## What changed since v1.0-rc13
+
+* **Controls 24-33** were added and written into the manuscript (F.26-F.34),
+  the report draft, the facts sheet, the question bank and the amendment
+  register: the functional task read as a ranking (24), mutation-first
+  versus network-first (25), the label-permutation audit (26), the rewiring
+  null under the second learner over the full grid (27), the topology prior
+  suite (28), the label-permutation audit (26), the DepMap essential-gene
+  catalogue as a fifth label (30), the cross-method complementarity (31),
+  the pathway level (32) and the decomposition of the network's
+  contribution (33).
+* **Items 13 and 14** (the executable protocol and the clinical-use
+  boundary) were written as `docs/protocol_network_to_experiment.md` and
+  as the manuscript's section M.
+* The DepMap reading was corrected (the released "the degree baseline
+  69.2 %" is a saturated within-stratum statistic, not predictive power),
+  and the two z-score conventions were separated.
 
 ## What changed since v1.0-rc9
 
