@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		0	0	degree		0.6297386823702614	0.015566261214392734	0.0	0.01	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		0	1	degree		0.5260003154739997	0.0125325708419994	0.02	0.01	0.01	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		0	2	degree		0.5362568715642179	0.011187984806041157	0.0	0.0	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		0	3	degree		0.39064678187222174	0.00906035340461939	0.02	0.01	0.004	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		0	4	degree		0.5994634261816459	0.016499900393290273	0.02	0.02	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		1	0	degree		0.49472895525527105	0.011989141866263275	0.02	0.01	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		1	1	degree		0.6341421736158579	0.017191709124222736	0.02	0.02	0.016	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		1	2	degree		0.48339580209895056	0.010764472393252782	0.0	0.0	0.01	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		1	3	degree		0.5641258318209316	0.015798840819397468	0.02	0.03	0.014	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		1	4	degree		0.5063520871143375	0.009817063629385562	0.0	0.0	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		2	0	degree		0.5060860192439139	0.010342888184045204	0.0	0.01	0.006	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		2	1	degree		0.4934539145065461	0.012185745893993087	0.02	0.02	0.01	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		2	2	degree		0.5199900049975014	0.013695827312058897	0.02	0.02	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		2	3	degree		0.48774297061995314	0.010286670669641004	0.0	0.0	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		2	4	degree		0.6749388463662905	0.018797179600065727	0.02	0.01	0.014	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		3	0	degree		0.5336768494663231	0.011481564567904034	0.0	0.0	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		3	1	degree		0.5274199484725801	0.013561912530304998	0.0	0.02	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		3	2	degree		0.49761369315342335	0.01330312119615458	0.02	0.02	0.01	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		3	3	degree		0.5206081169941345	0.009715669885325651	0.0	0.0	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		3	4	degree		0.6054341250427417	0.018763541881135777	0.04	0.03	0.014	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		4	0	degree		0.618605079131395	0.013614371484139064	0.0	0.01	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		4	1	degree		0.4261396498238603	0.014892277490384336	0.04	0.02	0.01	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		4	2	degree		0.6542853573213393	0.0175774012885624	0.0	0.01	0.016	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		4	3	degree		0.5491201767537284	0.010686648978613354	0.0	0.0	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		4	4	degree		0.4251032378547568	0.009475190301064775	0.02	0.01	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		5	0	degree		0.5263815132236185	0.011080778575115776	0.0	0.02	0.01	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		5	1	degree		0.5980335454019664	0.013414299089493334	0.0	0.0	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		5	2	degree		0.5869565217391304	0.017448814879042422	0.04	0.02	0.016	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		5	3	degree		0.6099713301244115	0.01622600245346959	0.02	0.01	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		5	4	degree		0.36005681369841397	0.00810357884663567	0.0	0.01	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		6	0	degree		0.5531836584468163	0.011150185117211667	0.0	0.0	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		6	1	degree		0.5051264524948735	0.01047070628640998	0.0	0.01	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		6	2	degree		0.5373938030984509	0.015182101761114505	0.02	0.03	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		6	3	degree		0.6225045372050816	0.017085232471601618	0.02	0.02	0.016	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		6	4	degree		0.46113785212656827	0.010278354502271204	0.02	0.01	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		7	0	degree		0.5235422472264578	0.013499865127379045	0.02	0.02	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		7	1	degree		0.5923944476576055	0.013979859923044678	0.0	0.0	0.01	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		7	2	degree		0.5045477261369316	0.012301933236299883	0.02	0.02	0.01	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		7	3	degree		0.450682553460112	0.008645468775076173	0.0	0.0	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		7	4	degree		0.61207554117678	0.015179123765683042	0.02	0.02	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		8	0	degree		0.4998554077501446	0.010172291573378291	0.0	0.0	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		8	1	degree		0.5779746569220254	0.012011302833114185	0.0	0.01	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		8	2	degree		0.4570089955022488	0.013368833616325316	0.02	0.01	0.01	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		8	3	degree		0.561285146900234	0.016594373752879765	0.02	0.02	0.014	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		8	4	degree		0.5846813435387569	0.01328280327396818	0.02	0.01	0.008	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		9	0	degree		0.45265261054734734	0.009002793589388531	0.0	0.01	0.006	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		9	1	degree		0.5822992796677008	0.014436599043887464	0.0	0.01	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		9	2	degree		0.5537731134432784	0.01723408983170329	0.04	0.03	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		9	3	degree		0.5087193245482522	0.01045538400490405	0.0	0.0	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k		9	4	degree		0.584247350009206	0.013817915576693542	0.02	0.01	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	0	0	rwr	22.0	0.654634838845365	0.014476832429126639	0.0	0.0	0.018	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	0	1	rwr	22.0	0.5833902939166097	0.0757541773672496	0.04	0.03	0.016	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	0	2	rwr	22.0	0.5800349825087456	0.012799773354156196	0.0	0.01	0.016	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	0	3	rwr	22.0	0.4357163523501407	0.012328785968701319	0.02	0.02	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	0	4	rwr	22.0	0.5431494778926326	0.010389543740078815	0.0	0.0	0.008	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	1	0	rwr	22.0	0.5365818392134183	0.06379958571957031	0.02	0.01	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	1	1	rwr	22.0	0.624507071875493	0.018426939666615696	0.02	0.02	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	1	2	rwr	22.0	0.507496251874063	0.01039127523409265	0.0	0.0	0.008	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	1	3	rwr	22.0	0.5375207133275467	0.011597472985013735	0.0	0.01	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	1	4	rwr	22.0	0.5890738841105763	0.020097561955745757	0.02	0.02	0.014	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	2	0	rwr	22.0	0.5552999631947	0.015350476067247518	0.02	0.01	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	2	1	rwr	22.0	0.48462064251537934	0.009867547298549235	0.0	0.0	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	2	2	rwr	22.0	0.5257496251874063	0.010953342433271488	0.0	0.01	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	2	3	rwr	22.0	0.49017596464925434	0.03622840127911808	0.02	0.01	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	2	4	rwr	22.0	0.6281596044083222	0.014149793822966387	0.0	0.01	0.014	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	3	0	rwr	22.0	0.542773016457227	0.011073993273363034	0.0	0.0	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	3	1	rwr	22.0	0.5569167674430833	0.01600505084187657	0.02	0.01	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	3	2	rwr	22.0	0.5443778110944527	0.04760101299106298	0.04	0.02	0.014	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	3	3	rwr	22.0	0.4869407401562376	0.008948150880112905	0.0	0.0	0.004	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	3	4	rwr	22.0	0.6092743102133144	0.01775781806264883	0.0	0.04	0.018	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	4	0	rwr	22.0	0.6236132288763868	0.014316851302130645	0.0	0.02	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	4	1	rwr	22.0	0.5023397654976602	0.019992067145545574	0.02	0.02	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	4	2	rwr	22.0	0.7216141929035482	0.05392811347807631	0.04	0.02	0.026	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	4	3	rwr	22.0	0.532891449012336	0.010249423898487209	0.0	0.0	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	4	4	rwr	22.0	0.42639206712433253	0.008505497098226577	0.0	0.01	0.008	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	5	0	rwr	22.0	0.570823912929176	0.01790915658710341	0.02	0.01	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	5	1	rwr	22.0	0.6245596508754403	0.03191070470392169	0.02	0.02	0.016	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	5	2	rwr	22.0	0.630784607696152	0.016269534116117666	0.0	0.02	0.018	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	5	3	rwr	22.0	0.5692548462610799	0.012006683101860777	0.0	0.0	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	5	4	rwr	22.0	0.40316683763381467	0.018086172539464013	0.02	0.01	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	6	0	rwr	22.0	0.533045901466954	0.01087466557755222	0.0	0.01	0.01	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	6	1	rwr	22.0	0.5030758714969241	0.00974576808389426	0.0	0.0	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	6	2	rwr	22.0	0.5403798100949524	0.01264225207546337	0.0	0.0	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	6	3	rwr	22.0	0.6676135616402326	0.016724034138972988	0.0	0.01	0.022	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	6	4	rwr	22.0	0.49869801941134695	0.01732867250849931	0.02	0.02	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	7	0	rwr	22.0	0.5457437299542562	0.039565095592182235	0.02	0.02	0.012	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	7	1	rwr	22.0	0.5796703296703296	0.01258650244963093	0.0	0.0	0.016	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	7	2	rwr	22.0	0.532983508245877	0.011522797142263373	0.0	0.0	0.012	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	7	3	rwr	22.0	0.4961729661485047	0.01450351812167748	0.02	0.01	0.006	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	7	4	rwr	22.0	0.566479917935769	0.011295136770749422	0.0	0.01	0.012	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	8	0	rwr	22.0	0.49566223250433783	0.015033191451469818	0.02	0.01	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	8	1	rwr	22.0	0.5466901519533098	0.010652284483203356	0.0	0.0	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	8	2	rwr	22.0	0.4757371314342828	0.010557415623616069	0.0	0.0	0.014	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	8	3	rwr	22.0	0.5888371603671847	0.01328171487767595	0.0	0.01	0.016	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	8	4	rwr	22.0	0.6233199189878745	0.015692752674904158	0.0	0.02	0.016	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	9	0	rwr	22.0	0.47994111152005886	0.026934906899729362	0.02	0.01	0.008	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	9	1	rwr	22.0	0.5708502024291497	0.012561159187493596	0.0	0.01	0.014	19	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	9	2	rwr	22.0	0.577311344327836	0.013735875545458916	0.0	0.01	0.014	20	2021
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	9	3	rwr	22.0	0.5235540124674505	0.010061776133199724	0.0	0.0	0.01	19	2020
+rna_coexp_d250k	intogen_temporal_new	native_rna_coexp_d250k	0.5	9	4	rwr	22.0	0.62880401904311	0.021457086316039542	0.02	0.03	0.012	19	2020
