@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import Iterable
 
 REPO = Path(__file__).resolve().parent.parent
-TAG = "v1.0-rc14"      # the release tag; override with --tag
+TAG = "v1.0-rc15"      # the release tag; override with --tag
 # NOTE: the tag must EXIST in the repository. The script checks this
 # before it does anything, so a stale default cannot silently build
 # a release from the wrong tree.
