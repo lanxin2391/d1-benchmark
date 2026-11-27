@@ -866,6 +866,67 @@ def protocol_numbers() -> None:
                int(g.pathway.nunique()), "c32_pathway_enrichment_drivers.tsv")
 
 
+# ------------------------------------------------------- controls 35 and 36
+def control35() -> None:
+    """A real GraphSAGE control (Control 35)."""
+    p = TABLES / "c35_graphsage_summary.tsv"
+    if not p.exists():
+        return
+    s = pd.read_csv(p, sep="\t")
+    record("control35_graphsage", "the median margin against degree",
+           r4(s["delta"].median()), "c35_graphsage_summary.tsv")
+    record("control35_graphsage", "the arms positive",
+           int((s["delta"] > 0).sum()), "c35_graphsage_summary.tsv")
+    record("control35_graphsage", "the arms", int(len(s)),
+           "c35_graphsage_summary.tsv")
+    record("control35_graphsage", "the smallest margin",
+           r4(s["delta"].min()), "c35_graphsage_summary.tsv")
+    record("control35_graphsage", "the largest margin",
+           r4(s["delta"].max()), "c35_graphsage_summary.tsv")
+    record("control35_graphsage", "the median GraphSAGE AUROC",
+           r4(s["gs"].median()), "c35_graphsage_summary.tsv")
+    record("control35_graphsage", "the median degree AUROC",
+           r4(s["deg"].median()), "c35_graphsage_summary.tsv")
+    n2v = TABLES / "gnn_courtesy_arm.tsv"
+    if n2v.exists():
+        g = pd.read_csv(n2v, sep="\t")
+        g = g[g.alpha == 0.5]
+        record("control35_graphsage", "the Node2Vec arm: the median margin",
+               r4(g.mean_delta.median()), "gnn_courtesy_arm.tsv")
+        record("control35_graphsage", "the Node2Vec arm: the arms positive",
+               int((g.mean_delta > 0).sum()), "gnn_courtesy_arm.tsv")
+    rwr = TABLES / "a4_table1_delta_auroc_v40.tsv"
+    if rwr.exists():
+        w = pd.read_csv(rwr, sep="\t")
+        record("control35_graphsage", "the RWR prior: the median margin",
+               r4(w["a0.5_mean"].median()), "a4_table1_delta_auroc_v40.tsv")
+        record("control35_graphsage", "the RWR prior: the arms positive",
+               int((w["a0.5_mean"] > 0).sum()), "a4_table1_delta_auroc_v40.tsv")
+
+
+def control36() -> None:
+    """The temporal transfer matrix (Control 36)."""
+    p = TABLES / "c36_temporal_summary.tsv"
+    if not p.exists():
+        return
+    s = pd.read_csv(p, sep="\t")
+    s["train"] = s["train"].astype(str)
+    s["test"] = s["test"].astype(str)
+    record("control36_temporal", "the cells positive",
+           int((s.delta > 0).sum()), "c36_temporal_summary.tsv")
+    record("control36_temporal", "the cells", int(len(s)),
+           "c36_temporal_summary.tsv")
+    for a, b in (("2019", "2020"), ("2019", "2023"), ("2019", "2024"),
+                 ("2020", "2023"), ("2020", "2024"), ("2023", "2024")):
+        sub = s[(s.train == a) & (s.test == b)]
+        if not len(sub):
+            continue
+        record("control36_temporal", f"{a}->{b}: the median margin",
+               r4(sub.delta.median()), "c36_temporal_summary.tsv")
+        record("control36_temporal", f"{a}->{b}: the cells positive",
+               int((sub.delta > 0).sum()), "c36_temporal_summary.tsv")
+
+
 # ----------------------------------------------------------------- provenance
 def co_primary_endpoints() -> None:
     """The two co-primary endpoints of the upstream commit 9b628e4."""
@@ -1429,6 +1490,8 @@ def main() -> int:
     control32()
     control33()
     protocol_numbers()
+    control35()
+    control36()
 
     df = pd.DataFrame(ROWS)
     df.to_csv(out / "ground_truth.tsv", sep="\t", index=False, lineterminator="\n")

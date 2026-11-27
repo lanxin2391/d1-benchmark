@@ -538,6 +538,38 @@ A fresh virtual environment (the conda environment's Python 3.11, with no inheri
 - the reproduction needed the pip index given explicitly (this machine's default is a mirror that is not reachable from here) -- the reproduction must not depend on the reader's network configuration
 - the log: `docs/reproduction_log.md`
 
+## 7r. A real GraphSAGE control (Control 35)
+
+| the method | the median margin against degree | the arms positive |
+|---|---|---|
+| the RWR prior (the headline) | **+0.0809** | 23/24 |
+| the Node2Vec arm (the paper's "GNN", p = q = 1) | +0.0283 | 19/24 |
+| a real GraphSAGE (self-supervised, link prediction) | +0.0049 | 13/24 |
+
+- the GraphSAGE: two layers, mean aggregation, learnable self/neighbour features, an identity embedding table, the **same readout rule** as现有 GNN 臂（与训练阳性质心的余弦）
+- **supervised 版本会塌成记忆**（身份嵌入表是自由的 → 训练阳性可以逐个记住 → 测试 AUROC 恰为 0.500）→ 改用**自监督**（链接预测 + 采样非边）
+- 结论不变，且次序是**扩散 > 随机游走嵌入 > GraphSAGE**；原因不是"GNN 不好"，而是无特征基因图上均值聚合的 GNN 几乎只能得到度本身的平滑版
+- 代价：该臂需要 PyTorch（2.3.1+cpu），其余部分不需要 → 臂是自包含的
+- `scripts/run_c35_graphsage.py`, `results/tables/c35_graphsage.tsv`, `results/tables/c35_graphsage_summary.tsv`, `docs/c35_graphsage.md`
+
+## 7s. The temporal transfer matrix (Control 36)
+
+IntOGen 没有 2021/2022 → "逐年"做不了；四代链（2019-11-12 / 2020-02-01 / 2023-05-31 / 2024-09-20）做得了。
+
+| the pair | the gap in years | the median margin | the cells positive |
+|---|---|---|---|
+| 2019->2020 | 0.22 | +0.0984 | 6/6 |
+| 2019->2023 | 3.55 | +0.0580 | 6/6 |
+| 2019->2024 | 4.86 | +0.0482 | 6/6 |
+| 2020->2023 | 3.33 | +0.0440 | 6/6 |
+| 2020->2024 | 4.64 | +0.0376 | 6/6 |
+| 2023->2024 | 1.30 | +0.0444 | 5/6 |
+
+- **35/36 个格子为正**，且随时间间隔衰减：83 天 +0.0984 → 1.3 年 +0.0444 → 3.3/3.6 年 +0.0440/+0.0580 → 4.6/4.9 年 +0.0376/+0.0482
+- 唯一非正的格子是 reactome 2023->2024（−0.0005，即零）→ 正是那个对最新驱动基因覆盖最弱（41 % LCC）的网络，与论文已有的解释一致
+- 回答老师那句"网络对手工策的新基因还有用吗"：**有用，但只有一半**；实务含义：候选清单要连同"目录日期与实验日期的间隔"一起报告
+- `scripts/run_c36_temporal_matrix.py`, `results/tables/c36_temporal_matrix.tsv`, `results/tables/c36_temporal_summary.tsv`, `docs/c36_temporal_matrix.md`
+
 ## 8. The design (panel and labels)
 
 | network | provenance | LCC genes | LCC edges |

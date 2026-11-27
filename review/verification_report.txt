@@ -9,6 +9,26 @@ states something the tables do not support.
 ------------------------------------------------------------------------
 1. POSITIVE CLAIMS -- the manuscript must contain these strings
 ------------------------------------------------------------------------
+  [PASS] control35.section        manuscript_a_sections.md
+         §F.35 must report the GraphSAGE control
+  [PASS] control35.section.draft  research_report_draft.md
+         §3.31 must report the GraphSAGE control
+  [PASS] control35.reading        manuscript_a_sections.md
+         §F.35 must state the ordering
+  [PASS] control36.section        manuscript_a_sections.md
+         §F.36 must report the temporal matrix
+  [PASS] control36.section.draft  research_report_draft.md
+         §3.32 must report the temporal matrix
+  [PASS] control36.reading        manuscript_a_sections.md
+         §F.36 must state the decay reading
+  [PASS] control35.facts          report_1118_facts.md
+         the facts sheet must carry Control 35
+  [PASS] control36.facts          report_1118_facts.md
+         the facts sheet must carry Control 36
+  [PASS] control35.qa             report_1118_qa_bank.md
+         the question bank must carry Control 35
+  [PASS] control36.qa             report_1118_qa_bank.md
+         the question bank must carry Control 36
   [PASS] protocol.section         manuscript_a_sections.md
          §M.1 must state the protocol
   [PASS] protocol.section.draft   research_report_draft.md
@@ -326,6 +346,12 @@ states something the tables do not support.
   [PASS] control 7 matched difference   manuscript=+0.0010  table=+0.0010  tol=0.0002
   [PASS] co-primary partial AUC median  manuscript=+0.0308  table=+0.0308  tol=0.0002
   [PASS] co-primary top-10 % median     manuscript=+0.0412  table=+0.0412  tol=0.0002
+  [PASS] control 35 the GraphSAGE median margin manuscript=+0.0049  table=+0.0049  tol=0.0006
+  [PASS] control 35 the GraphSAGE arms positive manuscript=+13.0000  table=+13.0000  tol=0.5
+  [PASS] control 35 the Node2Vec median margin manuscript=+0.0283  table=+0.0283  tol=0.0006
+  [PASS] control 36 the cells positive  manuscript=+35.0000  table=+35.0000  tol=0.5
+  [PASS] control 36 the 2019->2020 median margin manuscript=+0.0984  table=+0.0984  tol=0.0006
+  [PASS] control 36 the 2020->2024 median margin manuscript=+0.0376  table=+0.0376  tol=0.0006
   [PASS] protocol the matched-null share manuscript=+11.6000  table=+11.5907  tol=0.06
   [PASS] protocol the unmatched-null share manuscript=+17.6000  table=+17.6339  tol=0.06
   [PASS] protocol the 10 % seed loss    manuscript=+1.9000  table=+1.8902  tol=0.06
@@ -448,5 +474,5 @@ states something the tables do not support.
   [PASS] second learner, median         manuscript=+0.0112  table=+0.0112  tol=0.002
 
 ========================================================================
-RESULT: 281 PASS / 0 FAIL
+RESULT: 297 PASS / 0 FAIL
 ========================================================================

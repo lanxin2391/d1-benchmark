@@ -38,11 +38,15 @@ RELEASE_FILES = {
     "2024-09-20": "IntOGen-Drivers-20240920.zip",
     "2023-05-31": "IntOGen-Drivers-20230531.zip",
     "2020-02-01": "IntOGen-Drivers-20200201.zip",
+    # the fourth point of the temporal chain (plan item 19): the earliest
+    # release the IntOGen download page still offers
+    "2019-11-12": "IntOGen-Drivers-20191112.zip",
 }
 RELEASE_LABEL_ID = {
     "2024-09-20": "intogen2024",
     "2023-05-31": "intogen2023",
     "2020-02-01": "intogen2020",
+    "2019-11-12": "intogen2019",
 }
 COMPENDIUM_NAME = "Compendium_Cancer_Genes.tsv"
 
@@ -118,6 +122,9 @@ def main(argv: list[str] | None = None) -> int:
                     help="HGNC complete set file used for symbol harmonisation")
     args = ap.parse_args(argv)
 
+    import sys as _sys
+    if str(REPO_ROOT) not in _sys.path:
+        _sys.path.insert(0, str(REPO_ROOT))
     from d1.hgnc import HGNCMapper
     mapper = HGNCMapper(args.hgnc)
 

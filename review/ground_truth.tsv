@@ -981,3 +981,28 @@ protocol_matching	the share of positives beating the unmatched null (%)	17.6339	
 protocol_pathway	the enriched pathways: intogen2024	257	c32_pathway_enrichment_drivers.tsv	
 protocol_pathway	the enriched pathways: intogen_temporal_new	0	c32_pathway_enrichment_drivers.tsv	
 protocol_pathway	the pathways tested	4294	c32_pathway_enrichment_drivers.tsv	
+control35_graphsage	the median margin against degree	0.0049	c35_graphsage_summary.tsv	
+control35_graphsage	the arms positive	13	c35_graphsage_summary.tsv	
+control35_graphsage	the arms	24	c35_graphsage_summary.tsv	
+control35_graphsage	the smallest margin	-0.0243	c35_graphsage_summary.tsv	
+control35_graphsage	the largest margin	0.0546	c35_graphsage_summary.tsv	
+control35_graphsage	the median GraphSAGE AUROC	0.641	c35_graphsage_summary.tsv	
+control35_graphsage	the median degree AUROC	0.6391	c35_graphsage_summary.tsv	
+control35_graphsage	the Node2Vec arm: the median margin	0.0283	gnn_courtesy_arm.tsv	
+control35_graphsage	the Node2Vec arm: the arms positive	19	gnn_courtesy_arm.tsv	
+control35_graphsage	the RWR prior: the median margin	0.0809	a4_table1_delta_auroc_v40.tsv	
+control35_graphsage	the RWR prior: the arms positive	23	a4_table1_delta_auroc_v40.tsv	
+control36_temporal	the cells positive	35	c36_temporal_summary.tsv	
+control36_temporal	the cells	36	c36_temporal_summary.tsv	
+control36_temporal	2019->2020: the median margin	0.0984	c36_temporal_summary.tsv	
+control36_temporal	2019->2020: the cells positive	6	c36_temporal_summary.tsv	
+control36_temporal	2019->2023: the median margin	0.058	c36_temporal_summary.tsv	
+control36_temporal	2019->2023: the cells positive	6	c36_temporal_summary.tsv	
+control36_temporal	2019->2024: the median margin	0.0482	c36_temporal_summary.tsv	
+control36_temporal	2019->2024: the cells positive	6	c36_temporal_summary.tsv	
+control36_temporal	2020->2023: the median margin	0.044	c36_temporal_summary.tsv	
+control36_temporal	2020->2023: the cells positive	6	c36_temporal_summary.tsv	
+control36_temporal	2020->2024: the median margin	0.0376	c36_temporal_summary.tsv	
+control36_temporal	2020->2024: the cells positive	6	c36_temporal_summary.tsv	
+control36_temporal	2023->2024: the median margin	0.0444	c36_temporal_summary.tsv	
+control36_temporal	2023->2024: the cells positive	5	c36_temporal_summary.tsv	

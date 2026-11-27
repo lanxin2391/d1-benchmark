@@ -1314,3 +1314,31 @@ there.
 **What is NOT changed.** No pre-registered endpoint, interval or verdict is
 touched; these are protocol and wording deliverables.
 
+### A6.19 Control 35 -- a real GraphSAGE control
+
+A proper GraphSAGE (two layers, mean aggregation, learnable self and
+neighbour features, an identity embedding table) evaluated with the same
+readout rule as the existing GNN arm, trained **self-supervised** on the
+network's own edges.
+
+| the method | the median margin against degree | the arms positive |
+|---|---|---|
+| the RWR prior | +0.0809 | 23/24 |
+| the Node2Vec arm | +0.0283 | 19/24 |
+| a real GraphSAGE | +0.0049 | 13/24 |
+
+The supervised variant collapses to memorisation (the test AUROC is
+exactly 0.500 in every arm), which is why the objective is
+self-supervised.
+
+### A6.20 Control 36 -- the temporal transfer matrix
+
+The per-year split cannot be built (IntOGen has no 2021 or 2022 release);
+the four-generation chain can. The margin is positive in 35 of
+the 36 cells and decays with the temporal gap (from +0.0984 at 83
+days to +0.0376 at 4.6 years).
+
+**What is NOT changed.** No pre-registered endpoint, interval or verdict is
+touched; Controls 35 and 36 are registered in the amendment-4 family (see
+A4.6).
+

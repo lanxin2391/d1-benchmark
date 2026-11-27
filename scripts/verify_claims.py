@@ -49,6 +49,34 @@ sys.path.insert(0, str(ROOT))
 # ---------------------------------------------------------------- the claims
 # (claim_id, file under docs/, a string that MUST appear, what it is)
 CLAIMS: list[tuple[str, str, str, str]] = [
+    # ---- Controls 35 and 36: GraphSAGE and the temporal matrix ----
+    ("control35.section", "manuscript_a_sections.md",
+     "### F.35 Control 35", "\u00a7F.35 must report the GraphSAGE control"),
+    ("control35.section.draft", "research_report_draft.md",
+     "### 3.31 A real GraphSAGE control",
+     "\u00a73.31 must report the GraphSAGE control"),
+    ("control35.reading", "manuscript_a_sections.md",
+     "diffusion > random-walk embedding > GraphSAGE",
+     "\u00a7F.35 must state the ordering"),
+    ("control36.section", "manuscript_a_sections.md",
+     "### F.36 Control 36", "\u00a7F.36 must report the temporal matrix"),
+    ("control36.section.draft", "research_report_draft.md",
+     "### 3.32 The temporal transfer matrix",
+     "\u00a73.32 must report the temporal matrix"),
+    ("control36.reading", "manuscript_a_sections.md",
+     "does **not**\nvanish when the positives were curated years after the seeds",
+     "\u00a7F.36 must state the decay reading"),
+    ("control35.facts", "report_1118_facts.md",
+     "## 7r. A real GraphSAGE control (Control 35)",
+     "the facts sheet must carry Control 35"),
+    ("control36.facts", "report_1118_facts.md",
+     "## 7s. The temporal transfer matrix (Control 36)",
+     "the facts sheet must carry Control 36"),
+    ("control35.qa", "report_1118_qa_bank.md",
+     "### B36", "the question bank must carry Control 35"),
+    ("control36.qa", "report_1118_qa_bank.md",
+     "### B37", "the question bank must carry Control 36"),
+
     # ---- items 13 and 14: the protocol and the clinical boundary ----
     ("protocol.section", "manuscript_a_sections.md",
      "### M.1 The protocol", "\u00a7M.1 must state the protocol"),
@@ -637,6 +665,26 @@ def main(argv: list[str] | None = None) -> int:
          r"\| precision in the top 10 % of the test set \| (\+0\.\d{4}) \|",
          ("co_primary_endpoint", "precision in the top 10 %: median margin"),
          0.0002),
+
+        # ---- Controls 35 and 36 ----
+        ("control 35 the GraphSAGE median margin", "manuscript_a_sections.md",
+         r"\| a real GraphSAGE \(self-supervised\) \| ([\u2212\-+]?0\.\d{4}) \|",
+         ("control35_graphsage", "the median margin against degree"), 0.0006),
+        ("control 35 the GraphSAGE arms positive", "manuscript_a_sections.md",
+         r"\| a real GraphSAGE \(self-supervised\) \| [\u2212\-+]?0\.\d{4} \| (\d+)/24 \|",
+         ("control35_graphsage", "the arms positive"), 0.5),
+        ("control 35 the Node2Vec median margin", "manuscript_a_sections.md",
+         r"the Node2Vec arm \(the paper's .GNN., p = q = 1\) \| ([\u2212\-+]?0\.\d{4})",
+         ("control35_graphsage", "the Node2Vec arm: the median margin"), 0.0006),
+        ("control 36 the cells positive", "manuscript_a_sections.md",
+         r"positive in \*\*(\d+) of the\s*(\d+) cells\*\*",
+         ("control36_temporal", "the cells positive"), 0.5),
+        ("control 36 the 2019->2020 median margin", "manuscript_a_sections.md",
+         r"\| 2019->2020 \| \d+\.\d+ \| ([\u2212\-+]?0\.\d{4}) \|",
+         ("control36_temporal", "2019->2020: the median margin"), 0.0006),
+        ("control 36 the 2020->2024 median margin", "manuscript_a_sections.md",
+         r"\| 2020->2024 \| \d+\.\d+ \| ([\u2212\-+]?0\.\d{4}) \|",
+         ("control36_temporal", "2020->2024: the median margin"), 0.0006),
 
         # ---- items 13 and 14: the protocol numbers ----
         ("protocol the matched-null share", "manuscript_a_sections.md",

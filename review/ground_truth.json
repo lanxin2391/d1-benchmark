@@ -6872,5 +6872,180 @@
   "value": 4294,
   "source": "c32_pathway_enrichment_drivers.tsv",
   "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the median margin against degree",
+  "value": 0.0049,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the arms positive",
+  "value": 13,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the arms",
+  "value": 24,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the smallest margin",
+  "value": -0.0243,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the largest margin",
+  "value": 0.0546,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the median GraphSAGE AUROC",
+  "value": 0.641,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the median degree AUROC",
+  "value": 0.6391,
+  "source": "c35_graphsage_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the Node2Vec arm: the median margin",
+  "value": 0.0283,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the Node2Vec arm: the arms positive",
+  "value": 19,
+  "source": "gnn_courtesy_arm.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the RWR prior: the median margin",
+  "value": 0.0809,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control35_graphsage",
+  "scope": "the RWR prior: the arms positive",
+  "value": 23,
+  "source": "a4_table1_delta_auroc_v40.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "the cells positive",
+  "value": 35,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "the cells",
+  "value": 36,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2019->2020: the median margin",
+  "value": 0.0984,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2019->2020: the cells positive",
+  "value": 6,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2019->2023: the median margin",
+  "value": 0.058,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2019->2023: the cells positive",
+  "value": 6,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2019->2024: the median margin",
+  "value": 0.0482,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2019->2024: the cells positive",
+  "value": 6,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2020->2023: the median margin",
+  "value": 0.044,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2020->2023: the cells positive",
+  "value": 6,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2020->2024: the median margin",
+  "value": 0.0376,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2020->2024: the cells positive",
+  "value": 6,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2023->2024: the median margin",
+  "value": 0.0444,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
+ },
+ {
+  "quantity": "control36_temporal",
+  "scope": "2023->2024: the cells positive",
+  "value": 5,
+  "source": "c36_temporal_summary.tsv",
+  "note": ""
  }
 ]

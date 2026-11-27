@@ -522,7 +522,7 @@ release manifest and runs an end-to-end smoke arm (50 PASS / 0 FAIL at
 the time of writing). `scripts/recompute_ground_truth.py` recomputes
 every headline number from the released tables into
 `review/ground_truth.tsv`, and `scripts/verify_claims.py` checks the
-manuscript against that table (279 PASS / 0 FAIL). The second mechanism
+manuscript against that table (297 PASS / 0 FAIL). The second mechanism
 was added after a review pass found eleven places where the manuscript
 prose had drifted from the released tables; it is a mechanical guard
 against that class of error recurring.
@@ -2493,6 +2493,118 @@ removed:
   overlaps the real-input ranking by 1.9 % in the top 100, so the learner
   is genuinely reading its input.
 
+### 3.31 A real GraphSAGE control
+
+Control 35: a real GraphSAGE control
+
+The GNN arm in this paper is a self-written Node2Vec with p = q = 1, that
+is the DeepWalk limit, and it was found to have four protocol defects
+(amendment 3). The obvious question is whether the comparison survives a
+*real* GraphSAGE. Control 35 implements GraphSAGE properly (Hamilton,
+Ying & Leskovec, 2017): two layers, mean aggregation, a learnable
+self-feature and a learnable neighbour feature, an identity embedding
+table (a gene network has no node features), and the **same readout rule
+as the existing GNN arm** -- the cosine between a gene's embedding and the
+centroid of the training positives' embeddings -- so the two arms are
+directly comparable.
+
+The objective is **self-supervised** on the network's own edges (link
+prediction against sampled non-edges). A supervised version was tried
+first and collapsed: with a learnable identity embedding table the
+embedding of every training positive is a free parameter, so the model
+reaches zero loss by memorisation and its test AUROC is exactly chance
+(0.500 in every arm). Self-supervision removes the memorisation channel,
+so the embeddings can only encode the structure.
+
+| the method | the median margin against degree | the arms positive |
+|---|---|---|
+| the RWR prior (the headline) | **+0.0809** | 23/24 |
+| the Node2Vec arm (the paper's "GNN", p = q = 1) | +0.0283 | 19/24 |
+| a real GraphSAGE (self-supervised) | +0.0049 | 13/24 |
+
+**Reading.** **The conclusion does not change, and the ordering is
+diffusion > random-walk embedding > GraphSAGE.** The GraphSAGE's margin
+is +0.0049 (the range -0.0243 to +0.0546, positive in
+13 of 24 arms), with a median AUROC of 0.641 against the
+degree baseline's 0.639; the diffusion prior is an order of
+magnitude larger on the same endpoint.
+
+The honest reading of *why* is not "GNNs are bad here". On a graph with
+no node features, a mean-aggregating GNN has very little to work with:
+its input is the identity, and the mean aggregation smooths whatever the
+embedding holds towards the neighbourhood average, which on a degree-
+skewed gene graph is close to the degree itself. The random-walk
+embedding of the existing arm keeps the multi-step structure and does
+better, and the diffusion prior keeps it and uses it. So the comparison
+in the paper was never flattering to the diffusion prior, and a real
+GraphSAGE would have been the least favourable of the three.
+
+**Caveats.** Ten folds per arm (sampled evenly from the 200 folds of the
+40-repeat design) because each fold is a full GraphSAGE training run;
+the Node2Vec column is the released 50-fold mean and the RWR column the
+released 200-fold mean. The arm needs PyTorch (2.3.1+cpu here) and is
+therefore self-contained: the rest of the benchmark does not need it.
+**Exploratory** (amendment 4): no pre-registered endpoint is touched.
+
+(`scripts/run_c35_graphsage.py`; `results/tables/c35_graphsage.tsv`,
+`results/tables/c35_graphsage_summary.tsv`;
+`docs/c35_graphsage.md`.)
+
+### 3.32 The temporal transfer matrix
+
+Control 36: the temporal transfer matrix
+
+IntOGen has no 2021 or 2022 release, so the plan's per-year split cannot
+be built from it; what the catalogue offers is a **four-generation chain**
+(2019-11-12, 2020-02-01, 2023-05-31, 2024-09-20). Control 36 turns the
+chain into a transfer matrix: for every (train year, test year) pair the
+seeds are the drivers known in the train-year release, the test positives
+are the drivers present in the test-year release but absent from the
+train-year release, and the endpoint is the delta-AUROC of the prior
+against the degree baseline on the same test genes (10 bootstrap
+draws of the seed set per cell).
+
+| the pair | the gap in years | the median margin | the cells positive |
+|---|---|---|---|
+| 2019->2020 | 0.22 | +0.0984 | 6/6 |
+| 2019->2023 | 3.55 | +0.0580 | 6/6 |
+| 2019->2024 | 4.86 | +0.0482 | 6/6 |
+| 2020->2023 | 3.33 | +0.0440 | 6/6 |
+| 2020->2024 | 4.64 | +0.0376 | 6/6 |
+| 2023->2024 | 1.30 | +0.0444 | 5/6 |
+
+**Reading.** **The network still helps for genes curated years after the
+seeds, but less.** The margin is positive in **35 of the
+36 cells** and decays with the temporal gap: a median of +0.0984
+at 83 days (the consistency check: two catalogues three months apart),
++0.0444 at 1.3 years, +0.0440 and +0.0580 at 3.3 and 3.6 years, and
++0.0376 and +0.0482 at 4.6 and 4.9 years. The single non-positive cell
+is `reactome 2023->2024` (-0.0005, i.e. zero), and it is in the network
+whose coverage of the newest drivers is the weakest (F.13, the 41 % LCC
+coverage) -- the same explanation the paper already gives for that
+network's weak cell.
+
+**What this means for the claim.** It is the sharpest answer available to
+the question the defence asked: the network's contribution does **not**
+vanish when the positives were curated years after the seeds, it decays
+to about half of its short-gap value, and the decay is smooth rather than
+a cliff. For a user the practical reading is that a network prior built
+from a catalogue is a better guide to *recently curated* drivers than to
+old ones, and that the gap between the catalogue's date and the
+experiment's date should be reported with any candidate list.
+
+**Caveats.** The test positives are the newly curated genes, which are
+few in each cell, so the per-cell AUROC is noisier than the primary
+endpoint (which is why each cell is repeated with bootstrap seed draws).
+The 2019->2020 pair is 83 days apart and is a consistency check rather
+than a decay step. **Exploratory** (amendment 4): no pre-registered
+endpoint is touched.
+
+(`scripts/run_c36_temporal_matrix.py`;
+`results/tables/c36_temporal_matrix.tsv`,
+`results/tables/c36_temporal_summary.tsv`;
+`docs/c36_temporal_matrix.md`.)
+
 ### 4.2 From the network to the experiment: an executable protocol
 
 The teacher's question after the defence was what one would actually do
@@ -2754,7 +2866,7 @@ paper was produced by a model.
 **Anything a model touches has to be machine-verifiable.** Our review
 passes exposed how easy it is for prose to drift away from the tables, so
 we replaced human cross-checking with two audit scripts (136 and 71
-checks) and a ground-truth table of 982 recomputed quantities.
+checks) and a ground-truth table of 1007 recomputed quantities.
 
 **A model inherits the bias of the training set, which is why the
 unfavourable controls have to be run by us.** The model proposes
@@ -2830,10 +2942,10 @@ from size and coverage.
 
 * **Pre-registration.** Zenodo DOI [10.5281/zenodo.23121762](https://doi.org/10.5281/zenodo.23121762), frozen at commit `d9c68e5`. Amendments 1–6 in `docs/pre_registration_amendments.md`.
 * **Code, split files, result tables and figures.** <https://github.com/lanxin2391/d1-benchmark>, tag `v1.0-rc14`. Release manifest with SHA-256 of every tracked table and figure (211 tables + 15 figures): `docs/release_manifest_v1.0-rc14.json`; verify with `python scripts/build_release_manifest.py --release v1.0-rc14 --check`.
-* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (279 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
+* **Reproduction.** `conda env create -f environment.yml && conda activate d1 && pip install -e . && pytest` (134 passed); `python scripts/audit_reproducibility.py` (50 PASS / 0 FAIL); `python scripts/verify_claims.py` (297 PASS / 0 FAIL); `python scripts/verify_report.py` (71 PASS / 0 FAIL).
 * **Co-primary endpoints.** `results/tables/pauc_top10.tsv`, `pauc_top10_summary.tsv`, `docs/pauc_top10.md`.
 * **Per-control tables.** `results/tables/control8_seed_degree_summary.tsv`, `control9_size_adjustment.tsv`, `control9_size_model.tsv`, `control10_random_input_summary.tsv`; the pre-existing controls in `a5_p_values.tsv`, `w5_p_values.tsv`, `d09_table.tsv`, `d11_table.tsv`, `d12_table.tsv`, `d3_split_invariants.tsv`, `d4_v1_vs_v2_comparison.tsv`, `control7_matched_null.tsv`.
-* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (982 recomputed quantities) and `review/verification_report.txt`.
+* **Ground truth and manuscript verification.** `review/ground_truth.tsv` (1007 recomputed quantities) and `review/verification_report.txt`.
 
 ## Author contributions
 
