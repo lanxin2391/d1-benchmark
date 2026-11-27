@@ -45,6 +45,47 @@ paper already uses (the Kruskal-Wallis test across classes, and the
 per-network margin spread within a class). The released panel's six
 networks stay as they are until this run is read out.
 
+## The read-out (10 repeats, alpha = 0.5, 16 arms)
+
+All 16 arms are positive (the margin runs from +0.0157 to +0.1642). With
+the new members, the **within-class** behaviour can finally be compared
+with the released panel:
+
+| label | the protein class (the median over its networks) | the RNA class |
+|---|---|---|
+| intogen2024 | +0.1099 | +0.0629 |
+| intogen_temporal_new | +0.0646 | +0.0308 |
+| ot_all | +0.1115 | +0.0718 |
+| ot_nolit | +0.1212 | +0.0843 |
+
+Two things follow, and they point the same way as the released panel.
+
+1. **The class effect survives the extra networks.** The protein-derived
+   networks have a larger margin than the RNA-derived ones in **all four
+   labels**, which is the pattern the released panel already showed (the
+   RNA network was the weakest in every label). It is now visible with
+   four members in a class rather than with one.
+2. **But the class effect is still not separable from the within-class
+   spread.** The protein class's own spread inside a label is of the same
+   size as the gap between the classes (for intogen2024: the protein class
+   runs from +0.0871 to +0.1328, a spread of 0.046, against a gap of
+   0.047 between the class medians). That is exactly the reason the
+   paper's H2 is stated as *not testable* on six networks, and it is now
+   visible with more members rather than less.
+
+**So the collection does not rescue H2; it makes the reason visible.**
+The next step for H2 is not more networks of the same kind but networks
+that are matched on size and coverage *and* differ in provenance --
+which is why the curated class still has only three members.
+
+Note the size effect inside the protein class as well: string_full900
+(100,383 edges) gives the largest margins (+0.1425 at the median) and
+string_full400 (929,471 edges) a smaller one (+0.0744), so network
+density moves the margin by more than the provenance class does. The
+released panel's conclusion -- that provenance is confounded with size
+and coverage -- is therefore confirmed, and now with a within-class
+measurement that has four members in the class.
+
 ## Caveats
 
 1. The new networks are **not** in the released panel yet; the release
