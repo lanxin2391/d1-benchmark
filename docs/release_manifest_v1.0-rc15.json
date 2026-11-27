@@ -1,12 +1,7 @@
 {
   "release": "v1.0-rc15",
-  "commit": "f433963ab5a2aaa24f68c7c9b4585920c86a20a2",
-  "artefacts_absent_from_that_commit": [],
-  "built_by": "scripts/build_release_manifest.py",
-  "note": "The pre-registration manifest (docs/pre_registration_manifest.json) is frozen and records the state filed with Zenodo; the fingerprint mismatches the audit reports are the expected consequence of the repairs that recomputed those tables. This file is the release's own record. The hashes below describe the files in the working tree at the commit named above; a reader can check them with scripts/check_release_manifest.py.",
-  "n_tables": 216,
-  "n_figures": 15,
-  "missing_at_build_time": [],
+  "commit": "26615862aeb8e4444b2b8d35238d1e0fce7b7e3d",
+  "note": "The pre-registration manifest (docs/pre_registration_manifest.json) is frozen and records the state filed with Zenodo; the fingerprint mismatches the audit reports are the expected consequence of the P0 repairs. This file is the release's own record.",
   "sha256_tables": {
     "results/tables/a4_table1_degree_auroc.tsv": "cc869d344e51a51a7b821e9172cfa2e09592ca72b339aa987c96a574a3801184",
     "results/tables/a4_table1_degree_auroc_cap.tsv": "b2f8c7c7cccb64b010964f96efa4d66018fdaf36e48b261dd1e806d74c7f4723",

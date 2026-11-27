@@ -1,6 +1,6 @@
 # D1 benchmark — v1.0-rc14 release note
 
-**Release commit:** `267298aab3e03389809df8d340cc22e20eeb4d10`
+**Release commit:** `8246adaefbb264ce919913da4df52129e295593e`
 **Built:** 2026-11-26
 **Zenodo DOI:** *pending* — the three zips have to be uploaded from a
 browser, and Zenodo mints the DOI at that point. The pre-registration
@@ -17,15 +17,15 @@ browser, and Zenodo mints the DOI at that point. The pre-registration
 | E3 | the hub-capped RWR: the headline is not a hub effect, but two thirds of the raw margin sits in the hubs' ranking position |
 | P1 | the rewiring metadata now records the swaps that were executed, and the mixing was measured |
 
-### The three zips (v1.0-rc14)
+### The three zips (v1.0-rc15)
 
 | file | the size | the SHA-256 |
 |---|---|---|
-| `release/d1-benchmark-v1.0-results.zip` | 53.6 MB | `5ff75ab105508c320b27538aa4cb3e84320d22c99b6b6c3de0395482e855c23d` |
-| `release/d1-benchmark-v1.0-source.zip` | 272.5 MB | `2fd63ac1508971593352eb2f97746ef6481f899824b18ea8ab4360f7cab58dcb` |
-| `release/d1-benchmark-v1.0-splits.zip` | 142.1 MB | `76d3a91152148019edcc415437ade7f5c512d1385b6d2eda6d2379bc925dc28d` |
+| `release/d1-benchmark-v1.0-results.zip` | 53.6 MB | `ece05b5a520b31a49e21690d229b2bca7204f233f726d607908b333d929c9629` |
+| `release/d1-benchmark-v1.0-source.zip` | 272.6 MB | `d3b31e622ca2910d976f189702ac8b2c76d0ff840f5878e4d33cfb138e987a8f` |
+| `release/d1-benchmark-v1.0-splits.zip` | 142.1 MB | `c78ba6268dfef22ca9431d56e77719340291de83062b8ea418cd57b2a9a9d541` |
 
-They are built from the tag with `python scripts/build_zenodo_release.py --tag v1.0-rc14`; the upload to Zenodo (and the DOI that Zenodo mints) is a manual step.
+They are built from the tag with `python scripts/build_zenodo_release.py --tag v1.0-rc15`; the upload to Zenodo (and the DOI that Zenodo mints) is a manual step.
 
 ## What changed since v1.0-rc13
 
