@@ -132,6 +132,9 @@ COMPAT = [
     ("min(args.cores, mp.cpu_count)", "min(args.cores, mp.cpu_count())"),
     # h5py 2 read the dataset value with .value
     ("f[key].value", "f[key][()]"),
+    # the numpy aliases removed in numpy 1.24
+    ("np.int)", "int)"), ("np.float)", "float)"),
+    ("np.bool)", "bool)"),
     # the network name comes back from the HDF5 file as a byte string and
     # has to be a string before it can be a dictionary key
     ("        graph_map[network_name] = G",
@@ -276,9 +279,9 @@ def clone_and_port() -> Path:
 def run_hotnet2(net: str, snv: Path) -> pd.DataFrame | None:
     """The HotNet2 run for one network; the per-gene scores."""
     outdir = WORK / "out" / net
-    score_file = outdir / "hotnet2_results.csv"
+    score_file = outdir / "gene_scores.tsv"
     if score_file.exists():
-        return pd.read_csv(score_file)
+        return pd.read_csv(score_file, sep="\t")
     clone_and_port()
     idx_file, edge_file = build_network_files(net)
     netdir = WORK / "net" / net
@@ -290,7 +293,7 @@ def run_hotnet2(net: str, snv: Path) -> pd.DataFrame | None:
         r = subprocess.run([str(PY), str(CLONE / "makeHeatFile.py"),
                             "mutation", "--snv_file", str(snv),
                             "--sample_file", str(WORK / "mc3_samples.txt"),
-                            "-o", str(heat_file)],
+                            "-n", "mc3", "-o", str(heat_file)],
                            capture_output=True, text=True,
                            encoding="utf-8", errors="replace", cwd=str(CLONE))
         if not heat_file.exists():
@@ -317,19 +320,46 @@ def run_hotnet2(net: str, snv: Path) -> pd.DataFrame | None:
     outdir.mkdir(parents=True, exist_ok=True)
     log(f"  running HotNet2 on {net}")
     t0 = time.time()
+    # the permuted networks are addressed by a template with the
+    # upstream's iteration token
+    pnp = str(perm_dir / f"net_ppr_{BETA}_##NUM##.h5")
     r = subprocess.run(
         [str(PY), str(CLONE / "HotNet2.py"),
          "-nf", str(netdir / f"net_ppr_{BETA}.h5"),
-         "-pnp", str(perm_dir),
+         "-pnp", pnp,
          "-hf", str(heat_file),
-         "-o", str(outdir)],
+         "-o", str(outdir),
+         "-np", str(N_PERM), "-hp", str(N_PERM)],
         capture_output=True, text=True, encoding="utf-8", errors="replace",
         cwd=str(CLONE))
-    if not score_file.exists():
+    viz = outdir / f"{net}-mc3" / "viz-data.json"
+    if not viz.exists():
         log(f"  HotNet2 failed: {r.stdout[-400:]} / {r.stderr[-400:]}")
         return None
     log(f"    done in {time.time() - t0:.0f}s")
-    return pd.read_csv(score_file)
+    return read_scores(viz)
+
+
+def read_scores(viz: Path) -> pd.DataFrame:
+    """The per-gene HotNet2 score.
+
+    The upstream writes the heat values of the selected subnetworks into
+    viz-data.json; a gene's score is the largest heat value among the
+    subnetworks it belongs to (the best subnetway for that gene).
+    """
+    import json
+    data = json.loads(viz.read_text(encoding="utf-8"))
+    best: dict[str, float] = {}
+    for delta, subnets in (data.get("subnetworks") or {}).items():
+        for sn in subnets:
+            for node in sn.get("nodes", []):
+                g = node.get("name")
+                v = float(node.get("value", 0.0))
+                if g is None:
+                    continue
+                if g not in best or v > best[g]:
+                    best[g] = v
+    return pd.DataFrame({"gene": list(best), "score": list(best.values())})
 
 
 def main() -> int:
@@ -347,13 +377,14 @@ def main() -> int:
         scores = run_hotnet2(net, snv)
         if scores is None:
             continue
-        log(f"  {net}: the scores are {scores.shape} {list(scores.columns)[:6]}")
+        scores.to_csv(WORK / "out" / net / "gene_scores.tsv", sep="\t",
+                      index=False)
+        log(f"  {net}: the scores are {scores.shape}")
         # the gene -> score mapping
         gene_col = next((c for c in scores.columns
                          if c.lower() in ("gene", "genes", "symbol")), None)
         score_col = next((c for c in scores.columns
-                          if "score" in c.lower() and "p" not in c.lower()
-                          [:3]), None)
+                          if c.lower() == "score"), None)
         if gene_col is None or score_col is None:
             log(f"  {net}: the score columns are {list(scores.columns)[:10]}")
             continue
@@ -367,14 +398,17 @@ def main() -> int:
             if not lab_path.exists():
                 continue
             pos = set(pd.read_csv(lab_path, sep="\t", dtype=str)["gene"])
-            pos = {g for g in pos if g in gset and g in mapping}
-            neg = [g for g in genes if g not in pos and g in mapping]
+            pos = sorted(g for g in pos if g in gset)
+            neg = sorted(g for g in genes if g not in set(pos))
             if len(pos) < 10 or len(neg) < 100:
                 continue
-            sc = np.array([mapping[g] for g in pos + neg])
+            # a gene that is in no significant subnetwork has no heat
+            # score, which is a score of zero
+            sc = np.array([mapping.get(g, 0.0) for g in pos + neg])
             labels = np.concatenate([np.ones(len(pos)), np.zeros(len(neg))])
             ev_h = evaluate(sc, labels, np.arange(len(sc)))
-            d = np.array([deg[g] for g in pos + neg])
+            degmap = dict(zip(genes, deg))
+            d = np.array([degmap[g] for g in pos + neg])
             ev_d = evaluate(d, labels, np.arange(len(d)))
             rows.append({
                 "network": net, "label": label, "n_positives": len(pos),
