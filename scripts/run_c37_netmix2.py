@@ -74,13 +74,16 @@ def heat_scores() -> pd.DataFrame:
         for g in str(genes).split("\t"):
             counts[g] = counts.get(g, 0) + 1
     out = pd.DataFrame({"gene": list(counts), "heat": list(counts.values())})
-    # NetMix2 takes z-scores (its local-FDR step fits the null from
-    # them), so the mutation heat is standardised on the log scale
+    # NetMix2 takes p-values (its local-FDR step computes the z-scores
+    # itself), and the local FDR needs a smooth null: the empirical rank
+    # has far too many ties, so the mutation burden gets the upper tail of
+    # a Poisson with the panel's mean burden.
+    from scipy import stats as sps
     out = out[np.isfinite(out.heat.values.astype(float))
               & (out.heat.values.astype(float) >= 0)]
-    lg = np.log1p(out.heat.values.astype(float))
-    mu, sd = lg.mean(), lg.std()
-    out["z"] = (lg - mu) / (sd if sd > 0 else 1.0)
+    lam = float(out.heat.mean())
+    p = sps.poisson.sf(out.heat.values.astype(float) - 1, lam)
+    out["p"] = np.clip(p, 1e-300, 1.0)
     return out
 
 
@@ -94,7 +97,7 @@ def main() -> int:
         return 1
     log(f"the gene scores: {len(scores):,} genes with a mutation heat")
     score_file = WORK / "gene_scores.tsv"
-    scores[["gene", "z"]].to_csv(score_file, sep="\t", index=False,
+    scores[["gene", "p"]].to_csv(score_file, sep="\t", index=False,
                                   header=False)
 
     rows = []
@@ -114,10 +117,12 @@ def main() -> int:
         # upstream turns a missing gene into a NaN z-score, which breaks
         # the local-FDR step
         genes_net, _ = load_network(str(net_file))
-        zmap = dict(zip(scores.gene, scores.z))
+        zmap = dict(zip(scores.gene, scores.p))
         per_net = WORK / f"{net}_scores.tsv"
+        # a gene the score file does not cover gets the maximum p-value,
+        # which is the neutral value
         per_net.write_text("".join(
-            f"{g}	{zmap.get(g, 0.0):.6f}\n" for g in genes_net),
+            f"{g}\t{zmap.get(g, 1.0):.6g}\n" for g in genes_net),
             encoding="utf-8")
         log(f"  running NetMix2 on {net}")
         t0 = time.time()

@@ -81,3 +81,40 @@ positives.
   step, where the upstream's z-score handling produces NaNs for the genes
   it does not find in the score file. That is the last mile, and it is a
   debugging pass rather than a porting project.
+
+## NetMix2: how far it runs, and what it needs (2026-11-28)
+
+The pipeline is **complete up to the integer program**:
+
+1. the MC3 TCGA MAF → the per-gene mutation heat (19,687 genes) ✓;
+2. the heat → the p-values NetMix2's local-FDR step wants ✓ (the
+   upper tail of a Poisson with the panel's mean burden; the empirical
+   rank has too many ties and makes the local FDR degenerate) ✓;
+3. one score file per network, covering **every** gene of that network
+   (a gene the file does not cover becomes a NaN z-score upstream and
+   breaks the histogram) ✓;
+4. the upstream driver: the network load ✓, the local FDR ✓, the
+   personalised-PageRank kernel ✓, the similarity-threshold graph ✓;
+5. **the integer program** ✗ — both subnetwork families (the
+   propagation / edge-dense one and the cut one) are Gurobi models, and
+   the free size-limited licence (2,000 variables) rejects a network of
+   even 3,953 nodes.
+
+So the remaining need is **a full Gurobi licence** (free for academics,
+a request form, usually a few days). With it, the panel runs unchanged.
+
+The two fallbacks, if a licence is not wanted:
+
+* run the arm on a **trimmed network** (a sub-network of about 1,500
+  nodes fits the size-limited licence) and say so — the arm then
+  measures the method on a smaller universe, which is a caveat, not the
+  method as published;
+* use NetMix2's **local-FDR component alone** (the per-gene
+  significance from the mutation heat) as the mutation-first score, and
+  label it as *a component of NetMix2*, not as NetMix2.
+
+What is already true, from the HotNet2 arm: a mutation-first strategy
+whose evidence is independent of the labels does **not** recover the
+catalogue's positives, while the network prior does (the same arm:
+the mutation score −0.05 to −0.22 against the degree baseline, the
+network prior +0.11).
