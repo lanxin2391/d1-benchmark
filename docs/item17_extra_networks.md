@@ -86,6 +86,26 @@ released panel's conclusion -- that provenance is confounded with size
 and coverage -- is therefore confirmed, and now with a within-class
 measurement that has four members in the class.
 
+## The fourth curated member: BioGRID, size-matched to FunMap
+
+The class effect cannot be separated from the network's size, because every
+class happens to sit at its own scale. The fourth curated member is
+therefore built **at FunMap's scale**: the BioGRID curated physical
+interactions of human (an independent curation source -- not IntAct, not
+Reactome, not FunMap), sub-sampled to the number of edges FunMap has
+(196,605), which leaves **190,285 edges over 15,218 nodes** against
+FunMap's 196,605 over 10,189.
+
+Its margins on the primary endpoint (10 repeats, alpha = 0.5):
+intogen2024 +0.0492, ot_all +0.0421, ot_nolit +0.0471, the newest drivers
++0.0177 -- positive everywhere, and smaller than FunMap's, which is what
+the size-and-structure account predicts.
+
+**So the collection is done.** Every class now has members inside a
+comparable size band, and the remaining step for H2 is the
+pre-registered adjusted test (the machinery of Control 38) run on the
+extended panel -- not another collection round.
+
 ## Caveats
 
 1. The new networks are **not** in the released panel yet; the release

@@ -1,0 +1,101 @@
+network	label_set	universe	alpha	repeat	fold	method	n_iter	auroc	auprc	p_at_50	p_at_100	p_at_500	n_test_pos	n_test
+biogrid_curated	ot_all	native_biogrid_curated		0	0	degree		0.6848035500982571	0.08172104342205959	0.12	0.15	0.084	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		0	1	degree		0.6290137688326034	0.06205716703514329	0.08	0.09	0.07	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		0	2	degree		0.7005447735784813	0.11768699517217268	0.2	0.16	0.098	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		0	3	degree		0.6267096446765729	0.06168923019454948	0.04	0.09	0.068	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		0	4	degree		0.6660563660775659	0.07098777043453215	0.14	0.11	0.06	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		1	0	degree		0.6881735104101109	0.09212701812676463	0.1	0.11	0.084	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		1	1	degree		0.6699269172970959	0.09982090124177224	0.18	0.2	0.074	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		1	2	degree		0.6391065967879997	0.06855734826191169	0.14	0.09	0.078	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		1	3	degree		0.6489888282871111	0.07059652788744737	0.04	0.13	0.082	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		1	4	degree		0.6620733517065931	0.06937868380109771	0.12	0.1	0.062	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		2	0	degree		0.6265059660659928	0.09039629435006144	0.18	0.16	0.072	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		2	1	degree		0.6878524089035025	0.08607819820260137	0.08	0.1	0.078	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		2	2	degree		0.6542724313384819	0.08276606001143927	0.12	0.13	0.078	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		2	3	degree		0.6956768233533126	0.07895812415400955	0.08	0.11	0.09	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		2	4	degree		0.6414869492037184	0.06404499972220111	0.1	0.09	0.058	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		3	0	degree		0.6580301064772597	0.0779604185536755	0.1	0.12	0.066	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		3	1	degree		0.6763425253991292	0.07170741848345645	0.06	0.12	0.088	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		3	2	degree		0.6368886809924298	0.07195007493299414	0.1	0.09	0.074	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		3	3	degree		0.6643202215069928	0.07577501604771172	0.12	0.14	0.072	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		3	4	degree		0.6705806207078202	0.09250204230168955	0.16	0.13	0.082	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		4	0	degree		0.6447124214906816	0.08601957792955062	0.14	0.12	0.078	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		4	1	degree		0.6629108493777053	0.10594807445214535	0.26	0.19	0.074	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		4	2	degree		0.6589214628697985	0.07501039239071314	0.1	0.1	0.078	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		4	3	degree		0.6661109719197487	0.06576905634600033	0.04	0.1	0.072	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		4	4	degree		0.6735743057027772	0.07560174308709142	0.06	0.09	0.07	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		5	0	degree		0.6561259745430725	0.0782531163099497	0.1	0.1	0.072	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		5	1	degree		0.6720574257934419	0.07759736645285782	0.06	0.12	0.078	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		5	2	degree		0.6393834385013635	0.06447570138010814	0.12	0.1	0.068	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		5	3	degree		0.6951404012565767	0.1029387448797679	0.22	0.16	0.082	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		5	4	degree		0.6431524273902904	0.065860279067772	0.04	0.13	0.072	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		6	0	degree		0.6996721553617529	0.08496573249107256	0.12	0.15	0.084	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		6	1	degree		0.6918950768717007	0.08909880911595687	0.16	0.12	0.082	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		6	2	degree		0.6462599320942279	0.08855155200570455	0.1	0.13	0.086	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		6	3	degree		0.6297049357257116	0.06214345090579841	0.08	0.08	0.056	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		6	4	degree		0.6408589820186175	0.07010527351494023	0.12	0.13	0.066	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		7	0	degree		0.65346404305329	0.06236768415378115	0.08	0.09	0.076	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		7	1	degree		0.6708324235457312	0.06576589692875341	0.08	0.09	0.074	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		7	2	degree		0.6622992499817029	0.09616346747353373	0.14	0.15	0.078	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		7	3	degree		0.6617376863825877	0.09093123997810715	0.14	0.19	0.072	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		7	4	degree		0.6597092399509191	0.08912870451201553	0.08	0.1	0.074	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		8	0	degree		0.666939067778106	0.07863501459308193	0.06	0.13	0.074	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		8	1	degree		0.6488755025238578	0.07679607761439378	0.12	0.13	0.06	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		8	2	degree		0.7094609860019919	0.10581163856011908	0.2	0.14	0.094	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		8	3	degree		0.6487575564849256	0.06789950417622345	0.06	0.1	0.08	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		8	4	degree		0.6330535586948561	0.07393915635037981	0.12	0.1	0.068	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		9	0	degree		0.6359993321088662	0.06387832793879865	0.08	0.09	0.066	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		9	1	degree		0.6783349602476335	0.10056874826723647	0.12	0.17	0.088	106	3044
+biogrid_curated	ot_all	native_biogrid_curated		9	2	degree		0.6755876522231663	0.09732332671244324	0.14	0.11	0.076	107	3044
+biogrid_curated	ot_all	native_biogrid_curated		9	3	degree		0.6538840814333713	0.06749750320291517	0.04	0.08	0.074	106	3043
+biogrid_curated	ot_all	native_biogrid_curated		9	4	degree		0.6619561097513186	0.07481276270677531	0.14	0.15	0.076	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	0	0	rwr	21.0	0.7166375534634009	0.10668136578697987	0.18	0.2	0.096	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	0	1	rwr	21.0	0.6741429800788625	0.07880698229069152	0.12	0.09	0.082	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	0	2	rwr	21.0	0.7419914783665702	0.1495689671612922	0.3	0.19	0.108	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	0	3	rwr	21.0	0.6575924605392487	0.08127184878053335	0.16	0.16	0.088	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	0	4	rwr	21.0	0.7045872119541825	0.09066374418639557	0.16	0.14	0.09	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	1	0	rwr	21.0	0.7304898724584816	0.12154836223619797	0.14	0.16	0.11	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	1	1	rwr	21.0	0.7131263084886394	0.12468017537986638	0.24	0.21	0.094	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	1	2	rwr	21.0	0.6974708759335453	0.09607203119031987	0.14	0.13	0.092	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	1	3	rwr	21.0	0.6828219656818342	0.08919523849015328	0.2	0.16	0.086	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	1	4	rwr	21.0	0.6972089990427917	0.0977806173690811	0.2	0.11	0.082	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	2	0	rwr	21.0	0.65905442028334	0.11755185270626639	0.26	0.17	0.084	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	2	1	rwr	21.0	0.7344378154822303	0.10218710973889727	0.12	0.14	0.094	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	2	2	rwr	21.0	0.712915143241721	0.11637824335376239	0.24	0.17	0.102	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	2	3	rwr	21.0	0.724858827837416	0.11388641369453217	0.18	0.21	0.104	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	2	4	rwr	21.0	0.6937961339063734	0.09349127794138172	0.16	0.13	0.084	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	3	0	rwr	21.0	0.7107967170581964	0.10310832138411181	0.18	0.18	0.09	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	3	1	rwr	21.0	0.7178753997713757	0.09630858755631816	0.14	0.15	0.094	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	3	2	rwr	21.0	0.6933532532083408	0.10274380298691295	0.18	0.16	0.092	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	3	3	rwr	21.0	0.6975655430711611	0.10615499260880687	0.22	0.17	0.094	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	3	4	rwr	21.0	0.706299265712028	0.11629555315874074	0.22	0.15	0.092	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	4	0	rwr	21.0	0.6898047060636809	0.12525702604420347	0.2	0.19	0.092	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	4	1	rwr	21.0	0.7057714784797771	0.130485737835525	0.28	0.21	0.09	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	4	2	rwr	21.0	0.6996060574239719	0.09240082114920257	0.2	0.13	0.086	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	4	3	rwr	21.0	0.7172300704736574	0.08868538668326434	0.12	0.12	0.098	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	4	4	rwr	21.0	0.7085621960542461	0.10011558622353389	0.18	0.16	0.102	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	5	0	rwr	21.0	0.705337991445856	0.10193441340642093	0.16	0.13	0.088	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	5	1	rwr	21.0	0.7151123213070116	0.10673138587035354	0.14	0.17	0.096	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	5	2	rwr	21.0	0.6782240126774413	0.08599437003405927	0.18	0.12	0.09	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	5	3	rwr	21.0	0.7286137825145669	0.13505875350051363	0.28	0.19	0.104	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	5	4	rwr	21.0	0.6855024701113317	0.0916217301832915	0.14	0.17	0.088	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	6	0	rwr	21.0	0.7316554709274696	0.10641015848997995	0.2	0.18	0.098	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	6	1	rwr	21.0	0.7358105244229807	0.12491420289065894	0.18	0.16	0.106	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	6	2	rwr	21.0	0.6871943206081608	0.11898801649025088	0.18	0.16	0.1	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	6	3	rwr	21.0	0.6637854054644388	0.08374961853113436	0.12	0.11	0.088	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	6	4	rwr	21.0	0.6927730773925389	0.09545376235720673	0.24	0.18	0.08	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	7	0	rwr	21.0	0.7020226183901255	0.09206108977334503	0.18	0.12	0.088	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	7	1	rwr	21.0	0.7115561221213249	0.08615257093829146	0.16	0.1	0.094	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	7	2	rwr	21.0	0.6993546724198829	0.12897055907201113	0.22	0.21	0.104	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	7	3	rwr	21.0	0.7090424062546175	0.12130722536134741	0.24	0.21	0.09	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	7	4	rwr	21.0	0.695252825049306	0.09258730676042781	0.12	0.14	0.088	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	8	0	rwr	21.0	0.7176024634907587	0.11651408878209887	0.22	0.17	0.092	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	8	1	rwr	21.0	0.6855163954429274	0.09557759442359082	0.18	0.16	0.088	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	8	2	rwr	21.0	0.7445610149589987	0.14386217183519726	0.26	0.19	0.108	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	8	3	rwr	21.0	0.6817732123010901	0.08497185727223278	0.12	0.12	0.1	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	8	4	rwr	21.0	0.6839445975549432	0.10162369344219145	0.2	0.15	0.078	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	9	0	rwr	21.0	0.6862838280437211	0.09047571880960992	0.14	0.15	0.084	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	9	1	rwr	21.0	0.7267747280270238	0.1387934017312773	0.22	0.2	0.102	106	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	9	2	rwr	21.0	0.7200923442128945	0.13906893604437914	0.22	0.13	0.096	107	3044
+biogrid_curated	ot_all	native_biogrid_curated	0.5	9	3	rwr	21.0	0.6893345153892112	0.0890888865649887	0.12	0.15	0.094	106	3043
+biogrid_curated	ot_all	native_biogrid_curated	0.5	9	4	rwr	21.0	0.7097699487989927	0.09586172621556807	0.24	0.19	0.09	106	3043

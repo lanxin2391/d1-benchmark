@@ -22,7 +22,7 @@ LABELS_DIR = ROOT / "data/processed/labels"
 SPLIT_DIR = ROOT / "data/processed/splits_extra"
 LABELS = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
 NEW_NETS = ["string_full400", "string_full900", "rna_coexp_d150k",
-            "rna_coexp_d250k"]
+            "rna_coexp_d250k", "biogrid_curated"]
 N_REP = 10
 K = 5
 BASE_SEED = 20260926

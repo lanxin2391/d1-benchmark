@@ -62,3 +62,22 @@ The arm's design is already fixed and independent of the porting: the
 mutation matrix is the MC3 MAF, the network is one of our six, and the
 endpoint is the delta-AUROC against the degree baseline on the label's
 positives.
+
+## NetMix2 (the successor of HotNet2) — 2026-11-27
+
+* the paper: **Ruan et al., *Journal of Computational Biology* 2022, DOI
+  10.1089/cmb.2022.0336** (PMID 36525308, PMC9917315). The full text is
+  in `data/papers/Ruan_2022_NetMix2.html` (and the plain-text extraction
+  next to it); the publisher's PDF is behind a bot check.
+* the code: `raphael-group/netmix2` — **Python 3** (no porting needed) and
+  **no O(n^2) matrix** (which is why it can run on the panel's
+  networks, where HotNet2 could not).
+* the pipeline (`scripts/run_c37_netmix2.py`): the MC3 TCGA MAF → the
+  per-gene mutation heat → the z-scores NetMix2's local-FDR step wants
+  (one score file per network, covering every gene of that network) → the
+  upstream driver → the per-gene score → the same AUROC-against-degree
+  endpoint as every other arm.
+* the state: the inputs are built and the driver runs into the local-FDR
+  step, where the upstream's z-score handling produces NaNs for the genes
+  it does not find in the score file. That is the last mile, and it is a
+  debugging pass rather than a porting project.
