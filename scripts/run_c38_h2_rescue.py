@@ -47,6 +47,8 @@ PROVENANCE = {
     "string_full400": "protein", "string_full900": "protein",
     "rna_coexp": "rna", "rna_coexp_d150k": "rna",
     "rna_coexp_d250k": "rna",
+    # the fourth curated member, size-matched to FunMap (item 17)
+    "biogrid_curated": "curated-literature",
 }
 
 
