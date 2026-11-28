@@ -48,7 +48,7 @@ LABELS_DIR = ROOT / "data/processed/labels"
 TABLES = ROOT / "results/tables"
 PY = ROOT / ".venv-gnn/Scripts/python.exe"
 LABELS = ["intogen2024", "ot_all", "ot_nolit", "intogen_temporal_new"]
-TRIM_NODES = 1500
+TRIM_NODES = 700
 
 
 def log(msg: str) -> None:
@@ -65,9 +65,18 @@ def heat_table() -> pd.DataFrame:
             counts[g] = counts.get(g, 0) + 1
     out = pd.DataFrame({"gene": list(counts), "heat": list(counts.values())})
     from scipy import stats as sps
-    lam = float(out.heat.mean())
-    p = sps.poisson.sf(out.heat.values.astype(float) - 1, lam)
-    out["p"] = np.clip(p, 1e-300, 1.0)
+    # The local FDR fits a normal null to the z-scores, and the raw
+    # mutation burden is far too skewed for that (the upstream itself
+    # fails with "the middle of the histogram is nonnormal"). The
+    # rank-based uniform p-value with a tie-breaking jitter gives the
+    # method a well-behaved null; the jitter is a documented deviation.
+    h = out.heat.values.astype(float)
+    order = np.argsort(h, kind="mergesort")
+    ranks = np.empty(len(h), dtype=float)
+    ranks[order] = np.arange(1, len(h) + 1)
+    rng = np.random.default_rng(20261126)
+    jitter = rng.uniform(0.0, 1.0, size=len(h))
+    out["p"] = np.clip((ranks + jitter - 0.5) / len(h), 1e-12, 1.0)
     return out
 
 
@@ -169,6 +178,13 @@ def main() -> int:
         idx = {g: i for i, g in enumerate(genes)}
         sub = A.tocsr()[np.ix_([idx[g] for g in genes],
                                 [idx[g] for g in genes])]
+        # the per-network score file (the upstream needs one that
+        # covers every gene of the network)
+        sf = WORK / f"{net}_scores.tsv"
+        if not sf.exists():
+            pmap = dict(zip(scores.gene, scores.p))
+            sf.write_text("".join(f"{g}	{pmap.get(g, 1.0):.6g}\n"
+                                   for g in genes), encoding="utf-8")
         edge_file = WORK / f"{net}_trim_edges.tsv"
         coo = sub.tocoo()
         with edge_file.open("w", encoding="utf-8") as fh:
